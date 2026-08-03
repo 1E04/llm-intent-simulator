@@ -1,0 +1,2 @@
+#### This is the Repository for the implementation scripts and results from the Masterthesis:
+#### Conceptual Design of an LLM-Based Testing System for the Automated Evaluation of Intent Recognition in Virtual Assistants for Intelligent Voice Bots
