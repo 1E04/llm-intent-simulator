@@ -1,3 +1,12 @@
+## [1.1.0] - 2026-08-05
+
+### Added
+- **Multi-Turn Judge Evaluation Pipeline:** Added `scripte/judge_llm.py` containing `JudgeLLMEvaluator` and `BatchJudgeRunner` to grade multi-turn dialogue traces using Chain-of-Thought (CoT) analysis. Incorporates a 1–5 Scorecard (Intent Recognition, Efficiency, Naturalness/Empathy, Goal Achievement) and security/failure classification mapped to OWASP Top 10 for LLMs and CVSS v3.1/v4.0.
+- **Environment Configuration Example:** Added `.env.example` as a template for Target, Simulator, and Judge API configurations.
+
+### Changed
+- **Multi-Turn Simulator Adjustments:** Updated `scripte/multi-turn-simulator.py` to use reliable absolute `.env` path resolution via `Path(__file__).resolve().parent`, fixed environment variable fallback precedence in client setup.
+
 ## [1.0.0] - 2026-08-05
 
 ### Added
