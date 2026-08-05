@@ -12,9 +12,10 @@ from dataclasses import dataclass, asdict
 from openai import OpenAI
 from dotenv import load_dotenv
 
-# Lädt die Variablen aus deiner spezifischen Datei '.api_keys'
-load_dotenv("../.env")
-
+# Safely resolve the .env file relative to THIS script's actual location
+SCRIPT_DIR = Path(__file__).resolve().parent
+ENV_PATH = SCRIPT_DIR.parent / ".env"
+load_dotenv(ENV_PATH)
 
 # =====================================================================
 # 1. DIRECTORY HELPERS
@@ -262,8 +263,8 @@ class UserSimulator:
         self.model_name = os.getenv("SIMULATOR_MODEL_NAME", model_name)
         self.seed = seed
         self.client = OpenAI(
-            api_key=api_key or os.getenv("SIMULATOR_API_KEY", "dummy_key"),
-            base_url=base_url or os.getenv("SIMULATOR_BASE_URL")
+            api_key=os.getenv("SIMULATOR_API_KEY", api_key),
+            base_url=os.getenv("SIMULATOR_BASE_URL", base_url)
         )
 
     def generate_user_turn(
@@ -353,8 +354,8 @@ class TargetVoiceBot:
         self.seed = seed
         self.allowed_labels = allowed_labels if allowed_labels else BANKING77_LABELS
         self.client = OpenAI(
-            api_key=api_key or os.getenv("TARGET_API_KEY", "dummy_key"),
-            base_url=base_url or os.getenv("TARGET_BASE_URL")
+            api_key=os.getenv("TARGET_API_KEY", api_key),
+            base_url=os.getenv("TARGET_BASE_URL", base_url)
         )
 
     def process_user_turn(self, history: List[Dict[str, str]]) -> Tuple[Dict[str, Any], int, int]:
@@ -579,7 +580,7 @@ if __name__ == "__main__":
     # Dataset & Run Settings
     parser.add_argument("--csv_path", type=str, default="../dataset/single-turn/banking77_test.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test.csv)")
-    parser.add_argument("--num_dialogues", type=int, default=50, help="Number of dialogues per persona (default: 50)")
+    parser.add_argument("--num_dialogues", type=int, default=2, help="Number of dialogues per persona (default: 50)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
     parser.add_argument("--max_turns", type=int, default=5, help="Maximum number of turns per dialogue (default: 5)")
     parser.add_argument("--output_base_dir", type=str, default="logs/multi_turn_dialogues",
@@ -587,14 +588,13 @@ if __name__ == "__main__":
 
     # User Simulator Settings
     parser.add_argument("--sim_model", type=str, default="gpt-5-nano", help="Model name for User Simulator")
-    parser.add_argument("--sim_api_key", type=str, default="set-up API key here", help="API key for User Simulator API")
+    parser.add_argument("--sim_api_key", type=str, default="dummy_key", help="API key for User Simulator API")
     parser.add_argument("--sim_base_url", type=str, default="https://api.openai.com/v1",
                         help="Base URL for User Simulator API")
 
     # Target Voice Bot Settings
     parser.add_argument("--target_model", type=str, default="gpt-5.6-luna", help="Model name for Target Voice Bot")
-    # parser.add_argument("--target_model", type=str, default="openai/gpt-oss-120b", help="Model name for Target Voice Bot")
-    parser.add_argument("--target_api_key", type=str, default=None, help="API key for Target Voice Bot API")
+    parser.add_argument("--target_api_key", type=str, default="dummy_key", help="API key for Target Voice Bot API")
     parser.add_argument("--target_base_url", type=str, default="https://api.openai.com/v1",
                         help="Base URL for Target Voice Bot API")
 
