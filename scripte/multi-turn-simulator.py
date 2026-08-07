@@ -23,7 +23,6 @@ load_dotenv(ENV_PATH)
 # =====================================================================
 
 def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "") -> str:
-    """Creates and returns the next incremented directory (e.g., run_003_model-name)."""
     os.makedirs(base_dir, exist_ok=True)
     existing_runs = []
 
@@ -35,7 +34,6 @@ def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "
 
     next_num = max(existing_runs) + 1 if existing_runs else 1
 
-    # Clean the suffix to be file-system friendly (e.g., replace ':' with '-')
     clean_suffix = suffix.replace(":", "-").replace("/", "-")
     suffix_str = f"_{clean_suffix}" if clean_suffix else ""
 
@@ -47,32 +45,10 @@ def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "
 
 
 # =====================================================================
-# 2. FALLBACK LABELSET & PERSONAS
-# =====================================================================
-
-BANKING77_LABELS = [
-    "top_up_reverted", "card_payment_wrong_exchange_rate", "cancel_card",
-    "card_linking", "card_arrival", "exchange_rate", "card_not_working",
-    "disputed_charge", "pending_transfer", "automatic_top_up",
-    "pin_blocked", "balance_not_updated_after_bank_transfer", "change_pin",
-    "getting_virtual_card", "declined_card_payment", "cash_withdrawal_charge",
-    "unable_to_verify_identity", "transfer_fee_charged", "card_acceptance",
-    "supported_cards_and_currencies", "verify_source_of_funds", "get_disposable_virtual_card",
-    "compromised_card", "card_payment_not_recognized", "lost_or_stolen_card",
-    "transfer_into_account", "balance_not_updated_after_cheque_or_cash_deposit",
-    "beneficiary_not_allowed", "top_up_failed", "wrong_amount_of_cash_received",
-    "declined_transfer", "transfer_timing", "failed_transfer", "edit_personal_details"
-]
-
-
-# =====================================================================
-# 3. HELPER FUNCTIONS & DATA STRUCTURES
+# 2. HELPER FUNCTIONS & DATA STRUCTURES
 # =====================================================================
 
 def load_local_csv(csv_path: Path) -> Tuple[List[Dict[str, str]], List[str]]:
-    """Lädt eine NLU-CSV-Datei und extrahiert sowohl die Datensatzzeilen
-    als auch eine alphabetisch sortierte Liste aller eindeutigen Intents.
-    """
     if not csv_path.exists():
         raise FileNotFoundError(f"Die CSV-Datei wurde nicht gefunden: {csv_path}")
 
@@ -114,7 +90,6 @@ def load_local_csv(csv_path: Path) -> Tuple[List[Dict[str, str]], List[str]]:
 
 
 def parse_llm_json(raw_text: str) -> Dict[str, Any]:
-    """Safely extracts and parses JSON even if wrapped in markdown codeblocks."""
     cleaned = re.sub(r"^```(?:json)?\s*", "", raw_text.strip(), flags=re.MULTILINE)
     cleaned = re.sub(r"\s*```$", "", cleaned, flags=re.MULTILINE).strip()
     try:
@@ -136,7 +111,6 @@ class TurnLog:
     predicted_intent: Optional[str] = None
     top_3_intents: List[Dict[str, Any]] = None  # Tracks confidence N-best list
     timestamp: str = ""
-    # Token Tracking per turn
     sim_prompt_tokens: int = 0
     sim_completion_tokens: int = 0
     bot_prompt_tokens: int = 0
@@ -155,7 +129,6 @@ class DialogueTrace:
     target_model: str
     total_turns: int
     status: str
-    # Token Tracking per dialogue
     total_sim_prompt_tokens: int = 0
     total_sim_completion_tokens: int = 0
     total_bot_prompt_tokens: int = 0
@@ -164,8 +137,6 @@ class DialogueTrace:
 
 
 class DialogueLogger:
-    """Manages unique dialogue IDs and saves traces to structured JSON files."""
-
     def __init__(self, output_dir: str):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
@@ -184,7 +155,6 @@ class DialogueLogger:
         dialogue_id = str(uuid.uuid4())
         timestamp = datetime.now().isoformat()
 
-        # Aggregate tokens for the entire dialogue
         tot_sim_p = sum(t.sim_prompt_tokens for t in turns)
         tot_sim_c = sum(t.sim_completion_tokens for t in turns)
         tot_bot_p = sum(t.bot_prompt_tokens for t in turns)
@@ -219,18 +189,15 @@ class DialogueLogger:
 
 
 # =====================================================================
-# 4. REPRODUCIBLE LABEL SAMPLER
+# 3. REPRODUCIBLE LABEL SAMPLER
 # =====================================================================
 
 class ReproducibleLabelSampler:
-    """Generates a deterministic sequence of target intents for each persona."""
-
     def __init__(self, labels: List[str], seed: int = 42):
         self.labels = labels
         self.seed = seed
 
     def get_labels_for_run(self, num_samples: int) -> List[str]:
-        """Returns a deterministic list of intents sampled from the labelset."""
         rng = random.Random(self.seed)
         sampled_labels = []
         while len(sampled_labels) < num_samples:
@@ -241,12 +208,10 @@ class ReproducibleLabelSampler:
 
 
 # =====================================================================
-# 5. AGENTS WITH INDEPENDENT API CONFIGURATIONS
+# 4. AGENTS WITH INDEPENDENT API CONFIGURATIONS
 # =====================================================================
 
 class UserSimulator:
-    """Simulates customer turns using a dedicated API client configuration."""
-
     def __init__(
             self,
             profile_data: Dict[str, Any],
@@ -297,7 +262,13 @@ class UserSimulator:
                     sim_messages.append({"role": "assistant", "content": turn["content"]})
                 elif turn["role"] == "assistant":
                     sim_messages.append({"role": "user", "content": turn["content"]})
-        print(sim_messages)
+
+            # Strict role-bleed boundary enforcement
+            sim_messages.append({
+                "role": "system",
+                "content": "Generate ONLY the customer's next response. Do NOT write the bot's reply. Keep it short."
+            })
+
         while True:
             try:
                 response = self.client.chat.completions.create(
@@ -323,8 +294,6 @@ class UserSimulator:
 
 
 class TargetVoiceBot:
-    """Represents the Target Voice Bot under test using a dedicated API client configuration."""
-
     def __init__(
             self,
             profile_data: Dict[str, Any],
@@ -377,7 +346,7 @@ class TargetVoiceBot:
 
 
 # =====================================================================
-# 6. MULTI-TURN TEST HARNESS
+# 5. MULTI-TURN TEST HARNESS
 # =====================================================================
 
 class MultiTurnTestHarness:
@@ -624,6 +593,20 @@ if __name__ == "__main__":
     with open(profile_path, "r", encoding="utf-8") as pf:
         profile_data = json.load(pf)
 
+    # Determine sub-folder routing based on profile flags
+    is_ood = profile_data.get("is_ood", False)
+    is_adversarial = profile_data.get("is_adversarial", False)
+
+    if is_ood:
+        category_folder = "ood"
+    elif is_adversarial:
+        category_folder = "adversarial"
+    else:
+        category_folder = "personas"
+
+    # Append the category to the base output directory
+    base_dir_with_category = os.path.join(args.output_base_dir, category_folder)
+
     # 1. Load Intent Labelset dynamically from CSV
     active_labels = []
     if args.csv_path:
@@ -637,7 +620,7 @@ if __name__ == "__main__":
 
     # 2. Setup the auto-incrementing output directory
     resolved_output_dir = get_next_incremented_dir(
-        base_dir=args.output_base_dir,
+        base_dir=base_dir_with_category,
         prefix="run",
         suffix=args.target_model
     )
