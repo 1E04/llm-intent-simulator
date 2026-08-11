@@ -58,7 +58,7 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     }
 }
 
-DEFAULT_CSV_PATH = Path("../dataset/single-turn/banking77_personas_phi4:14b_clean.csv")
+DEFAULT_CSV_PATH = Path("../../dataset/single-turn/banking77_personas_phi4:14b_clean.csv")
 FILE_LOCK = threading.Lock()
 PRINT_LOCK = threading.Lock()
 
