@@ -11,12 +11,27 @@ from pathlib import Path
 from typing import List, Tuple, Dict, Any
 from collections import defaultdict
 from openai import OpenAI
+from dotenv import load_dotenv
+
+# ==========================================
+# SAFELY LOAD .ENV FILE
+# ==========================================
+# Dies sucht die .env Datei im übergeordneten Verzeichnis (Root)
+SCRIPT_DIR = Path(__file__).resolve().parent
+ENV_PATH = SCRIPT_DIR.parent / ".env"
+load_dotenv(ENV_PATH)
 
 # ==========================================
 # MODELL-KONFIGURATIONEN (REGISTRY)
 # ==========================================
 
 MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
+    "mistral-small:24b": {
+        "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
+        "api_key": os.getenv("OLLAMA_API_KEY", "ollama"),
+        "model_name": "mistral-small:24b",
+        "max_workers": 1,
+    },
     "phi4:14b": {
         "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
         "api_key": os.getenv("OLLAMA_API_KEY", "ollama"),
@@ -26,7 +41,7 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     "gpt-oss": {
         "base_url": os.getenv("OLLAMA_BASE_URL2", "http://localhost:11434/v1"),
         "api_key": os.getenv("OLLAMA_API_KEY2", "ollama"),
-        "model_name": "gpt-oss:120b",
+        "model_name": "openai/gpt-oss-120b",
         "max_workers": 1,
     },
     "gemini": {
@@ -43,10 +58,9 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     }
 }
 
-DEFAULT_CSV_PATH = Path("../dataset/single-turn/banking77_personas_gpt-oss:120b.csv")
+DEFAULT_CSV_PATH = Path("../dataset/single-turn/banking77_personas_phi4:14b_clean.csv")
 FILE_LOCK = threading.Lock()
 PRINT_LOCK = threading.Lock()
-
 
 def safe_print(*args, **kwargs):
     """Thread-sichere Ausgabe im Terminal."""
@@ -175,7 +189,7 @@ def classify_texts_parallel(
     max_workers = config.get("max_workers", 5)
 
     safe_model_filename = model_alias.replace(":", "_").replace("/", "_")
-    output_path = Path(f"results-{safe_model_filename}-{csv_path.stem}.jsonl")
+    output_path = Path(f"logs/single-turn/synthetic-dataset/phi4/results-{safe_model_filename}-{csv_path.stem}.jsonl")
 
     client = OpenAI(api_key=config["api_key"], base_url=config["base_url"])
     system_prompt = build_system_prompt(intents_list)
@@ -232,8 +246,8 @@ def classify_texts_parallel(
                     f.flush()
 
                 completed += 1
-                # Alle 50 Elemente oder am Ende Fortschritt ausgeben
-                if completed % 10 == 0 or completed == total_to_process:
+                # Alle 10 Elemente oder am Ende Fortschritt ausgeben
+                if completed % 50 == 0 or completed == total_to_process:
                     elapsed = time.time() - start_time
                     speed = completed / elapsed if elapsed > 0 else 0
                     time_left = (total_to_process - completed) / speed if speed > 0 else 0
