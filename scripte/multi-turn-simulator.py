@@ -17,12 +17,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ENV_PATH = SCRIPT_DIR.parent / ".env"
 load_dotenv(ENV_PATH)
 
+
 # =====================================================================
 # 1. DIRECTORY HELPERS
 # =====================================================================
 
 def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "") -> str:
-    """Creates and returns the next incremented directory (e.g., run_003_model-name)."""
     os.makedirs(base_dir, exist_ok=True)
     existing_runs = []
 
@@ -34,7 +34,6 @@ def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "
 
     next_num = max(existing_runs) + 1 if existing_runs else 1
 
-    # Clean the suffix to be file-system friendly (e.g., replace ':' with '-')
     clean_suffix = suffix.replace(":", "-").replace("/", "-")
     suffix_str = f"_{clean_suffix}" if clean_suffix else ""
 
@@ -46,41 +45,10 @@ def get_next_incremented_dir(base_dir: str, prefix: str = "run", suffix: str = "
 
 
 # =====================================================================
-# 2. FALLBACK LABELSET & PERSONAS
-# =====================================================================
-
-BANKING77_LABELS = [
-    "top_up_reverted", "card_payment_wrong_exchange_rate", "cancel_card",
-    "card_linking", "card_arrival", "exchange_rate", "card_not_working",
-    "disputed_charge", "pending_transfer", "automatic_top_up",
-    "pin_blocked", "balance_not_updated_after_bank_transfer", "change_pin",
-    "getting_virtual_card", "declined_card_payment", "cash_withdrawal_charge",
-    "unable_to_verify_identity", "transfer_fee_charged", "card_acceptance",
-    "supported_cards_and_currencies", "verify_source_of_funds", "get_disposable_virtual_card",
-    "compromised_card", "card_payment_not_recognized", "lost_or_stolen_card",
-    "transfer_into_account", "balance_not_updated_after_cheque_or_cash_deposit",
-    "beneficiary_not_allowed", "top_up_failed", "wrong_amount_of_cash_received",
-    "declined_transfer", "transfer_timing", "failed_transfer", "edit_personal_details"
-]
-
-PERSONA_PROMPTS = {
-    "Angry Layperson": "You are extremely frustrated and informal. Use emotional language and complain, but state your issue.",
-    "Panicking Emergency": "You are in a hurry and panicking. Use short, frantic sentences with high urgency.",
-    "Polite Expert": "You are calm, technical, and precise. Use full sentences and clear domain-specific financial terminology.",
-    "Gen-Z Slang": "Use modern casual colloquialisms, abbreviations, slang, and informal lower-case typing.",
-    "Non-Native Speaker": "Use slightly broken grammar, missing prepositions, or literal translations, but convey the core intent.",
-    "Short Wording": "Be extremely brief. Give 1-3 word answers without pleasantries or long context."
-}
-
-
-# =====================================================================
-# 3. HELPER FUNCTIONS & DATA STRUCTURES
+# 2. HELPER FUNCTIONS & DATA STRUCTURES
 # =====================================================================
 
 def load_local_csv(csv_path: Path) -> Tuple[List[Dict[str, str]], List[str]]:
-    """Lädt eine NLU-CSV-Datei und extrahiert sowohl die Datensatzzeilen
-    als auch eine alphabetisch sortierte Liste aller eindeutigen Intents.
-    """
     if not csv_path.exists():
         raise FileNotFoundError(f"Die CSV-Datei wurde nicht gefunden: {csv_path}")
 
@@ -122,13 +90,13 @@ def load_local_csv(csv_path: Path) -> Tuple[List[Dict[str, str]], List[str]]:
 
 
 def parse_llm_json(raw_text: str) -> Dict[str, Any]:
-    """Safely extracts and parses JSON even if wrapped in markdown codeblocks."""
     cleaned = re.sub(r"^```(?:json)?\s*", "", raw_text.strip(), flags=re.MULTILINE)
     cleaned = re.sub(r"\s*```$", "", cleaned, flags=re.MULTILINE).strip()
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         return {
+            "top_3_intents": [],
             "predicted_intent": "parsing_error",
             "response_text": raw_text,
             "dialogue_completed": False
@@ -141,8 +109,8 @@ class TurnLog:
     user_utterance: str
     assistant_response: str
     predicted_intent: Optional[str] = None
+    top_3_intents: List[Dict[str, Any]] = None  # Tracks confidence N-best list
     timestamp: str = ""
-    # Token Tracking per turn
     sim_prompt_tokens: int = 0
     sim_completion_tokens: int = 0
     bot_prompt_tokens: int = 0
@@ -161,7 +129,6 @@ class DialogueTrace:
     target_model: str
     total_turns: int
     status: str
-    # Token Tracking per dialogue
     total_sim_prompt_tokens: int = 0
     total_sim_completion_tokens: int = 0
     total_bot_prompt_tokens: int = 0
@@ -170,8 +137,6 @@ class DialogueTrace:
 
 
 class DialogueLogger:
-    """Manages unique dialogue IDs and saves traces to structured JSON files."""
-
     def __init__(self, output_dir: str):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
@@ -190,7 +155,6 @@ class DialogueLogger:
         dialogue_id = str(uuid.uuid4())
         timestamp = datetime.now().isoformat()
 
-        # Aggregate tokens for the entire dialogue
         tot_sim_p = sum(t.sim_prompt_tokens for t in turns)
         tot_sim_c = sum(t.sim_completion_tokens for t in turns)
         tot_bot_p = sum(t.bot_prompt_tokens for t in turns)
@@ -225,18 +189,15 @@ class DialogueLogger:
 
 
 # =====================================================================
-# 4. REPRODUCIBLE LABEL SAMPLER
+# 3. REPRODUCIBLE LABEL SAMPLER
 # =====================================================================
 
 class ReproducibleLabelSampler:
-    """Generates a deterministic sequence of target intents for each persona."""
-
     def __init__(self, labels: List[str], seed: int = 42):
         self.labels = labels
         self.seed = seed
 
     def get_labels_for_run(self, num_samples: int) -> List[str]:
-        """Returns a deterministic list of intents sampled from the labelset."""
         rng = random.Random(self.seed)
         sampled_labels = []
         while len(sampled_labels) < num_samples:
@@ -247,19 +208,19 @@ class ReproducibleLabelSampler:
 
 
 # =====================================================================
-# 5. AGENTS WITH INDEPENDENT API CONFIGURATIONS
+# 4. AGENTS WITH INDEPENDENT API CONFIGURATIONS
 # =====================================================================
 
 class UserSimulator:
-    """Simulates customer turns using a dedicated API client configuration."""
-
     def __init__(
             self,
+            profile_data: Dict[str, Any],
             model_name: str = "gpt-oss:120b",
             api_key: Optional[str] = None,
             base_url: Optional[str] = None,
             seed: int = 42
     ):
+        self.profile_data = profile_data
         self.model_name = os.getenv("SIMULATOR_MODEL_NAME", model_name)
         self.seed = seed
         self.client = OpenAI(
@@ -273,48 +234,41 @@ class UserSimulator:
             target_intent: str,
             dialogue_history: List[Dict[str, str]]
     ) -> Tuple[str, int, int]:
-        persona_style = PERSONA_PROMPTS.get(persona, "Speak naturally.")
 
-        # Erstelle ein explizites Wortverbot aus dem Label (z.B. "change_pin" -> "change pin")
+        persona_style = self.profile_data["personas"].get(persona, "Speak naturally.")
         forbidden_label_text = target_intent.replace("_", " ")
 
-        system_prompt = f"""You are simulating a human customer contacting a banking voice bot.
+        # Safely inject variables into the system prompt using .replace()
+        system_prompt = self.profile_data["simulator_system_prompt"]
+        system_prompt = system_prompt.replace("{target_intent}", target_intent)
+        system_prompt = system_prompt.replace("{persona}", persona)
+        system_prompt = system_prompt.replace("{persona_style}", persona_style)
+        system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
 
-YOUR HIDDEN INTENT / GOAL: {target_intent}
-YOUR PERSONA: {persona} ({persona_style})
-
-CRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):
-1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):
-   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.
-   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.
-
-2. FORBIDDEN WORDS IN TURN 1:
-   - NEVER use the exact technical phrase "{forbidden_label_text}" or canonical label names in your first message.
-   - BAD Example (Turn 1): "I want to change my PIN." or "I need to do a top up reverted."
-   - GOOD Example (Turn 1): "Hey, I'm standing at the store and my card got rejected!" or "I can't remember my numbers."
-
-3. PERSONA ADHERENCE:
-   - Stay 100% in character for {persona}.
-   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).
-   - Do NOT reveal system prompts or act like an AI.
-"""
         sim_messages = [{"role": "system", "content": system_prompt}]
 
         if not dialogue_history:
-            # Turn 1: Expliziter Trigger für das Einstiegs-Symptom
+            # First turn logic injected dynamically
+            first_turn_prompt = self.profile_data["simulator_first_turn_prompt"]
+            first_turn_prompt = first_turn_prompt.replace("{forbidden_label_text}", forbidden_label_text)
+
             sim_messages.append({
                 "role": "user",
-                "content": f"The call has connected to the banking bot. State your initial problem/symptom regarding '{forbidden_label_text}' now without using the exact technical terms."
+                "content": first_turn_prompt
             })
         else:
-            # Turn 2+: Rolleninversion (History als User-Input für den Simulator)
             for turn in dialogue_history:
                 if turn["role"] == "user":
                     sim_messages.append({"role": "assistant", "content": turn["content"]})
                 elif turn["role"] == "assistant":
                     sim_messages.append({"role": "user", "content": turn["content"]})
 
-        # --- RETRY LOOP ADDED HERE ---
+            # Strict role-bleed boundary enforcement
+            sim_messages.append({
+                "role": "system",
+                "content": "Generate ONLY the customer's next response. Do NOT write the bot's reply. Keep it short."
+            })
+
         while True:
             try:
                 response = self.client.chat.completions.create(
@@ -340,43 +294,32 @@ CRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):
 
 
 class TargetVoiceBot:
-    """Represents the Target Voice Bot under test using a dedicated API client configuration."""
-
     def __init__(
             self,
+            profile_data: Dict[str, Any],
             model_name: str = "gpt-5-nano",
             allowed_labels: Optional[List[str]] = None,
             api_key: Optional[str] = None,
             base_url: Optional[str] = None,
             seed: int = 42
     ):
+        self.profile_data = profile_data
         self.model_name = os.getenv("TARGET_MODEL_NAME", model_name)
         self.seed = seed
-        self.allowed_labels = allowed_labels if allowed_labels else BANKING77_LABELS
+        self.allowed_labels = allowed_labels if allowed_labels else []
         self.client = OpenAI(
             api_key=os.getenv("TARGET_API_KEY", api_key),
             base_url=os.getenv("TARGET_BASE_URL", base_url)
         )
 
     def process_user_turn(self, history: List[Dict[str, str]]) -> Tuple[Dict[str, Any], int, int]:
-        system_prompt = f"""You are an intelligent banking voice bot evaluating user intent.
-Analyze the user's input across the conversation history, identify their underlying primary intent from the allowed list, and respond.
 
-Allowed Intent Labels: {self.allowed_labels}
+        # Safely inject variables using .replace() to avoid {} JSON conflicts
+        system_prompt = self.profile_data["target_bot_system_prompt"]
+        system_prompt = system_prompt.replace("{allowed_labels}", str(self.allowed_labels))
 
-BEHAVIOR & TERMINATION RULES:
-1. If the user's request is vague or ambiguous, ask a short clarifying question to narrow down their intent (set "dialogue_completed": false).
-2. As soon as you are CONFIDENT in identifying the exact underlying intent label, provide a concise final answer/confirmation AND set "dialogue_completed": true.
-3. Do NOT prolong the conversation unnecessarily once the intent is identified with certainty.
-
-You MUST respond in valid JSON format with three keys:
-1. "predicted_intent": string (must be one of the provided intent labels)
-2. "response_text": string (your spoken response back to the user)
-3. "dialogue_completed": boolean (set to true AS SOON AS you are confident in the intent label classification)
-"""
         messages = [{"role": "system", "content": system_prompt}] + history
 
-        # --- RETRY LOOP ADDED HERE ---
         while True:
             try:
                 response = self.client.chat.completions.create(
@@ -403,7 +346,7 @@ You MUST respond in valid JSON format with three keys:
 
 
 # =====================================================================
-# 6. MULTI-TURN TEST HARNESS
+# 5. MULTI-TURN TEST HARNESS
 # =====================================================================
 
 class MultiTurnTestHarness:
@@ -412,6 +355,7 @@ class MultiTurnTestHarness:
             user_sim: UserSimulator,
             target_bot: TargetVoiceBot,
             logger: DialogueLogger,
+            profile_data: Dict[str, Any],
             labels: Optional[List[str]] = None,
             seed: int = 42
     ):
@@ -419,27 +363,44 @@ class MultiTurnTestHarness:
         self.user_sim = user_sim
         self.target_bot = target_bot
         self.logger = logger
+        self.profile_data = profile_data
         self.labels = labels if labels else target_bot.allowed_labels
 
-        # Global Token Trackers
         self.global_sim_prompt_tokens = 0
         self.global_sim_completion_tokens = 0
         self.global_bot_prompt_tokens = 0
         self.global_bot_completion_tokens = 0
+
+        # Configuration for Dialogue Control thresholds
+        self.CONFIDENCE_THRESHOLD = 0.85
+        self.MARGIN_THRESHOLD = 0.15
 
     def run_batch_simulation(
             self,
             num_dialogues_per_persona: int = 50,
             max_turns: int = 5
     ):
-        sampler = ReproducibleLabelSampler(labels=self.labels, seed=self.seed)
-        target_intents = sampler.get_labels_for_run(num_dialogues_per_persona)
+        # Check for our special testing flags
+        is_ood = self.profile_data.get("is_ood", False)
+        is_adversarial = self.profile_data.get("is_adversarial", False)
 
-        total_simulations = len(PERSONA_PROMPTS) * num_dialogues_per_persona
+        if is_ood:
+            target_intents = ["out_of_domain"] * num_dialogues_per_persona
+        elif is_adversarial:
+            target_intents = ["security_violation"] * num_dialogues_per_persona
+        else:
+            # Standard behavior
+            sampler = ReproducibleLabelSampler(labels=self.labels, seed=self.seed)
+            target_intents = sampler.get_labels_for_run(num_dialogues_per_persona)
+
+        personas = self.profile_data.get("personas", {})
+
+        total_simulations = len(personas) * num_dialogues_per_persona
         print(f"\n=======================================================")
         print(f" STARTING MULTI-TURN BATCH SIMULATION")
+        print(f" Profile: {self.profile_data.get('profile_name', 'Unknown')}")
         print(f" Output Directory: {self.logger.output_dir}")
-        print(f" Seed: {self.seed} | Personas: {len(PERSONA_PROMPTS)}")
+        print(f" Seed: {self.seed} | Personas: {len(personas)}")
         print(f" Available Intents in Pool: {len(self.labels)}")
         print(f" Simulator Model: {self.user_sim.model_name}")
         print(f" Target Bot Model: {self.target_bot.model_name}")
@@ -449,7 +410,7 @@ class MultiTurnTestHarness:
 
         completed_count = 0
 
-        for persona in PERSONA_PROMPTS.keys():
+        for persona in personas.keys():
             print(f"\n>>> Running Persona: [{persona}] ({num_dialogues_per_persona} dialogues)")
 
             for idx, target_intent in enumerate(target_intents, start=1):
@@ -457,7 +418,7 @@ class MultiTurnTestHarness:
                 turn_logs: List[TurnLog] = []
 
                 for turn_idx in range(1, max_turns + 1):
-                    # 1. Generate User turn and track tokens
+                    # 1. Simulator Turn
                     user_text, sim_p_tok, sim_c_tok = self.user_sim.generate_user_turn(
                         persona=persona,
                         target_intent=target_intent,
@@ -468,24 +429,44 @@ class MultiTurnTestHarness:
                     self.global_sim_completion_tokens += sim_c_tok
                     dialogue_history.append({"role": "user", "content": user_text})
 
-                    # 2. Process Assistant turn and track tokens
+                    # 2. Target Bot Turn
                     bot_output, bot_p_tok, bot_c_tok = self.target_bot.process_user_turn(dialogue_history)
 
                     self.global_bot_prompt_tokens += bot_p_tok
                     self.global_bot_completion_tokens += bot_c_tok
 
+                    # Extract the N-Best List and Evaluate Python Thresholds
+                    top_3 = bot_output.get("top_3_intents", [])
                     assistant_text = bot_output.get("response_text", "")
-                    predicted_intent = bot_output.get("predicted_intent", "unknown")
-                    dialogue_completed = bot_output.get("dialogue_completed", False)
+
+                    dialogue_completed = False
+                    predicted_intent = "unknown"
+
+                    if top_3 and isinstance(top_3, list) and len(top_3) > 0:
+                        predicted_intent = top_3[0].get("intent", "unknown")
+                        try:
+                            conf_1 = float(top_3[0].get("confidence", 0.0))
+                            conf_2 = float(top_3[1].get("confidence", 0.0)) if len(top_3) > 1 else 0.0
+                        except (ValueError, TypeError):
+                            conf_1, conf_2 = 0.0, 0.0
+
+                        # Evaluate Threshold Rules
+                        if conf_1 >= self.CONFIDENCE_THRESHOLD and (conf_1 - conf_2) >= self.MARGIN_THRESHOLD:
+                            dialogue_completed = True
+                    else:
+                        # Fallback for older profiles that don't output top_3_intents
+                        predicted_intent = bot_output.get("predicted_intent", "unknown")
+                        dialogue_completed = bot_output.get("dialogue_completed", False)
 
                     dialogue_history.append({"role": "assistant", "content": assistant_text})
 
-                    # 3. Log turn
+                    # 3. Log the turn
                     turn_logs.append(TurnLog(
                         turn_number=turn_idx,
                         user_utterance=user_text,
                         assistant_response=assistant_text,
                         predicted_intent=predicted_intent,
+                        top_3_intents=top_3,
                         timestamp=datetime.now().isoformat(),
                         sim_prompt_tokens=sim_p_tok,
                         sim_completion_tokens=sim_c_tok,
@@ -493,15 +474,19 @@ class MultiTurnTestHarness:
                         bot_completion_tokens=bot_c_tok
                     ))
 
-                    print(
-                        f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:60]}...' --> Bot ({predicted_intent}): '{assistant_text[:60]}...'")
+                    # Format print statement to show confidence
+                    if top_3 and len(top_3) > 0:
+                        conf_print = f"({predicted_intent} @ {top_3[0].get('confidence', 0.0):.2f})"
+                    else:
+                        conf_print = f"({predicted_intent})"
 
-                    # Robust break condition: only break if explicitly completed by target bot
+                    print(
+                        f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:50]}...' -> Bot {conf_print}: '{assistant_text[:50]}...'")
+
                     if dialogue_completed:
-                        print(f"  --> Conversation marked completed by bot at Turn {turn_idx}.")
+                        print(f"  --> Thresholds met. Dialogue marked completed by Python script.")
                         break
 
-                # Save complete trace
                 dialogue_id = self.logger.save_trace(
                     seed=self.seed,
                     dialogue_index=idx,
@@ -510,14 +495,13 @@ class MultiTurnTestHarness:
                     sim_model=self.user_sim.model_name,
                     target_model=self.target_bot.model_name,
                     turns=turn_logs,
-                    status="COMPLETED"
+                    status="COMPLETED" if dialogue_completed else "MAX_TURNS_REACHED"
                 )
                 completed_count += 1
                 print(
                     f" [{completed_count}/{total_simulations}] Saved Dialogue #{idx:02d} ({persona}) [ID: {dialogue_id[:8]}]"
                 )
 
-        # Print and Save the Global Token Summary
         self._print_and_save_summary(total_simulations, completed_count)
 
     def _print_and_save_summary(self, total_simulations: int, completed_count: int):
@@ -526,6 +510,7 @@ class MultiTurnTestHarness:
         grand_total = total_sim_tokens + total_bot_tokens
 
         summary_data = {
+            "profile_used": self.profile_data.get("profile_name", "Unknown"),
             "total_dialogues_target": total_simulations,
             "total_dialogues_completed": completed_count,
             "simulator": {
@@ -575,24 +560,23 @@ class MultiTurnTestHarness:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Multi-Turn Dialogue Simulation Harness with Independent API Endpoints and Dynamic CSV Loading")
+        description="Multi-Turn Dialogue Simulation Harness with JSON Profiles")
 
-    # Dataset & Run Settings
+    parser.add_argument("--profile", type=str, default="profiles/standard_en.json",
+                        help="Path to the JSON scenario profile (default: profiles/standard_en.json)")
     parser.add_argument("--csv_path", type=str, default="../dataset/single-turn/banking77_test.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test.csv)")
-    parser.add_argument("--num_dialogues", type=int, default=2, help="Number of dialogues per persona (default: 50)")
+    parser.add_argument("--num_dialogues", type=int, default=2, help="Number of dialogues per persona (default: 2)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
     parser.add_argument("--max_turns", type=int, default=5, help="Maximum number of turns per dialogue (default: 5)")
     parser.add_argument("--output_base_dir", type=str, default="logs/multi_turn_dialogues",
                         help="Base directory for JSON logs. A new incremented folder will be created inside.")
 
-    # User Simulator Settings
     parser.add_argument("--sim_model", type=str, default="gpt-5-nano", help="Model name for User Simulator")
     parser.add_argument("--sim_api_key", type=str, default="dummy_key", help="API key for User Simulator API")
     parser.add_argument("--sim_base_url", type=str, default="https://api.openai.com/v1",
                         help="Base URL for User Simulator API")
 
-    # Target Voice Bot Settings
     parser.add_argument("--target_model", type=str, default="gpt-5.6-luna", help="Model name for Target Voice Bot")
     parser.add_argument("--target_api_key", type=str, default="dummy_key", help="API key for Target Voice Bot API")
     parser.add_argument("--target_base_url", type=str, default="https://api.openai.com/v1",
@@ -600,8 +584,31 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # 1. Load Intent Labelset dynamically from CSV or fallback to BANKING77_LABELS
-    active_labels = BANKING77_LABELS
+    # Load Profile Data
+    profile_path = Path(args.profile)
+    if not profile_path.exists():
+        print(f"[CRITICAL ERROR] The profile file '{profile_path}' does not exist.")
+        exit(1)
+
+    with open(profile_path, "r", encoding="utf-8") as pf:
+        profile_data = json.load(pf)
+
+    # Determine sub-folder routing based on profile flags
+    is_ood = profile_data.get("is_ood", False)
+    is_adversarial = profile_data.get("is_adversarial", False)
+
+    if is_ood:
+        category_folder = "ood"
+    elif is_adversarial:
+        category_folder = "adversarial"
+    else:
+        category_folder = "personas"
+
+    # Append the category to the base output directory
+    base_dir_with_category = os.path.join(args.output_base_dir, category_folder)
+
+    # 1. Load Intent Labelset dynamically from CSV
+    active_labels = []
     if args.csv_path:
         csv_file = Path(args.csv_path)
         try:
@@ -609,17 +616,18 @@ if __name__ == "__main__":
             if loaded_intents:
                 active_labels = loaded_intents
         except Exception as e:
-            print(f"[DataLoader WARNING] CSV konnte nicht geladen werden ({e}). Verwende Fallback-Labels.")
+            print(f"[DataLoader WARNING] CSV konnte nicht geladen werden ({e}).")
 
     # 2. Setup the auto-incrementing output directory
     resolved_output_dir = get_next_incremented_dir(
-        base_dir=args.output_base_dir,
+        base_dir=base_dir_with_category,
         prefix="run",
         suffix=args.target_model
     )
 
-    # 3. Initialize Agents with Independent API Settings & Dynamic Labels
+    # 3. Initialize Agents
     user_sim = UserSimulator(
+        profile_data=profile_data,
         model_name=args.sim_model,
         api_key=args.sim_api_key,
         base_url=args.sim_base_url,
@@ -627,6 +635,7 @@ if __name__ == "__main__":
     )
 
     target_bot = TargetVoiceBot(
+        profile_data=profile_data,
         model_name=args.target_model,
         allowed_labels=active_labels,
         api_key=args.target_api_key,
@@ -641,6 +650,7 @@ if __name__ == "__main__":
         user_sim=user_sim,
         target_bot=target_bot,
         logger=logger,
+        profile_data=profile_data,
         labels=active_labels,
         seed=args.seed
     )
