@@ -189,8 +189,8 @@ def classify_texts_parallel(
     max_workers = config.get("max_workers", 5)
 
     safe_model_filename = model_alias.replace(":", "_").replace("/", "_")
-    output_path = Path(f"logs/single-turn/synthetic-dataset/phi4/results-{safe_model_filename}-{csv_path.stem}.jsonl")
-
+    output_path = Path(
+        f"../../logs/single-turn/synthetic-dataset/phi4/results-{safe_model_filename}-{csv_path.stem}.jsonl")
     client = OpenAI(api_key=config["api_key"], base_url=config["base_url"])
     system_prompt = build_system_prompt(intents_list)
 

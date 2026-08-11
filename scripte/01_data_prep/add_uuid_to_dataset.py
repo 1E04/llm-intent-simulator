@@ -3,9 +3,8 @@ import uuid
 from pathlib import Path
 
 # Pfade anpassen falls nötig
-INPUT_CSV_PATH = Path("../dataset/banking77_test.csv")
-OUTPUT_CSV_PATH = Path("../dataset/banking77_test_with_uuid.csv")
-
+INPUT_CSV_PATH = Path("../../dataset/single-turn/banking77_test.csv")
+OUTPUT_CSV_PATH = Path("../../dataset/single-turn/banking77_test_with_uuid.csv")
 
 def add_uuid_to_csv(input_path: Path, output_path: Path):
     if not input_path.exists():

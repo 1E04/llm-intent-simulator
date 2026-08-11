@@ -563,14 +563,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Multi-Turn Dialogue Simulation Harness with JSON Profiles")
 
-    parser.add_argument("--profile", type=str, default="profiles/standard_en.json",
+    parser.add_argument("--profile", type=str, default="../profiles/standard_en.json",
                         help="Path to the JSON scenario profile (default: profiles/standard_en.json)")
-    parser.add_argument("--csv_path", type=str, default="../dataset/single-turn/banking77_test_clean_labels.csv",
+    parser.add_argument("--csv_path", type=str, default="../../dataset/single-turn/banking77_test_clean_labels.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test_clean_labels.csv)")
     parser.add_argument("--num_dialogues", type=int, default=50, help="Number of dialogues per persona (default: 50)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
     parser.add_argument("--max_turns", type=int, default=5, help="Maximum number of turns per dialogue (default: 5)")
-    parser.add_argument("--output_base_dir", type=str, default="logs/multi_turn_dialogues",
+    parser.add_argument("--output_base_dir", type=str, default="../../logs/multi_turn_dialogues",
                         help="Base directory for JSON logs. A new incremented folder will be created inside.")
 
     parser.add_argument("--sim_model", type=str, default="gpt-5-nano", help="Model name for User Simulator")
