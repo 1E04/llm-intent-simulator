@@ -1,3 +1,18 @@
+## [1.2.0] - 2026-08-11
+
+### Added
+- **Dataset Label Cleaning Utility:** Added `scripte/clean_dataset_labels.py` for bulk renaming intent labels across CSV datasets. It features automatic label column detection and supports both command-line arguments for single replacements and a global map for batch updates.
+- **LLM-Powered Deduplication & Rewriting:** Added `scripte/duplicate_and_rewrite.py`, an automated data curation tool. It uses an LLM (configured for Ollama) to identify structural and wording duplicates within the same intent/persona groups, preserving the original while completely rewriting duplicates to maximize dataset diversity.
+- **Mistral Model Configuration:** Added the `mistral-small:24b` profile to the model registry in `scripte/base_banking77_parallel.py`.
+
+### Changed
+- **Parallel Evaluator Adjustments (`scripte/base_banking77_parallel.py`):**
+  - Integrated `python-dotenv` with robust absolute path resolution to safely load configurations from the root `.env` file.
+  - Updated the `gpt-oss` model identifier to `openai/gpt-oss-120b`.
+  - Changed the default input dataset to `banking77_personas_phi4:14b_clean.csv`.
+  - Re-routed evaluation output files to a structured logging directory: `logs/single-turn/synthetic-dataset/phi4/`.
+  - Optimized the console progress output, reducing frequency from every 10 elements to every 50 elements to reduce terminal clutter.
+
 ## [1.1.0] - 2026-08-05
 
 ### Added
