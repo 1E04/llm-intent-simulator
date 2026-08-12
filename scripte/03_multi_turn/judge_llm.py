@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # SECURITY FIX: Reliable absolute pathing for secrets
 # =====================================================================
 SCRIPT_DIR = Path(__file__).resolve().parent
-ENV_PATH = SCRIPT_DIR.parent / ".env"
+ENV_PATH = SCRIPT_DIR.parent.parent / ".env"
 load_dotenv(ENV_PATH)
 
 
@@ -333,7 +333,7 @@ if __name__ == "__main__":
     parser.add_argument("--input_dir", type=str, required=True,
                         help="Exact path to the simulator run folder to judge (e.g., logs/multi_turn_dialogues/run_003_simulator-model)")
 
-    parser.add_argument("--output_base_dir", type=str, default="../../logs/judged_dialogues",
+    parser.add_argument("--output_base_dir", type=str, default="../../logs/judged_dialogues/adversarial",
                         help="Base directory to save evaluation reports")
     parser.add_argument("--judge_model", type=str, default="openai/gpt-oss-120b", help="Model name for JudgeLLM")
     parser.add_argument("--judge_api_key", type=str, default=None, help="API key for JudgeLLM")
