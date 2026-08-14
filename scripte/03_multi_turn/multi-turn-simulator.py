@@ -165,7 +165,7 @@ class TurnLog:
     user_utterance: str
     assistant_response: str
     predicted_intent: Optional[str] = None
-    top_3_intents: List[Dict[str, Any]] = None  # Tracks confidence N-best list
+    top_3_intents: List[Dict[str, Any]] = None
     timestamp: str = ""
     sim_prompt_tokens: int = 0
     sim_completion_tokens: int = 0
@@ -202,7 +202,7 @@ class DialogueLogger:
             seed: int,
             dialogue_index: int,
             persona: str,
-            target_intent: str,
+            target_intent: Optional[str],
             sim_model: str,
             target_model: str,
             turns: List[TurnLog],
@@ -222,7 +222,7 @@ class DialogueLogger:
             dialogue_index=dialogue_index,
             timestamp=timestamp,
             persona=persona,
-            target_intent=target_intent,
+            target_intent=target_intent or "N/A",
             sim_model=sim_model,
             target_model=target_model,
             total_turns=len(turns),
@@ -283,23 +283,25 @@ class UserSimulator:
             api_key=os.getenv("SIMULATOR_API_KEY", api_key),
             base_url=os.getenv("SIMULATOR_BASE_URL", base_url)
         )
+        print(f"[Init] UserSimulator pointing to: {self.client.base_url} (Model: {self.model_name})")
 
     def generate_user_turn(
             self,
             persona: str,
-            target_intent: str,
             dialogue_history: List[Dict[str, str]],
-            jailbreak_payload: str = ""  # NEW ARGUMENT
+            target_intent: Optional[str] = None,
+            jailbreak_payload: str = "",
+            turn_idx: int = 1
     ) -> Tuple[str, int, int]:
 
         persona_style = self.profile_data["personas"].get(persona, "Speak naturally.")
-        forbidden_label_text = target_intent.replace("_", " ")
-
         system_prompt = self.profile_data["simulator_system_prompt"]
-        system_prompt = system_prompt.replace("{target_intent}", target_intent)
-        system_prompt = system_prompt.replace("{persona}", persona)
-        system_prompt = system_prompt.replace("{persona_style}", persona_style)
-        system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
+
+        # Only inject intent variables if a valid intent exists
+        if target_intent:
+            forbidden_label_text = target_intent.replace("_", " ")
+            system_prompt = system_prompt.replace("{target_intent}", target_intent)
+            system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
 
         # INJECT Hugging Face PAYLOAD if the placeholder exists in the prompt
         if "{jailbreak_payload}" in system_prompt:
@@ -309,8 +311,8 @@ class UserSimulator:
 
         if not dialogue_history:
             first_turn_prompt = self.profile_data["simulator_first_turn_prompt"]
-            first_turn_prompt = first_turn_prompt.replace("{forbidden_label_text}", forbidden_label_text)
-
+            if target_intent:
+                first_turn_prompt = first_turn_prompt.replace("{forbidden_label_text}", target_intent.replace("_", " "))
             sim_messages.append({
                 "role": "user",
                 "content": first_turn_prompt
@@ -344,8 +346,12 @@ class UserSimulator:
                 return content, prompt_tokens, completion_tokens
 
             except Exception as e:
-                print(f"\n[API ERROR - UserSimulator] The connection failed: {e}")
-                user_choice = input("Press [ENTER] to retry this turn, or type 'q' to quit: ").strip().lower()
+                print(f"\n[API ERROR - UserSimulator]")
+                print(f"  -> Target URL: {self.client.base_url}")
+                print(f"  -> Model Requested: {self.model_name}")
+                print(f"  -> Error Type: {type(e).__name__}")
+                print(f"  -> Details: {str(e)}")
+                user_choice = input("\nPress [ENTER] to retry this turn, or type 'q' to quit: ").strip().lower()
                 if user_choice == 'q':
                     print("Exiting simulator...")
                     raise e
@@ -370,6 +376,7 @@ class TargetVoiceBot:
             api_key=os.getenv("TARGET_API_KEY", api_key),
             base_url=os.getenv("TARGET_BASE_URL", base_url)
         )
+        print(f"[Init] TargetVoiceBot pointing to: {self.client.base_url} (Model: {self.model_name})")
 
     def process_user_turn(self, history: List[Dict[str, str]]) -> Tuple[Dict[str, Any], int, int]:
 
@@ -394,8 +401,12 @@ class TargetVoiceBot:
                 return parse_llm_json(raw_content), prompt_tokens, completion_tokens
 
             except Exception as e:
-                print(f"\n[API ERROR - TargetVoiceBot] The connection failed: {e}")
-                user_choice = input("Press [ENTER] to retry this turn, or type 'q' to quit: ").strip().lower()
+                print(f"\n[API ERROR - TargetVoiceBot]")
+                print(f"  -> Target URL: {self.client.base_url}")
+                print(f"  -> Model Requested: {self.model_name}")
+                print(f"  -> Error Type: {type(e).__name__}")
+                print(f"  -> Details: {str(e)}")
+                user_choice = input("\nPress [ENTER] to retry this turn, or type 'q' to quit: ").strip().lower()
                 if user_choice == 'q':
                     print("Exiting target bot...")
                     raise e
@@ -443,7 +454,8 @@ class MultiTurnTestHarness:
         if is_ood:
             target_intents = ["out_of_domain"] * num_dialogues_per_persona
         elif is_adversarial:
-            target_intents = ["security_violation"] * num_dialogues_per_persona
+            # Adversarial profiles do not map to a standard target intent
+            target_intents = [None] * num_dialogues_per_persona
         else:
             sampler = ReproducibleLabelSampler(labels=self.labels, seed=self.seed)
             target_intents = sampler.get_labels_for_run(num_dialogues_per_persona)
@@ -481,9 +493,10 @@ class MultiTurnTestHarness:
                 for turn_idx in range(1, max_turns + 1):
                     user_text, sim_p_tok, sim_c_tok = self.user_sim.generate_user_turn(
                         persona=persona,
-                        target_intent=target_intent,
                         dialogue_history=dialogue_history,
-                        jailbreak_payload=current_payload
+                        target_intent=target_intent,
+                        jailbreak_payload=current_payload,
+                        turn_idx=turn_idx
                     )
 
                     self.global_sim_prompt_tokens += sim_p_tok
@@ -680,13 +693,15 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[DataLoader WARNING] CSV konnte nicht geladen werden ({e}).")
 
+    if not active_labels:
+        print("[CRITICAL ERROR] No labels loaded from the CSV. The Target Bot requires a valid intent label list.")
+        exit(1)
+
     # Load Adversarial Payloads if the profile requires it
     adversarial_payloads = []
     if is_adversarial:
         adversarial_base_path = Path(args.adversarial_dir)
-
         if args.hf_dataset:
-            # Hugging Face route
             adversarial_payloads = load_or_download_hf_payloads(
                 repo_id=args.hf_dataset,
                 config_name=args.hf_config,

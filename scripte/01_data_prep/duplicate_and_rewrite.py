@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 # CONFIGURATION
 # ==========================================
 SCRIPT_DIR = Path(__file__).resolve().parent
-ENV_PATH = SCRIPT_DIR.parent / ".env"
+ENV_PATH = SCRIPT_DIR.parent.parent / ".env"
 load_dotenv(ENV_PATH)
 
 # Set your similarity threshold (0.0 to 1.0)
@@ -21,12 +21,12 @@ SIMILARITY_THRESHOLD = 0.80
 
 # Initialize the OpenAI client (Targeting Ollama based on your .env)
 client = OpenAI(
-    api_key=os.getenv("OLLAMA_API_KEY2", "ollama"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+    api_key=os.getenv("OPENAI_API_KEY", "ollama"),
+    base_url=os.getenv("OPENAI_BASE_URL", "http://localhost:11434/v1")
 )
 
 # Set the model you used to generate the data
-MODEL_NAME = os.getenv("OLLAMA_MODEL_NAME", "gpt-oss:120b")
+MODEL_NAME = os.getenv("OPENAI_MODEL_NAME", "gpt-oss:120b")
 
 
 # ==========================================

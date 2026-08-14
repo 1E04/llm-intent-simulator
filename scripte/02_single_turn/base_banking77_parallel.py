@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 # ==========================================
 # Dies sucht die .env Datei im übergeordneten Verzeichnis (Root)
 SCRIPT_DIR = Path(__file__).resolve().parent
-ENV_PATH = SCRIPT_DIR.parent / ".env"
+ENV_PATH = SCRIPT_DIR.parent.parent / ".env"
 load_dotenv(ENV_PATH)
 
 # ==========================================
@@ -27,13 +27,13 @@ load_dotenv(ENV_PATH)
 
 MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     "mistral-small:24b": {
-        "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
+        "base_url": os.getenv("OLLAMA_BASE_URL2", "http://localhost:11434/v1"),
         "api_key": os.getenv("OLLAMA_API_KEY", "ollama"),
         "model_name": "mistral-small:24b",
         "max_workers": 1,
     },
     "phi4:14b": {
-        "base_url": os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
+        "base_url": os.getenv("OLLAMA_BASE_URL2", "http://localhost:11434/v1"),
         "api_key": os.getenv("OLLAMA_API_KEY", "ollama"),
         "model_name": "phi4:14b",
         "max_workers": 1,
@@ -42,7 +42,7 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
         "base_url": os.getenv("OLLAMA_BASE_URL2", "http://localhost:11434/v1"),
         "api_key": os.getenv("OLLAMA_API_KEY2", "ollama"),
         "model_name": "openai/gpt-oss-120b",
-        "max_workers": 1,
+        "max_workers": 2,
     },
     "gemini": {
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -58,7 +58,8 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
     }
 }
 
-DEFAULT_CSV_PATH = Path("../../dataset/single-turn/banking77_personas_phi4:14b_clean.csv")
+#DEFAULT_CSV_PATH = Path("../../dataset/single-turn/banking77_personas_phi4:14b_clean.csv")
+DEFAULT_CSV_PATH = Path("../../dataset/single-turn/banking77_personas_gpt-5.4-nano_clean.csv")
 FILE_LOCK = threading.Lock()
 PRINT_LOCK = threading.Lock()
 
@@ -141,7 +142,7 @@ def process_single_item(client: OpenAI, item: Dict[str, Any], idx: int, system_p
             messages=messages,
             temperature=0.0,
             #max_tokens=1024,
-            max_completion_tokens=1024,
+            max_completion_tokens=2048,
             stream=False,
         )
 
@@ -150,7 +151,7 @@ def process_single_item(client: OpenAI, item: Dict[str, Any], idx: int, system_p
 
         if not raw_content and hasattr(response.choices[0].message, "reasoning"):
             raw_content = ""
-
+            print(response.choices[0].message)
         predicted_intent = re.sub(r'[^a-z_]', '', raw_content.lower())
 
         if hasattr(response, 'usage') and response.usage:
@@ -190,7 +191,7 @@ def classify_texts_parallel(
 
     safe_model_filename = model_alias.replace(":", "_").replace("/", "_")
     output_path = Path(
-        f"../../logs/single-turn/synthetic-dataset/phi4/results-{safe_model_filename}-{csv_path.stem}.jsonl")
+        f"../../logs/single-turn/synthetic-dataset/gpt5/results-{safe_model_filename}-{csv_path.stem}.jsonl")
     client = OpenAI(api_key=config["api_key"], base_url=config["base_url"])
     system_prompt = build_system_prompt(intents_list)
 
