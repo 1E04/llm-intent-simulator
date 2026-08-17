@@ -182,7 +182,8 @@ def classify_texts_parallel(
         config_key: str,
         data_list: List[Dict[str, str]],
         intents_list: List[str],
-        csv_path: Path
+        csv_path: Path,
+        output_dir: Path,
 ) -> Path:
     config = MODEL_CONFIGS[config_key]
     model_alias = config_key
@@ -190,8 +191,9 @@ def classify_texts_parallel(
     max_workers = config.get("max_workers", 5)
 
     safe_model_filename = model_alias.replace(":", "_").replace("/", "_")
-    output_path = Path(
-        f"../../logs/single-turn/synthetic-dataset/gpt5/results-{safe_model_filename}-{csv_path.stem}.jsonl")
+    # Ensure the output directory exists.
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_path = output_dir / f"results-{safe_model_filename}-{csv_path.stem}.jsonl"
     client = OpenAI(api_key=config["api_key"], base_url=config["base_url"])
     system_prompt = build_system_prompt(intents_list)
 
@@ -313,9 +315,17 @@ def evaluate_results(file_path: Path, model_alias: str) -> None:
     safe_print(out_msg)
 
 
-def run_model_pipeline(model_key: str, local_data: List[Dict[str, str]], all_intents: List[str], csv_path: Path):
-    """Führt die komplette Pipeline für ein einzelnes Modell aus."""
-    output_file = classify_texts_parallel(model_key, local_data, all_intents, csv_path)
+def run_model_pipeline(model_key: str, local_data: List[Dict[str, str]], all_intents: List[str], csv_path: Path, output_dir: Path):
+    """Execute the full classification‑and‑evaluation pipeline for a model.
+
+    Args:
+        model_key: Key of the model configuration.
+        local_data: Rows loaded from the CSV.
+        all_intents: List of all possible intent labels.
+        csv_path: Path to the source CSV (used for the result filename).
+        output_dir: Directory where the ``.jsonl`` results will be written.
+    """
+    output_file = classify_texts_parallel(model_key, local_data, all_intents, csv_path, output_dir)
     evaluate_results(output_file, model_key)
 
 
@@ -342,6 +352,13 @@ if __name__ == "__main__":
         action="store_true",
         help="Listet alle verfügbaren Modell-Konfigurationen auf"
     )
+    # Optionales Argument, um das Zielverzeichnis für die Ergebnis‑jsonl‑Dateien zu setzen.
+    parser.add_argument(
+        "--out-dir",
+        type=str,
+        default=None,
+        help="Verzeichnis, in das die Resultate geschrieben werden (Standard: logs/single-turn/baseline-human-dataset/base)"
+    )
 
     args = parser.parse_args()
 
@@ -356,12 +373,19 @@ if __name__ == "__main__":
 
     selected_models = list(MODEL_CONFIGS.keys()) if "all" in args.models else args.models
 
+    # Determine a sensible default output directory: place results next to the CSV
+    # inside the repository's top‑level ``logs`` folder. Users can override this
+    # with ``--out-dir`` if they prefer a different location.
+    default_out_dir = Path(__file__).resolve().parent.parent.parent / "logs" / "single-turn" / "baseline-human-dataset" / "base"
+    output_dir = Path(getattr(args, "out_dir", str(default_out_dir)))
+
     safe_print(f"\nFolgende Modelle werden PARALLEL evaluiert: {', '.join(selected_models)}\n")
+    safe_print(f"Ergebnisse werden gespeichert in: {output_dir}\n")
 
     # Startet alle ausgewählten Modelle zeitgleich in separaten Threads
     with ThreadPoolExecutor(max_workers=len(selected_models)) as executor:
         futures = [
-            executor.submit(run_model_pipeline, model_key, local_data, all_intents, csv_path)
+            executor.submit(run_model_pipeline, model_key, local_data, all_intents, csv_path, output_dir)
             for model_key in selected_models
         ]
 
