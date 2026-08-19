@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # SECURITY FIX: Reliable absolute pathing for secrets
 # =====================================================================
 SCRIPT_DIR = Path(__file__).resolve().parent
-ENV_PATH = SCRIPT_DIR.parent / ".env"
+ENV_PATH = SCRIPT_DIR.parent.parent / ".env"
 load_dotenv(ENV_PATH)
 
 
@@ -222,30 +222,61 @@ OUTPUT FORMAT (Strict JSON):
 # =====================================================================
 
 class BatchJudgeRunner:
-    """Processes all JSON dialogue files in an input directory and outputs evaluation reports."""
+    """Processes all JSON dialogue files in an input directory and outputs evaluation reports.
+
+    The batch is **resumable**: an evaluation is written to disk immediately after
+    each dialogue, and a re-run skips every dialogue that already has a valid
+    ``eval_<id>.json`` in the output directory.  You can stop the run at any time
+    (Ctrl+C) and continue later with the exact same command.
+    """
 
     def __init__(self, evaluator: JudgeLLMEvaluator, output_dir: str):
         self.evaluator = evaluator
         self.output_dir = output_dir
 
-    def run_evaluation_batch(self, input_dir: str):
-        json_files = [
-            f for f in glob.glob(os.path.join(input_dir, "*.json"))
-            if os.path.basename(f) != "batch_summary.json"
-        ]
-        if not json_files:
-            print(f"[JudgeRunner] No dialogue files found in '{input_dir}'!")
-            return
+    # -- resume helpers ---------------------------------------------------
 
-        print(f"\n=======================================================")
-        print(f" STARTING JUDGE_LLM EVALUATION PIPELINE")
-        print(f" Judge Model: {self.evaluator.model_name}")
-        print(f" Dialogues Found: {len(json_files)}")
-        print(f" Input Dir: {input_dir}")
-        print(f" Output Dir: {self.output_dir}")
-        print(f"=======================================================\n")
+    def _existing_eval_ids(self) -> set:
+        """Dialogue IDs that already have a readable evaluation on disk.
 
-        summary_stats = {
+        Unreadable/truncated files (e.g. from a kill mid-write) are deleted so
+        the corresponding dialogue is judged again.
+        """
+        done = set()
+        for path in glob.glob(os.path.join(self.output_dir, "eval_*.json")):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                dialogue_id = data.get("dialogue_id")
+                if dialogue_id:
+                    done.add(dialogue_id)
+                else:
+                    raise ValueError("missing dialogue_id")
+            except Exception:
+                print(f" [Resume] Removing incomplete evaluation: {os.path.basename(path)}")
+                try:
+                    os.remove(path)
+                except OSError:
+                    pass
+        return done
+
+    @staticmethod
+    def _write_json_atomic(path: str, payload: Dict[str, Any]) -> None:
+        """Write via a temp file + rename so an interrupt cannot corrupt output."""
+        tmp_path = f"{path}.tmp"
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_path, path)
+
+    def _build_summary(self) -> Dict[str, Any]:
+        """Rebuild batch_summary.json from every evaluation currently on disk.
+
+        Rebuilding (instead of accumulating in memory) keeps the summary correct
+        across interrupted and resumed runs.
+        """
+        summary_stats: Dict[str, Any] = {
             "total_evaluated": 0,
             "valid_tests": 0,
             "invalid_tests": 0,
@@ -254,73 +285,137 @@ class BatchJudgeRunner:
             "owasp_counts": {}
         }
 
-        for idx, file_path in enumerate(json_files, start=1):
+        for path in sorted(glob.glob(os.path.join(self.output_dir, "eval_*.json"))):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    report = json.load(f)
+            except Exception:
+                continue
+
+            summary_stats["total_evaluated"] += 1
+
+            if str(report.get("test_validity", "")).upper() == "VALID":
+                summary_stats["valid_tests"] += 1
+            else:
+                summary_stats["invalid_tests"] += 1
+
+            vulnerability = report.get("vulnerability") or {}
+            severity = vulnerability.get("cvss_severity", "None")
+            summary_stats["cvss_distribution"][severity] = summary_stats["cvss_distribution"].get(severity, 0) + 1
+
+            owasp_tag = vulnerability.get("owasp_tag", "None")
+            summary_stats["owasp_counts"][owasp_tag] = summary_stats["owasp_counts"].get(owasp_tag, 0) + 1
+
+            persona = report.get("persona", "Unknown")
+            summary_stats["persona_scores"].setdefault(persona, [])
+
+            bot_sc = report.get("target_bot_evaluation") or {}
+            if bot_sc and "intent_recognition" in bot_sc:
+                summary_stats["persona_scores"][persona].append({
+                    "dialogue_id": report.get("dialogue_id"),
+                    "file_name": os.path.basename(path),
+                    "target_intent": report.get("target_intent"),
+                    "test_validity": report.get("test_validity"),
+                    "sim_scores": report.get("simulator_evaluation") or {},
+                    "bot_scores": bot_sc,
+                    "cvss_severity": severity
+                })
+
+        return summary_stats
+
+    def _save_summary(self) -> Dict[str, Any]:
+        summary_stats = self._build_summary()
+        summary_file = os.path.join(self.output_dir, "batch_summary.json")
+        self._write_json_atomic(summary_file, summary_stats)
+        return summary_stats
+
+    # -- main loop --------------------------------------------------------
+
+    def run_evaluation_batch(self, input_dir: str, force: bool = False):
+        json_files = sorted(
+            f for f in glob.glob(os.path.join(input_dir, "*.json"))
+            if os.path.basename(f) != "batch_summary.json"
+        )
+        if not json_files:
+            print(f"[JudgeRunner] No dialogue files found in '{input_dir}'!")
+            return
+
+        done_ids = set() if force else self._existing_eval_ids()
+
+        # Work out what is still missing (dialogue_id lives inside each trace).
+        pending: List[str] = []
+        skipped = 0
+        for file_path in json_files:
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
-                    trace_data = json.load(f)
-
-                report = self.evaluator.evaluate_dialogue(trace_data)
-
-                # Save individual evaluation JSON
-                out_path = os.path.join(self.output_dir, f"eval_{report.dialogue_id[:8]}.json")
-                with open(out_path, "w", encoding="utf-8") as f:
-                    json.dump(asdict(report), f, indent=2, ensure_ascii=False)
-
-                # Aggregate summary statistics
-                summary_stats["total_evaluated"] += 1
-
-                # Track Validity
-                is_valid = str(report.test_validity).upper() == "VALID"
-                if is_valid:
-                    summary_stats["valid_tests"] += 1
-                else:
-                    summary_stats["invalid_tests"] += 1
-
-                severity = report.vulnerability.get("cvss_severity", "None")
-                summary_stats["cvss_distribution"][severity] = summary_stats["cvss_distribution"].get(severity, 0) + 1
-
-                owasp_tag = report.vulnerability.get("owasp_tag", "None")
-                summary_stats["owasp_counts"][owasp_tag] = summary_stats["owasp_counts"].get(owasp_tag, 0) + 1
-
-                persona = report.persona
-                if persona not in summary_stats["persona_scores"]:
-                    summary_stats["persona_scores"][persona] = []
-
-                sim_sc = report.simulator_evaluation
-                bot_sc = report.target_bot_evaluation
-
-                if bot_sc and "intent_recognition" in bot_sc:
-                    summary_stats["persona_scores"][persona].append({
-                        "dialogue_id": report.dialogue_id,
-                        "file_name": f"eval_{report.dialogue_id[:8]}.json",
-                        "target_intent": report.target_intent,
-                        "test_validity": report.test_validity,
-                        "sim_scores": sim_sc,
-                        "bot_scores": bot_sc,
-                        "cvss_severity": severity
-                    })
-
-                validity_tag = "[VALID]" if is_valid else "[INVALID]"
-                intent_score = bot_sc.get('intent_recognition', 'N/A')
-                print(
-                    f" [{idx}/{len(json_files)}] {validity_tag} ID: {report.dialogue_id[:8]} | "
-                    f"Persona: {persona} | Bot Intent Acc: {intent_score}/5 | Risk: {severity}"
-                )
-
-            except openai.AuthenticationError:
-                print(f" [CRITICAL ERROR] Authentication failed while evaluating {file_path}.")
-                print(" -> Check your Judge API keys in the .env file. Aborting batch.")
-                break
+                    dialogue_id = json.load(f).get("dialogue_id")
             except Exception as e:
-                print(f" [ERROR] Failed to evaluate {file_path}. Exception: {e}")
+                print(f" [WARN] Cannot read trace '{os.path.basename(file_path)}': {e}")
+                continue
+            if dialogue_id and dialogue_id in done_ids:
+                skipped += 1
+            else:
+                pending.append(file_path)
 
-        # Save Summary Stats JSON
-        summary_file = os.path.join(self.output_dir, "batch_summary.json")
-        with open(summary_file, "w", encoding="utf-8") as f:
-            json.dump(summary_stats, f, indent=2, ensure_ascii=False)
+        print(f"\n=======================================================")
+        print(f" STARTING JUDGE_LLM EVALUATION PIPELINE")
+        print(f" Judge Model: {self.evaluator.model_name}")
+        print(f" Dialogues Found:     {len(json_files)}")
+        print(f" Already Judged:      {skipped}" + (" (ignored: --force)" if force else ""))
+        print(f" Remaining To Judge:  {len(pending)}")
+        print(f" Input Dir: {input_dir}")
+        print(f" Output Dir: {self.output_dir}")
+        print(f"=======================================================\n")
 
-        print(f"\n[JudgeRunner] Batch evaluation complete! Summary saved to '{summary_file}'.")
+        if not pending:
+            print("[JudgeRunner] Nothing left to do - this run is fully judged.")
+            self._save_summary()
+            return
+
+        newly_evaluated = 0
+        try:
+            for idx, file_path in enumerate(pending, start=1):
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        trace_data = json.load(f)
+
+                    report = self.evaluator.evaluate_dialogue(trace_data)
+
+                    # Save individual evaluation JSON immediately (resume point).
+                    out_path = os.path.join(self.output_dir, f"eval_{report.dialogue_id[:8]}.json")
+                    self._write_json_atomic(out_path, asdict(report))
+                    newly_evaluated += 1
+
+                    bot_sc = report.target_bot_evaluation or {}
+                    severity = (report.vulnerability or {}).get("cvss_severity", "None")
+                    is_valid = str(report.test_validity).upper() == "VALID"
+                    validity_tag = "[VALID]" if is_valid else "[INVALID]"
+                    print(
+                        f" [{idx}/{len(pending)}] {validity_tag} ID: {report.dialogue_id[:8]} | "
+                        f"Persona: {report.persona} | Bot Intent Acc: {bot_sc.get('intent_recognition', 'N/A')}/5 | "
+                        f"Risk: {severity}"
+                    )
+
+                except openai.AuthenticationError:
+                    print(f" [CRITICAL ERROR] Authentication failed while evaluating {file_path}.")
+                    print(" -> Check your Judge API keys in the .env file. Aborting batch.")
+                    break
+                except Exception as e:
+                    print(f" [ERROR] Failed to evaluate {file_path}. Exception: {e}")
+
+        except KeyboardInterrupt:
+            print("\n[JudgeRunner] Interrupted by user - progress is saved.")
+
+        summary_stats = self._save_summary()
+        remaining = len(json_files) - summary_stats["total_evaluated"]
+
+        print(f"\n[JudgeRunner] Newly evaluated this session: {newly_evaluated}")
+        print(f"  -> Total evaluated on disk: {summary_stats['total_evaluated']}/{len(json_files)}"
+              f" | Still missing: {max(0, remaining)}")
         print(f"  -> Valid Tests: {summary_stats['valid_tests']} | Invalid Tests: {summary_stats['invalid_tests']}")
+        print(f"  -> Summary saved to '{os.path.join(self.output_dir, 'batch_summary.json')}'")
+        if remaining > 0:
+            print("  -> Re-run the exact same command to continue with the missing dialogues.")
 
 
 # =====================================================================
@@ -339,6 +434,10 @@ if __name__ == "__main__":
     parser.add_argument("--judge_api_key", type=str, default=None, help="API key for JudgeLLM")
     parser.add_argument("--judge_base_url", type=str, default=None,
                         help="Base URL for JudgeLLM API")
+    parser.add_argument("--force", action="store_true",
+                        help="Re-judge every dialogue, even those already evaluated (overwrites).")
+    parser.add_argument("--status", action="store_true",
+                        help="Only report how many dialogues are judged/missing, then exit.")
 
     args = parser.parse_args()
 
@@ -363,15 +462,17 @@ if __name__ == "__main__":
     new_folder_name = f"{run_prefix}_{safe_judge_name}"
     target_output_dir = os.path.join(args.output_base_dir, new_folder_name)
 
-    # Check if this exact run has already been judged by THIS model
-    if os.path.exists(target_output_dir) and os.listdir(target_output_dir):
-        print(f"\n[INFO] The model '{args.judge_model}' has already judged this run.")
-        print(f"Directory already exists and contains files: {target_output_dir}")
-        print("Exiting pipeline...\n")
-        sys.exit(0)
-    else:
-        # Ensure the output directory exists before starting
-        os.makedirs(target_output_dir, exist_ok=True)
+    # An existing directory is a RESUME point, not an error: already judged
+    # dialogues are skipped and only the missing ones are evaluated.
+    already_judged = os.path.exists(target_output_dir) and any(
+        f.startswith("eval_") for f in os.listdir(target_output_dir)
+    )
+    if already_judged:
+        print(f"\n[INFO] '{args.judge_model}' already judged part of this run - resuming.")
+        print(f"Output directory: {target_output_dir}")
+        if args.force:
+            print("[INFO] --force given: all dialogues will be judged again.")
+    os.makedirs(target_output_dir, exist_ok=True)
 
     evaluator = JudgeLLMEvaluator(
         model_name=args.judge_model,
@@ -380,4 +481,17 @@ if __name__ == "__main__":
     )
 
     runner = BatchJudgeRunner(evaluator=evaluator, output_dir=target_output_dir)
-    runner.run_evaluation_batch(input_dir=resolved_input_dir)
+
+    if args.status:
+        total_traces = len([
+            f for f in glob.glob(os.path.join(resolved_input_dir, "*.json"))
+            if os.path.basename(f) != "batch_summary.json"
+        ])
+        done = len(runner._existing_eval_ids())
+        print(f"\n[STATUS] {target_output_dir}")
+        print(f"  Dialogues in run: {total_traces}")
+        print(f"  Judged:           {done}")
+        print(f"  Missing:          {max(0, total_traces - done)}\n")
+        sys.exit(0)
+
+    runner.run_evaluation_batch(input_dir=resolved_input_dir, force=args.force)
