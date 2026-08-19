@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # SECURITY FIX: Reliable absolute pathing for secrets
 # =====================================================================
 SCRIPT_DIR = Path(__file__).resolve().parent
-ENV_PATH = SCRIPT_DIR.parent.parent / ".env"
+ENV_PATH = SCRIPT_DIR.parent / ".env"
 load_dotenv(ENV_PATH)
 
 

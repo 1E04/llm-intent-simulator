@@ -629,7 +629,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--profile", type=str, default="../profiles/standard_en.json",
                         help="Path to the JSON scenario profile (default: profiles/standard_en.json)")
-    parser.add_argument("--csv_path", type=str, default="../../dataset/single-turn/banking77_test_clean_labels.csv",
+    parser.add_argument("--csv_path", type=str, default="../../dataset/single-turn/banking77_test_labels_clean.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test_clean_labels.csv)")
     parser.add_argument("--num_dialogues", type=int, default=50, help="Number of dialogues per persona (default: 50)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
