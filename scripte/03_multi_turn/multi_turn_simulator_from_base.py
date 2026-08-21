@@ -25,6 +25,7 @@ import json
 import random
 import argparse
 import importlib.util
+import concurrent.futures
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional, Tuple
@@ -209,6 +210,8 @@ def main() -> None:
                         help="Optional payload injected into the simulator prompt.")
     parser.add_argument("--csv_path", type=str, default="",
                         help="Override CSV path - defaults to the human base CSV.")
+    parser.add_argument("--concurrency", type=int, default=1,
+                        help="Number of concurrent dialogues to run.")
 
     args = parser.parse_args()
 
@@ -246,26 +249,6 @@ def main() -> None:
     )
 
     # -----------------------------------------------------------------
-    # Initialise agents.
-    # -----------------------------------------------------------------
-    user_sim = BaseInputUserSimulator(
-        profile_data=profile_data,
-        model_name=args.sim_model,
-        api_key=args.sim_api_key,
-        base_url=args.sim_base_url,
-        seed=args.seed,
-    )
-    target_bot = TargetVoiceBot(
-        profile_data=profile_data,
-        model_name=args.target_model,
-        allowed_labels=active_labels,
-        api_key=args.target_api_key,
-        base_url=args.target_base_url,
-        seed=args.seed,
-    )
-    logger = DialogueLogger(output_dir=resolved_output_dir)
-
-    # -----------------------------------------------------------------
     # Sample the real utterances that seed the dialogues.
     # -----------------------------------------------------------------
     rng = random.Random(args.seed)
@@ -288,13 +271,31 @@ def main() -> None:
     print(f" CSV: {csv_path}")
     print(f" Output: {resolved_output_dir}")
     print(f" Seed: {args.seed} | Dialogues: {num_dialogues} | Max Turns: {args.max_turns}")
-    print(f" Sim Model: {user_sim.model_name} | Target Model: {target_bot.model_name}")
+    print(f" Sim Model: {args.sim_model} | Target Model: {args.target_model}")
     print("=" * 70)
 
     completed_count = 0
-    for dlg_idx, row in enumerate(seed_rows, start=1):
+    
+    def run_single_dialogue(dlg_idx: int, row: Dict[str, str]) -> str:
         target_intent = row["label"]
         base_utterance = row["text"]
+
+        user_sim = BaseInputUserSimulator(
+            profile_data=profile_data,
+            model_name=args.sim_model,
+            api_key=args.sim_api_key,
+            base_url=args.sim_base_url,
+            seed=args.seed,
+        )
+        target_bot = TargetVoiceBot(
+            profile_data=profile_data,
+            model_name=args.target_model,
+            allowed_labels=active_labels,
+            api_key=args.target_api_key,
+            base_url=args.target_base_url,
+            seed=args.seed,
+        )
+        logger = DialogueLogger(output_dir=resolved_output_dir)
 
         print(f"\n>>> Dialogue #{dlg_idx:03d} | Intent: {target_intent} | Sample: {row['id']}")
         print(f"    Base utterance: '{base_utterance}'")
@@ -369,8 +370,21 @@ def main() -> None:
             turns=turn_logs,
             status="COMPLETED" if dialogue_completed else "MAX_TURNS_REACHED",
         )
-        completed_count += 1
-        print(f" [{completed_count}/{num_dialogues}] Saved Dialogue #{dlg_idx:03d} [ID: {dialogue_id[:8]}]")
+        return dialogue_id
+
+    # Execute with concurrency
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.concurrency) as executor:
+        futures = []
+        for dlg_idx, row in enumerate(seed_rows, start=1):
+            futures.append(executor.submit(run_single_dialogue, dlg_idx, row))
+        
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                dialogue_id = future.result()
+                completed_count += 1
+                print(f" [{completed_count}/{num_dialogues}] Saved Dialogue [ID: {dialogue_id[:8]}]")
+            except Exception as e:
+                print(f" [ERROR] Dialogue failed: {e}")
 
     print(f"\nDone. {completed_count} dialogues written to: {resolved_output_dir}")
 

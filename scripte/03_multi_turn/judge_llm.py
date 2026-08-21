@@ -4,6 +4,7 @@ import json
 import glob
 import argparse
 import sys
+import concurrent.futures
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -331,7 +332,7 @@ class BatchJudgeRunner:
 
     # -- main loop --------------------------------------------------------
 
-    def run_evaluation_batch(self, input_dir: str, force: bool = False):
+    def run_evaluation_batch(self, input_dir: str, force: bool = False, concurrency: int = 1):
         json_files = sorted(
             f for f in glob.glob(os.path.join(input_dir, "*.json"))
             if os.path.basename(f) != "batch_summary.json"
@@ -373,36 +374,47 @@ class BatchJudgeRunner:
             return
 
         newly_evaluated = 0
+        
+        def process_file(file_path: str, idx: int) -> bool:
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    trace_data = json.load(f)
+
+                report = self.evaluator.evaluate_dialogue(trace_data)
+
+                # Save individual evaluation JSON immediately (resume point).
+                out_path = os.path.join(self.output_dir, f"eval_{report.dialogue_id[:8]}.json")
+                self._write_json_atomic(out_path, asdict(report))
+
+                bot_sc = report.target_bot_evaluation or {}
+                severity = (report.vulnerability or {}).get("cvss_severity", "None")
+                is_valid = str(report.test_validity).upper() == "VALID"
+                validity_tag = "[VALID]" if is_valid else "[INVALID]"
+                print(
+                    f" [{idx}/{len(pending)}] {validity_tag} ID: {report.dialogue_id[:8]} | "
+                    f"Persona: {report.persona} | Bot Intent Acc: {bot_sc.get('intent_recognition', 'N/A')}/5 | "
+                    f"Risk: {severity}"
+                )
+                return True
+
+            except openai.AuthenticationError:
+                print(f" [CRITICAL ERROR] Authentication failed while evaluating {file_path}.")
+                print(" -> Check your Judge API keys in the .env file. Aborting batch.")
+                raise
+            except Exception as e:
+                print(f" [ERROR] Failed to evaluate {file_path}. Exception: {e}")
+                return False
+
         try:
-            for idx, file_path in enumerate(pending, start=1):
-                try:
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        trace_data = json.load(f)
-
-                    report = self.evaluator.evaluate_dialogue(trace_data)
-
-                    # Save individual evaluation JSON immediately (resume point).
-                    out_path = os.path.join(self.output_dir, f"eval_{report.dialogue_id[:8]}.json")
-                    self._write_json_atomic(out_path, asdict(report))
-                    newly_evaluated += 1
-
-                    bot_sc = report.target_bot_evaluation or {}
-                    severity = (report.vulnerability or {}).get("cvss_severity", "None")
-                    is_valid = str(report.test_validity).upper() == "VALID"
-                    validity_tag = "[VALID]" if is_valid else "[INVALID]"
-                    print(
-                        f" [{idx}/{len(pending)}] {validity_tag} ID: {report.dialogue_id[:8]} | "
-                        f"Persona: {report.persona} | Bot Intent Acc: {bot_sc.get('intent_recognition', 'N/A')}/5 | "
-                        f"Risk: {severity}"
-                    )
-
-                except openai.AuthenticationError:
-                    print(f" [CRITICAL ERROR] Authentication failed while evaluating {file_path}.")
-                    print(" -> Check your Judge API keys in the .env file. Aborting batch.")
-                    break
-                except Exception as e:
-                    print(f" [ERROR] Failed to evaluate {file_path}. Exception: {e}")
-
+            with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+                futures = {executor.submit(process_file, fp, idx): fp for idx, fp in enumerate(pending, start=1)}
+                for future in concurrent.futures.as_completed(futures):
+                    try:
+                        if future.result():
+                            newly_evaluated += 1
+                    except openai.AuthenticationError:
+                        executor.shutdown(wait=False, cancel_futures=True)
+                        break
         except KeyboardInterrupt:
             print("\n[JudgeRunner] Interrupted by user - progress is saved.")
 
@@ -438,6 +450,8 @@ if __name__ == "__main__":
                         help="Re-judge every dialogue, even those already evaluated (overwrites).")
     parser.add_argument("--status", action="store_true",
                         help="Only report how many dialogues are judged/missing, then exit.")
+    parser.add_argument("--concurrency", type=int, default=1,
+                        help="Number of concurrent evaluations to run.")
 
     args = parser.parse_args()
 
@@ -494,4 +508,4 @@ if __name__ == "__main__":
         print(f"  Missing:          {max(0, total_traces - done)}\n")
         sys.exit(0)
 
-    runner.run_evaluation_batch(input_dir=resolved_input_dir, force=args.force)
+    runner.run_evaluation_batch(input_dir=resolved_input_dir, force=args.force, concurrency=args.concurrency)
