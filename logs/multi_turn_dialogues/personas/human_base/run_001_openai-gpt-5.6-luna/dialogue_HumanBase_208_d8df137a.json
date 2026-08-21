@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d8df137a-bda0-4bce-a13f-a0097e9fee2a",
+  "seed": 42,
+  "dialogue_index": 208,
+  "timestamp": "2026-08-19T15:27:39.528888",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 482,
+  "total_sim_completion_tokens": 97,
+  "total_bot_prompt_tokens": 1434,
+  "total_bot_completion_tokens": 252,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why is there a fee for withdrawing?",
+      "assistant_response": "Are you being charged by the ATM (the local ATM operator) or does the fee appear in your card/app as a cash withdrawal fee?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.84
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.11
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:37.437873",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows up in the app as a cash withdrawal fee.",
+      "assistant_response": "Got it—if it’s showing in the app as a cash withdrawal fee, that’s the card’s cash withdrawal charge. Fees can also vary by currency/ATM location, but the app should reflect the exact withdrawal fee applied to that transaction. If you tell me the fee amount and the withdrawal currency/country, I can help confirm which part it is.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:39.528780",
+      "sim_prompt_tokens": 482,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 742,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

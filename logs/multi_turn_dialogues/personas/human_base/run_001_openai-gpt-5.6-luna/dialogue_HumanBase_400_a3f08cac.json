@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a3f08cac-476d-4b3a-bb36-504898b24f63",
+  "seed": 42,
+  "dialogue_index": 400,
+  "timestamp": "2026-08-19T15:41:45.231788",
+  "persona": "HumanBase",
+  "target_intent": "get_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1022,
+  "total_sim_completion_tokens": 270,
+  "total_bot_prompt_tokens": 2250,
+  "total_bot_completion_tokens": 344,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I cannot locate the card PIN.",
+      "assistant_response": "Sorry to hear that—do you mean you’ve forgotten your card PIN (can’t find it anywhere), or are you trying to change a PIN that still works?",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.72
+        },
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.18
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:41:40.930709",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’ve forgotten it – I can’t find it anywhere.",
+      "assistant_response": "Got it—you’ve forgotten your card PIN and can’t find it. Is this for your physical card PIN (to withdraw/pay), and do you still have access to your app/account to verify identity?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.32
+        },
+        {
+          "intent": "get_pin",
+          "confidence": 0.31
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:41:42.978841",
+      "sim_prompt_tokens": 480,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 95
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s the physical card PIN and I can still log into the app.",
+      "assistant_response": "No problem—I can help you retrieve or reset your physical card PIN. In the app, go to your card settings and select PIN options (e.g., “Get/Reveal PIN” or “Change PIN”). If you don’t see that option, tell me whether you’re using iOS or Android and I’ll guide you to the exact screen.",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.9
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.08
+        },
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:41:45.231687",
+      "sim_prompt_tokens": 542,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

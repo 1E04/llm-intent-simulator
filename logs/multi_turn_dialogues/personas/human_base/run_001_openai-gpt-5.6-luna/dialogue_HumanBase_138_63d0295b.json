@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "63d0295b-6891-4588-87bf-413d4fdee502",
+  "seed": 42,
+  "dialogue_index": 138,
+  "timestamp": "2026-08-19T15:23:44.880606",
+  "persona": "HumanBase",
+  "target_intent": "card_delivery_estimate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 521,
+  "total_sim_completion_tokens": 124,
+  "total_bot_prompt_tokens": 1474,
+  "total_bot_completion_tokens": 273,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need my card now!",
+      "assistant_response": "Sorry—you mean you’re waiting for your card to arrive and want it as soon as possible? If you tell me which one applies, I can help: (1) you’ve ordered a physical card but it hasn’t arrived, or (2) you received it but need it urgently—do you also need a way to pay immediately (like a virtual card)?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.42
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-19T15:23:42.667694",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I ordered a physical card and it still hasn't arrived.",
+      "assistant_response": "Got it—your physical card hasn’t arrived yet. I can help you check the delivery status and next steps. What date did you place the order (or when did you receive the “card dispatched” notification, if you have one)?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.09
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:23:44.880469",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 106
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6b8ed8d3-3f13-4cd2-99f3-cb74eb5f6b04",
+  "seed": 42,
+  "dialogue_index": 343,
+  "timestamp": "2026-08-19T15:36:32.796590",
+  "persona": "HumanBase",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1044,
+  "total_sim_completion_tokens": 295,
+  "total_bot_prompt_tokens": 2272,
+  "total_bot_completion_tokens": 349,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "May I exchange currencies with this?",
+      "assistant_response": "Sure—do you mean exchanging currencies in the app with your card/balance, or exchanging cash at an ATM? Also, which currency pair are you trying to exchange?",
+      "predicted_intent": "exchange_via_app",
+      "top_3_intents": [
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.42
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.38
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:36:28.086090",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to do it in the app with my balance, and I need to swap USD for EUR.",
+      "assistant_response": "Yes—you can exchange currencies in the app using your balance. Can you confirm you want to exchange USD to EUR, and tell me whether you want to know the current exchange rate or any fees for the swap?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.52
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.32
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:36:30.443666",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 98
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, that's right—please tell me the current rate and any fees.",
+      "assistant_response": "To check the current USD→EUR exchange rate and any fees, I’ll need to look up the exact live rate for your account. What payment method/balance are you using for the conversion (e.g., your Revolut USD balance), and do you want to convert the full USD balance or a specific amount (how many USD)?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:36:32.796484",
+      "sim_prompt_tokens": 559,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 824,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

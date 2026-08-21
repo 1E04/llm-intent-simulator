@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "29cc0641-adf3-441b-8325-d6eace0a17aa",
+  "seed": 42,
+  "dialogue_index": 616,
+  "timestamp": "2026-08-19T15:57:22.330896",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2914,
+  "total_sim_completion_tokens": 544,
+  "total_bot_prompt_tokens": 4606,
+  "total_bot_completion_tokens": 749,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I topped up my account and even though it was confirmed at first, the money isn't there anymore! why did this happen, and where did my money go?",
+      "assistant_response": "I’m sorry about that—this usually happens when a top up that looked successful later gets reversed, or if it hasn’t fully reflected back. Can you tell me whether you received a “reverted/ reversed top up” message or the funds returned to your card/bank account (and roughly when the top up was made)?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.72
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.16
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:11.888003",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I didn’t get any “reverted” notice – the money just disappeared from my account. It was a top‑up about two days ago.",
+      "assistant_response": "Thanks—if there’s no “reverted” notice, it may be that the top up is still pending and then later fails, or it could have been reversed without notifying you. Can you check whether the top-up shows as **pending** in your app/transaction history, and what status it shows exactly (pending/completed)?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.23
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:14.504820",
+      "sim_prompt_tokens": 567,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 822,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows as completed, not pending.",
+      "assistant_response": "If it shows as **completed** but the balance went down two days later, that most closely matches a **top up that was later reversed/reverted**. Can you confirm: did you see the top-up amount returned anywhere (e.g., back to your card/bank), or do you still see the same transaction entry but with a **zero/net change** to your balance?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:16.864763",
+      "sim_prompt_tokens": 674,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 907,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I don’t see any refund – the transaction is still listed, but my balance didn’t change.",
+      "assistant_response": "It sounds like the top up was marked **completed**, but the balance didn’t reflect a final positive change—this most often means the top up was later **reverted** (even if you didn’t get a separate notice).\n\nCan you check the exact transaction line for the top up and tell me what it shows as the **final status/wording** (e.g., “reversed”, “reverted”, “completed”), and whether the top up method was **by card** or **by bank transfer**?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.26
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:19.461837",
+      "sim_prompt_tokens": 769,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 1014,
+      "bot_completion_tokens": 166
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just says “completed” and I used my debit card for the top‑up.",
+      "assistant_response": "Since the card top up shows as “completed” but the money disappeared, the most likely cause is that the top up was actually later reverted/reversed on the card network (sometimes without a separate notice). Where did you top up from—your card statement shows the charge as pending or completed, and do you see any recent “refund/ reversal” line there?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:22.330740",
+      "sim_prompt_tokens": 904,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 1147,
+      "bot_completion_tokens": 165
+    }
+  ]
+}

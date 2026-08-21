@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "9e782558-3386-49db-8a52-be61e712acd2",
+  "seed": 42,
+  "dialogue_index": 635,
+  "timestamp": "2026-08-19T15:59:08.223265",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2704,
+  "total_sim_completion_tokens": 613,
+  "total_bot_prompt_tokens": 4441,
+  "total_bot_completion_tokens": 825,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why am I being charged twice fro a restaurant?",
+      "assistant_response": "I’m sorry about that—when a restaurant charge shows up twice, it’s often either a duplicate authorization or the merchant later completes/corrects the payment. Can you tell me: are both charges exactly the same amount and both marked as “pending,” or is one of them completed/posted?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:56.136477",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Both are the same amount – one is still pending and the other has already posted.",
+      "assistant_response": "Thanks for the details. When one restaurant payment is pending and the other posts for the same amount, the pending authorization usually gets reversed automatically and you should ultimately be charged only once. Can you confirm whether the pending one is showing as “pending” (not completed) in your app, and about how long ago the pending charge was made?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:58.690299",
+      "sim_prompt_tokens": 519,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s still pending and it showed up yesterday.",
+      "assistant_response": "Got it. If two restaurant transactions are the same amount—one posted and one still pending from yesterday—then the pending authorization typically drops off automatically after the merchant finalizes/cancels it, so you shouldn’t end up paying twice. \n\nCan you check the pending one for its status and exact date, and tell me whether it still shows as “pending” today (and how long ago yesterday it was made, e.g., morning/evening)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.7
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:01.966488",
+      "sim_prompt_tokens": 614,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 871,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s still pending today, and it was posted yesterday evening.",
+      "assistant_response": "Thanks—if the posted charge and the identical pending charge are for the same merchant and one is still pending after a day, it’s usually an authorization holding that should clear automatically. \n\nTo be sure, could you confirm: is the pending one still showing as “pending/authorisation” (not completed/refunded), and roughly how long ago yesterday evening it was made (e.g., within 6–12 hours, or closer to 24 hours)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.66
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:04.527310",
+      "sim_prompt_tokens": 728,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 986,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, it’s still pending and it was made about 10 hours ago, around yesterday evening.",
+      "assistant_response": "Understood—this sounds like a duplicated card authorization: one payment has posted, and the other is still pending. In most cases, the pending authorization is automatically released (so you won’t be charged twice). Since it was only made about 10 hours ago, it may clear over the next 24–48 hours.\n\nCan you tell me if the pending one is labeled as “pending/authorisation” in the app (not “reverted/refunded”)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.75
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:08.223203",
+      "sim_prompt_tokens": 843,
+      "sim_completion_tokens": 223,
+      "bot_prompt_tokens": 1109,
+      "bot_completion_tokens": 192
+    }
+  ]
+}

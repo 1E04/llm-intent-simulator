@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "045f9f11-bed7-40b2-9b3b-aa40ae7a1200",
+  "seed": 42,
+  "dialogue_index": 210,
+  "timestamp": "2026-08-19T15:27:46.040329",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 507,
+  "total_sim_completion_tokens": 142,
+  "total_bot_prompt_tokens": 1463,
+  "total_bot_completion_tokens": 294,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why did I have to pay a fee when I got cash?",
+      "assistant_response": "To confirm—are you seeing a cash withdrawal fee charged by our card/bank when you took out cash at the ATM, or was it mainly an exchange/rate-related charge because the ATM used a different currency?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:43.272433",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a fee from the ATM itself, not an exchange‑rate thing.",
+      "assistant_response": "Thanks—if the fee came from the ATM itself, it’s typically a surcharge charged by the ATM operator (and sometimes the ATM bank). We can’t remove that ATM-set fee, but I can help you check whether any extra charge was also applied on your side. What country and ATM operator were you using?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.07
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:46.040247",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

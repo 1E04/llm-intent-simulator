@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "8d39a1ec-5454-4904-ba38-b8397a1e40f7",
+  "seed": 42,
+  "dialogue_index": 565,
+  "timestamp": "2026-08-19T15:53:59.985378",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2592,
+  "total_sim_completion_tokens": 591,
+  "total_bot_prompt_tokens": 4310,
+  "total_bot_completion_tokens": 757,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Do I have to pay any fees in order to receive money?",
+      "assistant_response": "It depends on how you’re receiving the money. Are you expecting an incoming bank transfer, card payment, or cash deposit—and in which currency?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.6
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.3
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:53:48.819785",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m expecting an incoming bank transfer in GBP.",
+      "assistant_response": "Thanks—if you’re receiving money via an incoming bank transfer in GBP, you generally don’t pay to receive the transfer. Fees (if any) are usually charged by the sending bank for the transfer itself, or if there are intermediary bank charges. Do you know whether the sender selected “OUR” or “SHA” fees?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.52
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:53:51.686632",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m not sure which option they chose.",
+      "assistant_response": "Got it. If it’s an incoming bank transfer, you typically won’t pay a fee just to receive it—fees are usually charged by the sender’s bank depending on the fee option (often “SHA” or “OUR”). To confirm for your case, can you tell me whether you’re using a local UK GBP transfer (same bank/UK) or an international transfer? Also, do you have the sender’s reference or any “fee details” shown on the transfer confirmation?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.27
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:53:53.791866",
+      "sim_prompt_tokens": 583,
+      "sim_completion_tokens": 88,
+      "bot_prompt_tokens": 831,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s a local UK transfer within the same bank, and I don’t have any reference or fee details on the confirmation.",
+      "assistant_response": "For a local UK incoming bank transfer into your account in GBP (same-bank), you usually don’t pay any fee to receive it—any charges are typically handled by the sender’s bank. To be sure, can you confirm the transfer type is a standard GBP bank transfer (not a cash/cheque deposit) and whether the amount that should arrive matches what you see expected in your app?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:53:57.522024",
+      "sim_prompt_tokens": 699,
+      "sim_completion_tokens": 257,
+      "bot_prompt_tokens": 963,
+      "bot_completion_tokens": 172
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, it’s a standard GBP bank transfer and the amount matches what I’m expecting in the app.",
+      "assistant_response": "For a standard local UK incoming GBP bank transfer, you typically don’t pay a fee to receive it—any charges are normally handled by the sender’s bank. If you tell me the transfer is marked as “bank transfer” (not cash/cheque), you’re covered.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:53:59.985224",
+      "sim_prompt_tokens": 813,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1073,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

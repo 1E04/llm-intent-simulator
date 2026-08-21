@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "2da98e06-2241-4778-96cc-315f3f14decd",
+  "seed": 42,
+  "dialogue_index": 296,
+  "timestamp": "2026-08-19T15:33:29.499468",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1238,
+  "total_sim_completion_tokens": 307,
+  "total_bot_prompt_tokens": 2431,
+  "total_bot_completion_tokens": 433,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There was a transaction from two weeks ago from a business that I don't know. I'm fairly certain it wasn't me who made it, but is it an option to trace it to confirm?",
+      "assistant_response": "Yes—if you don’t recognize a card transaction, we can help you investigate it. Can you confirm whether it was a card payment (where the merchant charged you) or a cash withdrawal/transfer? Also, do you see the transaction listed as completed or pending in the app?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.25
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:24.013800",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 721,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card payment and it’s showing as a completed transaction.",
+      "assistant_response": "Thanks—since it’s a completed card payment you don’t recognize, I can help you confirm and review it. First, please tell me: is the merchant name shown on the transaction, and do you want to (1) trace/investigate the transaction details, or (2) start a refund request for the merchant?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.16
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:26.733511",
+      "sim_prompt_tokens": 574,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 802,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, the merchant name is shown but I don’t recognize it. I’d like to trace/investigate the transaction, not request a refund.",
+      "assistant_response": "Got it—if it’s a completed card payment you don’t recognize, we can investigate it. Please tell me the merchant name and the exact transaction amount/currency, and whether the transaction was made online or in-store (if shown). Then I’ll guide you on next steps to confirm what happened.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:29.499353",
+      "sim_prompt_tokens": 664,
+      "sim_completion_tokens": 211,
+      "bot_prompt_tokens": 908,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f91cad11-0303-4de3-a4cd-98609386f9fb",
+  "seed": 42,
+  "dialogue_index": 528,
+  "timestamp": "2026-08-19T15:51:09.264985",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 485,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 1448,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I have a refund?",
+      "assistant_response": "Sure—do you want to request a refund for a card payment, or are you expecting a refund that hasn’t shown up yet? If you can, tell me the date and amount.",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.72
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.18
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:06.507702",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s for a purchase on March 12 2024, about $45.67.",
+      "assistant_response": "Got it—you’re asking for a refund for a purchase on March 12, 2024 (~$45.67). I can help you submit a refund request. Was this purchase made with your card in the app/merchant, and do you still see the transaction in your card history?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.88
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:09.264872",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

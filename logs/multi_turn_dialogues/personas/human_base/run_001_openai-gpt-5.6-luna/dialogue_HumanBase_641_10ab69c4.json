@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "10ab69c4-417f-49d8-8df1-999c8fba6c98",
+  "seed": 42,
+  "dialogue_index": 641,
+  "timestamp": "2026-08-19T15:59:30.436241",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1085,
+  "total_sim_completion_tokens": 352,
+  "total_bot_prompt_tokens": 2302,
+  "total_bot_completion_tokens": 411,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My receipt shows an extra charge on my transfer, why is this?",
+      "assistant_response": "Could you confirm whether the extra amount is a separate transfer fee (charged by us), or does it relate to an exchange between currencies on the transfer?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.62
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.22
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:25.111244",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a domestic transfer in the same currency, so no exchange should be involved.",
+      "assistant_response": "Thanks—if it was a domestic transfer in the same currency, the most common reason is that a transfer fee was applied (or a bank intermediary fee was charged and reflected on your receipt). Can you tell me the exact wording/amount of the extra charge and whether it’s marked as a fee or just an extra transferred amount?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.19
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:28.226999",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 212,
+      "bot_prompt_tokens": 755,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The receipt says “Transfer fee – $5.00” as an extra line item.",
+      "assistant_response": "That “Transfer fee – $5.00” line item is a transfer fee. It’s expected to appear separately on the receipt/statement when the transfer service applies a fee. If you share the transfer type (bank transfer/ACH) and country or whether it was domestic ACH, I can confirm the typical fee basis for that route.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:30.436126",
+      "sim_prompt_tokens": 589,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 849,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

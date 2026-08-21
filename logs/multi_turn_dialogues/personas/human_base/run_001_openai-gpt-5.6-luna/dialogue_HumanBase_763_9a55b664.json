@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9a55b664-889d-489d-8ca5-5eb7bd80f98e",
+  "seed": 42,
+  "dialogue_index": 763,
+  "timestamp": "2026-08-19T16:09:15.017452",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 496,
+  "total_sim_completion_tokens": 93,
+  "total_bot_prompt_tokens": 1439,
+  "total_bot_completion_tokens": 238,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can you look to make sure the exchange rate is correct",
+      "assistant_response": "Sure—are you checking the exchange rate for a specific card payment or cash withdrawal, or are you asking about the standard rate used in the app?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T16:09:13.174817",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's for a cash withdrawal I just made.",
+      "assistant_response": "Thanks—since it’s for a cash withdrawal, I’ll help you check whether the exchange rate applied was correct. Can you tell me the withdrawal date/time and the amount you withdrew (and the currency if shown on the receipt or app)?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T16:09:15.017352",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 93,
+      "bot_prompt_tokens": 744,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

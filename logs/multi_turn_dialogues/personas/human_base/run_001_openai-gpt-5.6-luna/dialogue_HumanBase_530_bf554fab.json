@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "bf554fab-9375-49fb-bcbb-75ccfd7452d9",
+  "seed": 42,
+  "dialogue_index": 530,
+  "timestamp": "2026-08-19T15:51:24.643435",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1031,
+  "total_sim_completion_tokens": 315,
+  "total_bot_prompt_tokens": 2256,
+  "total_bot_completion_tokens": 342,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I want to return an item.",
+      "assistant_response": "Sure—do you want to request a refund for a card purchase, or are you saying the refund was already processed but hasn’t appeared yet?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.55
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.3
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:19.497563",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I need a refund for the purchase.",
+      "assistant_response": "Got it—you want to request a refund for a card purchase. Was the purchase made with your card, and do you already have a refund reference/confirmation from the merchant? If yes, tell me roughly when it was processed; if not, I’ll guide you to start the refund request.",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.74
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.16
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:22.570464",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 738,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was my card, but I don’t have any reference—just want to start the refund.",
+      "assistant_response": "Okay—I can help you start a refund request for a card purchase. Which merchant transaction are you trying to refund (merchant name and the approximate date/amount), and was it paid by credit/debit card?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.86
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:24.643333",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

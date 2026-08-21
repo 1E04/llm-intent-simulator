@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8b92f1df-dd06-44cf-b8f5-a5b7b33d19ce",
+  "seed": 42,
+  "dialogue_index": 286,
+  "timestamp": "2026-08-19T15:32:30.407627",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 514,
+  "total_sim_completion_tokens": 142,
+  "total_bot_prompt_tokens": 1479,
+  "total_bot_completion_tokens": 256,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When I try and to buy something using my card it keeps getting declined.",
+      "assistant_response": "Sorry about that—when your card payment is declined, is it declining at the checkout every time, or does it sometimes go through? Also, are you seeing any error message (for example, “card declined” or “try again later”)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.13
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:27.848636",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It happens every time I try to pay, and I usually get a “try again later” message.",
+      "assistant_response": "Got it—if every card payment is declined with “try again later,” the most likely issue is a declined card payment. Can you confirm: are you trying to pay in-store or online, and has the card been used successfully before?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:30.407511",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 108
+    }
+  ]
+}

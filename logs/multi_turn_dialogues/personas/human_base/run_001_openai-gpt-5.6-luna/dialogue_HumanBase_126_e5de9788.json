@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e5de9788-3780-4fa0-8d4a-ab070df651df",
+  "seed": 42,
+  "dialogue_index": 126,
+  "timestamp": "2026-08-19T15:22:46.610083",
+  "persona": "HumanBase",
+  "target_intent": "card_arrival",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1046,
+  "total_sim_completion_tokens": 305,
+  "total_bot_prompt_tokens": 2282,
+  "total_bot_completion_tokens": 394,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I've been waiting longer than expected for my card.",
+      "assistant_response": "Sorry for the delay. Are you waiting for a newly ordered physical card to arrive, or are you checking whether a card that was marked as delivered has actually arrived?",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.55
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.3
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:22:41.677831",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a brand‑new card I ordered, and it still hasn't arrived.",
+      "assistant_response": "Thanks—since it’s a brand-new physical card, I can help check the delivery status. What date did you place the order (or when did you receive the email saying it was dispatched), and what country are you shipping to?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.14
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:22:44.362600",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 176,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I ordered it on July 10, got the dispatch email on July 12, and it’s being shipped to the United Kingdom.",
+      "assistant_response": "Thanks—this sounds like you’re looking for an updated delivery estimate for a brand-new physical card to the UK. Could you share the delivery postcode (or just the first part, e.g., “SW1”) and whether the tracking link shows “in transit” or “delivered”? This will help me narrow down what stage it’s stuck at.",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.1
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:22:46.609922",
+      "sim_prompt_tokens": 559,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 836,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

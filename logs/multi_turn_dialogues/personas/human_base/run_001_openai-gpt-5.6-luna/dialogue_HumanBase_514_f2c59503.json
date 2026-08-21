@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f2c59503-74d2-47e0-9676-f04200a657ee",
+  "seed": 42,
+  "dialogue_index": 514,
+  "timestamp": "2026-08-19T15:49:28.496099",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1095,
+  "total_sim_completion_tokens": 295,
+  "total_bot_prompt_tokens": 2319,
+  "total_bot_completion_tokens": 471,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do i get my salary in the account?",
+      "assistant_response": "Sure—do you mean setting up your salary via a bank transfer (providing your account details to your employer), or are you asking about a specific transfer timing/delay for when it should arrive?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.42
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.24
+        }
+      ],
+      "timestamp": "2026-08-19T15:49:21.409861",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I need to know how to give my employer my account details so they can deposit my salary.",
+      "assistant_response": "To get your salary paid into your account, you need to share your account details with your employer—usually your IBAN (and sometimes BIC/SWIFT and the account holder name). What country are you in and which account do you want to use (your personal or business account)? If you tell me that, I’ll tell you exactly which details to find and send.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.66
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.24
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:49:24.173661",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm in the UK and I want it in my personal account.",
+      "assistant_response": "Great. To receive your salary in your UK personal account, you’ll typically give your employer your **IBAN** (and sometimes the **BIC/SWIFT** and **account holder name**). \n\nPlease check in the app for your **Personal account details / Account details** section, then share:\n- **IBAN**\n- **Account holder name**\n- **BIC/SWIFT** (if requested)\n\nWant to confirm: are you getting paid via a UK payroll **bank transfer** (local transfer) or from overseas?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:49:28.496003",
+      "sim_prompt_tokens": 600,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 862,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

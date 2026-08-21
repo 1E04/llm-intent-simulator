@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f4b59d47-e22b-4488-b5dd-cf2295faea39",
+  "seed": 42,
+  "dialogue_index": 170,
+  "timestamp": "2026-08-19T15:25:39.161601",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 503,
+  "total_sim_completion_tokens": 113,
+  "total_bot_prompt_tokens": 1452,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was I charged an extra fee when using a card?",
+      "assistant_response": "Sorry about that—was the extra fee shown as a card payment fee (a separate fee for the purchase), or was it related to a currency conversion/exchange rate at the time of payment?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.15
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:36.803019",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up as a separate “card payment fee.”",
+      "assistant_response": "Got it—if it’s listed as a separate “card payment fee,” that matches the **card payment fee charged** issue. I can help check what caused it. Was the fee charged in the same currency as the purchase, and do you have the merchant name and the amount of the fee?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:39.161495",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

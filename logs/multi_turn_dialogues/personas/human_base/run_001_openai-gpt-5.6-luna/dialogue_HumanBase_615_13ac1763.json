@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "13ac1763-385c-4d84-bc61-918188e42c63",
+  "seed": 42,
+  "dialogue_index": 615,
+  "timestamp": "2026-08-19T15:57:10.351294",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 525,
+  "total_sim_completion_tokens": 160,
+  "total_bot_prompt_tokens": 1484,
+  "total_bot_completion_tokens": 266,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I put money into my account for the minimum balance but the application didn't accept.",
+      "assistant_response": "Sorry to hear that—when you say “the application didn’t accept,” do you mean your top up failed (card/bank transfer), or you deposited cash/cheque and it wasn’t credited? Also, what payment method did you use and did you get any error message?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.22
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:07.891838",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up and I got a “transaction declined” error.",
+      "assistant_response": "Thanks—if your card top-up shows “transaction declined,” it’s usually a failed card top up. Could you confirm: was the top-up amount smaller than the minimum/maximum you have for top ups, and are you seeing any specific reason code or message after the decline?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.92
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:10.351145",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 114
+    }
+  ]
+}

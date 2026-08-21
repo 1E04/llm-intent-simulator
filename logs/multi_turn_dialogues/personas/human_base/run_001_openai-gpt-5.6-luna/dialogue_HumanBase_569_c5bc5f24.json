@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c5bc5f24-4f1b-4e95-96ce-af4b7630ddfd",
+  "seed": 42,
+  "dialogue_index": 569,
+  "timestamp": "2026-08-19T15:54:23.122662",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 507,
+  "total_sim_completion_tokens": 185,
+  "total_bot_prompt_tokens": 1460,
+  "total_bot_completion_tokens": 251,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What us the fee to transfer money from my bank?",
+      "assistant_response": "Do you mean a bank transfer fee (sending money to someone) or a bank transfer fee when you add money to your Revolut account? If you tell me which one, I can help with the exact fee.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:54:19.530220",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I mean the fee when I add money to my Revolut account from my bank.",
+      "assistant_response": "Got it — the fee for topping up your Revolut account by bank transfer. Fees depend on the country/currency and the type of transfer (e.g., local vs international). Which country is your bank in and what currency are you topping up with?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:54:23.122559",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 185,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

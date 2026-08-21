@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "3364428e-4463-46b3-bdcb-0a29dbd3912d",
+  "seed": 42,
+  "dialogue_index": 667,
+  "timestamp": "2026-08-19T16:02:30.462474",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2618,
+  "total_sim_completion_tokens": 738,
+  "total_bot_prompt_tokens": 4364,
+  "total_bot_completion_tokens": 775,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where is the transaction I made to a friend?",
+      "assistant_response": "To help me find it, was the transfer marked as pending, completed, or failed—and do you have a transfer reference/recipient name or amount?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.58
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T16:02:17.659454",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed, about $150 to John Doe.",
+      "assistant_response": "Thanks—if it’s showing “completed” for about $150 to John Doe, the next step is usually to check whether John received it. When did you make the transfer (date/time), and is John Doe expecting it to be in your app/our bank transfer details or via a card/bank account? If you can share the transfer reference (or last 4 digits), I can help narrow it down.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.15
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T16:02:20.834545",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 747,
+      "bot_completion_tokens": 178
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I sent it yesterday around 3 pm, reference ends in 4321, to his bank account.",
+      "assistant_response": "Got it—transfer to John Doe’s bank account, completed yesterday around 3pm, reference ending 4321. Since it’s marked completed, can you confirm: has John actually said he hasn’t received it yet? And are you seeing any other status details (like “completed” only, or a transfer date/settlement date)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T16:02:24.631969",
+      "sim_prompt_tokens": 598,
+      "sim_completion_tokens": 221,
+      "bot_prompt_tokens": 863,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "He says he hasn’t got it yet. I only see “completed” with the date, no other details.",
+      "assistant_response": "Understood. Since the transfer is marked **completed** but John Doe hasn’t received it, this usually falls under **transfer not received by recipient**—often it’s still settling on the receiving bank side.\n\nCan you tell me the **exact currency** and whether it was a **bank transfer (outgoing)** in your app (not a card-to-card transfer)? Also, do you see any **“settled/processing”** date anywhere for reference ending **4321**?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T16:02:27.698098",
+      "sim_prompt_tokens": 699,
+      "sim_completion_tokens": 201,
+      "bot_prompt_tokens": 965,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was a USD bank transfer, and I don’t see any settled or processing date—just “completed.”",
+      "assistant_response": "Thanks—since it’s a USD **bank transfer** marked **completed** for about $150 to John Doe (ref ending 4321), but he hasn’t received it, I’ll treat this as **transfer not received by recipient**. \n\nCan you confirm the transfer type in your app is **bank transfer** (not card-to-card), and roughly how long ago it was marked “completed” (e.g., how many hours since 3pm yesterday)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T16:02:30.462340",
+      "sim_prompt_tokens": 830,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 1095,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

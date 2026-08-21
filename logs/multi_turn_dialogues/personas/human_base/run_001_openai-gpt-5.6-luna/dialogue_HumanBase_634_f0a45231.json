@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f0a45231-d590-44ac-8073-8979a84c10ba",
+  "seed": 42,
+  "dialogue_index": 634,
+  "timestamp": "2026-08-19T15:58:54.803992",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1049,
+  "total_sim_completion_tokens": 249,
+  "total_bot_prompt_tokens": 2255,
+  "total_bot_completion_tokens": 356,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is more than one of the same transaction on my account.",
+      "assistant_response": "I can help with duplicate transactions. Was this a card payment or a bank transfer (and roughly what date/amount)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.62
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:50.228139",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card payment, roughly $45 on March 12.",
+      "assistant_response": "Thanks—just to confirm: did you see two separate card charges for about $45 on Mar 12, or one charge plus extra items/fees? Also, are both charges still showing as “pending” or are they both “completed”?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:52.650933",
+      "sim_prompt_tokens": 488,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 745,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Two separate charges, both show as completed.",
+      "assistant_response": "It sounds like you’ve been charged twice for the same card payment. I can help—can you share the merchant name and the last 4 digits of the card (or a screenshot of the two charge lines), and confirm whether the amounts are exactly the same $45 or slightly different?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:54.803877",
+      "sim_prompt_tokens": 561,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

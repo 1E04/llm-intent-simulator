@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "c2e2711d-3d94-4167-bdc0-4b19de339812",
+  "seed": 42,
+  "dialogue_index": 529,
+  "timestamp": "2026-08-19T15:51:17.987716",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1827,
+  "total_sim_completion_tokens": 330,
+  "total_bot_prompt_tokens": 3302,
+  "total_bot_completion_tokens": 564,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I wasn't charged the correct amount for an item I purchased, how can I fix this?",
+      "assistant_response": "Sorry about that—was the “incorrect amount” due to a different exchange rate (e.g., you were charged in another currency), or did you pay in the same currency but the merchant charged the wrong amount? If you tell me which one, I’ll guide you to the right fix.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:10.608424",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was in the same currency—I was overcharged.",
+      "assistant_response": "Got it—you were overcharged in the same currency. Most often this is an extra charge/incorrect amount on the card statement. Can you confirm if the charge is already showing as “completed,” and whether it’s a card payment (not a pending or cash withdrawal)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:13.064211",
+      "sim_prompt_tokens": 530,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it's shown as completed and it's a card payment.",
+      "assistant_response": "Thanks—since it’s a completed card payment in the same currency, this is most likely an incorrect/extra charge on your statement. Can you tell me the exact amount you were charged and whether your receipt shows a different amount? Also, did you notice this charge includes any extra “tip/service/interest” line items?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.84
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:15.218009",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 858,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I was charged $45.99, but the receipt shows $38.50, and there’s no tip or extra fee listed.",
+      "assistant_response": "Thanks—this matches an overcharge where the statement amount doesn’t match the receipt. \n\nTo fix it, we’ll raise a dispute/refund for the difference. Please share: (1) the merchant name, (2) transaction date, and (3) whether you have a reference/receipt number for the $38.50 amount.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.91
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:17.987599",
+      "sim_prompt_tokens": 692,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 960,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

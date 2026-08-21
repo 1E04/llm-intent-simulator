@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "24d11106-7596-434c-965d-3703150efb15",
+  "seed": 42,
+  "dialogue_index": 708,
+  "timestamp": "2026-08-19T16:05:58.007140",
+  "persona": "HumanBase",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2690,
+  "total_sim_completion_tokens": 532,
+  "total_bot_prompt_tokens": 4444,
+  "total_bot_completion_tokens": 727,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How can I lookup where funds came from?",
+      "assistant_response": "Sure—are you trying to see the source of funds for a specific top up/transfer (e.g., which bank or account it came from), or are you looking at general transaction history to identify where a payment was received from?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.55
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.3
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T16:05:44.173658",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking at a particular transfer – I want to know which account it came from.",
+      "assistant_response": "Got it—you want to identify which account a specific transfer was sent from. Can you tell me whether the transfer is a bank transfer (sent to your account) and whether you’re viewing it in the app under **Transactions** or **Transfers**? If you share the transfer type, I’ll guide you to the exact place where the sender details/source account are shown.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.26
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T16:05:50.391226",
+      "sim_prompt_tokens": 504,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s a bank transfer into my account, and I’m looking at it under Transactions.",
+      "assistant_response": "To see where the bank transfer came from, open the transfer in the app under **Transactions**, then select **View details/Transfer details**. Look for the **Sender/From account** or **Originator** information—this shows the sending account details.\n\nIf you don’t see sender/origin details, tell me what you can see on the transfer screen (e.g., sender name, reference/trace ID, or only amount/date), and I’ll pinpoint the next step.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.66
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.2
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-19T16:05:52.676858",
+      "sim_prompt_tokens": 606,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 870,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I only see the amount, date and a reference number—no sender name or account shown.",
+      "assistant_response": "Thanks—if you only see amount, date, and a reference, it usually means the sender/originator details aren’t included in that transfer’s message. \n\nWhich exact transfer method is it: an international transfer (SWIFT) or a local transfer (e.g., Faster Payments/SEPA)? Also, do you see an option like **“View more details”** or **“Download statement/receipt”** for that reference?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.26
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T16:05:55.299610",
+      "sim_prompt_tokens": 731,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 996,
+      "bot_completion_tokens": 184
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s a local Faster Payments transfer, and there’s no “view more details” or download option.",
+      "assistant_response": "For a Faster Payments transfer, the app sometimes only shows amount/date/reference and not the sender account. Are you trying to: (1) identify the sender for a specific incoming transfer you have, or (2) perform a source-of-funds check because your account needs verification?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.73
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T16:05:58.006914",
+      "sim_prompt_tokens": 849,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 1117,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

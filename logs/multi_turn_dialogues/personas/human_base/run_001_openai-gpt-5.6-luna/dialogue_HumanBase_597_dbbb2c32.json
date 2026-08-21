@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "dbbb2c32-cf92-442a-9a7f-4c5a41de80ed",
+  "seed": 42,
+  "dialogue_index": 597,
+  "timestamp": "2026-08-19T15:55:57.436993",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 491,
+  "total_sim_completion_tokens": 132,
+  "total_bot_prompt_tokens": 1442,
+  "total_bot_completion_tokens": 270,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why caused my top up to not work?",
+      "assistant_response": "I can help—was your top up declined and shows as “failed,” or is it showing “pending” / not yet completed? Also, was it by card or bank transfer?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.16
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:55.126935",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says failed and I used my card.",
+      "assistant_response": "Sorry about that. If your card top up shows “failed,” it’s usually due to one of these: the card issuer declined it, the top up details were incorrect (amount/3‑D Secure), insufficient funds/limits, or the bank blocked the transaction. \n\nWhich country/issuer is your card from, and what error message (if any) do you see on the app when it fails?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:57.436865",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 749,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c8f9062e-aeea-49e8-a2f1-8743d71f607f",
+  "seed": 42,
+  "dialogue_index": 678,
+  "timestamp": "2026-08-19T16:03:28.933309",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 509,
+  "total_sim_completion_tokens": 189,
+  "total_bot_prompt_tokens": 1466,
+  "total_bot_completion_tokens": 246,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long does it take for funds to come through the US to my account?",
+      "assistant_response": "To confirm—are you asking about an international **bank transfer from the US** arriving in your account, or a **US domestic transfer**? Also, do you know whether it’s a wire/ACH?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T16:03:26.066663",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 96
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a domestic US transfer – I believe it’s an ACH.",
+      "assistant_response": "For an ACH domestic US transfer, it typically takes about 1–3 business days to reach your account. If it hasn’t arrived after that, tell me when it was sent and whether you have a reference/trace number, and I can help you check what’s going on.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T16:03:28.933162",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 189,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5f40b593-63ee-414f-8af6-a9b710b9d231",
+  "seed": 42,
+  "dialogue_index": 4,
+  "timestamp": "2026-08-19T15:13:44.078518",
+  "persona": "HumanBase",
+  "target_intent": "Refund_not_showing_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 525,
+  "total_sim_completion_tokens": 156,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 281,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I bought something and returned it and the money from the return isn't in my account.",
+      "assistant_response": "Sorry about that—was this return made back to your card (i.e., the merchant processed a refund), and roughly how long ago did they say it was issued? Also, are you expecting it in the card balance or as a bank transfer to your account?",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.11
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:13:41.208929",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a refund to my card, they said it was processed about two days ago, and I’m expecting it in my card balance.",
+      "assistant_response": "Got it—since the refund was processed about two days ago back to your card but you still don’t see it in your card balance, this is typically a delayed card refund.\n\nA couple quick checks: is the refund showing anywhere as “pending/processing” on your card transactions, and was the original purchase completed with the same card you’re expecting the refund on?",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.93
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.05
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:13:44.078381",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

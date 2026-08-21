@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "82261944-4f31-4855-a5b4-cfe391df166e",
+  "seed": 42,
+  "dialogue_index": 179,
+  "timestamp": "2026-08-19T15:26:28.191086",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 508,
+  "total_sim_completion_tokens": 115,
+  "total_bot_prompt_tokens": 1458,
+  "total_bot_completion_tokens": 265,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What is the payment in my account that I did not do?",
+      "assistant_response": "I can help with that. Was the payment made by card (a card purchase/merchant) or could it be a bank transfer/direct debit? Also, do you see the transaction as pending or already completed?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.72
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:25.797311",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 103
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card purchase and it’s already gone through.",
+      "assistant_response": "Sorry about that—if it’s a completed card purchase you don’t recognize, we can treat it as an unrecognized card payment. Can you confirm whether you still have the card and whether there are any other unfamiliar transactions? If you tell me the merchant name and the amount, I’ll guide you on next steps.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:28.191046",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

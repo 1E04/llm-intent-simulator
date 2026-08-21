@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "5f74beeb-1c5e-410f-8bea-55cf9c1b9530",
+  "seed": 42,
+  "dialogue_index": 359,
+  "timestamp": "2026-08-19T15:38:21.751599",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2741,
+  "total_sim_completion_tokens": 649,
+  "total_bot_prompt_tokens": 4491,
+  "total_bot_completion_tokens": 821,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can you explain what this random $1 charge is?",
+      "assistant_response": "It sounds like you’re seeing a small, random $1 charge. Is this showing as a card payment on your statement (and do you see a merchant name), or is it more like a bank/verification charge? Also, roughly when did it appear?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.19
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:10.285474",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s listed as a card payment with no merchant name, and I noticed it just yesterday.",
+      "assistant_response": "Thanks—if it’s a $1 card payment with no merchant name and it appeared yesterday, that’s often a small verification/authorization charge. Did you happen to try using the card around that time (online or at a merchant), and are you able to see whether it’s marked as “pending” or “completed”? Also, was the amount exactly $1.00?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:12.639039",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I didn’t use the card at all, it shows as completed and the amount is exactly $1.00.",
+      "assistant_response": "Since it’s marked as a completed $1 card payment with no merchant name—and you didn’t use the card—this is most likely a small “authorization/verification” charge that shouldn’t be a real purchase. \n\nTo confirm, can you tell me whether the charge is showing anywhere else (e.g., does your statement mention it’s from an online merchant), and whether you see any additional transactions for that same date (typically a reversal/settlement within a few days)?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:16.324213",
+      "sim_prompt_tokens": 617,
+      "sim_completion_tokens": 238,
+      "bot_prompt_tokens": 885,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "No, it’s the only thing showing for that date—no merchant name and no other related transactions.",
+      "assistant_response": "Thanks—if it’s exactly $1.00, completed, shows no merchant name, and you didn’t use your card, it’s most likely an authorization/verification that may not have a merchant details trail on the statement. \n\nTo be safe: do you still want help to investigate it as an unrecognized card payment (so we can check for any related activity), or would you like guidance on whether it should reverse/refund automatically?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.21
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:18.887886",
+      "sim_prompt_tokens": 746,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 1012,
+      "bot_completion_tokens": 189
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, please investigate it as an unrecognized card payment.",
+      "assistant_response": "Got it—I’ll help you investigate this as an unrecognized card payment. Since it’s exactly $1.00 and you didn’t use the card, it may be a verification/authorization that can take time to clear—or it could be something else.\n\nFirst, can you confirm: is the payment status definitely “Completed,” and do you have the exact date/time and the last 4 digits of the card shown on the transaction (if available)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:21.751558",
+      "sim_prompt_tokens": 866,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 1123,
+      "bot_completion_tokens": 188
+    }
+  ]
+}

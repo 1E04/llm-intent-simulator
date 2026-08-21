@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b3298ecd-4bf7-4ae2-8aff-527a81ba1d00",
+  "seed": 42,
+  "dialogue_index": 32,
+  "timestamp": "2026-08-19T15:15:03.546211",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1055,
+  "total_sim_completion_tokens": 206,
+  "total_bot_prompt_tokens": 2268,
+  "total_bot_completion_tokens": 388,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Top up on my Google Pay isn't working.",
+      "assistant_response": "Sorry you’re having trouble. Is your Google Pay top up failing (e.g., not completing), or does it complete but the balance isn’t updated?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.55
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.3
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:14:58.831469",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It never finishes – the top‑up just gets stuck and doesn’t go through.",
+      "assistant_response": "Got it—if the Google Pay top-up gets stuck and never completes, it’s most likely a pending top up. Can you tell me: does the app show it as “pending” (still processing), or does it show an error/failure message?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.76
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:15:01.394068",
+      "sim_prompt_tokens": 488,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 751,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just stays as pending – it never finishes processing.",
+      "assistant_response": "Thanks—if the Google Pay top-up stays “pending” and never completes, it’s usually a pending top up. Please check in the app under Top up/Transactions and tell me: does it show a specific ETA/processing time, or has it been pending for more than 24 hours?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:15:03.546079",
+      "sim_prompt_tokens": 567,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 824,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

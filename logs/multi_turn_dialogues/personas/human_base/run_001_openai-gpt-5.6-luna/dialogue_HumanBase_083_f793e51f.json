@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f793e51f-26bc-4d08-8d5b-16d2fce1c3c9",
+  "seed": 42,
+  "dialogue_index": 83,
+  "timestamp": "2026-08-19T15:18:44.617503",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 494,
+  "total_sim_completion_tokens": 205,
+  "total_bot_prompt_tokens": 1446,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "why isnt my account allowing transfers",
+      "assistant_response": "Sorry to hear that—when you try to make a transfer, what exactly happens (e.g., is it showing a decline/error message, a “failed transfer,” or are you unable to select/transfer to that recipient)?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.31
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:40.895410",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows an error saying the beneficiary isn’t allowed.",
+      "assistant_response": "That error usually means the recipient/beneficiary you’re trying to transfer to isn’t allowed for your account or transfer settings. Can you confirm whether you’re trying to add a new beneficiary or use an existing one? Also, what exact country and name (or bank) details are you selecting?",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:44.617382",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 205,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

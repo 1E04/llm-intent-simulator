@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "530d8c2b-4537-4099-8303-e7aa4871b841",
+  "seed": 42,
+  "dialogue_index": 600,
+  "timestamp": "2026-08-19T15:56:20.890527",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1065,
+  "total_sim_completion_tokens": 294,
+  "total_bot_prompt_tokens": 2288,
+  "total_bot_completion_tokens": 352,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "can you check why I wasn't able to top up?",
+      "assistant_response": "Sure—I can help. Was the top up failing with an error message in the app, or did it go through but not show up in your balance?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:15.974517",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it just showed an error in the app saying the transaction couldn’t be completed.",
+      "assistant_response": "Thanks—since the app said the top up couldn’t be completed, this is most likely a failed card top up. Can you tell me:\n1) Did you try to top up by card (debit/credit) or bank transfer?\n2) What exact error message code/text did you see?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.62
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.38
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:18.633598",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 176,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I was using my debit card, and the app showed “Transaction could not be completed.”",
+      "assistant_response": "Got it—using your debit card and seeing “Transaction could not be completed” means the card top up likely failed. Which of these happened: did you see the top up reflected as pending and then disappear, or was it immediate failure (no pending status)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:20.890395",
+      "sim_prompt_tokens": 576,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 841,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

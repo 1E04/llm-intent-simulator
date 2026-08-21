@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "77316922-a49f-4074-8031-65222e4ee0b4",
+  "seed": 42,
+  "dialogue_index": 640,
+  "timestamp": "2026-08-19T15:59:23.679121",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1114,
+  "total_sim_completion_tokens": 257,
+  "total_bot_prompt_tokens": 2334,
+  "total_bot_completion_tokens": 433,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why is there a transaction that shows multiple times?",
+      "assistant_response": "I can help—when you say “multiple times,” is it showing as the same card payment charged twice on your statement, or are there multiple pending entries for the same amount? Also, are you seeing a final posted duplicate or just pending transactions?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:18.725809",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a posted duplicate—same amount, same date, and it’s already settled, not just pending.",
+      "assistant_response": "Thanks—if it’s a settled duplicate (same amount, same date), it’s most commonly due to a card charge being captured twice. Can you confirm: is the duplicate showing under card payments in your app/statement (not a cash withdrawal or transfer), and do the two charges have the same merchant name and reference?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.74
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.16
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:21.322005",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 775,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes—both are listed as card payments, same merchant name and reference.",
+      "assistant_response": "Got it—when a card payment shows the exact same settled charge twice (same merchant name and reference), it’s typically a “charged twice” case.\n\nPlease confirm one detail so I can guide you correctly: do you want a refund for the duplicate charge, or are you mainly trying to understand why it happened?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.06
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:23.678979",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 865,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0752e1ce-0174-488a-8d3c-e26d3c1bf4ad",
+  "seed": 42,
+  "dialogue_index": 463,
+  "timestamp": "2026-08-19T15:45:40.923824",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 485,
+  "total_sim_completion_tokens": 122,
+  "total_bot_prompt_tokens": 1435,
+  "total_bot_completion_tokens": 254,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why is there a pending transaction on my card?",
+      "assistant_response": "To help me pinpoint it: is the pending transaction a card payment (shop/online), a cash withdrawal at an ATM, or a transfer?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:38.098357",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a card purchase at a shop.",
+      "assistant_response": "Got it—if it’s a card purchase at a shop and it’s showing as pending, that usually means the merchant hasn’t fully completed/settled the payment yet. It typically updates to completed within a few hours up to a couple of days. If you tell me the pending amount and when it was made, I can help you understand what to expect next.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:40.923673",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 741,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

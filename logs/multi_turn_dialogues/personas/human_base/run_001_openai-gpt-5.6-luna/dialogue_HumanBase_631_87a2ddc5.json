@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "87a2ddc5-d04f-4ff7-91e8-98d797825776",
+  "seed": 42,
+  "dialogue_index": 631,
+  "timestamp": "2026-08-19T15:58:40.185734",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 525,
+  "total_sim_completion_tokens": 99,
+  "total_bot_prompt_tokens": 1488,
+  "total_bot_completion_tokens": 330,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I had a duplicate card and got charged twice. How do I resolve this?",
+      "assistant_response": "I’m sorry about that—when a duplicate card charge happens, the usual fix is to review the two card transactions and whether they’re pending or completed. Are the two charges showing as the same date/amount and are they both still pending, or have they completed?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:37.599531",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Both charges are for $45.99 on March 12th, and they’ve already cleared—they’re not pending.",
+      "assistant_response": "Thanks for confirming. Since both $45.99 charges for March 12 have already cleared, it sounds like you were charged twice for the same card payment. Please open your app → Card payments/Transactions and tell me the merchant name and whether the transactions have the same reference/order ID. Then I can guide you to the quickest resolution (typically a charge review/refund request for the duplicate).",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:40.185621",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 178
+    }
+  ]
+}

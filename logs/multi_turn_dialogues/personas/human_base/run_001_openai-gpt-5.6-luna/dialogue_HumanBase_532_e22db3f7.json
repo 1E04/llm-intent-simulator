@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e22db3f7-d2fc-4b62-a152-e227227e1a8a",
+  "seed": 42,
+  "dialogue_index": 532,
+  "timestamp": "2026-08-19T15:51:36.412201",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1088,
+  "total_sim_completion_tokens": 262,
+  "total_bot_prompt_tokens": 2311,
+  "total_bot_completion_tokens": 458,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why has my card payment been cancelled?",
+      "assistant_response": "I can help—when a card payment shows as “cancelled,” it’s usually related to approval, verification, or a reversal. Was the payment showing as **pending** and then cancelled, or did you see it as **declined/failed** by the merchant?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:27.911082",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was pending at first and then it got cancelled.",
+      "assistant_response": "Thanks—if it was pending and then cancelled, it’s typically a temporary authorisation that the merchant didn’t complete and it gets reversed. Did the amount return to your available balance, and roughly how long after it went pending did it change to cancelled?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.26
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:33.831646",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, the money’s back in my balance. It switched to cancelled about an hour after it was pending.",
+      "assistant_response": "Got it. When a card payment moves from **pending** to **cancelled** and the money returns to your balance about an hour later, it usually means the merchant’s authorisation was not completed and the payment was **reverted/voided**. \n\nIf the funds are already back, you don’t need to do anything—this is the normal reversal process. If you tell me the merchant name and the exact amount/currency, I can help you narrow down which case it most likely was.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:36.412080",
+      "sim_prompt_tokens": 580,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 851,
+      "bot_completion_tokens": 163
+    }
+  ]
+}

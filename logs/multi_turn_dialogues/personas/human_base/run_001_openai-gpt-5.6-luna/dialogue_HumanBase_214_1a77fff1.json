@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1a77fff1-3c72-4658-9564-2f848196ea44",
+  "seed": 42,
+  "dialogue_index": 214,
+  "timestamp": "2026-08-19T15:28:01.092488",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 509,
+  "total_sim_completion_tokens": 116,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 296,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I checked the app and saw an extra cash withdrawal that I didn't authorize",
+      "assistant_response": "I’m sorry that happened. To help, was the cash withdrawal definitely not yours (you don’t recognize the transaction), or do you think it was yours but the amount/fee looks wrong?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.12
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:58.128684",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s definitely not mine—I don’t recognize the transaction at all.",
+      "assistant_response": "Got it—since the cash withdrawal isn’t recognized and isn’t yours, I can help you report it. Please tell me: is the cash withdrawal showing as completed, pending, or reversed in the app? Also, do you know the amount and the date/time it was made?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.92
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.04
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:28:01.092315",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

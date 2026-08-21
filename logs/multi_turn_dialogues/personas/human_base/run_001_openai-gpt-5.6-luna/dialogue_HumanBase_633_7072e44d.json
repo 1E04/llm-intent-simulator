@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7072e44d-7ad8-4021-bbd1-b9c811e35dec",
+  "seed": 42,
+  "dialogue_index": 633,
+  "timestamp": "2026-08-19T15:58:48.965380",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 554,
+  "total_sim_completion_tokens": 170,
+  "total_bot_prompt_tokens": 1509,
+  "total_bot_completion_tokens": 291,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a duplicate payment showing up on the app. How do I stop myself being charged for the thing twice?",
+      "assistant_response": "Sorry you’re dealing with that—when you say “duplicate payment,” is it showing as **two separate charges for the same card purchase** (two authorisations) or does it look like **one payment charged twice on your statement**? Also, are both charges already marked **completed/settled** or are they still **pending**?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.11
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:45.895766",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s two separate charges for the same purchase and they’re both already settled.",
+      "assistant_response": "Thanks—if you’re seeing **two separate settled charges for the same purchase**, that matches **card charged twice**. The fastest way to get this resolved is to request a review/refund for the duplicate charge: please tell me the **merchant name**, the **amounts**, and the **dates** of both charges (and the last 4 digits of the card if shown). Then I’ll guide you on the exact refund/dispute steps to stop being charged for the second one.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.04
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:48.965244",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 802,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

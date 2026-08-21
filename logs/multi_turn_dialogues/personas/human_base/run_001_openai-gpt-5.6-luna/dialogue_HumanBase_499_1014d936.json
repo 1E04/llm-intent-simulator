@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "1014d936-6bf2-45f1-b75a-44855bb9a6b0",
+  "seed": 42,
+  "dialogue_index": 499,
+  "timestamp": "2026-08-19T15:48:34.050049",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2761,
+  "total_sim_completion_tokens": 601,
+  "total_bot_prompt_tokens": 4474,
+  "total_bot_completion_tokens": 787,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The transfer is coming up as pending the payment is due today. Will I be charged a fee?",
+      "assistant_response": "To confirm, is this a bank transfer you’ve sent that’s showing “pending,” or a card payment marked “pending”? Fees can depend on which one it is—once I know, I can tell you whether any fee will apply today.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:19.253423",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a bank transfer that's showing as pending.",
+      "assistant_response": "Thanks—if it’s a bank transfer marked as “pending,” you typically won’t be charged an extra fee just because it’s pending. Any transfer fee would usually be determined by the transfer type and your pricing plan, and it’s generally applied when the transfer is processed/complete.\n\nDo you want to check fees for an outgoing transfer, and is it domestic or international (SEPA/international SWIFT)?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.17
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:23.585326",
+      "sim_prompt_tokens": 523,
+      "sim_completion_tokens": 202,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 177
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's a domestic transfer. Please let me know if there’s any fee.",
+      "assistant_response": "For a domestic bank transfer showing as **pending**, you’re typically **not charged just because it’s pending**—any transfer fee is usually applied when the transfer completes/settles.\n\nWhether you’ll be charged at all depends on your account/pricing for **outgoing domestic transfers**. If you tell me whether you sent it via **bank transfer (standard transfer)** and which currency/account it’s from, I can guide you on what to look for on your fee/transaction details.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:28.201137",
+      "sim_prompt_tokens": 624,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 879,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was a standard domestic transfer from my GBP account.",
+      "assistant_response": "Thanks—since this is a **standard domestic transfer in GBP** that’s currently **pending**, you generally **won’t be charged extra just because it’s pending**. Any transfer fee (if applicable to your plan) is typically charged when the transfer **processes/settles**, not at the “pending” stage.\n\nIf you open the transfer in the app and check the details, do you see a **fee/charge line** or **deducted amount** shown anywhere yet?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.66
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:31.059673",
+      "sim_prompt_tokens": 747,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 998,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No, I don’t see any fee line or amount taken yet.",
+      "assistant_response": "If your **domestic GBP transfer** is **pending** and you **don’t see a fee line or any amount taken yet**, that strongly suggests you **won’t be charged at the pending stage**. Transfer fees (if your plan charges one) are typically applied when the transfer **completes/settles**. \n\nDo you have the transfer reference/opened transfer details showing the status as **pending**—and has it been pending for more than 1 business day?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:34.049931",
+      "sim_prompt_tokens": 867,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 1121,
+      "bot_completion_tokens": 156
+    }
+  ]
+}
