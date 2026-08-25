@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e700a722-d3f3-4bf2-81f0-335243d24430",
+  "seed": 42,
+  "dialogue_index": 153,
+  "timestamp": "2026-08-24T12:03:11.210749",
+  "persona": "Polite Expert",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 931,
+  "total_sim_completion_tokens": 382,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 294,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see an outgoing transaction that was scheduled earlier today, and I need to prevent it from being processed.",
+      "assistant_response": "Sure—do you want to cancel a bank transfer that’s currently scheduled/pending, or are you seeing a card payment marked as scheduled for later? If you tell me which one, I’ll guide you to the right cancellation steps.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:08.449954",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 256,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a bank transfer that’s scheduled for today—I’d like to stop it before it goes through.",
+      "assistant_response": "Got it—you want to cancel a bank transfer that’s scheduled for today. Please open the app → Transfers/Payments → find the scheduled transfer → select Cancel (or Stop transfer). If you don’t see a cancel option, tell me whether it’s marked as “pending/scheduled” or “completed,” and I’ll help you with the next steps.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:11.210702",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

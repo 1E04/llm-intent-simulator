@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6b048025-5be2-4c7d-80a5-8a3322a16db2",
+  "seed": 42,
+  "dialogue_index": 121,
+  "timestamp": "2026-08-24T12:10:44.338725",
+  "persona": "Non-Native Speaker",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1532,
+  "total_sim_completion_tokens": 359,
+  "total_bot_prompt_tokens": 2357,
+  "total_bot_completion_tokens": 389,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I look at my recent statement and there is a charge I did not make.",
+      "assistant_response": "I’m sorry about that. To help me guide you correctly: is the unrecognized charge a card payment you don’t recognize (card purchase), or is it something like a fee/extra charge shown on the statement? If you can, tell me the merchant name and the amount.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:37.685375",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It is a card purchase at SuperMart, about $15.99.",
+      "assistant_response": "Thanks—since it’s a card purchase at SuperMart you don’t recognize, the most likely issue is an unrecognized card payment. Can you confirm whether you (or anyone you authorized) made any payment at SuperMart around that time? If not, I’ll help you report it for investigation/refund.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:39.778997",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, I did not go to SuperMart then, nobody I know used my card there.",
+      "assistant_response": "Thanks for confirming. I can help you report an unrecognized card purchase at SuperMart (~$15.99) for investigation and possible refund. First, are you able to temporarily freeze or block your card in the app right now to prevent any further charges?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:44.338654",
+      "sim_prompt_tokens": 594,
+      "sim_completion_tokens": 61,
+      "bot_prompt_tokens": 874,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

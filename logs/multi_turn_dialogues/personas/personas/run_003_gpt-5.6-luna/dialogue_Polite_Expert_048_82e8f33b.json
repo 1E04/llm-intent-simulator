@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "82e8f33b-cb77-42aa-8c68-01ab89be2fa0",
+  "seed": 42,
+  "dialogue_index": 48,
+  "timestamp": "2026-08-24T12:00:35.870250",
+  "persona": "Polite Expert",
+  "target_intent": "Refund_not_showing_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 929,
+  "total_sim_completion_tokens": 268,
+  "total_bot_prompt_tokens": 1514,
+  "total_bot_completion_tokens": 329,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I see a recent merchant credit that should have been posted to my account, but it hasn't appeared yet.",
+      "assistant_response": "Thanks for reaching out—just to confirm, is this merchant credit related to a card payment/return (i.e., a refund), or was it a bank transfer/deposit that’s missing from your balance? If you can, please share whether it shows as a refund/merchant credit on your statement and the approximate date.",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.44
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:32.821433",
+      "sim_prompt_tokens": 420,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card‑payment refund that appears as a merchant credit on my statement, dated around April 12th.",
+      "assistant_response": "Got it—since it’s a card-payment refund shown as a merchant credit on your statement (dated around April 12) but not yet in your account, this is usually a timing delay between the merchant/bank and when we receive and apply it. Could you tell me: (1) the amount of the merchant credit, and (2) whether the card payment was refunded to your card used for the original purchase? If you confirm those, I can guide you on the expected posting window and next steps.",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.87
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:35.870134",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 161
+    }
+  ]
+}

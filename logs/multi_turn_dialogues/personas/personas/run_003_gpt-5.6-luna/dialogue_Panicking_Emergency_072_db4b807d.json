@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "db4b807d-4ee4-43bf-a6dc-2f97443e4067",
+  "seed": 42,
+  "dialogue_index": 72,
+  "timestamp": "2026-08-24T11:57:05.199469",
+  "persona": "Panicking Emergency",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1059,
+  "total_sim_completion_tokens": 234,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 315,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There's a charge on my account I never did—please help, I'm freaking out!",
+      "assistant_response": "I’m really sorry you’re dealing with that—let’s get this sorted. Was this charge from a card payment (merchant/online purchase), or a cash withdrawal/other type of transaction? Also, do you see the date and merchant name on the statement?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.58
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.3
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:02.363645",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card purchase—online. I see it dated 12 May, merchant “XYZ Store”.",
+      "assistant_response": "Thanks—that sounds like an unrecognised online card purchase. Can you confirm whether the payment has already been completed (you see “Completed/Charged” or it’s reflected in your available balance), or is it still pending? Also, do you still have your card and phone with you (no loss or theft), or has anything gone missing?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:05.199251",
+      "sim_prompt_tokens": 565,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 166
+    }
+  ]
+}

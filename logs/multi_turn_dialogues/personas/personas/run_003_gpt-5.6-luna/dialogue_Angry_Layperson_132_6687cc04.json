@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6687cc04-707a-4e0e-8a66-2b65d0f6be47",
+  "seed": 42,
+  "dialogue_index": 132,
+  "timestamp": "2026-08-24T11:54:02.139374",
+  "persona": "Angry Layperson",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 982,
+  "total_sim_completion_tokens": 296,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 268,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add money to my account and now it’s just vanished!",
+      "assistant_response": "Sorry about that—when you say the money “vanished,” was the top up marked as failed, reversed (reverted), or still pending in your app? If you tell me which status you see, I’ll guide you to the next step.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.6
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.25
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:59.098993",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as reversed.",
+      "assistant_response": "Got it—if the top up is showing as **reversed**, that usually means the card/bank payment didn’t complete and the funds are being returned. \n\nCan you confirm whether the top up was done **by card** or **by bank transfer**? Also, roughly how long ago did you make it?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:02.139229",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 177,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

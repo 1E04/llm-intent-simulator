@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e14ae172-1e51-43a1-a4ad-ac293809d66c",
+  "seed": 42,
+  "dialogue_index": 43,
+  "timestamp": "2026-08-24T12:12:41.272502",
+  "persona": "Short Wording",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 975,
+  "total_sim_completion_tokens": 383,
+  "total_bot_prompt_tokens": 1445,
+  "total_bot_completion_tokens": 229,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Top-up not showing",
+      "assistant_response": "Sorry to hear that—when you say “top-up not showing,” is the top-up **missing from your balance/statement entirely**, or is it marked as **pending** in the app? Also, has the top-up already been **charged from your payment method**?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.55
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.33
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:37.877852",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 201,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Pending, charged.",
+      "assistant_response": "Got it—if the top-up is **pending but already charged**, it usually settles automatically within a short time. Can you tell me roughly **when** you made the top-up (e.g., today/last 24 hours), and whether it was by **card** or **bank transfer**?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:41.272451",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 182,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

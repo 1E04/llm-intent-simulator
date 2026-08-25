@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b6b7c009-3349-4801-90de-1b7b0e8e190f",
+  "seed": 42,
+  "dialogue_index": 131,
+  "timestamp": "2026-08-24T12:10:56.667819",
+  "persona": "Non-Native Speaker",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 999,
+  "total_sim_completion_tokens": 285,
+  "total_bot_prompt_tokens": 1484,
+  "total_bot_completion_tokens": 286,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I add money with my card, but there is a fee I didn't expect.",
+      "assistant_response": "Sorry about that—can you confirm whether the fee was charged when you topped up by **card** (adding money), or was it a fee on a **card purchase**? Also, roughly how much was the fee (or what does the statement line say)?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:53.807829",
+      "sim_prompt_tokens": 465,
+      "sim_completion_tokens": 191,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, fee when I add money with card. It shows about $2.50 on the statement.",
+      "assistant_response": "Got it—this sounds like a **card top up fee**. That ~$2.50 charge on your statement is typically the cost applied for topping up by card.\n\nTo help you confirm exactly why it appeared, can you tell me: was the top up made in a different currency than your card’s billing currency (or in a different country/merchant setup)?",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:56.667648",
+      "sim_prompt_tokens": 534,
+      "sim_completion_tokens": 94,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 135
+    }
+  ]
+}

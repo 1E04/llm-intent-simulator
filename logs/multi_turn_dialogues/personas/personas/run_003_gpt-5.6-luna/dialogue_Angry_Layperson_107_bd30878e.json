@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bd30878e-ca97-4b01-8764-9e349deef907",
+  "seed": 42,
+  "dialogue_index": 107,
+  "timestamp": "2026-08-24T11:53:13.778903",
+  "persona": "Angry Layperson",
+  "target_intent": "activate_my_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1057,
+  "total_sim_completion_tokens": 419,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 316,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What the hell? My brand‑new card won’t work at the shop – it just gets rejected every time!",
+      "assistant_response": "Sorry about that—when you try to pay in the shop, does the card payment get declined by the terminal (e.g., “payment rejected/declined”), or does the card have any specific issue like error messages? Also, have you already activated the card?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:10.017309",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 217,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “declined” on the terminal, no fancy error code, and I haven’t even activated the thing yet.",
+      "assistant_response": "Thanks—if it’s a brand-new card and you haven’t activated it yet, that commonly causes in-store payments to be declined. First, please activate the card, then try the shop payment again. \n\nQuick check: are you using the correct card details on a physical terminal (swipe/tap), and is the payment amount in the same currency as expected?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:13.778819",
+      "sim_prompt_tokens": 568,
+      "sim_completion_tokens": 202,
+      "bot_prompt_tokens": 797,
+      "bot_completion_tokens": 169
+    }
+  ]
+}

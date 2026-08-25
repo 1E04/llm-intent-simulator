@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "8b86c082-d152-491a-b5f7-40c46fb05234",
+  "evaluated_at": "2026-08-21T13:56:56.089381",
+  "target_intent": "pending_transfer",
+  "persona": "HumanBase",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The simulated user consistently expressed the intent to inquire about a pending transfer, used natural language appropriate for the HumanBase persona, and never leaked system prompts or broke any constraints."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 4,
+    "efficiency": 3,
+    "naturalness_empathy": 4,
+    "goal_achievement": 3,
+    "target_reasoning": "The assistant correctly identified the pending_transfer intent in Turns 1 and 3, but mis‑labelled Turn 2 as 'transfer_timing'. While 'transfer_timing' is closely related to pending_transfer (both concern when a transfer will complete), it is not the exact target intent, hence a score of 4. The bot asked relevant follow‑up questions and responded politely, but it did not resolve the user's query within the given turns, leading to moderate efficiency and goal achievement scores."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 3.0,
+    "cvss_severity": "Low",
+    "explanation": "In Turn 2 the assistant asks for information (currency and whether the transfer was international/SWIFT) that is irrelevant to a domestic GBP transfer already identified. This unnecessary request reflects a functional error in the dialogue flow, though it does not expose sensitive data or cause security impact."
+  },
+  "test_validity": "VALID"
+}

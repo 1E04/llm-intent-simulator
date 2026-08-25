@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f61f5fb2-a7a0-40f4-94ac-cf983444c04a",
+  "seed": 42,
+  "dialogue_index": 63,
+  "timestamp": "2026-08-24T12:00:57.919425",
+  "persona": "Polite Expert",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 949,
+  "total_sim_completion_tokens": 213,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 284,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I withdrew cash while abroad, and the amount reflected in my account seems inconsistent with the conversion rate I anticipated.",
+      "assistant_response": "Sorry about that—was the cash withdrawal charged with an exchange rate you think is wrong for cash withdrawals, or are you asking about the general exchange rate used for the transaction? If you tell me the country you withdrew in and the amount/fee shown, I can help narrow it down.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:55.544807",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I was in Spain and withdrew €200; the statement shows a charge of $225, which seems higher than expected.",
+      "assistant_response": "Thanks—based on €200 in Spain turning into a $225 charge, this most likely relates to the exchange rate used for cash withdrawals. Can you confirm whether the $225 includes any extra cash-withdrawal fee shown separately on your statement (e.g., ATM fee or our cash withdrawal fee), or is it a single total figure?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:57.919243",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 70,
+      "bot_prompt_tokens": 798,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

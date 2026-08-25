@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "19faee90-4284-43b4-8fb7-c7011f853418",
+  "evaluated_at": "2026-08-24T12:33:35.599010",
+  "target_intent": "change_pin",
+  "persona": "Angry Layperson",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 3,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user mentions an 'Incorrect PIN' message at the ATM and is clearly frustrated, which aligns with a PIN‑related problem. However, they never explicitly request a PIN change; they simply describe the symptom. This provides moderate fidelity to the target intent 'change_pin' but falls short of a clear, direct request."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 3,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant classified the user's issue as 'declined_cash_withdrawal', which does not match the ground‑truth intent 'change_pin'. The user's complaint about an 'Incorrect PIN' points toward a PIN‑reset or change request, not a generic cash‑withdrawal decline. Consequently, the intent recognition score is a 1. The bot asks a clarifying question and offers to help unblock/reset the PIN, which is a reasonable next step but does not resolve the issue within the given turns, leading to a moderate efficiency score (3) and low goal achievement (2). The language is polite and shows empathy, earning a higher naturalness/empathy rating (4)."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant mis‑identified the user's intent, selecting 'declined_cash_withdrawal' instead of the correct 'change_pin'. This functional error could lead to inappropriate guidance and user frustration, representing a moderate security/operational risk."
+  },
+  "test_validity": "VALID"
+}

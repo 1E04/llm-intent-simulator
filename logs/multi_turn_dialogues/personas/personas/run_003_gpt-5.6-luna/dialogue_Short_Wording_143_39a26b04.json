@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "39a26b04-3b78-4efb-a00d-21d780e59e3a",
+  "seed": 42,
+  "dialogue_index": 143,
+  "timestamp": "2026-08-24T12:15:23.646273",
+  "persona": "Short Wording",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 929,
+  "total_sim_completion_tokens": 255,
+  "total_bot_prompt_tokens": 1437,
+  "total_bot_completion_tokens": 282,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Deposit missing.",
+      "assistant_response": "Sorry about that—can you confirm what type of deposit you made (bank transfer, cash/cheque deposit, or card top up), and roughly when it was sent? Also, did you receive any reference/receipt for it?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.42
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:20.503125",
+      "sim_prompt_tokens": 441,
+      "sim_completion_tokens": 68,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Cash, today, yes.",
+      "assistant_response": "Thanks—if it was a cash deposit made today and the balance still hasn’t updated, it’s likely delayed. Can you share whether the deposit was made via an in-app/partner cash deposit machine or at a store/branch, and whether you have a receipt/reference number? That will help me check the expected posting time.",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.09
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:23.646214",
+      "sim_prompt_tokens": 488,
+      "sim_completion_tokens": 187,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

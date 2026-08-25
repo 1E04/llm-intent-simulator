@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "164631f2-a130-4cf0-afbb-e741b100cde1",
+  "seed": 42,
+  "dialogue_index": 87,
+  "timestamp": "2026-08-24T12:14:11.933096",
+  "persona": "Short Wording",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1844,
+  "total_sim_completion_tokens": 743,
+  "total_bot_prompt_tokens": 3098,
+  "total_bot_completion_tokens": 486,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Funds blocked",
+      "assistant_response": "Sorry to hear that—when you say “funds blocked,” is it because your account needs identity verification, or is a specific card/transfer being blocked? Also, which country and did you receive any message from us (e.g., verification or compliance)?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.34
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.33
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:50.396577",
+      "sim_prompt_tokens": 380,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 686,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card UK yes",
+      "assistant_response": "Thanks—so you’re in the UK and your card/account funds are blocked. Is there a notification or status message asking you to complete identity verification (or saying verification failed)?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.36
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.34
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:53.641559",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 218,
+      "bot_prompt_tokens": 751,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes\nYes",
+      "assistant_response": "Got it—are you being asked to complete identity verification right now, or are you seeing an error like “unable to verify” / “verification failed”? If you can, please tell me the exact message and whether you’ve already submitted your documents.",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.6
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.25
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:08.719282",
+      "sim_prompt_tokens": 483,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 799,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Failed, submitted",
+      "assistant_response": "Thanks—if it says “failed” even after you submitted, that points to an identity verification failure. Can you confirm whether you’ve received an email/app notification explaining why it failed (e.g., document not readable/expired, mismatch, or selfie issue)?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.88
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.07
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:11.932944",
+      "sim_prompt_tokens": 546,
+      "sim_completion_tokens": 218,
+      "bot_prompt_tokens": 862,
+      "bot_completion_tokens": 109
+    }
+  ]
+}

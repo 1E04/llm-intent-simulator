@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "ed37b214-2012-4049-87c6-f67956d8089e",
+  "seed": 42,
+  "dialogue_index": 154,
+  "timestamp": "2026-08-24T11:54:56.245761",
+  "persona": "Angry Layperson",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2790,
+  "total_sim_completion_tokens": 652,
+  "total_bot_prompt_tokens": 4476,
+  "total_bot_completion_tokens": 782,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My app is showing the wrong amount when I try to switch currencies—it's all messed up!",
+      "assistant_response": "Sorry about that—when you say the exchange is showing the wrong amount, is this for a card payment (at checkout) or for an in-app currency exchange/transfer between currencies? Also, are the numbers wrong due to the exchange rate, or does the final charged/received amount look incorrect?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.39
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.36
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:44.227424",
+      "sim_prompt_tokens": 376,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the in‑app exchange—what I get is totally off, not just a weird rate. The final amount I receive is wrong.",
+      "assistant_response": "Thanks—since this is the in-app exchange and the final amount you receive is wrong (not just the displayed rate), I suspect an exchange calculation/fee issue. Can you confirm: is the incorrect amount what you receive after the exchange (in your wallet/balance), or is it what you see during the quote before you confirm?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.55
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.28
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:47.296878",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's the amount that lands in my wallet after I confirm—it's way off.",
+      "assistant_response": "Got it—the in-app exchange amount credited to your wallet is wrong. Was the exchange done in the app (not a card payment), and can you tell me the two currencies you exchanged from/to and the amount you expected versus what you actually received?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:50.265841",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 894,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I swapped 500 USD to EUR—should've been around 460 €, but the app only credited me 380 €.",
+      "assistant_response": "That’s a big difference—if you exchanged 500 USD to EUR and were credited only 380 EUR instead of ~460 EUR, it usually points to an incorrect exchange calculation (rate/fees). Can you confirm whether this exchange was completed fully in the app (not a card payment), and roughly when you made it? If you can, also share the transaction ID or a screenshot of the exchange receipt.",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:53.134569",
+      "sim_prompt_tokens": 638,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 981,
+      "bot_completion_tokens": 173
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yeah, it was all in the app—did it yesterday. The transaction ID is TX‑987654321.",
+      "assistant_response": "Thanks—if 500 USD → EUR should be ~460 EUR but you only received 380 EUR, that indicates an exchange calculation issue (rate and/or exchange fees).\n\nCan you confirm the exact currencies shown in the app for the exchange (USD → EUR) and whether the app showed any service/FX fee before you confirmed? If you have the exchange receipt/quote details for TX-987654321, that will help me pinpoint whether it was an incorrect rate or an extra exchange charge.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.48
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:56.245629",
+      "sim_prompt_tokens": 757,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 1097,
+      "bot_completion_tokens": 192
+    }
+  ]
+}

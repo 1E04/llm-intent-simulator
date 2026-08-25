@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b0e91689-0735-4478-b1f6-4c25f10cf341",
+  "seed": 42,
+  "dialogue_index": 128,
+  "timestamp": "2026-08-24T12:10:51.585481",
+  "persona": "Non-Native Speaker",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 985,
+  "total_sim_completion_tokens": 274,
+  "total_bot_prompt_tokens": 1476,
+  "total_bot_completion_tokens": 257,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I try to put more money on my card, but it keeps saying I can't do it.",
+      "assistant_response": "Sorry about that—when you try to top up, what exact message do you see (e.g., “top up failed,” “limits reached,” or something else), and are you topping up by card or by bank transfer?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.13
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:49.310530",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows “limit reached” and I’m trying with my card.",
+      "assistant_response": "Got it—if you’re seeing “limit reached” while topping up by card, it usually means you’ve hit your card top-up limits (either daily/weekly/monthly or per-transaction). Can you tell me the amount you’re trying to add, and whether this is your first top up today?",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:51.585329",
+      "sim_prompt_tokens": 526,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

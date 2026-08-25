@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0fa330df-069a-49c3-8245-e1539f5e0375",
+  "seed": 42,
+  "dialogue_index": 13,
+  "timestamp": "2026-08-24T11:59:47.902169",
+  "persona": "Polite Expert",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 985,
+  "total_sim_completion_tokens": 290,
+  "total_bot_prompt_tokens": 1483,
+  "total_bot_completion_tokens": 318,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I added funds to my account, but the amount was removed from the balance shortly after.",
+      "assistant_response": "Sorry about that—did your top up get reverted (i.e., the transaction shows as reversed/failed after being credited), or was it a bank transfer where the balance later changed? Also, was the top up by card or bank transfer?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.13
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:45.085679",
+      "sim_prompt_tokens": 458,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, the top‑up was credited and then reversed. It was done using my debit card.",
+      "assistant_response": "Got it—you did a card top up, it was credited, and then reversed. This is usually a “reverted top up.” Can you tell me whether the top up now shows as reversed/chargeback in the app, or does it still show as completed/pending? If it’s reverted, I can guide you on what to check on your debit card statement and how long the refund typically takes.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:47.902092",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 174
+    }
+  ]
+}

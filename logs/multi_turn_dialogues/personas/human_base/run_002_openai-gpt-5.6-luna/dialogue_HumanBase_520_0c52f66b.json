@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "0c52f66b-edfc-4998-b5a1-50033d9879c3",
+  "seed": 42,
+  "dialogue_index": 520,
+  "timestamp": "2026-08-21T13:19:25.444951",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1101,
+  "total_sim_completion_tokens": 306,
+  "total_bot_prompt_tokens": 3459,
+  "total_bot_completion_tokens": 380,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Salary in GBP has been received, does it need to be configured elsewhere?",
+      "assistant_response": "Thanks—so you’ve received your salary in GBP already. Are you asking whether you need to set anything up to receive/hold GBP (e.g., currency support), or are you noticing that the balance hasn’t updated in your account?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.52
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.31
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T13:19:20.623652",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1084,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I think the balance hasn't updated yet.",
+      "assistant_response": "Got it—if your salary transfer is in GBP but the in-app balance hasn’t updated yet, it’s usually related to the bank transfer status or timing. \nCan you tell me: has the transfer already been marked as completed/sent by your employer’s bank (not pending)?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:19:22.849248",
+      "sim_prompt_tokens": 513,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 1150,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows as completed on my end.",
+      "assistant_response": "Thanks—if it’s marked completed on your end but your GBP balance still hasn’t updated, this is typically a bank transfer update delay. \nWhich date/time did the transfer show as completed (roughly), and is it definitely a bank transfer into your Revolut account (not a cash/cheque deposit)?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:19:25.444841",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 1225,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

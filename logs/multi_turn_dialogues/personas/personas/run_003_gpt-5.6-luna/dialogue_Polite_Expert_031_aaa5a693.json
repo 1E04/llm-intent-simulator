@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "aaa5a693-22bf-45e6-9a7c-0ebf0e78585d",
+  "seed": 42,
+  "dialogue_index": 31,
+  "timestamp": "2026-08-24T12:00:10.375249",
+  "persona": "Polite Expert",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1057,
+  "total_sim_completion_tokens": 255,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I've noticed a number of unfamiliar charges on my account and the card is being declined at merchants.",
+      "assistant_response": "I’m sorry about that—unfamiliar charges and card declines can indicate your card may have been compromised. Can you confirm: are the charges you see pending or already completed, and were they for specific merchants/countries you don’t recognize?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.6
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.28
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:07.611265",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They’re all completed transactions, and several of them are from merchants I don’t recognize, including a few overseas locations.",
+      "assistant_response": "Thanks for confirming. Since the transactions are completed and from merchants you don’t recognize (including overseas), this strongly suggests your card may be compromised.\n\nPlease tell me: have you already locked or frozen your card in the app, and are you able to make a payment at all right now (or is every merchant decline)? If not, the next step is to immediately freeze/lock the card and we’ll help you dispute the unfamiliar transactions.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.55
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.52
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:10.375113",
+      "sim_prompt_tokens": 564,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "af72b04c-74f3-4826-82d3-8d233233fc21",
+  "seed": 42,
+  "dialogue_index": 124,
+  "timestamp": "2026-08-24T11:58:39.750569",
+  "persona": "Panicking Emergency",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1061,
+  "total_sim_completion_tokens": 240,
+  "total_bot_prompt_tokens": 1478,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just saw an extra charge on my card—what's going on?!",
+      "assistant_response": "Sorry about that—an extra charge can happen for a few reasons. Can you tell me: is it showing as a duplicate charge (charged twice), a card payment with an extra fee/amount, or just an additional line on your statement that doesn’t match a transaction you made?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.24
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:36.580190",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a payment that has an extra fee added to it.",
+      "assistant_response": "Got it—if a card payment has an extra fee added, it’s usually due to one of the following: a card payment fee on the transaction, a service/tip type add-on from the merchant, or an exchange-related fee if it was paid in a different currency. \n\nCan you confirm: was the payment in a different currency than your card’s base currency?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:39.750430",
+      "sim_prompt_tokens": 567,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 138
+    }
+  ]
+}

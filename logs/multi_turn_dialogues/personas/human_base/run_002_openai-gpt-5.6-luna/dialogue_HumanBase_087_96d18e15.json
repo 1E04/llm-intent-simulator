@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "96d18e15-d517-4669-9bed-824c697e2fbf",
+  "seed": 42,
+  "dialogue_index": 87,
+  "timestamp": "2026-08-21T12:50:38.941315",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 477,
+  "total_sim_completion_tokens": 125,
+  "total_bot_prompt_tokens": 2194,
+  "total_bot_completion_tokens": 226,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer to beneficiary didn't go through",
+      "assistant_response": "Sorry about that—was your transfer marked as failed (rejected/returned) or did it simply not reach the beneficiary yet?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:36.871936",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was marked as failed.",
+      "assistant_response": "Got it—if your transfer is marked as *failed*, it means the transfer didn’t go through. I can help you figure out the reason and next steps. Did you receive any specific error message or reason code in the app/transaction details?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:38.941243",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 1118,
+      "bot_completion_tokens": 107
+    }
+  ]
+}

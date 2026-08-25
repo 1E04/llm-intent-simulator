@@ -1,63 +1,71 @@
 # 📊 Voice Bot QA Issue Board
 
+---
+
 ## 🚨 Critical Security Alerts (CVSS 7.0 - 10.0)
 **No critical vulnerabilities detected.**  
-All dialogues were evaluated as free of prompt injection, data leakage, or agency‑overreach issues.
+All failures are classification‑ or flow‑related; no prompt injection, data leakage, or agency‑overreach was observed.
 
 ---
 
-## 🐞 High Priority Classification Bugs
-| Target Intent | Symptom (Observed Across Multiple Dialogues) | Root Cause (Judge’s Insight) | Recommended Fix |
-|---------------|---------------------------------------------|------------------------------|-----------------|
-| **request_refund** | Bot flips to `card_payment_not_recognised` or `cancel_transfer` after an initial correct hit. | Intent classifier over‑generalises to “payment‑issue” family when a charge is mentioned. | Add a **hard rule**: if the user mentions “refund” or “money back”, force `request_refund` before any secondary classifier runs. |
-| **Refund_not_showing_up** | Starts with `request_refund` then drifts to `request_refund` again or other refund‑related intents. | Ambiguous wording (“refund not showing”) triggers sibling intent mapping. | Enrich training data with “refund missing / pending” phrasing and increase weight on the “refund‑status” sub‑intent. |
-| **card_acceptance** | Frequently mis‑labelled as `supported_cards_and_currencies`, `visa_or_mastercard`, or `country_support`. | Model treats “where can I use my card?” as a geographic‑currency query rather than merchant‑acceptance. | Create a **dedicated “card_acceptance” pattern set** (keywords: “accepted”, “merchant”, “use my card at”) and separate it from country‑support patterns. |
-| **virtual_card_not_working** | Swaps to `disposable_card_limits`, `declined_card_payment`, or `automatic_top_up`. | Virtual‑card terminology overlaps with “disposable” and generic “decline” intents. | Introduce a **virtual‑card taxonomy** that distinguishes “not working” from “limits” and “declines”. Add negative‑example training (e.g., “my virtual card won’t work” → `virtual_card_not_working`). |
-| **exchange_via_app** | Starts with correct intent but quickly reverts to `exchange_rate`. | “Exchange” keyword dominates classifier, drowning out “via app” cue. | Add a **contextual bias** for “via app / perform exchange” and include more examples where the user explicitly asks to *execute* an exchange. |
-| **exchange_rate** | After correct detection, drifts to `exchange_charge` or `card_payment_wrong_exchange_rate`. | Over‑reliance on “rate” token leads to charge‑related intents. | Strengthen disambiguation rules: if the user asks “what is the rate?” → `exchange_rate`; if they ask “how much will I be charged?” → `exchange_charge`. |
-| **pending_transfer / pending_top_up** | Starts correctly but later switches to `transfer_timing`, `transfer_fee_charged`, or `top_up_failed`. | The “pending” flag is treated as a temporal cue rather than a distinct intent. | Create a **pending‑state flag** that persists across turns once detected, preventing downstream drift. |
-| **transfer_fee_charged** | Occasionally mis‑identified as `extra_charge_on_statement`. | Fee‑related language is shared across statement‑charge intents. | Add a **fee‑type hierarchy** where “transfer fee” outranks generic “extra charge” when the word “transfer” appears. |
-| **card_arrival** | Swapped with `card_delivery_estimate`. | Both intents share “card” + “date” tokens; classifier cannot differentiate arrival status vs. estimate. | Separate the two by adding explicit trigger phrases: “has my card arrived?” → `card_arrival`; “when will my card be delivered?” → `card_delivery_estimate`. |
-| **transaction_charged_twice** | Repeated confirmation questions after all details are supplied. | Dialogue manager lacks a **completion condition** for this intent. | Implement a **resolution step** that, after gathering required fields, either provides next‑step guidance or hands off to a human. |
-| **apple_pay_or_google_pay** | Mis‑labelled as `topping_up_by_card` or `pending_top_up`. | “Pay” token is conflated with generic top‑up intents. | Add distinct lexical cues (`Apple Pay`, `Google Pay`, `mobile wallet`) to the intent lexicon. |
-| **getting_spare_card** | Alternates between `order_physical_card` and `getting_spare_card`. | “Spare” is interpreted as a generic “order card” request. | Introduce a **spare‑card synonym list** and prioritize it over generic ordering. |
-| **lost_or_stolen_phone** | Classified as `lost_or_stolen_card`. | “Lost” keyword triggers card‑loss intent regardless of device context. | Add device‑specific patterns (`phone`, `mobile`, `device`) and a rule to route to `lost_or_stolen_phone`. |
-| **top_up_by_card_charge** | First turn mis‑labelled as `supported_cards_and_currencies`. | “Card” + “charge” triggers currency‑support intent. | Strengthen the “top‑up fee” pattern and add negative examples for currency‑support queries. |
+## 🐞 High Priority Classification Bugs  
 
-*Action items*:  
-1. **Retrain** the intent classifier with the enriched, negative‑example‑rich datasets above.  
-2. **Introduce intent persistence flags** for “pending” and “failed” families to avoid drift.  
-3. **Add rule‑based overrides** for high‑risk intents (refund, lost phone, transaction‑charged‑twice) to guarantee exact matches before ML scoring.
+| Target Intent | Recurrent Mis‑Classification Pattern | Why It Happens (Judge Insight) | Recommended Fix |
+|---------------|--------------------------------------|--------------------------------|-----------------|
+| **card_acceptance** | Frequently swapped to **supported_cards_and_currencies** or **visa_or_mastercard** (7/8 dialogues). | The model treats “where can I use my card?” as a card‑feature query rather than a merchant‑acceptance query. | Create a distinct sub‑intent hierarchy: *card_acceptance → merchant_acceptance* vs *card_features*. Add training examples that contain “merchant”, “store”, “online” keywords paired with the correct label. |
+| **virtual_card_not_working** | Often labeled **disposable_card_limits**, **declined_card_payment**, or **card_payment_not_recognised** (5/6 dialogues). | “Virtual” and “disposable” are lexically close; the model defaults to limit‑related intents. | Introduce a “virtual_card_issue” umbrella intent with explicit children: *not_working*, *limits*, *declined*. Provide contrastive examples where the problem is functional (fails to work) vs. limit‑related. |
+| **pending_transfer** | Drifts to **transfer_timing** or **transfer_fee_charged** after the first turn (2/2 dialogues). | The model conflates “pending” with “when will it arrive”. | Strengthen the definition of *pending_transfer* with examples that include “still pending”, “not received yet”, and explicitly **not** asking about timing. |
+| **transfer_fee_charged** | Switched to **pending_top_up**, **extra_charge_on_statement**, or kept asking for extra details (4/5 dialogues). | Fee‑related wording overlaps with “extra charge” and “pending” categories. | Add negative training pairs: “fee charged on transfer” → *transfer_fee_charged*; “extra charge on statement” → *extra_charge_on_statement*. Emphasize that fee queries should stay on the *transfer* domain. |
+| **receiving_money** | Alternates with **transfer_into_account**, **supported_cards_and_currencies**, **fiat_currency_support** (3/4 dialogues). | The phrase “receive money” is interpreted as an internal transfer rather than inbound payments. | Enrich the intent with synonyms (“salary”, “incoming payment”, “deposit”) and add disambiguation prompts that ask “Are you looking to receive money from another bank or from a person?” |
+| **exchange_via_app** | Starts correctly but falls back to **exchange_rate** (4/6 dialogues). | Users mention “exchange” → model defaults to rate lookup. | Separate *exchange_action* (perform exchange) from *exchange_info* (rate/fees). Use a rule‑based pre‑filter: if the user asks “how do I exchange” or “can I exchange”, force *exchange_via_app*. |
+| **supported_cards_and_currencies** | Mis‑identified as **topping_up_by_card** or **top_up_failed** (1 dialogue). | Overlap of “supported cards” with top‑up methods. | Add clear negative examples where “supported cards” is asked without any top‑up context. |
+| **verify_my_identity** | Often confused with **why_verify_identity** (2 dialogues). | Both belong to the verification family; the model picks the more common “why” variant. | Use a binary classifier for “process vs. reason” and add explicit training sentences for each. |
+| **card_payment_not_recognised** | Mis‑labeled as **extra_charge_on_statement** (1 dialogue). | Both involve statement anomalies; the model picks the charge‑related intent. | Add contrastive examples: “I don’t recognise a payment” → *card_payment_not_recognised*; “I was charged extra” → *extra_charge_on_statement*. |
+| **visa_or_mastercard** | Swapped with **country_support** (1 dialogue). | “Visa in Japan” triggers geographic reasoning. | Teach the model that “Visa or Mastercard?” is a *card_type* query, not a *country_support* query. |
+| **balance_not_updated_after_bank_transfer** | Flips to **transfer_timing** or **pending_transfer** (2 dialogues). | “Balance not updated” is interpreted as a timing issue. | Provide examples where the problem is *balance not updated* and the correct label is *balance_not_updated_after_bank_transfer*. |
+| **direct_debit_payment_not_recognised** | Starts as **card_payment_not_recognised** or **compromised_card** (2 dialogues). | “Payment not recognised” is generic; the model defaults to card‑payment domain. | Add explicit “direct debit” keyword cues and a separate intent for *direct_debit_not_recognised*. |
+| **apple_pay_or_google_pay** | Mis‑identified as **topping_up_by_card** or **pending_top_up** (2 dialogues). | “Apple Pay” is seen as a top‑up method. | Create a dedicated *mobile_wallet* intent family and train with examples that mention Apple/Google Pay without top‑up context. |
+| **order_physical_card** | Mixed with **card_arrival** or **card_delivery_estimate** (1 dialogue). | Delivery‑related wording causes confusion. | Distinguish *ordering* (fees, eligibility) from *delivery status* with clear lexical triggers. |
+| **country_support** | Mixed with **order_physical_card** (1 dialogue). | “Country support” can be interpreted as “can I order a card in X?”. | Add disambiguation: if the user asks “Is X supported?” → *country_support*; if they say “I want to order” → *order_physical_card*. |
+| **topping_up_by_card** | Often labeled as **top_up_reverted** (1 dialogue). | “Top‑up” + “failed” → model picks the more specific *reverted* label. | Strengthen the hierarchy: *topping_up_by_card* → *top_up_failed* → *top_up_reverted*. Use cascade logic to keep the broader intent when the user hasn’t indicated a reversal. |
+| **cash_withdrawal_not_recognised** | Mis‑labeled as **lost_or_stolen_card** (1 dialogue). | Both involve security concerns. | Add clear negative examples: “I don’t recognise a cash withdrawal” → *cash_withdrawal_not_recognised*. |
+| **get_pin** | Switched to **card_arrival** / **card_about_to_expire** (1 dialogue). | “PIN delivery” shares the word “card”. | Separate *pin_delivery* from *card_status* intents with distinct training data. |
 
----
+**Overall Trend:** The bot often **starts with the correct intent** but **drifts** to a **semantically adjacent** intent in later turns. This indicates weak **context retention** and an over‑reliance on keyword matching rather than dialogue state.
 
-## ⚠️ Persona Sensitivity Issues
-All failures involve the default `HumanBase` persona. No evidence of degraded performance for non‑native speakers, age‑specific personas, or other demographic variants.  
-**Recommendation**: Continue monitoring as new personas are introduced; currently no persona‑specific remediation needed.
-
----
-
-## 🔄 UX & Efficiency Flaws
-| Issue | Typical Manifestation | Impact | Suggested Remedy |
-|-------|----------------------|--------|------------------|
-| **Repeated Clarification Loops** | Bot asks for the same detail (e.g., card type, amount, country) multiple times (seen in `card_acceptance`, `exchange_via_app`, `transaction_charged_twice`, `atm_support`). | Increases turn count, frustrates users, lowers efficiency scores. | Implement **state tracking** to remember already‑provided slots; add a “slot already filled” guard. |
-| **Late Resolution / No Hand‑off** | Many dialogues end without a concrete answer or next‑step (e.g., `pending_transfer`, `transfer_fee_charged`, `balance_not_updated_after_bank_transfer`, `exchange_via_app`). | Goal‑achievement scores stay low despite polite conversation. | Define **completion criteria** per intent (e.g., provide fee amount, give status link, or trigger hand‑off to a human). |
-| **Over‑Specific Sub‑Intent Switching** | Bot jumps from a broad correct intent to a narrower, unrelated sub‑intent (e.g., `card_acceptance` → `country_support`; `exchange_via_app` → `exchange_rate`). | Confuses users, reduces confidence in the bot’s understanding. | Use a **hierarchical intent model** where the parent intent persists unless a strong confidence boost for a child intent is observed. |
-| **Redundant Confirmation Prompts** | After all required info is gathered, the bot still asks “Can you confirm …?” (e.g., `transaction_charged_twice`, `passcode_forgotten`). | Wastes turns and can be perceived as robotic. | Add a **post‑gathering branch** that directly proceeds to resolution or hand‑off. |
-| **Missing Direct Answers** | Bot asks clarifying questions but never supplies the requested data (e.g., `exchange_charge` – asks about discount vs. rate repeatedly; `atm_support` – never returns ATM list). | Users never achieve their primary goal. | Ensure **answer generation** is triggered once all slots are filled; fallback to a knowledge‑base lookup before asking more questions. |
-| **Inconsistent Intent Labels Within a Single Dialogue** | Same user request labeled differently across turns (e.g., `virtual_card_not_working`, `card_arrival`, `getting_spare_card`). | Lowers trust and hampers downstream analytics. | Enforce **intent consistency checks**: if the current intent differs from the previous turn without a user‑initiated topic change, flag for review or auto‑revert to the original intent. |
-
-*Overall UX Recommendation*:  
-- Deploy a **dialogue manager** that maintains a **slot‑filled map** and **intent persistence flag** across turns.  
-- Add **confidence thresholds** that, when not met, trigger a clarification sub‑flow rather than a full intent switch.  
-- Introduce **fallback hand‑off** after a configurable number of turns without resolution (e.g., 4‑5 turns).
+**Suggested System‑Level Fixes**
+1. **Intent State Tracker** – keep the first‑turn intent as the canonical label unless a high‑confidence re‑classification occurs.
+2. **Hierarchical Intent Taxonomy** – group related intents (e.g., *card_acceptance* ↔ *supported_cards_and_currencies*) and enforce a “most‑specific‑match” rule.
+3. **Contrastive Training** – for each pair of frequently confused intents, add explicit negative examples.
+4. **Turn‑Level Confidence Threshold** – if confidence drops below a set threshold, ask a clarifying question *without* changing the stored intent label.
+5. **Prompt‑Level Disambiguation** – prepend a short reminder of the current intent when asking follow‑ups (e.g., “Just to confirm, you’re asking about **card acceptance** …”).
 
 ---
 
-### Summary of Immediate Priorities
-1. **Fix high‑frequency mis‑classifications** (refund, card acceptance, virtual card, exchange via app).  
-2. **Add intent persistence and slot memory** to stop repetitive questioning.  
-3. **Define clear resolution endpoints** for each intent to improve goal‑achievement scores.  
-4. **Implement rule‑based overrides** for critical intents (refund, lost phone, duplicate charge).  
+## ⚠️ Persona Sensitivity Issues  
+All failures involve the **HumanBase** persona; no alternative personas (e.g., non‑native speaker, senior, Gen‑Z) were present in the dataset. Consequently, no persona‑specific degradation is observed. Continue monitoring as new persona variants are introduced.
 
-Addressing these points should raise intent‑recognition scores toward 5, improve efficiency (target ≥ 4), and increase overall user satisfaction with the Banking Voice Bot.
+---
+
+## 🔄 UX & Efficiency Flaws  
+
+| Issue | Example(s) | Impact | Remedy |
+|-------|------------|--------|--------|
+| **Repeated Clarification after user already supplied info** | *transaction_charged_twice* (bot asks same confirmation repeatedly); *pending_card_payment* (asks for status & days again); *atm_support* (asks location twice). | Increases turn count, frustrates user, lowers efficiency scores. | Implement **slot‑filling memory**: once a slot is filled, do not request it again unless the user changes the answer. |
+| **No final resolution / hand‑off** | *exchange_via_app*, *top_up_by_bank_transfer_charge*, *balance_not_updated_after_bank_transfer*, *atm_support*, *card_arrival*, *pending_cash_withdrawal*. | Goal achievement remains low despite correct intent detection. | Add a **conversation closure policy** that, after required info is gathered, either provides the answer or escalates to a human/FAQ link. |
+| **Long clarification chains for simple queries** | *exchange_charge* (5 turns for a simple discount question); *top_up_failed* (multiple turns before fee info). | Redundant steps waste time. | Use **short‑circuit rules**: if the user asks a direct “what is the fee?” and provides currency/amount, answer immediately without extra probing. |
+| **Switching intents mid‑dialogue without user clarification** | *card_acceptance*, *virtual_card_not_working*, *failed_transfer*, *exchange_via_app*. | Breaks conversational coherence, leads to ambiguous intent scores. | Enforce **intent persistence** (see above) and only switch on explicit user re‑statement. |
+| **Missing actionable next steps** | *reverted_card_payment* (no confirmation of refund status); *unable_to_verify_identity* (only asks for details, never offers troubleshooting); *pending_top_up* (no resolution). | Users are left without a clear path forward. | Append a **standard “next steps” template** based on intent (e.g., “We’ll investigate and get back within 24 h”, or “You can reset your passcode here: …”). |
+| **Over‑asking for already‑known data** | *pending_card_payment* (asks for country after user gave days & status); *exchange_via_app* (asks for rate again after user supplied amount). | Redundant, reduces perceived competence. | Ensure **slot de‑duplication** and **contextual awareness** across turns. |
+
+---
+
+### Quick Wins
+- **Cache filled slots** across the dialogue.
+- **Add a “confirm intent” step** after the first turn for ambiguous queries, then lock the intent.
+- **Introduce intent‑specific answer templates** to guarantee a final response (even if it’s a hand‑off).
+- **Fine‑tune on a balanced set of confused intent pairs** identified above.
+
+--- 
+
+*Prepared by the QA Architecture team – Senior AI Tech Lead*

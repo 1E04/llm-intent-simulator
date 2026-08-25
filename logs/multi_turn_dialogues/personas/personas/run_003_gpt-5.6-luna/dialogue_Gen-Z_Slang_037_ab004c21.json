@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ab004c21-a8bd-4bd8-a855-68bcd8182e98",
+  "seed": 42,
+  "dialogue_index": 37,
+  "timestamp": "2026-08-24T12:04:15.424995",
+  "persona": "Gen-Z Slang",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 841,
+  "total_sim_completion_tokens": 354,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried to tap my card at the store and it just kept getting rejected, what's up?",
+      "assistant_response": "Sorry about that—when you tap to pay, the most common cause is a declined card payment. Could you tell me: did it decline specifically for contactless (tap), or does the card also get declined when you try to pay by inserting/swiping at the terminal?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:12.856341",
+      "sim_prompt_tokens": 382,
+      "sim_completion_tokens": 219,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "only the tap’s messed up, swiping works fine.",
+      "assistant_response": "Got it—if only the contactless tap is rejected while swiping works, it points to a contactless issue. Can you confirm: does the terminal show a decline message, and have you tried a different contactless reader or the same store twice?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:15.424858",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

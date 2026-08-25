@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a31c88b4-86fc-4345-a92b-dad6b0161c69",
+  "seed": 42,
+  "dialogue_index": 593,
+  "timestamp": "2026-08-21T13:24:23.519979",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 578,
+  "total_sim_completion_tokens": 111,
+  "total_bot_prompt_tokens": 2302,
+  "total_bot_completion_tokens": 273,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Heyy I tried to top up with my card today but it failed! I just got the couple days before but it has worked last time. What's going on, can you double check please?",
+      "assistant_response": "Sorry about that—if your card top up failed today, the most likely issue is a **failed top up**. I can help check what happened. Can you tell me whether the top up shows as **declined/failed** or **pending** in the app, and the **amount** (approx.)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:21.023657",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1108,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as declined and it was around $50.",
+      "assistant_response": "Thanks—if it’s showing **declined** and it was about **$50**, this points to a **failed card top up**. I can help figure out the cause (e.g., card issuer decline, verification, or limits/merchant restrictions). \n\nCan you check in the app if the failed top up shows an error message/code (or the exact wording), and whether you were trying to top up **from the same card used before**?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.88
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.63
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:23.519860",
+      "sim_prompt_tokens": 578,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 1194,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

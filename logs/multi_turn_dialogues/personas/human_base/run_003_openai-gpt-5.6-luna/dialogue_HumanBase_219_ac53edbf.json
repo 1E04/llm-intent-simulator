@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ac53edbf-4326-4e76-bfa7-3978d0347ce2",
+  "seed": 42,
+  "dialogue_index": 219,
+  "timestamp": "2026-08-21T15:41:11.390197",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 564,
+  "total_sim_completion_tokens": 86,
+  "total_bot_prompt_tokens": 1447,
+  "total_bot_completion_tokens": 244,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an error, the app says I made an ATM withdrawal and I didn't.",
+      "assistant_response": "Sorry about that—was the ATM withdrawal shown in the app as completed (charged), or is it still pending?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.1
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:09.335829",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s shown as completed, the amount is already charged.",
+      "assistant_response": "Thanks for confirming. If the cash withdrawal is marked as completed and you didn’t make it, that matches a “cash withdrawal not recognised” issue—I'll help you get it investigated. Can you tell me the date of the withdrawal and the amount shown in the app?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.06
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:11.390077",
+      "sim_prompt_tokens": 564,
+      "sim_completion_tokens": 86,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

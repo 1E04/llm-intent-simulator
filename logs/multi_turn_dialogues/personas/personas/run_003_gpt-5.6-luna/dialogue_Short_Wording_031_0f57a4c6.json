@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0f57a4c6-8202-4671-bb40-f91d7a2726c9",
+  "seed": 42,
+  "dialogue_index": 31,
+  "timestamp": "2026-08-24T12:12:22.213759",
+  "persona": "Short Wording",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1036,
+  "total_sim_completion_tokens": 205,
+  "total_bot_prompt_tokens": 1435,
+  "total_bot_completion_tokens": 225,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Strange charges.",
+      "assistant_response": "I can help with that—could you tell me what kind of “strange charges” you’re seeing (card payment, cash withdrawal, or a fee on your statement), and whether the amount looks duplicated or just unusual?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.46
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:15.111976",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 72,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card payment duplicated.",
+      "assistant_response": "Sorry about that. If a card payment is duplicated, it’s usually because the charge was processed twice or a temporary pre-authorisation posted. Can you share the merchant name and the two amounts (and roughly the dates), and are both charges showing as completed or one as pending?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:22.213611",
+      "sim_prompt_tokens": 543,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 747,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

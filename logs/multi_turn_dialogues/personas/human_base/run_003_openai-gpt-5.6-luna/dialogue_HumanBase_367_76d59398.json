@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "76d59398-9f33-4f40-b032-3077f77f3001",
+  "seed": 42,
+  "dialogue_index": 367,
+  "timestamp": "2026-08-21T15:44:00.225344",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1250,
+  "total_sim_completion_tokens": 345,
+  "total_bot_prompt_tokens": 2364,
+  "total_bot_completion_tokens": 371,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can you provide a reason as to why my transfer did not work?",
+      "assistant_response": "I can help with that. Was your transfer marked as **failed** (e.g., not completed), **declined** by the bank, or did you **cancel** it? If you have a reference/transaction ID, tell me what it says so I can pinpoint the reason.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:55.225864",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as failed and the reference number is 1234567890.",
+      "assistant_response": "Thanks—since it’s marked as **failed**, the issue is likely with the transfer itself. To narrow it down: is the transfer **international or domestic**, and do you see any extra status/detail like **“insufficient funds”**, **“beneficiary bank rejected”**, or a specific **error message** next to reference **1234567890**?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:57.781823",
+      "sim_prompt_tokens": 576,
+      "sim_completion_tokens": 173,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a domestic transfer and the only note I see next to the reference is “insufficient funds.”",
+      "assistant_response": "Got it—since the transfer is marked **failed** and the note says **“insufficient funds,”** the transfer didn’t go through because there weren’t enough available funds in your account at the time of processing.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:44:00.225294",
+      "sim_prompt_tokens": 674,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 885,
+      "bot_completion_tokens": 97
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "5dd217d6-adca-4b5f-b35b-07ae4172bbf6",
+  "seed": 42,
+  "dialogue_index": 118,
+  "timestamp": "2026-08-24T12:06:28.715976",
+  "persona": "Gen-Z Slang",
+  "target_intent": "fiat_currency_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1561,
+  "total_sim_completion_tokens": 418,
+  "total_bot_prompt_tokens": 2426,
+  "total_bot_completion_tokens": 418,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i’m seeing my money show up in some weird format in the app and i can’t actually spend it.",
+      "assistant_response": "Sorry about that—when you say the money shows up in a weird format and you can’t spend it, do you see it labeled as “pending” (or not fully available), or does it look available in your balance but get declined at checkout? Also, was the money added by card top up or bank transfer?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.44
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.33
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:23.625841",
+      "sim_prompt_tokens": 424,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's showing as available but gets declined at checkout, i topped it up with a card.",
+      "assistant_response": "Got it—if the top-up shows as available but card payments are declined, that’s usually a card-payment issue rather than the balance itself. Is the decline message showing as “payment declined”/“try again later,” or are you seeing a more specific reason in the app/merchant message? Also, are you paying with the same card that was topped up, and using contactless or chip?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.52
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.34
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:26.082996",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "just says “payment declined,” no extra deets. i’m using the same card i topped up, trying contactless.",
+      "assistant_response": "Thanks—if it’s “payment declined” when you’re using the same card via contactless, the most likely issue is a card payment being declined. Can you try one quick test: use chip or insert instead of contactless? And is the card currently within its expiry date?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:28.715824",
+      "sim_prompt_tokens": 623,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 917,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

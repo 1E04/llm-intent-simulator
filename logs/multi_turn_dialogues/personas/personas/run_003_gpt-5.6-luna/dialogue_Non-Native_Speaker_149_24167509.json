@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "24167509-8901-4971-9572-7caf4e91bb04",
+  "seed": 42,
+  "dialogue_index": 149,
+  "timestamp": "2026-08-24T12:11:21.417866",
+  "persona": "Non-Native Speaker",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 958,
+  "total_sim_completion_tokens": 266,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I took cash from an ATM and now I see an extra fee on my account.",
+      "assistant_response": "Sorry about that—could you confirm what you’re seeing on the account: is it an extra cash withdrawal fee charged by us (a line item/fee amount), or are you unsure about the cash amount you received from the ATM?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.12
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:19.051917",
+      "sim_prompt_tokens": 446,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, I see a line‑item fee on the statement, not the cash amount.",
+      "assistant_response": "Got it—if there’s a line-item fee on your statement after an ATM withdrawal, that’s the cash withdrawal charge. Can you tell me the fee amount and the currency shown on the line item (and the country of the ATM if you know it)? I can help confirm whether it matches the expected fee.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:21.417754",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e1ed9d27-8b0f-4730-a995-c4358c67b73a",
+  "seed": 42,
+  "dialogue_index": 15,
+  "timestamp": "2026-08-24T12:11:53.450381",
+  "persona": "Short Wording",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 890,
+  "total_sim_completion_tokens": 300,
+  "total_bot_prompt_tokens": 1444,
+  "total_bot_completion_tokens": 256,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Charged twice",
+      "assistant_response": "I’m sorry about that—are you seeing the same card payment charged twice on your statement, or is it showing an extra charge (like a fee) as well? If you can, tell me whether it’s a card payment or a transfer and the merchant name/amount.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:50.072972",
+      "sim_prompt_tokens": 414,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card Starbucks $45",
+      "assistant_response": "Thanks—so Starbucks $45 is showing twice as a card payment. I can help with that. Are both charges already posted (showing as completed), or is one of them still pending?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:53.450267",
+      "sim_prompt_tokens": 476,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

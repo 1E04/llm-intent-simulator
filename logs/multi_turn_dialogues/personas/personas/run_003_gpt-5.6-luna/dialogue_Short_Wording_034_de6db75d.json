@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "de6db75d-6db0-4f4a-a844-ff73bb44e41a",
+  "seed": 42,
+  "dialogue_index": 34,
+  "timestamp": "2026-08-24T12:12:28.984770",
+  "persona": "Short Wording",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1663,
+  "total_sim_completion_tokens": 430,
+  "total_bot_prompt_tokens": 2264,
+  "total_bot_completion_tokens": 372,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Payment returned.",
+      "assistant_response": "Sorry to hear that. When you say “Payment returned,” was it a card payment that was reversed/declined, or a bank transfer that failed and went back to you? If you can, tell me which type (card or bank transfer) and the approximate date.",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:21.402290",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card, yesterday.",
+      "assistant_response": "Thanks—since it was a card payment returned/reversed yesterday, it sounds like a reverted card payment. Can you confirm whether the payment shows as “reverted/ reversed” (i.e., the amount is back), or is it still showing as pending?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:24.067336",
+      "sim_prompt_tokens": 552,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Reverted.",
+      "assistant_response": "Got it—the card payment has been reverted. In most cases the funds are returned to your card/balance automatically; it can take a little time to fully reflect depending on your bank. Is the reverted payment amount already showing as back to your available balance, or not yet?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:28.984643",
+      "sim_prompt_tokens": 618,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 821,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

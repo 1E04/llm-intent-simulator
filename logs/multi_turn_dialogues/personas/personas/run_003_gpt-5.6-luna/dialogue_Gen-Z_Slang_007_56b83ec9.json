@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "56b83ec9-736d-4e45-b8fb-d8957658a367",
+  "seed": 42,
+  "dialogue_index": 7,
+  "timestamp": "2026-08-24T12:03:26.853031",
+  "persona": "Gen-Z Slang",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1547,
+  "total_sim_completion_tokens": 401,
+  "total_bot_prompt_tokens": 2382,
+  "total_bot_completion_tokens": 462,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i sent cash to my buddy earlier and it still ain't showing up in his account. 😕",
+      "assistant_response": "Sorry about that—when you say “sent cash,” do you mean a card-to-card transfer or a bank transfer? Also, roughly how long ago did you send it, and do you have a transaction/reference ID?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:20.957924",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's a bank transfer, sent like 2‑3 hrs ago. got a ref: tx#a7b9c3. 🙏",
+      "assistant_response": "Thanks—since this was a bank transfer sent 2–3 hours ago with ref tx#a7b9c3, it’s likely still pending and the recipient’s balance may not have updated yet. Could you confirm: was the transfer sent using your bank account details (not a card transfer), and are you seeing the status as “completed/sent” in your banking app?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:23.705384",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, used my bank acct and the app says it’s sent. 🙌",
+      "assistant_response": "Got it—if your app shows the bank transfer is marked as sent/completed but your buddy still hasn’t received it after 2–3 hours, it’s most likely a timing/update delay on their side. Can you tell me whether the transfer status in your app is definitely “completed/sent” (not “pending”)? If it is, I can help you check whether it was sent successfully to the correct details using ref tx#a7b9c3.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:26.852878",
+      "sim_prompt_tokens": 615,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 890,
+      "bot_completion_tokens": 188
+    }
+  ]
+}

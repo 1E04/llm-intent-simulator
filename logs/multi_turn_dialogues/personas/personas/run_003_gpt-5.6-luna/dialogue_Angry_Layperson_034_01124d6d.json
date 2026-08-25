@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "01124d6d-3f8c-41fb-af93-016f8ca499f3",
+  "seed": 42,
+  "dialogue_index": 34,
+  "timestamp": "2026-08-24T11:49:37.578214",
+  "persona": "Angry Layperson",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1694,
+  "total_sim_completion_tokens": 397,
+  "total_bot_prompt_tokens": 2343,
+  "total_bot_completion_tokens": 431,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected at the store and the amount just vanished from my account!",
+      "assistant_response": "Sorry about that—when a card payment is rejected, the hold may disappear after a short time. Was the payment attempt showing as “pending” and then it disappeared, or do you not see any transaction at all in your recent activity?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:18.051607",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up as pending for a bit, then it just vanished—nothing's there now.",
+      "assistant_response": "Got it. If a card payment shows as pending and then disappears with no transaction left, it’s usually a reversion of the authorization. \n\nCan you confirm: did the store transaction get declined (no receipt/approval), or did you get a “payment reversed/declined” message?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:20.951759",
+      "sim_prompt_tokens": 557,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The store said the payment was declined – I got a “payment declined” notice on the terminal.",
+      "assistant_response": "Thanks—if the terminal showed “payment declined” and it later disappeared from pending, that usually means the authorization was reversed automatically. There’s no charge to you, and the amount should not remain on your balance. If you want, tell me roughly when it happened and whether you still see any cash/available balance changes—then I can help confirm.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:37.578108",
+      "sim_prompt_tokens": 645,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 866,
+      "bot_completion_tokens": 167
+    }
+  ]
+}

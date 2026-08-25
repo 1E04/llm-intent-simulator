@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4a2f6471-1fd4-4874-b3d9-c54622c3f9c4",
+  "seed": 42,
+  "dialogue_index": 110,
+  "timestamp": "2026-08-24T12:06:15.740299",
+  "persona": "Gen-Z Slang",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1669,
+  "total_sim_completion_tokens": 429,
+  "total_bot_prompt_tokens": 2414,
+  "total_bot_completion_tokens": 475,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried to load cash with my card and it just got rejected, what's the deal?",
+      "assistant_response": "Sorry about that—just to confirm, when you say “load cash with my card,” do you mean a **card top up** (adding money to your account) that was rejected, or a **cash withdrawal** from an ATM? Also, what error message did you see, if any?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:09.393537",
+      "sim_prompt_tokens": 465,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it’s a top‑up, got a “transaction declined” error.",
+      "assistant_response": "Got it—if your card top up was rejected with a “transaction declined” message, it’s most likely a **top up failed/declined**.\n\nA couple quick checks so I can guide you correctly: was the top up attempted **in the app/website**, and do you know if it was **pending or fully failed** (and approximately what time today)? If you can share the exact error text, even better.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.83
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:12.428276",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, did it in the app, it totally failed, not pending. got the “transaction declined” note around 2:30 pm today.",
+      "assistant_response": "Thanks—since it was a card top up in the app that fully failed (no pending) with “transaction declined” around 2:30pm, this matches a **top up failed/declined**. \n\nCan you tell me one thing: did you try the top up with a **debit card or credit card**, and has it been **rejected more than once** today?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:15.740149",
+      "sim_prompt_tokens": 659,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 919,
+      "bot_completion_tokens": 177
+    }
+  ]
+}

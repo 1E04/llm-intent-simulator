@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c626a584-dc27-4453-a0f7-de8352ded6e6",
+  "seed": 42,
+  "dialogue_index": 147,
+  "timestamp": "2026-08-24T12:11:18.129973",
+  "persona": "Non-Native Speaker",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 983,
+  "total_sim_completion_tokens": 205,
+  "total_bot_prompt_tokens": 1475,
+  "total_bot_completion_tokens": 310,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I added money to my account, but it still doesn't show up.",
+      "assistant_response": "Sorry about that—could you tell me how you added the money (bank transfer, cash/cheque deposit, or card top up), and roughly when you made it? Also, is the top up/transfer showing as completed or pending?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.55
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.25
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:15.569833",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I used my card to add money, about an hour ago, and it is showing as pending.",
+      "assistant_response": "Thanks—if your card top up is showing as **pending** about an hour after you made it, that’s usually normal. It can take a bit longer to fully complete and then appear as available balance. \n\nHow long ago did you place the top up (exactly), and is there a specific amount/status shown on your app (e.g., “pending” with a completion time, or “pending/processing”)? Also, do you see the card charge on your card statement as pending?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:18.129869",
+      "sim_prompt_tokens": 524,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

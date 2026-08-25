@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ab69bdcd-f785-40a6-8581-93cd4259c0d0",
+  "seed": 42,
+  "dialogue_index": 130,
+  "timestamp": "2026-08-24T11:58:50.915634",
+  "persona": "Panicking Emergency",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 954,
+  "total_sim_completion_tokens": 278,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 313,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent money to a friend and they’re saying they didn’t get anything! I’m panicking.",
+      "assistant_response": "I’m sorry—you’re not alone in panicking. To help fix this, can I confirm: are you using a bank transfer or an in-app card/transfer between friends? Also, does the transfer status in your app show it as completed, pending, or failed?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:48.146434",
+      "sim_prompt_tokens": 439,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an in‑app transfer to a friend – the app says it’s completed.",
+      "assistant_response": "Got it—the app shows the in-app transfer as completed, but your friend says they didn’t receive it. Let’s check the key details: what date/time did you send it, and do you see the recipient’s name/phone/email in the transfer details exactly as they told you? Also, can you confirm the amount and currency shown for the completed transfer?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:50.915482",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 166
+    }
+  ]
+}

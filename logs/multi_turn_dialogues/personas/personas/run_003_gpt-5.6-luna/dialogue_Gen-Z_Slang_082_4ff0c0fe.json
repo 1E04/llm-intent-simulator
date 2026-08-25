@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4ff0c0fe-4133-4489-90a3-54e648e998a3",
+  "seed": 42,
+  "dialogue_index": 82,
+  "timestamp": "2026-08-24T12:05:32.495380",
+  "persona": "Gen-Z Slang",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1540,
+  "total_sim_completion_tokens": 858,
+  "total_bot_prompt_tokens": 2355,
+  "total_bot_completion_tokens": 453,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "yo, i sent cash to my buddy and it’s still stuck—any idea when it’ll go through?",
+      "assistant_response": "Sorry about that—could you confirm which type of transfer you mean: a bank transfer, a card-to-card transfer, or a cash deposit/withdrawal? Also, do you see it as “pending” in the app, and about when did you send it?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.6
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.32
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:25.873676",
+      "sim_prompt_tokens": 433,
+      "sim_completion_tokens": 542,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "bank transfer, it's showing pending, sent yesterday afternoon.",
+      "assistant_response": "Thanks—since it’s a bank transfer marked as pending and you sent it yesterday afternoon, it’s usually a timing/processing delay. Can you tell me the day and approximate time you sent it (and your time zone), and whether it’s pending on the sender side, the recipient side, or both?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.7
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.2
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:29.154702",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "sent it monday around 2 pm pst, pending on my side.",
+      "assistant_response": "Got it—if the bank transfer is still marked **pending on your side** after being sent Monday around **2pm PST**, it’s typically just still processing. When a transfer stays pending, it usually clears within **1–2 business days** (sometimes longer depending on the receiving bank). \n\nTo be sure: is today a business day where you are, and can you share the date it’s currently showing as pending (or the exact status text in the app)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:32.495198",
+      "sim_prompt_tokens": 595,
+      "sim_completion_tokens": 178,
+      "bot_prompt_tokens": 868,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "04dde580-5677-4e30-bd05-c02840678107",
+  "seed": 42,
+  "dialogue_index": 148,
+  "timestamp": "2026-08-24T11:59:18.366420",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 984,
+  "total_sim_completion_tokens": 306,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 288,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected when I tried to put money on my account! I need it fixed now.",
+      "assistant_response": "Sorry about that—when you say “rejected when I tried to put money on my account,” do you mean your card top up was declined, or a bank transfer was rejected? Also, what error message (if any) did you see?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:15.281259",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was the card top‑up – it just showed “declined,” no other message.",
+      "assistant_response": "Got it—if your card top-up shows “declined” with no other message, it’s most likely a failed card top-up. To fix it now: please confirm (1) the top-up amount and currency, (2) whether you’re using a debit/credit card, and (3) if the card is set to 3D Secure / online transactions are enabled. What exact amount did you try to top up?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.87
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:18.366340",
+      "sim_prompt_tokens": 528,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

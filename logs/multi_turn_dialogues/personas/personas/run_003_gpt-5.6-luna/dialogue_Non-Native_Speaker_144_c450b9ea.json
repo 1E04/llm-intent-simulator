@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c450b9ea-e906-49e2-afd0-c437677ba1c5",
+  "seed": 42,
+  "dialogue_index": 144,
+  "timestamp": "2026-08-24T12:11:13.176417",
+  "persona": "Non-Native Speaker",
+  "target_intent": "getting_virtual_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1452,
+  "total_sim_completion_tokens": 455,
+  "total_bot_prompt_tokens": 2296,
+  "total_bot_completion_tokens": 328,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need a card on my phone for buying online, but I can’t find it in the app.",
+      "assistant_response": "Are you trying to add your card to Apple Pay/Google Pay on your phone, or are you looking for a virtual card specifically inside the app for online purchases?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.26
+        },
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:07.929453",
+      "sim_prompt_tokens": 424,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I need the one inside the app for online shopping, not Apple Pay.",
+      "assistant_response": "Thanks—so you’re looking for a virtual card inside the app for online shopping. Are you trying to (1) get a standard virtual card, or (2) create a disposable/one-time virtual card?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.18
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:10.452879",
+      "sim_prompt_tokens": 480,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I want the normal virtual card, not the disposable one.",
+      "assistant_response": "Got it—you want the normal virtual card inside the app (not disposable). Are you unable to find it because it hasn’t been created yet, or do you see it but it won’t work for online shopping?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.06
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:13.176255",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 828,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

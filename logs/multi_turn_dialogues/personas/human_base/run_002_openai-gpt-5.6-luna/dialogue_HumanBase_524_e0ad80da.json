@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e0ad80da-befd-440c-ada6-a30477376c8b",
+  "seed": 42,
+  "dialogue_index": 524,
+  "timestamp": "2026-08-21T13:19:40.488188",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 477,
+  "total_sim_completion_tokens": 128,
+  "total_bot_prompt_tokens": 2205,
+  "total_bot_completion_tokens": 208,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need a refund?",
+      "assistant_response": "Sure—I can help with a refund. Is this refund not showing up yet, or are you asking to request a refund for a recent card transfer/charge?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.62
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.25
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T13:19:38.439582",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1074,
+      "bot_completion_tokens": 90
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I was charged twice for a coffee yesterday and need that extra charge returned.",
+      "assistant_response": "I’m sorry about that—if you were charged twice for the same coffee transaction, the right next step is for us to handle a “charged twice” refund. Can you confirm: is the double charge showing as two separate card payments for the same amount (and roughly the same time)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:19:40.488101",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 1131,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

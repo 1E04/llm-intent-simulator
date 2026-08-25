@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ba99839b-088d-482f-aacc-604d035fbfb9",
+  "seed": 42,
+  "dialogue_index": 41,
+  "timestamp": "2026-08-24T11:56:09.484062",
+  "persona": "Panicking Emergency",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 847,
+  "total_sim_completion_tokens": 276,
+  "total_bot_prompt_tokens": 1499,
+  "total_bot_completion_tokens": 307,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfers got blocked and they're asking about where my money came from! I need this fixed now!",
+      "assistant_response": "I’m sorry—when transfers are blocked and they ask where the money came from, it’s usually because we need to verify your source of funds. Can you confirm: did you receive a message asking for “source of funds/where the money came from,” or did the transfer show as “declined/blocked” in the app?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.58
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.33
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:06.247462",
+      "sim_prompt_tokens": 379,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes—blocked and they’re asking where the money came from!",
+      "assistant_response": "Thanks for confirming. This is because we need to verify the source of the funds for the blocked transfer. Please provide the requested details/documents in the app (source of funds info). Once submitted, we’ll review and release the transfer if everything checks out. If you tell me what exact wording you see in the app (e.g., “source of funds required” and any deadline), I can guide you to the right screen.",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:09.483930",
+      "sim_prompt_tokens": 468,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

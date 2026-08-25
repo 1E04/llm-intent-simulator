@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "477b7b71-b139-4e27-9ac7-b5a3bb8e17c8",
+  "seed": 42,
+  "dialogue_index": 73,
+  "timestamp": "2026-08-24T11:57:05.539981",
+  "persona": "Panicking Emergency",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 943,
+  "total_sim_completion_tokens": 227,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 258,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to send money and it just stopped—nothing went through! I need it right now!",
+      "assistant_response": "Sorry about that—when you say “it stopped” and “nothing went through,” do you see the transfer as **failed/unsuccessful**, or is it showing as **pending** in your transfer history? Also, was it a bank transfer or a card-to-card transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.13
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:03.497176",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as failed, and it was a bank transfer.",
+      "assistant_response": "Got it—since the bank transfer is showing as **failed**, this usually means the transfer didn’t complete.\n\nCan you tell me whether the transfer shows any reason/error message (e.g., “beneficiary bank rejected” or an error code), and approximately when you made the transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:05.539847",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

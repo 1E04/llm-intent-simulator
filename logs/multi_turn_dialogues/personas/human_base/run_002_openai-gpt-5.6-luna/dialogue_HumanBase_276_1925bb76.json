@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1925bb76-cb87-44ae-b6ee-d8a7ea7b6387",
+  "seed": 42,
+  "dialogue_index": 276,
+  "timestamp": "2026-08-21T13:02:56.643558",
+  "persona": "HumanBase",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 487,
+  "total_sim_completion_tokens": 119,
+  "total_bot_prompt_tokens": 2211,
+  "total_bot_completion_tokens": 264,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why could I not get cash?",
+      "assistant_response": "Sorry about that—when you tried to withdraw cash, did the ATM decline the transaction, or did it debit you / show a problem message (or keep your card)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:54.398015",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just said the transaction was declined and didn’t give me any cash.",
+      "assistant_response": "Got it—if the ATM said the cash withdrawal was declined and no cash was dispensed, this is typically a cash-withdrawal decline. Is the message shown by the ATM something like “Declined”, “Do not honor”, or “Transaction not permitted”? Also, was the amount attempted above your daily cash limit (or did you try multiple times)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.86
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:56.643434",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 1135,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

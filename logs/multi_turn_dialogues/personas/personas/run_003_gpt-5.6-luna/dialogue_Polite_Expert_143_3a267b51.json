@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "3a267b51-aa89-4850-aba9-f6db25f6dfb1",
+  "seed": 42,
+  "dialogue_index": 143,
+  "timestamp": "2026-08-24T12:02:51.693926",
+  "persona": "Polite Expert",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 934,
+  "total_sim_completion_tokens": 233,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a cash deposit earlier today, but I’m still seeing the same balance in my account.",
+      "assistant_response": "I can help with that. Quick question: was the cash deposit made via an ATM or at a bank/branch, and do you know the exact time it was deposited?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:49.093823",
+      "sim_prompt_tokens": 441,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was at an ATM, around 2:30 PM today.",
+      "assistant_response": "Thanks—if the cash deposit was made at an ATM around 2:30 PM, it can take some time to reflect. Can you confirm: has the ATM receipt been charged/issued successfully (i.e., did it show a completed deposit), and what date/time is shown on the receipt?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.06
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:51.693823",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

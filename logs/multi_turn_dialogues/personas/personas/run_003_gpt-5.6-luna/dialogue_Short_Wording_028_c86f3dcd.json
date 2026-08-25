@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c86f3dcd-5236-445d-a273-caf50423fb79",
+  "seed": 42,
+  "dialogue_index": 28,
+  "timestamp": "2026-08-24T12:12:18.536375",
+  "persona": "Short Wording",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1478,
+  "total_sim_completion_tokens": 748,
+  "total_bot_prompt_tokens": 2263,
+  "total_bot_completion_tokens": 396,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Funds not showing",
+      "assistant_response": "Sorry to hear that—when you say “funds not showing,” was the money sent to you by a bank transfer, or was it a cash/cheque deposit? Also, roughly how long ago was it sent or deposited?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.33
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:10.449853",
+      "sim_prompt_tokens": 433,
+      "sim_completion_tokens": 202,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Bank, 2 days",
+      "assistant_response": "Thanks—if the bank transfer was sent 2 days ago, it sounds like your balance may not have updated after a bank transfer. What’s the transfer status right now in the app (e.g., completed/pending), and do you know the amount and the sender’s name/bank country?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:13.623215",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 205,
+      "bot_prompt_tokens": 749,
+      "bot_completion_tokens": 116
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Pending, 500, John, US",
+      "assistant_response": "Got it—your $500 transfer to your account is showing as pending, and it’s only been 2 days. That usually explains why the funds aren’t showing yet. Could you confirm whether the app shows a specific status like “pending/completing” and whether there’s an expected arrival date? If you share that screen detail, I can tell you the next step.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.92
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:18.536232",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 341,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bd4ccccc-3f2b-41d2-ac3b-b7004907380e",
+  "seed": 42,
+  "dialogue_index": 113,
+  "timestamp": "2026-08-24T11:53:29.084754",
+  "persona": "Angry Layperson",
+  "target_intent": "card_linking",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1051,
+  "total_sim_completion_tokens": 305,
+  "total_bot_prompt_tokens": 1486,
+  "total_bot_completion_tokens": 280,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card won't hook up to the app – it just keeps getting rejected!",
+      "assistant_response": "Sorry you’re running into that. When you try to link the card in the app, does it show a specific error message (for example “card rejected/invalid”), and have you already activated the card? If you tell me the exact wording, I can point you to the right fix.",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:25.890281",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It flashes “Card invalid” and yeah, the card’s already activated—this is ridiculous!",
+      "assistant_response": "Got it—since activation is already done and the app says “Card invalid,” this is most likely a card-linking issue. Can you confirm: (1) are you trying to link the physical card and entering the correct card details (number/expiry/CVC), and (2) are you doing it with the same phone and account that matches your card?",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.55
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:29.084677",
+      "sim_prompt_tokens": 564,
+      "sim_completion_tokens": 171,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

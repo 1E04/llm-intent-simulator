@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "c98f71ce-4618-4354-99ae-1dd855e17742",
+  "seed": 42,
+  "dialogue_index": 28,
+  "timestamp": "2026-08-24T12:04:05.228363",
+  "persona": "Gen-Z Slang",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3160,
+  "total_sim_completion_tokens": 715,
+  "total_bot_prompt_tokens": 4542,
+  "total_bot_completion_tokens": 695,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i sent cash to a buddy and it never popped up in my account. 😕",
+      "assistant_response": "Sorry about that—when you say “cash to a buddy,” was it a card-to-card transfer in the app, or did you do a bank transfer? Also, do you see the transfer as pending or completed in your activity, or is it missing entirely?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.6
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:52.883664",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was a card‑to‑card move in the app, and it’s not showing up at all—like it disappeared.",
+      "assistant_response": "Got it—if the card-to-card transfer “disappeared,” it’s usually either failed or not yet received by the recipient. Which is it showing on your side: does the transaction appear in your activity/history at all (even as failed), or is it completely absent? If it’s absent, do you remember whether you received any confirmation/receipt in the app right after sending?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:56.375286",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "nah, it’s totally missing—no receipt or anything in my history.",
+      "assistant_response": "Thanks—if the card-to-card transfer is completely missing from your history (no receipt, no pending/failed status), it most often points to a failed transfer or a transfer that never got sent/confirmed.\n\nCan you confirm: did you send it using the in-app transfer feature to their phone/email/card, and roughly when did you do it? Also, are you able to see any similar transfer entries around that time, or is your activity totally blank for that transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.23
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:59.803773",
+      "sim_prompt_tokens": 623,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 895,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "yeah, used the app to send it to their phone number yesterday night. nothing shows up in my activity at all.",
+      "assistant_response": "Thanks—since it was an in-app transfer to their phone number and it’s completely missing (no pending/failed entry at all), it most likely means the transfer failed or didn’t get sent/confirmed.\n\nQuick check: after you pressed send yesterday, did the app show a confirmation screen like “Transfer sent/complete,” or did it ever show an error?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:02.807709",
+      "sim_prompt_tokens": 743,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 1024,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "nah, didn’t see any “sent” screen or error—just went back to the home screen.",
+      "assistant_response": "Sorry—if it was an in-app card-to-card transfer and there’s no receipt or entry at all, it usually means the transfer failed or didn’t complete.\n\nCan I confirm one thing: after you hit send, did you get any “processing/confirmation” indicator for a few seconds (even briefly), or did it instantly return you to the home screen?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.23
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:05.228214",
+      "sim_prompt_tokens": 850,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 1128,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

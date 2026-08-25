@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "21bbe78d-f01f-4a14-a4eb-421ebcd27867",
+  "seed": 42,
+  "dialogue_index": 49,
+  "timestamp": "2026-08-24T12:00:37.031967",
+  "persona": "Polite Expert",
+  "target_intent": "verify_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 989,
+  "total_sim_completion_tokens": 327,
+  "total_bot_prompt_tokens": 1490,
+  "total_bot_completion_tokens": 278,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see a recent addition to my balance, but I'm not sure if it has been fully processed.",
+      "assistant_response": "Thanks—can I clarify what you’re seeing? Is the addition from a **bank transfer** (and does it appear as **pending** in your app/statement), or is it from a **card top up** or **cash/cheque deposit**?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.31
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:33.923815",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up, and it’s currently showing as pending in the app.",
+      "assistant_response": "Got it—if your card top-up is showing as **pending**, it usually means the merchant/bank hasn’t fully completed the processing yet. Typically it updates within a short time. \n\nTo help you confirm: is the top-up still pending after **more than 24 hours**, and do you have the **amount** and **date/time** it was made?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:37.031821",
+      "sim_prompt_tokens": 532,
+      "sim_completion_tokens": 182,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

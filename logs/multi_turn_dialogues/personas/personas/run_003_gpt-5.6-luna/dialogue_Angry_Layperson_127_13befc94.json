@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "13befc94-b270-4200-92b1-ac5061a48db5",
+  "seed": 42,
+  "dialogue_index": 127,
+  "timestamp": "2026-08-24T11:53:58.355770",
+  "persona": "Angry Layperson",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2222,
+  "total_sim_completion_tokens": 619,
+  "total_bot_prompt_tokens": 3426,
+  "total_bot_completion_tokens": 631,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I got charged for a purchase that got cancelled, and the money still isn’t back in my account!",
+      "assistant_response": "Sorry about that—when a card purchase is cancelled, the funds should be returned, but it can take some time. Can you tell me: is the charge currently showing as “pending” or “completed” (posted), and do you have the date of the cancelled purchase?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.6
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.25
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:49.032151",
+      "sim_prompt_tokens": 413,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s posted, and the cancelled purchase was on July 15.",
+      "assistant_response": "Thanks—since it’s showing as posted, it should eventually revert, but timing can vary by merchant and card network. For a cancelled purchase from July 15, can I confirm whether the payment is marked as “reverted/ reversed” anywhere in your transaction details, or does it still just show as a normal completed purchase? Also, what’s the amount and the merchant name?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.16
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:52.103104",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 785,
+      "bot_completion_tokens": 171
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still just a normal completed charge—no “reverted” label. It was $87.45 at “TechGear Supplies”.",
+      "assistant_response": "Got it. If the charge is showing as a normal posted payment and it isn’t marked “reverted,” it usually means the refund hasn’t fully processed back to your card yet. \n\nCan you confirm whether TechGear Supplies confirmed the cancellation/refund, and roughly when they said the refund was issued (date or “X business days”)? Also, is the $87.45 showing under your card payments specifically (not a transfer/direct debit)?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.52
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.34
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:54.755342",
+      "sim_prompt_tokens": 594,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 900,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "They said they sent the refund on July 16 and it should take 3‑5 business days. And yeah, it’s showing under my card payments, not a transfer.",
+      "assistant_response": "Thanks—since TechGear said they sent the refund on July 16 for a cancelled card purchase, it may still be in transit back to your card (even if it’s showing as posted on your side). \n\nTo check next steps: are you currently more than 5 business days past July 16 (based on your time zone)? If yes, tell me the date today (or the number of days since July 16) and I’ll guide you on what we can do.",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.93
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.05
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:58.355576",
+      "sim_prompt_tokens": 722,
+      "sim_completion_tokens": 246,
+      "bot_prompt_tokens": 1036,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

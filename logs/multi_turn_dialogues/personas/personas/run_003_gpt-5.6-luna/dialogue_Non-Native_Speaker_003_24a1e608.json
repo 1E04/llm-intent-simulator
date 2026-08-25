@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "24a1e608-3894-4409-bb41-7af14ea559eb",
+  "seed": 42,
+  "dialogue_index": 3,
+  "timestamp": "2026-08-24T12:07:31.605241",
+  "persona": "Non-Native Speaker",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 836,
+  "total_sim_completion_tokens": 368,
+  "total_bot_prompt_tokens": 1500,
+  "total_bot_completion_tokens": 279,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I try add new person for money transfer, but the app shows error and won't let me continue.",
+      "assistant_response": "Sorry about that—when adding a new beneficiary, do you see a specific error message or code in the app? Also, is the problem happening because the beneficiary is not allowed (e.g., country/bank details issue) or is it failing later during the transfer step?",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.58
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:28.650415",
+      "sim_prompt_tokens": 380,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, the app shows a message that says “Beneficiary not allowed.” It stops right after I try to save the new recipient.",
+      "assistant_response": "Got it—the message “Beneficiary not allowed” means the recipient you’re trying to add isn’t eligible for transfers in our system. \n\nCould you tell me which details you entered (country and bank name), and whether you’re adding it for a bank transfer or another method? Then I can confirm what’s blocking it and what you can do next.",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.96
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.02
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:31.605083",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 209,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "0ed6560a-ce0c-4908-98fa-5b2841e1cabe",
+  "seed": 42,
+  "dialogue_index": 462,
+  "timestamp": "2026-08-21T13:15:12.090489",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1704,
+  "total_sim_completion_tokens": 412,
+  "total_bot_prompt_tokens": 4714,
+  "total_bot_completion_tokens": 517,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why has my payment not gone through?",
+      "assistant_response": "Sorry about that—was the card payment *declined* by the merchant/bank, or is it just showing as *pending* (not completed yet)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.58
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.24
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:04.005359",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It hasn't gone through yet—it's just showing as not completed.",
+      "assistant_response": "Got it—if it’s marked as *not completed*, it sounds like a *pending card payment*. Typically it completes automatically within a few hours (sometimes longer). \n\nCan you tell me: is the payment showing as **Pending**, **Completed later**, or has it been **pending for more than 24 hours**?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:07.281920",
+      "sim_prompt_tokens": 484,
+      "sim_completion_tokens": 214,
+      "bot_prompt_tokens": 1132,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's been pending for more than a day.",
+      "assistant_response": "Thanks—if a card payment has been **pending for more than 24 hours**, it usually needs time to be reversed/confirmed by the merchant’s bank. \n\nIs the transaction still showing as **Pending** right now, or has it changed to **Reverted/Cancelled**?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.8
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:09.693373",
+      "sim_prompt_tokens": 572,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 1216,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It's still showing as pending.",
+      "assistant_response": "Understood—if it’s still showing as **Pending** after more than a day, it’s usually waiting for the merchant’s bank to complete the authorization.\n\nPlease share (1) the **amount** and **currency** and (2) whether it was made **online or in-store**. Then I can advise what typically happens next and what you can do (e.g., when it should complete or revert).",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:12.090375",
+      "sim_prompt_tokens": 648,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 1289,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

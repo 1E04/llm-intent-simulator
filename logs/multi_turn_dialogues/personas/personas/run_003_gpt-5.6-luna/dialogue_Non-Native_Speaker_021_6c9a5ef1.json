@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6c9a5ef1-8d6c-4e92-b9f5-842c6c91b44f",
+  "seed": 42,
+  "dialogue_index": 21,
+  "timestamp": "2026-08-24T12:07:58.245466",
+  "persona": "Non-Native Speaker",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 951,
+  "total_sim_completion_tokens": 341,
+  "total_bot_prompt_tokens": 1517,
+  "total_bot_completion_tokens": 275,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I moved some money to another account and now there is a small charge I didn't expect. I don't understand why it appeared.",
+      "assistant_response": "Sorry about that—could you confirm whether this was a bank transfer you sent to another account (not a card top up), and whether the small charge shows as a transfer fee or an exchange/FX charge on the statement? If you tell me the exact wording next to the charge, I can pinpoint it.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.11
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:54.965134",
+      "sim_prompt_tokens": 431,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was a bank transfer. On the statement the charge is written as **“Transfer fee”** next to the amount.",
+      "assistant_response": "Thanks—if the statement says **“Transfer fee”** for a **bank transfer**, that means a fee was charged for sending that transfer. If you share the transfer amount and the fee amount, I can help you estimate whether it matches the expected transfer fee for your destination/type of transfer.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.93
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:58.245320",
+      "sim_prompt_tokens": 520,
+      "sim_completion_tokens": 220,
+      "bot_prompt_tokens": 808,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

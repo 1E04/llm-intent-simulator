@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "66bfd122-9014-405c-9aa2-33cbd4d79730",
+  "seed": 42,
+  "dialogue_index": 31,
+  "timestamp": "2026-08-24T11:55:51.681709",
+  "persona": "Panicking Emergency",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1058,
+  "total_sim_completion_tokens": 287,
+  "total_bot_prompt_tokens": 1476,
+  "total_bot_completion_tokens": 258,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just made a purchase I didn't do! I need help now!",
+      "assistant_response": "I’m sorry—let’s get this sorted right away. Was this purchase charged on your card (and you don’t recognize it), or did you just notice your card/phone might be lost or stolen? If you can, tell me whether the payment is showing as completed or pending.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.21
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:48.840887",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a completed charge I didn’t make.",
+      "assistant_response": "Thanks for confirming. Since it’s a completed payment you didn’t make, the next step is to secure your account and card—please tell me: do you still have your card with you (yes/no)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.93
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:51.676903",
+      "sim_prompt_tokens": 566,
+      "sim_completion_tokens": 190,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 103
+    }
+  ]
+}

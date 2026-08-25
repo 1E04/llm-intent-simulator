@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "97ba56cf-08a2-444e-88b5-493ec04e2f55",
+  "seed": 42,
+  "dialogue_index": 364,
+  "timestamp": "2026-08-21T13:09:10.516158",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2450,
+  "total_sim_completion_tokens": 523,
+  "total_bot_prompt_tokens": 6124,
+  "total_bot_completion_tokens": 674,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why hasn't my transfer been made?",
+      "assistant_response": "I’m sorry about that—transfers can be delayed if they’re pending, timed processing, or failed. Is your transfer showing as **pending** or has it **failed** (or does it not show at all)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.36
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.3
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:01.094387",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It doesn't show up at all.",
+      "assistant_response": "Thanks—if it doesn’t show up at all, it’s usually either a **failed transfer** or a **transfer timing/pending** issue. Can you tell me: does your transfer status show **failed**, **pending**, or **nothing at all** in the app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.36
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.3
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:03.489953",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 1138,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Nothing at all.",
+      "assistant_response": "Got it—if it shows nothing at all, it’s most commonly a **failed transfer** (it may not have been created) or a **timing** issue where it hasn’t processed yet. Can you check whether the transfer was sent as a bank transfer, and the date/time you initiated it?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:05.702008",
+      "sim_prompt_tokens": 566,
+      "sim_completion_tokens": 84,
+      "bot_prompt_tokens": 1208,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was a bank transfer—I started it on March 12 around 2 PM.",
+      "assistant_response": "Thanks—bank transfer started March 12 around 2 PM. When you look in the app, is there any record at all of a transfer (even under “pending”), or is it completely absent? If it’s completely absent, it’s usually treated as a **failed/never created transfer**—and I’ll need the recipient’s bank country or the transfer reference to check what happened.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.32
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.31
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:07.842921",
+      "sim_prompt_tokens": 642,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1298,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It's completely absent. The recipient is in Germany and the reference is 12345.",
+      "assistant_response": "Thanks—since it’s completely absent even though you sent a bank transfer on March 12 ~2 PM (Germany recipient, reference 12345), it’s most likely a **failed/never-created transfer** rather than a timing delay. \n\nI can help further—are you expecting an **outgoing** transfer to Germany that you initiated from your account (bank transfer), or are you referring to a **transfer you were supposed to receive**? Also, do you see any **bank transaction/receipt** for reference 12345 on your bank side?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:10.516045",
+      "sim_prompt_tokens": 749,
+      "sim_completion_tokens": 166,
+      "bot_prompt_tokens": 1404,
+      "bot_completion_tokens": 171
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "19faee90-4284-43b4-8fb7-c7011f853418",
+  "seed": 42,
+  "dialogue_index": 35,
+  "timestamp": "2026-08-24T11:49:24.378620",
+  "persona": "Angry Layperson",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 893,
+  "total_sim_completion_tokens": 291,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 280,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card keeps getting rejected at the ATM, and I'm fed up with it!",
+      "assistant_response": "Sorry you’re dealing with that. Is the ATM rejecting your card specifically when you try to withdraw cash (declined cash withdrawal), or is it also failing when you do other actions like balance check? Also, what exact message does the ATM show?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.15
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:21.660705",
+      "sim_prompt_tokens": 412,
+      "sim_completion_tokens": 112,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s only when I try to pull cash – the screen just flashes “Incorrect PIN” and won’t let me take any money.",
+      "assistant_response": "Got it—if the ATM says “Incorrect PIN” and it won’t dispense cash, the most likely issue is a declined cash withdrawal due to the PIN.\n\nCan you confirm whether you’ve tried the PIN a few times and now the card might be PIN‑blocked? If yes, I can help you with the next steps to unblock/reset your PIN.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.88
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:24.378510",
+      "sim_prompt_tokens": 481,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

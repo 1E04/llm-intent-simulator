@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "00fb3f84-07e3-4716-af37-e4f0c2c88909",
+  "seed": 42,
+  "dialogue_index": 75,
+  "timestamp": "2026-08-24T11:50:57.846753",
+  "persona": "Angry Layperson",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3221,
+  "total_sim_completion_tokens": 583,
+  "total_bot_prompt_tokens": 4639,
+  "total_bot_completion_tokens": 778,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What the hell is this random fee on my latest statement? I didn’t spend that money and it’s driving me nuts!",
+      "assistant_response": "I’m sorry you’re dealing with that—let’s figure it out. Can you tell me what the fee is called on your statement (the exact description) and the amount, and whether it looks like a card transaction or something like an account/servicing charge?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.46
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:47.389024",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says “Service Fee” for $12.99 and it looks like an account/servicing charge, not a card purchase.",
+      "assistant_response": "Thanks—since it shows as “Service Fee” for $12.99 and looks like an account/servicing charge (not a card purchase), it’s most likely an extra fee charged on your statement. \n\nCan you confirm which country your account is in and whether you recently changed your plan/service settings (or signed up for anything new)? Also, what date did the fee post on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:50.239489",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m in the US, haven’t changed any plan, and the fee showed up on the 15th.",
+      "assistant_response": "Got it. A $12.99 “Service Fee” that posts on the 15th and isn’t a card spend most likely means an extra charge/fee on your account statement.\n\nTo pinpoint it: do you see any additional details next to it (e.g., “monthly”, “plan”, “maintenance”, or a reference/merchant name), and was it charged to a specific account/beneficiary on your profile? If you can paste the exact line text from the statement, I can guide you on the next step.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:53.001824",
+      "sim_prompt_tokens": 628,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 915,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says “Service Fee – monthly” with no extra info or merchant name.",
+      "assistant_response": "Thanks—if it says “Service Fee – monthly” for $12.99 and has no merchant name, it sounds like an account service/extra statement charge rather than a card payment. Can you confirm whether the fee appears on the same statement line as any transfer activity—or is it only listed as the “Service Fee – monthly” entry? If it’s standalone, I can help you proceed with disputing/requesting a refund for that specific fee.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:55.666365",
+      "sim_prompt_tokens": 768,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 1050,
+      "bot_completion_tokens": 188
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s just a standalone line—nothing else on that row.",
+      "assistant_response": "Thanks—since it’s a standalone “Service Fee – monthly” line for $12.99 on your statement (not a card purchase), this most likely falls under an extra statement charge.\n\nCan you confirm whether you want to dispute it / request a refund for the $12.99 monthly service fee?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.82
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:57.846622",
+      "sim_prompt_tokens": 887,
+      "sim_completion_tokens": 73,
+      "bot_prompt_tokens": 1164,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

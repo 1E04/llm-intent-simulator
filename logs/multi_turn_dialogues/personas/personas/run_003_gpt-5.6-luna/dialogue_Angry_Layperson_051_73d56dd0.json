@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "73d56dd0-5837-4c02-b600-52fb266301fc",
+  "seed": 42,
+  "dialogue_index": 51,
+  "timestamp": "2026-08-24T11:50:04.157522",
+  "persona": "Angry Layperson",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 926,
+  "total_sim_completion_tokens": 301,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 294,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My digital card keeps getting rejected every time I try to pay online!",
+      "assistant_response": "Sorry to hear that—when you try to pay online, does the merchant show a “declined” message, or does the transaction fail/never show up as a payment attempt? Also, is it the digital card (virtual card) specifically, and is it for a card-not-present online purchase?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:00.981878",
+      "sim_prompt_tokens": 425,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “declined” right away, no pending charge shows up. Yeah, it’s the virtual card and it’s for online (card‑not‑present) purchases.",
+      "assistant_response": "Thanks—since the virtual (digital) card is being declined immediately for an online card‑not‑present purchase, this matches a card payment being declined. I can help narrow it down: was the payment attempted with a web checkout using the card details (not a wallet like Apple Pay/Google Pay), and have you confirmed the virtual card is enabled/active in the app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:04.157397",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 806,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

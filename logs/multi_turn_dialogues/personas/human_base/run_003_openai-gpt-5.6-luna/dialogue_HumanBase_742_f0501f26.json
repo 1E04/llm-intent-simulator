@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "f0501f26-9e70-45e2-b939-72b83f419f92",
+  "seed": 42,
+  "dialogue_index": 742,
+  "timestamp": "2026-08-21T15:51:27.954341",
+  "persona": "HumanBase",
+  "target_intent": "why_verify_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2688,
+  "total_sim_completion_tokens": 489,
+  "total_bot_prompt_tokens": 4255,
+  "total_bot_completion_tokens": 579,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I use my account if the identity verification is not complete?",
+      "assistant_response": "Thanks—just to confirm: are you asking whether you can use your account to make payments/transfers while identity verification is still pending, or are you stuck because verification has failed?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.62
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.22
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:18.214156",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 92
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m just wondering if I can still use the account while the verification is pending.",
+      "assistant_response": "In most cases, you can still log in and use your account while identity verification is pending, but some features (like higher limits, card ordering, or certain transfers/top ups) may be restricted until verification is complete. Are you trying to use which feature right now—card payments, transfers, or cash/cheque/card top ups?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.74
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.14
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:20.576680",
+      "sim_prompt_tokens": 540,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m trying to make a card payment right now.",
+      "assistant_response": "You should still be able to make card payments while verification is pending. However, depending on your status, some card-related features or limits could be restricted until verification completes. Can you tell me whether the card payment is going through or showing an error/being declined?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.6
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.22
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:22.731316",
+      "sim_prompt_tokens": 635,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 849,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s being declined – I get an error when I try to pay.",
+      "assistant_response": "Sorry about that—if your card payment is being declined while identity verification is still pending, it’s often due to restricted verification status or payment authorization.\n\nTo pinpoint it: when you try the payment, is the message specifically about verification/limits, or does it just say the card was declined? If you have the exact error text, share it.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.18
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:25.076763",
+      "sim_prompt_tokens": 709,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 927,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just says “card declined” – no mention of verification or limits.",
+      "assistant_response": "Thanks—if you’re seeing only “card declined” (no mention of verification), it most likely falls under a declined card payment.\n\nQuick check: are you trying to pay online or in-store, and have you tried the same merchant/payment method with a smaller amount? If possible, confirm the exact time/date of the attempt.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.16
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:27.954295",
+      "sim_prompt_tokens": 804,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 1022,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

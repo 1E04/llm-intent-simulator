@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "a1c9ee76-72b8-4dae-9215-c4f3cdf84284",
+  "seed": 42,
+  "dialogue_index": 145,
+  "timestamp": "2026-08-24T12:07:19.126235",
+  "persona": "Gen-Z Slang",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3204,
+  "total_sim_completion_tokens": 718,
+  "total_bot_prompt_tokens": 4592,
+  "total_bot_completion_tokens": 718,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried sending cash to my buddy and it just bounced, no go. what’s happening?",
+      "assistant_response": "Sorry that happened—when you say “sent cash,” do you mean a bank transfer (to their bank account) or a card-to-card/peer transfer within the app? Also, do you see any error message or status like “failed” or “reverted” for the transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:08.582969",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was the in‑app peer‑to‑peer thing, and it just showed a “couldn’t complete” note, no other details.",
+      "assistant_response": "Thanks—if the in‑app peer‑to‑peer transfer shows “couldn’t complete” with no details, it’s most likely a failed transfer. Can you tell me: did you try sending again, and does the transfer show a status like “failed/reverted,” or is it still pending?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:11.316035",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 803,
+      "bot_completion_tokens": 115
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "i gave it another go, same “couldn’t complete” vibe—still not pending or anything.",
+      "assistant_response": "Got it—if the peer‑to‑peer in‑app transfer keeps showing “couldn’t complete” and it’s neither pending nor completed, that usually points to a failed transfer.\n\nQuick checks: (1) are you sending to a supported recipient account in the app (not just a bank account number)? (2) does the transfer history show any final status like “failed” or “reverted,” even briefly? If you share what exact status text you see in the activity line, I’ll guide you to the right fix.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.64
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.24
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:14.010059",
+      "sim_prompt_tokens": 618,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 896,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "yeah, it’s a friend in‑app and the line just says “couldn’t complete,” nothing else.",
+      "assistant_response": "Thanks—if the in‑app peer-to-peer transfer repeatedly shows only “couldn’t complete” and it never becomes pending or completed, that typically means the transfer failed.\n\nTo narrow it down, can you check the transfer history and tell me whether it ever shows a more specific status like “failed” or “reverted” (even for a moment), or is it exactly just “couldn’t complete” every time?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:16.872681",
+      "sim_prompt_tokens": 758,
+      "sim_completion_tokens": 192,
+      "bot_prompt_tokens": 1038,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "nah, it’s always just “couldn’t complete,” never anything else.",
+      "assistant_response": "It sounds like the in‑app peer transfer is failing immediately (it never reaches “pending” or “reverted”).\n\nTo check the exact reason, can you confirm: is the transfer showing a type like “peer‑to‑peer transfer” in the activity, and are you sending to a recipient who is already verified/active in the app? Also, are you transferring to a saved contact/username in the app (not an external bank account)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:19.126139",
+      "sim_prompt_tokens": 877,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1150,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

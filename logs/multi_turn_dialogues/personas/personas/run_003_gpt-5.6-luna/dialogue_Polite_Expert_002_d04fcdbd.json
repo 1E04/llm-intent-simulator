@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d04fcdbd-ec93-4ac7-913d-254b4d481156",
+  "seed": 42,
+  "dialogue_index": 2,
+  "timestamp": "2026-08-24T11:59:28.282534",
+  "persona": "Polite Expert",
+  "target_intent": "pending_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 952,
+  "total_sim_completion_tokens": 223,
+  "total_bot_prompt_tokens": 1479,
+  "total_bot_completion_tokens": 259,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I withdrew cash from an ATM earlier today, but I don’t see the amount reflected in my account yet.",
+      "assistant_response": "It sounds like the ATM withdrawal may still be pending. Can you confirm: is the cash withdrawal showing as “pending” in your transaction history, or is it missing entirely (no transaction at all)?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.72
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:25.625153",
+      "sim_prompt_tokens": 444,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s listed as a pending transaction in my history, not as a completed one.",
+      "assistant_response": "Thanks—if it’s showing as a pending cash withdrawal, that usually means the final amount will update once the ATM/bank completes processing. What country and ATM network did you use, and is the pending amount exactly the amount you withdrew?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:28.282376",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

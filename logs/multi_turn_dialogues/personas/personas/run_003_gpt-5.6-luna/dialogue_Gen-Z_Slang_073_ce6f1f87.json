@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "ce6f1f87-e66e-4ac3-8c6b-92a49b9e6df6",
+  "seed": 42,
+  "dialogue_index": 73,
+  "timestamp": "2026-08-24T12:05:14.123406",
+  "persona": "Gen-Z Slang",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1499,
+  "total_sim_completion_tokens": 403,
+  "total_bot_prompt_tokens": 2315,
+  "total_bot_completion_tokens": 334,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried sending money to my buddy and it just bounced, nothing went through. 😕",
+      "assistant_response": "Sorry about that—when you say the transfer “bounced,” do you see an error message like “failed/declined,” or is it showing as “pending” or “completed” in the app?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:09.077606",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it pops up a “declined” notice, nothing else.",
+      "assistant_response": "Got it—if it shows a “declined” notice, that usually means the transfer was rejected. Was the transfer declined immediately, and do you have the recipient’s name/account details filled in correctly?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:11.947902",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 94
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, it got denied right away and I’m pretty sure I typed the right info.",
+      "assistant_response": "Thanks—if it was immediately marked “declined,” it’s most likely a declined transfer. Can you tell me whether you tried a bank transfer or card-to-card transfer, and whether the recipient details were a bank account/IBAN or an app recipient?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:14.123250",
+      "sim_prompt_tokens": 565,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 840,
+      "bot_completion_tokens": 105
+    }
+  ]
+}

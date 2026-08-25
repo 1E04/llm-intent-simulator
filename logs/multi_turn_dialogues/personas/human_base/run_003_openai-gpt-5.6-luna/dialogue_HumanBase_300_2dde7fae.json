@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2dde7fae-6186-470b-8fd3-5a48bfdcd530",
+  "seed": 42,
+  "dialogue_index": 300,
+  "timestamp": "2026-08-21T15:42:34.380225",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 526,
+  "total_sim_completion_tokens": 128,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 292,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was my account deducted from a seller when I didn't approve of it?",
+      "assistant_response": "I’m sorry this happened. To narrow it down, was the seller deduction made by a **card payment**, a **direct debit**, or a **bank transfer/other charge**? Also, do you see the transaction as **pending** or **completed**?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.34
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.33
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:31.976453",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a direct debit and the charge is already completed.",
+      "assistant_response": "Thanks—if it’s a completed direct debit you don’t recognize, we can help you with an investigation and possible refund. Can you tell me the merchant/sender name shown on the debit and the debit date/amount?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.62
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:34.380178",
+      "sim_prompt_tokens": 526,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

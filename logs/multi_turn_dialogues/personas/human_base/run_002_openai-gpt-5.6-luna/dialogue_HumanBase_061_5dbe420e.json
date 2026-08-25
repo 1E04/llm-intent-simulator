@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "5dbe420e-cd42-4cc7-a9e3-0ec41a686b1f",
+  "seed": 42,
+  "dialogue_index": 61,
+  "timestamp": "2026-08-21T12:48:50.808493",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2546,
+  "total_sim_completion_tokens": 487,
+  "total_bot_prompt_tokens": 6222,
+  "total_bot_completion_tokens": 670,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why don't I have my transfer?",
+      "assistant_response": "Sorry you’re dealing with this—are you asking that *your recipient hasn’t received the transfer yet*, or that you personally can’t see the transfer in your account (or it shows as failed)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.42
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.31
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:41.310367",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I can’t see it in my account.",
+      "assistant_response": "Got it—you can’t see the transfer in your account. Is the transfer showing as *pending* or does it show any *failed/cancelled* status? If you can, tell me the transfer date and whether you made it by bank transfer or card/other method.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.22
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:43.231726",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1135,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It doesn’t show any status – it’s just missing. I made the transfer on March 5th by bank transfer.",
+      "assistant_response": "Thanks—since the transfer (bank transfer on March 5) is completely missing with no status, I can help check the most likely issue. First: is this transfer supposed to be incoming to your account (you’re the recipient), or outgoing from your account to someone else? Also, do you have a reference/transaction ID from the bank or your transfer confirmation?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.28
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:46.412140",
+      "sim_prompt_tokens": 571,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 1226,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s an outgoing transfer from my account, and I have the reference number — REF123456.",
+      "assistant_response": "Thanks. Since this is an outgoing bank transfer and it’s missing from your view with no status, it likely falls under either a transfer that hasn’t been delivered yet or a transfer that didn’t complete.\n\nCan you confirm one thing: is it currently meant to show in your transfer history as “completed,” or it’s not visible at all—no entry exists? And is the recipient expecting it (i.e., not receiving it)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.58
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.29
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:48.459287",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 102,
+      "bot_prompt_tokens": 1332,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s not showing up at all—no entry in my history, and the recipient says they haven’t gotten it.",
+      "assistant_response": "Thanks—since it’s an outgoing bank transfer from March 5 and it doesn’t appear in your history while the recipient also hasn’t received it, this is most likely a transfer-not-received (or a transfer that failed/never completed).\n\nCould you tell me whether your bank’s reference REF123456 shows the transfer as **completed/paid out** on their side, or does it show anything like **pending/returned/cancelled**?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.7
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:50.808403",
+      "sim_prompt_tokens": 799,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 1453,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "0e0f7289-702d-4b43-81bd-4d10ec22cac1",
+  "seed": 42,
+  "dialogue_index": 172,
+  "timestamp": "2026-08-21T12:56:34.482769",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1062,
+  "total_sim_completion_tokens": 235,
+  "total_bot_prompt_tokens": 3427,
+  "total_bot_completion_tokens": 374,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "An unauthorized payment is in my app",
+      "assistant_response": "I’m sorry this happened. Are you seeing a card payment in the app that you don’t recognize (not yours), or are you saying it’s unauthorized because your card/phone may be compromised?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.2
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:30.145801",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a payment I didn’t make at all.",
+      "assistant_response": "Understood—if the payment is not one you made, it’s usually treated as an unrecognized card payment. Can you confirm whether the payment shows as a card payment (with a merchant name) and whether it’s marked as pending or completed in the app?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:32.372958",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 1137,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s listed as a completed card payment with the merchant name shown.",
+      "assistant_response": "Thanks—if it’s a completed card payment you don’t recognize, we’ll treat it as an unrecognized card payment. Please tell me the merchant name and the date/amount shown in the app (and whether you still have the card), so I can guide you to the right next steps and help you secure your account.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:34.482695",
+      "sim_prompt_tokens": 568,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 1214,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

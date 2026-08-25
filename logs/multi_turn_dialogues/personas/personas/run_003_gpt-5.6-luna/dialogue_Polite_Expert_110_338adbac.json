@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "338adbac-2a61-4da6-bdc3-914412b6c8dd",
+  "seed": 42,
+  "dialogue_index": 110,
+  "timestamp": "2026-08-24T12:02:02.368961",
+  "persona": "Polite Expert",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 995,
+  "total_sim_completion_tokens": 253,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 331,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add funds using my debit card, but the transaction was declined.",
+      "assistant_response": "Sorry that happened—was your debit card top up declined, or are you seeing a declined card payment during checkout? If you tell me what message you received (and whether it was a top up or a card payment), I’ll guide you to the right fix.",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.76
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:59.225263",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a top‑up attempt, and the screen displayed “Your card was declined – please try another payment method.”",
+      "assistant_response": "Got it—if your debit card top‑up was declined with that message, it’s a top‑up failure. Please check: (1) your card has online/e‑commerce payments enabled, (2) there’s enough available balance, (3) the billing details match exactly, and (4) try a different payment method or card. What country did you issue the card in, and did you receive any additional error code or reason?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:02.368811",
+      "sim_prompt_tokens": 532,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 184
+    }
+  ]
+}

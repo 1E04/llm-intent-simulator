@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a18202fc-ffca-4bdd-86cd-b637cf73e281",
+  "seed": 42,
+  "dialogue_index": 619,
+  "timestamp": "2026-08-21T15:48:37.520532",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 574,
+  "total_sim_completion_tokens": 132,
+  "total_bot_prompt_tokens": 1457,
+  "total_bot_completion_tokens": 259,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The app wouldn't accept my top up.",
+      "assistant_response": "Sorry about that—when you try to top up, does it fail with an error message, or is the top up just not going through at all? Also, was it by card or bank transfer?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.7
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:35.034169",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just doesn’t go through—no error pops up. I was trying to top up with my card.",
+      "assistant_response": "Thanks—so the card top up just doesn’t go through and there’s no error. Are you able to see the top-up attempt listed as **pending** in the app, or does it disappear / show as **failed**? If you can, tell me the exact status you see on that top-up and the amount/currency.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:37.520472",
+      "sim_prompt_tokens": 574,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

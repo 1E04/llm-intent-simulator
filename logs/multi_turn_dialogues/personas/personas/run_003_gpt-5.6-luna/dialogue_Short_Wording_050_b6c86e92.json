@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b6c86e92-717e-44ce-b0da-ccfaca1eb68e",
+  "seed": 42,
+  "dialogue_index": 50,
+  "timestamp": "2026-08-24T12:12:54.685768",
+  "persona": "Short Wording",
+  "target_intent": "fiat_currency_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1362,
+  "total_sim_completion_tokens": 419,
+  "total_bot_prompt_tokens": 2175,
+  "total_bot_completion_tokens": 340,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Currency not accepted",
+      "assistant_response": "Which currency are you trying to use, and for what action—card payment, top up, or bank transfer?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.7
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.18
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:49.873504",
+      "sim_prompt_tokens": 422,
+      "sim_completion_tokens": 211,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 116
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "EUR top‑up",
+      "assistant_response": "Thanks—are you getting an error message that says the currency isn’t supported for EUR top-ups, or is the top-up itself failing?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.25
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:52.432610",
+      "sim_prompt_tokens": 449,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 724,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Error message",
+      "assistant_response": "Got it. That error usually means EUR isn’t supported for the specific top-up method you’re using. Which top-up method are you trying—by bank transfer or by card? And what’s the exact wording of the error message?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:54.685720",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 88,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "472fa2c7-3025-4272-82f0-490eb367fcb8",
+  "seed": 42,
+  "dialogue_index": 128,
+  "timestamp": "2026-08-24T12:02:30.132942",
+  "persona": "Polite Expert",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 990,
+  "total_sim_completion_tokens": 259,
+  "total_bot_prompt_tokens": 1502,
+  "total_bot_completion_tokens": 276,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I’m trying to add money to my account, but the transaction gets declined once I reach a certain amount.",
+      "assistant_response": "Got it—when you try to add money, it’s declined after reaching a certain amount. Is this decline happening for a card top up, or are you adding money via bank transfer? And roughly what amount are you able to reach before it gets declined?",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.6
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.28
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:27.354499",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card top‑up, and the decline kicks in once I try to add around £2,000 in a single day.",
+      "assistant_response": "Thanks—if the card top-up is declining once you try to add about £2,000 in a day, it’s very likely hitting your top up limits. \nCan you confirm whether you’re using one card and attempting multiple top-ups in the same day, or just a single top-up of £2,000? Also, does the app show a specific error message?",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:30.132774",
+      "sim_prompt_tokens": 533,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

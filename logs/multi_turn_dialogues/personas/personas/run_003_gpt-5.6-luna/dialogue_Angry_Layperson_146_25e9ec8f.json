@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "25e9ec8f-ea1a-4ddc-9679-67da505f42b3",
+  "seed": 42,
+  "dialogue_index": 146,
+  "timestamp": "2026-08-24T11:54:32.365248",
+  "persona": "Angry Layperson",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 933,
+  "total_sim_completion_tokens": 316,
+  "total_bot_prompt_tokens": 1490,
+  "total_bot_completion_tokens": 296,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just pulled cash overseas and the amount they took from my account is way off—totally messed up!",
+      "assistant_response": "Sorry about that—was the ATM supposed to dispense one amount but gave you a different amount, or is the cash amount right but the charge on your account looks wrong (for example due to the exchange rate/fees)?",
+      "predicted_intent": "wrong_amount_of_cash_received",
+      "top_3_intents": [
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.52
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.33
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:29.394417",
+      "sim_prompt_tokens": 434,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The cash I got was fine, but my account was hit with a huge, wrong charge because of the exchange rate.",
+      "assistant_response": "Got it—the cash amount is fine, but the charge was higher because of the exchange rate. Can you tell me the currency you withdrew in and the currency/amount you see on your statement (and if you’re seeing the ATM fee included too)?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:32.365074",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

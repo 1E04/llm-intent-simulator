@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "12fa1a2c-cbb3-4a23-9cfe-e698e9b07f6f",
+  "seed": 42,
+  "dialogue_index": 12,
+  "timestamp": "2026-08-24T11:55:11.567865",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 973,
+  "total_sim_completion_tokens": 287,
+  "total_bot_prompt_tokens": 1447,
+  "total_bot_completion_tokens": 225,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got a surprise fee on my account after a transfer!",
+      "assistant_response": "Sorry about that—was the surprise fee taken directly for the transfer itself (a transfer fee), or did it happen due to currency exchange on the transfer?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.6
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.23
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:08.391094",
+      "sim_prompt_tokens": 465,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a fee for the transfer itself, not exchange.",
+      "assistant_response": "Got it—if the fee was for the transfer itself, it sounds like a transfer fee was charged. Do you know the amount of the fee and whether it was taken from your balance or added on top of the transfer amount?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.93
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.04
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:11.567743",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 101
+    }
+  ]
+}

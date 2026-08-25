@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b5b356f3-1133-4b8f-bcaa-e1a188f79a0e",
+  "seed": 42,
+  "dialogue_index": 21,
+  "timestamp": "2026-08-24T11:59:58.399620",
+  "persona": "Polite Expert",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 933,
+  "total_sim_completion_tokens": 285,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 267,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I noticed an extra amount was taken from my recent account transfer, and I'm not sure why it appeared.",
+      "assistant_response": "I can help with that—was the extra amount a fee charged for the transfer (for example, shown as a separate charge), or did it change the transferred amount itself? Also, roughly when was the transfer made and what currency/country is it for?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.62
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:55.731107",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It appeared as a separate fee line, not a reduction in the transferred amount. The transfer was made about two days ago, in USD to a UK account.",
+      "assistant_response": "Thanks—if it’s showing as a separate fee line (not deducted from the transfer amount), that typically means a transfer fee was charged.\n\nTo confirm, can you tell me the exact fee amount and what the line item description says (e.g., “transfer fee”, “OUR/SHA”, or anything similar)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:58.399243",
+      "sim_prompt_tokens": 504,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 799,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

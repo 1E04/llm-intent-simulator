@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "38629299-4246-4c29-813c-75ebc607e377",
+  "seed": 42,
+  "dialogue_index": 7,
+  "timestamp": "2026-08-24T11:55:20.518770",
+  "persona": "Panicking Emergency",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3011,
+  "total_sim_completion_tokens": 706,
+  "total_bot_prompt_tokens": 4391,
+  "total_bot_completion_tokens": 719,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent money and it’s still not showing up! I need it right now!",
+      "assistant_response": "Sorry about that—can you confirm whether you sent a bank transfer to your account or did you send a transfer to another person’s recipient? Also, do you see the transfer as “pending” or is it not showing at all?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.58
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.26
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:59.072647",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was to someone else – it’s not showing up at all!",
+      "assistant_response": "Thanks—if the transfer was to someone else and it’s not showing up at all, it’s usually either not completed or rejected. Can you tell me: (1) did you send it via bank transfer or card/wallet transfer, and (2) do you see a reference/transaction status like completed, pending, or failed in your app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.82
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.13
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:02.594604",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 216,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Bank transfer – I don’t see any status, nothing at all.",
+      "assistant_response": "Thanks—if you made a bank transfer to someone else and there’s no status at all in the app, it’s likely not been processed/credited yet or it may have failed. Can you check whether you added the correct recipient details (name/IBAN or account number) and tell me the date/time you sent it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.66
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:05.011727",
+      "sim_prompt_tokens": 591,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 867,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I used the right IBAN, I’m sure. Sent it today at about 2:15 PM.",
+      "assistant_response": "Got it—bank transfer sent today around 2:15 PM to another recipient, and you don’t see any status and it’s not showing up. To narrow it down: is the transfer showing anywhere in your app under “Transfers” (even as pending), or is it completely missing? If it’s completely missing, I’ll help you check whether it was rejected/failed; if it’s listed pending/completed, we’ll focus on timing and why the recipient hasn’t received it yet.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.24
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:08.211695",
+      "sim_prompt_tokens": 681,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 966,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s completely missing—nothing shows up!",
+      "assistant_response": "Since your bank transfer to someone else is completely missing in the app, it usually means it didn’t successfully submit/complete—often showing as failed or not created. Can you tell me whether you sent it from your bank’s app via the recipient’s IBAN, or did you initiate it from within our app? If you can, also share the transaction/reference number from your bank.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.76
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:20.518685",
+      "sim_prompt_tokens": 814,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

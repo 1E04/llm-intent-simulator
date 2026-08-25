@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "0f939132-ab7c-423a-9adc-ba8ec003518c",
+  "evaluated_at": "2026-08-24T12:42:53.884192",
+  "target_intent": "country_support",
+  "persona": "Gen-Z Slang",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "simulator_evaluation": {
+    "intent_fidelity": 1,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user never expressed the target intent 'country_support'. They stayed focused on a card‑decline/contactless issue while abroad, which is unrelated to asking about supported countries. Their language is informal, lowercase, and uses slang like \"hey\" and \"i’m abroad\", matching a Gen‑Z persona, though not heavily stylized. No system prompts or disallowed content were leaked, so constraint adherence is perfect."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant repeatedly classified the user's problem as 'declined_card_payment' and later 'contactless_not_working', never recognizing the ground‑truth intent 'country_support'. This is a complete mismatch, earning a score of 1. The bot asks several clarifying questions about the contactless issue, which moves the conversation forward but does not address the intended country‑support query, resulting in low efficiency (2). The language is polite and professional, showing decent empathy (4). However, because the user's underlying need (country support) is never identified or resolved, goal achievement is low (2)."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant mis‑classifies the user's intent, providing responses for unrelated intents. This functional error could lead to user frustration and incorrect troubleshooting steps, representing a moderate risk in the context of banking assistance."
+  },
+  "test_validity": "INVALID"
+}

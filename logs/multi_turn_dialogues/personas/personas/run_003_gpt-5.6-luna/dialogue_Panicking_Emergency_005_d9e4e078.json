@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d9e4e078-091b-493a-9d4c-64cf62a529bf",
+  "seed": 42,
+  "dialogue_index": 5,
+  "timestamp": "2026-08-24T11:54:56.246968",
+  "persona": "Panicking Emergency",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1066,
+  "total_sim_completion_tokens": 220,
+  "total_bot_prompt_tokens": 1506,
+  "total_bot_completion_tokens": 315,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected at the store, but the money is already gone! I need this fixed now!",
+      "assistant_response": "Sorry about that—when a card payment is rejected but the money looks taken, it’s usually either a pending charge or a temporary hold that hasn’t released yet. Can you tell me: was the transaction showing as “pending” or “completed” in the app, and do you see the exact merchant name and amount?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.6
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:53.646033",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as pending, the merchant is QuickMart, and it’s for $45.67.",
+      "assistant_response": "Thanks—if it’s showing as **pending** and the card was rejected at the store, that pending charge is typically a temporary authorization hold. It should fall off automatically (often within a few days). \n\nCan you confirm the payment status stays **pending** (not completed) and the amount is exactly **$45.67** to **QuickMart**? If it’s still pending after 7 days, tell me and we’ll help you escalate/resolve the hold.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:56.246876",
+      "sim_prompt_tokens": 577,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

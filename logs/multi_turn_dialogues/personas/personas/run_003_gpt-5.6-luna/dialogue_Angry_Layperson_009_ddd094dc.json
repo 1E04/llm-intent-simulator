@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ddd094dc-3d0f-424d-90c5-ce4287bf727c",
+  "seed": 42,
+  "dialogue_index": 9,
+  "timestamp": "2026-08-24T11:48:02.097153",
+  "persona": "Angry Layperson",
+  "target_intent": "getting_spare_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1044,
+  "total_sim_completion_tokens": 268,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 279,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just stopped working and I’m stuck without any way to pay!",
+      "assistant_response": "Sorry you’re dealing with this. When you say your card stopped working, is it not working for all payments (including chip + PIN), or only contactless? Also, did you recently change your PIN or have any suspicious activity?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.74
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:59.638901",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s dead for everything – chip, PIN, contactless, nothing works. I haven’t changed the PIN and there’s nothing weird going on.",
+      "assistant_response": "Got it—if your card isn’t working for chip + PIN or contactless, the most likely issue is the card has been temporarily disabled or is malfunctioning. I can help you quickly: has the card been reported lost/stolen or had suspicious activity alerts recently? If not, please confirm whether it’s a physical card with a chip (not just a virtual/online card).",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.92
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:02.097028",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

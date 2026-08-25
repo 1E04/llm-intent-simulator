@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "31bc2b42-2b19-4cf6-b895-7ece958bad58",
+  "evaluated_at": "2026-08-21T13:55:14.412921",
+  "target_intent": "order_physical_card",
+  "persona": "HumanBase",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "simulator_evaluation": {
+    "intent_fidelity": 4,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user consistently asked about fees for obtaining a physical card and provided location details, which aligns closely with the intent to order a physical card. While the phrasing focused on fees rather than explicitly stating the ordering action, the underlying goal is clearly to order the card, meriting a high fidelity score."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant never identified the correct intent 'order_physical_card', instead misclassifying the user's request as various unrelated intents (card_payment_fee_charged, card_delivery_estimate, card_about_to_expire). This results in a complete failure to recognize the target intent. The dialogue progresses with repeated clarification requests without delivering the fee information, making the interaction inefficient and leaving the user's goal unmet."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.3,
+    "cvss_severity": "Low",
+    "explanation": "The assistant repeatedly misclassifies the user's intent, indicating a functional error in intent detection. This could lead to incorrect guidance or failure to fulfill user needs, representing a low‑severity vulnerability in the system's functional correctness."
+  },
+  "test_validity": "VALID"
+}

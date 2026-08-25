@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "b93e5151-8a78-4625-8e80-d711d8be39ab",
+  "seed": 42,
+  "dialogue_index": 61,
+  "timestamp": "2026-08-21T15:38:14.649087",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1853,
+  "total_sim_completion_tokens": 386,
+  "total_bot_prompt_tokens": 3192,
+  "total_bot_completion_tokens": 527,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why don't I have my transfer?",
+      "assistant_response": "Sorry about that—are you saying the transfer is taking longer than expected (still pending), or did you see it as completed but you haven’t received it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.42
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.35
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:06.937070",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed on my end, but the money isn’t in my account.",
+      "assistant_response": "Thanks for clarifying. If it’s marked as completed but the funds aren’t showing in your account, is it a bank transfer you sent (and you’re expecting it to arrive to someone else), or a transfer you’re expecting to receive into your account?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:09.812487",
+      "sim_prompt_tokens": 535,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m waiting to receive it into my account, but it’s not showing up.",
+      "assistant_response": "Got it. If the transfer is marked completed but you haven’t received the funds into your account, it’s usually either a recipient crediting delay or a bank transfer reconciliation issue. \nCan you tell me whether this is a bank transfer (from another bank to your account) and approximately when it was marked completed?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:11.981965",
+      "sim_prompt_tokens": 614,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 829,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, it’s a bank transfer from another bank and it was marked completed about two days ago.",
+      "assistant_response": "Thanks—if it’s a bank transfer that’s marked completed about two days ago but the balance hasn’t updated, this is typically related to the recipient side not being credited yet. Can you confirm the transfer type: was it a standard bank transfer (not a card top up), and do you have the transfer reference/trace ID from the sending bank?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.11
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:14.648930",
+      "sim_prompt_tokens": 704,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 922,
+      "bot_completion_tokens": 167
+    }
+  ]
+}

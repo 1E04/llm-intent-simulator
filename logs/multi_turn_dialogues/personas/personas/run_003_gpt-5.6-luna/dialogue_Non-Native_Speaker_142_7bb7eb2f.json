@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7bb7eb2f-1a3a-4ba4-b416-f077089b7ec7",
+  "seed": 42,
+  "dialogue_index": 142,
+  "timestamp": "2026-08-24T12:11:10.079065",
+  "persona": "Non-Native Speaker",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 856,
+  "total_sim_completion_tokens": 229,
+  "total_bot_prompt_tokens": 1506,
+  "total_bot_completion_tokens": 317,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a charge taken from my account that I never approved, and I don't know where it came from.",
+      "assistant_response": "I’m sorry that happened. To help me route you correctly: was the unapproved charge a card payment (merchant name shows on your card/transactions) or a direct debit (withdrawal from a company like a billing/utility), and do you have the transaction date/amount or merchant name?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.58
+        },
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:07.279247",
+      "sim_prompt_tokens": 387,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It is a direct debit, taken about two weeks ago, around £45, from a company I don’t recognize.",
+      "assistant_response": "Thanks—since it’s a direct debit you don’t recognize, I can help you raise a dispute/chargeback for the payment. The debit was about £45 from an unknown company around two weeks ago—can you tell me the exact company name shown on the transaction and the payment date?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.63
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:10.078906",
+      "sim_prompt_tokens": 469,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 800,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

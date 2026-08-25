@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "12c0871a-cbd3-43fa-9e04-339d32d8435c",
+  "seed": 42,
+  "dialogue_index": 38,
+  "timestamp": "2026-08-24T11:49:58.272580",
+  "persona": "Angry Layperson",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2475,
+  "total_sim_completion_tokens": 622,
+  "total_bot_prompt_tokens": 3528,
+  "total_bot_completion_tokens": 651,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account keeps getting extra money added without me doing anything, and now my balance is all messed up!",
+      "assistant_response": "Sorry about that—just to pinpoint what’s happening: are the “extra money” transactions showing as a specific top up/transfer on your transaction history (with dates and amounts), or is it only the displayed balance that looks wrong? If you can, tell me the transaction type and the amount(s) you’re seeing.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.32
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:35.158761",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yeah, there are two entries – a $50 top‑up on the 12th and a $30 one on the 15th – I didn’t do those.",
+      "assistant_response": "Thanks—since you didn’t make those top-ups but they’re showing as $50 on the 12th and $30 on the 15th, I’ll need to narrow down what the entries look like. Are the entries labeled as “card top up/charge” (and do they show as successful), or are they marked as pending/failed/reverted? Also, did you recently use a different card or have anyone else with access to your account?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.32
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.24
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:52.997246",
+      "sim_prompt_tokens": 544,
+      "sim_completion_tokens": 299,
+      "bot_prompt_tokens": 815,
+      "bot_completion_tokens": 187
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "They’re marked as successful “card top‑up” entries. I haven’t used any other card and nobody else has access to my account.",
+      "assistant_response": "Thanks for confirming. Since these are successful card top-ups you didn’t do, the likely issue is that your card (or card details) may be used without your permission. Have you noticed any other unusual transactions, and are you able to locate the merchants/transaction references for the $50 (12th) and $30 (15th) top-ups?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:55.815944",
+      "sim_prompt_tokens": 682,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 947,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "No, those are the only weird ones—there’s no merchant name or anything, just “card top‑up” and the amounts. This is ridiculous.",
+      "assistant_response": "I’m really sorry—since the $50 (12th) and $30 (15th) are marked as successful “card top-ups” that you didn’t make, the most likely cause is unauthorised card usage.\n\nFirst, please lock your card immediately (if you haven’t already), then we’ll help you start a charge dispute/refund for those two top-ups. \n\nCan you tell me the exact dates/times of each top-up and whether there’s a “ref”/transaction ID shown in the app when you tap each entry?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:58.272421",
+      "sim_prompt_tokens": 793,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 1061,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

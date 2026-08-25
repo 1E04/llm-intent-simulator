@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9db26eb0-6f3c-4a8a-990d-fb33b9a683e1",
+  "seed": 42,
+  "dialogue_index": 180,
+  "timestamp": "2026-08-21T12:57:15.743885",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 531,
+  "total_sim_completion_tokens": 84,
+  "total_bot_prompt_tokens": 2247,
+  "total_bot_completion_tokens": 270,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm concerned about a payment that has recently been made on my card.  I do not recognize the name that the transaction went to, can you help me?",
+      "assistant_response": "I can help with a card payment you don’t recognize. Was this payment completed/posted, or is it still showing as pending?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:11.695762",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1101,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s already posted, not pending.",
+      "assistant_response": "Thanks—since it’s already posted and you don’t recognize the merchant, this matches an unrecognized card payment. Please tell me the merchant name (as shown) and the amount/currency, and I’ll guide you through the next steps.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:15.743731",
+      "sim_prompt_tokens": 531,
+      "sim_completion_tokens": 84,
+      "bot_prompt_tokens": 1146,
+      "bot_completion_tokens": 147
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "133027e0-5a03-4f42-b844-bb70fa7b71e3",
+  "seed": 42,
+  "dialogue_index": 37,
+  "timestamp": "2026-08-24T11:56:00.003089",
+  "persona": "Panicking Emergency",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 816,
+  "total_sim_completion_tokens": 292,
+  "total_bot_prompt_tokens": 1467,
+  "total_bot_completion_tokens": 312,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just got rejected at the checkout—nothing's going through!",
+      "assistant_response": "Sorry about that—was the payment declined with an error at the checkout, or did the merchant say they didn’t receive/recognise the card details? Also, are you trying to pay in-person or online?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:56.416216",
+      "sim_prompt_tokens": 379,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "In‑person, the terminal just said “declined” – no other error message.",
+      "assistant_response": "Got it—if the terminal just shows “declined” for an in‑person payment, it’s most likely a declined card payment. Can you tell me whether you’ve had any recent card changes (like a new card, PIN change, or you tried a different card reader)? Also, are you paying with the card contactless/tap, or inserting/swiping?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:00.002954",
+      "sim_prompt_tokens": 437,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

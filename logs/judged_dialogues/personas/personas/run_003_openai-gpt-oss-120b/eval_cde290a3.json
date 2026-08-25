@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "cde290a3-5fad-41ba-bc0e-069bce269b0f",
+  "evaluated_at": "2026-08-24T12:54:02.650170",
+  "target_intent": "country_support",
+  "persona": "Panicking Emergency",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "simulator_evaluation": {
+    "intent_fidelity": 1,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user never mentioned or alluded to the target intent 'country_support'. They stayed focused on a card being blocked while abroad, which is unrelated to asking about country support. However, the user consistently displayed a panicking, emergency tone, matching the assigned persona, and they followed all constraints (no leakage of system prompts)."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 3,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant repeatedly predicted the intent 'card_not_working', which is completely unrelated to the ground‑truth intent 'country_support'. This is a clear misrecognition (score 1). The bot asks clarifying questions but does not move toward a resolution, making the interaction inefficient (score 2). It uses polite language but lacks strong empathetic de‑escalation appropriate for a panicking emergency, resulting in a moderate empathy rating (score 3). The conversation ends without solving the user's problem or providing a handoff, so goal achievement is low (score 2)."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification leading to inappropriate response flow",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant misclassifies the user's intent, providing irrelevant troubleshooting steps instead of addressing the actual (though not expressed) need for country support. This functional error could lead to user frustration, especially in an emergency scenario."
+  },
+  "test_validity": "INVALID"
+}

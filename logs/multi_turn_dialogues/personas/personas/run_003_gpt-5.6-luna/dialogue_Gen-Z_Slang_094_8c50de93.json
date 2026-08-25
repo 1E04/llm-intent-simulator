@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8c50de93-8cf5-4f9a-81de-36f79fceed3b",
+  "seed": 42,
+  "dialogue_index": 94,
+  "timestamp": "2026-08-24T12:05:44.610028",
+  "persona": "Gen-Z Slang",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 939,
+  "total_sim_completion_tokens": 238,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 304,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i sent cash to my buddy earlier and it still ain't showing up in his account. 😕",
+      "assistant_response": "Sorry about that—when you say “sent cash,” do you mean a card-to-card transfer (money from your balance) or a bank transfer? Also, do you know if the transfer is still marked as pending or has it completed on your side?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:41.742200",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it’s a card‑to‑card thing and it’s still stuck as pending on my end.",
+      "assistant_response": "Got it—if it’s a card-to-card transfer and it’s still showing as pending on your side, it typically means the transfer hasn’t fully completed yet. Can you tell me how long ago you sent it (e.g., minutes/hours), and whether you can see the recipient’s details match correctly in the transfer screen?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:44.609878",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

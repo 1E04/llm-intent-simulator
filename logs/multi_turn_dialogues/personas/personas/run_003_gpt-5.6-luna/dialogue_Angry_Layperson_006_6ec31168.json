@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6ec31168-dafa-4b86-914d-1d787ccf1287",
+  "seed": 42,
+  "dialogue_index": 6,
+  "timestamp": "2026-08-24T11:47:54.683158",
+  "persona": "Angry Layperson",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 941,
+  "total_sim_completion_tokens": 317,
+  "total_bot_prompt_tokens": 1508,
+  "total_bot_completion_tokens": 303,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to send cash to a friend and it never went through—my balance says it left, but nothing shows up!",
+      "assistant_response": "Sorry about that—just to clarify, when you say “send cash to a friend,” was it an in-app card-to-card/transfer, and do you know the transfer status (e.g., pending, completed, or failed) or the date/time it was sent?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:51.604184",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yeah, it was an in‑app transfer. It shows as completed and I sent it today around 2 PM.",
+      "assistant_response": "Thanks—if the in-app transfer is marked “completed” but your friend hasn’t received it, the most likely issue is that the transfer didn’t reach the recipient. Can you share whether you have the transfer reference/receipt (or the exact amount and recipient name), so I can help you check the recipient status?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:54.683079",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 799,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

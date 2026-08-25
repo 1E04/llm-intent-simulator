@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "954857bb-933d-4358-a00d-94ae82a7bf1d",
+  "seed": 42,
+  "dialogue_index": 127,
+  "timestamp": "2026-08-24T12:14:57.667513",
+  "persona": "Short Wording",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 866,
+  "total_sim_completion_tokens": 215,
+  "total_bot_prompt_tokens": 1419,
+  "total_bot_completion_tokens": 243,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Charged twice",
+      "assistant_response": "I’m sorry about that—are you saying you were charged twice for a card payment, or is it showing twice for a transfer/top up on your statement?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:55.114558",
+      "sim_prompt_tokens": 414,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card payment.",
+      "assistant_response": "Thanks for clarifying—if you’ve been charged twice for the same card payment, I can help. Is the duplicate charge showing as two separate pending charges, or are both charges posted/completed? Also, about how long ago did the payment happen?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:57.667361",
+      "sim_prompt_tokens": 452,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 732,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f49455c1-411e-4bc4-90ec-8b243f301116",
+  "seed": 42,
+  "dialogue_index": 52,
+  "timestamp": "2026-08-24T12:12:54.332178",
+  "persona": "Short Wording",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 960,
+  "total_sim_completion_tokens": 213,
+  "total_bot_prompt_tokens": 1417,
+  "total_bot_completion_tokens": 247,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Card declined.",
+      "assistant_response": "Sorry about that—was this for a card payment at a merchant (e.g., in-store/online) or for a cash withdrawal from an ATM?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:51.694266",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 67,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Merchant.",
+      "assistant_response": "Thanks—if it was declined at a merchant, it’s usually due to security checks, insufficient funds, or the transaction type not being supported.\n\nCan you tell me: did you try it as a card payment (tap/swipe or online), and does the card still work for other merchants?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:54.332014",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 730,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

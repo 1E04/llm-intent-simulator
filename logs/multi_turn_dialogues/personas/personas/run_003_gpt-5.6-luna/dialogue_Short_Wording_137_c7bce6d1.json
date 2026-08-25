@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c7bce6d1-9630-491a-ba93-04fddd93380b",
+  "seed": 42,
+  "dialogue_index": 137,
+  "timestamp": "2026-08-24T12:15:15.111942",
+  "persona": "Short Wording",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1659,
+  "total_sim_completion_tokens": 323,
+  "total_bot_prompt_tokens": 2255,
+  "total_bot_completion_tokens": 385,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unknown charge.",
+      "assistant_response": "Sorry about that—could you share a bit more about the charge? For example, is it showing as a card payment, an exchange/FX charge, or a fee on your statement (and do you see the merchant name or a transaction date/amount)?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.44
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.28
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:10.364165",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card payment, $20.",
+      "assistant_response": "Thanks—so it’s a card payment for $20. Can you confirm whether you recognize the merchant name on the statement (yes/no)? If you don’t recognize it, I can help you with an unrecognized card payment.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.24
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:13.442346",
+      "sim_prompt_tokens": 551,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 755,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No.",
+      "assistant_response": "Got it—you don’t recognize the $20 card payment. Can you tell me whether it’s currently marked as **completed** or **pending** on your statement/app?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:15.111819",
+      "sim_prompt_tokens": 613,
+      "sim_completion_tokens": 79,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 94
+    }
+  ]
+}

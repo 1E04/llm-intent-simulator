@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e827dd9f-59d7-42cc-9353-ffc63e2a9aed",
+  "seed": 42,
+  "dialogue_index": 45,
+  "timestamp": "2026-08-24T12:12:46.380983",
+  "persona": "Short Wording",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1502,
+  "total_sim_completion_tokens": 354,
+  "total_bot_prompt_tokens": 2298,
+  "total_bot_completion_tokens": 442,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Duplicate charge",
+      "assistant_response": "I can help with that. When you say “duplicate charge,” is it a card payment showing two identical charges, or an extra/duplicated charge on your statement for something like fees? If you can, tell me the merchant name and approximate date/amount.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.76
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.13
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:41.269720",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 686,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Starbucks $5 12/3",
+      "assistant_response": "Thanks—just to confirm: is it showing two separate Starbucks transactions for $5 each on 12/3 (same time/merchant), or is it $5 plus an additional small fee/extra amount? If you tell me the exact two amounts (e.g., $5.00 and $5.00, or $5.00 and $0.XX) I can guide you.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:43.691922",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "5.00 and 5.00",
+      "assistant_response": "Got it—two separate $5.00 Starbucks charges on 12/3. This is typically treated as a duplicate card payment. Please share whether the charges are both showing as “completed/posted” or one is “pending,” and (if you can) the last 4 digits of the card used. If one is pending, it often reverses automatically; if both are posted, we can start a duplicate charge investigation.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:46.380898",
+      "sim_prompt_tokens": 585,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 855,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "55c8c243-d603-40f6-b799-d36428249355",
+  "seed": 42,
+  "dialogue_index": 111,
+  "timestamp": "2026-08-24T11:53:23.068505",
+  "persona": "Angry Layperson",
+  "target_intent": "exchange_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 921,
+  "total_sim_completion_tokens": 278,
+  "total_bot_prompt_tokens": 1490,
+  "total_bot_completion_tokens": 271,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What the hell, I just got hit with a random fee on my overseas purchase and I'm furious!",
+      "assistant_response": "I’m sorry about that—let’s figure out why you were charged. Was the overseas purchase charged as a currency conversion/exchange, or was it an extra card/payment fee shown on the transaction (and do you see the fee amount on your statement/app)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.42
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.36
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:20.257070",
+      "sim_prompt_tokens": 423,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a currency conversion thing – the app shows a €7.99 fee on the transaction.",
+      "assistant_response": "Got it—if the app shows a €7.99 fee alongside an overseas purchase, that’s typically the **exchange (currency conversion) charge**. \n\nTo confirm, can you tell me: is the €7.99 labelled as an exchange/FX fee (or similar) in the transaction details?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:23.068372",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

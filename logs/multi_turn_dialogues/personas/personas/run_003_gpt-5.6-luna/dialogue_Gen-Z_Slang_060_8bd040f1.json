@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8bd040f1-1d30-4a93-b13e-ede5d86a884d",
+  "seed": 42,
+  "dialogue_index": 60,
+  "timestamp": "2026-08-24T12:04:55.569679",
+  "persona": "Gen-Z Slang",
+  "target_intent": "activate_my_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1062,
+  "total_sim_completion_tokens": 286,
+  "total_bot_prompt_tokens": 1501,
+  "total_bot_completion_tokens": 255,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just got my new card and tried swiping at the coffee shop but it straight up got rejected, like it’s not even alive.",
+      "assistant_response": "Sorry about that—when you tried paying, was the card rejected because it’s not activated yet, or did you already activate it? Also, were you using the physical card for a chip (swipe/tap) payment?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:52.421565",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 714,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "nah, i never activated it—just tried tapping the physical card at the register.",
+      "assistant_response": "Got it—if you haven’t activated the card yet, the tap can be rejected or won’t work. Please activate your new card first (in the app under Card activation), then try the contactless payment again. Did you activate it already, or would you like steps for activation?",
+      "predicted_intent": "activate_my_card",
+      "top_3_intents": [
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.55
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.32
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:55.569621",
+      "sim_prompt_tokens": 570,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

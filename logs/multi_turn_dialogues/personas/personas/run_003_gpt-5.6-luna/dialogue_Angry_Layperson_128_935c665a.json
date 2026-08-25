@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "935c665a-3134-4edf-a322-fa03a8ba326a",
+  "seed": 42,
+  "dialogue_index": 128,
+  "timestamp": "2026-08-24T11:54:05.847514",
+  "persona": "Angry Layperson",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 3219,
+  "total_sim_completion_tokens": 783,
+  "total_bot_prompt_tokens": 4516,
+  "total_bot_completion_tokens": 706,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card gets shut down every time I try to put more money on it—nothing works!",
+      "assistant_response": "Sorry about that—when you try to add money, do you mean the top up fails or your card gets blocked/declined by the card itself? Also, is the top up by card, bank transfer, or cash deposit?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_by_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:49.092040",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s the card that gets declined every time I try to add cash – I’m doing it with my card, not a bank transfer or anything else.",
+      "assistant_response": "Got it—your card is being declined when you try to add money (top up) using your card. Are you seeing an error message in the top-up screen (e.g., “declined” or “try again later”), and is the top up amount being attempted in the same currency as your card supports?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.83
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:54.895434",
+      "sim_prompt_tokens": 524,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “declined” – no fancy code – and I’m trying to top up in pounds, the same currency my card uses.",
+      "assistant_response": "Thanks—so the top up by card is being declined (just “declined”) in the same currency as your card.\n\nQuick checks to narrow it down: 1) Which card are you topping up with (physical Visa/Mastercard or virtual)? 2) Is the top up attempt showing as “pending” or does it fail immediately? 3) Are you using the same card details and are you not near any top up limits?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.13
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:58.964373",
+      "sim_prompt_tokens": 629,
+      "sim_completion_tokens": 85,
+      "bot_prompt_tokens": 894,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s my physical Visa, it fails right away, and I’m pretty sure I’ve hit some limit.",
+      "assistant_response": "Understood—if the top up is failing right away and you think you may have hit a limit, it’s most likely a top up limit issue. Can you tell me whether you’ve already tried topping up today or in the last 7/30 days (or what the last top up amounts were)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.17
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:02.345586",
+      "sim_prompt_tokens": 758,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 1016,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I’ve tried topping up £500 today and another £300 yesterday, and I’ve been doing similar amounts all week.",
+      "assistant_response": "Thanks—given it fails immediately and you’ve been trying £300–£500 multiple days, this strongly points to you hitting your card top up limits. Please tell me whether the decline happens on every top up amount, and which exact top up method you used (card top up in the app/website, or an ATM), and I’ll guide you to check/reset the limit and the next available amount.",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:05.847364",
+      "sim_prompt_tokens": 852,
+      "sim_completion_tokens": 216,
+      "bot_prompt_tokens": 1112,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6fed6b78-4793-4f02-b04d-d16bc3740479",
+  "seed": 42,
+  "dialogue_index": 41,
+  "timestamp": "2026-08-24T12:08:29.589354",
+  "persona": "Non-Native Speaker",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 826,
+  "total_sim_completion_tokens": 445,
+  "total_bot_prompt_tokens": 1482,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I got a message saying they need more details about the money I received, and now I can’t use my account.",
+      "assistant_response": "Sorry you’re dealing with that. Could you confirm what the message says exactly—does it mention identity verification, or asking for details/source of the funds for a specific transfer or payment?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.44
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.32
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.24
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:26.473383",
+      "sim_prompt_tokens": 382,
+      "sim_completion_tokens": 238,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The message say: “We need more information about the source of funds for your recent transfer.”",
+      "assistant_response": "Thanks for quoting that. This means we need to verify the source of funds for your recent transfer, and until it’s completed your account access may be restricted. Could you tell me whether you’re able to complete the verification in the app right now (is there an “Verify source of funds”/“Action required” prompt), or are you blocked from logging in?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.92
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.08
+        },
+        {
+          "intent": "terminated_account",
+          "confidence": 0.0
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:29.589179",
+      "sim_prompt_tokens": 444,
+      "sim_completion_tokens": 207,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

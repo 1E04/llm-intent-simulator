@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e2ccd368-4a2f-4abf-8dd4-4d12c58c782a",
+  "seed": 42,
+  "dialogue_index": 119,
+  "timestamp": "2026-08-24T11:58:31.152073",
+  "persona": "Panicking Emergency",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1766,
+  "total_sim_completion_tokens": 438,
+  "total_bot_prompt_tokens": 2425,
+  "total_bot_completion_tokens": 476,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected at the store, but the app still says the payment is in progress! I need this fixed now!",
+      "assistant_response": "Sorry about that—when a card payment is rejected but the app still shows it as “in progress,” it’s often either pending or incorrectly displayed. Can you tell me: does the app show a specific status like “pending,” “in progress,” or “reverted,” and is the amount showing as deducted/available balance reduced?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.46
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.38
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:25.179281",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “in progress,” and the money’s already gone from my balance!",
+      "assistant_response": "Thanks—if the payment is still showing “in progress” but the money has already left your balance, it’s most likely stuck as a pending card payment.\n\nCan you confirm whether the merchant payment status in the app shows “in progress” only, or does it ever change to “reverted”/“completed”? Also, how long ago did the payment happen (e.g., within the last 24 hours)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:27.838413",
+      "sim_prompt_tokens": 583,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 803,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Only “in progress,” it never changed. It happened about an hour ago!",
+      "assistant_response": "Got it—if the card payment was rejected but your balance is already reduced and the app still shows only “in progress” about an hour later, it’s most likely a pending card payment that hasn’t updated yet. \n\nPlease check in the app: does that transaction show any “reverted” option or a reference/merchant name you can tap? If you share the transaction amount and merchant name, I’ll guide you on the next steps to get it resolved (typically it should resolve or revert automatically within a short time window).",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:31.151920",
+      "sim_prompt_tokens": 694,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 913,
+      "bot_completion_tokens": 168
+    }
+  ]
+}

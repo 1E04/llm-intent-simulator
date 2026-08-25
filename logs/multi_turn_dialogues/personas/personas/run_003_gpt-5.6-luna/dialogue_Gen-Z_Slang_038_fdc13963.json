@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "fdc13963-e8ea-4b33-8cf6-3a2c9219bca9",
+  "seed": 42,
+  "dialogue_index": 38,
+  "timestamp": "2026-08-24T12:04:28.114424",
+  "persona": "Gen-Z Slang",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3122,
+  "total_sim_completion_tokens": 720,
+  "total_bot_prompt_tokens": 4368,
+  "total_bot_completion_tokens": 719,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, my balance is suddenly getting topped up by itself, not what i asked for.",
+      "assistant_response": "That sounds unusual—are those “top-ups” being added automatically because you enabled an automatic top up, or are they card charges that you didn’t authorize? If you can, tell me whether you see it as Automatic top up or as a Card top up, and roughly when it happened.",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.22
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:16.954126",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it's like an auto thing—started showing up yesterday.",
+      "assistant_response": "Got it—sounds like an Automatic top up started showing up yesterday. Did you previously set up automatic top ups, or did anything change on your account/device recently? Also, can you confirm whether the top-ups are showing as completed or still pending?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:19.626938",
+      "sim_prompt_tokens": 538,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "nah, never set that up before, and they’re already marked as completed.",
+      "assistant_response": "Thanks—if you’ve never set up automatic top ups but you’re seeing completed “auto” top-ups since yesterday, we need to investigate what triggered them. Can you tell me the top-up method shown on your app/statement (e.g., bank transfer, card), and whether the “reference/descriptor” looks like your own card or something else?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.84
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:22.077406",
+      "sim_prompt_tokens": 611,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 860,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "it's a card top‑up, shows a Visa ****4321 as the descriptor.",
+      "assistant_response": "Thanks—since it’s a completed card top-up showing as Visa ****4321 and you never set up automatic top ups, can you confirm whether those top-ups were listed under a section like “Automatic top up” or “Scheduled,” or are they simply normal completed card top-ups? Also, how many separate top-ups have appeared since yesterday?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.62
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.23
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:25.045327",
+      "sim_prompt_tokens": 709,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 959,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "yeah, they’re under an “automatic top‑up” tab and i’ve seen like three of ’em since yesterday.",
+      "assistant_response": "I can help with that. First, can you confirm—are you seeing these as **completed automatic card top-ups** that you didn’t set up? If yes, do you want to (1) **turn off automatic top up** to stop future ones, or (2) **understand why they started** so we can investigate what changed on your account?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:28.114349",
+      "sim_prompt_tokens": 805,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 1063,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

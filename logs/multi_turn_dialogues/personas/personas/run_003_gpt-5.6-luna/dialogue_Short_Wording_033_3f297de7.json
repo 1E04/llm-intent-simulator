@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "3f297de7-4d96-417e-a7f6-d0f1c8f8dda6",
+  "seed": 42,
+  "dialogue_index": 33,
+  "timestamp": "2026-08-24T12:12:22.020094",
+  "persona": "Short Wording",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1055,
+  "total_sim_completion_tokens": 180,
+  "total_bot_prompt_tokens": 1448,
+  "total_bot_completion_tokens": 310,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unexpected fee.",
+      "assistant_response": "I’m sorry about that—fees can apply for different reasons. Was the unexpected fee charged for a card purchase, an international exchange, a cash withdrawal, or a bank transfer? If you tell me which type of transaction (and the currency/amount if you can), I’ll help you identify it.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.32
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:19.101098",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 58,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card purchase.",
+      "assistant_response": "Got it—an unexpected fee for a card purchase. I can help with that. Was the fee shown as an extra charge on your statement (separate from the purchase amount), or was it included in the card purchase total? Also, was the purchase in a different currency than your card’s base currency?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.09
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:22.019961",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

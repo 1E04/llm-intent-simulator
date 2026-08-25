@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f4210bee-a148-4c73-9a8c-79357d8223ac",
+  "seed": 42,
+  "dialogue_index": 140,
+  "timestamp": "2026-08-24T12:15:18.666547",
+  "persona": "Short Wording",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 919,
+  "total_sim_completion_tokens": 217,
+  "total_bot_prompt_tokens": 1420,
+  "total_bot_completion_tokens": 196,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Transfer didn't arrive.",
+      "assistant_response": "Sorry about that—was the transfer sent but the recipient still hasn’t received it, or does it show as pending/failed on your side?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.83
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:15.977491",
+      "sim_prompt_tokens": 442,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 85
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Sent, not received.",
+      "assistant_response": "Thanks for clarifying. If it was sent but the recipient hasn’t received it, we can look into a “transfer not received by recipient” issue. Can you confirm whether the transfer shows as completed/paid out on your side, or is it still pending/failed?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:18.666466",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 732,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

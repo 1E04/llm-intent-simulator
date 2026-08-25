@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "19b7633a-9c14-43af-911b-a4ba52a8f06f",
+  "seed": 42,
+  "dialogue_index": 149,
+  "timestamp": "2026-08-24T11:54:40.829440",
+  "persona": "Angry Layperson",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1547,
+  "total_sim_completion_tokens": 430,
+  "total_bot_prompt_tokens": 2342,
+  "total_bot_completion_tokens": 462,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got hit with an extra fee after I took out cash, and I'm furious!",
+      "assistant_response": "I’m sorry about that—extra cash withdrawal fees can be really frustrating. Was the extra fee shown as a cash withdrawal charge (on the ATM/statement), or was it linked to an exchange rate for the withdrawal currency?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.13
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:34.496767",
+      "sim_prompt_tokens": 443,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up as a fee on my statement, not an exchange‑rate thing.",
+      "assistant_response": "Got it—since it appeared as a fee on your statement (not an exchange-rate issue), it’s most likely the cash withdrawal charge. Can you tell me the amount of the fee and whether it was taken from the ATM by a merchant/network fee or by the bank/app (if it lists both)?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.84
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:37.858135",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a $5 fee and it’s listed as coming from the bank/app, not the ATM.",
+      "assistant_response": "Thanks—if the $5 fee is shown as coming from the bank/app, that matches a cash withdrawal charge. I can help you confirm whether it should apply for that ATM/country and what fee type it was. Did you withdraw at an ATM outside your home country or from a non-partner ATM?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.92
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:40.829268",
+      "sim_prompt_tokens": 596,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 866,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

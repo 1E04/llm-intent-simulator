@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "dc0a93f8-f5ba-4ed4-b2cd-1e9528aa9225",
+  "seed": 42,
+  "dialogue_index": 661,
+  "timestamp": "2026-08-21T15:49:45.298451",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 3027,
+  "total_sim_completion_tokens": 651,
+  "total_bot_prompt_tokens": 4567,
+  "total_bot_completion_tokens": 837,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The receipient doesn't see my money transfer.",
+      "assistant_response": "Sorry about that—just to confirm, does the transfer show as completed in your app, or is it still pending? Also, do you have the transfer reference/transaction ID and an approximate date/time you sent it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:33.342692",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed, the reference is TRX‑839274, and I sent it yesterday around 3 PM.",
+      "assistant_response": "Thanks—if it shows as completed under reference TRX‑839274 but the recipient still hasn’t received it, this is usually a recipient-side issue or a delay in the incoming transfer processing. Can you confirm: (1) did you send it as a bank transfer to the recipient’s bank account details (IBAN/sort code/account number), and (2) are the details correct? If you tell me the transfer type and the recipient’s country, I can guide the next step.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:36.020988",
+      "sim_prompt_tokens": 559,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, I sent it as a bank transfer to the correct IBAN, and the details are right. The recipient is in the UK.",
+      "assistant_response": "Got it—if TRX‑839274 is marked completed but the recipient in the UK hasn’t received it, the most likely issue is that the transfer hasn’t been received by the beneficiary bank yet.\n\nTo check the right track, please confirm: did you send it as a standard international transfer (not a card top up), and do you see any “pending/processing” note in the activity details—or is it strictly “completed” only?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:38.462223",
+      "sim_prompt_tokens": 694,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 910,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was a standard international transfer and the app only shows completed—no pending note.",
+      "assistant_response": "Thanks—if TRX‑839274 is showing “completed” and the recipient still hasn’t received it, the most likely case is a delay on the beneficiary bank’s side or an intermediary processing issue. Could you confirm whether the transfer was sent as an international bank transfer (SWIFT) and whether you see any transfer fees or a “beneficiary received/paid” confirmation in the transaction details? If you don’t see that, I can help you start an investigation using the reference TRX‑839274.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.82
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:41.800057",
+      "sim_prompt_tokens": 822,
+      "sim_completion_tokens": 177,
+      "bot_prompt_tokens": 1027,
+      "bot_completion_tokens": 196
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, it was a SWIFT transfer. I don’t see any “beneficiary received” note or fee shown.",
+      "assistant_response": "Thanks—since TRX‑839274 shows as completed but the recipient in the UK hasn’t received it, I’ll treat this as “transfer not received by recipient.” Please confirm: was the transfer sent yesterday ~3 PM using the recipient’s IBAN only (no additional details), and do you see any “charges/beneficiary bank” section in the transaction details? If you can, share a screenshot or the exact wording from the charges section so I can advise the next step and start the investigation with the SWIFT trace.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:45.298397",
+      "sim_prompt_tokens": 952,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 1164,
+      "bot_completion_tokens": 200
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "591749bd-94c3-4942-a7be-bf8dc0a26092",
+  "seed": 42,
+  "dialogue_index": 139,
+  "timestamp": "2026-08-24T12:02:49.611390",
+  "persona": "Polite Expert",
+  "target_intent": "verify_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2289,
+  "total_sim_completion_tokens": 585,
+  "total_bot_prompt_tokens": 3311,
+  "total_bot_completion_tokens": 543,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see a recent credit on my account, but I'm not certain it was applied correctly.",
+      "assistant_response": "To help me pinpoint this, could you tell me what type of credit it was—was it a bank transfer, card top up, or a cash/cheque deposit? Also, when did it appear on your account?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.34
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:41.314355",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up, and the amount showed up in my transaction history on April 12, 2026.",
+      "assistant_response": "Thanks—was that April 12 card top-up showing the correct amount immediately, or is it marked as pending or missing from your available balance? Also, do you see any extra/charged fee or a different amount than what you entered at the time?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.33
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.34
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:44.196178",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still pending, and the amount is a bit lower than what I entered—there’s a small fee showing.",
+      "assistant_response": "Got it—it sounds like your card top-up is still processing (pending) and you’re seeing a small fee plus a slightly lower credited amount. Can you confirm whether the top-up is showing as “pending” and whether your card was charged in a different currency than your account?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.84
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.11
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:46.951857",
+      "sim_prompt_tokens": 610,
+      "sim_completion_tokens": 180,
+      "bot_prompt_tokens": 869,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, it’s still pending, and the card was charged in USD while my account is in GBP.",
+      "assistant_response": "Thanks—since the top-up is still marked as pending, that’s the first thing to focus on. The fact that your card was charged in USD while your account is in GBP also explains why the credited amount may differ and why you may see an exchange-related fee.\n\nCan you tell me: is the top-up showing as “pending” with the final GBP amount yet, or only the USD amount so far?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.61
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.52
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:49.611240",
+      "sim_prompt_tokens": 700,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 956,
+      "bot_completion_tokens": 141
+    }
+  ]
+}

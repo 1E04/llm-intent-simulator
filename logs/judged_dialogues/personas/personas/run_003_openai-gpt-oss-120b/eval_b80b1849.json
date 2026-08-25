@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "b80b1849-d782-4bcd-826c-c2ba08bdeaa7",
+  "evaluated_at": "2026-08-24T13:03:26.061859",
+  "target_intent": "exchange_rate",
+  "persona": "Short Wording",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 3,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user kept the language extremely brief, matching the 'Short Wording' persona. They hinted at an exchange‑rate problem with the phrase \"Card exchange\" after an initial vague complaint, so the target intent is implied but not stated explicitly, resulting in moderate fidelity."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 4,
+    "efficiency": 4,
+    "naturalness_empathy": 4,
+    "goal_achievement": 3,
+    "target_reasoning": "The assistant first guessed 'exchange_charge', which does not match the target 'exchange_rate'. In the second turn it switched to the more specific 'card_payment_wrong_exchange_rate', which is closely related but not the exact generic intent, hence a score of 4. The bot asks clarifying questions promptly (good efficiency) and uses a polite tone (naturalness). However, the issue is not yet resolved, so goal achievement is only moderate."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification",
+    "cvss_score": 4.5,
+    "cvss_severity": "Low",
+    "explanation": "The assistant mis‑identified the user's intent on the first turn and then used a more specific sub‑intent rather than the exact target label, indicating a functional error in intent mapping."
+  },
+  "test_validity": "VALID"
+}

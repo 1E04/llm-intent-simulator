@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "bb89df51-e16a-4414-8d8b-3e72c8182ded",
+  "seed": 42,
+  "dialogue_index": 137,
+  "timestamp": "2026-08-24T11:54:16.013419",
+  "persona": "Angry Layperson",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1775,
+  "total_sim_completion_tokens": 461,
+  "total_bot_prompt_tokens": 2433,
+  "total_bot_completion_tokens": 484,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I’m seeing a charge on my account for something I never bought, and it’s driving me crazy!",
+      "assistant_response": "I’m sorry—that sounds really stressful. To point you the right way: is the unrecognized charge from a card payment (something you didn’t buy with your card), and do you see it as pending or already completed? If you can, tell me the merchant name and the amount.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.16
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:10.023514",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s already gone through, not pending. It’s a $73 charge from “GadgetWorld” that I never bought.",
+      "assistant_response": "Thanks for the details. Since the $73 “GadgetWorld” charge is already completed (not pending), it sounds like an unrecognized card payment. Did you make any card payment to GadgetWorld at all, or could your card/device have been used by someone else (including contactless/online)? If you’re sure it wasn’t you, I can help you take the next steps to report the charge—also, are you currently using the same phone and card as usual?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "chargeback_or_dispute",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:12.609228",
+      "sim_prompt_tokens": 574,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 799,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, I never bought anything from GadgetWorld. I’m using the same card and phone—this is ridiculous.",
+      "assistant_response": "I’m really sorry—if that $73 from “GadgetWorld” has gone through and you don’t recognize it, it’s likely an unrecognized card payment. First, please confirm: do you want to report this as a card payment you don’t recognize and request a refund? If so, are you able to see a transaction reference/authorization code in the app for that charge?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "chargeback",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:16.013278",
+      "sim_prompt_tokens": 707,
+      "sim_completion_tokens": 192,
+      "bot_prompt_tokens": 929,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

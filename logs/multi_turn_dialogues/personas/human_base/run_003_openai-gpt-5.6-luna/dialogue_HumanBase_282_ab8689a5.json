@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ab8689a5-16b5-43c1-bbd5-615cd1af86a9",
+  "seed": 42,
+  "dialogue_index": 282,
+  "timestamp": "2026-08-21T15:42:06.882012",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 612,
+  "total_sim_completion_tokens": 159,
+  "total_bot_prompt_tokens": 1523,
+  "total_bot_completion_tokens": 324,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "You keep declining my transfers? It's always been working really well so far, but when I tried to buy something just now the card got declined. I tried couple times already but same thing.",
+      "assistant_response": "Sorry about that—just to confirm, are you seeing declines on a card purchase (card payment), or on a bank transfer you sent? Also, what error message or wording do you see on your app or statement?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.4
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:03.712456",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 722,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card purchase that’s being rejected. In the app it just says “Transaction declined” with no extra details.",
+      "assistant_response": "Got it—this is a declined card payment. A “Transaction declined” message with no extra detail is most commonly due to merchant/location restrictions, the card not being enabled for that payment type, or a temporary risk check.\n\nCan you tell me: was the purchase online or in-store, and what country/merchant is it? Also, do you see any “declined” or “reason” code under the transaction in the app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:06.881880",
+      "sim_prompt_tokens": 612,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 185
+    }
+  ]
+}

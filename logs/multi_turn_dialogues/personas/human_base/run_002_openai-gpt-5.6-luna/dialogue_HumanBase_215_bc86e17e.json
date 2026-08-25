@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "bc86e17e-9ad0-4e6b-a01e-3a2ee755f6cf",
+  "seed": 42,
+  "dialogue_index": 215,
+  "timestamp": "2026-08-21T12:59:13.925635",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2870,
+  "total_sim_completion_tokens": 407,
+  "total_bot_prompt_tokens": 6457,
+  "total_bot_completion_tokens": 650,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is a problem with my card. Somebody has removed money from my account in a town I haven't been to. Can you please freeze my account immediately?",
+      "assistant_response": "I’m really sorry this happened. To protect you, I can help you get your card/account frozen while we investigate the unauthorized activity. Are you able to confirm whether the card was stolen/lost or you’re still in possession of it?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:05.323683",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1100,
+      "bot_completion_tokens": 105
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I still have the card with me. It’s not lost or stolen.",
+      "assistant_response": "Thanks for clarifying—you still have the physical card, so this sounds like a compromised card or unauthorized card activity. I can’t freeze everything instantly from here, but I can guide you to the fastest secure steps: (1) lock/freeze your card immediately in the app (Card → Security/Freeze), and (2) report the unauthorized transaction so the team can investigate and reverse it if applicable. \n\nFirst, can you tell me whether the money was taken as a card payment or an ATM cash withdrawal?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:07.468959",
+      "sim_prompt_tokens": 552,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 1173,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was an ATM cash withdrawal.",
+      "assistant_response": "Thanks—if an ATM cash withdrawal was made without you, that’s most consistent with a compromised card scenario. Please lock/freeze your card in the app right now, then confirm: was the withdrawal marked as completed/paid out (not pending) and do you see it under your transactions with a specific date/amount?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.08
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:09.445164",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 1293,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s shown as completed, taken on 12 May 2026 for £120. I’ve just frozen the card in the app.",
+      "assistant_response": "Got it—card is frozen and the £120 ATM cash withdrawal on 12 May 2026 shows as completed, which we’ll treat as unauthorized. Next, please confirm whether you want to (1) dispute that cash withdrawal through the transaction details in the app, or (2) have me escalate it for investigation and possible reimbursement. Which option do you prefer?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.8
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:11.733419",
+      "sim_prompt_tokens": 762,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1398,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Please go ahead and escalate it for investigation and reimbursement.",
+      "assistant_response": "Understood—I’ll escalate the unauthorized completed ATM cash withdrawal (£120 on 12 May 2026) for investigation and possible reimbursement now. Before we submit, can you confirm the withdrawal location/country shown in the app (or the ATM/merchant name if listed)?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:13.925534",
+      "sim_prompt_tokens": 876,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 1493,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

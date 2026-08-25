@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "99391666-1ce7-4171-8a8d-e5ae63cbd64b",
+  "seed": 42,
+  "dialogue_index": 141,
+  "timestamp": "2026-08-24T12:15:20.402856",
+  "persona": "Short Wording",
+  "target_intent": "atm_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 874,
+  "total_sim_completion_tokens": 200,
+  "total_bot_prompt_tokens": 1422,
+  "total_bot_completion_tokens": 265,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Card declined.",
+      "assistant_response": "Sorry about that—was this a card payment being declined, or are you trying to use the card somewhere and it’s not working at all (e.g., ATM or online)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:17.840049",
+      "sim_prompt_tokens": 416,
+      "sim_completion_tokens": 82,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "ATM.",
+      "assistant_response": "Got it—your card was declined at the ATM. Is the ATM error message something like “declined”/“transaction failed,” or did the machine keep (swallow) your card?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.85
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:20.402747",
+      "sim_prompt_tokens": 458,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 735,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

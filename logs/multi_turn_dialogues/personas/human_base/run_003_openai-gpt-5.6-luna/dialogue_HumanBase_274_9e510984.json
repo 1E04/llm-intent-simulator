@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9e510984-96f9-443e-a0bf-b4242a11f69b",
+  "seed": 42,
+  "dialogue_index": 274,
+  "timestamp": "2026-08-21T15:41:58.203694",
+  "persona": "HumanBase",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 671,
+  "total_sim_completion_tokens": 163,
+  "total_bot_prompt_tokens": 1564,
+  "total_bot_completion_tokens": 342,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "This is very frustrating. I can't get my card to work on any ATM I try and I've tried 3 of them so far. What's going on? Can you please fix this issue immediately?",
+      "assistant_response": "I’m sorry about that—when a card won’t work at ATMs, it’s usually either an ATM compatibility issue or cash-withdrawal being declined. To pinpoint it, can you tell me: (1) does the ATM show any message (e.g., “declined,” “try again,” “card not accepted”), and (2) are you trying to withdraw cash or just using the card for other ATM actions? ",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.17
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:54.608240",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 723,
+      "bot_completion_tokens": 182
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just flashes a “declined” message, and I’m trying to withdraw cash each time.",
+      "assistant_response": "Thanks—if it’s showing “declined” when you withdraw cash, it’s most likely a cash withdrawal being declined.\n\nTo fix it quickly: please confirm whether you’re using the correct PIN (and that you haven’t locked it), and whether the ATM is in a supported country/currency for your card. Also, did you try any other amount or is it declining every cash withdrawal attempt?\n\nIf you tell me those details, I’ll guide you to the next step right away.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.88
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:58.203554",
+      "sim_prompt_tokens": 671,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 841,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

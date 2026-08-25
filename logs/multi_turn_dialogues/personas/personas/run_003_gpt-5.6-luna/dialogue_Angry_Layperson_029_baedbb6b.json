@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "baedbb6b-282e-4d6e-8b45-6ead91f18a57",
+  "seed": 42,
+  "dialogue_index": 29,
+  "timestamp": "2026-08-24T11:49:42.835102",
+  "persona": "Angry Layperson",
+  "target_intent": "lost_or_stolen_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 921,
+  "total_sim_completion_tokens": 342,
+  "total_bot_prompt_tokens": 1480,
+  "total_bot_completion_tokens": 302,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just disappeared and I can't find it anywhere—this is ridiculous!",
+      "assistant_response": "I’m sorry about that—when you say your card disappeared, did it get taken by an ATM or did you misplace it/theft is possible? Also, have you noticed any unusual card activity? (Reply with one of: ATM took it / misplaced / stolen, and whether there are any suspicious transactions.)",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.12
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:39.433945",
+      "sim_prompt_tokens": 421,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Stolen, and there are suspicious transactions.",
+      "assistant_response": "I’m really sorry—if your card was stolen and you see suspicious transactions, I can help you secure your account right away. First, please confirm: were the suspicious transactions made after the card was stolen, and do you still have access to your app/phone? If yes, tell me whether you’ve already reported the card as stolen or frozen it in the app, and I’ll guide you through the next steps.",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:42.835034",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 212,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 144
+    }
+  ]
+}

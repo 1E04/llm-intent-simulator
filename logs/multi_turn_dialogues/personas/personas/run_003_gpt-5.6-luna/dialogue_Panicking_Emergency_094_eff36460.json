@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "eff36460-a107-43e0-93bf-13e4eab4ff72",
+  "seed": 42,
+  "dialogue_index": 94,
+  "timestamp": "2026-08-24T11:57:52.540714",
+  "persona": "Panicking Emergency",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1458,
+  "total_sim_completion_tokens": 457,
+  "total_bot_prompt_tokens": 2285,
+  "total_bot_completion_tokens": 349,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent money and it’s still not showing up! I need it right now!",
+      "assistant_response": "Sorry about that—can you confirm whether you sent the money by bank transfer, and did you send it to your own Revolut account or to someone else’s bank details?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.58
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.26
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:47.114875",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Bank transfer—sent to someone else’s bank details!",
+      "assistant_response": "Thanks—since it was a bank transfer to someone else’s bank details, is the transfer showing as completed in the app (not pending/failed), and do you have a transfer/receipt reference?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:49.650252",
+      "sim_prompt_tokens": 484,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 97
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, it’s still showing as in progress—not completed. The reference is XYZ12345.",
+      "assistant_response": "Got it—if your bank transfer is still showing as “in progress,” the most likely issue is it hasn’t completed yet. With reference XYZ12345, please check the transfer’s status details in the app: is there any error message or “cancel transfer” option? Also, what date/time did you send it?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:52.540587",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 189,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 121
+    }
+  ]
+}

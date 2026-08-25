@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ba308de9-71b6-4bf4-95c7-8836e8445d60",
+  "seed": 42,
+  "dialogue_index": 5,
+  "timestamp": "2026-08-24T12:11:36.572279",
+  "persona": "Short Wording",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1030,
+  "total_sim_completion_tokens": 241,
+  "total_bot_prompt_tokens": 1431,
+  "total_bot_completion_tokens": 257,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Payment stuck.",
+      "assistant_response": "Sorry you’re dealing with that—when you say “payment stuck,” is the card payment showing as **pending** in the app, or do you not see it at all / does it appear as **declined**?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:33.307018",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Pending.",
+      "assistant_response": "Got it—if the card payment is showing as **pending**, it usually completes automatically within a short time (often up to a couple of days, depending on the merchant/bank). Does the payment also show the **exact amount** and a **pending date/time** in the app?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:36.572146",
+      "sim_prompt_tokens": 540,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 744,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

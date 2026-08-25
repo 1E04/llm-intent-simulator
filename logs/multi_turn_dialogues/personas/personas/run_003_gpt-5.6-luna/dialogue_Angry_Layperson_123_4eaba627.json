@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4eaba627-8fa0-4e7c-8886-dc49c9a8cbea",
+  "seed": 42,
+  "dialogue_index": 123,
+  "timestamp": "2026-08-24T11:53:48.415399",
+  "persona": "Angry Layperson",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1382,
+  "total_sim_completion_tokens": 470,
+  "total_bot_prompt_tokens": 2386,
+  "total_bot_completion_tokens": 439,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to send money to a friend and the app just stopped it—what the heck is going on?!",
+      "assistant_response": "Sorry about that—when you say the app stopped it, do you see a specific error like “transfer declined” or does it fail after you submit? Also, was the transfer between two users in the app or a bank transfer?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.6
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:42.687651",
+      "sim_prompt_tokens": 377,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It flashes “transfer declined” and it’s a bank transfer to my buddy’s account.",
+      "assistant_response": "Got it—if you’re seeing “transfer declined” for a bank transfer, it means the transfer was rejected during processing. Can you tell me whether you received any extra message/details (e.g., beneficiary bank/account issue, insufficient balance, or verification)? If you don’t have details, please share the transfer date/time and the amount (roughly is fine), and I’ll help narrow down the likely cause.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.83
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:45.521876",
+      "sim_prompt_tokens": 447,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 172
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was yesterday around 3 pm, about $250, and the only thing that showed up was “transfer declined.”",
+      "assistant_response": "Thanks—if your bank transfer shows “transfer declined,” the most likely issue is that the transfer was rejected during processing. Was your friend’s beneficiary/payment details already saved/used before, and did you have enough available balance at the time? If you can, tell me the transfer destination country/bank (or whether it’s a new beneficiary) so I can pinpoint the cause.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:48.415318",
+      "sim_prompt_tokens": 558,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 899,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

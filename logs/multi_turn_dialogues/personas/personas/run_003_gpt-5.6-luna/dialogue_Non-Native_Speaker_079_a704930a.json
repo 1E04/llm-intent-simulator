@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a704930a-3dba-4764-8014-ac70da5e9d43",
+  "seed": 42,
+  "dialogue_index": 79,
+  "timestamp": "2026-08-24T12:09:39.108939",
+  "persona": "Non-Native Speaker",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 920,
+  "total_sim_completion_tokens": 175,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 247,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent a transfer to my account, but the money still isn’t showing up.",
+      "assistant_response": "Sorry about that—was the transfer sent via bank transfer (from another bank), or was it a cash/cheque deposit? And roughly when did you send it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.1
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:37.342291",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer from another bank, sent yesterday afternoon.",
+      "assistant_response": "Thanks—since it was a bank transfer from another bank sent yesterday afternoon, it sounds like your balance hasn’t updated yet. Are you able to share the payment status from your bank (e.g., pending/complete), and do you know the exact date/time it was sent?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:39.108799",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 64,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

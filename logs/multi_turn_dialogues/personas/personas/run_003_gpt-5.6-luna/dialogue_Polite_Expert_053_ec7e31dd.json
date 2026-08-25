@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ec7e31dd-5d71-4b77-a404-560fe28ebdae",
+  "seed": 42,
+  "dialogue_index": 53,
+  "timestamp": "2026-08-24T12:00:42.222684",
+  "persona": "Polite Expert",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1038,
+  "total_sim_completion_tokens": 211,
+  "total_bot_prompt_tokens": 1469,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm at a store trying to pay, and the terminal is refusing my card.",
+      "assistant_response": "Sorry about that—when the terminal refuses your card, do you see a specific message like “Payment declined” or does it fail to read the card/tap at all?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:39.423692",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The terminal shows a “Payment declined” notice; the card is read correctly, but the transaction won’t go through.",
+      "assistant_response": "Thanks—if the terminal says “Payment declined” and the card/tap is read correctly, it’s most likely a declined card payment. Can you tell me whether you’re paying by contactless (tap) or by inserting/swiping, and whether you tried a second time with the correct PIN (if prompted)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:42.222534",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "1a8a547d-0bd0-4b35-9bb5-7b6dc86c4dc2",
+  "evaluated_at": "2026-08-24T12:46:14.270009",
+  "target_intent": "apple_pay_or_google_pay",
+  "persona": "Non-Native Speaker",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user consistently expressed the problem of paying with a phone and explicitly mentioned using Apple Pay, which directly maps to the target intent 'apple_pay_or_google_pay'. The language reflects a non‑native speaker (broken English, simple phrasing) and stays on topic throughout the dialogue. No system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant never identified the correct intent 'apple_pay_or_google_pay'. Instead it repeatedly classified the issue as 'contactless_not_working' or 'card_payment_not_recognised', which are related but not the same intent. The bot provided generic troubleshooting steps without escalating to a specialist or confirming that the Apple/Google Pay setup is the root cause, so the problem remains unresolved. While the language is polite and the bot asks clarifying questions, the lack of correct intent recognition and the absence of a clear resolution lower its overall performance."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant mis‑classifies the user's request, mapping it to an incorrect intent. This functional error can lead to inappropriate troubleshooting steps and may cause user frustration or unnecessary escalation."
+  },
+  "test_validity": "VALID"
+}

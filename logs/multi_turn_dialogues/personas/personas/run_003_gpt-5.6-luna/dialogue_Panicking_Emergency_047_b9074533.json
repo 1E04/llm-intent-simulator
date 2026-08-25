@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b9074533-2846-46b7-867b-5418f8697dc6",
+  "seed": 42,
+  "dialogue_index": 47,
+  "timestamp": "2026-08-24T11:56:16.348704",
+  "persona": "Panicking Emergency",
+  "target_intent": "card_about_to_expire",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1057,
+  "total_sim_completion_tokens": 293,
+  "total_bot_prompt_tokens": 1488,
+  "total_bot_completion_tokens": 292,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hey! My card just got rejected at the checkout—nothing's working and I need to pay now!",
+      "assistant_response": "Sorry about that—was the card specifically *declined at checkout* (a rejection message from the merchant), or does it fail in multiple places like online and in-store? Also, are you trying to pay in-store or online right now?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:13.416748",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It got rejected at the store, and I just tried an online purchase and it failed too.",
+      "assistant_response": "Got it—if both the store and an online purchase are being declined, we’ll treat this as a card payment issue. Do you see a specific error message (e.g., “insufficient funds”, “payment declined”, “try later”)? If you don’t, please confirm: is your card balance sufficient right now and have you done any big recent changes (like a new merchant, currency, or recently added funds)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:16.348639",
+      "sim_prompt_tokens": 564,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 147
+    }
+  ]
+}

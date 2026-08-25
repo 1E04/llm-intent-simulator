@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "c70f4706-16a2-4e6e-b8de-beae64a98383",
+  "seed": 42,
+  "dialogue_index": 4,
+  "timestamp": "2026-08-24T11:55:05.587039",
+  "persona": "Panicking Emergency",
+  "target_intent": "disposable_card_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2510,
+  "total_sim_completion_tokens": 573,
+  "total_bot_prompt_tokens": 3380,
+  "total_bot_completion_tokens": 555,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My one‑time card just got rejected, and I need it right now!",
+      "assistant_response": "Sorry about that—when you say your one-time card was rejected, do you mean a one-time card for a specific merchant purchase (declined payment), or is the card itself failing to work in general? Also, what error message do you see (e.g., “declined” or “not recognised”)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:50.983002",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s the disposable card itself—just says “declined” at checkout.\nIt’s the disposable card itself—just says “declined” at checkout.",
+      "assistant_response": "Got it—your disposable (one-time) card is being declined at checkout. First, was this specific purchase amount within the disposable card’s limits, and is the disposable card still active (not expired or regenerated)? If you tell me the approximate amount and the merchant country, I’ll guide you to the quickest fix.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.24
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:00.075946",
+      "sim_prompt_tokens": 573,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 806,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Around $120, and it’s a US merchant.",
+      "assistant_response": "Thanks—if the disposable card is showing “declined” and it’s a US merchant, the most common cause is the disposable card limit (either the per-transaction limit or remaining balance). What’s the exact disposable card limit/remaining amount shown in the app, and did you try charging slightly under $120 to test?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.34
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:02.666024",
+      "sim_prompt_tokens": 679,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 891,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It shows only $100 left, and I tried $115—still declined.",
+      "assistant_response": "That explains it—your disposable card only has $100 left, so a $115 (and $120) checkout will be declined. Either regenerate/get a new disposable card or increase the available disposable funds/limits in the app, then try the purchase again.",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:05.586994",
+      "sim_prompt_tokens": 766,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 983,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

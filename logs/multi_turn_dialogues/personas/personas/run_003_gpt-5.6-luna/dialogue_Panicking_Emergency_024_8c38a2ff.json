@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8c38a2ff-7508-479a-9cd3-9cceff916210",
+  "seed": 42,
+  "dialogue_index": 24,
+  "timestamp": "2026-08-24T11:55:34.096691",
+  "persona": "Panicking Emergency",
+  "target_intent": "terminate_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 823,
+  "total_sim_completion_tokens": 346,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 285,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account's been compromised—transactions are popping up I didn't do! I need it stopped right now!",
+      "assistant_response": "I’m sorry this is happening—let’s stop the activity as quickly as possible. Is the card itself compromised (you see card transactions you didn’t make), or is it more that your phone/account was accessed (you didn’t lose the phone, but transactions are appearing)?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.84
+        },
+        {
+          "intent": "lost_or_stolen_phone",
+          "confidence": 0.08
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:31.225800",
+      "sim_prompt_tokens": 372,
+      "sim_completion_tokens": 225,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The card—there are charges I never made!",
+      "assistant_response": "Got it—if there are card charges you didn’t make, we’ll treat this as a compromised card. Please tell me: are those transactions showing as completed/posted, or still pending?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.93
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.41
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.36
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:34.096522",
+      "sim_prompt_tokens": 451,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

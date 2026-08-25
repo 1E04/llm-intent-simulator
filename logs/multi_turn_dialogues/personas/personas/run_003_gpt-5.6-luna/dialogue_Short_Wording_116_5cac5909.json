@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5cac5909-9e4f-4233-8fa2-b3fa5516d057",
+  "seed": 42,
+  "dialogue_index": 116,
+  "timestamp": "2026-08-24T12:14:46.552832",
+  "persona": "Short Wording",
+  "target_intent": "getting_spare_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1053,
+  "total_sim_completion_tokens": 402,
+  "total_bot_prompt_tokens": 1457,
+  "total_bot_completion_tokens": 308,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card is damaged.",
+      "assistant_response": "I’m sorry about that. When you say the card is damaged, is it still with you and can you use it at all (e.g., chip/contactless won’t work), or is it lost/stolen too? Also, is it physically torn/cracked or does it look like it was tampered with?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.72
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:42.845824",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 689,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, chip broken.",
+      "assistant_response": "Got it—if the chip is broken and the card can’t be used at the chip, we’ll need to help you with a replacement. Is the card currently in your possession, and do you also notice any damage like cracks/tearing around the chip area?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.88
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:46.552697",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 260,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

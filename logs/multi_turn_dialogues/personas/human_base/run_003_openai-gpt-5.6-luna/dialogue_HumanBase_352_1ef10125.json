@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "1ef10125-50c8-4d94-8e84-1e9583d5cc28",
+  "seed": 42,
+  "dialogue_index": 352,
+  "timestamp": "2026-08-21T15:43:30.943080",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1190,
+  "total_sim_completion_tokens": 301,
+  "total_bot_prompt_tokens": 2320,
+  "total_bot_completion_tokens": 420,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm not okay with this fee on my statement.",
+      "assistant_response": "I can help—could you tell me what the fee is for (card payment, cash withdrawal, or a transfer) and the exact wording/amount shown on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.55
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:25.285831",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a $12.00 “service charge” listed next to a card payment.",
+      "assistant_response": "Thanks—just to confirm: you’re seeing a $12 “service charge” next to a card payment. Is this a one-off fee, or does it appear on multiple card payments? If you can, please share the merchant name (or the last 4 digits of the card/payment reference) so I can confirm whether it’s the card payment fee or an extra charge.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:27.909133",
+      "sim_prompt_tokens": 543,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s a one‑off fee, and the merchant was “TechGear Store” – the reference ends in 8392.",
+      "assistant_response": "Got it— a one-off $12 “service charge” next to a card payment to TechGear Store (ref ending 8392). This typically matches a card payment fee or extra charge related to that merchant’s processing. Can you confirm whether the $12 is on its own line item (separate from the $ paid to TechGear), and whether you expected any extra charges from that merchant (like service/handling/tax)?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:30.942904",
+      "sim_prompt_tokens": 647,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 869,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

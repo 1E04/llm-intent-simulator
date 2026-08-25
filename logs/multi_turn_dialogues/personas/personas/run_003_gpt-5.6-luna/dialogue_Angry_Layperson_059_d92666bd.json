@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "d92666bd-a74c-4c22-91a7-3696c615b9d0",
+  "seed": 42,
+  "dialogue_index": 59,
+  "timestamp": "2026-08-24T11:50:25.071882",
+  "persona": "Angry Layperson",
+  "target_intent": "why_verify_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1505,
+  "total_sim_completion_tokens": 426,
+  "total_bot_prompt_tokens": 2392,
+  "total_bot_completion_tokens": 410,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm sick of my account being blocked and the bot keeps demanding proof of who I am before I can do anything!",
+      "assistant_response": "I’m sorry you’re dealing with that. Are you being blocked because the verification keeps failing (identity can’t be verified), or are you just seeing repeated requests for proof of identity? If you tell me which one, I’ll guide you to the right next step.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.52
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.34
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:18.700793",
+      "sim_prompt_tokens": 418,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the endless proof‑of‑identity prompts—nothing's actually failing, they just keep asking me to prove who I am.",
+      "assistant_response": "Got it—sounds like you’re repeatedly getting asked for proof of identity rather than it failing. Can I confirm: are you trying to complete a specific action (like a transfer/top up), or does the verification prompt appear immediately when you log in—even when you’re not attempting anything?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.78
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.14
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:22.029506",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 797,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It pops up the second I log in—nothing I’m trying to do, just trying to get into my account.",
+      "assistant_response": "It sounds like the account is repeatedly prompting you for verification as soon as you log in. This is usually controlled by our compliance checks—can you tell me what happens when you try to complete the prompt (does it let you submit and then ask again, or does it never let you finish)?",
+      "predicted_intent": "why_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.9
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.06
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:25.071711",
+      "sim_prompt_tokens": 590,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 888,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

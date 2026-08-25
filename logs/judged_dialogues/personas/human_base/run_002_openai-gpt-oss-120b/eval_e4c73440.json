@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "e4c73440-f09a-4c18-894a-86659350ddb7",
+  "evaluated_at": "2026-08-21T13:53:08.532968",
+  "target_intent": "get_disposable_virtual_card",
+  "persona": "HumanBase",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "simulator_evaluation": {
+    "intent_fidelity": 2,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user consistently talks about a disposable virtual card they already have and encounters a payment decline. While the disposable virtual card is mentioned, the user never requests to obtain (\"get\") a new disposable virtual card, which is the target intent. Therefore the intent fidelity is low (2). The persona is realistic and the user follows all constraints."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 2,
+    "efficiency": 3,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant repeatedly classifies the user's issue as 'get_disposable_virtual_card' or other disposable‑card‑related intents, but the user's actual need is troubleshooting a declined payment with an already‑issued disposable virtual card. This is not the target intent, so the recognition score is 2 (wrong intent, though loosely related to the same product). The bot asks several clarifying questions, which is moderately efficient but does not resolve the problem within the provided turns, leading to a modest efficiency score (3) and low goal achievement (2). The language is polite and professional, earning a higher naturalness/empathy rating (4)."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification / functional error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant misclassifies the user's request, mapping it to 'get_disposable_virtual_card' instead of a payment‑issue intent. This functional error could lead to inappropriate guidance and a poor user experience."
+  },
+  "test_validity": "INVALID"
+}

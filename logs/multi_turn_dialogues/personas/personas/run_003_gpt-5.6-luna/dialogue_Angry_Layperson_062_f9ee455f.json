@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f9ee455f-3f4c-42bd-b461-4b473a2c85bd",
+  "seed": 42,
+  "dialogue_index": 62,
+  "timestamp": "2026-08-24T11:50:25.174186",
+  "persona": "Angry Layperson",
+  "target_intent": "exchange_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 925,
+  "total_sim_completion_tokens": 296,
+  "total_bot_prompt_tokens": 1494,
+  "total_bot_completion_tokens": 280,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got hit with a random fee after I swapped some cash—this is ridiculous!",
+      "assistant_response": "Sorry about that—when you say “swapped some cash,” do you mean an in-app currency exchange (like converting one currency to another), or a card/ATM cash withdrawal? Also, can you tell me the fee amount and where you see it (app screen or bank statement)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.57
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.23
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:22.067133",
+      "sim_prompt_tokens": 423,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an in‑app exchange—I see a $12 fee right on the transaction list in the app.",
+      "assistant_response": "Got it—the $12 fee on an in‑app exchange is typically the exchange/service charge. Can you confirm the currency pair you exchanged (e.g., USD→EUR) and whether the fee is shown as an “exchange fee” in the transaction details? If you share that, I can help verify it matches what we charge and what it’s applied to.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:25.174089",
+      "sim_prompt_tokens": 502,
+      "sim_completion_tokens": 174,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "86d7fa0f-7cd3-4736-99a3-15d91043f41c",
+  "seed": 42,
+  "dialogue_index": 658,
+  "timestamp": "2026-08-21T15:49:31.922720",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 561,
+  "total_sim_completion_tokens": 261,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 237,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm trying to transfer money into my account.",
+      "assistant_response": "Sure—are you trying to **receive money via a bank transfer into your account**, or are you asking about a **transfer that’s pending/not received yet**? If you can, tell me which one (and whether you’ve already made the transfer).",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.6
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:28.588924",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m trying to receive a bank transfer into my account – I’ve already sent it.",
+      "assistant_response": "Got it—you’re trying to receive a bank transfer that you’ve already sent. To help, how long ago did you send it (and is it a local transfer or international)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:31.922663",
+      "sim_prompt_tokens": 561,
+      "sim_completion_tokens": 261,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

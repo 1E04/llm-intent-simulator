@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "60ec5787-0a31-460c-8cee-05de2ccc4564",
+  "seed": 42,
+  "dialogue_index": 10,
+  "timestamp": "2026-08-24T11:48:41.825935",
+  "persona": "Angry Layperson",
+  "target_intent": "get_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3104,
+  "total_sim_completion_tokens": 884,
+  "total_bot_prompt_tokens": 4600,
+  "total_bot_completion_tokens": 808,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What the hell, my card's getting rejected and I have no idea what the numbers are!",
+      "assistant_response": "Sorry about that—when you try to use your card, is it specifically being rejected at a card payment (shop/online), or is it also failing for things like cash withdrawals or card verification? Also, are you using the correct payment details (card number/expiry/CVV) or the app’s saved details?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:00.662323",
+      "sim_prompt_tokens": 412,
+      "sim_completion_tokens": 194,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's getting rejected everywhere – at the shop and even at the ATM. I'm sure the card details are correct, I've used them many times.",
+      "assistant_response": "Got it—if it’s being rejected everywhere (both card purchases and the ATM), it’s most likely a card-wide issue like a lock or verification problem. Can you confirm: are you seeing the exact error message on the ATM/shop terminal (e.g., “card declined” / “pick up” / “try again later”), and have you recently changed anything or received a new card?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.64
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:04.147631",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 196,
+      "bot_prompt_tokens": 805,
+      "bot_completion_tokens": 175
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “card declined” every time, and I haven’t changed anything or got a new card.",
+      "assistant_response": "Thanks—if you’re getting “card declined” both at the shop and at the ATM, that usually points to a card-wide issue (like the card being blocked). Are you currently using the card in your usual country/region, and have you tried turning it off and on again in the app (if you have a “lock/unlock card” option)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:35.123248",
+      "sim_prompt_tokens": 615,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 916,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I'm in the same country as always, and I haven't tried any lock/unlock nonsense – I'm just fed up with this!",
+      "assistant_response": "I’m really sorry you’re dealing with this. Since you’re seeing “card declined” everywhere (shop and ATM), it sounds like a card-not-working / card-wide decline issue. \n\nFirst, can you try unlocking/locking the card in the app (if you have that option) and then attempt a small purchase again? If you don’t see an unlock option, tell me whether you’ve tried contacting support or verifying your identity recently (last 30 days), and I’ll guide you to the next step.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.45
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.4
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:38.652501",
+      "sim_prompt_tokens": 720,
+      "sim_completion_tokens": 191,
+      "bot_prompt_tokens": 1024,
+      "bot_completion_tokens": 166
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I already tried locking/unlocking – just give me my numbers already!",
+      "assistant_response": "I hear you—you’re getting “card declined” everywhere (shop and ATM), which indicates your card isn’t working right now. I can’t provide your card’s secret numbers (like the full card number/CVV), but I *can* help fix the rejection. Please try one quick check: when you tap the card at the shop, are you using the correct payment method (chip/contactless) and is your card balance sufficient in the app? If you confirm whether it’s chip, contactless, or online, I’ll direct the next troubleshooting step.",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.88
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.49
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:41.825871",
+      "sim_prompt_tokens": 859,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 1152,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

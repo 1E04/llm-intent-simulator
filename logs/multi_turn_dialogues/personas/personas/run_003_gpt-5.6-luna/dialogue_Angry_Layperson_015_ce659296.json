@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ce659296-f525-4e61-9e6a-311ca83325ed",
+  "seed": 42,
+  "dialogue_index": 15,
+  "timestamp": "2026-08-24T11:49:13.266802",
+  "persona": "Angry Layperson",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 908,
+  "total_sim_completion_tokens": 288,
+  "total_bot_prompt_tokens": 1497,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was charged for a purchase that got cancelled, and the money still isn’t back in my account!",
+      "assistant_response": "Sorry about that—when a card purchase is cancelled, the funds should return, but timing can vary. Could you tell me: did you receive a notification that the payment was reversed/cancelled (and roughly when), or does the payment still show as completed/posted on your statement?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.6
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.25
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:10.698877",
+      "sim_prompt_tokens": 413,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "No, I never got any notice – it still shows up as a completed charge from yesterday.",
+      "assistant_response": "Thanks—if it’s still showing as a completed charge from yesterday and you didn’t get any notice, it may not have fully reverted yet. Can you confirm whether the payment appears as “Completed/Posted” (not “Pending”) on your app/statement? Also, please share the merchant name and the amount, and whether you paid by card or contactless/online.",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:13.266696",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 135
+    }
+  ]
+}

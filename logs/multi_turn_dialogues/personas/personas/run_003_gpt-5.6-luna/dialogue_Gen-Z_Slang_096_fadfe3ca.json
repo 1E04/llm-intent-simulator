@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "fadfe3ca-02c2-42dd-b110-6293467869c9",
+  "seed": 42,
+  "dialogue_index": 96,
+  "timestamp": "2026-08-24T12:05:49.944380",
+  "persona": "Gen-Z Slang",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1655,
+  "total_sim_completion_tokens": 462,
+  "total_bot_prompt_tokens": 2392,
+  "total_bot_completion_tokens": 438,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just saw an unexpected fee after i moved cash into my account, what's the deal?",
+      "assistant_response": "Sorry about that—was the cash “moved into your account” done via bank transfer, or was it a cash/cheque deposit at a branch/ATM? Also, do you know the fee amount or what it says on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.58
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.26
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:44.411375",
+      "sim_prompt_tokens": 468,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it was a bank transfer and i got like a $5 fee showing up on my statement.",
+      "assistant_response": "Got it—since it was a bank transfer and you’re seeing a ~$5 fee on your statement, this is most likely a transfer fee for the incoming transfer.\n\nCan you confirm whether the fee was charged by the bank transfer (outgoing/incoming) or whether it’s shown specifically as a fee on your side in the app/statement (and whether the transfer was in your local currency or involved conversion)?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.21
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:47.069395",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 785,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, it’s an incoming fee, just shows as a fee in the app, all in my local dollars, no conversion.",
+      "assistant_response": "Thanks—if it’s an incoming bank transfer in your local currency and you’re seeing a ~$5 line item labeled as a fee, that typically matches a transfer fee being charged for the incoming transfer.\n\nDo you know the transfer method/reference (e.g., was it via bank/wire/ACH), or is it listed as a specific fee type on your statement so I can help confirm which fee it is?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:49.944215",
+      "sim_prompt_tokens": 650,
+      "sim_completion_tokens": 181,
+      "bot_prompt_tokens": 903,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

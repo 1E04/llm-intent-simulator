@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "38acc6f5-7f5c-49b2-bc62-c927850f4a52",
+  "seed": 42,
+  "dialogue_index": 567,
+  "timestamp": "2026-08-21T13:22:38.815289",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1059,
+  "total_sim_completion_tokens": 290,
+  "total_bot_prompt_tokens": 3413,
+  "total_bot_completion_tokens": 351,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are there any sort of fees involved for top of transfers?",
+      "assistant_response": "Do you mean fees for making a bank transfer (outgoing transfer), or fees when money is transferred into your account?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.63
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.21
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:34.364980",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1081,
+      "bot_completion_tokens": 116
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about fees when money is transferred into my account, like a top‑up.",
+      "assistant_response": "Got it—fees for topping up (adding money into your account). Are you topping up by **bank transfer** (incoming transfer to your account), or by **card**? This helps me point you to the exact fee rules for that method.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.34
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:36.812416",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 174,
+      "bot_prompt_tokens": 1134,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "By bank transfer.",
+      "assistant_response": "Thanks—if you’re topping up by **bank transfer into your account**, the relevant question is whether we charge a **top-up by bank transfer fee**. In general, our fees (if any) depend on the top-up method and currency, but I’ll need one detail to confirm: what currency is the transfer in?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.91
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.56
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.32
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:38.815189",
+      "sim_prompt_tokens": 569,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1198,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

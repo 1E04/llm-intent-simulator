@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "4bb44c38-a29f-4453-ba35-31e1a9062913",
+  "seed": 42,
+  "dialogue_index": 149,
+  "timestamp": "2026-08-24T12:15:32.556581",
+  "persona": "Short Wording",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 940,
+  "total_sim_completion_tokens": 257,
+  "total_bot_prompt_tokens": 1434,
+  "total_bot_completion_tokens": 266,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unexpected fee",
+      "assistant_response": "Sorry about that—was the unexpected fee charged for a card payment, a cash withdrawal, an international currency exchange, or a bank transfer? If you tell me which one and the approximate amount, I’ll point you to the right explanation.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.34
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:29.616547",
+      "sim_prompt_tokens": 444,
+      "sim_completion_tokens": 74,
+      "bot_prompt_tokens": 686,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "cash withdrawal $5",
+      "assistant_response": "Got it—an unexpected $5 charge on a cash withdrawal. Is that $5 shown as a cash withdrawal fee in your card statement (i.e., by us), or could it be a fee charged by the ATM/merchant? If you can confirm which one, I’ll guide you to the exact reason and what to expect.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:32.556453",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 183,
+      "bot_prompt_tokens": 748,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

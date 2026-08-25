@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8e401f80-9434-46eb-9402-04cb070ae384",
+  "seed": 42,
+  "dialogue_index": 87,
+  "timestamp": "2026-08-24T11:52:41.754020",
+  "persona": "Angry Layperson",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 811,
+  "total_sim_completion_tokens": 333,
+  "total_bot_prompt_tokens": 1466,
+  "total_bot_completion_tokens": 282,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account's been frozen and I can't do anything with my money—this is absurd!",
+      "assistant_response": "I’m sorry you’re dealing with this. When you say your account is frozen, is it asking you to complete identity verification (or does it say your verification failed)?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.78
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.13
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:37.876248",
+      "sim_prompt_tokens": 379,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yeah, it keeps nagging me to verify my identity even though I already did it!",
+      "assistant_response": "Thanks for clarifying. If the app keeps asking you to verify your identity even after you completed it, it usually means the verification either hasn’t updated successfully or needs a re-check. Could you tell me what the screen shows—does it say “failed”, “in review/pending”, or just keeps prompting you?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.86
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.09
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:41.753899",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 225,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a1fc5b0c-b9e0-44b8-8cfe-e495139e4bab",
+  "seed": 42,
+  "dialogue_index": 68,
+  "timestamp": "2026-08-24T12:09:20.272825",
+  "persona": "Non-Native Speaker",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 925,
+  "total_sim_completion_tokens": 423,
+  "total_bot_prompt_tokens": 1496,
+  "total_bot_completion_tokens": 263,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I try to pay with my card from another country, but the system says it cannot be used.",
+      "assistant_response": "Sorry about that—when you try to pay, does it specifically say your card can’t be used in that country/merchant, or does it just show a generic “payment declined” message? Also, are you paying in-store, online, or by contactless?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:17.520704",
+      "sim_prompt_tokens": 425,
+      "sim_completion_tokens": 297,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “payment declined”, no special note. I was trying to pay in‑store, using contactless.",
+      "assistant_response": "Thanks—since it’s an in-store contactless payment with a generic “payment declined,” the most likely issue is a card payment being declined. Can you tell me whether you’ve used this card successfully recently (today or within the last week), and whether the merchant attempted the charge more than once?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.52
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.28
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:20.272715",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

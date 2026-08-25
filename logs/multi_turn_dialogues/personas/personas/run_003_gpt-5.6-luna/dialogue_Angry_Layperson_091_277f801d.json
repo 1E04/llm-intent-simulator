@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "277f801d-0243-46d5-b4d5-16c5425355f6",
+  "seed": 42,
+  "dialogue_index": 91,
+  "timestamp": "2026-08-24T11:52:50.767410",
+  "persona": "Angry Layperson",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1495,
+  "total_sim_completion_tokens": 431,
+  "total_bot_prompt_tokens": 2389,
+  "total_bot_completion_tokens": 384,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got declined at the store and I’m sure it’s because the PIN isn’t working—this is so annoying!",
+      "assistant_response": "Sorry about that—card payments getting declined at the store can happen for a few reasons. When it was declined, did it specifically say the PIN was incorrect/failed, or was it declined without mentioning the PIN? Also, have you already tried the PIN a few times?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.21
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:44.409307",
+      "sim_prompt_tokens": 412,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It said the PIN was wrong, and I’ve already tried it a few times.",
+      "assistant_response": "Got it—if the terminal says the PIN is wrong and you’ve tried it a few times, your PIN may be blocked. Can you confirm: has the ATM ever told you your PIN is locked/blocked, or has it been more than 3 incorrect attempts? If it’s blocked, I can help you reset it.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.6
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.25
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:47.901208",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yeah, the ATM said it’s locked—I've hit the limit and now it won’t let me in.",
+      "assistant_response": "Understood—if the ATM says the PIN is locked, your PIN is blocked after too many attempts. I can help you reset it. Do you want to change your PIN (requires verifying it through the app), or are you unable to access the app right now?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.96
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.48
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:50.767271",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 889,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

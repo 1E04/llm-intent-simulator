@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0f5a0349-11d8-4011-acce-3638fbda299e",
+  "seed": 42,
+  "dialogue_index": 41,
+  "timestamp": "2026-08-24T11:49:45.928879",
+  "persona": "Angry Layperson",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 820,
+  "total_sim_completion_tokens": 276,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 263,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account's been locked and I can't do anything with my money—this is absurd!",
+      "assistant_response": "I’m sorry you’re dealing with this. When you say your account is locked, do you see a message asking you to verify your identity (or that verification failed), or is it locked for a different reason?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.78
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.13
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:43.153673",
+      "sim_prompt_tokens": 379,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s telling me I need to prove where the money’s coming from.",
+      "assistant_response": "Got it—if it’s asking you to prove where the money is coming from, that’s usually a “source of funds” verification. I can help you complete that—what exact message do you see (e.g., “prove source of funds” / “verification required”), and are you trying to upload documents via the app or through a link?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.9
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.07
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:45.928819",
+      "sim_prompt_tokens": 441,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

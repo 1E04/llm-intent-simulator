@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f4544271-489f-4f09-a7de-790a7d5d3372",
+  "seed": 42,
+  "dialogue_index": 15,
+  "timestamp": "2026-08-24T11:55:22.663341",
+  "persona": "Panicking Emergency",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 896,
+  "total_sim_completion_tokens": 352,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just saw a charge on my account that I didn’t make! I need help right now!",
+      "assistant_response": "I’m sorry—that sounds urgent. Was the charge a card payment you don’t recognize (made with your card), or could it be a bank transfer/other type of transaction? Also, do you still have access to your card?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.26
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:20.273695",
+      "sim_prompt_tokens": 413,
+      "sim_completion_tokens": 245,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment. I still have the card.",
+      "assistant_response": "Thanks—since it’s an unrecognized card payment and you still have the card, I can help you report it.\n\nFirst: can you tell me whether the merchant name/amount is still showing as **pending** or has it **completed**? (And if you can, share the merchant name and amount.)",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:22.663285",
+      "sim_prompt_tokens": 483,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

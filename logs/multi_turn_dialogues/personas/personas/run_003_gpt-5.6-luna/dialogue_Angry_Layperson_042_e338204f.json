@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e338204f-f1b4-4d03-9ce4-65e9a8946cf1",
+  "seed": 42,
+  "dialogue_index": 42,
+  "timestamp": "2026-08-24T11:49:48.900918",
+  "persona": "Angry Layperson",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 932,
+  "total_sim_completion_tokens": 318,
+  "total_bot_prompt_tokens": 1494,
+  "total_bot_completion_tokens": 299,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just sent money to the wrong account and I need that stopped right now!",
+      "assistant_response": "I’m sorry—that sounds urgent. Can you confirm: is this a bank transfer you just sent (made in the app), and do you have the transfer/reference ID and the recipient details? If it’s still pending, I can help you try to cancel it right away.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:45.728493",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yeah, it was in the app—ref 123456789, sent to John Doe. It’s still pending, just stop it!",
+      "assistant_response": "Thanks—since it was sent in the app and is still pending, I can help you cancel it. I’m going to ask one quick check: is the transfer status showing as “pending” in the app right now, and do you still have access to the account the transfer was made from?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.92
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:48.900829",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 176,
+      "bot_prompt_tokens": 794,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

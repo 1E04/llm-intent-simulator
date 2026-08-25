@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "2b034b2d-0280-4709-af40-b913c2c889e7",
+  "seed": 42,
+  "dialogue_index": 11,
+  "timestamp": "2026-08-24T12:11:53.210217",
+  "persona": "Short Wording",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2616,
+  "total_sim_completion_tokens": 856,
+  "total_bot_prompt_tokens": 4172,
+  "total_bot_completion_tokens": 713,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unexpected debit.",
+      "assistant_response": "I’m sorry about that—can you tell me what the debit was for (card payment, cash withdrawal, or transfer) and the amount/date shown on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.44
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.31
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:40.860698",
+      "sim_prompt_tokens": 385,
+      "sim_completion_tokens": 94,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Transfer £45 12/07",
+      "assistant_response": "Thanks—just to confirm, was that £45 debit expected (i.e., you initiated a transfer), or was it unexpected? Also, do you see a transfer status like “failed/pending/completed” or an error reference for the transfer on 12/07?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:43.655339",
+      "sim_prompt_tokens": 422,
+      "sim_completion_tokens": 184,
+      "bot_prompt_tokens": 738,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Unexpected, no status",
+      "assistant_response": "Thanks—if there’s no status and it’s an unexpected debit for a transfer on 12/07, it’s usually either a failed/declined transfer or a transfer that hasn’t updated yet. \nCan you tell me whether you can see that £45 transfer in your app’s **Transfers** section (any reference/bene name), and whether the transfer is showing as **completed** or **reverted**? If you can’t find it at all, what’s the recipient name shown (if any)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.46
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.26
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:46.850775",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 216,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Not in app.",
+      "assistant_response": "Got it—if the £45 transfer debit is showing on your statement but there’s no corresponding transfer in the app, it’s most likely a failed/reverted transfer.\n\nCan you confirm: does the statement show any reference text (e.g., “reverted”, “reversed”, “failed”, or a trace/reference number), and is the debit definitely dated 12/07?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.23
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:49.353174",
+      "sim_prompt_tokens": 612,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 925,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No, yes",
+      "assistant_response": "Thanks. Since it’s an unexpected transfer debit on 12/07 and it’s not showing in the app, it’s most likely a failed or reverted transfer. Can you check your statement entry for any wording like “reverted/reversed/failed/declined” or a reference number? If there’s no wording, tell me the exact description line from the statement and I’ll guide you.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:53.210083",
+      "sim_prompt_tokens": 703,
+      "sim_completion_tokens": 222,
+      "bot_prompt_tokens": 1015,
+      "bot_completion_tokens": 135
+    }
+  ]
+}

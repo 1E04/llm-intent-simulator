@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6a79da38-d6be-438a-9477-adffe55c0af8",
+  "seed": 42,
+  "dialogue_index": 171,
+  "timestamp": "2026-08-21T12:56:28.768589",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 498,
+  "total_sim_completion_tokens": 108,
+  "total_bot_prompt_tokens": 2218,
+  "total_bot_completion_tokens": 294,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a payment I didn't do",
+      "assistant_response": "I’m sorry about that. Was this an unrecognised card payment that has already gone through (charged), or is it still pending? If you tell me which one, I’ll guide you to the next steps.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.15
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:26.661034",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s already gone through – I was charged for it.",
+      "assistant_response": "Got it—if you were charged for a card payment you didn’t make, that sounds like an unrecognised (charged) card payment. Please confirm: is the payment showing on your statement as completed/paid (not pending), and do you have the merchant name or the amount?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:28.768522",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 1142,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

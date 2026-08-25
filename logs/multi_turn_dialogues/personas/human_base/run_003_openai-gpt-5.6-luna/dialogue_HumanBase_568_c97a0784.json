@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c97a0784-102a-40ba-ad1a-bdac0b77cc0d",
+  "seed": 42,
+  "dialogue_index": 568,
+  "timestamp": "2026-08-21T15:47:46.426314",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1222,
+  "total_sim_completion_tokens": 341,
+  "total_bot_prompt_tokens": 2273,
+  "total_bot_completion_tokens": 381,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "can i do a transfer with swift",
+      "assistant_response": "Do you mean an international bank transfer using SWIFT to add money to your account, or are you sending money from your account to someone else via SWIFT?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.36
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:39.486338",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to add money to my account – is there a charge for that?",
+      "assistant_response": "To add money by bank transfer (SWIFT), do you want to know the fee charged for the top up itself, or whether your bank may charge a SWIFT/intermediary fee? If you tell me which currency you’re topping up with, I can confirm the likely charges.",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:42.863636",
+      "sim_prompt_tokens": 569,
+      "sim_completion_tokens": 182,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Just the fee for the top‑up, I'm topping up in euros.",
+      "assistant_response": "Yes—there can be a fee for topping up by bank transfer, and it depends on the method and currency. For a EUR top up by bank transfer, the usual charge is the bank transfer/top-up fee plus any intermediary fees your sending bank may apply. Can you confirm whether you’re topping up via SWIFT from your bank account (international transfer), or via a local SEPA transfer?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:46.426266",
+      "sim_prompt_tokens": 653,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 832,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

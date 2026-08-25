@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cac879e0-534e-4606-93b7-067e20194e5b",
+  "seed": 42,
+  "dialogue_index": 35,
+  "timestamp": "2026-08-24T11:55:55.903861",
+  "persona": "Panicking Emergency",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 895,
+  "total_sim_completion_tokens": 234,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 314,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just got rejected at the checkout! I need it working now!",
+      "assistant_response": "Sorry about that—was this rejection showing as “declined” at checkout, or did you see any other message (like “transaction not permitted”)? Also, is the card definitely for a merchant in the same country/currency as you’re trying to pay?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:53.144970",
+      "sim_prompt_tokens": 412,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “declined.” It’s a local store, same currency.",
+      "assistant_response": "Thanks—since it specifically says “declined,” this is usually a card payment issue. Have you tried the payment just once, and do you have enough available balance (including any card verification hold)? If yes, tell me whether it’s a card-present tap/insert or an online payment, and I’ll guide you on the quickest fix.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:55.903801",
+      "sim_prompt_tokens": 483,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 165
+    }
+  ]
+}

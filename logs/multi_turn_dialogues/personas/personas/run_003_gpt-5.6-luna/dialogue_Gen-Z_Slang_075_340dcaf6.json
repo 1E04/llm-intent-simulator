@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "340dcaf6-bb42-4188-85af-704689514808",
+  "seed": 42,
+  "dialogue_index": 75,
+  "timestamp": "2026-08-24T12:05:17.295867",
+  "persona": "Gen-Z Slang",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1584,
+  "total_sim_completion_tokens": 393,
+  "total_bot_prompt_tokens": 2432,
+  "total_bot_completion_tokens": 485,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i was scrolling my app and saw a random fee show up that i didn’t sign up for. 😕",
+      "assistant_response": "I’m sorry about that—was this fee on your card payments, on a bank transfer, or just showing on your statement with no clear link? If you tell me the fee amount and what it’s described as (e.g., merchant name or “fee” wording), I can guide you to the right next step.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.44
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:11.636570",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's just on my statement, no merchant listed. looks like a $6 “service fee” or something. 😅",
+      "assistant_response": "Thanks—if it’s listed on your statement as a “service fee” with no merchant, that sounds like an extra charge. Can you confirm whether it’s tied to a card payment or to a transfer (bank transfer/top up), and the exact date of the $6 charge? If you can paste the exact wording from the statement line, that’ll help too.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.64
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:14.520098",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 171
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "nah, not a card or transfer—just a line on 12/3 saying “service fee – $6”. 🙃",
+      "assistant_response": "Got it—if it’s showing on your statement as “service fee – $6” with no merchant and not linked to a card payment or transfer, that most likely matches an extra charge on your statement. Can you tell me which product this is for (debit/credit card, or your account), and whether you recently made any changes like topping up, closing/restarting a plan, or exchanging/using an extra service around 12/3?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:17.295730",
+      "sim_prompt_tokens": 630,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 917,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2af28e7e-2395-4550-ad0c-4170d6ca0510",
+  "seed": 42,
+  "dialogue_index": 268,
+  "timestamp": "2026-08-21T13:02:26.133977",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 541,
+  "total_sim_completion_tokens": 114,
+  "total_bot_prompt_tokens": 2270,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why do you keep declining my payment? I tried several times already with this card and it's just not working",
+      "assistant_response": "Sorry about that—when payments are declining after multiple tries, it’s usually a card payment being rejected. Can you tell me: does the merchant show a specific decline message (e.g., “do not honor”, “insufficient funds”, “try again”), and was the payment attempted online or in-store?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:23.837658",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1090,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was in‑store and the terminal just shows “do not honor” every time.",
+      "assistant_response": "Thanks—“do not honor” in-store usually means the card payment is being rejected (declined). I can help troubleshoot, but first: was this purchase the first time you used the card at this merchant, and have you made any recent changes to your card (e.g., new card, updated PIN, recently linked the card)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:26.133838",
+      "sim_prompt_tokens": 541,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 1180,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

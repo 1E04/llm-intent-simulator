@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "72db4c05-0725-44e9-8761-4373119dcd13",
+  "seed": 42,
+  "dialogue_index": 512,
+  "timestamp": "2026-08-21T15:46:21.044636",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1196,
+  "total_sim_completion_tokens": 248,
+  "total_bot_prompt_tokens": 2290,
+  "total_bot_completion_tokens": 369,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can i deposit my salary to this account?",
+      "assistant_response": "Yes—you can usually receive salary payments to your account. Do you mean a bank transfer (incoming payment to your account details), and which country/currency is your employer paying in?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.23
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:15.514976",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, a regular bank transfer. My employer is in the US and pays in USD.",
+      "assistant_response": "Yes, you can receive a regular bank transfer into your account, including salary paid in USD from the US. To confirm the exact details—are you receiving via a US domestic transfer (ACH/wire) to your account’s USD details, and do you need the correct receiving account information?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.62
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:18.705404",
+      "sim_prompt_tokens": 555,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 757,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s a US wire and I need the correct account details.",
+      "assistant_response": "Yes—this will work. For a US wire, I can help with the correct USD receiving account details, but I need to confirm: are you sending to a Revolut USD account via wire (not ACH), and what’s your recipient type—personal or business? If you tell me that, I’ll guide you to the exact details to use.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.88
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.07
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:21.044579",
+      "sim_prompt_tokens": 641,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 840,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

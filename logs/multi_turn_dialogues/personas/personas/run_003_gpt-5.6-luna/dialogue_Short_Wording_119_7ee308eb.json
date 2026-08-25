@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "7ee308eb-c213-4851-bcab-00edfb0b1025",
+  "seed": 42,
+  "dialogue_index": 119,
+  "timestamp": "2026-08-24T12:14:52.826436",
+  "persona": "Short Wording",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1663,
+  "total_sim_completion_tokens": 782,
+  "total_bot_prompt_tokens": 2275,
+  "total_bot_completion_tokens": 447,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Payment stuck.",
+      "assistant_response": "Sorry you’re dealing with that—when you say “payment stuck,” is the card payment showing as **pending** in your app, or did it **decline** / not appear at all? Also, roughly how long ago was the payment?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.6
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.25
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:43.536892",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Pending, 2 days.",
+      "assistant_response": "Thanks—if it’s been pending for 2 days, it’s usually still processing. Can you confirm: does the transaction show as **“Pending”** (not reversed/failed), and is it a **card payment** or a **cash withdrawal**? Also, what’s the payment date/time and currency (approx.)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:47.221123",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 753,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Card, pending, USD",
+      "assistant_response": "Got it—this is a **card payment** showing as **Pending** for **2 days** (USD). That usually means it’s still processing and will either post or revert automatically. To check the status, can you tell me whether it’s showing as **“Pending”** only (not “Reverted/Failed”), and is there any reference/merchant name you can see in the app?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:52.826385",
+      "sim_prompt_tokens": 628,
+      "sim_completion_tokens": 499,
+      "bot_prompt_tokens": 835,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

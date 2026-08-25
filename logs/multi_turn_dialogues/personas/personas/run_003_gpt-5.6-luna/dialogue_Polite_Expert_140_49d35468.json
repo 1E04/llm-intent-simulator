@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "49d35468-c003-443a-bba2-65433b57fee8",
+  "seed": 42,
+  "dialogue_index": 140,
+  "timestamp": "2026-08-24T12:02:45.167900",
+  "persona": "Polite Expert",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 938,
+  "total_sim_completion_tokens": 203,
+  "total_bot_prompt_tokens": 1482,
+  "total_bot_completion_tokens": 276,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I’m seeing that a recent transfer expected in my account hasn’t shown up yet.",
+      "assistant_response": "Sorry about that—could you confirm whether the transfer is from another bank into your account (inbound), and do you know the transfer date/time and the amount?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.6
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:43.137054",
+      "sim_prompt_tokens": 442,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s an inbound transfer from my other bank, sent on April 22 at 14:30 UTC, for £1,250.00.",
+      "assistant_response": "Thanks—since it’s an inbound bank transfer from April 22 (14:30 UTC) for £1,250 and it hasn’t appeared yet, this is usually covered under **balance not updated after bank transfer**. \n\nCan you tell me: (1) whether the transfer is marked as completed/sent on your other bank side, and (2) have you checked that the correct reference/account details were used?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.07
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:45.167762",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 93,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 147
+    }
+  ]
+}

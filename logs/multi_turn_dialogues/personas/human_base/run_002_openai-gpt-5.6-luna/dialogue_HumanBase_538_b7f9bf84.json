@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b7f9bf84-f972-42a3-8c16-837628931d1e",
+  "seed": 42,
+  "dialogue_index": 538,
+  "timestamp": "2026-08-21T13:20:37.111535",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 500,
+  "total_sim_completion_tokens": 117,
+  "total_bot_prompt_tokens": 2223,
+  "total_bot_completion_tokens": 256,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What is the reason that my card payment was cancelled?",
+      "assistant_response": "I can help with that. Was the card payment showing as **declined** at the time you tried it, or did it first go through and then get **reverted/cancelled** afterward?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:34.782854",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It went through at first, then later showed as cancelled.",
+      "assistant_response": "Got it—if it went through first and later showed as cancelled, that usually means the card payment was **reverted**. Can you tell me whether the status now says **“reverted”** or **“cancelled”**, and roughly when it changed (same day or after a few days)?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:37.111451",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

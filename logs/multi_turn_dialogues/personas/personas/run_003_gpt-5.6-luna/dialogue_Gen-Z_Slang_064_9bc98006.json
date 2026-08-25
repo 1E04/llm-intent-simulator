@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9bc98006-2fba-4bfe-9d03-726fb19455d7",
+  "seed": 42,
+  "dialogue_index": 64,
+  "timestamp": "2026-08-24T12:05:01.503504",
+  "persona": "Gen-Z Slang",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 964,
+  "total_sim_completion_tokens": 261,
+  "total_bot_prompt_tokens": 1486,
+  "total_bot_completion_tokens": 257,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i was at the atm trying to get cash and it just bounced, nothing came out. 😅",
+      "assistant_response": "Sorry that happened—when you tried the cash withdrawal, did the ATM show any error message (like “declined”/“try again”), and have you been charged for the withdrawal or is it still pending?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.74
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.2
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:58.428387",
+      "sim_prompt_tokens": 449,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it just flashed “try again,” and i don’t see any charge or pending thing on my app.",
+      "assistant_response": "Got it—if the ATM flashed “try again” and there’s no charge or pending in the app, this usually means the cash withdrawal was declined. Could you confirm the ATM country and whether you’re using the same card/account you normally withdraw with?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:01.503313",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

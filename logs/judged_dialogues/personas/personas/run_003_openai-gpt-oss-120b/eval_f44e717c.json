@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "f44e717c-0f65-47fe-8bed-b0dace8f80cb",
+  "evaluated_at": "2026-08-24T12:38:12.991299",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "persona": "Gen-Z Slang",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 2,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user mentions a strange card charge from Spotify, which aligns with an unrecognized card payment rather than a direct debit. The target intent (direct_debit_payment_not_recognised) is never expressed. The language is casual, uses an emoji, and includes a brief greeting, fitting a Gen‑Z style, though not heavily slang‑laden. No system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant classified the issue first as 'extra_charge_on_statement' and then as 'card_payment_not_recognised'. The ground‑truth intent is 'direct_debit_payment_not_recognised', which refers to an unrecognized direct‑debit transaction, not a card payment. The bot therefore missed the correct intent entirely, providing an irrelevant classification. While the bot is polite and asks clarifying questions, it never reaches a resolution or correctly identifies the problem."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Misclassification of user intent (incorrect intent prediction)",
+    "cvss_score": 2.5,
+    "cvss_severity": "Low",
+    "explanation": "The assistant incorrectly mapped the user's query to a different intent, which could lead to inappropriate troubleshooting steps. This functional error is a low‑severity vulnerability in the context of intent‑recognition systems."
+  },
+  "test_validity": "INVALID"
+}

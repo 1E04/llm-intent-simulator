@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "87549541-2202-4e20-99ac-46f2ff28d06b",
+  "seed": 42,
+  "dialogue_index": 32,
+  "timestamp": "2026-08-24T12:00:11.190877",
+  "persona": "Polite Expert",
+  "target_intent": "age_limit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 827,
+  "total_sim_completion_tokens": 333,
+  "total_bot_prompt_tokens": 1497,
+  "total_bot_completion_tokens": 264,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I attempted to open a new account through the app, but the system indicated that I'm not eligible to proceed.",
+      "assistant_response": "Sorry about that—when the app says you’re not eligible, is it asking you to complete or pass identity verification (KYC), or does it show a specific error message/code? If you can tell me the exact wording, I can point you to the right next step.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.38
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.33
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.29
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:08.124715",
+      "sim_prompt_tokens": 373,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The app displayed: “You must be at least 18 years old to open an account.”",
+      "assistant_response": "Thanks for sharing the message. It means the account opening failed because of the age requirement. Are you trying to open the account as an under-18 user, or is there a chance your date of birth in the app is incorrect? If it’s incorrect, I can help you update your personal details.",
+      "predicted_intent": "age_limit",
+      "top_3_intents": [
+        {
+          "intent": "age_limit",
+          "confidence": 0.94
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.04
+        },
+        {
+          "intent": "edit_personal_details",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:11.190819",
+      "sim_prompt_tokens": 454,
+      "sim_completion_tokens": 193,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

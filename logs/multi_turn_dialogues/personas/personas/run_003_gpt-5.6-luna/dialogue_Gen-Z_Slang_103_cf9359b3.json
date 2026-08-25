@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cf9359b3-2288-483d-9db5-1def06074295",
+  "seed": 42,
+  "dialogue_index": 103,
+  "timestamp": "2026-08-24T12:05:56.479065",
+  "persona": "Gen-Z Slang",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 947,
+  "total_sim_completion_tokens": 403,
+  "total_bot_prompt_tokens": 1526,
+  "total_bot_completion_tokens": 324,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "yo, i was trying to pay abroad and my card just bounced, guess it’s not the right type or currency.",
+      "assistant_response": "Sorry about that—when a card “bounces” abroad it’s usually a declined card payment or an unsupported currency/card type. Can you confirm: (1) was the payment declined in-app/at the merchant, or does it show as “declined” in your transaction list? (2) which country and currency were you trying to pay in?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.18
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:53.521539",
+      "sim_prompt_tokens": 425,
+      "sim_completion_tokens": 268,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it got declined right at the shop and shows “declined” in the app. was trying to pay in italy, euros.",
+      "assistant_response": "Got it—since it was marked as “declined” right at the shop, this points to a declined card payment for your Italy (EUR) purchase. A couple quick checks: is the card set up/usable for international payments, and do you have enough available balance after any pending charges? If you want, tell me which card type you’re using (Visa/Mastercard) and whether the EUR amount was converted from another currency in the app—I can guide the next step.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.08
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:56.478904",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 818,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

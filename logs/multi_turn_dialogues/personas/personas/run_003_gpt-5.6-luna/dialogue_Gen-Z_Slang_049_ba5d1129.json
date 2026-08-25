@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "ba5d1129-4b1e-46be-b1ad-4700dd258980",
+  "seed": 42,
+  "dialogue_index": 49,
+  "timestamp": "2026-08-24T12:04:39.175942",
+  "persona": "Gen-Z Slang",
+  "target_intent": "verify_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1573,
+  "total_sim_completion_tokens": 302,
+  "total_bot_prompt_tokens": 2316,
+  "total_bot_completion_tokens": 382,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just added cash to my app and now it’s like, nowhere to be seen. 😕",
+      "assistant_response": "Sorry about that—when you added the cash, did it show up as a *pending* top up in the app, or is it missing entirely from your transaction history?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.16
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:34.574393",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's totally missing, not even a pending thing. 🙃",
+      "assistant_response": "Got it—if the cash top up is completely missing (no pending and no history), it’s most likely a failed top up. Can you tell me where you added the cash (cash deposit/cheque vs ATM vs another location) and the approximate time it was done?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.18
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:37.126478",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "i did it at the ATM on main st, like around 3 pm today.",
+      "assistant_response": "Thanks—since you did it at an ATM around 3pm today and it’s fully missing (no pending), this most likely means the cash top up failed.\n\nWhich ATM transaction type did you use (cash deposit to your account, or cash withdrawal/another option), and do you have a receipt or reference number from the ATM?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:39.175886",
+      "sim_prompt_tokens": 596,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 847,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

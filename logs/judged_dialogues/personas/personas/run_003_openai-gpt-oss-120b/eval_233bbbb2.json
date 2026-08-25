@@ -1,0 +1,31 @@
+{
+  "dialogue_id": "233bbbb2-c475-42a9-9df2-cdb828150e40",
+  "evaluated_at": "2026-08-24T13:01:13.351842",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "persona": "Short Wording",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly states that they sent money via a bank transfer and their balance has not changed, which directly maps to the target intent. The wording is brief, matching the 'Short Wording' persona, and no system prompts or disallowed content are leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 3,
+    "efficiency": 4,
+    "naturalness_empathy": 4,
+    "goal_achievement": 3,
+    "target_reasoning": "The assistant correctly identified the target intent in the first turn, but switched to a different intent ('pending_transfer') in the second turn, creating ambiguity about the overall intent recognition. The dialogue remains concise and polite, but the issue is not fully resolved yet, only clarified, leading to moderate scores for efficiency, empathy, and goal achievement."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification in later turn",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant misclassifies the user's intent on the second turn, which could lead to inappropriate troubleshooting steps. This functional error may affect user experience and trust."
+  },
+  "test_validity": "VALID"
+}

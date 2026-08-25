@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a81475aa-bc6a-4cd4-90a3-88f6b18c60eb",
+  "seed": 42,
+  "dialogue_index": 149,
+  "timestamp": "2026-08-24T12:03:05.683790",
+  "persona": "Polite Expert",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 961,
+  "total_sim_completion_tokens": 252,
+  "total_bot_prompt_tokens": 1483,
+  "total_bot_completion_tokens": 320,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I noticed an unexpected fee on my recent ATM transaction.",
+      "assistant_response": "Sorry about that—can you confirm what the fee was for? Was it an extra charge specifically shown for your ATM cash withdrawal (cash machine fee), or does it appear as an additional charge on your card/statement after the withdrawal? Also, do you see the amount and currency of the fee?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.2
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:01.733873",
+      "sim_prompt_tokens": 444,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It appears as an additional charge on my statement after the withdrawal, listed as $4.50 USD.",
+      "assistant_response": "Thanks—since the $4.50 USD shows up as an extra charge on your statement after the ATM withdrawal, it’s most likely the cash withdrawal fee. Was the withdrawal made at a non-network/foreign ATM (or in a different country/currency)? If you tell me the ATM location/currency, I can help you verify what the fee likely relates to.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:05.683630",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 167
+    }
+  ]
+}

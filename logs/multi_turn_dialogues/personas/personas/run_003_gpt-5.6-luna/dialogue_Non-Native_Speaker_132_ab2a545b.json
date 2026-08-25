@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ab2a545b-1873-45a9-8c57-3842ae4ddca4",
+  "seed": 42,
+  "dialogue_index": 132,
+  "timestamp": "2026-08-24T12:10:56.857703",
+  "persona": "Non-Native Speaker",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1003,
+  "total_sim_completion_tokens": 269,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I added money to my account, but after a moment it was gone again.",
+      "assistant_response": "Sorry about that—when you say the money was gone again, was the top up later marked as **reverted** (reversed back), or did it show as **failed** / still **pending**? If you tell me what the transaction status says in the app, I’ll guide you to the right fix.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:53.655939",
+      "sim_prompt_tokens": 460,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "In the app it shows **reverted**.",
+      "assistant_response": "Got it—if the top up is showing as **reverted**, that means the payment was reversed back to your original funding source. Have you received the funds back yet on your card/bank, or is it still pending there?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.93
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.05
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:56.857561",
+      "sim_prompt_tokens": 543,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 785,
+      "bot_completion_tokens": 141
+    }
+  ]
+}

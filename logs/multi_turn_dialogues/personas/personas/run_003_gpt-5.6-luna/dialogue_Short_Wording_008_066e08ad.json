@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "066e08ad-e79f-4498-8598-2900986af42f",
+  "seed": 42,
+  "dialogue_index": 8,
+  "timestamp": "2026-08-24T12:11:42.012226",
+  "persona": "Short Wording",
+  "target_intent": "card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1028,
+  "total_sim_completion_tokens": 247,
+  "total_bot_prompt_tokens": 1428,
+  "total_bot_completion_tokens": 230,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can't pay.",
+      "assistant_response": "I’m sorry—when you try to pay, does the payment get declined (e.g., “not approved”)? Or does it not show up/does the merchant say they didn’t receive it?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:39.662801",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Declined.",
+      "assistant_response": "Got it—your card payment is being declined. Is the decline happening for card payments in general, or only for one specific merchant/transaction amount?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.87
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:42.012163",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 741,
+      "bot_completion_tokens": 92
+    }
+  ]
+}

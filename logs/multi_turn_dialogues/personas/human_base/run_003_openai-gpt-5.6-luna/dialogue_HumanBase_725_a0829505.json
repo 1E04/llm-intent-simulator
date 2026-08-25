@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "a0829505-298f-4f60-8b2a-10a75726bea1",
+  "seed": 42,
+  "dialogue_index": 725,
+  "timestamp": "2026-08-21T15:51:05.412638",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2877,
+  "total_sim_completion_tokens": 689,
+  "total_bot_prompt_tokens": 4468,
+  "total_bot_completion_tokens": 740,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I get my disposable virtual card to work?",
+      "assistant_response": "Sure—when you say your disposable virtual card isn’t working, is it failing to create/activate, or does it get declined during a payment? Also, do you see any error message in the app?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.34
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.29
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:52.297461",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s getting declined when I try to pay online, and the app just shows “payment failed” with no other details.",
+      "assistant_response": "Thanks—since it’s a disposable virtual card that’s being declined on an online payment, it’s often due to card limits or the card not being usable for that merchant.\n\nQuick check: in the app, does the disposable card show it’s still available/active, and are the spend limits (amount or number of uses) still remaining? Also, are you trying to pay a subscription or any merchant type that requires the card to be re-used?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.58
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.33
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:55.582335",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 188
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, the card shows as active with uses left, and I’m just trying a one‑time purchase, not a subscription.",
+      "assistant_response": "Got it. Just to narrow this down: when you tap to pay, does the app show anything like “declined” (insufficient funds/merchant restriction) or does it only say “payment failed”? And are you sure you’re selecting the disposable virtual card for that specific checkout (not your main card)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.34
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.33
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:58.294895",
+      "sim_prompt_tokens": 674,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 899,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says “payment failed,” and I’m sure I selected the disposable virtual card, not my regular one.",
+      "assistant_response": "To help narrow this down: are you seeing a specific decline reason like “insufficient funds” or “merchant not supported,” or does it only ever show the generic “payment failed” message? Also, is the online checkout asking you to enter the disposable card’s details (card number/expiry/CVC), or is it using a saved token (e.g., autofill)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.34
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.33
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:01.199468",
+      "sim_prompt_tokens": 773,
+      "sim_completion_tokens": 195,
+      "bot_prompt_tokens": 995,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just shows the generic “payment failed,” and I have to manually enter the card number, expiry and CVC each time.",
+      "assistant_response": "Thanks—if it’s only showing a generic “payment failed,” the most likely causes are disposable card restrictions (e.g., merchant/region restrictions or remaining per-use/total limits) rather than the card being inactive.\n\nCan you confirm: (1) are you paying in the same country/currency shown in the app for the disposable card, and (2) is the amount within the per-transaction limit shown under the disposable card settings?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:05.412593",
+      "sim_prompt_tokens": 882,
+      "sim_completion_tokens": 237,
+      "bot_prompt_tokens": 1107,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

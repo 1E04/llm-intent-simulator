@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "b27451c8-8f34-46e8-82f3-928ab808dfb3",
+  "seed": 42,
+  "dialogue_index": 109,
+  "timestamp": "2026-08-24T11:53:27.835646",
+  "persona": "Angry Layperson",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3148,
+  "total_sim_completion_tokens": 860,
+  "total_bot_prompt_tokens": 4430,
+  "total_bot_completion_tokens": 665,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account is suddenly getting extra cash added all the time and I never set that up!",
+      "assistant_response": "That sounds unusual—are those “extra cash” deposits showing as transfers, card refunds, or cash withdrawals, and do you know the sender name or transaction reference? Also, have you shared your card details or received any suspicious messages recently?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.55
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.27
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:15.882171",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They’re showing up as transfers, no sender name or reference, and I haven’t given out my card info or gotten any weird messages.",
+      "assistant_response": "Thanks—since they’re showing as transfers with no sender name/reference, can you confirm whether the amounts are marked as “pending” or “completed,” and roughly how many deposits you’ve received (and over what time period)?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.58
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.27
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:18.821488",
+      "sim_prompt_tokens": 524,
+      "sim_completion_tokens": 187,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 103
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "All marked completed—about five of them in the last two days.",
+      "assistant_response": "Got it—completed transfers with no sender name/reference. To narrow this down and keep you safe, can you confirm whether you can see the incoming transfers listed under “Transfers” in-app with a generic label (e.g., “Bank transfer received”), and whether the funds arrived into your personal account balance or a specific sub-account? Also, have you recently changed any personal details or authorized any new beneficiaries?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.73
+        },
+        {
+          "intent": "verification_my_identity",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:21.178320",
+      "sim_prompt_tokens": 607,
+      "sim_completion_tokens": 89,
+      "bot_prompt_tokens": 857,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yeah, they show up under Transfers as “Bank transfer received” and went straight into my main balance—haven’t changed any details or added any new beneficiaries.",
+      "assistant_response": "Thanks—since these are completed transfers going straight into your main balance, I need to confirm one key thing: were the transfers made to your account using your details (like your account number/IBAN or recipient ID), or do you only see them as incoming deposits with no matching payment you expected?\n\nAlso, do you want help identifying where the transfers came from (e.g., tracing/unsupported activity), or would you like to request a refund/return of the funds?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.52
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.33
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:24.565362",
+      "sim_prompt_tokens": 712,
+      "sim_completion_tokens": 241,
+      "bot_prompt_tokens": 980,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I didn’t send any of those—just make them disappear and stop this from happening!",
+      "assistant_response": "I can help, but first I need to clarify—are these unexpected incoming transfers currently still appearing as completed deposits in your balance, or are any of them pending? And would you like to temporarily secure your account by stopping further activity (e.g., by restricting/terminating), or are you specifically looking to trace where the transfers came from so we can reverse/return them?",
+      "predicted_intent": "terminate_account",
+      "top_3_intents": [
+        {
+          "intent": "terminate_account",
+          "confidence": 0.34
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.33
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:27.835459",
+      "sim_prompt_tokens": 849,
+      "sim_completion_tokens": 235,
+      "bot_prompt_tokens": 1103,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

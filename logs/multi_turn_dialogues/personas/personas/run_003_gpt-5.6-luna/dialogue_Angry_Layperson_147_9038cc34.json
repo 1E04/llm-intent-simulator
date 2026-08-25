@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "9038cc34-3a4e-40b0-8a69-4117a67971f4",
+  "seed": 42,
+  "dialogue_index": 147,
+  "timestamp": "2026-08-24T11:54:41.267827",
+  "persona": "Angry Layperson",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3012,
+  "total_sim_completion_tokens": 754,
+  "total_bot_prompt_tokens": 4273,
+  "total_bot_completion_tokens": 602,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add money to my account and it still isn’t showing up!",
+      "assistant_response": "Sorry about that—when you added the money, is the top up showing as **pending** in the app, or does it show as **failed**/not completed?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.24
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:29.439867",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 97
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It doesn’t even show up—nothing at all, not even a pending notice.",
+      "assistant_response": "Got it. For this, I need to know how you tried to add money—was it a **card top up** or a **bank transfer** (or **cash/cheque deposit**)? And roughly when did you make it?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.22
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:32.050528",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 762,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a card top‑up, and I did it like half an hour ago.",
+      "assistant_response": "Thanks—card top-ups that are done half an hour ago can take a bit, but if it’s showing nowhere (no pending), it’s often failed.\n\nCan you confirm whether the card top-up amount is showing as **completed/charged on your card statement**, or did the charge not go through at all?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:34.498912",
+      "sim_prompt_tokens": 585,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 839,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It did charge my card—I can see the deduction on my statement, but nothing shows up in the app.",
+      "assistant_response": "Thanks—if your card was charged but the top up doesn’t appear in the app, it’s most commonly either a failed top up or a reverted top up.\n\nWhich do you see on your statement: does it look like a normal completed card charge, or is it showing as reversed/voided? And do you know the amount and the last 4 digits of the card used?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.67
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.2
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:37.882880",
+      "sim_prompt_tokens": 676,
+      "sim_completion_tokens": 206,
+      "bot_prompt_tokens": 934,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s a normal charge – $50, last four digits 1234.",
+      "assistant_response": "Thanks—if the $50 charge on your statement looks normal but the top up isn’t appearing in the app at all, it’s most likely that the top up didn’t complete or is in the process of reverting.\n\nTo pinpoint it: right now, do you see the $50 anywhere in the app at all (even as pending), or is it completely absent from your top up history?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:41.267779",
+      "sim_prompt_tokens": 786,
+      "sim_completion_tokens": 197,
+      "bot_prompt_tokens": 1038,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

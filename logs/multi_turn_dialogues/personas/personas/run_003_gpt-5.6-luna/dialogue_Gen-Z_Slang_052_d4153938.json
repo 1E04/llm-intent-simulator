@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d4153938-fb56-4bf5-aabf-9ad3241b9221",
+  "seed": 42,
+  "dialogue_index": 52,
+  "timestamp": "2026-08-24T12:04:41.538279",
+  "persona": "Gen-Z Slang",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1001,
+  "total_sim_completion_tokens": 339,
+  "total_bot_prompt_tokens": 1481,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried to load cash with my card and it just got rejected, what's the deal?",
+      "assistant_response": "Sorry about that—just to confirm, when you say “load cash with my card,” do you mean a **card top up** (adding money to your account) that was rejected, or a **cash withdrawal** from an ATM that was declined?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:38.151875",
+      "sim_prompt_tokens": 465,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it's a card top‑up that got bounced.",
+      "assistant_response": "Got it — a card top-up that was rejected/bounced. I can help check why it failed.\n\nWhat happened right after you tried to top up: did you see an error like “declined” in the app/card screen, or does the top-up simply show as pending/reverted?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:41.538143",
+      "sim_prompt_tokens": 536,
+      "sim_completion_tokens": 239,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

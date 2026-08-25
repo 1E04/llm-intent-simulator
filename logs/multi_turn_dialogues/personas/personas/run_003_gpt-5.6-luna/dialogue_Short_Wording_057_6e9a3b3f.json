@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6e9a3b3f-a46c-4805-9873-626b67de3e2a",
+  "seed": 42,
+  "dialogue_index": 57,
+  "timestamp": "2026-08-24T12:13:00.424929",
+  "persona": "Short Wording",
+  "target_intent": "passcode_forgotten",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 783,
+  "total_sim_completion_tokens": 240,
+  "total_bot_prompt_tokens": 1411,
+  "total_bot_completion_tokens": 173,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can't recall PIN.",
+      "assistant_response": "Sorry to hear that—do you mean you’ve forgotten your card PIN, or your app passcode?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.7
+        },
+        {
+          "intent": "get_pin",
+          "confidence": 0.2
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:57.886557",
+      "sim_prompt_tokens": 378,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 76
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "App passcode.",
+      "assistant_response": "No problem—if you’ve forgotten your app passcode, you’ll need to reset it in the app. Are you still able to sign in with your email/phone and receive the reset code?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.92
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.05
+        },
+        {
+          "intent": "get_pin",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:00.424791",
+      "sim_prompt_tokens": 405,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 723,
+      "bot_completion_tokens": 97
+    }
+  ]
+}

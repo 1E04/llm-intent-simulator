@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "dad09b10-0e1f-473e-9086-4c58b04d72d5",
+  "seed": 42,
+  "dialogue_index": 43,
+  "timestamp": "2026-08-24T12:00:25.429714",
+  "persona": "Polite Expert",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 976,
+  "total_sim_completion_tokens": 214,
+  "total_bot_prompt_tokens": 1462,
+  "total_bot_completion_tokens": 249,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I added money to my account earlier today, but the balance hasn't updated yet.",
+      "assistant_response": "Sorry about that—was your top up added by bank transfer, or by cash/cheque deposit? If you tell me which one, I can check the most likely timing for when the balance should update.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.58
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.26
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:22.977041",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer.",
+      "assistant_response": "Thanks—if it was a bank transfer, it can take time for the balance to update. Can you tell me roughly when you made the transfer (e.g., how many hours ago) and whether the sender’s bank shows it as completed?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.52
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.36
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:25.428351",
+      "sim_prompt_tokens": 519,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 106
+    }
+  ]
+}

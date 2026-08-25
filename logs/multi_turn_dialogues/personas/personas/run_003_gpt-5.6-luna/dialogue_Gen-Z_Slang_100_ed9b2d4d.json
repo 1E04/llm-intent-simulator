@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "ed9b2d4d-9234-47f8-a74d-8108b2c698ea",
+  "seed": 42,
+  "dialogue_index": 100,
+  "timestamp": "2026-08-24T12:06:02.534372",
+  "persona": "Gen-Z Slang",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 3396,
+  "total_sim_completion_tokens": 605,
+  "total_bot_prompt_tokens": 4464,
+  "total_bot_completion_tokens": 667,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i was at the store and my card got bounced but the money already left my account.",
+      "assistant_response": "Sorry about that—when a card payment is declined, the funds may still show as taken temporarily and then revert. Can you tell me: did the payment show as “pending” or is it fully posted on your statement (and do you see the “reverted/ reversed” status yet)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.58
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.31
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:51.163312",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was pending at first, now it’s just gone – i don’t see any “reverted” label.",
+      "assistant_response": "Thanks—if it started as pending and now it’s fully gone without a “reverted” label, it’s most likely a declined card payment that hasn’t posted at the merchant. Can you confirm: do you see any transaction reference/merchant entry at all in your app (even with $0 or blank), and approximately how long ago did it happen?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:54.011114",
+      "sim_prompt_tokens": 575,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, there’s like a blank entry with the store name, and it was like two days ago.",
+      "assistant_response": "That sounds like a card payment that was declined: it was pending, then disappeared after the merchant’s request window—with no “reverted” label. Since it’s been about 2 days, the temporary hold should be fully released. Could you check whether you still have the same balance as before the purchase (no missing funds)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.82
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:56.900756",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 899,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "yeah, my balance looks the same, no money missing.",
+      "assistant_response": "Got it—since your balance hasn’t changed and the entry disappeared after being pending (about 2 days ago), that fits a declined card payment where the temporary hold has been released automatically. You don’t need to do anything else. If you want, tell me the store name and the transaction amount to double-check the exact status in your activity.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.76
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:59.619412",
+      "sim_prompt_tokens": 777,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 987,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "store was starbucks, about $4.50.",
+      "assistant_response": "Thanks—Starbucks for about $4.50 with a payment that went pending and then disappeared after ~2 days (with your balance unchanged) matches a declined card payment. There’s nothing you need to do; the temporary authorization hold should have already released automatically. If the app shows any new entry or different status later, tell me and I’ll help check it.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:02.534202",
+      "sim_prompt_tokens": 869,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

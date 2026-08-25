@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "dc774ce9-bcfc-415e-a47f-32744b32b637",
+  "seed": 42,
+  "dialogue_index": 94,
+  "timestamp": "2026-08-24T11:52:52.101092",
+  "persona": "Angry Layperson",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 936,
+  "total_sim_completion_tokens": 257,
+  "total_bot_prompt_tokens": 1495,
+  "total_bot_completion_tokens": 306,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I’ve been waiting ages for the money I sent to show up, and it’s still nowhere to be found!",
+      "assistant_response": "Sorry about that—could you confirm which type of transfer you mean: a bank transfer, or a card-to-card/other in-app transfer? Also, when did you send it, and do you see the transfer marked as pending or completed in your app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.46
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.32
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:49.331912",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer I sent yesterday afternoon, and the app still shows it as pending.",
+      "assistant_response": "Got it—if your bank transfer is still marked as pending after sending it yesterday afternoon, it’s most likely waiting on the bank’s processing window. Can you tell me the exact transfer date/time and the currency, and whether you received a reference/transaction ID? I’ll help you check whether it should update soon or if it needs investigation.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:52.101000",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cb8402a8-4010-49de-b122-3bfcfacde4ad",
+  "seed": 42,
+  "dialogue_index": 75,
+  "timestamp": "2026-08-24T12:13:35.574744",
+  "persona": "Short Wording",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 899,
+  "total_sim_completion_tokens": 245,
+  "total_bot_prompt_tokens": 1422,
+  "total_bot_completion_tokens": 280,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unexpected fee.",
+      "assistant_response": "I’m sorry about that—fees can apply for different reasons. Was the unexpected fee charged for a card purchase, an international exchange, a cash withdrawal, or a transfer?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.32
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:33.281828",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 166,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card purchase.",
+      "assistant_response": "Thanks—if it’s an unexpected fee on a card purchase, it’s usually a card payment fee or an additional card-related charge. Can you tell me whether the purchase was in your local currency or a foreign currency (and if you can, the fee amount shown on your statement)?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.85
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:35.574672",
+      "sim_prompt_tokens": 469,
+      "sim_completion_tokens": 79,
+      "bot_prompt_tokens": 735,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

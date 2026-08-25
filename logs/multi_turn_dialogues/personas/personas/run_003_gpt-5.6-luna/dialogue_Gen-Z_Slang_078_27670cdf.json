@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "27670cdf-91f5-4b31-b5c0-df8f8ad448ea",
+  "seed": 42,
+  "dialogue_index": 78,
+  "timestamp": "2026-08-24T12:05:21.468319",
+  "persona": "Gen-Z Slang",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 934,
+  "total_sim_completion_tokens": 257,
+  "total_bot_prompt_tokens": 1471,
+  "total_bot_completion_tokens": 285,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i sent cash to a buddy but it ain't showing up in my account. 😕",
+      "assistant_response": "Sorry about that—when you say “sent cash to a buddy,” was it a card-to-card transfer (money from your Revolut balance) or a bank transfer, and how long ago did you send it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.6
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:18.721861",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was a bank transfer, sent like two days ago.",
+      "assistant_response": "Thanks—if it was a bank transfer sent about two days ago and the balance hasn’t updated, it’s likely still processing. Can you confirm: is the transfer supposed to be coming into your Revolut account, or are you checking whether your buddy received it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.07
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:21.468163",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

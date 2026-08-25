@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "4f6c9241-e909-463f-8d3e-a4ffbd084cea",
+  "seed": 42,
+  "dialogue_index": 14,
+  "timestamp": "2026-08-24T12:11:47.614474",
+  "persona": "Short Wording",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 916,
+  "total_sim_completion_tokens": 247,
+  "total_bot_prompt_tokens": 1421,
+  "total_bot_completion_tokens": 200,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Recipient didn't get.",
+      "assistant_response": "Sorry about that—can you confirm whether the transfer was marked as completed (sent successfully) or is it still pending? Also, when did you send it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.83
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:44.825485",
+      "sim_prompt_tokens": 440,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 88
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Completed, yesterday",
+      "assistant_response": "Thanks—if it shows completed but the recipient still hasn’t received it, we can look into a “completed but not received” transfer. Can you tell me the transfer type (bank transfer/other) and the recipient’s country, or share the reference/transaction ID?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:47.614339",
+      "sim_prompt_tokens": 476,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 733,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

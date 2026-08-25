@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "ffc6c3e4-84e7-4ecf-9c28-af0f8af16884",
+  "seed": 42,
+  "dialogue_index": 113,
+  "timestamp": "2026-08-24T12:10:32.766548",
+  "persona": "Non-Native Speaker",
+  "target_intent": "card_linking",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1713,
+  "total_sim_completion_tokens": 297,
+  "total_bot_prompt_tokens": 2354,
+  "total_bot_completion_tokens": 414,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to put my new card into the app, but it just keeps saying it can't be used.",
+      "assistant_response": "Sorry about that—when you try to add/link your new card in the app, what exact message does it show (e.g., “can’t be used,” “card not supported,” or “activation required”)? Also, is the card already activated or is it still waiting for activation?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.6
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.31
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:26.727522",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows “card not supported” and the card is already activated.",
+      "assistant_response": "Got it—if the app says “card not supported” even though it’s activated, it usually means the card type or issuer isn’t supported for linking. Can you tell me whether the new card is Visa or Mastercard, and what country it was issued in?",
+      "predicted_intent": "card_acceptance",
+      "top_3_intents": [
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.65
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.43
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:28.977085",
+      "sim_prompt_tokens": 573,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It is a Visa card, issued in Germany.",
+      "assistant_response": "Thanks—since it’s a Visa issued in Germany and it’s already activated, this points to a card-linking support issue (the app may not support that specific issuer/card type). Could you confirm the error message exactly as shown, and whether you’re trying to link a physical card or a virtual/second card?",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.9
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.55
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:32.766395",
+      "sim_prompt_tokens": 650,
+      "sim_completion_tokens": 55,
+      "bot_prompt_tokens": 861,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

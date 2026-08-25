@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "09c073af-cee0-4eb5-bc88-4a068ec353f8",
+  "seed": 42,
+  "dialogue_index": 62,
+  "timestamp": "2026-08-24T12:00:56.879809",
+  "persona": "Polite Expert",
+  "target_intent": "exchange_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 916,
+  "total_sim_completion_tokens": 225,
+  "total_bot_prompt_tokens": 1482,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I noticed an additional fee applied to a recent transaction that involved converting currencies.",
+      "assistant_response": "Sorry about that—which type of transaction had the currency conversion fee? Was it a card payment, a cash withdrawal, or a bank transfer—and do you see the charge as an “exchange fee/markup” or just an extra fee on your statement?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.12
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:53.893393",
+      "sim_prompt_tokens": 424,
+      "sim_completion_tokens": 94,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card payment, and the statement lists it as an exchange fee/markup rather than a separate extra charge.",
+      "assistant_response": "Thanks—if your card payment statement shows it as an exchange fee/markup, that matches an exchange charge. I can help you review whether the fee/markup is expected for that transaction—can you share the merchant name and the amount/currency charged (and the currency you were billed in)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:56.879714",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

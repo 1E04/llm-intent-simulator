@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4a51bc7c-e1e6-4fc9-9bcc-f4138934374d",
+  "seed": 42,
+  "dialogue_index": 211,
+  "timestamp": "2026-08-21T12:58:47.710784",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1152,
+  "total_sim_completion_tokens": 180,
+  "total_bot_prompt_tokens": 3527,
+  "total_bot_completion_tokens": 450,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Some cash is showing up in my app that I did not get.",
+      "assistant_response": "Sorry about that—just to confirm, is the cash amount showing as withdrawn/received in the app, but you didn’t actually get any money from the ATM (or you got a different amount)? If you can, tell me the ATM date/time and the exact cash amount shown.",
+      "predicted_intent": "wrong_amount_of_cash_received",
+      "top_3_intents": [
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.46
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.35
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:43.409527",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1083,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows a £120 withdrawal on 3 May at 14:30, but I didn’t get any cash.",
+      "assistant_response": "Thanks—if the app shows a £120 cash withdrawal on 3 May at 14:30 but you didn’t receive any cash, it sounds like an unrecognized cash withdrawal. Can you confirm which ATM location it was (or its name/address) and whether the transaction is marked as completed/posted in your app?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.66
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.2
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:45.499103",
+      "sim_prompt_tokens": 526,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 1175,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was at the High Street branch on Main Road, and the transaction is marked as completed.",
+      "assistant_response": "Got it—since the £120 cash withdrawal on 3 May 14:30 is marked completed, but you didn’t receive any cash at the High Street (Main Road) ATM, this should be treated as an unrecognized cash withdrawal.\n\nTo help you fix it, please confirm: did you try the transaction yourself (your card at that ATM), or is it completely unexpected? Also, do you see any reference/receipt number for that ATM transaction in the app?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.07
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:47.710676",
+      "sim_prompt_tokens": 626,
+      "sim_completion_tokens": 73,
+      "bot_prompt_tokens": 1269,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

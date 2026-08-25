@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7e559cdc-e831-40c2-86cf-30408b072359",
+  "seed": 42,
+  "dialogue_index": 46,
+  "timestamp": "2026-08-24T12:00:32.081223",
+  "persona": "Polite Expert",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 935,
+  "total_sim_completion_tokens": 249,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 303,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a transfer earlier today, but the funds still haven’t shown up for the recipient.",
+      "assistant_response": "Sorry about that—when you say “not shown up,” is the transfer still marked as pending on your side, or does it show as completed but the recipient hasn’t received the funds? Also, about how many hours ago did you make the transfer?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:28.503383",
+      "sim_prompt_tokens": 431,
+      "sim_completion_tokens": 102,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed on my end, but the recipient still hasn’t received it. I made the transfer about five hours ago.",
+      "assistant_response": "Thanks—if it’s marked completed on your end but the recipient hasn’t received it after ~5 hours, the most likely issue is that the transfer hasn’t reached the beneficiary yet. Can you tell me whether it was an international transfer or a local transfer, and whether you have the recipient’s name/account details used for the transfer?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:32.081095",
+      "sim_prompt_tokens": 504,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 790,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

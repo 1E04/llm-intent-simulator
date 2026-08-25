@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "24c6cb65-4290-42d7-bf4b-ebcd09f3ce8c",
+  "seed": 42,
+  "dialogue_index": 614,
+  "timestamp": "2026-08-21T15:48:29.249657",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 592,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 315,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When I topped up, the app reverted my funds.",
+      "assistant_response": "Sorry about that—when you say the app reverted your funds, was the top up marked as “reverted” (reversed) in the transaction history, or did it fail with an error? Also, did you top up by card or by bank transfer?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.2
+        },
+        {
+          "intent": "top_up_by_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:25.974037",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as “reverted” in the history, and I topped up using my card.",
+      "assistant_response": "Got it—if your card top up is showing as “reverted,” it means the payment was reversed back to your card. Can you tell me whether the transaction is still marked “reverted” or if it’s now “completed/closed,” and roughly when you made the top up? Then I can guide you on the expected timeframe for the funds to reappear.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.93
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:29.249605",
+      "sim_prompt_tokens": 592,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 169
+    }
+  ]
+}

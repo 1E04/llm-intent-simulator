@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "f9948d2c-0781-4f80-93cf-5a83a1f5d288",
+  "seed": 42,
+  "dialogue_index": 35,
+  "timestamp": "2026-08-24T12:08:36.031081",
+  "persona": "Non-Native Speaker",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2159,
+  "total_sim_completion_tokens": 632,
+  "total_bot_prompt_tokens": 3329,
+  "total_bot_completion_tokens": 509,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card was declined at the store and it says the number is wrong. I think I need a new secret number.",
+      "assistant_response": "Sorry about that—when a card is declined at the store because the number is wrong, can you confirm what you mean by “secret number”: is it your PIN at the payment terminal, or is it the card verification number (CVV) on the receipt/online form?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:14.147542",
+      "sim_prompt_tokens": 415,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I mean the PIN I type at the terminal, the one for the card.",
+      "assistant_response": "Got it—if the issue is the PIN you type at the terminal, it’s most commonly because the PIN is incorrect or the PIN has been blocked. Have you tried entering the PIN multiple times and did you get a message like “PIN failed” or “card locked”?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:16.882910",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 790,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, I tried a few times and it shows “PIN failed”.",
+      "assistant_response": "Thanks—if you’re seeing “PIN failed” after a few tries, your PIN may be incorrect and the card PIN can get blocked. Do you want to unblock/change your PIN now? Also, are you being asked to enter the PIN for a card payment (at the terminal), or for an ATM cash withdrawal?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.09
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:32.341718",
+      "sim_prompt_tokens": 579,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 869,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, please help. I need it for buying things at the store, not for ATM.",
+      "assistant_response": "Okay—since you’re getting “PIN failed” on card payments and you’ve tried a few times, your card PIN is likely blocked. I can help you unblock it by resetting/changing your PIN for card payments. Do you have access to your app right now to change the PIN, or do you need to use an alternative method?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.9
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:36.031005",
+      "sim_prompt_tokens": 667,
+      "sim_completion_tokens": 262,
+      "bot_prompt_tokens": 962,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

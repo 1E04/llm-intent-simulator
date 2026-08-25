@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "c2e4c75c-e70f-4f24-b7be-36f1a56ac1f6",
+  "seed": 42,
+  "dialogue_index": 147,
+  "timestamp": "2026-08-24T12:07:20.886941",
+  "persona": "Gen-Z Slang",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3200,
+  "total_sim_completion_tokens": 663,
+  "total_bot_prompt_tokens": 4444,
+  "total_bot_completion_tokens": 767,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i added cash to my app but it still ain't showing up. 😕",
+      "assistant_response": "Sorry about that—could you confirm whether you paid in **cash via a branch/agent (cheque or cash deposit)** or did you **top up by card/cash at a machine**? Also, about how long ago did you make the top up/deposit?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:09.405168",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "i used my card at a machine, like 20‑30 mins ago.",
+      "assistant_response": "Thanks—if you topped up by **card at an ATM/machine** 20–30 minutes ago, it’s often still **processing**. Is the top up showing in the app as **pending**, or is it showing as **not there at all**? If you can, tell me the status and the amount.",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.34
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:12.777597",
+      "sim_prompt_tokens": 533,
+      "sim_completion_tokens": 196,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "it's not even there, nada. i topped up like $50.",
+      "assistant_response": "Got it—if a $50 card top up at the machine isn’t showing at all after 20–30 minutes, it could be either **still pending** or **failed**. Quick check: do you see anything in your app under **Transactions/Top up** (e.g., “Pending” or a failed message), or do you have the machine receipt showing an **approved/declined** status?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.34
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:15.521495",
+      "sim_prompt_tokens": 625,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 872,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "i checked—nothing in the app, but the receipt says it was approved.",
+      "assistant_response": "Thanks—if the machine receipt says it was **approved** but there’s **nothing** in the app yet, it usually means the top up is still being processed or hasn’t posted successfully.\n\nCan you check the receipt for the **last 4 digits of the card** used and whether it shows a **reference/transaction ID**? If you share that (no full card number), I can help narrow whether it’s pending or needs a refund.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.2
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:18.637548",
+      "sim_prompt_tokens": 733,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 982,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "yeah, last 4 are 8421 and the receipt has ref #A7B9C3. 🙏",
+      "assistant_response": "Thanks—since it was **approved** on the receipt but the top up isn’t appearing yet, it’s most likely **still pending**.\n\nIn the app, do you see that transaction anywhere as **Pending** (even under a different tab like Transactions), or is it completely missing? If it’s completely missing, it may need investigation under the reference **A7B9C3**—can you tell me the **top up date/time** (approx.) and the **currency** of the $50?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.68
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.22
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:20.886807",
+      "sim_prompt_tokens": 850,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 1107,
+      "bot_completion_tokens": 163
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "c2415fa0-7753-4483-a631-013632fe4e55",
+  "seed": 42,
+  "dialogue_index": 67,
+  "timestamp": "2026-08-24T12:09:23.455828",
+  "persona": "Non-Native Speaker",
+  "target_intent": "atm_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2199,
+  "total_sim_completion_tokens": 550,
+  "total_bot_prompt_tokens": 3347,
+  "total_bot_completion_tokens": 674,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I am at the ATM and it says error, it didn't give me any cash.",
+      "assistant_response": "Sorry about that—could you tell me what message the ATM showed (e.g., “declined,” “error,” or “try again”)? Also, has your balance been charged for the withdrawal or does it still look unchanged?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.18
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:13.911366",
+      "sim_prompt_tokens": 418,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed “error” and my balance still the same, no money taken.",
+      "assistant_response": "Thanks—if the ATM showed “error” and your balance hasn’t changed, this usually means the cash withdrawal didn’t complete. Can you confirm whether the ATM displayed any code/instructions like “transaction failed” or did it just show a generic “error”? If you can share any exact wording from the screen, I’ll guide you on the next steps.",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.27
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:17.235213",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It only say “Transaction could not be completed”.",
+      "assistant_response": "Got it—if the ATM says “Transaction could not be completed” and your balance is unchanged, it points to a declined cash withdrawal. Please don’t try multiple times; instead, take the ATM receipt/screenshot if you have it, and wait 30 minutes to an hour for any updates. If after that your balance still won’t change, the withdrawal didn’t go through. If you did receive a transaction reference/receipt, tell me what bank/ATM network and whether you got a receipt—then I’ll advise the safest next step.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:20.267022",
+      "sim_prompt_tokens": 583,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 866,
+      "bot_completion_tokens": 211
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I have a paper receipt, it says Bank of America and the reference number is 839274.",
+      "assistant_response": "Thanks—since the ATM showed “Transaction could not be completed” and your balance is unchanged, this is a declined cash withdrawal. With your receipt (Bank of America, reference 839274), the next step is to wait—usually up to 1 hour—for the status to fully settle, and then check your app/card activity. If the transaction still doesn’t appear or your balance still hasn’t changed after that, contact Bank of America support and quote reference 839274, and let them know the ATM declined and no cash was dispensed. Please also avoid retrying at the ATM to prevent duplicates.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.92
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.06
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:23.455780",
+      "sim_prompt_tokens": 713,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 1006,
+      "bot_completion_tokens": 184
+    }
+  ]
+}

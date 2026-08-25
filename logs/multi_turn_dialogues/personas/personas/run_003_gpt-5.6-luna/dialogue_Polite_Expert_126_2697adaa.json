@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2697adaa-1b09-4fb9-bdeb-5c4b6004c6a2",
+  "seed": 42,
+  "dialogue_index": 126,
+  "timestamp": "2026-08-24T12:02:29.275417",
+  "persona": "Polite Expert",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 927,
+  "total_sim_completion_tokens": 415,
+  "total_bot_prompt_tokens": 1496,
+  "total_bot_completion_tokens": 275,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I noticed an extra amount was taken from my account after I sent a recent payment.",
+      "assistant_response": "Sorry about that—was the extra amount due to a fee shown on the card payment, or are you seeing the same payment charged twice (same merchant and amount)? If you can, tell me the merchant name and the two amounts/charge dates.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.58
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.24
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:25.644812",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a single transfer to Acme Corp – I sent $500 on 15 Aug 2024 and a $5 fee was applied that same day.",
+      "assistant_response": "Thanks—based on what you described, this sounds like the $5 transfer fee applied to your $500 transfer to Acme Corp on 15 Aug 2024. Do you want help confirming whether the fee is expected for that transfer type, or are you seeing the $5 charged again (i.e., a second extra charge)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:29.275290",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 281,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

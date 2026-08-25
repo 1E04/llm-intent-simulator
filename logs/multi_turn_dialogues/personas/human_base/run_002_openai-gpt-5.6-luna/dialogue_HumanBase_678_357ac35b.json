@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "357ac35b-a089-45f6-9340-8d53767988b6",
+  "seed": 42,
+  "dialogue_index": 678,
+  "timestamp": "2026-08-21T13:30:41.725306",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 506,
+  "total_sim_completion_tokens": 86,
+  "total_bot_prompt_tokens": 2224,
+  "total_bot_completion_tokens": 208,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long does it take for funds to come through the US to my account?",
+      "assistant_response": "To help with timing, are you asking about an incoming **bank transfer (ACH/wire) from the US**—and if so, is it **ACH** or a **wire**?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.17
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:39.941647",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 94
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a wire transfer.",
+      "assistant_response": "For a **US wire transfer**, it typically arrives to your account within **1–5 business days** after the sending bank releases it. \n\nIf you share the **date it was sent** (and whether it was marked **incoming wire/Swift**), I can narrow the estimate.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:41.725231",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 86,
+      "bot_prompt_tokens": 1139,
+      "bot_completion_tokens": 114
+    }
+  ]
+}

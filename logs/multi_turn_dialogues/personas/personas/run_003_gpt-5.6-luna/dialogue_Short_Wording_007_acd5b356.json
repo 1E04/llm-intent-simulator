@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "acd5b356-ccb6-4c9e-96b7-56e40d6ed14f",
+  "seed": 42,
+  "dialogue_index": 7,
+  "timestamp": "2026-08-24T12:11:36.618163",
+  "persona": "Short Wording",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 907,
+  "total_sim_completion_tokens": 236,
+  "total_bot_prompt_tokens": 1429,
+  "total_bot_completion_tokens": 230,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Transfer stuck.",
+      "assistant_response": "Sorry about that—when you say the transfer is stuck, is it showing as “pending” in the app, or has it failed/cancelled? Also, roughly when did you make the transfer?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.23
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:33.595304",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Pending. Yesterday.",
+      "assistant_response": "Thanks—if it’s showing as pending and you initiated it yesterday, that’s usually a timing issue. Can you confirm: does it say “pending” or “completed,” and is it a bank transfer or an in-app transfer?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:36.618049",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 742,
+      "bot_completion_tokens": 100
+    }
+  ]
+}

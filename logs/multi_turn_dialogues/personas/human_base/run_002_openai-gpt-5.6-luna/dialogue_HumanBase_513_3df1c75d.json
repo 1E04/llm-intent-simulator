@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "3df1c75d-adff-4220-abac-ffbdda1b3303",
+  "seed": 42,
+  "dialogue_index": 513,
+  "timestamp": "2026-08-21T13:18:36.092709",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1207,
+  "total_sim_completion_tokens": 361,
+  "total_bot_prompt_tokens": 3574,
+  "total_bot_completion_tokens": 464,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What are the ways for others to transfer me money?",
+      "assistant_response": "Sure—there are a few ways others can transfer money to you. The most common are bank transfers into your account details, and in some cases transfers via specific rails supported by your account.\n\nDo you mean *bank transfer to your account* (wire/ACH/SEPA), or are you asking about *card-to-card / internal transfers*?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.83
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.11
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:30.241654",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Both, actually—could you tell me the options?",
+      "assistant_response": "Absolutely—here are the main options for others to send you money:\n\n1) **Bank transfer into your account**: They can send money using your account details (e.g., SEPA/wire/ACH depending on your country).\n\n2) **Card-to-card / internal transfers (if available on your account)**: Some transfers can be made directly between users using the in-app transfer features.\n\n3) **International transfers**: If the sender is outside your transfer region, they may need to use the international/wire method.\n\nWhich one are you interested in for the next step: **bank transfer details**, or **in-app/card-to-card transfers**?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:33.430648",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 238,
+      "bot_prompt_tokens": 1171,
+      "bot_completion_tokens": 195
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’d like the bank transfer details, please.",
+      "assistant_response": "Sure—if you want others to transfer you money by **bank transfer**, they’ll need your **account details** (your personal IBAN/account number and, if required, the bank/route info).\n\nTo make sure I give the right details, which country are you in (or which currency/account type is shown in your app)—and are you receiving via **SEPA** or **international/wire**?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.9
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:36.092206",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1323,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

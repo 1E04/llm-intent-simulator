@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "cf3eaa59-9cdb-404d-8b66-96697e9e5f82",
+  "seed": 42,
+  "dialogue_index": 14,
+  "timestamp": "2026-08-24T12:03:41.862001",
+  "persona": "Gen-Z Slang",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1579,
+  "total_sim_completion_tokens": 394,
+  "total_bot_prompt_tokens": 2388,
+  "total_bot_completion_tokens": 456,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "yo i sent cash to my friend and they’re saying it never popped up. 😕",
+      "assistant_response": "Sorry about that—when you say “cash to my friend,” was it a bank transfer or an in-app card-to-card transfer? Also, about how long ago did you send it? (If you have a transaction/reference ID, share that too.)",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.58
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:35.476281",
+      "sim_prompt_tokens": 442,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was an in‑app card‑to‑card, sent like 2 hrs ago. ref id: tx‑a7b9c3.",
+      "assistant_response": "Thanks—since it’s a card-to-card transfer and it was sent about 2 hours ago, it could be pending or not yet received. Can you confirm: does the transfer show as completed/successful in your app, or is it still marked pending? (If you can, tell me the status for ref ID tx-a7b9c3.)",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:39.064077",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 166
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "it says completed, but my friend still ain’t got it.",
+      "assistant_response": "Got it—if the in-app card-to-card transfer for ref ID tx-a7b9c3 is marked **completed** in your app but your friend hasn’t received it, the most likely issue is **transfer not received by recipient**. \n\nCan you check whether your friend’s account/card details are correct (same recipient, correct phone/email/account), and confirm they’re using the same profile that should receive the transfer?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:41.861873",
+      "sim_prompt_tokens": 626,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 891,
+      "bot_completion_tokens": 144
+    }
+  ]
+}

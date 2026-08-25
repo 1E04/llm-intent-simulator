@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "d18e53b2-eea8-4bb3-b33b-e7e978c293b7",
+  "seed": 42,
+  "dialogue_index": 102,
+  "timestamp": "2026-08-24T11:53:06.390710",
+  "persona": "Angry Layperson",
+  "target_intent": "exchange_rate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1522,
+  "total_sim_completion_tokens": 505,
+  "total_bot_prompt_tokens": 2392,
+  "total_bot_completion_tokens": 463,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got hit with a huge extra charge on my overseas purchase—this is ridiculous!",
+      "assistant_response": "I’m sorry about that—an overseas card purchase can sometimes include an extra exchange-related charge or show as an additional fee on your statement. Can you tell me what country/currency the purchase was made in and whether the “extra charge” appears as a separate line item or as part of the exchange rate?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.48
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.35
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:59.980203",
+      "sim_prompt_tokens": 420,
+      "sim_completion_tokens": 272,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was in Japan, yen, and the extra fee shows up as its own line on the statement—totally absurd.",
+      "assistant_response": "Thanks—if the extra fee is a separate line on a Japan (JPY) card purchase, it’s most likely the card’s exchange-related fee. Can you confirm whether you’re seeing something like an “exchange fee”/“FX fee” line on the statement (and the exact wording/amount)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:03.058769",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 799,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yeah, it says “FX fee – $5.99” right there as a separate line.",
+      "assistant_response": "Got it—since you’re seeing a separate “FX fee – $5.99” line for a Japan (JPY) purchase, this is specifically the card exchange/FX fee. Are you asking why the FX fee was charged, or do you want to dispute/claim it back?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.54
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:06.390534",
+      "sim_prompt_tokens": 599,
+      "sim_completion_tokens": 80,
+      "bot_prompt_tokens": 891,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

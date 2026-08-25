@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f271677a-f225-48a6-a445-5aea8388d0e5",
+  "seed": 42,
+  "dialogue_index": 65,
+  "timestamp": "2026-08-24T12:13:18.852453",
+  "persona": "Short Wording",
+  "target_intent": "unable_to_verify_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1462,
+  "total_sim_completion_tokens": 370,
+  "total_bot_prompt_tokens": 2280,
+  "total_bot_completion_tokens": 445,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Identity check fails.",
+      "assistant_response": "Sorry about that—could you tell me what message you see during the identity check (e.g., “failed verification” or “couldn’t verify”), and whether you’re checking in the app or on a website?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.7
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.2
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:12.400893",
+      "sim_prompt_tokens": 422,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Failed verification, app.",
+      "assistant_response": "Sorry—your identity verification failed in the app. Please double-check you entered the same details as your document (name, date of birth, document number), and make sure the photo is clear with no glare. After that, try verification again. If it still fails, tell me what exact error text you see (or the closest wording) and whether you’re verifying with a passport/driving licence/ID card.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.88
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.74
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:15.986892",
+      "sim_prompt_tokens": 471,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 747,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Mismatch error, passport.",
+      "assistant_response": "Thanks—since you’re seeing a “mismatch” error during app verification with a passport, it usually means the details on your passport don’t exactly match what you entered in the app. Please re-check that your name, passport number, and date of birth are entered exactly the same as on the passport (including spacing/suffixes), then re-upload a clear photo of the passport page and try again. If it still shows “mismatch,” tell me the exact wording of the error and what fields it mentions (e.g., name vs DOB vs document number).",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.88
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.1
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:18.852317",
+      "sim_prompt_tokens": 569,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 845,
+      "bot_completion_tokens": 170
+    }
+  ]
+}

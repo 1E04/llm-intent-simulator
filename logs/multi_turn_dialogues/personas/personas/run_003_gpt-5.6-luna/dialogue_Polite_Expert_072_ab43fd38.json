@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ab43fd38-1b9b-4fa7-9500-8829785a7c07",
+  "seed": 42,
+  "dialogue_index": 72,
+  "timestamp": "2026-08-24T12:01:18.022802",
+  "persona": "Polite Expert",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1049,
+  "total_sim_completion_tokens": 214,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 282,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see a charge on my recent statement that I don’t recognize.",
+      "assistant_response": "Sorry about that—can you confirm whether the unrecognized charge is a card payment (merchant purchase) or an extra charge/fee showing on your statement? If you can, tell me the merchant name and the amount.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:11.608671",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a merchant purchase – the charge is from “TechGear Supplies” for £127.45.",
+      "assistant_response": "Thanks—if you don’t recognize “TechGear Supplies” for £127.45, I can help you report it. Is this payment already showing as completed/charged on your statement, or is it still pending?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:18.022659",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

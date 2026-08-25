@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f7dadbe7-ff4e-4e7a-8477-e712d314c304",
+  "seed": 42,
+  "dialogue_index": 1,
+  "timestamp": "2026-08-24T11:47:52.441594",
+  "persona": "Angry Layperson",
+  "target_intent": "exchange_rate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1539,
+  "total_sim_completion_tokens": 689,
+  "total_bot_prompt_tokens": 2413,
+  "total_bot_completion_tokens": 451,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got hit with a huge extra charge on my overseas purchase—it's ridiculous!",
+      "assistant_response": "Sorry about that—when you say “extra charge” on an overseas purchase, is it the currency conversion fee/exchange cost, or an additional card payment fee that’s higher than expected? If you tell me what the charge says on your statement (or the amount and currency), I can point you to the right help.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.62
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:44.495150",
+      "sim_prompt_tokens": 420,
+      "sim_completion_tokens": 221,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows a $45.67 charge for a €40 purchase, and there’s an extra $5 fee I didn’t expect.",
+      "assistant_response": "Thanks—just to confirm, you’re seeing €40 turned into $45.67, plus an extra $5 fee on the same card purchase. Is that extra $5 labelled as a fee/charge (e.g., “service fee” or “extra charge”), and do you want help with the exchange-rate amount, the extra fee, or both?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.17
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:49.212343",
+      "sim_prompt_tokens": 505,
+      "sim_completion_tokens": 254,
+      "bot_prompt_tokens": 803,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yeah, it just says “extra charge.” I want both that messed‑up conversion and the random $5 fixed.",
+      "assistant_response": "Got it—you’re disputing (1) the exchange rate/amount (€40 becoming $45.67) and (2) an additional $5 marked as “extra charge.” To help, can you confirm the date of the transaction and whether it’s marked as a card purchase/merchant exchange (not a cash withdrawal or transfer)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.63
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-24T11:47:52.441488",
+      "sim_prompt_tokens": 614,
+      "sim_completion_tokens": 214,
+      "bot_prompt_tokens": 909,
+      "bot_completion_tokens": 163
+    }
+  ]
+}

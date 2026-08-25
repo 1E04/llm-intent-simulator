@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4327d9d3-ee53-4c36-9643-3b8739b909da",
+  "seed": 42,
+  "dialogue_index": 36,
+  "timestamp": "2026-08-24T11:49:32.236144",
+  "persona": "Angry Layperson",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1658,
+  "total_sim_completion_tokens": 389,
+  "total_bot_prompt_tokens": 2429,
+  "total_bot_completion_tokens": 453,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card keeps getting blocked every time I try to put money on my account!",
+      "assistant_response": "Sorry to hear that—when you say “card keeps getting blocked” while topping up, do you mean the card is being blocked for security after repeated attempts (PIN blocked), or the top-up itself is failing/being declined? Also, are you topping up by card, and does it show any error message?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.34
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.32
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:26.925988",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s being declined every single time—just a plain “transaction declined” message, no other info. I’ve tried a different card too, same crap.",
+      "assistant_response": "Got it—if top ups by card are repeatedly showing a plain “transaction declined,” it’s most likely a card top-up being rejected. Can you confirm: (1) are you trying to top up with your debit/credit card (not bank transfer), and (2) does the app show any specific status like “failed,” “pending,” or “declined,” or is it exactly “transaction declined” every time?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.49
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:29.614452",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 805,
+      "bot_completion_tokens": 180
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yeah, it’s my debit card, not a bank transfer, and every time it just says “transaction declined.”",
+      "assistant_response": "Thanks—if card top-ups are getting a straight “transaction declined,” that matches a failed top up by card. A quick check: are you topping up through the app/website with your debit card (not in-store), and has that specific debit card worked for any other online purchases recently?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:49:32.236096",
+      "sim_prompt_tokens": 665,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 924,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

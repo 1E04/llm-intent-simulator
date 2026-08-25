@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b2968a50-916a-4855-8e97-0e36ed135b09",
+  "seed": 42,
+  "dialogue_index": 79,
+  "timestamp": "2026-08-24T12:01:22.872373",
+  "persona": "Polite Expert",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 915,
+  "total_sim_completion_tokens": 199,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 253,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I made a transfer to my account earlier today, but the funds haven’t shown up in my balance yet.",
+      "assistant_response": "Sorry about that—was the transfer made via bank transfer (from another bank), and roughly how long ago did you send it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:20.628259",
+      "sim_prompt_tokens": 433,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was a bank transfer from my other bank, and I initiated it about three hours ago.",
+      "assistant_response": "Thanks—since it’s a bank transfer from another bank and you initiated it about three hours ago, it may still be processing. Transfers can take up to 1 business day (sometimes longer depending on the banks). Could you confirm whether you’ve received a transfer reference/confirmation from your sending bank, and whether there’s any status shown there (e.g., pending or completed)?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:22.872270",
+      "sim_prompt_tokens": 482,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bf03205d-978b-4239-aa3a-bef23297230c",
+  "seed": 42,
+  "dialogue_index": 102,
+  "timestamp": "2026-08-24T11:58:01.353382",
+  "persona": "Panicking Emergency",
+  "target_intent": "exchange_rate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 906,
+  "total_sim_completion_tokens": 489,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 290,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The amount I got is way off! I need this fixed now!",
+      "assistant_response": "I’m sorry about that—could you tell me what transaction this is for (cash withdrawal, card payment, or bank transfer) and what exactly is “way off” (the amount in your card/bank/app, or the exchange rate)?",
+      "predicted_intent": "wrong_amount_of_cash_received",
+      "top_3_intents": [
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:58.257771",
+      "sim_prompt_tokens": 420,
+      "sim_completion_tokens": 303,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment – the conversion amount is completely wrong.",
+      "assistant_response": "Got it—this is a card payment where the conversion amount looks wrong. Can you share the merchant name and the two amounts shown (the amount you paid in the local currency and the converted amount on your statement/app), and roughly when the transaction happened?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:01.353189",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

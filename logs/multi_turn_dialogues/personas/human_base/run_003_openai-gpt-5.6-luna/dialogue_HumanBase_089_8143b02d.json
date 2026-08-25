@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "8143b02d-70ab-4b4a-b27b-584fd50b5880",
+  "seed": 42,
+  "dialogue_index": 89,
+  "timestamp": "2026-08-21T15:38:47.101337",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1961,
+  "total_sim_completion_tokens": 502,
+  "total_bot_prompt_tokens": 3430,
+  "total_bot_completion_tokens": 543,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to transfer money but it said it wasn't possible? I've done this before and it worked why isn't it working now?",
+      "assistant_response": "Sorry about that—when you say it “wasn’t possible,” do you see an error message like **declined** or **failed** (and can you share the exact wording)? Also, was the transfer to a **bank account** or **another user within the app**?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.44
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:38.505721",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows “Transfer not possible,” and I was sending it to a bank account.",
+      "assistant_response": "Thanks—“Transfer not possible” to a bank account usually means the bank transfer was declined or couldn’t be completed.\n\nCan you tell me: (1) what error code/message you see after clicking into the transfer, and (2) whether this is a transfer you set up to a *new* bank account or one you used before? Also, about how long ago did you try?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:41.572302",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Just the same “Transfer not possible” message—no extra code. It’s an account I’ve used before and I tried it today.",
+      "assistant_response": "Got it—since it’s specifically showing “Transfer not possible” and there’s no extra code, this is most likely a **failed/declined bank transfer** attempt.\n\nTo narrow it down: was the transfer showing as **pending** and then stopping, or does it **fail immediately** when you submit? Also, roughly how much did you try to send?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.7
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:44.540388",
+      "sim_prompt_tokens": 652,
+      "sim_completion_tokens": 232,
+      "bot_prompt_tokens": 912,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It fails right away—no pending status. I was trying to send about $500.",
+      "assistant_response": "Thanks—if it fails right away with “Transfer not possible” when sending to a bank account, that typically means the transfer was **declined**.\n\nTo check the reason, can you confirm whether the transfer was attempted **from your Revolut balance** or **from a linked bank account**—and which country/bank account you’re sending to?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:47.101228",
+      "sim_prompt_tokens": 764,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 1014,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

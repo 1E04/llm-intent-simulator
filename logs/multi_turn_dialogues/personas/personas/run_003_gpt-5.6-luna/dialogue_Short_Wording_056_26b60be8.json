@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "26b60be8-a27c-4267-a3ab-ceaf73c7a0b8",
+  "seed": 42,
+  "dialogue_index": 56,
+  "timestamp": "2026-08-24T12:13:04.311923",
+  "persona": "Short Wording",
+  "target_intent": "getting_virtual_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1407,
+  "total_sim_completion_tokens": 663,
+  "total_bot_prompt_tokens": 2220,
+  "total_bot_completion_tokens": 336,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Missing e‑card",
+      "assistant_response": "Sorry—do you mean your e-card/virtual card hasn’t been generated in the app yet, or you’ve ordered it but it hasn’t arrived/appeared?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.55
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.2
+        },
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:58.742045",
+      "sim_prompt_tokens": 422,
+      "sim_completion_tokens": 312,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 90
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Not generated.",
+      "assistant_response": "Got it—your virtual/e-card hasn’t been generated yet. Have you already tried generating it in the app (e.g., under Cards → Virtual/Request e-card), and do you see any error message or status like “pending”?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.14
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:01.154215",
+      "sim_prompt_tokens": 462,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 735,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Tried, nothing",
+      "assistant_response": "Sorry about that. Let’s get your e‑card generated—when you tap to generate it in the app, do you see a status like “pending/loading,” an error message, or does nothing happen at all?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:04.311769",
+      "sim_prompt_tokens": 523,
+      "sim_completion_tokens": 205,
+      "bot_prompt_tokens": 797,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

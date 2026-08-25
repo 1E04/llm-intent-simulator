@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "128553a7-3903-488e-886d-9f975741bc6b",
+  "seed": 42,
+  "dialogue_index": 56,
+  "timestamp": "2026-08-24T12:04:55.560958",
+  "persona": "Gen-Z Slang",
+  "target_intent": "getting_virtual_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2109,
+  "total_sim_completion_tokens": 579,
+  "total_bot_prompt_tokens": 3240,
+  "total_bot_completion_tokens": 509,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i need a card on my phone right now, but i can't see anything in the app.",
+      "assistant_response": "Sure—I can help. When you say you need a card on your phone, do you mean adding your physical card to Apple Pay/Google Pay, or getting/using a virtual card inside the app?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.28
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:44.297512",
+      "sim_prompt_tokens": 424,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "i'm talking about the one inside the app, not Apple/Google Pay.",
+      "assistant_response": "Got it—an in-app virtual card. Are you unable to see the virtual card at all in the app, or do you see it but it won’t work (e.g., declined/failed payments)?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.17
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:49.209195",
+      "sim_prompt_tokens": 488,
+      "sim_completion_tokens": 198,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "i don't see it anywhere in the app, like it's just missing.",
+      "assistant_response": "Thanks—if the virtual card is missing, it could be that you haven’t generated it yet, or it’s not available on your account. Are you looking for the standard virtual card specifically (not disposable), and what type of account do you have in the app (standard/free vs business/other)?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.76
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.15
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:52.528201",
+      "sim_prompt_tokens": 556,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 838,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "yeah, just the regular virtual card. i’m on a personal free account.",
+      "assistant_response": "Understood—you’re on a personal free account and the regular virtual card is missing in the app. To narrow it down: are you currently trying to *create/enable* the virtual card (it hasn’t been generated yet), or did you have it before and it has disappeared?",
+      "predicted_intent": "getting_virtual_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_virtual_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:55.560789",
+      "sim_prompt_tokens": 641,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 925,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

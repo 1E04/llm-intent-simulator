@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "65e115b5-1a59-4eff-8c61-6e167234b1f6",
+  "seed": 42,
+  "dialogue_index": 653,
+  "timestamp": "2026-08-21T15:49:27.150626",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1257,
+  "total_sim_completion_tokens": 417,
+  "total_bot_prompt_tokens": 2374,
+  "total_bot_completion_tokens": 470,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How to I transfer my funds into my account?",
+      "assistant_response": "Sure—do you mean adding money via a bank transfer (to your account), or sending money to someone else? If it’s the bank transfer, are you transferring from your bank to your Revolut account or from another Revolut user?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.84
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:19.735071",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m trying to move money from my bank into my Revolut account, not send it to anyone.",
+      "assistant_response": "Got it—you want to add money from your bank into your Revolut account (a bank transfer top up). \n\nTo do this, you’ll need to use your Revolut account details: open the app → **Transf ers** (or **Add money**) → choose **Bank transfer** → copy your **local account details** and send the transfer from your bank.\n\nWhich country/bank transfer type are you using (UK/SEPA/other), and is the transfer already sent or are you about to make it?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.66
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.22
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:24.000158",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 254,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm in the UK, using a local transfer, and I'm about to send the money.",
+      "assistant_response": "Great—since you’re in the UK doing a local transfer to add money, you’ll want to make a bank transfer into your Revolut account.\n\nIn the app: **Transfers / Add money → Bank transfer → UK local transfer**, then copy your **personal sort code and account number** (or the payment reference) and send the money from your UK bank.\n\nBefore you send it: did you already enter the correct **reference/message** Revolut provides, and do you know which amount you’re sending?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:27.150459",
+      "sim_prompt_tokens": 697,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 907,
+      "bot_completion_tokens": 163
+    }
+  ]
+}

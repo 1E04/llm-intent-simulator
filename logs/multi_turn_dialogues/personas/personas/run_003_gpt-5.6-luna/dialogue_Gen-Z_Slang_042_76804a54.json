@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "76804a54-1225-47e9-8bdd-47252c2f75b3",
+  "seed": 42,
+  "dialogue_index": 42,
+  "timestamp": "2026-08-24T12:04:30.949515",
+  "persona": "Gen-Z Slang",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1578,
+  "total_sim_completion_tokens": 355,
+  "total_bot_prompt_tokens": 2393,
+  "total_bot_completion_tokens": 451,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just sent cash to the wrong person and need to stop it ASAP.",
+      "assistant_response": "I’m sorry—can you confirm what type of “cash to the wrong person” you mean: a bank transfer you sent to their bank details, or a cash deposit/withdrawal? If it’s a transfer, tell me whether the payment is already marked as completed, or still pending—then I can advise on the fastest way to try to stop/cancel it.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:24.229872",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 105,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's still pending, hasn't gone through yet.",
+      "assistant_response": "Got it—if the transfer is still pending, the fastest option is to try to cancel it. Can you confirm: is this a card-to-bank transfer you initiated from within the app (bank transfer), and do you see a “pending” status/transaction reference for it in your app? If yes, I’ll tell you the steps to cancel it immediately.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:26.784219",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "yeah, it's a bank transfer in the app, got the pending status and the ref number.",
+      "assistant_response": "Thanks—since it’s a bank transfer you initiated in the app and it’s still marked as pending, you should be able to stop it by cancelling the transfer. In the app, open **Transfers/Activity**, find the transaction with that reference number, then select **Cancel transfer** (if the option appears while it’s pending). If you don’t see the cancel option, tell me what statuses you see (e.g., “pending”, “processing”), and I’ll help you with the next best step.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.87
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:30.949407",
+      "sim_prompt_tokens": 619,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 897,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

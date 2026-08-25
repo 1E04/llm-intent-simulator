@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "564d66bf-47c8-4b7b-99cb-a6f968f827ed",
+  "seed": 42,
+  "dialogue_index": 87,
+  "timestamp": "2026-08-24T12:01:33.303138",
+  "persona": "Polite Expert",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 834,
+  "total_sim_completion_tokens": 322,
+  "total_bot_prompt_tokens": 1496,
+  "total_bot_completion_tokens": 291,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I received a notice that a recent transfer is on hold pending additional information about the origin of the funds.",
+      "assistant_response": "Thanks for letting us know. To help me point you to the right next step: is the transfer on hold because you need to provide documents/details about where the money came from (source of funds), or is it because your identity still needs verification?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.78
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:30.043564",
+      "sim_prompt_tokens": 380,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 108
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the source‑of‑funds request—I’ve been asked to provide documentation showing where the money originated.",
+      "assistant_response": "Got it—you’re dealing with a source-of-funds request. Please upload the requested documents that show where the funds originated (e.g., salary/pay slips, bank statements, sale agreement/invoice, tax documents, or pension/benefits proof), and make sure the names and amounts match your account. If you tell me what documents you were asked for (and the transfer amount/currency), I can guide you on exactly what to provide.",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.9
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.06
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:33.303054",
+      "sim_prompt_tokens": 454,
+      "sim_completion_tokens": 178,
+      "bot_prompt_tokens": 789,
+      "bot_completion_tokens": 183
+    }
+  ]
+}

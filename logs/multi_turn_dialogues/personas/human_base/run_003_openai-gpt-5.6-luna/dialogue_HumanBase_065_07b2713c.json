@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "07b2713c-60fe-4857-a691-32b3a2d245bb",
+  "seed": 42,
+  "dialogue_index": 65,
+  "timestamp": "2026-08-21T15:38:15.663850",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 536,
+  "total_sim_completion_tokens": 204,
+  "total_bot_prompt_tokens": 1437,
+  "total_bot_completion_tokens": 239,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When will my balance update after a transfer?",
+      "assistant_response": "To help me pinpoint it: was this transfer made by bank transfer (not card), and is it showing as pending or completed on your side?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:12.241518",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer and it’s showing as completed.",
+      "assistant_response": "Thanks—if the bank transfer is marked completed but your balance hasn’t updated, it’s usually a timing/reflection issue between banks. Please tell me: (1) the transfer date/time, and (2) whether the payment shows any reference/trace number and the recipient account name matches yours.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:15.663739",
+      "sim_prompt_tokens": 536,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 744,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

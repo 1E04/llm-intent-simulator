@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6b6382ca-2cef-4958-b2b2-dc7fe9ed519e",
+  "seed": 42,
+  "dialogue_index": 60,
+  "timestamp": "2026-08-24T11:56:46.588969",
+  "persona": "Panicking Emergency",
+  "target_intent": "activate_my_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1057,
+  "total_sim_completion_tokens": 266,
+  "total_bot_prompt_tokens": 1492,
+  "total_bot_completion_tokens": 311,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm at the store and my new card is being rejected!",
+      "assistant_response": "Sorry about that—when you say it’s being rejected at the store, is the card payment getting declined on the terminal, or is the card itself not working (e.g., contactless won’t read / chip-and-PIN rejected)? Also, are you trying to pay with the physical new card for the first time?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.18
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:43.322050",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The terminal just says declined—chip‑and‑PIN won’t work. It’s my first try with the new card.",
+      "assistant_response": "Thanks—if the terminal shows “declined” on your first chip-and-PIN attempt, the most common cause is that the card isn’t activated or there’s a setup/security step still pending.\n\nCan you confirm whether you’ve already activated the new card? If yes, try again with chip-and-PIN, and if it still declines, tell me whether you’re paying in your card’s supported country/currency and whether the payment amount is within your available balance.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.09
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:46.588877",
+      "sim_prompt_tokens": 568,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

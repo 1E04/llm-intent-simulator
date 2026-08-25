@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2053d237-4de9-4fcd-aac7-ddc8e1b91b3c",
+  "seed": 42,
+  "dialogue_index": 128,
+  "timestamp": "2026-08-24T12:06:48.100840",
+  "persona": "Gen-Z Slang",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 989,
+  "total_sim_completion_tokens": 239,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried loading money onto my card and it just got stopped, what's the deal?",
+      "assistant_response": "Sorry about that—when you say the top up was “stopped,” do you see an error message or a status like failed/pending on the transaction? And was the top up by bank card, bank transfer, or cash/cheque?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_by_card",
+          "confidence": 0.14
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:45.129122",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 101,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "yeah, it says “failed” and I was trying to add cash with my bank card.",
+      "assistant_response": "Got it—if the top up shows as “failed,” that’s usually due to a card/payment issue rather than the cash itself. Are you able to confirm whether the top up was made by bank card (not bank transfer), and did you get any error code/message in the app or on your bank statement?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:48.100705",
+      "sim_prompt_tokens": 530,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

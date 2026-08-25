@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c45cf8a8-3a41-46b7-afa9-d6c1cfbe0776",
+  "seed": 42,
+  "dialogue_index": 126,
+  "timestamp": "2026-08-24T12:14:58.399094",
+  "persona": "Short Wording",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 911,
+  "total_sim_completion_tokens": 315,
+  "total_bot_prompt_tokens": 1436,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Extra charge.",
+      "assistant_response": "I can help—could you tell me what the extra charge was for (card payment, cash withdrawal, top up, or bank transfer), and whether you mean it’s showing on your statement/app as a specific fee or an unexpected amount?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.44
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:55.040905",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Bank transfer fee.",
+      "assistant_response": "Thanks—so the extra charge you’re seeing is a fee on a bank transfer. Can you confirm whether the fee was charged on the sender side (your transfer) or taken out by the receiving bank, and what amount/time it appears on your statement or app?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:58.399029",
+      "sim_prompt_tokens": 482,
+      "sim_completion_tokens": 166,
+      "bot_prompt_tokens": 749,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "06764192-92e2-4e22-b2ca-ded86af341a1",
+  "seed": 42,
+  "dialogue_index": 118,
+  "timestamp": "2026-08-24T11:53:39.737426",
+  "persona": "Angry Layperson",
+  "target_intent": "fiat_currency_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 925,
+  "total_sim_completion_tokens": 380,
+  "total_bot_prompt_tokens": 1513,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why the hell can't I use my account in my own country's money? Every transaction just gets blocked!",
+      "assistant_response": "I’m sorry you’re running into that. To pinpoint it: when you say transactions are “blocked,” are you seeing a specific message at checkout/ATM (e.g., card payment declined), and is the issue with your card working in your country or with a particular currency you’re trying to pay in?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:36.923116",
+      "sim_prompt_tokens": 421,
+      "sim_completion_tokens": 232,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just flashes “currency not supported” every time I try to pay in euros, even though I’m in Europe. The card’s being rejected at the shop.",
+      "assistant_response": "Got it—if you see “currency not supported” when paying in euros, that’s usually because the merchant is trying to charge/settle in a currency your card account doesn’t support for card payments. Can you tell me whether your account base/primary currency is set to EUR, or a different currency (e.g., GBP/USD)? Also, which card type do you have (physical or virtual)?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.86
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.09
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:39.737219",
+      "sim_prompt_tokens": 504,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 809,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

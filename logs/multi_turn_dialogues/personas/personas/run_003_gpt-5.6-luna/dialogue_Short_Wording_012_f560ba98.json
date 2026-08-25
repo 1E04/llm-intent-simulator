@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f560ba98-c9ad-46bd-a1b5-e26cc24396d9",
+  "seed": 42,
+  "dialogue_index": 12,
+  "timestamp": "2026-08-24T12:11:48.022459",
+  "persona": "Short Wording",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1515,
+  "total_sim_completion_tokens": 363,
+  "total_bot_prompt_tokens": 2200,
+  "total_bot_completion_tokens": 369,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Fee on transfer.",
+      "assistant_response": "Sorry—do you mean you were charged a fee for sending a transfer, or that a fee was applied due to an exchange rate (if currency conversion happened)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:42.399041",
+      "sim_prompt_tokens": 466,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Transfer fee.",
+      "assistant_response": "Got it—was the transfer completed successfully, and you’re just asking about the fee that was charged (for example, shown in the transfer details or on your statement)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:45.361491",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 733,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes.",
+      "assistant_response": "Thanks for confirming. It sounds like you’re asking about the transfer fee that was charged. Can you tell me the transfer type (bank transfer/SWIFT) and the currency, and whether you can see the fee amount on your transfer screen or statement? Then I can guide you to the exact fee details.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:48.022348",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

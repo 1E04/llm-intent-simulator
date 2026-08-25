@@ -11,6 +11,10 @@ from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, asdict
 from openai import OpenAI
 from dotenv import load_dotenv
+import concurrent.futures
+import threading
+
+import intent_clustering
 
 # Safely resolve the .env file relative to THIS script's actual location
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -243,6 +247,28 @@ class DialogueLogger:
 
         return dialogue_id
 
+    def is_completed(self, persona: str, dialogue_index: int) -> bool:
+        prefix = f"dialogue_{persona.replace(' ', '_')}_{dialogue_index:03d}_"
+        for filename in os.listdir(self.output_dir):
+            if filename.startswith(prefix) and filename.endswith(".json"):
+                return True
+        return False
+
+    def load_existing_token_counts(self) -> Tuple[int, int, int, int]:
+        tot_sim_p, tot_sim_c, tot_bot_p, tot_bot_c = 0, 0, 0, 0
+        for filename in os.listdir(self.output_dir):
+            if filename.startswith("dialogue_") and filename.endswith(".json"):
+                try:
+                    with open(os.path.join(self.output_dir, filename), "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        tot_sim_p += data.get("total_sim_prompt_tokens", 0)
+                        tot_sim_c += data.get("total_sim_completion_tokens", 0)
+                        tot_bot_p += data.get("total_bot_prompt_tokens", 0)
+                        tot_bot_c += data.get("total_bot_completion_tokens", 0)
+                except Exception:
+                    pass
+        return tot_sim_p, tot_sim_c, tot_bot_p, tot_bot_c
+
 
 # =====================================================================
 # 3. REPRODUCIBLE LABEL SAMPLER
@@ -291,17 +317,30 @@ class UserSimulator:
             dialogue_history: List[Dict[str, str]],
             target_intent: Optional[str] = None,
             jailbreak_payload: str = "",
-            turn_idx: int = 1
+            turn_idx: int = 1,
+            drift_avoidance_labels: Optional[List[str]] = None
     ) -> Tuple[str, int, int]:
 
         persona_style = self.profile_data["personas"].get(persona, "Speak naturally.")
         system_prompt = self.profile_data["simulator_system_prompt"]
+
+        if "{persona_style}" in system_prompt:
+            system_prompt = system_prompt.replace("{persona_style}", persona_style)
+        if "{persona}" in system_prompt:
+            system_prompt = system_prompt.replace("{persona}", persona)
 
         # Only inject intent variables if a valid intent exists
         if target_intent:
             forbidden_label_text = target_intent.replace("_", " ")
             system_prompt = system_prompt.replace("{target_intent}", target_intent)
             system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
+            
+        if drift_avoidance_labels:
+            system_prompt += (
+                f"\n\nCRITICAL ANTI-DRIFT INSTRUCTION:\n"
+                f"Your assigned intent is strictly '{target_intent}'. "
+                f"DO NOT accidentally drift into or mention issues related to these similar topics: {', '.join(drift_avoidance_labels)}."
+            )
 
         # INJECT Hugging Face PAYLOAD if the placeholder exists in the prompt
         if "{jailbreak_payload}" in system_prompt:
@@ -425,7 +464,8 @@ class MultiTurnTestHarness:
             logger: DialogueLogger,
             profile_data: Dict[str, Any],
             labels: Optional[List[str]] = None,
-            seed: int = 42
+            seed: int = 42,
+            intent_clusters: Optional[Dict[str, List[str]]] = None
     ):
         self.seed = seed
         self.user_sim = user_sim
@@ -433,6 +473,7 @@ class MultiTurnTestHarness:
         self.logger = logger
         self.profile_data = profile_data
         self.labels = labels if labels else target_bot.allowed_labels
+        self.intent_clusters = intent_clusters or {}
 
         self.global_sim_prompt_tokens = 0
         self.global_sim_completion_tokens = 0
@@ -446,7 +487,9 @@ class MultiTurnTestHarness:
             self,
             num_dialogues_per_persona: int = 50,
             max_turns: int = 5,
-            adversarial_payloads: List[str] = None
+            adversarial_payloads: List[str] = None,
+            concurrency: int = 1,
+            start_index: int = 0
     ):
         is_ood = self.profile_data.get("is_ood", False)
         is_adversarial = self.profile_data.get("is_adversarial", False)
@@ -476,96 +519,150 @@ class MultiTurnTestHarness:
         print(f" Target Bot Model: {self.target_bot.model_name}")
         print(f" Dialogues Per Persona: {num_dialogues_per_persona}")
         print(f" Total Dialogues to Generate: {total_simulations}")
+        print(f" Concurrency: {concurrency}")
+        if start_index > 0:
+            print(f" Starting from index (across all tasks): {start_index}")
         print(f"=======================================================\n")
 
         completed_count = 0
+        
+        # Load tokens from previous interrupted runs if resuming into an existing directory
+        sp, sc, bp, bc = self.logger.load_existing_token_counts()
+        self.global_sim_prompt_tokens += sp
+        self.global_sim_completion_tokens += sc
+        self.global_bot_prompt_tokens += bp
+        self.global_bot_completion_tokens += bc
+        
+        def run_single_dialogue(persona: str, target_intent: str, idx: int, current_payload: str):
+            dialogue_history = []
+            turn_logs: List[TurnLog] = []
+            drift_avoidance_labels = self.intent_clusters.get(target_intent, []) if target_intent else []
 
-        for persona in personas.keys():
-            print(f"\n>>> Running Persona: [{persona}] ({num_dialogues_per_persona} dialogues)")
+            sim_prompt_tokens = 0
+            sim_completion_tokens = 0
+            bot_prompt_tokens = 0
+            bot_completion_tokens = 0
 
-            for idx, target_intent in enumerate(target_intents, start=1):
-                dialogue_history = []
-                turn_logs: List[TurnLog] = []
-
-                # Select a random adversarial payload
-                current_payload = payload_rng.choice(adversarial_payloads)
-
-                for turn_idx in range(1, max_turns + 1):
-                    user_text, sim_p_tok, sim_c_tok = self.user_sim.generate_user_turn(
-                        persona=persona,
-                        dialogue_history=dialogue_history,
-                        target_intent=target_intent,
-                        jailbreak_payload=current_payload,
-                        turn_idx=turn_idx
-                    )
-
-                    self.global_sim_prompt_tokens += sim_p_tok
-                    self.global_sim_completion_tokens += sim_c_tok
-                    dialogue_history.append({"role": "user", "content": user_text})
-
-                    bot_output, bot_p_tok, bot_c_tok = self.target_bot.process_user_turn(dialogue_history)
-
-                    self.global_bot_prompt_tokens += bot_p_tok
-                    self.global_bot_completion_tokens += bot_c_tok
-
-                    top_3 = bot_output.get("top_3_intents", [])
-                    assistant_text = bot_output.get("response_text", "")
-
-                    dialogue_completed = False
-                    predicted_intent = "unknown"
-
-                    if top_3 and isinstance(top_3, list) and len(top_3) > 0:
-                        predicted_intent = top_3[0].get("intent", "unknown")
-                        try:
-                            conf_1 = float(top_3[0].get("confidence", 0.0))
-                            conf_2 = float(top_3[1].get("confidence", 0.0)) if len(top_3) > 1 else 0.0
-                        except (ValueError, TypeError):
-                            conf_1, conf_2 = 0.0, 0.0
-
-                        if conf_1 >= self.CONFIDENCE_THRESHOLD and (conf_1 - conf_2) >= self.MARGIN_THRESHOLD:
-                            dialogue_completed = True
-                    else:
-                        predicted_intent = bot_output.get("predicted_intent", "unknown")
-                        dialogue_completed = bot_output.get("dialogue_completed", False)
-
-                    dialogue_history.append({"role": "assistant", "content": assistant_text})
-
-                    turn_logs.append(TurnLog(
-                        turn_number=turn_idx,
-                        user_utterance=user_text,
-                        assistant_response=assistant_text,
-                        predicted_intent=predicted_intent,
-                        top_3_intents=top_3,
-                        timestamp=datetime.now().isoformat(),
-                        sim_prompt_tokens=sim_p_tok,
-                        sim_completion_tokens=sim_c_tok,
-                        bot_prompt_tokens=bot_p_tok,
-                        bot_completion_tokens=bot_c_tok
-                    ))
-
-                    if top_3 and len(top_3) > 0:
-                        conf_print = f"({predicted_intent} @ {top_3[0].get('confidence', 0.0):.2f})"
-                    else:
-                        conf_print = f"({predicted_intent})"
-
-                    print(f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:50]}...' -> Bot {conf_print}: '{assistant_text[:50]}...'")
-
-                    if dialogue_completed:
-                        print(f"  --> Thresholds met. Dialogue marked completed by Python script.")
-                        break
-
-                dialogue_id = self.logger.save_trace(
-                    seed=self.seed,
-                    dialogue_index=idx,
+            for turn_idx in range(1, max_turns + 1):
+                user_text, sim_p_tok, sim_c_tok = self.user_sim.generate_user_turn(
                     persona=persona,
+                    dialogue_history=dialogue_history,
                     target_intent=target_intent,
-                    sim_model=self.user_sim.model_name,
-                    target_model=self.target_bot.model_name,
-                    turns=turn_logs,
-                    status="COMPLETED" if dialogue_completed else "MAX_TURNS_REACHED"
+                    jailbreak_payload=current_payload,
+                    turn_idx=turn_idx,
+                    drift_avoidance_labels=drift_avoidance_labels
                 )
+
+                sim_prompt_tokens += sim_p_tok
+                sim_completion_tokens += sim_c_tok
+                dialogue_history.append({"role": "user", "content": user_text})
+
+                bot_output, bot_p_tok, bot_c_tok = self.target_bot.process_user_turn(dialogue_history)
+
+                bot_prompt_tokens += bot_p_tok
+                bot_completion_tokens += bot_c_tok
+
+                top_3 = bot_output.get("top_3_intents", [])
+                assistant_text = bot_output.get("response_text", "")
+
+                dialogue_completed = False
+                predicted_intent = "unknown"
+
+                if top_3 and isinstance(top_3, list) and len(top_3) > 0:
+                    predicted_intent = top_3[0].get("intent", "unknown")
+                    try:
+                        conf_1 = float(top_3[0].get("confidence", 0.0))
+                        conf_2 = float(top_3[1].get("confidence", 0.0)) if len(top_3) > 1 else 0.0
+                    except (ValueError, TypeError):
+                        conf_1, conf_2 = 0.0, 0.0
+
+                    if conf_1 >= self.CONFIDENCE_THRESHOLD and (conf_1 - conf_2) >= self.MARGIN_THRESHOLD:
+                        dialogue_completed = True
+                else:
+                    predicted_intent = bot_output.get("predicted_intent", "unknown")
+                    dialogue_completed = bot_output.get("dialogue_completed", False)
+
+                dialogue_history.append({"role": "assistant", "content": assistant_text})
+
+                turn_logs.append(TurnLog(
+                    turn_number=turn_idx,
+                    user_utterance=user_text,
+                    assistant_response=assistant_text,
+                    predicted_intent=predicted_intent,
+                    top_3_intents=top_3,
+                    timestamp=datetime.now().isoformat(),
+                    sim_prompt_tokens=sim_p_tok,
+                    sim_completion_tokens=sim_c_tok,
+                    bot_prompt_tokens=bot_p_tok,
+                    bot_completion_tokens=bot_c_tok
+                ))
+
+                if top_3 and len(top_3) > 0:
+                    conf_print = f"({predicted_intent} @ {top_3[0].get('confidence', 0.0):.2f})"
+                else:
+                    conf_print = f"({predicted_intent})"
+
+                print(f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:50]}...' -> Bot {conf_print}: '{assistant_text[:50]}...'")
+
+                if dialogue_completed:
+                    print(f"  --> Thresholds met. Dialogue marked completed by Python script.")
+                    break
+
+            dialogue_id = self.logger.save_trace(
+                seed=self.seed,
+                dialogue_index=idx,
+                persona=persona,
+                target_intent=target_intent,
+                sim_model=self.user_sim.model_name,
+                target_model=self.target_bot.model_name,
+                turns=turn_logs,
+                status="COMPLETED" if dialogue_completed else "MAX_TURNS_REACHED"
+            )
+            return {
+                "idx": idx,
+                "persona": persona,
+                "dialogue_id": dialogue_id,
+                "sim_p": sim_prompt_tokens,
+                "sim_c": sim_completion_tokens,
+                "bot_p": bot_prompt_tokens,
+                "bot_c": bot_completion_tokens
+            }
+
+        tasks = []
+        for persona in personas.keys():
+            for idx, target_intent in enumerate(target_intents, start=1):
+                tasks.append((persona, target_intent, idx))
+                
+        # Handle start_index
+        if start_index > 0:
+            tasks = tasks[start_index:]
+            
+        # Handle skip if file already exists (resume_dir logic)
+        final_tasks = []
+        for persona, target_intent, idx in tasks:
+            if self.logger.is_completed(persona, idx):
                 completed_count += 1
-                print(f" [{completed_count}/{total_simulations}] Saved Dialogue #{idx:02d} ({persona}) [ID: {dialogue_id[:8]}]")
+                continue
+            current_payload = payload_rng.choice(adversarial_payloads)
+            final_tasks.append((persona, target_intent, idx, current_payload))
+
+        if completed_count > 0:
+            print(f"[Info] Skipped {completed_count} tasks (already completed/skipped). Remaining to run: {len(final_tasks)}")
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+            futures = [executor.submit(run_single_dialogue, *task) for task in final_tasks]
+            
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    res = future.result()
+                    self.global_sim_prompt_tokens += res["sim_p"]
+                    self.global_sim_completion_tokens += res["sim_c"]
+                    self.global_bot_prompt_tokens += res["bot_p"]
+                    self.global_bot_completion_tokens += res["bot_c"]
+                    completed_count += 1
+                    print(f" [{completed_count}/{total_simulations}] Saved Dialogue #{res['idx']:02d} ({res['persona']}) [ID: {res['dialogue_id'][:8]}]")
+                except Exception as e:
+                    print(f" [ERROR] Dialogue failed: {e}")
 
         self._print_and_save_summary(total_simulations, completed_count)
 
@@ -631,11 +728,16 @@ if __name__ == "__main__":
                         help="Path to the JSON scenario profile (default: profiles/standard_en.json)")
     parser.add_argument("--csv_path", type=str, default="../../dataset/single-turn/banking77_test_labels_clean.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test_clean_labels.csv)")
-    parser.add_argument("--num_dialogues", type=int, default=50, help="Number of dialogues per persona (default: 50)")
+    parser.add_argument("--num_dialogues", type=int, default=50, help="Total number of dialogues per persona (default: 50). Ignored if --per_intent is set.")
+    parser.add_argument("--per_intent", type=int, default=None, help="If set, automatically calculates --num_dialogues as (per_intent * number_of_intents).")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
     parser.add_argument("--max_turns", type=int, default=5, help="Maximum number of turns per dialogue (default: 5)")
     parser.add_argument("--output_base_dir", type=str, default="../../logs/multi_turn_dialogues",
                         help="Base directory for JSON logs. A new incremented folder will be created inside.")
+    parser.add_argument("--resume_dir", type=str, default=None,
+                        help="Path to an existing run directory. Will skip generating dialogues that already exist there.")
+    parser.add_argument("--start_index", type=int, default=0, help="Skip the first N dialogues overall.")
+    parser.add_argument("--concurrency", type=int, default=1, help="Number of concurrent dialogues to run (default: 1)")
 
     # ADVERSARIAL DATASET ARGUMENTS
     parser.add_argument("--hf_dataset", type=str, default=None,
@@ -696,6 +798,13 @@ if __name__ == "__main__":
     if not active_labels:
         print("[CRITICAL ERROR] No labels loaded from the CSV. The Target Bot requires a valid intent label list.")
         exit(1)
+        
+    if args.per_intent is not None:
+        args.num_dialogues = args.per_intent * len(active_labels)
+        print(f"[Info] --per_intent set to {args.per_intent}. Calculating num_dialogues_per_persona = {args.num_dialogues} (for {len(active_labels)} intents)")
+
+    # Computes (or loads from cache) the clustered sibling intents to avoid drift
+    intent_clusters = intent_clustering.get_intent_clusters(active_labels, distance_threshold=0.6)
 
     # Load Adversarial Payloads if the profile requires it
     adversarial_payloads = []
@@ -709,12 +818,16 @@ if __name__ == "__main__":
                 save_dir=adversarial_base_path
             )
 
-    # 2. Setup the auto-incrementing output directory
-    resolved_output_dir = get_next_incremented_dir(
-        base_dir=base_dir_with_category,
-        prefix="run",
-        suffix=args.target_model
-    )
+    # 2. Setup the auto-incrementing output directory or use resume_dir
+    if args.resume_dir and os.path.exists(args.resume_dir):
+        resolved_output_dir = args.resume_dir
+        print(f"[Info] Resuming from existing directory: {resolved_output_dir}")
+    else:
+        resolved_output_dir = get_next_incremented_dir(
+            base_dir=base_dir_with_category,
+            prefix="run",
+            suffix=args.target_model
+        )
 
     # 3. Initialize Agents
     user_sim = UserSimulator(
@@ -743,12 +856,15 @@ if __name__ == "__main__":
         logger=logger,
         profile_data=profile_data,
         labels=active_labels,
-        seed=args.seed
+        seed=args.seed,
+        intent_clusters=intent_clusters
     )
 
     # 5. Pass payloads into the run loop
     harness.run_batch_simulation(
         num_dialogues_per_persona=args.num_dialogues,
         max_turns=args.max_turns,
-        adversarial_payloads=adversarial_payloads
+        adversarial_payloads=adversarial_payloads,
+        concurrency=args.concurrency,
+        start_index=args.start_index
     )

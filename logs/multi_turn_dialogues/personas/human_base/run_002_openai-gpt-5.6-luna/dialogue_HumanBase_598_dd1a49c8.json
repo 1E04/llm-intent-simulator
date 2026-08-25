@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "dd1a49c8-28ad-4790-9933-5bb59b506c5f",
+  "seed": 42,
+  "dialogue_index": 598,
+  "timestamp": "2026-08-21T13:24:39.295610",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1079,
+  "total_sim_completion_tokens": 270,
+  "total_bot_prompt_tokens": 3457,
+  "total_bot_completion_tokens": 399,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why did the app deny my top up?",
+      "assistant_response": "Sorry about that—when the app denies a top up, it’s usually because the top up failed or was declined. Is this top up by card (debit/credit) or by bank transfer?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.77
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.15
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:34.474283",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 98
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up – I used my debit card.",
+      "assistant_response": "Thanks—since it was a debit card top up and the app denied it, this is most likely a failed/declined card top up. \nCan you tell me what exact error message you saw in the app (or a screenshot text), and whether the money is showing as pending or not at all on your card?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.8
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:36.829750",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The app just shows “Transaction declined,” and there’s no pending amount on my card.",
+      "assistant_response": "Got it—if the app shows “Transaction declined” and there’s no pending amount, that indicates your card top up was declined/failed.\n\nPlease check these and tell me which applies:\n1) Did you try the top up more than once (and did any show as pending)?\n2) Is the debit card still working for other purchases?\n3) Does the receipt/confirmation in the app show an error code, or just “Transaction declined”?\n\nIf you share any error code/message text from the app, I can guide you on the next steps.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.88
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:39.295503",
+      "sim_prompt_tokens": 584,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 1236,
+      "bot_completion_tokens": 178
+    }
+  ]
+}

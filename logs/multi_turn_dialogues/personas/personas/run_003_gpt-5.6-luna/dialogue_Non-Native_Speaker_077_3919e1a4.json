@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "3919e1a4-bea6-4049-8886-6c0ccbee211f",
+  "seed": 42,
+  "dialogue_index": 77,
+  "timestamp": "2026-08-24T12:09:38.636679",
+  "persona": "Non-Native Speaker",
+  "target_intent": "card_linking",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2464,
+  "total_sim_completion_tokens": 496,
+  "total_bot_prompt_tokens": 3348,
+  "total_bot_completion_tokens": 514,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to put my new card into the app, but it just keeps saying it can't be used.",
+      "assistant_response": "Sorry about that—when you try to add/link your new card in the app and it says it can’t be used, is the card already activated, and are you using the correct card details (number/expiry) exactly as shown on the card?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.6
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.31
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:31.329601",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I think it is already activated, and I typed the number and expiry exactly as on the card.",
+      "assistant_response": "Thanks—if the card is activated and the number/expiry are entered exactly, the next check is whether the app is rejecting the card during linking for security or card type reasons. Can you tell me what error message you see in the app (or a screenshot text), and is the card from our bank and in your name?",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.26
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:33.782590",
+      "sim_prompt_tokens": 565,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The app shows “We couldn’t verify this card”. Yes, it is my bank’s card and it has my name on it.",
+      "assistant_response": "Thanks—“We couldn’t verify this card” usually happens during card linking verification. Just to narrow it down: are you trying to add a physical card (not a virtual/disposable card), and did you recently replace the card (new number)?",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.78
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:35.894054",
+      "sim_prompt_tokens": 661,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 889,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, it is a physical card and I just got a new one with a new number.",
+      "assistant_response": "Got it—since it’s a new physical card and the app says it couldn’t verify it, this is typically a card-linking verification issue. Please make sure the card is fully activated (and not just marked active by SMS), then try linking again after restarting the app. If it still won’t verify, tell me whether you’re trying to link it while logged in on the same phone/account you used before the replacement.",
+      "predicted_intent": "card_linking",
+      "top_3_intents": [
+        {
+          "intent": "card_linking",
+          "confidence": 0.9
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:38.636630",
+      "sim_prompt_tokens": 748,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 968,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

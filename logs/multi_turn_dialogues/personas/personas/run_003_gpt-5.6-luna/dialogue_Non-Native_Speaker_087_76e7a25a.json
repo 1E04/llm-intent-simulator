@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "76e7a25a-8133-40d9-9e6e-8d1f9fc036d0",
+  "seed": 42,
+  "dialogue_index": 87,
+  "timestamp": "2026-08-24T12:09:52.099128",
+  "persona": "Non-Native Speaker",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 836,
+  "total_sim_completion_tokens": 361,
+  "total_bot_prompt_tokens": 1493,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I got a message from the bank asking about where my recent money came from, and I’m not sure what they need.",
+      "assistant_response": "To help me pinpoint it: is the bank asking specifically what your recent incoming money/source of funds is (e.g., salary, transfers, investments), or are they asking for documents to verify your identity (ID/selfie/address)?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.78
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.12
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:49.246676",
+      "sim_prompt_tokens": 382,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They ask about where the money came from, like salary or transfer, not about my ID.",
+      "assistant_response": "Got it—if they’re asking where the money came from (salary vs transfer), that’s a request to verify the source of funds. Tell me: was the recent money mainly (1) salary, (2) a bank transfer from someone/somewhere, or (3) another type of income? If you share the sender type and country (e.g., “paid by employer in UK” or “from another bank account in EU”), I can suggest what wording/documents to provide.",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.9
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.08
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:52.099005",
+      "sim_prompt_tokens": 454,
+      "sim_completion_tokens": 194,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

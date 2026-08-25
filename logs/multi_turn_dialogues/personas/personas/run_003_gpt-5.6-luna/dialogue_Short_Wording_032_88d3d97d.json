@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "88d3d97d-4222-4694-b8d0-5e00686708dc",
+  "seed": 42,
+  "dialogue_index": 32,
+  "timestamp": "2026-08-24T12:12:22.024254",
+  "persona": "Short Wording",
+  "target_intent": "age_limit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1277,
+  "total_sim_completion_tokens": 417,
+  "total_bot_prompt_tokens": 2233,
+  "total_bot_completion_tokens": 358,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Account blocked.",
+      "assistant_response": "I’m sorry about that. When you say your account is blocked, is it showing a “verification required”/identity check message, or is it blocked due to suspicious activity or a security issue?",
+      "predicted_intent": "terminate_account",
+      "top_3_intents": [
+        {
+          "intent": "terminate_account",
+          "confidence": 0.22
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.2
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:17.210465",
+      "sim_prompt_tokens": 373,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Verification.",
+      "assistant_response": "Thanks—when you say “verification,” is the issue that we can’t verify your identity (e.g., it was rejected), or that you need to complete a verification step? If you tell me what the message says, I can guide you to the right action.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.7
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.2
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:19.254328",
+      "sim_prompt_tokens": 419,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 739,
+      "bot_completion_tokens": 110
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Need to complete.",
+      "assistant_response": "Got it—your account is blocked until identity verification is completed. Please complete the verification step in the app (typically: upload the requested documents and any required selfie/video). If you get an error or the verification doesn’t complete, tell me the exact message you see and I’ll help you fix it.",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.86
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:22.023750",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

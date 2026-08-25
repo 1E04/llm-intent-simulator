@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c3958666-5320-4a68-abe6-cee5423a293a",
+  "seed": 42,
+  "dialogue_index": 90,
+  "timestamp": "2026-08-24T11:52:47.541377",
+  "persona": "Angry Layperson",
+  "target_intent": "Refund_not_showing_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 890,
+  "total_sim_completion_tokens": 288,
+  "total_bot_prompt_tokens": 1460,
+  "total_bot_completion_tokens": 248,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My money was supposed to be back in my account yesterday and it’s still nowhere!",
+      "assistant_response": "Sorry about that—when you say “money was supposed to be back,” was this a refund to your card/account, or a bank transfer that you expected to arrive?",
+      "predicted_intent": "refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:44.388042",
+      "sim_prompt_tokens": 419,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a refund straight to my card, not some bank transfer.",
+      "assistant_response": "Thanks—if it was a card refund and it still hasn’t appeared after yesterday, that matches “refund not showing up.” I can help check what stage it’s in: which date was the refund processed, and do you know the merchant/trader name or any reference/transaction ID from your statement?",
+      "predicted_intent": "Refund_not_showing_up",
+      "top_3_intents": [
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.9
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:52:47.541255",
+      "sim_prompt_tokens": 471,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 759,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

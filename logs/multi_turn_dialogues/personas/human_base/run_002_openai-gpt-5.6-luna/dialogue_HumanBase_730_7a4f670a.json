@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7a4f670a-92a8-471a-9271-e73c61fa3338",
+  "seed": 42,
+  "dialogue_index": 730,
+  "timestamp": "2026-08-21T13:34:37.417362",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 488,
+  "total_sim_completion_tokens": 90,
+  "total_bot_prompt_tokens": 2208,
+  "total_bot_completion_tokens": 246,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My payments from my virtual card keep getting rejected.",
+      "assistant_response": "Sorry about that—are the virtual card payments being declined at checkout (you get a decline message), or do they show up as pending/not recognised?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:35.539352",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They’re getting a decline message right at checkout.",
+      "assistant_response": "Got it—if virtual card payments are being declined right at checkout, that points to a declined card payment/virtual card issue. Can you confirm which error you see (e.g., “payment declined”, “try again”, “insufficient funds”, or a specific reason code)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:37.417307",
+      "sim_prompt_tokens": 488,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 1129,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "23298207-b60c-45d0-9c53-b2f10e8bd6b6",
+  "seed": 42,
+  "dialogue_index": 128,
+  "timestamp": "2026-08-24T11:58:46.202882",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_limits",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 971,
+  "total_sim_completion_tokens": 306,
+  "total_bot_prompt_tokens": 1471,
+  "total_bot_completion_tokens": 294,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected when I tried to add money—what's happening?!",
+      "assistant_response": "Sorry about that—when you say “add money,” do you mean a card top up (reloading your balance), or a card payment purchase? Also, did you see any error message or decline reason?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:43.227475",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a top‑up, not a purchase. I got a “limit reached” decline message.",
+      "assistant_response": "Got it—if you’re seeing a “limit reached” decline during a top up, it usually means you’ve hit your top up limits (either per transaction, per day, or per month). Which top up limit message exactly did you see, and is this by card (debit/credit) or another method?",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:46.202768",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 185,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 158
+    }
+  ]
+}

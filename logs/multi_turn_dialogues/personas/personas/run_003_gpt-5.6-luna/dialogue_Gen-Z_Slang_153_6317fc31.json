@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6317fc31-ed9f-4115-bb05-eac0b79107e2",
+  "seed": 42,
+  "dialogue_index": 153,
+  "timestamp": "2026-08-24T12:07:25.582291",
+  "persona": "Gen-Z Slang",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 938,
+  "total_sim_completion_tokens": 206,
+  "total_bot_prompt_tokens": 1475,
+  "total_bot_completion_tokens": 289,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just sent cash to someone by mistake and need to stop it asap.",
+      "assistant_response": "I’m sorry—can you confirm what type of “cash to someone” you mean: did you send a bank transfer (to their bank details), or did you send money within the app/card? Also, is the transfer already marked as completed, or still pending?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:23.547733",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 105,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was a bank transfer, still pending.",
+      "assistant_response": "Got it—if the bank transfer is still pending, you may be able to cancel it. Can you tell me whether you initiated it from the app’s Transfers/Bank transfer screen, and do you see a “Cancel” option or the status showing as “pending”?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:25.582179",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 101,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 143
+    }
+  ]
+}

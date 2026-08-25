@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "d843279a-e7f5-45c3-88cb-59f6f6a30389",
+  "seed": 42,
+  "dialogue_index": 298,
+  "timestamp": "2026-08-21T15:42:34.328276",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2569,
+  "total_sim_completion_tokens": 561,
+  "total_bot_prompt_tokens": 4327,
+  "total_bot_completion_tokens": 684,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unknown direct deposit",
+      "assistant_response": "Sorry—can you clarify what you mean by “Unknown direct deposit”? For example, are you seeing a payment/transfer in your account that you don’t recognize, or are you expecting a deposit and it hasn’t arrived yet?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:23.250986",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I see a credit on my statement that I didn’t expect.",
+      "assistant_response": "Thanks—can you tell me the name/description of the credit on your statement and the amount? Also, is it a bank transfer/direct deposit (from a bank) or a card-related payment? That will help me identify whether it’s an incoming transfer you should keep or something we need to investigate.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:26.601250",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 176,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s listed as “ABC Services” for £120, and it appears to be a direct deposit from a bank.",
+      "assistant_response": "Got it. For a credit listed as “ABC Services” for £120 that looks like an incoming direct deposit, I can help you figure out whether it’s expected or something to investigate. \n\nQuick questions: \n1) Is this credit showing as completed/available in your balance, or pending? \n2) Do you recognize “ABC Services” in any context (e.g., salary, refund, benefits), or is it completely unfamiliar?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.64
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:29.414862",
+      "sim_prompt_tokens": 579,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 851,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s already posted to my balance, and I don’t recognize “ABC Services” at all.",
+      "assistant_response": "Thanks—since it’s already posted and you don’t recognize “ABC Services,” I want to narrow this down. Is the £120 definitely an incoming bank transfer/direct deposit (money sent into your account), or are you disputing it because it looks like it was charged/added incorrectly on your statement?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.44
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.36
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:31.673228",
+      "sim_prompt_tokens": 702,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 970,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s an incoming direct deposit, but I think it’s been added incorrectly since I don’t recognize it.",
+      "assistant_response": "I can help, but I need to clarify: do you want to report this incoming £120 deposit as incorrect/unauthorized so it can be investigated, or are you trying to return the money to the sender? Also, is there a reference/transaction ID shown for “ABC Services” on your statement?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.52
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.22
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.26
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:34.328225",
+      "sim_prompt_tokens": 793,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 1063,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

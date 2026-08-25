@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8d603d96-df7b-4d21-813e-7f5d41111db1",
+  "seed": 42,
+  "dialogue_index": 25,
+  "timestamp": "2026-08-24T12:08:03.024111",
+  "persona": "Non-Native Speaker",
+  "target_intent": "pin_blocked",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 923,
+  "total_sim_completion_tokens": 237,
+  "total_bot_prompt_tokens": 1503,
+  "total_bot_completion_tokens": 278,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to pay at the shop, but the machine says my secret number is wrong and the card just stops working.",
+      "assistant_response": "It sounds like the card is failing because the PIN/secret number is being rejected—often this can mean the PIN is entered incorrectly too many times and the PIN gets blocked. Can you confirm: are you still able to use the card for purchases, or does it always fail at the payment terminal with the same message?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.15
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:00.817772",
+      "sim_prompt_tokens": 416,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It always fails, same message every time I try to pay.",
+      "assistant_response": "Got it—if every shop payment fails with the same “secret number/PIN wrong” message, the PIN is likely blocked. I can help you unblock/reset it. Have you tried entering the PIN multiple times, and do you still have access to your card’s PIN (or have you forgotten it)?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:03.024002",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 121
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "d5ac3809-d74b-4df8-8c63-9d859114ee9c",
+  "seed": 42,
+  "dialogue_index": 541,
+  "timestamp": "2026-08-21T13:21:11.830176",
+  "persona": "HumanBase",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1711,
+  "total_sim_completion_tokens": 291,
+  "total_bot_prompt_tokens": 4712,
+  "total_bot_completion_tokens": 516,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Will you accept my other card?",
+      "assistant_response": "Do you mean you want to use another bank card for top ups, or you’re asking where your card is accepted for payments? Also, what type of card is it (Visa/Mastercard) and which country issued it?",
+      "predicted_intent": "card_acceptance",
+      "top_3_intents": [
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.72
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.21
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:05.480928",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a Visa from the US.",
+      "assistant_response": "Thanks—yes, we support Visa cards. Where are you trying to use it: for card payments (merchant purchases) or to top up your account? If it’s for top ups, tell me the top-up currency and I’ll confirm it’s supported.",
+      "predicted_intent": "visa_or_mastercard",
+      "top_3_intents": [
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.55
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.35
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:07.939220",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 1139,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m trying to top up in USD.",
+      "assistant_response": "Got it—you’re topping up in USD with a US Visa. Our USD top-ups are supported, as long as the card is issued in USD and you’re using the in-app card top up. Are you topping up via the app/website card top up (not bank transfer)?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.2
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:09.782679",
+      "sim_prompt_tokens": 568,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 1210,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, I'm using the app to top up.",
+      "assistant_response": "Yes—if you’re using the app to top up with a US-issued Visa in USD, that’s supported. If you tell me which card top-up screen you’re using (or share the exact error message, if any), I can confirm it will go through.",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:11.830106",
+      "sim_prompt_tokens": 644,
+      "sim_completion_tokens": 67,
+      "bot_prompt_tokens": 1287,
+      "bot_completion_tokens": 114
+    }
+  ]
+}

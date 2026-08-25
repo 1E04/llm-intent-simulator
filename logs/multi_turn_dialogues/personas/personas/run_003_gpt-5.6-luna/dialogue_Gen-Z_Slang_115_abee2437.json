@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "abee2437-2537-462f-8d52-174617dddf1b",
+  "seed": 42,
+  "dialogue_index": 115,
+  "timestamp": "2026-08-24T12:06:25.057604",
+  "persona": "Gen-Z Slang",
+  "target_intent": "pin_blocked",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 909,
+  "total_sim_completion_tokens": 254,
+  "total_bot_prompt_tokens": 1496,
+  "total_bot_completion_tokens": 308,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried swiping my card at the store and it just straight up rejected me, like nothing's working.",
+      "assistant_response": "Sorry about that—when you say the store rejected it, was it specifically declined at checkout (e.g., “payment declined”), or did the card not get recognized by the terminal at all (e.g., “try again”/no response)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.58
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.27
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:22.007318",
+      "sim_prompt_tokens": 416,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was straight up “payment declined” at the register, not like the terminal was glitching.",
+      "assistant_response": "Got it—if you’re seeing “payment declined” at the register, the most common cause is a declined card payment. Can you tell me whether you’re using the card for the first time in that merchant/country, and whether you’ve tried tapping contactless or the chip (and whether the exact same message shows each time)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:25.057479",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 161
+    }
+  ]
+}

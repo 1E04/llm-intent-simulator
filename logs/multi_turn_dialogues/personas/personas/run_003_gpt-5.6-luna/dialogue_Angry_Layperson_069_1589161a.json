@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1589161a-a5d2-424f-8708-679b4505f4c7",
+  "seed": 42,
+  "dialogue_index": 69,
+  "timestamp": "2026-08-24T11:50:36.722092",
+  "persona": "Angry Layperson",
+  "target_intent": "card_acceptance",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1049,
+  "total_sim_completion_tokens": 282,
+  "total_bot_prompt_tokens": 1489,
+  "total_bot_completion_tokens": 295,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hey, I'm at the shop and my card keeps getting turned down—this is ridiculous!",
+      "assistant_response": "Sorry about that—when you try to pay at the shop, do you see a message like “declined” (payment rejected), or does the terminal just not recognize the card? Also, have you tried the payment with a chip (insert) or contactless?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:34.167448",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just flashes “declined” and I’ve tried both the chip and the tap – nothing works.",
+      "assistant_response": "Got it—if the terminal shows “declined” on both tap and chip, we’ll treat this as a declined card payment. First, can you confirm whether you have enough available balance in your account for this purchase? If yes, tell me whether the decline happens on every merchant or just this shop, and if you’ve had any recent changes (e.g., new card, recently changed settings, or international/online use).",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:36.721990",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

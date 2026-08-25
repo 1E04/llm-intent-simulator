@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "5021c440-3b4e-4c49-bebf-a1d72320bf49",
+  "seed": 42,
+  "dialogue_index": 23,
+  "timestamp": "2026-08-24T11:55:39.931502",
+  "persona": "Panicking Emergency",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 3114,
+  "total_sim_completion_tokens": 540,
+  "total_bot_prompt_tokens": 4433,
+  "total_bot_completion_tokens": 747,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just used an ATM and I was hit with an extra fee I didn't expect! I need this fixed now!",
+      "assistant_response": "Sorry about that—was the extra fee added by the ATM itself (a charge from the machine), or did you also see an extra card/withdrawal fee from your account statement after the cash withdrawal? If you tell me which one, I can guide you on the next steps to get it reviewed.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:28.979133",
+      "sim_prompt_tokens": 443,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s on my statement—an extra card fee after the withdrawal.",
+      "assistant_response": "Thanks—so the fee shows up on your statement after the cash withdrawal. I can help with that. Can you confirm: is the charge specifically labeled as an “ATM fee/cash withdrawal fee,” or is it a general “extra charge/fee” with a different description?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:31.432397",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 792,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Just a vague “extra charge” – not labeled as an ATM fee.",
+      "assistant_response": "Got it—if it’s a vague “extra charge” on your statement after an ATM cash withdrawal, it’s most likely a cash-withdrawal fee, but I need one detail to pinpoint it. What was the exact amount and the posting date shown on your statement for that “extra charge” (and if you can, the transaction reference/merchant text)?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.62
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.31
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:34.193263",
+      "sim_prompt_tokens": 609,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 873,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "$5.00, posted on Aug 22. Reference shows “123456789”.",
+      "assistant_response": "Thanks—$5.00 posted Aug 22 after the ATM withdrawal sounds like it could be a cash-withdrawal fee, but because the label is “extra charge” and not “ATM fee,” I need to confirm one thing: was your withdrawal made in the same currency as your card (or in a different country/currency)? If you tell me that, I’ll tell you whether it’s the cash withdrawal fee or an exchange-related charge.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.12
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:37.269829",
+      "sim_prompt_tokens": 707,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 974,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was in the same currency—just a local ATM!",
+      "assistant_response": "Thanks—given it’s a local ATM and the $5.00 “extra charge” posted right after your cash withdrawal, this most likely is a cash withdrawal fee. I can help get it reviewed—please confirm the withdrawal amount and the country/ATM location (or merchant name) shown for the Aug 22 transaction.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:39.931387",
+      "sim_prompt_tokens": 826,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1087,
+      "bot_completion_tokens": 158
+    }
+  ]
+}

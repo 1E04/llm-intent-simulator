@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6d65bdbe-912f-4ad4-b42f-f8dfe85d9bbe",
+  "seed": 42,
+  "dialogue_index": 51,
+  "timestamp": "2026-08-24T11:56:26.010086",
+  "persona": "Panicking Emergency",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 915,
+  "total_sim_completion_tokens": 381,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 277,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm trying to pay with the card on my phone and it's being declined!",
+      "assistant_response": "Sorry about that—when you try to pay on your phone, is it being declined specifically during the card payment (at checkout), or is it failing to tap/complete like contactless? Also, are you using Apple Pay or Google Pay?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.21
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:23.349048",
+      "sim_prompt_tokens": 425,
+      "sim_completion_tokens": 243,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's being declined right at checkout, the tap just won't go through. I'm using Apple Pay.",
+      "assistant_response": "Thanks—if Apple Pay checkout is declining, it’s usually due to a card/payment security check or insufficient eligibility for that merchant. Can you confirm: (1) is the transaction showing as “declined” in Apple Pay right away, and (2) do you see the card as enabled for online/Apple Pay and have enough available balance?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:26.010004",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

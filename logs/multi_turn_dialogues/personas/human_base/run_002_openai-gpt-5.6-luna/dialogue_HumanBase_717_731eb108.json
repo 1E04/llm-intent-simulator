@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "731eb108-1816-4b1a-8453-f21978478671",
+  "seed": 42,
+  "dialogue_index": 717,
+  "timestamp": "2026-08-21T13:33:20.767611",
+  "persona": "HumanBase",
+  "target_intent": "verify_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1019,
+  "total_sim_completion_tokens": 235,
+  "total_bot_prompt_tokens": 3376,
+  "total_bot_completion_tokens": 317,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Is it possible to verify a top up?",
+      "assistant_response": "Yes—it's possible to verify a top up. Can you tell me whether the top up is pending, failed, or has already been completed?",
+      "predicted_intent": "verify_top_up",
+      "top_3_intents": [
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.77
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.14
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:16.418672",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 84
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's still pending.",
+      "assistant_response": "Got it—if your top up is still pending, I can help check what’s happening. Do you want to verify the top up for a card top up or a bank transfer top up?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.72
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:18.569322",
+      "sim_prompt_tokens": 483,
+      "sim_completion_tokens": 93,
+      "bot_prompt_tokens": 1121,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's a card top‑up.",
+      "assistant_response": "Thanks—so it’s a card top-up that’s still pending. I can help you verify it: is the top-up showing as “pending” in the app, or have you already received an SMS/email saying it failed or completed?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:20.767504",
+      "sim_prompt_tokens": 536,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 1177,
+      "bot_completion_tokens": 103
+    }
+  ]
+}

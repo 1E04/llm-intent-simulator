@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c009f068-9a22-448c-a264-f310eca93c51",
+  "seed": 42,
+  "dialogue_index": 100,
+  "timestamp": "2026-08-24T12:14:17.395834",
+  "persona": "Short Wording",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1037,
+  "total_sim_completion_tokens": 215,
+  "total_bot_prompt_tokens": 1436,
+  "total_bot_completion_tokens": 218,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Payment bounced back.",
+      "assistant_response": "Sorry to hear that—when you say the payment bounced back, was it a card payment or a bank transfer? And do you see any status like “reverted/failed” or an error message on your app/statement?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.3
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.26
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:14.867567",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 80,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 99
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card, reverted.",
+      "assistant_response": "Thanks—since it was a **card payment that shows as reverted**, the merchant’s charge will be reversed and you shouldn’t be charged twice. Can you tell me when the payment was made (date/time), and whether the amount is currently still showing as pending or already back in your balance?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:17.395779",
+      "sim_prompt_tokens": 544,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 748,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

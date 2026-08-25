@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "7be0429f-7f27-433b-9ae8-5c4ac5494f0f",
+  "seed": 42,
+  "dialogue_index": 62,
+  "timestamp": "2026-08-24T12:09:13.819995",
+  "persona": "Non-Native Speaker",
+  "target_intent": "exchange_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1535,
+  "total_sim_completion_tokens": 351,
+  "total_bot_prompt_tokens": 2396,
+  "total_bot_completion_tokens": 493,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I bought something while traveling abroad and my statement shows a strange extra cost I don’t understand.",
+      "assistant_response": "Sorry about that—could you tell me what the extra cost is labeled as on your statement (e.g., “fee”, “dynamic currency conversion”, “exchange”, or something similar), and roughly how much more it is compared to the purchase amount?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.13
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:08.181350",
+      "sim_prompt_tokens": 426,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says “exchange” and it’s about $7 more than the price I paid.",
+      "assistant_response": "Thanks—if your statement shows an “exchange” cost about $7 more than the purchase price, that’s usually an exchange-related charge. Was the “exchange” line item shown as a separate amount (e.g., $7.00) and do you know the card payment currency versus the billing currency (and whether you selected “pay in local currency” or “pay in USD/your currency” at checkout)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.17
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:10.643669",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 77,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 180
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it was a separate $7.00 line. I paid in euros, but my card is billed in USD, and I chose to pay in the local currency.",
+      "assistant_response": "Got it. A separate “exchange” charge of about $7 is consistent with an exchange-related fee/markup when a card transaction is converted (you paid in euros while your card is billed in USD). If you want, tell me the transaction date and the exact “exchange” description/wording and I can help you confirm whether it’s the exchange fee or a different exchange-related item.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:13.819834",
+      "sim_prompt_tokens": 611,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 911,
+      "bot_completion_tokens": 169
+    }
+  ]
+}

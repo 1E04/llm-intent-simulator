@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8341d33e-fbf5-4cb9-a0fb-9b7ef6954238",
+  "seed": 42,
+  "dialogue_index": 27,
+  "timestamp": "2026-08-24T12:00:05.151393",
+  "persona": "Polite Expert",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1022,
+  "total_sim_completion_tokens": 389,
+  "total_bot_prompt_tokens": 1520,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see an unexpected fee on my account after I used my card to add money, and I’m not sure why it was applied.",
+      "assistant_response": "Sorry about that—could you confirm the type of fee you’re seeing after the card top up? Is it showing as a card top up fee (e.g., “top up fee”) or as a separate card transaction/charge on your statement? If you can share the exact wording and amount, I can help identify why it was applied.",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.16
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:01.908925",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 199,
+      "bot_prompt_tokens": 711,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The statement lists a charge labeled “Card top‑up fee” for $2.50.",
+      "assistant_response": "Thanks—if your statement specifically shows **“Card top‑up fee”** for **$2.50**, that’s the fee applied for topping up by card. This is a separate charge from the top-up amount itself. If you tell me the top-up amount and the date/time, I can help confirm whether the fee matches the expected fee schedule for your top up.",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:05.151239",
+      "sim_prompt_tokens": 559,
+      "sim_completion_tokens": 190,
+      "bot_prompt_tokens": 809,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

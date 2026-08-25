@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "20b22ec4-a8fd-402d-9b87-8173a47c8895",
+  "seed": 42,
+  "dialogue_index": 32,
+  "timestamp": "2026-08-21T15:37:44.597793",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1038,
+  "total_sim_completion_tokens": 227,
+  "total_bot_prompt_tokens": 2251,
+  "total_bot_completion_tokens": 416,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Top up on my Google Pay isn't working.",
+      "assistant_response": "Sorry you’re having trouble. Is your Google Pay top up failing (e.g., shows an error or doesn’t complete), or is it stuck as pending?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.55
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:39.829467",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows an error and never completes.",
+      "assistant_response": "Got it—your Google Pay top up is failing and never completes. Are you seeing a specific error message/code on the app or in Google Pay (and does the top up appear as failed in your activity)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:42.410354",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 743,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “Something went wrong” and the top‑up never shows up in my activity.",
+      "assistant_response": "Sorry about that—if the Google Pay top up shows “Something went wrong” and never appears in your activity, it’s most likely a failed top up. Can you confirm whether you were charged/marked as completed on your payment method (Google Pay/bank statement), or is there no charge at all?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.09
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:44.597663",
+      "sim_prompt_tokens": 549,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 815,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

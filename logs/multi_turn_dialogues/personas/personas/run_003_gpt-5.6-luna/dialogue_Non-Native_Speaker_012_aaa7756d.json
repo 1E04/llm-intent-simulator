@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "aaa7756d-5cd5-4d73-87e3-4f9ce3a19a6c",
+  "seed": 42,
+  "dialogue_index": 12,
+  "timestamp": "2026-08-24T12:07:44.943775",
+  "persona": "Non-Native Speaker",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 997,
+  "total_sim_completion_tokens": 293,
+  "total_bot_prompt_tokens": 1483,
+  "total_bot_completion_tokens": 238,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent money from my bank to my app and there is a fee on it, I don’t understand why.",
+      "assistant_response": "Just to confirm—are you asking about a fee charged on the bank transfer into your app (top up by bank transfer), or a fee charged by the recipient/bank for the transfer itself?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.17
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:41.859093",
+      "sim_prompt_tokens": 468,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 102
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, the charge is on the money that went into my app, not from my bank side.",
+      "assistant_response": "Got it—if the fee is applied to the amount that arrived in your app after a bank transfer, that’s typically the **top up by bank transfer fee**. \n\nCan you tell me the currency and the approximate fee amount (or what it says on your statement/transaction details)? Then I can help you verify whether it matches the expected bank transfer top-up charge.",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:44.943729",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

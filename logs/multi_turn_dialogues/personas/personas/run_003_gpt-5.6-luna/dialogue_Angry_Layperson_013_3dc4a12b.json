@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "3dc4a12b-ab46-4a7f-8c4a-a988e55b8e37",
+  "seed": 42,
+  "dialogue_index": 13,
+  "timestamp": "2026-08-24T11:48:08.039035",
+  "persona": "Angry Layperson",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1014,
+  "total_sim_completion_tokens": 331,
+  "total_bot_prompt_tokens": 1521,
+  "total_bot_completion_tokens": 333,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add money to my account and now it’s just vanished—what the heck is going on?!",
+      "assistant_response": "I’m sorry about that—when you say the money “vanished,” was the top up marked as failed, did it show as pending for a while, or does it look like it was reverted (reversed back to your card/bank)? If you can share the date and the top-up method (card or bank transfer), I can guide you to the right fix.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.6
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.28
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:04.760367",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up on March 12th and it just shows as reversed back to my card.",
+      "assistant_response": "Got it—if a card top-up is showing as “reversed back to your card,” it’s considered a reverted top-up.\n\nA few quick checks: did the amount disappear immediately and then return, and do you see the same transaction reference reversed in your card history?\n\nIf you confirm the top-up amount and the exact status wording on March 12 (e.g., “reverted,” “reversed,” or “failed”), I’ll tell you what to do next and how long the refund usually takes.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.92
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:08.038944",
+      "sim_prompt_tokens": 557,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 815,
+      "bot_completion_tokens": 165
+    }
+  ]
+}

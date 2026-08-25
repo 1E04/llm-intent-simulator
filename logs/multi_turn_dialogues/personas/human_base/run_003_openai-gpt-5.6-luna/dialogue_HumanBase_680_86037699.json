@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "86037699-c804-4525-90be-73460244cb21",
+  "seed": 42,
+  "dialogue_index": 680,
+  "timestamp": "2026-08-21T15:50:11.229934",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1234,
+  "total_sim_completion_tokens": 312,
+  "total_bot_prompt_tokens": 2336,
+  "total_bot_completion_tokens": 403,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an important thing from China that I need to transfer. Approximately how long will this take?",
+      "assistant_response": "To confirm the timing, is this an international bank transfer to your account, or a transfer you’re sending to someone else? Also, do you know whether it’s a domestic transfer or SWIFT/international, and the currency?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.14
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:05.751488",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m sending it to someone else – it’s an international SWIFT transfer and the currency will be USD.",
+      "assistant_response": "For an international SWIFT transfer from China to someone else in USD, it typically takes about 2–5 business days, but it can be longer depending on intermediary banks and correspondent processing times. What country is the recipient’s bank in?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.82
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:09.183660",
+      "sim_prompt_tokens": 577,
+      "sim_completion_tokens": 223,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The recipient’s bank is in the United States.",
+      "assistant_response": "Thanks—an international SWIFT transfer from China to a US bank in USD typically takes about 2–5 business days. In some cases it can take up to 7–10 business days depending on correspondent banks. If you share when you sent it (date) and whether you have a SWIFT tracking/reference, I can help you narrow down the expected arrival window.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.92
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:11.229858",
+      "sim_prompt_tokens": 657,
+      "sim_completion_tokens": 89,
+      "bot_prompt_tokens": 850,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

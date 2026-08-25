@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6fcd9c1e-087c-4287-8378-b1228ea3461f",
+  "seed": 42,
+  "dialogue_index": 72,
+  "timestamp": "2026-08-24T12:13:29.922307",
+  "persona": "Short Wording",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1630,
+  "total_sim_completion_tokens": 449,
+  "total_bot_prompt_tokens": 2232,
+  "total_bot_completion_tokens": 349,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unknown charge.",
+      "assistant_response": "Sorry to hear that—can you tell me what kind of charge it is (card payment, cash withdrawal, or bank transfer) and the merchant/amount/date from your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.44
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.28
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:23.870331",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card, Starbucks, $5, 24/08",
+      "assistant_response": "Thanks—an unknown card charge for Starbucks on 24/08 for $5. Is this charge showing as a separate extra amount (on top of another Starbucks purchase), or is it the only Starbucks charge you see?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.15
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:27.248940",
+      "sim_prompt_tokens": 535,
+      "sim_completion_tokens": 249,
+      "bot_prompt_tokens": 744,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Only charge.",
+      "assistant_response": "Got it—an unrecognized card payment for Starbucks ($5) is showing as the only charge.\n\nWas this transaction authorized by you (e.g., you paid in-store/online), or do you want help disputing it/refunding it?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:13:29.922171",
+      "sim_prompt_tokens": 600,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

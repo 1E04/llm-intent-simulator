@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "65575450-083d-4019-86db-41abd2fbc8e3",
+  "seed": 42,
+  "dialogue_index": 154,
+  "timestamp": "2026-08-24T12:03:17.460381",
+  "persona": "Polite Expert",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2022,
+  "total_sim_completion_tokens": 610,
+  "total_bot_prompt_tokens": 3364,
+  "total_bot_completion_tokens": 533,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I noticed that after trying to convert some funds, the amount shown in my account doesn’t match the expected value.",
+      "assistant_response": "Sorry to hear that—could you confirm what type of conversion you mean: was it an in-app currency exchange (trading), or a card payment/withdrawal in a different currency? Also, is the issue that you’re seeing the wrong converted amount, or an unexpected fee on the exchange?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.44
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.36
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:09.063859",
+      "sim_prompt_tokens": 377,
+      "sim_completion_tokens": 214,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an in‑app currency exchange, and the problem is that the converted amount displayed is lower than what I expected.",
+      "assistant_response": "Thanks—just to narrow it down: for an in‑app currency exchange, is the lower amount due to the exchange rate used (you expected more after conversion), or is there an extra exchange fee/charge showing that wasn’t expected?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.52
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.36
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:11.831482",
+      "sim_prompt_tokens": 462,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 802,
+      "bot_completion_tokens": 103
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The discrepancy seems to come from the exchange rate—it was less favorable than I anticipated, and I don’t see any additional fee.",
+      "assistant_response": "Thanks for clarifying. For the in‑app currency exchange showing a worse-than-expected rate (without an extra fee), are you looking for help confirming whether the displayed exchange rate is correct, or would you like a review of what rate you should have received for that specific conversion?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:14.489926",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 886,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I’d like a review of the rate I should have received for that conversion.",
+      "assistant_response": "Got it—I can help review the exchange rate you should have received. Please share: (1) the two currencies involved (from/to), (2) the amount you converted, (3) the timestamp/date of the exchange, and (4) the rate shown in the app (or a screenshot). Then I’ll compare it against what the correct rate should be for that conversion.",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.93
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T12:03:17.460204",
+      "sim_prompt_tokens": 638,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 969,
+      "bot_completion_tokens": 167
+    }
+  ]
+}

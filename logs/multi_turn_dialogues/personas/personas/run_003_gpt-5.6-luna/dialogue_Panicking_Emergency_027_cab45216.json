@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "cab45216-a124-4169-ae08-e11ac8c181c9",
+  "seed": 42,
+  "dialogue_index": 27,
+  "timestamp": "2026-08-24T11:55:46.999096",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1619,
+  "total_sim_completion_tokens": 792,
+  "total_bot_prompt_tokens": 2357,
+  "total_bot_completion_tokens": 444,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got an unexpected fee on my card—please help, I’m in a rush!",
+      "assistant_response": "Sorry about that—can you quickly tell me what the fee is for (e.g., card purchase, cash withdrawal, or currency/exchange)? If you can, share the exact wording from the transaction or the amount—I'll guide you right away.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.29
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:37.579666",
+      "sim_prompt_tokens": 462,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a $5.00 fee listed as a card transaction charge.",
+      "assistant_response": "Thanks—so it’s showing as a $5 card transaction fee. Could you confirm whether this is a fee added to a card purchase (a merchant payment), or was it charged after a currency exchange (the word “exchange”/“DCC”)? If you tell me which one it is, I’ll point you to the exact reason.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.21
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:42.184764",
+      "sim_prompt_tokens": 531,
+      "sim_completion_tokens": 285,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s not a purchase or exchange—it’s a fee from a card top‑up.",
+      "assistant_response": "Got it—if it’s a $5 fee showing as a card transaction and it’s specifically from a card top‑up, it’s usually the card top‑up fee. Can you confirm the top‑up method was by **debit/credit card** (not bank transfer), and whether it appears right next to the top‑up in your app/statement?",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:46.998971",
+      "sim_prompt_tokens": 626,
+      "sim_completion_tokens": 371,
+      "bot_prompt_tokens": 876,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

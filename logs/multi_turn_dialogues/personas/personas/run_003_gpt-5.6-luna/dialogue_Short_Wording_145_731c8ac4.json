@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "731c8ac4-39ac-4692-97df-1ae462c5097c",
+  "seed": 42,
+  "dialogue_index": 145,
+  "timestamp": "2026-08-24T12:15:28.692758",
+  "persona": "Short Wording",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1425,
+  "total_sim_completion_tokens": 412,
+  "total_bot_prompt_tokens": 2203,
+  "total_bot_completion_tokens": 321,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Transfer didn't work.",
+      "assistant_response": "Sorry about that—was the transfer rejected/declined, or did it fail after being submitted (e.g., you see a failed status or no money reached the recipient)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:22.963579",
+      "sim_prompt_tokens": 433,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 89
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Rejected.",
+      "assistant_response": "Got it—the transfer was rejected. Was it rejected by the bank/issuer (you saw a decline message), or is it marked as failed in the app?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:26.135758",
+      "sim_prompt_tokens": 474,
+      "sim_completion_tokens": 173,
+      "bot_prompt_tokens": 735,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Bank declined.",
+      "assistant_response": "Thanks—if the bank declined the transfer, it usually means the payment didn’t pass the bank’s checks. Do you see the transfer marked as **Declined** in the app with any reason code or message (e.g., beneficiary/bank details, insufficient funds, or compliance)?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:28.692707",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

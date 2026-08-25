@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "0862ee43-ec0d-43db-9aa4-6df2d201f11b",
+  "seed": 42,
+  "dialogue_index": 76,
+  "timestamp": "2026-08-24T12:01:24.153985",
+  "persona": "Polite Expert",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1371,
+  "total_sim_completion_tokens": 512,
+  "total_bot_prompt_tokens": 2358,
+  "total_bot_completion_tokens": 425,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm at a store and my mobile wallet payment was declined, even though the card details are correct.",
+      "assistant_response": "Sorry about that—was the mobile wallet payment declined at the checkout (for example, you saw a “payment declined” message), or did the wallet app show a different status?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.58
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.28
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:18.042657",
+      "sim_prompt_tokens": 382,
+      "sim_completion_tokens": 220,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was declined right at the checkout—I saw a clear “payment declined” message on the terminal.",
+      "assistant_response": "Got it—if you saw “payment declined” at the terminal, this is typically a declined card payment. Quick checks: make sure the wallet/card is verified and selected correctly, confirm you have enough available balance, and try again after a short wait. \nDo you also see any specific decline reason or error code on the terminal/receipt (e.g., insufficient funds, expired, or do-not-honor)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:21.010996",
+      "sim_prompt_tokens": 438,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, it just showed a generic “payment declined” message—no error code or specific reason listed.",
+      "assistant_response": "Thanks—since it was a generic “payment declined” at checkout, the most likely issue is a declined card payment. \n\nCan you confirm two things: 1) is this the first attempt today (or have you tried more than once), and 2) roughly how much available balance you have for card payments? If you want, tell me whether it was Apple Pay/Google Pay or just the physical card.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:24.153829",
+      "sim_prompt_tokens": 551,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 884,
+      "bot_completion_tokens": 147
+    }
+  ]
+}

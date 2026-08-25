@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "6960d6ab-186b-46d8-9757-d0e7fb24c0d6",
+  "seed": 42,
+  "dialogue_index": 154,
+  "timestamp": "2026-08-24T11:59:32.180707",
+  "persona": "Panicking Emergency",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2006,
+  "total_sim_completion_tokens": 563,
+  "total_bot_prompt_tokens": 3347,
+  "total_bot_completion_tokens": 579,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My app just showed the wrong amount after I tried to switch currencies—everything's messed up!",
+      "assistant_response": "Sorry about that—when you say you “switched currencies,” was the wrong amount due to a card payment, a cash withdrawal, or an in-app exchange/transfer? Also, can you tell me the currencies involved (from/to)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.58
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.27
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:23.271127",
+      "sim_prompt_tokens": 376,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an in‑app exchange—USD to EUR, and the amount is wrong.",
+      "assistant_response": "Got it—an in‑app exchange from USD to EUR shows the wrong amount. Could you confirm whether the issue is the *rate you were shown/applied* or you’re seeing an extra/missing *exchange fee*? If you share the “from/to” amounts and what you expected vs what you received, I can guide you to the right check.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.24
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.6
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:26.131327",
+      "sim_prompt_tokens": 445,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The rate’s wrong—$1,000 should've been about €920, but I only got €850.",
+      "assistant_response": "Thanks—this sounds like the in‑app exchange used the wrong exchange rate (USD→EUR). Can you tell me whether the €850 is the final credited EUR amount after the exchange, and whether you completed it via the app’s Exchange feature (not a card payment or cash withdrawal)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.2
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.61
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:29.301513",
+      "sim_prompt_tokens": 546,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 887,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, €850 is what’s in my account now, and I did it through the app’s Exchange feature.",
+      "assistant_response": "Understood—because this was an in-app Exchange and your received amount is lower due to an incorrect USD→EUR rate, this matches an exchange rate issue. I can help you check the exact rate applied in the app; please tell me the timestamp of the exchange (approx.) and the exact USD amount you exchanged.",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:32.180590",
+      "sim_prompt_tokens": 639,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 978,
+      "bot_completion_tokens": 158
+    }
+  ]
+}

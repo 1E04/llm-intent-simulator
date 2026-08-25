@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "45ecf3a5-ff38-40d1-8e82-4a601ef24778",
+  "seed": 42,
+  "dialogue_index": 26,
+  "timestamp": "2026-08-24T12:08:03.952746",
+  "persona": "Non-Native Speaker",
+  "target_intent": "visa_or_mastercard",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1077,
+  "total_sim_completion_tokens": 284,
+  "total_bot_prompt_tokens": 1510,
+  "total_bot_completion_tokens": 289,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hey, I'm at a shop and my card just got rejected, I can't pay anything.",
+      "assistant_response": "Sorry about that—when a card is rejected, it’s usually a declined card payment or the payment isn’t being recognised. Can you tell me: was it declined for a card payment at the shop (card present), and does it show any specific message like “insufficient funds”, “try again”, or “payment declined” on the terminal/app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:01.318415",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was at the shop, card present. The terminal showed “try again” message, not enough money maybe.",
+      "assistant_response": "Got it—since it was a card-present payment and the terminal said “try again / not enough money,” this is most likely a declined card payment due to insufficient funds. Can you check your available balance in the app right now, and tell me whether you recently topped up or made any transfers that might not have reflected yet?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.87
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:03.952657",
+      "sim_prompt_tokens": 584,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 808,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

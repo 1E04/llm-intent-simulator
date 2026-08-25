@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "678ea74e-1f38-4949-b423-bddecaca2871",
+  "seed": 42,
+  "dialogue_index": 127,
+  "timestamp": "2026-08-24T11:58:45.175309",
+  "persona": "Panicking Emergency",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 893,
+  "total_sim_completion_tokens": 267,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 292,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was charged twice for a purchase and I need that money back right now!",
+      "assistant_response": "I’m sorry about that—charges showing twice can happen, but we need to confirm the exact status. Can you tell me: is the purchase showing as pending or completed on your card/app? Also, roughly when was the transaction made?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:42.944084",
+      "sim_prompt_tokens": 413,
+      "sim_completion_tokens": 202,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s already completed, and it happened today about an hour ago.",
+      "assistant_response": "Thanks—since it’s completed and charged twice about an hour ago, the most likely issue is a duplicate card payment. I can help you request the refund for the extra charge now. Please confirm: are both duplicate charges showing the same merchant name and the same amount?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.86
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:45.175148",
+      "sim_prompt_tokens": 480,
+      "sim_completion_tokens": 65,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

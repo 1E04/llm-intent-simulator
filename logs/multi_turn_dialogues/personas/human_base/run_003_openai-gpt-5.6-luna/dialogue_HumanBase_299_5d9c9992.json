@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5d9c9992-05d7-4f19-84fc-17750ac8f570",
+  "seed": 42,
+  "dialogue_index": 299,
+  "timestamp": "2026-08-21T15:42:30.554760",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 500,
+  "total_sim_completion_tokens": 95,
+  "total_bot_prompt_tokens": 1447,
+  "total_bot_completion_tokens": 242,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There's a debit on my account that I didn't do.",
+      "assistant_response": "I’m sorry about that. To help you quickly, was this debit a card payment you don’t recognize, or did it appear as something like a direct debit on your statement?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.5
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.3
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:28.491998",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows up as a direct debit on my statement.",
+      "assistant_response": "Thanks for clarifying. Since it’s showing as a direct debit you didn’t set up, we can help you with that—can you tell me the name of the merchant/beneficiary and the date/amount of the debit?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:30.554682",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

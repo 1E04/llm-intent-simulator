@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "eaa565ab-d72b-47de-a811-d0b7f83f76b0",
+  "seed": 42,
+  "dialogue_index": 138,
+  "timestamp": "2026-08-24T11:54:26.306006",
+  "persona": "Angry Layperson",
+  "target_intent": "country_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2899,
+  "total_sim_completion_tokens": 737,
+  "total_bot_prompt_tokens": 4582,
+  "total_bot_completion_tokens": 760,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just got blocked the moment I tried to use it in a different country!",
+      "assistant_response": "Sorry about that—when you say it was blocked, do you see a specific message like “card blocked” or “security block” in the app? Also, which country are you trying to use it in? I’ll help you figure out whether it’s a country restriction or a verification/security block.",
+      "predicted_intent": "card_acceptance",
+      "top_3_intents": [
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.36
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.35
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.29
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:15.099269",
+      "sim_prompt_tokens": 372,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “security block” and I was trying to pay in Spain.",
+      "assistant_response": "Thanks—“security block” in Spain usually means the card was blocked by our security checks (often linked to unusual location/activity). To confirm the right next step: does the app show an option to “unblock/verify” the card or any instructions under Security/Blocked card? If not, are you also seeing any recent declined or reversed card payments around the same time?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.36
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.3
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:17.091677",
+      "sim_prompt_tokens": 453,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, there’s no “unblock” button—just that block notice. And yeah, a few payments got declined right after.",
+      "assistant_response": "Got it—if you only see a “security block” notice and there’s no unblock button, it’s likely the card was stopped for security reasons (often tied to the first attempt abroad), which can also cause nearby declined payments.\n\nCan you confirm: are you able to log into the app and complete any step under **Security / Verify activity** (or **Verify my identity**)? If you tell me what the app shows on that blocked-card screen, I’ll guide you to the exact action to unblock it.",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.12
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:19.859403",
+      "sim_prompt_tokens": 555,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 901,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I open the app and it just shows a red warning with a “Contact support” link—nothing to verify.",
+      "assistant_response": "Thanks—if the app only shows a red “security block” and a “Contact support” link (no unblock/verify option), this is typically treated as a security-related card block. I can help you get this resolved, but first can you confirm whether you’ve had any phone/account changes recently (lost phone, new SIM, or unusual logins)? If yes, tell me what happened; if no, I’ll proceed with the standard security-block unblock steps.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.18
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:22.835313",
+      "sim_prompt_tokens": 696,
+      "sim_completion_tokens": 195,
+      "bot_prompt_tokens": 1038,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No, nothing's changed—just my card getting blocked!",
+      "assistant_response": "I’m sorry—if there’s only a “security block” and no unblock option, it’s usually a security stop on the card (often for suspected compromise or unusual activity), which can also cause the declines you saw.\n\nTo proceed, please tap **Contact support** and follow the in-app steps so the team can lift the security block. Before you contact them, tell me whether the declined payments showed as **declined_card_payment** (in the app) and whether you were trying to pay anywhere else immediately before Spain.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:26.305841",
+      "sim_prompt_tokens": 823,
+      "sim_completion_tokens": 184,
+      "bot_prompt_tokens": 1154,
+      "bot_completion_tokens": 164
+    }
+  ]
+}

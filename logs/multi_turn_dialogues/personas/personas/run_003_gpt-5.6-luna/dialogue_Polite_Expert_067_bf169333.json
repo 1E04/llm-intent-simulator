@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "bf169333-1f5a-43eb-b525-2d2a86bd48ff",
+  "seed": 42,
+  "dialogue_index": 67,
+  "timestamp": "2026-08-24T12:01:10.994932",
+  "persona": "Polite Expert",
+  "target_intent": "atm_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2970,
+  "total_sim_completion_tokens": 506,
+  "total_bot_prompt_tokens": 4456,
+  "total_bot_completion_tokens": 725,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm at an ATM and it says the transaction was approved, but no cash was dispensed.",
+      "assistant_response": "Sorry about that—an ATM can show “approved” even if no cash is dispensed. Could you tell me: did you still get charged/see the withdrawal amount in your app (and do you have a receipt or the transaction reference)?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.52
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.29
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:00.371063",
+      "sim_prompt_tokens": 416,
+      "sim_completion_tokens": 94,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, the amount was deducted and shows up in the app, but I didn’t get a receipt and I don’t have a reference number.",
+      "assistant_response": "Thanks—if the amount was deducted in the app but no cash came out and you don’t have a reference/receipt, that most likely points to a cash withdrawal issue. Did the app show the withdrawal as completed, pending, or reversed?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.14
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:03.005917",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s shown as completed in the app.",
+      "assistant_response": "Got it—if it’s marked “completed” and the money was deducted but the ATM didn’t dispense cash, I can help you raise the missing cash withdrawal case.\n\nWhich is closer to what you see in the app: (1) a “cash withdrawal” entry with the same amount/date/location, or (2) no clear cash withdrawal entry/it’s labelled differently? And do you remember the ATM location/country?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.35
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.33
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.32
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:05.463060",
+      "sim_prompt_tokens": 575,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 859,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I see a “cash withdrawal” entry with the correct amount, date and the location listed as the downtown branch ATM in New York.",
+      "assistant_response": "Thanks—since it’s a “cash withdrawal” entry marked completed for the correct amount and location, but no cash was dispensed, this is a missing cash withdrawal at the ATM. I can help you report it: please confirm (1) the exact amount, (2) the date/time (approx. is fine), and (3) whether you used a debit card or ATM card (and if it’s yours, the last 4 digits of the card).",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.76
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.15
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:08.437727",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 102,
+      "bot_prompt_tokens": 983,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "The withdrawal was $120.00 on April 22 at around 2:15 PM, and I used my debit card ending in 4321.",
+      "assistant_response": "Thanks—so it’s a completed cash withdrawal for $120.00 on April 22 around 2:15 PM at the downtown branch ATM in New York, but no cash was dispensed, and it’s on your debit card ending 4321. \n\nI can help you report a missing cash withdrawal. Are you able to confirm whether the ATM is showing any “Transaction failed/No cash received” message, or did it complete without any error?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.72
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:10.994812",
+      "sim_prompt_tokens": 812,
+      "sim_completion_tokens": 93,
+      "bot_prompt_tokens": 1120,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

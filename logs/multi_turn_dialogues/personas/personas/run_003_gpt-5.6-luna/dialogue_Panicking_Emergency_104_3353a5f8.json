@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "3353a5f8-c6ca-41ae-8edb-65dcf061b630",
+  "seed": 42,
+  "dialogue_index": 104,
+  "timestamp": "2026-08-24T11:58:10.740523",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_by_cash_or_cheque",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3058,
+  "total_sim_completion_tokens": 579,
+  "total_bot_prompt_tokens": 4260,
+  "total_bot_completion_tokens": 783,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add cash at the branch and it got rejected! I'm in a rush.",
+      "assistant_response": "Sorry about that—when you say the branch cash top-up was “rejected,” did the teller inform you it was due to an issue with eligibility/limits, or did they just say the deposit couldn’t be processed?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.6
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.28
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:00.532578",
+      "sim_prompt_tokens": 466,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They just said it couldn't be processed—no reason given!",
+      "assistant_response": "Got it—if the branch cash top-up was rejected and “couldn’t be processed” was all they said, it’s usually a cash/cheque top-up failure. Can you tell me: did you receive a receipt or any reference number from the branch?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.58
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.25
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:03.189985",
+      "sim_prompt_tokens": 528,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, I didn't get any receipt or reference number.",
+      "assistant_response": "Thanks—if a branch cash top-up was rejected with no receipt or reference, it likely wasn’t processed as a successful deposit. Quick check: were you trying to top up your account balance by cash at a branch counter (cash/cheque), or was it a bank transfer?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:05.388349",
+      "sim_prompt_tokens": 604,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 844,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Cash at the branch—just that. I'm in a hurry!",
+      "assistant_response": "Understood—this sounds like a failed cash top up at the branch. Since you weren’t given a receipt/reference and it was rejected, it likely wasn’t credited to your account. Do you want me to help you figure out what to ask the branch for (so we can trace it), or would you prefer next steps to confirm your balance hasn’t changed?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.8
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:07.881690",
+      "sim_prompt_tokens": 682,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 924,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, tell me what to ask them—need it fixed now!",
+      "assistant_response": "Sure—here’s what to ask the branch right now:\n\n1) “Please confirm whether the cash deposit was submitted successfully in their system or rejected.”\n2) “If rejected, can you provide the failure reason (e.g., account/card details, limit, verification, or cash handling)?”\n3) “Can you issue me a receipt or any transaction/reference number for the attempted deposit?”\n4) “If it was processed then reversed/declined, can you confirm the status and the expected timeline for it to reflect (or not reflect) on my account?”\n\nIf they can’t find a reference at all, ask them to record your attempt details (date/time, amount, branch location, and teller name) so you can use it with support to investigate the failed cash top up quickly.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.82
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.13
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:10.740389",
+      "sim_prompt_tokens": 778,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1021,
+      "bot_completion_tokens": 236
+    }
+  ]
+}

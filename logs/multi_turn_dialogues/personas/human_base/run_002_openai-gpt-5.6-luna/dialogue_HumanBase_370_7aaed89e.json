@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "7aaed89e-0ef2-407a-828c-b769e98dd3b5",
+  "seed": 42,
+  "dialogue_index": 370,
+  "timestamp": "2026-08-21T13:09:48.813840",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1085,
+  "total_sim_completion_tokens": 247,
+  "total_bot_prompt_tokens": 3466,
+  "total_bot_completion_tokens": 447,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why couldn't I complete a transfer?",
+      "assistant_response": "I can help—was your transfer marked as failed, or did it show as declined/cancelled? If you tell me what status you see (and whether it was a bank transfer or card transfer), I’ll guide you to the right fix.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.27
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:44.096869",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as declined, and it was a bank transfer.",
+      "assistant_response": "Got it—your bank transfer shows as **declined**. This is usually due to details on the transfer (like recipient/account info), insufficient funds, or a compliance/verification check. \n\nCan you tell me the exact status message (and whether you initiated it from the app or via bank details like IBAN/SWIFT)?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:46.355845",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 1148,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It says “Transfer declined – insufficient funds,” and I started it from the app.",
+      "assistant_response": "Thanks—since it says **“Transfer declined – insufficient funds”** and it was started from the app, this is a **declined bank transfer**. \n\nTo resolve it, add enough available balance (including any applicable transfer/FX fees) and then try the transfer again. If you want, tell me the transfer amount and your current available balance, and I’ll help you estimate what total balance you need.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:48.813716",
+      "sim_prompt_tokens": 587,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1242,
+      "bot_completion_tokens": 178
+    }
+  ]
+}

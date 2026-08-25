@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "fa1af419-64ca-4abc-8107-b557b8d5b24d",
+  "seed": 42,
+  "dialogue_index": 35,
+  "timestamp": "2026-08-24T12:04:13.781977",
+  "persona": "Gen-Z Slang",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1519,
+  "total_sim_completion_tokens": 470,
+  "total_bot_prompt_tokens": 2381,
+  "total_bot_completion_tokens": 433,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i tried buying coffee and the card got rejected, think it’s the numbers.",
+      "assistant_response": "Sorry about that—when a card is rejected, it can be due to the card details or the payment being declined for other reasons. When you say it’s the numbers, do you mean you entered the card details incorrectly (wrong card number/expiry/CVC), or was the card physically tapped/swiped and still got declined?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:08.047662",
+      "sim_prompt_tokens": 415,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "i swiped it, it just says the pin’s wrong.",
+      "assistant_response": "Thanks—if it says the PIN is wrong after you’ve swiped, did you enter the PIN incorrectly more than once (or has the card been locked)? If you tell me whether it’s the first failed attempt or it says the card/PIN is blocked, I can guide you to the right fix—either retrying with the correct PIN or resetting an issue with your PIN.",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.14
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:10.707592",
+      "sim_prompt_tokens": 502,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "i tried a couple times, still says wrong.",
+      "assistant_response": "It sounds like your PIN may now be blocked after a few failed attempts. Can you confirm what the message says exactly—does it specifically mention “PIN failed/locked/blocked,” or does it only say “PIN wrong”?",
+      "predicted_intent": "pin_blocked",
+      "top_3_intents": [
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:04:13.781648",
+      "sim_prompt_tokens": 602,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 888,
+      "bot_completion_tokens": 103
+    }
+  ]
+}

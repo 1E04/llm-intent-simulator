@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5575d602-8703-4240-a9e4-36154ec16af8",
+  "seed": 42,
+  "dialogue_index": 108,
+  "timestamp": "2026-08-24T11:53:13.335303",
+  "persona": "Angry Layperson",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 807,
+  "total_sim_completion_tokens": 212,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 320,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card got rejected when I tried to tap it at the checkout!",
+      "assistant_response": "Sorry about that—was this rejection specifically when you tried to use contactless (tap) at the checkout, or did the chip/Magstripe payment also get declined?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:10.428750",
+      "sim_prompt_tokens": 379,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was just the tap—when I swiped or used the chip it went through fine.",
+      "assistant_response": "Thanks—if chip/swipe works but tap (contactless) is rejected, that points to a contactless issue. A couple quick checks: are you trying below the contactless limit and has the terminal been set up for contactless? Also, please confirm your card is enabled for contactless in the app/online profile—if you tell me what country you’re in and whether contactless has worked for you before, I’ll guide you to the next step.",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T11:53:13.335191",
+      "sim_prompt_tokens": 428,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 189
+    }
+  ]
+}

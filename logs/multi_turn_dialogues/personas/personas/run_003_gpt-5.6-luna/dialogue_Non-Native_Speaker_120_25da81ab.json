@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "25da81ab-c910-455e-ba35-ecb1911681f1",
+  "seed": 42,
+  "dialogue_index": 120,
+  "timestamp": "2026-08-24T12:10:39.178073",
+  "persona": "Non-Native Speaker",
+  "target_intent": "visa_or_mastercard",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1065,
+  "total_sim_completion_tokens": 281,
+  "total_bot_prompt_tokens": 1489,
+  "total_bot_completion_tokens": 253,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hey, I'm at a shop and my card just got declined, I don't know why.",
+      "assistant_response": "Sorry about that—when a card is declined, it can be for a few different reasons. Can you confirm: was it declined for an in-store card payment, and do you see any message like “insufficient funds,” “try again,” or “card not supported” on the terminal?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:36.766468",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was in the shop and the machine just said “try again”.",
+      "assistant_response": "Got it—if the in-store terminal says “try again,” it’s typically a declined card payment. Can you tell me: were you paying with your physical card (chip/tap) or contactless?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:39.177996",
+      "sim_prompt_tokens": 572,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 100
+    }
+  ]
+}

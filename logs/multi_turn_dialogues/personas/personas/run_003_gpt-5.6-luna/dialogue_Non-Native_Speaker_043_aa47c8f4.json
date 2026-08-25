@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "aa47c8f4-4e9c-4df3-adda-da61f41ec091",
+  "seed": 42,
+  "dialogue_index": 43,
+  "timestamp": "2026-08-24T12:08:34.738722",
+  "persona": "Non-Native Speaker",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 976,
+  "total_sim_completion_tokens": 194,
+  "total_bot_prompt_tokens": 1466,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add money to my account, but the balance still looks the same.",
+      "assistant_response": "Sorry about that—could you confirm how you added the money: bank transfer, cash/cheque deposit, or card top up? Also, how long ago did you make the top up?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.29
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:32.132894",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 112,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was by card, just now—maybe about half an hour ago.",
+      "assistant_response": "Thanks—since you top up by card about half an hour ago, it’s most likely still processing. Could you check your app for the top-up status (e.g., Pending) and tell me what it shows? If it’s pending, the balance will update shortly; if it shows failed or reverted, I can help next.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:34.738631",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 82,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

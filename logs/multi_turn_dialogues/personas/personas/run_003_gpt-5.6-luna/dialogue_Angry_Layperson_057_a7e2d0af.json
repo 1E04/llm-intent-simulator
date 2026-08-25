@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "a7e2d0af-30ef-4896-acf5-da3ccdc8bdcb",
+  "seed": 42,
+  "dialogue_index": 57,
+  "timestamp": "2026-08-24T11:50:22.794412",
+  "persona": "Angry Layperson",
+  "target_intent": "passcode_forgotten",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2676,
+  "total_sim_completion_tokens": 901,
+  "total_bot_prompt_tokens": 4349,
+  "total_bot_completion_tokens": 630,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I keep getting locked out of the app—my login code just isn’t working!",
+      "assistant_response": "Sorry you’re dealing with this. When you say the login code isn’t working, do you mean your in-app passcode/verification code was entered incorrectly or that you can’t receive it at all (no code arrives)?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.78
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.13
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:10.271618",
+      "sim_prompt_tokens": 377,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I never even get the code—nothing shows up on my phone.",
+      "assistant_response": "Got it—if you never receive the code on your phone, let’s narrow down the issue. Is this during login/verification (a security code SMS/email), and are you currently able to receive any other SMS/notifications on that same phone number?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.34
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.33
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:13.133776",
+      "sim_prompt_tokens": 441,
+      "sim_completion_tokens": 169,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yeah, it’s the login code, and I get regular texts just fine—only this one never comes through.",
+      "assistant_response": "Thanks—since you receive other texts but not the login code, can you confirm whether you’re trying to enter a one-time verification code during sign-in, or is it your app passcode/password that you’re locked out from? Also, does the app show an error like “code expired/incorrect” or does it say it can’t send the code?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.22
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.21
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:16.605667",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 212,
+      "bot_prompt_tokens": 854,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s the one‑time sign‑in code, and the app just says it can’t send it.",
+      "assistant_response": "To make sure I point you to the right fix: is the one-time sign-in code sent by SMS/phone number during verification, or is it sent via email? Also, are you currently locked out because of too many attempts (e.g., “try again later”), or does it fail immediately with “can’t send the code”?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.45
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.3
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:19.825809",
+      "sim_prompt_tokens": 621,
+      "sim_completion_tokens": 214,
+      "bot_prompt_tokens": 958,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s supposed to come by SMS, and it just blows up right away with “can’t send the code” – no lock‑out message.",
+      "assistant_response": "Thanks—since you’re not receiving the SMS and the app immediately says “can’t send the code,” this usually points to an identity-verification SMS issue. Before I guide you, can you confirm: are you trying to sign in with your phone number to receive a one-time SMS code (not your app passcode)?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.66
+        },
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.18
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:50:22.794339",
+      "sim_prompt_tokens": 721,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 1066,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

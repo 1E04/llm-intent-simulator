@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "1f778683-2e6f-4128-9a89-1e2df93b71fb",
+  "seed": 42,
+  "dialogue_index": 114,
+  "timestamp": "2026-08-24T12:02:18.023990",
+  "persona": "Polite Expert",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2546,
+  "total_sim_completion_tokens": 550,
+  "total_bot_prompt_tokens": 3450,
+  "total_bot_completion_tokens": 704,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I've observed a number of unfamiliar charges on my account and my card is being declined at merchants despite having sufficient funds.",
+      "assistant_response": "I’m sorry you’re dealing with this. To help quickly: are the unfamiliar charges showing as card payments or are they transfers/fees, and have you noticed any sign of your card details being shared (e.g., lost/stolen card or you entered them on an unfamiliar site)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.42
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.36
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:08.031919",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They’re showing up as card payments, and I suspect my card details may have been exposed—my card isn’t lost, but I might have entered the numbers on an unfamiliar website.",
+      "assistant_response": "Thanks—since the charges are appearing as card payments and you suspect your card details were entered on an unfamiliar website, are you able to confirm whether any of those charges are marked as pending or completed? Also, have you already tried a merchant payment again to see if it still gets declined.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.21
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:10.795100",
+      "sim_prompt_tokens": 576,
+      "sim_completion_tokens": 195,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "A few are still pending, but most have already cleared, and I tried the same merchant again—it's still being declined.",
+      "assistant_response": "It sounds like your card details may have been compromised, especially with unfamiliar card payments and the card being declined at merchants. \n\n1) Are the unfamiliar transactions showing as “pending” or “completed” on your app right now?\n2) Have you reported the card as compromised / frozen the card yet (via the app)? If not, I can guide you through the quickest steps to secure it.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.66
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:13.458402",
+      "sim_prompt_tokens": 681,
+      "sim_completion_tokens": 105,
+      "bot_prompt_tokens": 906,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Most are completed, a few are still pending, and I haven’t frozen the card yet—please walk me through the steps.",
+      "assistant_response": "I’m sorry this happened. Since you suspect your card details were entered on an unfamiliar website and the card is now being declined, let’s secure your card first.\n\n1) Freeze the card immediately in the app (Cards → select your card → Freeze/Lock). \n2) If prompted, choose “Card security/Compromised” when reporting it. \n3) Check recent transactions: pending ones may clear on their own, but you should still review them for any that you don’t recognize.\n4) Consider changing your card security details if your app offers it, and avoid using the card online until you’re satisfied it’s safe.\n5) After freezing, ask for a replacement card if needed (typically Cards → Replace/Spare/Getting spare card).\n\nQuick question so I guide you correctly: do you want to freeze the card now and report it as compromised, and are you using the app on iOS or Android?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.66
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.52
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:18.023924",
+      "sim_prompt_tokens": 796,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 1022,
+      "bot_completion_tokens": 289
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "cc670cdf-2402-4a34-b457-7d63b0d60cc0",
+  "seed": 42,
+  "dialogue_index": 50,
+  "timestamp": "2026-08-24T12:08:54.027349",
+  "persona": "Non-Native Speaker",
+  "target_intent": "fiat_currency_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2193,
+  "total_sim_completion_tokens": 573,
+  "total_bot_prompt_tokens": 3347,
+  "total_bot_completion_tokens": 571,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I opened the app to add my local money, but I don't see it as an option. It just says not available.",
+      "assistant_response": "Just to clarify—when you say “add my local money,” do you mean topping up by card, or are you trying to top up by bank transfer/cash (or cheque)? Also, what country and currency are you trying to add?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.34
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.33
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:45.972992",
+      "sim_prompt_tokens": 424,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I try to add by bank transfer, I am in Brazil and want to use Brazilian Real.",
+      "assistant_response": "Got it—you’re trying to add BRL in Brazil via bank transfer, but the option shows “not available.” Is it the “bank transfer top up” method that’s missing, or is it specifically the BRL currency that isn’t supported for bank transfers in the app?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:48.933274",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It is the Brazilian Real that is not allowed for bank‑transfer top‑up.",
+      "assistant_response": "Thanks—so BRL isn’t supported for bank-transfer top-ups. Can you confirm whether you’re trying to top up to a balance in BRL specifically (not just convert after the transfer)? If yes, BRL bank-transfer top-up isn’t available in your setup, but we can check which supported currencies you can add by bank transfer and then convert inside the app.",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.74
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.2
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:51.183181",
+      "sim_prompt_tokens": 584,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 870,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, I need to add money directly in BRL. What other currencies can I use for bank‑transfer top‑up?",
+      "assistant_response": "At the moment, Brazilian Real (BRL) isn’t available for bank-transfer top-ups in the app. Which other currencies you can use depends on your supported top-up options for your account/country—could you tell me which balance you’re topping up to in the app (e.g., EUR/USD/other) or your account’s supported region? I can then point you to the exact BRL alternatives available for bank transfer.",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:08:54.027202",
+      "sim_prompt_tokens": 686,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 981,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

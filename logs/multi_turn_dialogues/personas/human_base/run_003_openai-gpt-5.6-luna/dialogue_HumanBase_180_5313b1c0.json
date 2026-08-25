@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "5313b1c0-dc11-4b92-a012-861ccbfa43a4",
+  "seed": 42,
+  "dialogue_index": 180,
+  "timestamp": "2026-08-21T15:40:41.418714",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1383,
+  "total_sim_completion_tokens": 211,
+  "total_bot_prompt_tokens": 2369,
+  "total_bot_completion_tokens": 371,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm concerned about a payment that has recently been made on my card.  I do not recognize the name that the transaction went to, can you help me?",
+      "assistant_response": "I can help with that. Is this transaction showing as completed, pending, or reversed on your card? Also, roughly when was it made?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.13
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:36.391530",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s shown as completed, and I believe it was made about a week ago, around last Thursday.",
+      "assistant_response": "Sorry about that—I'll help you figure out the completed card payment you don’t recognize. \nWhat’s the merchant name or description shown on the transaction, and do you see the transaction amount and currency as well? If you can, also confirm whether it matches any subscription or recurring charge you expected.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.18
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:38.822712",
+      "sim_prompt_tokens": 646,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The merchant shows up as “LuxeBoutique” and the amount is £78.50. It’s not a subscription I signed up for.",
+      "assistant_response": "Thanks—since it’s a completed card payment you don’t recognize, I can help you take the right next steps. \n\nFirst, can you confirm whether you still have the card in your possession (i.e., it hasn’t been lost or stolen), and whether you’ve noticed any other unfamiliar transactions?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.92
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:41.418562",
+      "sim_prompt_tokens": 737,
+      "sim_completion_tokens": 82,
+      "bot_prompt_tokens": 877,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "68400968-1b06-49d2-929b-cbed51abf2b0",
+  "seed": 42,
+  "dialogue_index": 109,
+  "timestamp": "2026-08-24T12:02:10.285829",
+  "persona": "Polite Expert",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3187,
+  "total_sim_completion_tokens": 650,
+  "total_bot_prompt_tokens": 4465,
+  "total_bot_completion_tokens": 698,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I’ve been seeing regular deposits into my account that I didn’t initiate, and I’m not sure what’s triggering them.",
+      "assistant_response": "I can help with that. When you say “regular deposits,” are these coming from another person’s transfer (bank transfer) or from a card/payment method? Also, have you recently changed anything on your account (e.g., shared your payment details, updated bank account details, or received a new card linked to the account)?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.44
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.33
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:59.430315",
+      "sim_prompt_tokens": 457,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They’re coming from a linked card, not a bank transfer, and I haven’t changed any account details or shared my payment information recently.",
+      "assistant_response": "Thanks—so you’re seeing unexpected deposits coming from a linked card. Could you confirm: are these deposits labelled as card payments/merchant charges on your statement (money coming in), or are you actually seeing purchases/charges coming out that you didn’t make?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:02.197845",
+      "sim_prompt_tokens": 550,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "They’re incoming amounts—credits on my statement—not any unauthorized purchases or outgoing charges.",
+      "assistant_response": "Got it—these are incoming credits from a linked card, with no outgoing unauthorized charges. Are these credits specifically marked as “card payment received,” “refund,” or “cash withdrawal/deposit,” and do you know the sender/merchant name on the statement for one of the deposits?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.22
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:04.857397",
+      "sim_prompt_tokens": 640,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 892,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "They appear as “card payment received,” and the merchant name listed is “TechGear Supplies.”",
+      "assistant_response": "Thanks—those credits look like card payments received from “TechGear Supplies.” To help pinpoint why they’re happening, can I ask: did you or anyone you know place an order with TechGear Supplies recently (even if you didn’t notice the charge), and approximately when did the first of these payments start appearing?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.74
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:07.520913",
+      "sim_prompt_tokens": 724,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 978,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I haven’t placed any order with TechGear Supplies, and the first credit showed up about three weeks ago.",
+      "assistant_response": "Thanks for clarifying. Since these are “card payment received” credits from TechGear Supplies that you didn’t initiate, can you check one thing for me: does the statement show the *same* amount for each credit (or a recurring pattern), and is there any related reference number/transaction ID shown for those payments? If you can share one example amount and date (no full card details), I’ll tell you the most likely cause and what to do next.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.2
+        },
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:10.285681",
+      "sim_prompt_tokens": 816,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 1073,
+      "bot_completion_tokens": 192
+    }
+  ]
+}

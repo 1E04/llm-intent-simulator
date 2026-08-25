@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "f712dbc2-f02b-4283-894a-35b7ddcecfd3",
+  "seed": 42,
+  "dialogue_index": 703,
+  "timestamp": "2026-08-21T15:50:38.563813",
+  "persona": "HumanBase",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2569,
+  "total_sim_completion_tokens": 548,
+  "total_bot_prompt_tokens": 4307,
+  "total_bot_completion_tokens": 658,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How can I see where my money comes from?",
+      "assistant_response": "Sure—do you mean (1) you want to view the source of funds/documents used for your verification, or (2) you want to see where deposits/transfers into your account are coming from in your transaction history? Which one?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.72
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.18
+        },
+        {
+          "intent": "edit_personal_details",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:28.449664",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to see where the deposits and transfers into my account are coming from.",
+      "assistant_response": "Got it—you want to see where incoming deposits and transfers into your account are coming from. Are you looking for this in your in-app transaction history (recent incoming payments), or do you mean the bank transfer “source” details used to verify you?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.33
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:31.150171",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "In the app—just the transaction history showing incoming payments.",
+      "assistant_response": "To view where incoming deposits/transfers are coming from in the app, can you confirm whether you mainly see them as **bank transfers** or as **card/wallet transfers** in your history? Also, are you on the **Transactions** tab or under **Statements/Activity**? If you tell me which one you’re currently looking at, I’ll point you to the exact screen to see the sender/source.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.26
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:33.500348",
+      "sim_prompt_tokens": 585,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 842,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I’m seeing them as bank transfers and I’m on the Transactions tab.",
+      "assistant_response": "Thanks—on the **Transactions** tab, incoming **bank transfers** should show the **sender/origin** on each transaction line. \n\nCan you tell me: when you click one of those incoming transfers, do you see any details like **sender name/reference**? If not, is it showing the transfer as **pending** or **completed**?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.17
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:36.141159",
+      "sim_prompt_tokens": 690,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 950,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I click them and it just says “completed” – there’s no sender name or reference shown.",
+      "assistant_response": "Understood. If an incoming transfer shows **Completed** but there’s **no sender name/reference** in the details, it’s usually still expected that the app will only display limited info for some bank transfers.\n\nQuick check so I can guide you correctly: is the transfer amount you received showing correctly in your **available balance**, or are you seeing a mismatch/it hasn’t updated?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.64
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.23
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:38.563768",
+      "sim_prompt_tokens": 786,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 1051,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

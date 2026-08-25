@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "acba8539-f274-4140-ae10-ae29284442a0",
+  "seed": 42,
+  "dialogue_index": 597,
+  "timestamp": "2026-08-21T15:48:17.468892",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 582,
+  "total_sim_completion_tokens": 272,
+  "total_bot_prompt_tokens": 1463,
+  "total_bot_completion_tokens": 268,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why caused my top up to not work?",
+      "assistant_response": "I’m sorry that happened. Was your top up declined/failed, or is it showing as pending? If you can, tell me the top up method (card/bank transfer/cash/cheque) and roughly when you tried.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.16
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:13.481600",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up, I tried about an hour ago and it got declined.",
+      "assistant_response": "Got it—since it was a card top-up declined about an hour ago, this is typically covered under a failed/declined card top-up. Could you tell me whether the app shows it as “Declined” or “Failed,” and do you see any reference/authorization code? Also, did you try the same card again after the decline?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.09
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:17.468846",
+      "sim_prompt_tokens": 582,
+      "sim_completion_tokens": 272,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

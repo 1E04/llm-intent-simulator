@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f6c026e6-9d01-413d-8b30-3a261523144e",
+  "seed": 42,
+  "dialogue_index": 129,
+  "timestamp": "2026-08-21T12:53:23.820778",
+  "persona": "HumanBase",
+  "target_intent": "card_arrival",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1110,
+  "total_sim_completion_tokens": 177,
+  "total_bot_prompt_tokens": 3477,
+  "total_bot_completion_tokens": 377,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Do you know if there is a tracking number for the new card you sent me?",
+      "assistant_response": "Yes—there should be tracking details for your new card shipment. Can you confirm whether you’re asking for the tracking number to see the delivery status, or just an estimate of when it will arrive?",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_about_to_expire",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:53:20.129069",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1086,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I just need the tracking number so I can check the delivery status.",
+      "assistant_response": "Sure—if you have your card order/shipping email or the confirmation message from when the card was dispatched, it usually contains the tracking number/link. Tell me which country you’re in (or the first 6 digits of your card/your order reference, if you have it), and I’ll help you find the correct tracking details.",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.55
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T12:53:22.024700",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 1150,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm in the UK and my order reference is 123456.",
+      "assistant_response": "Thanks—UK and order reference 123456 noted. I can help you find the tracking information, but I need to locate your specific shipment record first. Please confirm the name/email on the account (or the first 3 letters of your surname) so I can match it to the right card order.",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T12:53:23.820674",
+      "sim_prompt_tokens": 601,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 1241,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "83cc9d4f-975b-43ab-a1c7-a594e156a36b",
+  "seed": 42,
+  "dialogue_index": 46,
+  "timestamp": "2026-08-24T12:12:53.017297",
+  "persona": "Short Wording",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2061,
+  "total_sim_completion_tokens": 1006,
+  "total_bot_prompt_tokens": 3109,
+  "total_bot_completion_tokens": 465,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Transfer missing.",
+      "assistant_response": "Sorry about that—was the transfer marked as completed/sent, or does it show as pending/failed in your app? If you can, also tell me the transfer date and whether it was a bank transfer or card-to-card transfer.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:42.415632",
+      "sim_prompt_tokens": 431,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Sent 12/5",
+      "assistant_response": "Thanks—when you say “sent 12/5,” does the transfer show as completed in your app, or is it pending/failed? Also, have you confirmed the recipient details (name/account) are correct?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:47.234713",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 468,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Pending, correct.",
+      "assistant_response": "Got it—the transfer is still pending. Can you confirm the transfer type (bank transfer or card-to-card) and the amount/currency? Also, does it show an estimated completion time or any reference/error message?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:50.080310",
+      "sim_prompt_tokens": 544,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 808,
+      "bot_completion_tokens": 96
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Bank $200",
+      "assistant_response": "Thanks—since your $200 bank transfer is still showing as pending, can you share the exact date you submitted it (12/5) and whether it’s the same status as “pending” in the app (no “failed” or “cancelled”)? Also, are you expecting it to arrive to your recipient’s bank account or another Revolut user?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:53.017144",
+      "sim_prompt_tokens": 601,
+      "sim_completion_tokens": 192,
+      "bot_prompt_tokens": 864,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

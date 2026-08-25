@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "58616e1d-dac7-4286-82d9-349505447d7c",
+  "seed": 42,
+  "dialogue_index": 71,
+  "timestamp": "2026-08-24T11:57:00.930782",
+  "persona": "Panicking Emergency",
+  "target_intent": "card_delivery_estimate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1019,
+  "total_sim_completion_tokens": 179,
+  "total_bot_prompt_tokens": 1450,
+  "total_bot_completion_tokens": 265,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card still hasn't shown up and I need it right now!",
+      "assistant_response": "Sorry about that—when did you place the physical card order, and have you received any tracking or delivery confirmation yet?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.2
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:58.475052",
+      "sim_prompt_tokens": 490,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I ordered it two weeks ago—no tracking info, no confirmation, and I still don’t have it!",
+      "assistant_response": "That sounds frustrating—if you ordered it two weeks ago and there’s no tracking or confirmation yet, can you confirm whether you ordered a physical card (not a virtual one), and what country you’re in? I can then help check the delivery status and next steps.",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_about_to_expire",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:00.930632",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 81,
+      "bot_prompt_tokens": 753,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

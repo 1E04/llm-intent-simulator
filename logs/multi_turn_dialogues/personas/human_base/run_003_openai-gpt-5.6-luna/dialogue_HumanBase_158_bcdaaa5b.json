@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bcdaaa5b-39e5-4099-a206-1dc3a0cfed9d",
+  "seed": 42,
+  "dialogue_index": 158,
+  "timestamp": "2026-08-21T15:40:05.847379",
+  "persona": "HumanBase",
+  "target_intent": "card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 611,
+  "total_sim_completion_tokens": 150,
+  "total_bot_prompt_tokens": 1453,
+  "total_bot_completion_tokens": 250,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card isn't working anymore.",
+      "assistant_response": "Sorry about that—when you say your card isn’t working, are you seeing a decline/error at the merchant, or did an ATM keep/swallow the card? If you tell me what happened, I’ll guide you to the right fix.",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.14
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:03.086155",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just keeps getting declined whenever I try to pay at a shop.",
+      "assistant_response": "Got it—if shop payments are getting declined, that usually points to a card payment being declined. Can you tell me: is the decline happening for every merchant (card-present tap/swipe) or only for certain shops/online?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:05.847276",
+      "sim_prompt_tokens": 611,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 107
+    }
+  ]
+}

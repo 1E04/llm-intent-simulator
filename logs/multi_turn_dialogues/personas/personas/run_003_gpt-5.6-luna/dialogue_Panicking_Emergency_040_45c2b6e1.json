@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "45c2b6e1-6333-4886-93c7-f225ff697e56",
+  "seed": 42,
+  "dialogue_index": 40,
+  "timestamp": "2026-08-24T11:56:07.841435",
+  "persona": "Panicking Emergency",
+  "target_intent": "lost_or_stolen_phone",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 905,
+  "total_sim_completion_tokens": 443,
+  "total_bot_prompt_tokens": 1464,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My phone just vanished—I can’t get into the app!",
+      "assistant_response": "I’m sorry to hear that—when you say your phone vanished, is it lost or stolen (so you can’t access the device at all), or do you still have the phone but you can’t sign in because of a passcode issue?",
+      "predicted_intent": "lost_or_stolen_phone",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_phone",
+          "confidence": 0.78
+        },
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.12
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:04.203631",
+      "sim_prompt_tokens": 421,
+      "sim_completion_tokens": 222,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was taken—I don’t have the phone at all.",
+      "assistant_response": "I’m sorry this happened. Since your phone was stolen and you can’t access it, we’ll treat this as a lost/stolen phone incident—please confirm: do you still have access to your account by email (to receive a security code), or is it also blocked on your side?",
+      "predicted_intent": "lost_or_stolen_phone",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_phone",
+          "confidence": 0.93
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.04
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:07.841278",
+      "sim_prompt_tokens": 484,
+      "sim_completion_tokens": 221,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

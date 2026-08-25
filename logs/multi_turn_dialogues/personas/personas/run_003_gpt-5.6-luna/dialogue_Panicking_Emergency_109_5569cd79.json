@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5569cd79-4770-4919-89c7-429510b4e5e1",
+  "seed": 42,
+  "dialogue_index": 109,
+  "timestamp": "2026-08-24T11:58:14.658639",
+  "persona": "Panicking Emergency",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 977,
+  "total_sim_completion_tokens": 283,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 244,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account is empty and the card just got declined—I need money right now!",
+      "assistant_response": "I’m sorry—when you say the card was declined, was it declined for a card payment at a merchant, or for an ATM cash withdrawal? Also, do you expect money from a bank transfer that might not have arrived yet?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.57
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.23
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:12.084238",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an ATM decline, and I’m waiting for a transfer to hit.",
+      "assistant_response": "Got it—an ATM decline while you’re waiting for a transfer. First, could you confirm whether the transfer is showing as completed/sent on your side (not still pending)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:14.658526",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 99
+    }
+  ]
+}

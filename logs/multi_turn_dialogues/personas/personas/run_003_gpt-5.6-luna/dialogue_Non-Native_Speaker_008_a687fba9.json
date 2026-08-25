@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a687fba9-dc1e-44e1-a0bd-dbfce1c316e9",
+  "seed": 42,
+  "dialogue_index": 8,
+  "timestamp": "2026-08-24T12:07:38.297999",
+  "persona": "Non-Native Speaker",
+  "target_intent": "card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1041,
+  "total_sim_completion_tokens": 172,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 325,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hey, I am in the store and my card keeps getting rejected.",
+      "assistant_response": "Sorry about that—when you try to pay, is the terminal showing a “declined” or “payment not approved” message, or something like “card not supported/try another card”?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:35.998992",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 94,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows “payment not approved”, like it says try another card.",
+      "assistant_response": "Thanks—if it says “payment not approved / try another card,” that usually means the card payment was declined. A couple quick checks: are you trying to pay in person (chip/contactless) and is the card currently enabled and not reported lost or locked? Also, did you recently make a payment/online attempt that may have caused the merchant to retry—can you tell me whether the card is being declined for every shop purchase or just this one terminal?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.09
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:38.297858",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 78,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 189
+    }
+  ]
+}

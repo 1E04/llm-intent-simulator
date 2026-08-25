@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0fd857a0-3da2-43c7-80a6-753bad5ab48a",
+  "seed": 42,
+  "dialogue_index": 7,
+  "timestamp": "2026-08-24T11:59:36.990816",
+  "persona": "Polite Expert",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 916,
+  "total_sim_completion_tokens": 260,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 247,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello, I initiated a transfer earlier today and it still hasn't appeared on the recipient’s side.",
+      "assistant_response": "Sorry about that—when you say “not appeared on the recipient’s side,” do you see the transfer marked as completed in your app, or is it still pending?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.6
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:33.787486",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending in the app; it hasn’t been marked as completed.",
+      "assistant_response": "Thanks—if it’s still showing as pending in your app, the most likely issue is that the transfer hasn’t completed yet. Can you tell me roughly what time you initiated it (and which country/currency, if you know it)? I can then confirm the expected completion window and what to do next if it goes past that.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:36.990697",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "6a01b777-52b3-4cf4-bfc0-1836e303f034",
+  "seed": 42,
+  "dialogue_index": 13,
+  "timestamp": "2026-08-24T12:11:53.851873",
+  "persona": "Short Wording",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2205,
+  "total_sim_completion_tokens": 723,
+  "total_bot_prompt_tokens": 3148,
+  "total_bot_completion_tokens": 535,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Balance dropped.",
+      "assistant_response": "Sorry to hear that—when you say your balance dropped, was there a recent bank transfer, card payment, cash withdrawal, or top up? If you tell me which type and (if possible) the date/amount, I’ll help you pinpoint what happened.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.31
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:44.753236",
+      "sim_prompt_tokens": 458,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Top up.",
+      "assistant_response": "Got it—was the top up card/bank transfer/cash, and is it showing as pending or did it fail? If you can share the date and the amount, I can help you figure out why your balance dropped.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.62
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:48.203497",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 218,
+      "bot_prompt_tokens": 753,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Card 12/5 $50",
+      "assistant_response": "Thanks—so you did a card top up for $50 on 12/5. Is it currently showing as **pending** in the app, **completed**, or does it show **failed/reverted** (and the money is missing)? If you tell me the status I’ll guide you to the right fix.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.46
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.35
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:51.296519",
+      "sim_prompt_tokens": 575,
+      "sim_completion_tokens": 234,
+      "bot_prompt_tokens": 816,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Failed.",
+      "assistant_response": "I’m sorry—if your $50 card top up failed, it usually either hasn’t been credited yet or it’s been reverted back to your card. Can you confirm what you see in the app for that top up on 12/5: does it say **failed** or **reverted**, and does it still show any amount as pending?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.87
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.09
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:11:53.851810",
+      "sim_prompt_tokens": 656,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 892,
+      "bot_completion_tokens": 130
+    }
+  ]
+}

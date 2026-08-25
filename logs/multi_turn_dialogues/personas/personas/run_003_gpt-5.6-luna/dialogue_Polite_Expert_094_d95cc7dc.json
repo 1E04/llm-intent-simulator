@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "d95cc7dc-3a5e-494e-b87f-6b75885c80fe",
+  "seed": 42,
+  "dialogue_index": 94,
+  "timestamp": "2026-08-24T12:01:47.618096",
+  "persona": "Polite Expert",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1532,
+  "total_sim_completion_tokens": 410,
+  "total_bot_prompt_tokens": 2367,
+  "total_bot_completion_tokens": 388,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I initiated a transfer earlier today, and it still appears to be processing without any confirmation of completion.",
+      "assistant_response": "Thanks—just to clarify, does the transfer show as “pending” in your app (still processing), or is it marked as “failed”/“reverted”? And approximately how many hours ago did you make it?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.13
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:41.920123",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 171,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as processing, not failed, and I made the transfer about five hours ago.",
+      "assistant_response": "Got it—since it’s been about five hours and it still shows “processing,” this usually means the transfer is pending and may take a bit longer depending on the transfer type and banks involved. \n\nCan you tell me: is it showing a “pending” status specifically, and is it a bank transfer (to a bank account) or an internal transfer between your recipients/accounts?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.29
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:44.994590",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s marked as pending, and it’s a bank transfer to an external account.",
+      "assistant_response": "Thanks—if your external bank transfer is marked “pending,” it typically just needs more time to complete. Since it’s been about 5 hours, it’s still within the normal processing window.\n\nTo help narrow it down: do you see an estimated completion time (or a cut‑off date) in the transfer details in the app?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.64
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:01:47.617960",
+      "sim_prompt_tokens": 604,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 884,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

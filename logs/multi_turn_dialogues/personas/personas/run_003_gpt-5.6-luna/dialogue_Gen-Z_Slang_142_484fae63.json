@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "484fae63-5fb1-4fe5-a691-4cc8b9199312",
+  "seed": 42,
+  "dialogue_index": 142,
+  "timestamp": "2026-08-24T12:07:06.739048",
+  "persona": "Gen-Z Slang",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 848,
+  "total_sim_completion_tokens": 442,
+  "total_bot_prompt_tokens": 1501,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i just noticed a weird charge on my account that i never signed up for. 😕",
+      "assistant_response": "I’m sorry about that—can you tell me what the charge says on your statement (merchant name/amount), and whether it was a card payment or something like a card verification/fee? Also, was your card recently used or has it been lost/stolen?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.58
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.3
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:02.742294",
+      "sim_prompt_tokens": 387,
+      "sim_completion_tokens": 185,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "got a $27 charge from spotify, looks like a regular purchase not a verification. my card’s fine, i’ve been using it daily.",
+      "assistant_response": "Thanks—since it’s a $27 Spotify charge you don’t recognize, I can help with an unrecognized card payment. First, was this definitely taken from your card balance (not a bank transfer/top up), and do you want to request a refund for this transaction?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:06.738862",
+      "sim_prompt_tokens": 461,
+      "sim_completion_tokens": 257,
+      "bot_prompt_tokens": 797,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

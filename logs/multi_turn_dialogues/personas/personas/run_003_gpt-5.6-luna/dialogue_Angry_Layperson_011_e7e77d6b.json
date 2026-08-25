@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e7e77d6b-76e6-41e2-a37a-038a391885c0",
+  "seed": 42,
+  "dialogue_index": 11,
+  "timestamp": "2026-08-24T11:48:04.763769",
+  "persona": "Angry Layperson",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 829,
+  "total_sim_completion_tokens": 248,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 286,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just found a random payment taken out of my account that I never approved!",
+      "assistant_response": "I’m sorry about that—can you confirm whether this was a card payment (made with your card) or something like a direct debit/transfer? Also, do you still see it as pending, or has it completed?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.14
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:01.789845",
+      "sim_prompt_tokens": 384,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a direct‑debit, already gone through – not a pending card charge.",
+      "assistant_response": "Thanks for confirming. Since it’s a direct debit you don’t recognize and it’s already completed, I can help you dispute it and request a refund. Can you tell me the merchant name shown on the transaction and the date/amount?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.93
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.04
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:04.763682",
+      "sim_prompt_tokens": 445,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

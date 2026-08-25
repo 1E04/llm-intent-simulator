@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0ba986b7-2331-4fd1-9c4e-f873a7fc7624",
+  "seed": 42,
+  "dialogue_index": 179,
+  "timestamp": "2026-08-21T15:40:37.742716",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 633,
+  "total_sim_completion_tokens": 169,
+  "total_bot_prompt_tokens": 1478,
+  "total_bot_completion_tokens": 278,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What is the payment in my account that I did not do?",
+      "assistant_response": "I can help with that. Is this an unrecognized card payment showing in your app/statement (money was taken), or does it appear as a pending/declined payment? If you can, tell me the merchant name and whether the payment is completed or pending.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:34.929828",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a completed payment that’s already taken, and the merchant is XYZ Electronics.",
+      "assistant_response": "I’m sorry—that sounds like an unrecognized completed card payment from XYZ Electronics. I can help you with next steps. Are you trying to report this as fraud (you don’t recognize the merchant), or do you believe it may be a mistake/duplicate charge? Also, was the card physically present when it happened (yes/no)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.92
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:37.742607",
+      "sim_prompt_tokens": 633,
+      "sim_completion_tokens": 169,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

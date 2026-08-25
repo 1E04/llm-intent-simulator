@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d28a53b7-d9d1-4bc9-85f8-c3929f4dac38",
+  "seed": 42,
+  "dialogue_index": 166,
+  "timestamp": "2026-08-21T15:40:21.718381",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 636,
+  "total_sim_completion_tokens": 164,
+  "total_bot_prompt_tokens": 1481,
+  "total_bot_completion_tokens": 301,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I paid with card and I think there was a fee applied.",
+      "assistant_response": "Sorry to hear that—was the fee shown in the payment receipt/online as a card payment fee (separate line item), or does it look like an extra charge on your statement/converted amount due to exchange? If you tell me which one, I can help pinpoint it.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:18.956016",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows up as a separate line item called “card fee” on the receipt/online statement.",
+      "assistant_response": "Got it—if you’re seeing a separate “card fee” line item, that matches a card payment fee being charged. Can you tell me the amount of the fee and whether the merchant charged in the same currency as your card (or a different one)?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:21.718326",
+      "sim_prompt_tokens": 636,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

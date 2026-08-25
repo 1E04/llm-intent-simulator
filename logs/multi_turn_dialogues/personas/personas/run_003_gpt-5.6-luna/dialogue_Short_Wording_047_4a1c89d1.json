@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "4a1c89d1-c184-4dfd-b988-02670eaf4394",
+  "seed": 42,
+  "dialogue_index": 47,
+  "timestamp": "2026-08-24T12:12:47.233057",
+  "persona": "Short Wording",
+  "target_intent": "card_about_to_expire",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1023,
+  "total_sim_completion_tokens": 265,
+  "total_bot_prompt_tokens": 1419,
+  "total_bot_completion_tokens": 263,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Card declined.",
+      "assistant_response": "Sorry about that—was this for a card payment at a merchant (e.g., in-store/online) or for a cash withdrawal from an ATM?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:44.037559",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "In‑store.",
+      "assistant_response": "Got it—an in-store card payment was declined. Usually this is due to insufficient funds, the card needing verification (e.g., PIN/3DS), temporary merchant or network issues, or the transaction limit being reached. Can you confirm whether the payment was declined on the terminal (and did you receive a decline message), and whether you’ve tried again with the same card?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:47.232887",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 732,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

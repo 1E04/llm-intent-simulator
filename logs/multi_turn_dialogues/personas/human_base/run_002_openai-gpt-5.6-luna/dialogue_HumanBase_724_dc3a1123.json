@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "dc3a1123-3f7b-4966-b75d-6c323cc76448",
+  "seed": 42,
+  "dialogue_index": 724,
+  "timestamp": "2026-08-21T13:33:55.024396",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2436,
+  "total_sim_completion_tokens": 468,
+  "total_bot_prompt_tokens": 6092,
+  "total_bot_completion_tokens": 660,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why doesn't my disposable virtual card work?",
+      "assistant_response": "Sorry about that—are you seeing an error when you try to use the disposable virtual card (e.g., declined/doesn’t get approved), or is it failing specifically during online payments?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:46.007447",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just gets declined every time I try to pay online.",
+      "assistant_response": "Got it—if your disposable virtual card is being declined for every online payment, is the decline happening immediately at checkout (you see a “declined” message), or does the payment show as pending first?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.55
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.35
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:48.283093",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 1138,
+      "bot_completion_tokens": 101
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows a declined message right away—nothing ever goes pending.",
+      "assistant_response": "Thanks—if your disposable virtual card is immediately declined every time, it’s most commonly due to the disposable card’s limits (like spending/currency restrictions). Can you confirm whether you’re trying to pay online in a different currency than the disposable card is set to use, or at an amount that could exceed its remaining limit?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.78
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.17
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:50.527890",
+      "sim_prompt_tokens": 558,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 1203,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I was trying to pay in euros, but the card is set to dollars.",
+      "assistant_response": "That makes sense—disposable virtual cards have specific spending/currency limits. Since your disposable card is set to dollars but you’re paying in euros, it may be declining immediately due to currency/limit restrictions.\n\nCan you tell me: was the merchant charging you in EUR (not converted), or did it automatically convert at checkout?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.32
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:52.975093",
+      "sim_prompt_tokens": 646,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 1294,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "They charged me directly in euros, no conversion.",
+      "assistant_response": "Thanks—since you’re paying online in EUR while your disposable card is set for USD, it can be declined immediately due to disposable card currency/spending limits. If you’d like, tell me the checkout merchant and the EUR amount, and I’ll help you figure out what to adjust (e.g., whether you need a disposable card generated in EUR/with the right limits).",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.86
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:55.024303",
+      "sim_prompt_tokens": 738,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 1380,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

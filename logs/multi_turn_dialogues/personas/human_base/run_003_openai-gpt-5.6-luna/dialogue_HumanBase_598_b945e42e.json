@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b945e42e-4622-43ec-b4c3-8e0f8e220c0d",
+  "seed": 42,
+  "dialogue_index": 598,
+  "timestamp": "2026-08-21T15:48:20.244728",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1287,
+  "total_sim_completion_tokens": 385,
+  "total_bot_prompt_tokens": 2363,
+  "total_bot_completion_tokens": 446,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why did the app deny my top up?",
+      "assistant_response": "Sorry about that—was your top up declined while trying to pay by card, or was it a bank transfer/top up method? And do you see any error message (for example “insufficient funds,” “verification failed,” or “limits exceeded”)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.77
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.12
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:14.099734",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 108
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was with my debit card and the app just showed “verification failed.”",
+      "assistant_response": "Got it—if a card top up shows “verification failed,” it usually means the bank/card verification step didn’t go through. Please double-check: (1) the billing address and card details match exactly, (2) your debit card supports online/card verification, and (3) you haven’t hit your top up limits. What error details do you see under the failed top up (or any reference code), and was the same card used successfully before?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:17.372489",
+      "sim_prompt_tokens": 585,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 185
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The app just shows “verification failed” with reference code 8421, and I’ve used this card for top‑ups before without any issues.",
+      "assistant_response": "Thanks—since it’s a debit-card top up showing “verification failed” (ref 8421) and you’ve used the card before, this is typically a card verification/3‑D Secure check failing for that specific attempt. Could you confirm: (1) did the top up fail immediately or did it show a 3‑D Secure/OTP screen first, and (2) were you on the exact same card and billing details as your previous successful top ups?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:20.244676",
+      "sim_prompt_tokens": 702,
+      "sim_completion_tokens": 213,
+      "bot_prompt_tokens": 901,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

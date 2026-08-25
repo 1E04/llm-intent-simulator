@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7449f4c4-f4ac-4a36-b423-abfee7c4e5a1",
+  "seed": 42,
+  "dialogue_index": 28,
+  "timestamp": "2026-08-24T11:48:56.878609",
+  "persona": "Angry Layperson",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 935,
+  "total_sim_completion_tokens": 312,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to move some cash into my own account and it’s just not showing up—this is ridiculous!",
+      "assistant_response": "I’m sorry—that’s frustrating. Just to confirm, how did you move the cash into your own account: was it a bank transfer, or a cash/cheque deposit (or ATM)? Also, when did you make it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.44
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.38
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:54.115574",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer I sent yesterday afternoon, and nothing’s showing up.",
+      "assistant_response": "Got it—if you sent a bank transfer yesterday afternoon and it’s not showing in your balance yet, it’s usually a timing/processing issue. Can you tell me the approximate amount and whether you’re expecting it to arrive to your Revolut account (local transfer) or an international transfer?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:48:56.878519",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

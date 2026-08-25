@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "65e7310f-286d-4569-b369-d1047008a1ca",
+  "seed": 42,
+  "dialogue_index": 450,
+  "timestamp": "2026-08-21T13:14:33.285442",
+  "persona": "HumanBase",
+  "target_intent": "order_physical_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 992,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 3349,
+  "total_bot_completion_tokens": 350,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where do you deliver cards by mail?",
+      "assistant_response": "We deliver cards to supported countries—what country are you in (or where should we mail it)?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.18
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:29.392537",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in Germany.",
+      "assistant_response": "Great—Germany is supported, so we can deliver a physical card there by mail. Do you want delivery times/estimate for your address, or help ordering?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.11
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:31.445081",
+      "sim_prompt_tokens": 473,
+      "sim_completion_tokens": 87,
+      "bot_prompt_tokens": 1111,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, please help me order one.",
+      "assistant_response": "Sure—I can help you order a physical card for delivery to Germany. What name should we put on the card (as shown on your ID), and do you want Visa or Mastercard (if available)? If you don’t have a preference, I’ll set it to the default option.",
+      "predicted_intent": "order_physical_card",
+      "top_3_intents": [
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.28
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:33.285311",
+      "sim_prompt_tokens": 519,
+      "sim_completion_tokens": 78,
+      "bot_prompt_tokens": 1161,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

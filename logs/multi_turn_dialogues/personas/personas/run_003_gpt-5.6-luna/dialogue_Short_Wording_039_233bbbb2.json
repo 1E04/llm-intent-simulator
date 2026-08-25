@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "233bbbb2-c475-42a9-9df2-cdb828150e40",
+  "seed": 42,
+  "dialogue_index": 39,
+  "timestamp": "2026-08-24T12:12:34.676854",
+  "persona": "Short Wording",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 899,
+  "total_sim_completion_tokens": 228,
+  "total_bot_prompt_tokens": 1423,
+  "total_bot_completion_tokens": 260,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Sent money, balance unchanged.",
+      "assistant_response": "Sorry—did you send the money via bank transfer, and is the transfer showing as pending in your app, or is it marked failed?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:31.386726",
+      "sim_prompt_tokens": 433,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Bank transfer, pending.",
+      "assistant_response": "Got it—if a bank transfer is marked as pending, your balance usually updates once it’s completed. Can you tell me: is the transfer showing a specific ETA/timeline in the app, and roughly when did you send it?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.34
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:34.676788",
+      "sim_prompt_tokens": 466,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 733,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4b3000d7-7901-4631-b4e7-e257c0d8b177",
+  "seed": 42,
+  "dialogue_index": 6,
+  "timestamp": "2026-08-24T11:55:05.014040",
+  "persona": "Panicking Emergency",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1526,
+  "total_sim_completion_tokens": 373,
+  "total_bot_prompt_tokens": 2346,
+  "total_bot_completion_tokens": 447,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to send money and it never left my account! I'm freaking out!",
+      "assistant_response": "I’m sorry you’re dealing with that—let’s sort it out. When you say “it never left your account,” do you mean the transfer shows as *failed*, or it’s still *pending*/in progress? Also, do you still see the money on your balance?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.6
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.23
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-24T11:54:57.027272",
+      "sim_prompt_tokens": 429,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says pending, and the money is still sitting in my account!",
+      "assistant_response": "Thanks—if it’s showing **pending** and the money is still in your account, it usually means the transfer hasn’t completed yet. Can you tell me: is it a bank transfer (to a bank account) or a card-to-card transfer between users? And about how long ago did you submit it?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:00.069718",
+      "sim_prompt_tokens": 505,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Bank transfer—just did it about ten minutes ago!",
+      "assistant_response": "That makes sense—if your **bank transfer was sent about 10 minutes ago** and it’s showing **pending**, it typically just hasn’t completed yet. Please allow a bit more time; pending bank transfers can take longer than a few minutes to update.\n\nQuick check: are you able to see any *ETA/estimated completion time* in the app for this transfer, and does it show a specific date/time or still just “pending”?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:05.013994",
+      "sim_prompt_tokens": 592,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 865,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

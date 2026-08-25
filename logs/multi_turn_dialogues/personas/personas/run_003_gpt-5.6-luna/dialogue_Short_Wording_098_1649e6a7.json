@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "1649e6a7-569d-4a64-8d41-e9c5bd0f58f8",
+  "seed": 42,
+  "dialogue_index": 98,
+  "timestamp": "2026-08-24T12:14:16.194243",
+  "persona": "Short Wording",
+  "target_intent": "age_limit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1248,
+  "total_sim_completion_tokens": 295,
+  "total_bot_prompt_tokens": 2204,
+  "total_bot_completion_tokens": 342,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Service denied.",
+      "assistant_response": "Sorry—could you tell me what you were trying to do when you saw “Service denied” (card payment, cash withdrawal, or a bank transfer/top up)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.44
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.28
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:12.224433",
+      "sim_prompt_tokens": 373,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card payment.",
+      "assistant_response": "Thanks—when you say “Service denied” for a card payment, is the payment being declined (rejected at checkout), or do you see a charge pending/posted on your card?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:14.249228",
+      "sim_prompt_tokens": 412,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 733,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Declined.",
+      "assistant_response": "Got it—if a card payment is showing as declined, it usually means the transaction was rejected by the merchant/acquirer or your card isn’t allowed for that merchant/category. Which country/merchant was the payment for, and did you try it again using the same card details?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:16.194100",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 784,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "77c1f759-4166-4e9b-9489-3d91270e6c44",
+  "seed": 42,
+  "dialogue_index": 124,
+  "timestamp": "2026-08-24T12:10:44.652003",
+  "persona": "Non-Native Speaker",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1083,
+  "total_sim_completion_tokens": 235,
+  "total_bot_prompt_tokens": 1506,
+  "total_bot_completion_tokens": 340,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I bought something and there is extra charge on my card, I don’t understand why.",
+      "assistant_response": "Sorry about that—when you say “extra charge,” do you mean a fee added to the card payment (like a merchant/service charge), or an additional small/temporary amount such as a preauthorisation that later settles to the final total? If you can, tell me the exact amount(s) and whether it’s marked as pending or completed.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.58
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.31
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:42.237117",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It is about $5 extra, shown as completed, not pending. It was on a coffee shop purchase.",
+      "assistant_response": "Thanks—if it’s a $5 extra amount on a completed coffee shop card payment, it’s most likely a card payment fee/extra merchant charge included in the transaction. Can you confirm the exact wording on the statement for that $5 line (e.g., “fee”, “service charge”, or something similar) and whether the $5 is separate from the coffee amount or added to the same total?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.11
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:44.651948",
+      "sim_prompt_tokens": 586,
+      "sim_completion_tokens": 71,
+      "bot_prompt_tokens": 804,
+      "bot_completion_tokens": 176
+    }
+  ]
+}

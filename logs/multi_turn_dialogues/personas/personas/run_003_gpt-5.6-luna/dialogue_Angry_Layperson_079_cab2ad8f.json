@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cab2ad8f-ece7-4449-b987-80cac64b06a1",
+  "seed": 42,
+  "dialogue_index": 79,
+  "timestamp": "2026-08-24T11:51:02.730419",
+  "persona": "Angry Layperson",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 941,
+  "total_sim_completion_tokens": 275,
+  "total_bot_prompt_tokens": 1509,
+  "total_bot_completion_tokens": 290,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent a transfer this morning and my account still shows the same old amount—nothing's changed! This is ridiculous.",
+      "assistant_response": "I’m sorry about that—let’s figure it out. Was the transfer you sent a bank transfer (from your bank into your account) or a card-to-card/recipient transfer from your app, and do you have a transfer reference or date/time you can share?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:51:00.176306",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer from my own bank, done yesterday around 3 pm. The reference is #TRX‑987654.",
+      "assistant_response": "Thanks—since it’s a bank transfer from your own bank and your balance still hasn’t changed, this is most likely **balance not updated after bank transfer**. Could you confirm: has the transfer been marked as completed/paid by your bank on their side (or do you still see it as pending)? If you tell me that, I can guide you on the next steps for reference **#TRX‑987654**.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T11:51:02.730312",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 143
+    }
+  ]
+}

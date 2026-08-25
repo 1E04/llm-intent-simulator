@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a9a9bc7f-4153-40fc-b3df-7b0f4eeaf47c",
+  "seed": 42,
+  "dialogue_index": 79,
+  "timestamp": "2026-08-24T12:05:21.979740",
+  "persona": "Gen-Z Slang",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 926,
+  "total_sim_completion_tokens": 229,
+  "total_bot_prompt_tokens": 1467,
+  "total_bot_completion_tokens": 268,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, i moved some cash to my account but the app still shows the same old balance.",
+      "assistant_response": "Sorry about that—was the cash added via a cash/cheque deposit at a location, or was it a bank transfer? Also, roughly when did you make the deposit/transfer?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.72
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:18.851888",
+      "sim_prompt_tokens": 435,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was a bank transfer, done like a few hours ago.",
+      "assistant_response": "Thanks—if it was a bank transfer a few hours ago, the balance can take some time to update. Could you tell me the approximate time you sent it and whether the transfer shows as completed/sent on your side? If you share that, I can guide you on what to check next.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:05:21.979602",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

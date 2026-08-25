@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a0032fe6-8355-4982-9348-e6aedf870f7d",
+  "seed": 42,
+  "dialogue_index": 64,
+  "timestamp": "2026-08-24T12:09:14.535118",
+  "persona": "Non-Native Speaker",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1530,
+  "total_sim_completion_tokens": 324,
+  "total_bot_prompt_tokens": 2295,
+  "total_bot_completion_tokens": 377,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I am at the ATM and my card just got rejected, it won't give me any money.",
+      "assistant_response": "Sorry about that—are you seeing an “insufficient funds/declined” type message on the ATM, or does it just reject the card without giving any reason?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:08.700935",
+      "sim_prompt_tokens": 449,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says the card is rejected, no other message shown.",
+      "assistant_response": "Thanks—if the ATM only says “card rejected” with no other message, it most likely means the withdrawal was declined.\n\nCan you confirm: does the ATM screen mention “declined/withdrawal not permitted” or is it literally just “card rejected”?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.18
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:10.849485",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 87,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, only “card rejected”, nothing else.",
+      "assistant_response": "Got it—if the ATM only shows “card rejected,” that usually means the cash withdrawal was declined. Try withdrawing a smaller amount and make sure you’re using the correct PIN and that international/ATM withdrawals are enabled. If it keeps happening, tell me whether you’re trying a cash withdrawal or a balance/other option at the ATM, and what country/ATM network you’re using.",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-24T12:09:14.534967",
+      "sim_prompt_tokens": 578,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 832,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

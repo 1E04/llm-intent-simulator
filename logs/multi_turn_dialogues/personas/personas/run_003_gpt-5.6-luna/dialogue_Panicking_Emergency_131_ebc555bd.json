@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ebc555bd-f885-4a4d-8197-3bb2c34fa335",
+  "seed": 42,
+  "dialogue_index": 131,
+  "timestamp": "2026-08-24T11:58:51.806430",
+  "persona": "Panicking Emergency",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1007,
+  "total_sim_completion_tokens": 270,
+  "total_bot_prompt_tokens": 1500,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card just got an extra charge I didn't expect—please help, I need this fixed now!",
+      "assistant_response": "Sorry about that—can you confirm whether the extra charge is: (1) a duplicate/charged twice for the same card payment, (2) a fee shown separately on the statement, or (3) a completely different amount you don’t recognize? If you can, share the exact charge description or amount.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.58
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.26
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:48.627260",
+      "sim_prompt_tokens": 462,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a $2.99 “Card top‑up fee” showing on my statement.",
+      "assistant_response": "Thanks—if you’re seeing a $2.99 “Card top-up fee” on your statement, that usually means a fee was charged for topping up by card. Can you tell me whether the top up was made using your debit/credit card, and the date/time of the top up (or the reference), so I can help verify the fee and what you should expect?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T11:58:51.806259",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

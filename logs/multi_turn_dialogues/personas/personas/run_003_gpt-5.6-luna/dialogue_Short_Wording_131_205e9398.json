@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "205e9398-1d6c-4b86-afdc-7c4109a3731f",
+  "seed": 42,
+  "dialogue_index": 131,
+  "timestamp": "2026-08-24T12:15:07.425623",
+  "persona": "Short Wording",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1553,
+  "total_sim_completion_tokens": 547,
+  "total_bot_prompt_tokens": 2249,
+  "total_bot_completion_tokens": 389,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Extra fee",
+      "assistant_response": "Sorry—could you clarify what the “extra fee” is for (card purchase, cash withdrawal, bank transfer, or an exchange/FX)? If you can, also share what the charge line on your statement says.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.34
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:01.052381",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 686,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Top‑up fee",
+      "assistant_response": "Got it—an extra fee for a top up. Was this top up made by **card**, **bank transfer**, or **cash/cheque**? Also, roughly how much was the top up and what fee amount (or percentage) did you see on the receipt/statement?",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:04.424668",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 211,
+      "bot_prompt_tokens": 744,
+      "bot_completion_tokens": 116
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Card, $200, $2",
+      "assistant_response": "Thanks—since it was a **card top up** for **$200** with an **extra $2 fee**, it sounds like a card top-up fee. Can you confirm the fee appears on your receipt or in-app as a separate line item (e.g., “top up fee”)? If yes, I can help you verify whether it matches the standard card top-up charge.",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:07.425474",
+      "sim_prompt_tokens": 581,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 819,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9cbfd47e-1b3d-4d0c-a65a-7bf8a3090fcb",
+  "seed": 42,
+  "dialogue_index": 109,
+  "timestamp": "2026-08-24T12:10:26.929909",
+  "persona": "Non-Native Speaker",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 994,
+  "total_sim_completion_tokens": 266,
+  "total_bot_prompt_tokens": 1491,
+  "total_bot_completion_tokens": 303,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My balance drops low and I tried to set it to refill automatically, but nothing is added.",
+      "assistant_response": "To narrow it down: when your balance drops and the automatic top up should trigger, do you see a pending top up/transaction in your app, or does it fail/never appear at all? Also, roughly how long has it been since it should have topped up?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.13
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:24.073497",
+      "sim_prompt_tokens": 459,
+      "sim_completion_tokens": 155,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "No pending transaction shows up, it just never appears. It should have happened yesterday but still nothing.",
+      "assistant_response": "Got it—if no pending transaction appears, it usually means the automatic top up didn’t trigger or it failed without showing as pending. Can you confirm what method you set for the automatic top up (card or bank transfer)? And did you receive any error or notification in the app around the time it should have topped up yesterday?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.11
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:26.929755",
+      "sim_prompt_tokens": 535,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

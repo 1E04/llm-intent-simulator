@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "dda8fd95-9e52-4a2b-bcb1-7e4e6c08f5ac",
+  "seed": 42,
+  "dialogue_index": 136,
+  "timestamp": "2026-08-24T12:02:38.809869",
+  "persona": "Polite Expert",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 909,
+  "total_sim_completion_tokens": 207,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 260,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see a single purchase listed twice on my recent card activity.",
+      "assistant_response": "Sorry about that—just to confirm, are the two entries for the *exact same merchant and amount*, and are they both showing as completed/posted (not pending)?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.74
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:36.704425",
+      "sim_prompt_tokens": 430,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, both entries are for the same merchant, identical amount, and they’re both marked as completed.",
+      "assistant_response": "Thanks for confirming. If the same card purchase (same merchant and identical amount) is showing twice as completed, that points to a “charged twice” card payment. Please share the merchant name and the two reference/transaction IDs (or the dates/times) from your activity, and I’ll help you get it resolved.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:02:38.809806",
+      "sim_prompt_tokens": 479,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 762,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2d66c3d0-27b6-44ee-a8af-bdb29c919614",
+  "seed": 42,
+  "dialogue_index": 478,
+  "timestamp": "2026-08-21T15:45:42.780446",
+  "persona": "HumanBase",
+  "target_intent": "pending_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 608,
+  "total_sim_completion_tokens": 215,
+  "total_bot_prompt_tokens": 1499,
+  "total_bot_completion_tokens": 350,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a pending transaction in my app. How is it still pending if I pulled the cash out from the ATM earlier?",
+      "assistant_response": "Just to confirm: the pending transaction is for a cash withdrawal from an ATM (not a card payment), right? If yes, it can stay pending for a while even after you take the cash—can you tell me the merchant/location name and the amount shown as pending?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:39.434202",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 709,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it’s an ATM withdrawal – $120 at the Main Street ATM.",
+      "assistant_response": "Thanks—since it’s an ATM cash withdrawal that’s showing as pending ($120 at the Main Street ATM), it can remain pending even after you’ve taken the cash. This is usually because the ATM/bank hasn’t fully completed the settlement yet.\n\nTypically it updates within 1–2 business days (sometimes longer depending on the ATM network/bank). If it’s still pending after 2–3 business days, tell me and we’ll help you investigate further.",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:42.780374",
+      "sim_prompt_tokens": 608,
+      "sim_completion_tokens": 215,
+      "bot_prompt_tokens": 790,
+      "bot_completion_tokens": 197
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "ef7f733a-c439-4c1f-b6b1-9f581e3fdd62",
+  "seed": 42,
+  "dialogue_index": 124,
+  "timestamp": "2026-08-24T12:14:58.284276",
+  "persona": "Short Wording",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1687,
+  "total_sim_completion_tokens": 352,
+  "total_bot_prompt_tokens": 2282,
+  "total_bot_completion_tokens": 460,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Unexpected fee.",
+      "assistant_response": "I’m sorry about that—fees can apply for different reasons. Was the unexpected fee charged for a card purchase, an international exchange, a cash withdrawal, or a transfer? If you can share the transaction type (and the fee amount/currency), I’ll pinpoint it.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.32
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:51.917712",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 59,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card purchase €2",
+      "assistant_response": "Thanks—so the unexpected €2 fee was related to a card purchase. Was the €2 shown as a separate fee line on your statement (e.g., “card fee”/“service charge”), or was it part of the exchange/total amount? If you tell me the exact wording of the line item, I can confirm the cause.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:55.310469",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Card fee.",
+      "assistant_response": "Got it—the €2 is showing as a separate card fee line. This is typically a card payment fee (for example, a merchant/service or regulated card-handling fee). Which currency was the payment in, and is the merchant location shown as online or in-store?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:58.284180",
+      "sim_prompt_tokens": 638,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 839,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

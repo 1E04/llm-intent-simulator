@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cb3dc0d1-e832-4d43-b81a-b9c0dd2e06fb",
+  "seed": 42,
+  "dialogue_index": 754,
+  "timestamp": "2026-08-21T15:51:32.538427",
+  "persona": "HumanBase",
+  "target_intent": "wrong_amount_of_cash_received",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 573,
+  "total_sim_completion_tokens": 216,
+  "total_bot_prompt_tokens": 1466,
+  "total_bot_completion_tokens": 304,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why did I not get my cash back after I withdrew?",
+      "assistant_response": "Sorry about that—when you attempted the cash withdrawal, did the ATM show the transaction as completed (and you were charged), but you didn’t receive cash? Or did you receive some cash but not the full amount?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.13
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:28.984055",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It said the withdrawal was completed and I was charged, but I only got part of the cash.",
+      "assistant_response": "Got it—if the ATM marked the withdrawal as completed and you were charged, but you received less cash than requested, this matches “wrong amount of cash received.” Please confirm: did the ATM dispense *some* cash (partial amount), or did it dispense *no* cash at all?",
+      "predicted_intent": "wrong_amount_of_cash_received",
+      "top_3_intents": [
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.07
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:32.538338",
+      "sim_prompt_tokens": 573,
+      "sim_completion_tokens": 216,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

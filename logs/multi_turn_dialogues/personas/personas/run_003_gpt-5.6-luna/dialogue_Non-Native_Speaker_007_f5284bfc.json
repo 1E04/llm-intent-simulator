@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "f5284bfc-77fa-4642-9460-3b29f5f2d3cd",
+  "seed": 42,
+  "dialogue_index": 7,
+  "timestamp": "2026-08-24T12:07:46.122746",
+  "persona": "Non-Native Speaker",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 3136,
+  "total_sim_completion_tokens": 760,
+  "total_bot_prompt_tokens": 4548,
+  "total_bot_completion_tokens": 722,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I sent money to my friend yesterday, but it still not show in my app.",
+      "assistant_response": "Sorry about that—could you confirm whether the transfer is showing as **pending** in your app, or is it **not showing at all**? Also, was it sent as a card-to-card/within-app transfer (not a bank transfer)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.24
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:34.797156",
+      "sim_prompt_tokens": 432,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It not show at all, nothing in app. It was a card‑to‑card transfer.",
+      "assistant_response": "Thanks—since it’s a card‑to‑card transfer and it’s not showing at all in your app, it’s most likely that the transfer failed or was never created. Can you tell me: (1) did you get any confirmation/receipt right after sending, and (2) what exact date/time did you send it (and which recipient name/phone/email)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.36
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:37.967255",
+      "sim_prompt_tokens": 502,
+      "sim_completion_tokens": 189,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I did get a small pop‑up saying it was sent. It was on 12 May around 14:30, to my friend Ana, phone number +4475 1234 5678.",
+      "assistant_response": "Thanks—if you got a “sent” pop‑up but nothing appears in the app, it’s often because the transfer failed or wasn’t completed. Can you check whether Ana received the money on her side (yes/no)? Also, do you remember if you’re on iOS or Android (and whether you see any transfer history entries around 12 May 14:30)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:40.431781",
+      "sim_prompt_tokens": 608,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 910,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "She says no, she didn't get it. I'm on Android and I don't see any entry for 12 May 14:30.",
+      "assistant_response": "Got it—Android, no entry around 12 May 14:30, and Ana hasn’t received it. This most likely means the card-to-card transfer failed. Could you try sending the transfer reference/receipt code (or confirm you have it) and tell me the amount you sent? If you can’t find it, I’ll guide you to where to check for it in the app.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:43.191941",
+      "sim_prompt_tokens": 738,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 1025,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I don't have any reference code, I only know I sent 50 €.",
+      "assistant_response": "Thanks—since the transfer isn’t showing in your app and Ana also hasn’t received it, this most likely indicates the transfer failed. Could you confirm: was the 12 May transfer sent from your app to Ana’s phone number, and has it been more than 24 hours since you sent it? If yes, I’ll help you look for any error/rejected transfer and start the refund process if applicable.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T12:07:46.122586",
+      "sim_prompt_tokens": 856,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 1131,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "93f9038f-0b46-47ed-9449-1e5efa3316e4",
+  "seed": 42,
+  "dialogue_index": 618,
+  "timestamp": "2026-08-21T13:25:53.347925",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2824,
+  "total_sim_completion_tokens": 557,
+  "total_bot_prompt_tokens": 6459,
+  "total_bot_completion_tokens": 794,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I went to top up and it is no longer there.  Was it sent back?",
+      "assistant_response": "It sounds like your top up may have been reverted (sent back) or failed. Can you tell me whether you see the top up as **pending**, **reverted**, or **not showing at all** in the app? Also, was it topped up by **card** or **bank transfer**?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:40.414963",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1087,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's not showing at all, I used my card.",
+      "assistant_response": "Got it—you topped up by card and it’s not showing at all. This is most consistent with a **top up that failed** (sometimes the funds return automatically, depending on the case).\n\nCan you check the status of the transaction with your card issuer: do you see a **pending/posted charge** on your card statement for that amount, or is there **no charge** at all? If you tell me that, I can guide you on what to expect next.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.22
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:43.005528",
+      "sim_prompt_tokens": 535,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 1170,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I checked my card statement – there’s no charge showing up at all.",
+      "assistant_response": "Thanks—if it’s not showing in the app and there’s **no charge on your card statement**, that usually points to a **failed top up** that won’t show as a completed transaction. \n\nTo confirm and tell you the next steps: did the top up ever show as **pending** in the app (even briefly), or has it been **completely absent from the start**?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.19
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:45.430190",
+      "sim_prompt_tokens": 652,
+      "sim_completion_tokens": 182,
+      "bot_prompt_tokens": 1291,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It never even appeared – it was missing from the start.",
+      "assistant_response": "Thanks—if the card top up never appeared in the app and there’s no charge on your card statement, it typically means the top up **failed** (so there’s nothing to refund).\n\nTo be sure: was the top up amount attempted recently (today/last 2–3 days), and do you still see any **reversed/declined** notification from your card provider or bank? If not, we can confirm the usual timeframe for the funds to fully settle back to your card.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.83
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.12
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:50.457804",
+      "sim_prompt_tokens": 757,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 1393,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was today and I haven’t gotten any reversed or declined notice.",
+      "assistant_response": "Understood. If the top up was attempted today, never appeared in the app, and there’s no charge on your card statement and no reversed/declined notice, that strongly suggests the card top up **failed**.\n\nBecause the card issuer can take some time to fully reflect reversals, please allow up to **24–48 hours** for the payment system to settle.\n\nTo guide you precisely: do you know the **merchant/acquiring name** shown for the top up attempt (or the exact amount), and did you receive any **SMS/email receipt** from the card provider at the time?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.18
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:53.347847",
+      "sim_prompt_tokens": 880,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1518,
+      "bot_completion_tokens": 183
+    }
+  ]
+}

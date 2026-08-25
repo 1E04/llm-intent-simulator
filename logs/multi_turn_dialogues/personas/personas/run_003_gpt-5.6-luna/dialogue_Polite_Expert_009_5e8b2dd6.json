@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5e8b2dd6-3ee2-41f6-8f52-6843133a8d4a",
+  "seed": 42,
+  "dialogue_index": 9,
+  "timestamp": "2026-08-24T11:59:41.493105",
+  "persona": "Polite Expert",
+  "target_intent": "getting_spare_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1040,
+  "total_sim_completion_tokens": 248,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 284,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I’m currently without my primary card and need an additional card to make transactions.",
+      "assistant_response": "Sorry you’re dealing with this. To make sure I help correctly: is your primary card lost or stolen, or is it temporarily unavailable (e.g., waiting for delivery/it’s in transit)?",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.24
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:39.038945",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s not lost; I’m just waiting for the delivery, and I need an extra card in the meantime.",
+      "assistant_response": "Got it—you’re waiting for your primary card delivery and need an extra card in the meantime. We can help with getting a spare card. Would you like the spare card as an extra physical card, or would a virtual card work for transactions until the main one arrives?",
+      "predicted_intent": "getting_spare_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.07
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T11:59:41.492950",
+      "sim_prompt_tokens": 549,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

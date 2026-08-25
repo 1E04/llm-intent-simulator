@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8ea70751-212b-4bad-bc16-4bbe2b79b569",
+  "seed": 42,
+  "dialogue_index": 29,
+  "timestamp": "2026-08-24T12:12:13.317337",
+  "persona": "Short Wording",
+  "target_intent": "lost_or_stolen_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 880,
+  "total_sim_completion_tokens": 273,
+  "total_bot_prompt_tokens": 1419,
+  "total_bot_completion_tokens": 221,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Card missing.",
+      "assistant_response": "Sorry to hear that—do you mean your physical card was stolen/lost, or that you haven’t received it yet (it’s still on the way)?",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.6
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.25
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:10.651082",
+      "sim_prompt_tokens": 422,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Physical stolen.",
+      "assistant_response": "I’m sorry that happened. I can help you secure your account—please confirm: was your card stolen from you, or did you suspect it was used fraudulently as well?",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.97
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.02
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-24T12:12:13.317178",
+      "sim_prompt_tokens": 458,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 732,
+      "bot_completion_tokens": 94
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0582e81d-78ce-418f-9781-c7c3abc95b6d",
+  "seed": 42,
+  "dialogue_index": 119,
+  "timestamp": "2026-08-24T12:10:38.718756",
+  "persona": "Non-Native Speaker",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1053,
+  "total_sim_completion_tokens": 289,
+  "total_bot_prompt_tokens": 1475,
+  "total_bot_completion_tokens": 309,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I bought something yesterday, but the money is still not taken from my account.",
+      "assistant_response": "Just to confirm: was this purchase paid by card (and you can see it in your transactions as pending), or was it a bank transfer/check cash payment? Also, how long ago yesterday (roughly how many hours) did you make the purchase?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:35.171258",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was with my card, and I think about ten hours ago.",
+      "assistant_response": "Thanks—if you paid by card about 10 hours ago, it’s very likely the payment is still pending and the money may take up to 1–2 business days to be fully taken from your account. Can you confirm whether the transaction shows as “pending” in the app, or is it not showing at all?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:10:38.718698",
+      "sim_prompt_tokens": 561,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 775,
+      "bot_completion_tokens": 161
+    }
+  ]
+}

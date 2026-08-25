@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "49f2a75c-7458-4ddd-87be-51df8c9b3d69",
+  "seed": 42,
+  "dialogue_index": 106,
+  "timestamp": "2026-08-24T12:14:27.057289",
+  "persona": "Short Wording",
+  "target_intent": "get_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 853,
+  "total_sim_completion_tokens": 305,
+  "total_bot_prompt_tokens": 1409,
+  "total_bot_completion_tokens": 171,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Forgot my numbers.",
+      "assistant_response": "Sorry—when you say “numbers,” do you mean your app passcode or your card PIN?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.7
+        },
+        {
+          "intent": "get_pin",
+          "confidence": 0.2
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:24.925005",
+      "sim_prompt_tokens": 413,
+      "sim_completion_tokens": 199,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 77
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card PIN.",
+      "assistant_response": "No problem—if you’ve forgotten your card PIN, I can help you retrieve it. Are you trying to get your PIN back for your physical card, or for a virtual/disposable card?",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.88
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.07
+        },
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:27.057169",
+      "sim_prompt_tokens": 440,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 721,
+      "bot_completion_tokens": 94
+    }
+  ]
+}

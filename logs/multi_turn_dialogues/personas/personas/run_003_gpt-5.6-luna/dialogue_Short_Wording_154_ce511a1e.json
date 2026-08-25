@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ce511a1e-446f-469f-b9d8-498d5096172c",
+  "seed": 42,
+  "dialogue_index": 154,
+  "timestamp": "2026-08-24T12:15:39.993409",
+  "persona": "Short Wording",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 798,
+  "total_sim_completion_tokens": 296,
+  "total_bot_prompt_tokens": 1428,
+  "total_bot_completion_tokens": 233,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Currency wrong.",
+      "assistant_response": "Sorry—do you mean the exchange rate was wrong for a card payment, or for a cash withdrawal? If you tell me which one (and roughly when), I can help you check it.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.38
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.28
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:37.812195",
+      "sim_prompt_tokens": 377,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 687,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Card payment, yesterday.",
+      "assistant_response": "Got it—if this was a card payment yesterday, it sounds like you’re asking about the exchange rate used. I can help: was the charge made in a different currency than your card’s billing currency?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.07
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:15:39.993274",
+      "sim_prompt_tokens": 421,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 741,
+      "bot_completion_tokens": 97
+    }
+  ]
+}

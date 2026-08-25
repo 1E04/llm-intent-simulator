@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "799484b2-20a1-4bba-a00e-cf9470ef959f",
+  "seed": 42,
+  "dialogue_index": 358,
+  "timestamp": "2026-08-21T15:43:44.040575",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2681,
+  "total_sim_completion_tokens": 594,
+  "total_bot_prompt_tokens": 4227,
+  "total_bot_completion_tokens": 710,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an extra $1 charge",
+      "assistant_response": "I can help with that—was the extra $1 charge showing on your card payment statement, or is it related to a bank transfer/exchange rate? Also, do you know the merchant name or transaction description?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.42
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.36
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:33.343385",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s on my card statement – just a $1 line, no merchant name listed.",
+      "assistant_response": "Thanks—when you say it’s a $1 line with no merchant name, is it showing up as a small “extra”/fee charge on a card payment (for example, a test or verification charge), or does it appear as a separate standalone transaction you can’t link to anything?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:36.281798",
+      "sim_prompt_tokens": 546,
+      "sim_completion_tokens": 173,
+      "bot_prompt_tokens": 762,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s a separate $1 transaction—I can’t tell what it’s for.",
+      "assistant_response": "Got it. For a standalone $1 transaction with no merchant name, that’s often an authorization/verification or a small fee. Can you tell me whether the $1 is showing as **Completed** or **Pending** on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:39.152192",
+      "sim_prompt_tokens": 633,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 847,
+      "bot_completion_tokens": 110
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s showing as Completed.",
+      "assistant_response": "Thanks—since it’s a Completed standalone $1 with no merchant name, it’s most likely an extra/fee or verification charge. Can you confirm whether your statement shows it under **Card payment** (not bank transfer), and whether the amount is **$1.00 exactly** and appears in your main available balance rather than as a separate pending item?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.68
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.27
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:41.298836",
+      "sim_prompt_tokens": 707,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 911,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes—it's listed under Card payment, exactly $1.00, and it’s already in my main balance.",
+      "assistant_response": "Thanks—if it’s showing as a completed $1.00 line under Card payment and it’s already in your main balance, that matches an extra/fee-style card statement charge. If you share the date of the $1 transaction (and whether it was near another card purchase), I can help you determine if it’s a verification/adjustment or a specific fee.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:44.039955",
+      "sim_prompt_tokens": 795,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 1016,
+      "bot_completion_tokens": 173
+    }
+  ]
+}

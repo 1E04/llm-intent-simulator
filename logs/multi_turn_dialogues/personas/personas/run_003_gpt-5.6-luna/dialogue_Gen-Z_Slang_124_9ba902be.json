@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9ba902be-71e5-4c36-813c-bc0f78e79c8e",
+  "seed": 42,
+  "dialogue_index": 124,
+  "timestamp": "2026-08-24T12:06:40.701405",
+  "persona": "Gen-Z Slang",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1059,
+  "total_sim_completion_tokens": 246,
+  "total_bot_prompt_tokens": 1476,
+  "total_bot_completion_tokens": 303,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "hey, just saw an extra charge on my card after a shop swipe, what's the deal?",
+      "assistant_response": "Sorry about that—was the extra charge a small “pending” amount (like a deposit/verification), or is it a full charge that’s already completed? Also, roughly how much was it compared to the original purchase?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:37.294779",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's a full charge, like $4 extra on a $28 purchase.",
+      "assistant_response": "Got it—an extra ~$4 after a card swipe is usually either a card-payment fee charged by the merchant/acquirer or an additional amount posted on the statement (sometimes due to tips, gratuities, or a separate transaction being completed). Can you tell me: is the $4 shown as its own separate transaction/merchant line item, or is it listed as “fee”/“service charge” related to the $28 purchase? Also, was the purchase international or in another currency?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T12:06:40.701331",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

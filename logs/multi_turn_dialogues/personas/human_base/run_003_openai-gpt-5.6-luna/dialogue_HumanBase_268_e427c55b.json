@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e427c55b-71c0-44d1-b95c-bcdfc288b767",
+  "seed": 42,
+  "dialogue_index": 268,
+  "timestamp": "2026-08-21T15:41:52.219257",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 674,
+  "total_sim_completion_tokens": 160,
+  "total_bot_prompt_tokens": 1516,
+  "total_bot_completion_tokens": 301,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why do you keep declining my payment? I tried several times already with this card and it's just not working",
+      "assistant_response": "Sorry about that—when a card payment is declined it can be due to things like insufficient funds, the card not being enabled for card payments, a safety block, or the merchant details. Can you tell me what message you see when it’s declined (e.g., “insufficient funds”, “declined”, “try again later”)? And is the purchase in your home country or abroad?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:48.992111",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 705,
+      "bot_completion_tokens": 176
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows “declined”, and the purchase is in my home country.",
+      "assistant_response": "Got it—if you’re seeing just “declined” for a card payment in your home country, the most likely issue is a card payment decline.\n\nTo narrow it down: did the payment show as pending at all, and have you checked that you have enough available balance and that card payments are enabled on your account?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.07
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:52.219134",
+      "sim_prompt_tokens": 674,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 811,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "07e02a9f-4123-4e6a-bbd7-dd2ca28e36e0",
+  "seed": 42,
+  "dialogue_index": 708,
+  "timestamp": "2026-08-21T15:50:46.637950",
+  "persona": "HumanBase",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1904,
+  "total_sim_completion_tokens": 517,
+  "total_bot_prompt_tokens": 3387,
+  "total_bot_completion_tokens": 664,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How can I lookup where funds came from?",
+      "assistant_response": "To help me point you to the right feature: are you trying to see (1) the source of a specific top up/bank transfer on your account, or (2) the details of a specific payment/transfer you received? If you tell me which type and the date/amount, I can guide you.",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.55
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.3
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:37.348315",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking at a top‑up I received on March 5th, around £200.",
+      "assistant_response": "Got it—you're checking a top up from March 5th (~£200) and want to see where the money came from. \n\nWhich type of top up was it: **card top up**, **bank transfer**, or **cash/cheque**? (If you’re not sure, tell me how it appears in your app, e.g., “Card top up” or “Bank transfer received”.)",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.33
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:40.411135",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 180,
+      "bot_prompt_tokens": 787,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows up as a card top‑up.",
+      "assistant_response": "Just to confirm: you want to identify the *source card/account* used for that card top‑up on March 5 (~£200). \n\nCan you open the top‑up in the app and tell me what details it shows—does it include the **last 4 digits of the card** or the **merchant/card issuer name**? If you share what it says (even partially), I’ll guide you to where to find the exact origin details.",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.3
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.25
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:43.698208",
+      "sim_prompt_tokens": 635,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 891,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says “Card top‑up” and shows the last four digits — ****5678.",
+      "assistant_response": "To see where that card top‑up came from, open the transaction in the app (the one showing card top‑up ending ****5678). It should let you view the **funding card details** or the **merchant/issuer reference** for that top up. If you don’t see any extra details beyond “Card top‑up” and the last 4 digits, tell me what screen/options you see on the transaction page (e.g., “View details”, “Receipt”, “Reference”), and I’ll guide you to the exact spot to locate the source.",
+      "predicted_intent": "verify_top_up",
+      "top_3_intents": [
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:46.637862",
+      "sim_prompt_tokens": 748,
+      "sim_completion_tokens": 180,
+      "bot_prompt_tokens": 1016,
+      "bot_completion_tokens": 208
+    }
+  ]
+}

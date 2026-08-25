@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9dddc5ee-45f8-4296-95c2-2b2052a98bd0",
+  "seed": 42,
+  "dialogue_index": 195,
+  "timestamp": "2026-08-21T15:40:48.075893",
+  "persona": "HumanBase",
+  "target_intent": "card_swallowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 612,
+  "total_sim_completion_tokens": 121,
+  "total_bot_prompt_tokens": 1454,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was getting cash and can't get my card back.",
+      "assistant_response": "I’m sorry—sounds like your card may have been kept by the ATM. Is the card definitely stuck inside the ATM (you can’t retrieve it), or are you unable to locate it after the withdrawal?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:45.793270",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was stuck inside the ATM—I couldn't get it out.",
+      "assistant_response": "Got it—if the ATM swallowed your card and you couldn’t retrieve it, we’ll help you with the next steps. Please tell me: which country and ATM operator was it (if you know), and do you need to cancel the card and get a replacement?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:48.075802",
+      "sim_prompt_tokens": 612,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 759,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

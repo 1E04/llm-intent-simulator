@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "fc3f2271-53e7-4f95-8cae-4043a06f2e36",
+  "seed": 42,
+  "dialogue_index": 687,
+  "timestamp": "2026-08-21T13:31:22.850729",
+  "persona": "HumanBase",
+  "target_intent": "unable_to_verify_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1077,
+  "total_sim_completion_tokens": 316,
+  "total_bot_prompt_tokens": 3444,
+  "total_bot_completion_tokens": 444,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why am I not able to verify my id?",
+      "assistant_response": "I’m sorry about that—are you seeing an error message when you try to verify your ID, or has the verification just been rejected? If you tell me what the status/error says, I can guide you on the next steps.",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.78
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.15
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:31:17.837989",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows “verification failed” and nothing else.",
+      "assistant_response": "Thanks—if it only says “verification failed,” the next step is to troubleshoot the identity check. Do you have any document rejection details, or is it failing at the upload stage (photo/scanning) or after you submit?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.72
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.21
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:31:20.598176",
+      "sim_prompt_tokens": 505,
+      "sim_completion_tokens": 213,
+      "bot_prompt_tokens": 1147,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It fails right when I try to upload the photo—nothing gets accepted.",
+      "assistant_response": "Got it—since it fails right when you try to upload the photo, this is usually an issue with the ID upload/scan. A couple quick checks: are you uploading a clear, well-lit photo of the full document (no glare/cut-off), and is the photo file type/size within the app’s limits? If you can tell me what ID type you’re using (passport/driver’s license/other) and whether it fails after you take the photo or when you select an existing photo, I’ll narrow down the cause.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.9
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.07
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:31:22.850638",
+      "sim_prompt_tokens": 572,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 1218,
+      "bot_completion_tokens": 166
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "f567f725-4f8a-4a9d-b76d-7a467f2c8597",
+  "seed": 42,
+  "dialogue_index": 54,
+  "timestamp": "2026-08-24T11:56:36.586547",
+  "persona": "Panicking Emergency",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1968,
+  "total_sim_completion_tokens": 486,
+  "total_bot_prompt_tokens": 3294,
+  "total_bot_completion_tokens": 583,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My money won't change to the other currency—I tried it and it's just stuck!",
+      "assistant_response": "Sorry to hear that—when you say it’s “stuck,” do you mean an in-app exchange transaction is pending/not completing, or that the exchange rate shown/used seems incorrect? Also, is this for a card payment or a currency exchange inside the app?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:28.674535",
+      "sim_prompt_tokens": 376,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s the in‑app exchange—it's pending and won’t finish!",
+      "assistant_response": "Got it—an in-app exchange is showing as pending and won’t complete. Is it been pending for less than 24 hours or more than 24 hours? And do you see any error message or a status like “processing”/“submitted” in the app?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:31.645970",
+      "sim_prompt_tokens": 448,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "More than a day—just says “processing,” no error message.",
+      "assistant_response": "Thanks—since the in‑app exchange is still “processing” after more than 24 hours and no error shows, it’s likely stuck in processing. Can you tell me the date/time you initiated the exchange and the currencies/amount you attempted? Then I can guide you on the next steps to get it resolved.",
+      "predicted_intent": "exchange_via_app",
+      "top_3_intents": [
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:33.996070",
+      "sim_prompt_tokens": 528,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 858,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was on Aug 20 around 3:15 PM—I tried to swap $500 USD to EUR.",
+      "assistant_response": "Thanks—an in‑app exchange from $500 USD to EUR initiated Aug 20 ~3:15 PM is still stuck on “processing” after more than a day. Can you confirm whether the exchange screen shows a “pending/processing” exchange with any option to cancel? If you can tell me what options you see (e.g., cancel, retry, or view details), I’ll advise the exact next step.",
+      "predicted_intent": "exchange_via_app",
+      "top_3_intents": [
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.06
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:36.586473",
+      "sim_prompt_tokens": 616,
+      "sim_completion_tokens": 102,
+      "bot_prompt_tokens": 957,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

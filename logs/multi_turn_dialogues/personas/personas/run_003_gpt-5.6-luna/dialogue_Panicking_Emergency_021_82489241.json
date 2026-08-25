@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "82489241-348a-45cd-b760-9481d1c40355",
+  "seed": 42,
+  "dialogue_index": 21,
+  "timestamp": "2026-08-24T11:55:29.896289",
+  "persona": "Panicking Emergency",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 931,
+  "total_sim_completion_tokens": 317,
+  "total_bot_prompt_tokens": 1496,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer just went through and I see an extra charge I didn't expect! I'm in a rush, please help!",
+      "assistant_response": "Sorry about that—can you confirm what the extra charge is for and what it shows on your account/statement (e.g., a fee/FX charge or something else)? Also, is the transfer marked as completed/received, or still pending?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.44
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:26.414785",
+      "sim_prompt_tokens": 428,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 707,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows up as a fee on the statement, about $12, and the transfer is already marked completed.",
+      "assistant_response": "Thanks—if the transfer is completed and you’re seeing a separate ~$12 fee on your statement, this usually means a transfer fee was charged. Can you tell me whether the transfer involved a currency exchange (sent/received in different currencies), or was it a same-currency transfer?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:55:29.896188",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 789,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

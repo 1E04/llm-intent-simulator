@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "70f2693c-40e7-4fda-9fff-11ef84c8b801",
+  "seed": 42,
+  "dialogue_index": 448,
+  "timestamp": "2026-08-21T13:14:18.943932",
+  "persona": "HumanBase",
+  "target_intent": "order_physical_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1049,
+  "total_sim_completion_tokens": 320,
+  "total_bot_prompt_tokens": 3425,
+  "total_bot_completion_tokens": 322,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What is the charge for a physical card?",
+      "assistant_response": "Do you mean the fee to order a new physical card, or the delivery cost/time estimate? (Tell me which one and your country if asked at checkout.)",
+      "predicted_intent": "order_physical_card",
+      "top_3_intents": [
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:14.134843",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 91
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about the fee to get a new physical card – I’m in the US.",
+      "assistant_response": "Got it—you're in the US and asking about the fee to get a new physical card. Is this for ordering an additional/spare card, or for replacing a lost/stolen/damaged card? (The fee can differ.)",
+      "predicted_intent": "order_physical_card",
+      "top_3_intents": [
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.7
+        },
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:16.696138",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 193,
+      "bot_prompt_tokens": 1139,
+      "bot_completion_tokens": 104
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I just need a spare/additional card, not a replacement.",
+      "assistant_response": "Thanks—since it’s for an extra/spare (additional) physical card in the US, the intent is **getting a spare card**. \n\nWhat fee/amount are you looking for specifically (the one-time spare card order fee), and do you already have an existing account with us or are you ordering your very first extra card?",
+      "predicted_intent": "getting_spare_card",
+      "top_3_intents": [
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:18.943806",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 1208,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

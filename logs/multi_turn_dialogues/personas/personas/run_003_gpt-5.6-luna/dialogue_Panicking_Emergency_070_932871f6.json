@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "932871f6-d454-43b5-96db-1efebbb15a48",
+  "seed": 42,
+  "dialogue_index": 70,
+  "timestamp": "2026-08-24T11:57:00.253202",
+  "persona": "Panicking Emergency",
+  "target_intent": "verify_my_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 916,
+  "total_sim_completion_tokens": 370,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 266,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account is blocked and I can’t do anything! I need to get in right now!",
+      "assistant_response": "I’m sorry about that—when you say your account is blocked, is it asking you to verify your identity (for example, “verification required”) or did you receive a message like “account closed/terminated”? Also, are you seeing this in the app when you try to log in?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.34
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.29
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:57.529067",
+      "sim_prompt_tokens": 418,
+      "sim_completion_tokens": 202,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a “verification required” screen every time I try to log in. I see it in the app, can’t get past it.",
+      "assistant_response": "Thanks—if you’re stuck on a “verification required” screen every time you log in, that means your account needs identity verification to be completed before you can access it. Have you already submitted your documents in the app, or are you only seeing the prompt and unable to start/finish verification?",
+      "predicted_intent": "verify_my_identity",
+      "top_3_intents": [
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.88
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.08
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:57:00.253069",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

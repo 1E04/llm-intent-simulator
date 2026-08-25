@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "2a449432-f26b-4027-9d62-8a21a6a7fb73",
+  "seed": 42,
+  "dialogue_index": 43,
+  "timestamp": "2026-08-24T11:56:19.464864",
+  "persona": "Panicking Emergency",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2331,
+  "total_sim_completion_tokens": 540,
+  "total_bot_prompt_tokens": 3345,
+  "total_bot_completion_tokens": 652,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just added money, but it’s not showing up anywhere! I need it right now!",
+      "assistant_response": "Sorry about that—when you say you added money, was the top up made by card or by bank transfer, and do you see it showing as pending/processing in the app (or not at all)?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.13
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:09.429924",
+      "sim_prompt_tokens": 456,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "By card—nothing shows at all, not even pending. I need it now!",
+      "assistant_response": "Thanks—if you topped up by card and it shows absolutely nothing (no pending, no history), it’s most likely a card top up that failed or didn’t complete.\n\nCan you tell me: did you receive any charge/fee from your bank or a transaction reference for the card top up? Also, about how long ago did you make the top up?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.14
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:12.598713",
+      "sim_prompt_tokens": 519,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 772,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I got a tiny £0.99 charge, no reference number. I did it about ten minutes ago.",
+      "assistant_response": "Got it—if there’s no top up showing at all 10 minutes after a card top up, and you only saw a small £0.99 charge, that often means the top up didn’t complete (the small charge can be an authorization hold). Are you able to check whether the £0.99 hold has been released/removed from your card yet, and what’s the top up amount you intended to add?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.66
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:16.276175",
+      "sim_prompt_tokens": 619,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 877,
+      "bot_completion_tokens": 178
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "The £0.99 hold is still on my card. I was trying to add £50.",
+      "assistant_response": "It sounds like your £50 card top up failed to complete—since nothing is showing (even pending) and you only see the small £0.99 card authorization hold. Can you confirm the exact time you made the top up (and which card—debit or credit)? Also, is that £0.99 hold the only related transaction you see from the card issuer right now?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.1
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-24T11:56:19.464816",
+      "sim_prompt_tokens": 737,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 993,
+      "bot_completion_tokens": 170
+    }
+  ]
+}

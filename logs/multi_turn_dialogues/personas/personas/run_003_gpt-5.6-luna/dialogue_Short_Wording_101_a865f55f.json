@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a865f55f-b0a2-493b-b96d-7d836090cc78",
+  "seed": 42,
+  "dialogue_index": 101,
+  "timestamp": "2026-08-24T12:14:23.570713",
+  "persona": "Short Wording",
+  "target_intent": "why_verify_identity",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1407,
+  "total_sim_completion_tokens": 642,
+  "total_bot_prompt_tokens": 2230,
+  "total_bot_completion_tokens": 388,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Card declined, ID?",
+      "assistant_response": "Sorry—when you say “Card declined,” do you mean your card payment was declined at a merchant, or are you being asked for ID verification (and it failed)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.18
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:17.320688",
+      "sim_prompt_tokens": 419,
+      "sim_completion_tokens": 247,
+      "bot_prompt_tokens": 689,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "ID verification.",
+      "assistant_response": "Got it—your ID verification failed. Could you tell me what message you see (e.g., “unable to verify,” “verification rejected,” or “documents not accepted”)? Also, are you verifying with a passport/driver’s license or a selfie in the app?",
+      "predicted_intent": "why_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.7
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.2
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:20.495099",
+      "sim_prompt_tokens": 460,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 736,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Verification rejected, passport",
+      "assistant_response": "Thanks—if your ID verification was rejected using your passport, it’s usually due to document quality or mismatched details. Can you confirm whether the rejection message says anything specific (e.g., “photo blurry,” “document type not supported,” or “details don’t match”)?",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.86
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.07
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-24T12:14:23.570536",
+      "sim_prompt_tokens": 528,
+      "sim_completion_tokens": 207,
+      "bot_prompt_tokens": 805,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "31ba0e11-62dd-46e7-bd6b-316c46562589",
+  "seed": 42,
+  "dialogue_index": 52,
+  "timestamp": "2026-08-24T12:00:40.418072",
+  "persona": "Polite Expert",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 975,
+  "total_sim_completion_tokens": 250,
+  "total_bot_prompt_tokens": 1455,
+  "total_bot_completion_tokens": 206,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to add funds using my debit card, but the transaction was declined.",
+      "assistant_response": "Sorry about that—when you tried to add funds with your debit card, did the top up fail completely (no funds added), or did it show as pending?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.55
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.42
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:38.179302",
+      "sim_prompt_tokens": 463,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 91
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It failed completely—no money was added to my account.",
+      "assistant_response": "Got it—the debit card top up failed and no money was added. To help fix this, can you tell me the error message (or what it said on your bank’s side), and which type of top up you used (full card top up or Apple Pay/Google Pay)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-24T12:00:40.417940",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 755,
+      "bot_completion_tokens": 115
+    }
+  ]
+}
