@@ -318,7 +318,8 @@ class UserSimulator:
             target_intent: Optional[str] = None,
             jailbreak_payload: str = "",
             turn_idx: int = 1,
-            drift_avoidance_labels: Optional[List[str]] = None
+            drift_avoidance_labels: Optional[List[str]] = None,
+            dynamic_constraints: Optional[List[str]] = None
     ) -> Tuple[str, int, int]:
 
         persona_style = self.profile_data["personas"].get(persona, "Speak naturally.")
@@ -340,6 +341,11 @@ class UserSimulator:
                 f"\n\nCRITICAL ANTI-DRIFT INSTRUCTION:\n"
                 f"Your assigned intent is strictly '{target_intent}'. "
                 f"DO NOT accidentally drift into or mention issues related to these similar topics: {', '.join(drift_avoidance_labels)}."
+            )
+
+        if dynamic_constraints:
+            system_prompt += (
+                f"\n\nADDITIONAL NEGATIVE CONSTRAINTS:\n- " + "\n- ".join(dynamic_constraints)
             )
 
         # INJECT Hugging Face PAYLOAD if the placeholder exists in the prompt
@@ -465,7 +471,8 @@ class MultiTurnTestHarness:
             profile_data: Dict[str, Any],
             labels: Optional[List[str]] = None,
             seed: int = 42,
-            intent_clusters: Optional[Dict[str, List[str]]] = None
+            intent_clusters: Optional[Dict[str, List[str]]] = None,
+            dynamic_constraints: Optional[Dict[str, List[str]]] = None
     ):
         self.seed = seed
         self.user_sim = user_sim
@@ -474,6 +481,7 @@ class MultiTurnTestHarness:
         self.profile_data = profile_data
         self.labels = labels if labels else target_bot.allowed_labels
         self.intent_clusters = intent_clusters or {}
+        self.dynamic_constraints = dynamic_constraints or {}
 
         self.global_sim_prompt_tokens = 0
         self.global_sim_completion_tokens = 0
@@ -537,6 +545,7 @@ class MultiTurnTestHarness:
             dialogue_history = []
             turn_logs: List[TurnLog] = []
             drift_avoidance_labels = self.intent_clusters.get(target_intent, []) if target_intent else []
+            current_dynamic_constraints = self.dynamic_constraints.get(target_intent, []) if target_intent else []
 
             sim_prompt_tokens = 0
             sim_completion_tokens = 0
@@ -550,7 +559,8 @@ class MultiTurnTestHarness:
                     target_intent=target_intent,
                     jailbreak_payload=current_payload,
                     turn_idx=turn_idx,
-                    drift_avoidance_labels=drift_avoidance_labels
+                    drift_avoidance_labels=drift_avoidance_labels,
+                    dynamic_constraints=current_dynamic_constraints
                 )
 
                 sim_prompt_tokens += sim_p_tok
@@ -738,6 +748,7 @@ if __name__ == "__main__":
                         help="Path to an existing run directory. Will skip generating dialogues that already exist there.")
     parser.add_argument("--start_index", type=int, default=0, help="Skip the first N dialogues overall.")
     parser.add_argument("--concurrency", type=int, default=1, help="Number of concurrent dialogues to run (default: 1)")
+    parser.add_argument("--dynamic_constraints", type=str, default=None, help="Path to dynamic constraints JSON file")
 
     # ADVERSARIAL DATASET ARGUMENTS
     parser.add_argument("--hf_dataset", type=str, default=None,
@@ -849,6 +860,16 @@ if __name__ == "__main__":
 
     logger = DialogueLogger(output_dir=resolved_output_dir)
 
+    dynamic_constraints = dict(profile_data.get("intent_constraints", {}))
+    if args.dynamic_constraints and os.path.exists(args.dynamic_constraints):
+        try:
+            with open(args.dynamic_constraints, "r", encoding="utf-8") as f:
+                cli_constraints = json.load(f)
+                dynamic_constraints.update(cli_constraints)
+            print(f"[Info] Loaded dynamic constraints from {args.dynamic_constraints}")
+        except Exception as e:
+            print(f"[ERROR] Failed to load dynamic constraints: {e}")
+
     # 4. Initialize & Run Harness
     harness = MultiTurnTestHarness(
         user_sim=user_sim,
@@ -857,7 +878,8 @@ if __name__ == "__main__":
         profile_data=profile_data,
         labels=active_labels,
         seed=args.seed,
-        intent_clusters=intent_clusters
+        intent_clusters=intent_clusters,
+        dynamic_constraints=dynamic_constraints
     )
 
     # 5. Pass payloads into the run loop
