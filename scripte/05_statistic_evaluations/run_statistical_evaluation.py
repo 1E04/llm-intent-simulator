@@ -54,6 +54,7 @@ def generate_statistics(base_dir: str):
             
         persona_stats = defaultdict(lambda: {"total": 0, "accurate": 0, "total_turns": 0})
         intent_stats = defaultdict(lambda: {"total": 0, "accurate": 0})
+        misclassifications = defaultdict(int)
         
         total_dialogues = 0
         total_accurate = 0
@@ -121,6 +122,10 @@ def generate_statistics(base_dir: str):
                 persona_stats[persona]["accurate"] += 1
                 total_accurate += 1
                 intent_stats[target_intent]["accurate"] += 1
+            else:
+                if predicted_intent and predicted_intent != "Unknown":
+                    pair_key = f"{target_intent} -> {predicted_intent}"
+                    misclassifications[pair_key] += 1
 
         if total_dialogues == 0:
             continue
@@ -175,6 +180,16 @@ def generate_statistics(base_dir: str):
         
         for intent, i_total, i_acc, i_pct in intent_list:
             report_lines.append(f"| {intent} | {i_total} | {i_acc} | {i_pct:.2f}% |")
+
+        if misclassifications:
+            report_lines.append("")
+            report_lines.append("## Top Misclassifications (Target -> Predicted)")
+            report_lines.append("| Target Intent | Predicted Intent | Count |")
+            report_lines.append("|---------------|------------------|-------|")
+            sorted_misclass = sorted(misclassifications.items(), key=lambda x: x[1], reverse=True)
+            for pair, count in sorted_misclass[:20]: # Show top 20 misclassifications
+                target, predicted = pair.split(" -> ")
+                report_lines.append(f"| {target} | {predicted} | {count} |")
 
         report_path = run_dir / "accuracy_statistics.md"
         with open(report_path, 'w', encoding='utf-8') as f:

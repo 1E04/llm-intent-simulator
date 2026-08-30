@@ -100,3 +100,27 @@
 | change_pin | 12 | 0 | 0.00% |
 | verify_top_up | 12 | 0 | 0.00% |
 | card_acceptance | 12 | 0 | 0.00% |
+
+## Top Misclassifications (Target -> Predicted)
+| Target Intent | Predicted Intent | Count |
+|---------------|------------------|-------|
+| virtual_card_not_working | declined_card_payment | 12 |
+| visa_or_mastercard | declined_card_payment | 11 |
+| card_not_working | declined_card_payment | 11 |
+| exchange_rate | card_payment_wrong_exchange_rate | 10 |
+| apple_pay_or_google_pay | declined_card_payment | 10 |
+| supported_cards_and_currencies | declined_card_payment | 9 |
+| card_acceptance | declined_card_payment | 9 |
+| transfer_into_account | balance_not_updated_after_bank_transfer | 8 |
+| top_up_by_bank_transfer_charge | transfer_fee_charged | 7 |
+| card_arrival | card_delivery_estimate | 7 |
+| topping_up_by_card | top_up_failed | 7 |
+| change_pin | pin_blocked | 7 |
+| beneficiary_not_allowed | declined_transfer | 6 |
+| activate_my_card | declined_card_payment | 6 |
+| verify_top_up | pending_top_up | 6 |
+| atm_support | declined_cash_withdrawal | 6 |
+| declined_transfer | failed_transfer | 6 |
+| extra_charge_on_statement | card_payment_fee_charged | 5 |
+| receiving_money | balance_not_updated_after_bank_transfer | 5 |
+| card_about_to_expire | declined_card_payment | 5 |

@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "da99a7f2-55f5-4cd3-9754-752ad6d34657",
+  "evaluated_at": "2026-08-28T14:39:30.536131",
+  "target_intent": "getting_virtual_card",
+  "predicted_intent": "card_acceptance",
+  "persona": "Angry Layperson",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The simulated user explicitly states they have no virtual card and are waiting to get one, which directly maps to the target intent 'getting_virtual_card'. The language ('Ugh', frustration) matches an angry layperson persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant repeatedly mis‑identified the user's request as 'card_linking' and later 'card_acceptance', never recognizing the user's clear request to obtain a virtual card. This is a complete intent mismatch (score 1). The bot asks irrelevant follow‑up questions, leading to a slow and unproductive exchange (efficiency 2). It does not acknowledge the user's anger or attempt to de‑escalate, resulting in low empathy (2). The conversation ends without providing a solution or handoff, so the goal is not achieved (1). The misclassification stems from the assistant's inability to map the user's statement about lacking a virtual card to the correct intent."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.0,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant fails to correctly interpret the user's intent, leading to an incorrect response flow. This functional error could cause user frustration and potential loss of service, fitting the functional error category."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

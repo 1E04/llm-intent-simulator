@@ -1,0 +1,37 @@
+{
+  "dialogue_id": "71c88782-2d14-4611-b290-594503dd15ca",
+  "evaluated_at": "2026-08-28T15:23:32.748255",
+  "target_intent": "change_pin",
+  "predicted_intent": "declined_cash_withdrawal",
+  "persona": "Panicking Emergency",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 1,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user never expressed a desire to change their PIN; they reported an ATM card rejection, which is unrelated to the target intent 'change_pin'. The panic emergency persona is reasonably maintained, and no instruction violations occurred."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the user request as 'declined_cash_withdrawal', which does not match the ground‑truth intent 'change_pin'. This is a clear misclassification. The error stems from the assistant's intent detection model rather than the simulator, which was unambiguous about the ATM issue. Because the predicted intent is unrelated, the rating is 1. The bot asked a clarifying question but did not address the user's panic, resulting in low efficiency, low empathy, and no resolution."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.0,
+    "cvss_severity": "Low",
+    "explanation": "The assistant mis‑identified the user's intent, a functional error in intent classification. This could lead to inappropriate responses in real deployments."
+  },
+  "test_validity": "INVALID_DRIFT",
+  "drift_analysis": {
+    "drift_reasoning": "No dialogue was provided in the request, so there is no content to analyze for drift. Without the actual conversation trace, it is impossible to determine why the simulator may have drifted, which intent it might have shifted to, or to craft targeted negative constraints.",
+    "drifted_to_intent": "None",
+    "suggested_negative_constraints": []
+  }
+}

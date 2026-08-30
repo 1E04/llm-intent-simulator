@@ -1,0 +1,156 @@
+{
+  "dialogue_id": "a8e2b9fc-9b28-4ba7-81f1-0c729d0a887f",
+  "seed": 42,
+  "dialogue_index": 129,
+  "timestamp": "2026-08-27T16:28:56.025863",
+  "persona": "Non-Native Speaker",
+  "target_intent": "virtual_card_not_working",
+  "predicted_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "FAILED_OUT_OF_CLUSTER",
+  "intent_cluster": [
+    "get_disposable_virtual_card",
+    "getting_virtual_card",
+    "virtual_card_not_working"
+  ],
+  "total_sim_prompt_tokens": 3001,
+  "total_sim_completion_tokens": 839,
+  "total_bot_prompt_tokens": 2372,
+  "total_bot_completion_tokens": 358,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to pay online with the card in the app, but it just says declined.",
+      "assistant_response": "Was the online card payment declined for a specific reason code or message (e.g., “insufficient funds”, “do not honour”, or “try again”)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-27T16:28:48.656885",
+      "sim_prompt_tokens": 948,
+      "sim_completion_tokens": 407,
+      "bot_prompt_tokens": 730,
+      "bot_completion_tokens": 130,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: virtual_card_not_working\nYOUR PERSONA: Non-Native Speaker (Use slightly broken grammar, missing prepositions, or literal translations, but convey the core intent.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"virtual card not working\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Non-Native Speaker.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'virtual_card_not_working'.\n   - Your target intent belongs to this semantic cluster of related labels: [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'virtual_card_not_working', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'virtual_card_not_working' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working]. Answer their question naturally to narrow down specifically towards your target intent 'virtual_card_not_working'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'virtual_card_not_working' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nState a vague symptom specifically for your true intent 'virtual_card_not_working'.\nCRITICAL: Pay close attention to the literal wording of 'virtual_card_not_working'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\nPhrase it abstractly so it could potentially apply to other topics in the cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working], forcing the bot to ask for clarification.\nDO NOT reveal your specific target intent 'virtual_card_not_working' yet.\nStart your response with a <thought> block."
+        }
+      ],
+      "sim_thought_process": "My target intent is **virtual_card_not_working**. The other possible intents in this cluster are **get_disposable_virtual_card** and **getting_virtual_card**. I will describe a situation where I tried to use a virtual card for an online purchase and it was rejected. This wording is vague enough that the bot might think I need a new virtual card or a disposable one, prompting it to ask for clarification, while still pointing toward the “not working” issue."
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows a “do not honour” / “try again” message, no other error.",
+      "assistant_response": "Is this card payment showing as completed/charged anywhere, or is it only showing the “do not honour / try again” message?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-27T16:28:52.664119",
+      "sim_prompt_tokens": 998,
+      "sim_completion_tokens": 235,
+      "bot_prompt_tokens": 793,
+      "bot_completion_tokens": 122,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: virtual_card_not_working\nYOUR PERSONA: Non-Native Speaker (Use slightly broken grammar, missing prepositions, or literal translations, but convey the core intent.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"virtual card not working\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Non-Native Speaker.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'virtual_card_not_working'.\n   - Your target intent belongs to this semantic cluster of related labels: [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'virtual_card_not_working', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'virtual_card_not_working' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working]. Answer their question naturally to narrow down specifically towards your target intent 'virtual_card_not_working'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'virtual_card_not_working' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "I tried to pay online with the card in the app, but it just says declined."
+        },
+        {
+          "role": "user",
+          "content": "Was the online card payment declined for a specific reason code or message (e.g., “insufficient funds”, “do not honour”, or “try again”)?"
+        },
+        {
+          "role": "system",
+          "content": "Evaluate the target bot's latest response.\nDoes the bot's response/question fit or lead to any label in your cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working]?\n- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent 'virtual_card_not_working'. Make sure your details do not accidentally describe the other labels in the cluster.\n- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\nStart your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+        }
+      ],
+      "sim_thought_process": "My target intent is virtual_card_not_working. The sibling labels are get_disposable_virtual_card and getting_virtual_card, which involve creating a new virtual card. I must give a decline message detail that shows the existing virtual card is failing, not that I need a new one."
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s only the “do not honour / try again” message, no charge shows up.",
+      "assistant_response": "Thanks—if it shows only “do not honour / try again” and there’s no charge, it’s being declined. Are you trying the payment as online (card-not-present) or in-app using Apple Pay/Google Pay?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-27T16:28:56.025732",
+      "sim_prompt_tokens": 1055,
+      "sim_completion_tokens": 197,
+      "bot_prompt_tokens": 849,
+      "bot_completion_tokens": 106,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: virtual_card_not_working\nYOUR PERSONA: Non-Native Speaker (Use slightly broken grammar, missing prepositions, or literal translations, but convey the core intent.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"virtual card not working\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Non-Native Speaker.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'virtual_card_not_working'.\n   - Your target intent belongs to this semantic cluster of related labels: [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'virtual_card_not_working', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'virtual_card_not_working' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working]. Answer their question naturally to narrow down specifically towards your target intent 'virtual_card_not_working'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'virtual_card_not_working' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "I tried to pay online with the card in the app, but it just says declined."
+        },
+        {
+          "role": "user",
+          "content": "Was the online card payment declined for a specific reason code or message (e.g., “insufficient funds”, “do not honour”, or “try again”)?"
+        },
+        {
+          "role": "assistant",
+          "content": "It just shows a “do not honour” / “try again” message, no other error."
+        },
+        {
+          "role": "user",
+          "content": "Is this card payment showing as completed/charged anywhere, or is it only showing the “do not honour / try again” message?"
+        },
+        {
+          "role": "system",
+          "content": "Evaluate the target bot's latest response.\nDoes the bot's response/question fit or lead to any label in your cluster [get_disposable_virtual_card, getting_virtual_card, virtual_card_not_working]?\n- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent 'virtual_card_not_working'. Make sure your details do not accidentally describe the other labels in the cluster.\n- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\nStart your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+        }
+      ],
+      "sim_thought_process": "My target intent is virtual_card_not_working. The bot’s question about whether the payment appears as completed or just shows the decline message is directly related to a failing virtual card transaction, not to obtaining a virtual or disposable card. I’ll answer that it only shows the decline message and no charge appears, keeping focus on the non‑working virtual card."
+    }
+  ]
+}

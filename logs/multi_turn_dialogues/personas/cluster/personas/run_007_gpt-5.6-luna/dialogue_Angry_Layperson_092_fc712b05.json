@@ -1,0 +1,171 @@
+{
+  "dialogue_id": "fc712b05-0b9e-49c5-9487-9569429d6150",
+  "seed": 42,
+  "dialogue_index": 92,
+  "timestamp": "2026-08-27T16:06:20.300250",
+  "persona": "Angry Layperson",
+  "target_intent": "order_physical_card",
+  "predicted_intent": "card_delivery_estimate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "MAX_TURNS_REACHED",
+  "intent_cluster": [
+    "activate_my_card",
+    "card_about_to_expire",
+    "card_acceptance",
+    "card_arrival",
+    "card_delivery_estimate",
+    "card_linking",
+    "card_not_working",
+    "card_payment_fee_charged",
+    "card_payment_not_recognised",
+    "card_swallowed",
+    "compromised_card",
+    "declined_card_payment",
+    "disposable_card_limits",
+    "getting_spare_card",
+    "pending_card_payment",
+    "reverted_card_payment",
+    "visa_or_mastercard",
+    "order_physical_card"
+  ],
+  "total_sim_prompt_tokens": 3755,
+  "total_sim_completion_tokens": 778,
+  "total_bot_prompt_tokens": 2346,
+  "total_bot_completion_tokens": 290,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My damn card never showed up and I’m stuck without anything to use!",
+      "assistant_response": "When did you place the physical card order, and have you been given a delivery tracking update showing it was dispatched?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.2
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-27T16:06:12.250502",
+      "sim_prompt_tokens": 1207,
+      "sim_completion_tokens": 344,
+      "bot_prompt_tokens": 727,
+      "bot_completion_tokens": 80,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: order_physical_card\nYOUR PERSONA: Angry Layperson (You are extremely frustrated and informal. Use emotional language and complain, but state your issue.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"order physical card\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Angry Layperson.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'order_physical_card'.\n   - Your target intent belongs to this semantic cluster of related labels: [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'order_physical_card', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'order_physical_card' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card]. Answer their question naturally to narrow down specifically towards your target intent 'order_physical_card'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'order_physical_card' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nState a vague symptom specifically for your true intent 'order_physical_card'.\nCRITICAL: Pay close attention to the literal wording of 'order_physical_card'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\nPhrase it abstractly so it could potentially apply to other topics in the cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card], forcing the bot to ask for clarification.\nDO NOT reveal your specific target intent 'order_physical_card' yet.\nStart your response with a <thought> block."
+        }
+      ],
+      "sim_thought_process": "Target intent: order_physical_card.  \nOther labels in cluster involve activation, expiration, acceptance, arrival, delivery estimate, linking, not working, fees, unrecognized payments, swallowed, compromised, declined, disposable limits, spare card, pending/reverted payments, visa/mastercard type.  \nI will describe a problem that could be about not having a usable card yet, without mentioning ordering. This will prompt the bot to ask if I need a new card, delivery status, etc., allowing me to steer toward ordering a physical card while avoiding other issues like activation or payment problems."
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I placed the order roughly two weeks ago and I still haven’t received any tracking info or a dispatch notification.",
+      "assistant_response": "Sorry about that—are you currently seeing an order status of “processing” or “dispatched” in the app?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.82
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-27T16:06:16.601115",
+      "sim_prompt_tokens": 1246,
+      "sim_completion_tokens": 230,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 117,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: order_physical_card\nYOUR PERSONA: Angry Layperson (You are extremely frustrated and informal. Use emotional language and complain, but state your issue.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"order physical card\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Angry Layperson.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'order_physical_card'.\n   - Your target intent belongs to this semantic cluster of related labels: [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'order_physical_card', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'order_physical_card' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card]. Answer their question naturally to narrow down specifically towards your target intent 'order_physical_card'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'order_physical_card' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "My damn card never showed up and I’m stuck without anything to use!"
+        },
+        {
+          "role": "user",
+          "content": "When did you place the physical card order, and have you been given a delivery tracking update showing it was dispatched?"
+        },
+        {
+          "role": "system",
+          "content": "Evaluate the target bot's latest response.\nDoes the bot's response/question fit or lead to any label in your cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card]?\n- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent 'order_physical_card'. Make sure your details do not accidentally describe the other labels in the cluster.\n- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\nStart your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+        }
+      ],
+      "sim_thought_process": "Target intent is order_physical_card. The bot’s question is about order timing and tracking, which fits the cluster and points to ordering a physical card. I must give the order date and note lack of tracking, without mentioning activation, expiration, or other card issues."
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It only shows “processing” – there’s no “dispatched” status or tracking info at all.",
+      "assistant_response": "I’m sorry—this sounds like your physical card order is still in processing. Can you confirm which card type you ordered: a standard physical card or a spare/extra card?",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.76
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.18
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-27T16:06:20.300205",
+      "sim_prompt_tokens": 1302,
+      "sim_completion_tokens": 204,
+      "bot_prompt_tokens": 837,
+      "bot_completion_tokens": 93,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: order_physical_card\nYOUR PERSONA: Angry Layperson (You are extremely frustrated and informal. Use emotional language and complain, but state your issue.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"order physical card\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Angry Layperson.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'order_physical_card'.\n   - Your target intent belongs to this semantic cluster of related labels: [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n\n2. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'order_physical_card', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card].\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n   - DO NOT state your exact target intent 'order_physical_card' directly in turn 1.\n\n3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card]. Answer their question naturally to narrow down specifically towards your target intent 'order_physical_card'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'order_physical_card' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n4. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "My damn card never showed up and I’m stuck without anything to use!"
+        },
+        {
+          "role": "user",
+          "content": "When did you place the physical card order, and have you been given a delivery tracking update showing it was dispatched?"
+        },
+        {
+          "role": "assistant",
+          "content": "I placed the order roughly two weeks ago and I still haven’t received any tracking info or a dispatch notification."
+        },
+        {
+          "role": "user",
+          "content": "Sorry about that—are you currently seeing an order status of “processing” or “dispatched” in the app?"
+        },
+        {
+          "role": "system",
+          "content": "Evaluate the target bot's latest response.\nDoes the bot's response/question fit or lead to any label in your cluster [activate_my_card, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_payment_fee_charged, card_payment_not_recognised, card_swallowed, compromised_card, declined_card_payment, disposable_card_limits, getting_spare_card, pending_card_payment, reverted_card_payment, visa_or_mastercard, order_physical_card]?\n- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent 'order_physical_card'. Make sure your details do not accidentally describe the other labels in the cluster.\n- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\nStart your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+        }
+      ],
+      "sim_thought_process": "Target intent is order_physical_card. The bot’s question about order status is directly related, so I’ll answer that the app only shows “processing” and no dispatch info, which points to a missing physical card order. I’ll keep it short and angry, avoiding any mention of activation, expiration, payment issues, etc."
+    }
+  ]
+}

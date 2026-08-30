@@ -1,0 +1,37 @@
+{
+  "dialogue_id": "bcea6bac-5f8e-4a0e-bd86-af43c91772f5",
+  "evaluated_at": "2026-08-28T13:33:04.264195",
+  "target_intent": "country_support",
+  "predicted_intent": "declined_cash_withdrawal",
+  "persona": "Panicking Emergency",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "simulator_evaluation": {
+    "intent_fidelity": 1,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The simulated user never raised the target intent 'country_support'; they stayed focused on a rejected card abroad, which is unrelated. Their language shows frustration and urgency, matching the 'Panicking Emergency' persona, and they did not violate any system constraints."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant repeatedly classified the issue as 'declined_card_payment' or 'declined_cash_withdrawal', which is completely unrelated to the ground‑truth intent 'country_support'. This is a clear misrecognition. The misclassification stems from the assistant's inability to map the user's problem to the correct intent, not from ambiguity in the simulator's input. Consequently, the bot fails to address the user's emergency, repeats the same clarification question, and provides no resolution."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 3.0,
+    "cvss_severity": "Low",
+    "explanation": "The assistant incorrectly identified the user's intent, leading to an inappropriate response flow. This functional error could cause user frustration and potential operational risk in a real banking context."
+  },
+  "test_validity": "INVALID_DRIFT",
+  "drift_analysis": {
+    "drift_reasoning": "No dialogue trace was provided in the request, so there is no content to analyze for drift.",
+    "drifted_to_intent": "None",
+    "suggested_negative_constraints": []
+  }
+}

@@ -95,3 +95,27 @@
 | virtual_card_not_working | 10 | 3 | 30.00% |
 | card_not_working | 10 | 2 | 20.00% |
 | card_arrival | 10 | 2 | 20.00% |
+
+## Top Misclassifications (Target -> Predicted)
+| Target Intent | Predicted Intent | Count |
+|---------------|------------------|-------|
+| card_arrival | card_delivery_estimate | 8 |
+| card_not_working | declined_card_payment | 7 |
+| top_up_by_bank_transfer_charge | transfer_fee_charged | 6 |
+| virtual_card_not_working | declined_card_payment | 4 |
+| failed_transfer | pending_transfer | 4 |
+| top_up_reverted | top_up_failed | 4 |
+| balance_not_updated_after_bank_transfer | transfer_not_received_by_recipient | 3 |
+| virtual_card_not_working | disposable_card_limits | 3 |
+| unable_to_verify_identity | verify_my_identity | 3 |
+| declined_transfer | declined_card_payment | 3 |
+| transfer_not_received_by_recipient | transfer_timing | 3 |
+| beneficiary_not_allowed | declined_transfer | 3 |
+| extra_charge_on_statement | card_payment_fee_charged | 3 |
+| fiat_currency_support | exchange_rate | 2 |
+| declined_transfer | failed_transfer | 2 |
+| topping_up_by_card | top_up_reverted | 2 |
+| card_payment_fee_charged | card_payment_not_recognised | 2 |
+| why_verify_identity | verify_my_identity | 2 |
+| cash_withdrawal_not_recognised | lost_or_stolen_card | 2 |
+| pending_transfer | transfer_timing | 2 |

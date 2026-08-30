@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "09e845f1-c322-4d59-b67a-9c0d60f280da",
+  "evaluated_at": "2026-08-28T13:54:28.578044",
+  "target_intent": "apple_pay_or_google_pay",
+  "predicted_intent": "declined_card_payment",
+  "persona": "Polite Expert",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly described attempting a phone‑based tap‑to‑pay transaction that was declined, which directly maps to the 'apple_pay_or_google_pay' intent. The language is polite, expert‑like, and stays within the persona without violating any system constraints."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 4,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant classified the issue as 'declined_card_payment', which is a different intent from the ground‑truth 'apple_pay_or_google_pay'. The user’s problem concerns a mobile‑wallet (Apple/Google Pay) decline, not a generic card decline. The misclassification stems from the assistant’s inability to recognize the mobile‑wallet context despite the user explicitly mentioning a phone tap‑to‑pay. Consequently, the bot asks redundant clarification questions without moving toward a resolution, leading to low efficiency and goal achievement, though its tone remains polite and professional."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant mis‑identified the user’s intent, a functional classification error. This could cause downstream misinformation or incorrect troubleshooting steps, representing a moderate risk to user experience."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

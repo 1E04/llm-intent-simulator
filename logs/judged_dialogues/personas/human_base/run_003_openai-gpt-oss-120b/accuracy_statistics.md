@@ -95,3 +95,27 @@
 | receiving_money | 10 | 3 | 30.00% |
 | extra_charge_on_statement | 10 | 3 | 30.00% |
 | card_acceptance | 10 | 1 | 10.00% |
+
+## Top Misclassifications (Target -> Predicted)
+| Target Intent | Predicted Intent | Count |
+|---------------|------------------|-------|
+| card_arrival | card_delivery_estimate | 6 |
+| card_not_working | declined_card_payment | 5 |
+| exchange_via_app | exchange_rate | 4 |
+| card_acceptance | country_support | 4 |
+| top_up_by_bank_transfer_charge | transfer_fee_charged | 4 |
+| unable_to_verify_identity | verify_my_identity | 4 |
+| cash_withdrawal_not_recognised | lost_or_stolen_card | 4 |
+| receiving_money | transfer_into_account | 4 |
+| extra_charge_on_statement | card_payment_fee_charged | 4 |
+| verify_source_of_funds | receiving_money | 3 |
+| card_acceptance | visa_or_mastercard | 3 |
+| transfer_not_received_by_recipient | transfer_timing | 3 |
+| direct_debit_payment_not_recognised | card_payment_not_recognised | 3 |
+| receiving_money | fiat_currency_support | 3 |
+| topping_up_by_card | top_up_reverted | 3 |
+| virtual_card_not_working | disposable_card_limits | 2 |
+| card_payment_fee_charged | exchange_charge | 2 |
+| top_up_reverted | top_up_failed | 2 |
+| wrong_exchange_rate_for_cash_withdrawal | atm_support | 2 |
+| card_linking | lost_or_stolen_card | 2 |

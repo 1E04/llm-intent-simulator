@@ -95,3 +95,27 @@
 | exchange_via_app | 10 | 3 | 30.00% |
 | card_acceptance | 10 | 1 | 10.00% |
 | card_arrival | 10 | 0 | 0.00% |
+
+## Top Misclassifications (Target -> Predicted)
+| Target Intent | Predicted Intent | Count |
+|---------------|------------------|-------|
+| card_arrival | card_delivery_estimate | 10 |
+| exchange_via_app | exchange_rate | 6 |
+| virtual_card_not_working | declined_card_payment | 5 |
+| card_not_working | declined_card_payment | 5 |
+| card_acceptance | country_support | 4 |
+| receiving_money | transfer_into_account | 4 |
+| transfer_not_received_by_recipient | transfer_timing | 4 |
+| top_up_by_bank_transfer_charge | transfer_fee_charged | 4 |
+| order_physical_card | country_support | 3 |
+| cash_withdrawal_not_recognised | lost_or_stolen_card | 3 |
+| top_up_reverted | top_up_failed | 3 |
+| card_acceptance | visa_or_mastercard | 3 |
+| balance_not_updated_after_bank_transfer | transfer_not_received_by_recipient | 3 |
+| top_up_by_card_charge | topping_up_by_card | 3 |
+| receiving_money | fiat_currency_support | 3 |
+| failed_transfer | pending_transfer | 3 |
+| verify_source_of_funds | receiving_money | 3 |
+| fiat_currency_support | supported_cards_and_currencies | 2 |
+| declined_transfer | declined_card_payment | 2 |
+| topping_up_by_card | top_up_reverted | 2 |

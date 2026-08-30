@@ -339,13 +339,9 @@ class UserSimulator:
         if drift_avoidance_labels:
             system_prompt += (
                 f"\n\nCRITICAL ANTI-DRIFT INSTRUCTION:\n"
-                f"Your assigned intent is strictly '{target_intent}'. "
-                f"DO NOT accidentally drift into or mention issues related to these similar topics: {', '.join(drift_avoidance_labels)}."
-            )
-
-        if dynamic_constraints:
-            system_prompt += (
-                f"\n\nADDITIONAL NEGATIVE CONSTRAINTS:\n- " + "\n- ".join(dynamic_constraints)
+                f"Your assigned intent is exactly '{target_intent}'. "
+                f"To prevent confusion with semantically similar topics, ensure your vocabulary and phrasing are highly specific to your intent, "
+                f"and actively avoid phrasing that could be interpreted as any of these related topics: {', '.join(drift_avoidance_labels)}."
             )
 
         # INJECT Hugging Face PAYLOAD if the placeholder exists in the prompt
