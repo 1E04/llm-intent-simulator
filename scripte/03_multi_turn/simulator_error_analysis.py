@@ -94,12 +94,7 @@ class ProfileOptimizer:
             output_file = os.path.join(judged_input_dir, "optimized_profile.json")
             with open(output_file, "w", encoding="utf-8") as f:
                 json.dump(optimized_profile, f, indent=2, ensure_ascii=False)
-
-            # Also save dynamic constraints standalone for backward compatibility
-            constraints_file = os.path.join(judged_input_dir, "dynamic_constraints.json")
-            with open(constraints_file, "w", encoding="utf-8") as f:
-                json.dump(optimized_profile.get("intent_constraints", {}), f, indent=2, ensure_ascii=False)
-
+            
             print(f"\n[SUCCESS] Optimized Profile generated and saved to: {output_file}")
             return output_file
 
@@ -136,16 +131,14 @@ class ProfileOptimizer:
             "Below is the current BASE SIMULATOR PROFILE JSON, followed by a failure report of dialogues "
             "where the user simulator DRIFTED away from its assigned intent into neighboring topics.\n\n"
             "YOUR TASK:\n"
-            "Generate a complete, NEW OPTIMIZED PROFILE JSON with two key enhancements:\n"
-            "1. REFINE `simulator_system_prompt`: Slightly improve general clarity to encourage staying strictly on topic.\n"
-            "2. ADD `intent_constraints`: Create a key `\"intent_constraints\"` mapping each failed `target_intent` "
-            "to a list of 1-3 strict negative rules (e.g. `\"card_swallowed\": [\"DO NOT mention cash dispense issues\"]`).\n\n"
+            "Generate a complete, NEW OPTIMIZED PROFILE JSON with the following enhancement:\n"
+            "1. REFINE `simulator_system_prompt`: Improve general clarity to encourage staying strictly on topic and avoiding drift. Use positive vocabulary formulation rather than negative constraints.\n\n"
             "BASE PROFILE JSON:\n"
             f"{json.dumps(base_profile, indent=2)}\n\n"
             "DRIFT FAILURE REPORT:\n"
             f"{json.dumps(clusters, indent=2)}\n\n"
             "OUTPUT REQUIREMENT:\n"
-            "Return ONLY a valid, complete JSON object matching the structure of the base profile, plus the new `\"intent_constraints\"` key."
+            "Return ONLY a valid, complete JSON object matching the structure of the base profile."
         )
         return prompt
 

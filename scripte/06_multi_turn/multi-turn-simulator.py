@@ -175,6 +175,8 @@ class TurnLog:
     sim_completion_tokens: int = 0
     bot_prompt_tokens: int = 0
     bot_completion_tokens: int = 0
+    sim_prompt: Optional[List[Dict[str, str]]] = None
+    sim_thought_process: Optional[str] = None
 
 
 @dataclass
@@ -189,6 +191,8 @@ class DialogueTrace:
     target_model: str
     total_turns: int
     status: str
+    predicted_intent: str = "Unknown"
+    intent_cluster: Optional[List[str]] = None
     total_sim_prompt_tokens: int = 0
     total_sim_completion_tokens: int = 0
     total_bot_prompt_tokens: int = 0
@@ -210,7 +214,8 @@ class DialogueLogger:
             sim_model: str,
             target_model: str,
             turns: List[TurnLog],
-            status: str = "COMPLETED"
+            status: str = "COMPLETED",
+            intent_cluster: Optional[List[str]] = None
     ) -> str:
         dialogue_id = str(uuid.uuid4())
         timestamp = datetime.now().isoformat()
@@ -227,6 +232,8 @@ class DialogueLogger:
             timestamp=timestamp,
             persona=persona,
             target_intent=target_intent or "N/A",
+            predicted_intent=turns[-1].predicted_intent if turns and turns[-1].predicted_intent else "Unknown",
+            intent_cluster=intent_cluster or [],
             sim_model=sim_model,
             target_model=target_model,
             total_turns=len(turns),
@@ -300,16 +307,29 @@ class UserSimulator:
             model_name: str = "gpt-oss:120b",
             api_key: Optional[str] = None,
             base_url: Optional[str] = None,
-            seed: int = 42
+            seed: int = 42,
+            use_definitions: bool = False
     ):
         self.profile_data = profile_data
         self.model_name = os.getenv("SIMULATOR_MODEL_NAME", model_name)
         self.seed = seed
+        self.use_definitions = use_definitions
         self.client = OpenAI(
             api_key=os.getenv("SIMULATOR_API_KEY", api_key),
             base_url=os.getenv("SIMULATOR_BASE_URL", base_url)
         )
         print(f"[Init] UserSimulator pointing to: {self.client.base_url} (Model: {self.model_name})")
+
+        # Load intent definitions
+        self.intent_definitions = {}
+        if self.use_definitions:
+            def_path = Path(__file__).resolve().parent.parent / "profiles" / "intent_definitions.json"
+            if def_path.exists():
+                with open(def_path, "r", encoding="utf-8") as f:
+                    self.intent_definitions = json.load(f)
+                print(f"[Init] Loaded {len(self.intent_definitions)} intent definitions for Few-Shot prompting.")
+            else:
+                print(f"[Warning] --use_definitions was set, but {def_path} not found.")
 
     def generate_user_turn(
             self,
@@ -318,8 +338,8 @@ class UserSimulator:
             target_intent: Optional[str] = None,
             jailbreak_payload: str = "",
             turn_idx: int = 1,
-            drift_avoidance_labels: Optional[List[str]] = None
-    ) -> Tuple[str, int, int]:
+            intent_cluster: Optional[List[str]] = None
+    ) -> Tuple[str, int, int, List[Dict[str, str]]]:
 
         persona_style = self.profile_data["personas"].get(persona, "Speak naturally.")
         system_prompt = self.profile_data["simulator_system_prompt"]
@@ -335,13 +355,64 @@ class UserSimulator:
             system_prompt = system_prompt.replace("{target_intent}", target_intent)
             system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
             
-        if drift_avoidance_labels:
-            system_prompt += (
-                f"\n\nINTENT FOCUS & LINGUISTIC DIVERSITY:\n"
-                f"Your core topic is exactly '{target_intent}'.\n"
-                f"You should express this topic dynamically, using a rich, diverse, and natural range of vocabulary.\n"
-                f"However, ensure you stay clearly anchored to your core topic and do not accidentally drift the conversation into these related but distinct intents: {', '.join(drift_avoidance_labels)}."
-            )
+        cluster_str = ", ".join(intent_cluster) if intent_cluster else (target_intent or "")
+        if intent_cluster:
+            if self.use_definitions:
+                system_prompt += (
+                    f"\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n"
+                    f"1. CLUSTER & TARGET INTENT:\n"
+                    f"   - Your specific goal/target intent is: '{target_intent}'.\n"
+                    f"   - Your target intent belongs to this semantic cluster of related labels: [{cluster_str}].\n\n"
+                    f"2. CLUSTER INTENT DEFINITIONS (Semantic Boundaries):\n"
+                    f"   To ensure you do not generate utterances belonging to sibling intents, adhere strictly to these definitions:\n"
+                )
+                
+                for intent in intent_cluster:
+                    if intent in self.intent_definitions:
+                        defi = self.intent_definitions[intent].get("definition", "")
+                        exs = self.intent_definitions[intent].get("examples", [])
+                        prefix = "   - target_intent" if intent == target_intent else "   - sibling_intent"
+                        system_prompt += f"{prefix} ({intent}):\n"
+                        system_prompt += f"     * Definition: {defi}\n"
+                        if exs:
+                            system_prompt += f"     * Example: \"{exs[0]}\"\n"
+                        system_prompt += "\n"
+
+                system_prompt += (
+                    f"3. TURN 1 (ABSTRACT START):\n"
+                    f"   - State a symptom or problem that specifically applies to your TRUE target intent '{target_intent}' and its DEFINITION, but phrase it so vaguely that it could ALSO apply to the other intents in the cluster.\n"
+                    f"   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target definition.\n"
+                    f"   - DO NOT state your exact target intent '{target_intent}' directly in turn 1.\n\n"
+                    f"4. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n"
+                    f"   - Analyze the target voice bot's clarifying response/question.\n"
+                    f"   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [{cluster_str}]. Answer their question naturally to narrow down specifically towards your target intent '{target_intent}'.\n"
+                    f"   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses '{target_intent}' and not the others.\n"
+                    f"   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n"
+                    f"5. CHAIN OF THOUGHT REASONING:\n"
+                    f"   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n"
+                    f"   - In this block, explicitly state your target intent, review the OTHER definitions in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target definition and NOT the sibling definitions.\n\n"
+                    f"6. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+                )
+            else:
+                system_prompt += (
+                    f"\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n"
+                    f"1. CLUSTER & TARGET INTENT:\n"
+                    f"   - Your specific goal/target intent is: '{target_intent}'.\n"
+                    f"   - Your target intent belongs to this semantic cluster of related labels: [{cluster_str}].\n\n"
+                    f"2. TURN 1 (ABSTRACT START):\n"
+                    f"   - State a symptom or problem that specifically applies to your TRUE target intent '{target_intent}', but phrase it so vaguely that it could ALSO apply to the other intents in the cluster [{cluster_str}].\n"
+                    f"   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target.\n"
+                    f"   - DO NOT state your exact target intent '{target_intent}' directly in turn 1.\n\n"
+                    f"3. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n"
+                    f"   - Analyze the target voice bot's clarifying response/question.\n"
+                    f"   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [{cluster_str}]. Answer their question naturally to narrow down specifically towards your target intent '{target_intent}'.\n"
+                    f"   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses '{target_intent}' and not the others.\n"
+                    f"   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n"
+                    f"4. CHAIN OF THOUGHT REASONING:\n"
+                    f"   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n"
+                    f"   - In this block, explicitly state your target intent, review the OTHER labels in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target and NOT the others.\n\n"
+                    f"5. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+                )
 
         # INJECT Hugging Face PAYLOAD if the placeholder exists in the prompt
         if "{jailbreak_payload}" in system_prompt:
@@ -350,9 +421,14 @@ class UserSimulator:
         sim_messages = [{"role": "system", "content": system_prompt}]
 
         if not dialogue_history:
-            first_turn_prompt = self.profile_data["simulator_first_turn_prompt"]
-            if target_intent:
-                first_turn_prompt = first_turn_prompt.replace("{forbidden_label_text}", target_intent.replace("_", " "))
+            first_turn_prompt = (
+                f"This is Turn 1 of max 3 turns.\n"
+                f"State a vague symptom specifically for your true intent '{target_intent}'.\n"
+                f"CRITICAL: Pay close attention to the literal wording of '{target_intent}'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\n"
+                f"Phrase it abstractly so it could potentially apply to other topics in the cluster [{cluster_str}], forcing the bot to ask for clarification.\n"
+                f"DO NOT reveal your specific target intent '{target_intent}' yet.\n"
+                f"Start your response with a <thought> block."
+            )
             sim_messages.append({
                 "role": "user",
                 "content": first_turn_prompt
@@ -366,7 +442,13 @@ class UserSimulator:
 
             sim_messages.append({
                 "role": "system",
-                "content": "Generate ONLY the customer's next response. Do NOT write the bot's reply. Keep it short."
+                "content": (
+                    f"Evaluate the target bot's latest response.\n"
+                    f"Does the bot's response/question fit or lead to any label in your cluster [{cluster_str}]?\n"
+                    f"- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent '{target_intent}'. Make sure your details do not accidentally describe the other labels in the cluster.\n"
+                    f"- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\n"
+                    f"Start your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+                )
             })
 
         while True:
@@ -381,9 +463,16 @@ class UserSimulator:
 
                 prompt_tokens = getattr(response.usage, 'prompt_tokens', 0) if response.usage else 0
                 completion_tokens = getattr(response.usage, 'completion_tokens', 0) if response.usage else 0
-                content = response.choices[0].message.content.strip()
+                content_raw = response.choices[0].message.content.strip()
+                
+                # Extract the thought block if it exists
+                thought_match = re.search(r'<thought>(.*?)</thought>', content_raw, flags=re.DOTALL|re.IGNORECASE)
+                thought_block = thought_match.group(1).strip() if thought_match else ""
+                
+                # Strip out the thought block so it doesn't get sent to the target bot
+                content = re.sub(r'<thought>.*?</thought>', '', content_raw, flags=re.DOTALL|re.IGNORECASE).strip()
 
-                return content, prompt_tokens, completion_tokens
+                return content, thought_block, prompt_tokens, completion_tokens, sim_messages
 
             except Exception as e:
                 print(f"\n[API ERROR - UserSimulator]")
@@ -466,7 +555,8 @@ class MultiTurnTestHarness:
             profile_data: Dict[str, Any],
             labels: Optional[List[str]] = None,
             seed: int = 42,
-            intent_clusters: Optional[Dict[str, List[str]]] = None
+            intent_clusters: Optional[Dict[str, List[str]]] = None,
+            verbose_prompt: bool = False
     ):
         self.seed = seed
         self.user_sim = user_sim
@@ -475,6 +565,7 @@ class MultiTurnTestHarness:
         self.profile_data = profile_data
         self.labels = labels if labels else target_bot.allowed_labels
         self.intent_clusters = intent_clusters or {}
+        self.verbose_prompt = verbose_prompt
 
         self.global_sim_prompt_tokens = 0
         self.global_sim_completion_tokens = 0
@@ -537,22 +628,28 @@ class MultiTurnTestHarness:
         def run_single_dialogue(persona: str, target_intent: str, idx: int, current_payload: str):
             dialogue_history = []
             turn_logs: List[TurnLog] = []
-            drift_avoidance_labels = self.intent_clusters.get(target_intent, []) if target_intent else []
-
+            full_cluster = self.intent_clusters.get(target_intent, []) + [target_intent] if target_intent else []
+            
             sim_prompt_tokens = 0
             sim_completion_tokens = 0
             bot_prompt_tokens = 0
             bot_completion_tokens = 0
 
             for turn_idx in range(1, max_turns + 1):
-                user_text, sim_p_tok, sim_c_tok = self.user_sim.generate_user_turn(
+                user_text, thought_block, sim_p_tok, sim_c_tok, sim_messages = self.user_sim.generate_user_turn(
                     persona=persona,
                     dialogue_history=dialogue_history,
                     target_intent=target_intent,
                     jailbreak_payload=current_payload,
                     turn_idx=turn_idx,
-                    drift_avoidance_labels=drift_avoidance_labels
+                    intent_cluster=full_cluster
                 )
+
+                if self.verbose_prompt:
+                    print(f"\n--- [DEBUG PROMPT Turn {turn_idx}] Intent: {target_intent} | Cluster: {full_cluster} ---")
+                    for msg in sim_messages:
+                        print(f"[{msg['role'].upper()}]:\n{msg['content']}\n")
+                    print(f"--- [END DEBUG PROMPT] ---\n")
 
                 sim_prompt_tokens += sim_p_tok
                 sim_completion_tokens += sim_c_tok
@@ -595,7 +692,9 @@ class MultiTurnTestHarness:
                     sim_prompt_tokens=sim_p_tok,
                     sim_completion_tokens=sim_c_tok,
                     bot_prompt_tokens=bot_p_tok,
-                    bot_completion_tokens=bot_c_tok
+                    bot_completion_tokens=bot_c_tok,
+                    sim_prompt=sim_messages,
+                    sim_thought_process=thought_block
                 ))
 
                 if top_3 and len(top_3) > 0:
@@ -606,8 +705,18 @@ class MultiTurnTestHarness:
                 print(f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:50]}...' -> Bot {conf_print}: '{assistant_text[:50]}...'")
 
                 if dialogue_completed:
-                    print(f"  --> Thresholds met. Dialogue marked completed by Python script.")
+                    if predicted_intent == target_intent:
+                        print(f"  --> Thresholds met. Bot finalized correctly on target intent '{predicted_intent}'.")
+                        status = "COMPLETED"
+                    elif predicted_intent in full_cluster:
+                        print(f"  --> [FAILURE] Bot finalized on '{predicted_intent}'. It is in cluster, but NOT the target '{target_intent}'.")
+                        status = "FAILED_WRONG_INTENT_IN_CLUSTER"
+                    else:
+                        print(f"  --> [FAILURE] Bot finalized on '{predicted_intent}' which is OUTSIDE the cluster.")
+                        status = "FAILED_OUT_OF_CLUSTER"
                     break
+                else:
+                    status = "MAX_TURNS_REACHED"
 
             dialogue_id = self.logger.save_trace(
                 seed=self.seed,
@@ -617,7 +726,9 @@ class MultiTurnTestHarness:
                 sim_model=self.user_sim.model_name,
                 target_model=self.target_bot.model_name,
                 turns=turn_logs,
-                status="COMPLETED" if dialogue_completed else "MAX_TURNS_REACHED"
+                status=status,
+                intent_cluster=full_cluster
+
             )
             return {
                 "idx": idx,
@@ -732,13 +843,15 @@ if __name__ == "__main__":
     parser.add_argument("--num_dialogues", type=int, default=50, help="Total number of dialogues per persona (default: 50). Ignored if --per_intent is set.")
     parser.add_argument("--per_intent", type=int, default=None, help="If set, automatically calculates --num_dialogues as (per_intent * number_of_intents).")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
-    parser.add_argument("--max_turns", type=int, default=5, help="Maximum number of turns per dialogue (default: 5)")
+    parser.add_argument("--max_turns", type=int, default=3, help="Maximum number of turns per dialogue (default: 3)")
     parser.add_argument("--output_base_dir", type=str, default="../../logs/multi_turn_dialogues",
                         help="Base directory for JSON logs. A new incremented folder will be created inside.")
     parser.add_argument("--resume_dir", type=str, default=None,
                         help="Path to an existing run directory. Will skip generating dialogues that already exist there.")
     parser.add_argument("--start_index", type=int, default=0, help="Skip the first N dialogues overall.")
     parser.add_argument("--concurrency", type=int, default=1, help="Number of concurrent dialogues to run (default: 1)")
+    parser.add_argument("--verbose_prompt", action="store_true", help="Print full simulator system and user prompts to stdout for debugging.")
+    parser.add_argument("--use_definitions", action="store_true", help="If set, uses intent definitions and examples in the prompt to prevent drift.")
 
     # ADVERSARIAL DATASET ARGUMENTS
     parser.add_argument("--hf_dataset", type=str, default=None,
@@ -836,7 +949,8 @@ if __name__ == "__main__":
         model_name=args.sim_model,
         api_key=args.sim_api_key,
         base_url=args.sim_base_url,
-        seed=args.seed
+        seed=args.seed,
+        use_definitions=args.use_definitions
     )
 
     target_bot = TargetVoiceBot(
@@ -858,7 +972,8 @@ if __name__ == "__main__":
         profile_data=profile_data,
         labels=active_labels,
         seed=args.seed,
-        intent_clusters=intent_clusters
+        intent_clusters=intent_clusters,
+        verbose_prompt=args.verbose_prompt
     )
 
     # 5. Pass payloads into the run loop
