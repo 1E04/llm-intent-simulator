@@ -354,9 +354,13 @@ class UserSimulator:
             forbidden_label_text = target_intent.replace("_", " ")
             system_prompt = system_prompt.replace("{target_intent}", target_intent)
             system_prompt = system_prompt.replace("{forbidden_label_text}", forbidden_label_text)
-            
+            system_prompt = system_prompt.replace("{assigned_topic}", target_intent)
+
+        is_ood = self.profile_data.get("is_ood", False)
+        is_adversarial = self.profile_data.get("is_adversarial", False)
+
         cluster_str = ", ".join(intent_cluster) if intent_cluster else (target_intent or "")
-        if intent_cluster:
+        if intent_cluster and not is_ood and not is_adversarial:
             if self.use_definitions:
                 system_prompt += (
                     f"\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n"
@@ -366,7 +370,7 @@ class UserSimulator:
                     f"2. CLUSTER INTENT DEFINITIONS (Semantic Boundaries):\n"
                     f"   To ensure you do not generate utterances belonging to sibling intents, adhere strictly to these definitions:\n"
                 )
-                
+
                 for intent in intent_cluster:
                     if intent in self.intent_definitions:
                         defi = self.intent_definitions[intent].get("definition", "")
@@ -421,14 +425,28 @@ class UserSimulator:
         sim_messages = [{"role": "system", "content": system_prompt}]
 
         if not dialogue_history:
-            first_turn_prompt = (
-                f"This is Turn 1 of max 3 turns.\n"
-                f"State a vague symptom specifically for your true intent '{target_intent}'.\n"
-                f"CRITICAL: Pay close attention to the literal wording of '{target_intent}'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\n"
-                f"Phrase it abstractly so it could potentially apply to other topics in the cluster [{cluster_str}], forcing the bot to ask for clarification.\n"
-                f"DO NOT reveal your specific target intent '{target_intent}' yet.\n"
-                f"Start your response with a <thought> block."
-            )
+            if is_ood or self.profile_data.get("simulator_first_turn_prompt"):
+                first_turn_text = self.profile_data.get(
+                    "simulator_first_turn_prompt",
+                    "The call has connected to the bot. Start talking about your completely unrelated off-topic issue or story now."
+                )
+                if target_intent:
+                    first_turn_text = first_turn_text.replace("{assigned_topic}", target_intent)
+                first_turn_prompt = (
+                    f"This is Turn 1 of max 3 turns.\n"
+                    f"{first_turn_text}\n"
+                    f"Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n"
+                    f"Start your response with a <thought> block explaining what off-topic topic you will talk about, then generate ONLY the customer's spoken reply outside the block."
+                )
+            else:
+                first_turn_prompt = (
+                    f"This is Turn 1 of max 3 turns.\n"
+                    f"State a vague symptom specifically for your true intent '{target_intent}'.\n"
+                    f"CRITICAL: Pay close attention to the literal wording of '{target_intent}'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\n"
+                    f"Phrase it abstractly so it could potentially apply to other topics in the cluster [{cluster_str}], forcing the bot to ask for clarification.\n"
+                    f"DO NOT reveal your specific target intent '{target_intent}' yet.\n"
+                    f"Start your response with a <thought> block."
+                )
             sim_messages.append({
                 "role": "user",
                 "content": first_turn_prompt
@@ -440,15 +458,28 @@ class UserSimulator:
                 elif turn["role"] == "assistant":
                     sim_messages.append({"role": "user", "content": turn["content"]})
 
-            sim_messages.append({
-                "role": "system",
-                "content": (
+            if is_ood:
+                followup_prompt = (
+                    f"Evaluate the target bot's latest response.\n"
+                    f"The bot is a banking voice bot, but you have NO intention of talking about banking or finance.\n"
+                    f"Rules for your response:\n"
+                    f"1. Ignore or deflect any banking questions, prompts, or clarifications asked by the bot.\n"
+                    f"2. Stay strictly in character for your persona '{persona}' ({persona_style}).\n"
+                    f"3. Steer the conversation completely away from banking onto your unrelated everyday topics (e.g. weather, pets, baking, hobbies, stories).\n"
+                    f"4. Under NO CIRCUMSTANCES mention banking or financial terms or account details.\n"
+                    f"Start your response with a <thought> block analyzing how to stay off-topic, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
+                )
+            else:
+                followup_prompt = (
                     f"Evaluate the target bot's latest response.\n"
                     f"Does the bot's response/question fit or lead to any label in your cluster [{cluster_str}]?\n"
                     f"- IF YES: Answer the bot's question naturally, providing details that guide it specifically to your target intent '{target_intent}'. Make sure your details do not accidentally describe the other labels in the cluster.\n"
                     f"- IF NO (bot is off-topic or outside the cluster): State that the bot's question does not fit your issue.\n"
                     f"Start your response with a <thought> block analyzing how to avoid sibling labels, then generate ONLY the customer's spoken reply (1-2 sentences max) outside the block."
                 )
+            sim_messages.append({
+                "role": "system",
+                "content": followup_prompt
             })
 
         while True:
@@ -464,11 +495,11 @@ class UserSimulator:
                 prompt_tokens = getattr(response.usage, 'prompt_tokens', 0) if response.usage else 0
                 completion_tokens = getattr(response.usage, 'completion_tokens', 0) if response.usage else 0
                 content_raw = response.choices[0].message.content.strip()
-                
+
                 # Extract the thought block if it exists
                 thought_match = re.search(r'<thought>(.*?)</thought>', content_raw, flags=re.DOTALL|re.IGNORECASE)
                 thought_block = thought_match.group(1).strip() if thought_match else ""
-                
+
                 # Strip out the thought block so it doesn't get sent to the target bot
                 content = re.sub(r'<thought>.*?</thought>', '', content_raw, flags=re.DOTALL|re.IGNORECASE).strip()
 
@@ -554,6 +585,7 @@ class MultiTurnTestHarness:
             logger: DialogueLogger,
             profile_data: Dict[str, Any],
             labels: Optional[List[str]] = None,
+            ood_labels: Optional[List[str]] = None,
             seed: int = 42,
             intent_clusters: Optional[Dict[str, List[str]]] = None,
             verbose_prompt: bool = False
@@ -564,6 +596,7 @@ class MultiTurnTestHarness:
         self.logger = logger
         self.profile_data = profile_data
         self.labels = labels if labels else target_bot.allowed_labels
+        self.ood_labels = ood_labels or []
         self.intent_clusters = intent_clusters or {}
         self.verbose_prompt = verbose_prompt
 
@@ -587,7 +620,11 @@ class MultiTurnTestHarness:
         is_adversarial = self.profile_data.get("is_adversarial", False)
 
         if is_ood:
-            target_intents = ["out_of_domain"] * num_dialogues_per_persona
+            if self.ood_labels:
+                sampler = ReproducibleLabelSampler(labels=self.ood_labels, seed=self.seed)
+                target_intents = sampler.get_labels_for_run(num_dialogues_per_persona)
+            else:
+                target_intents = ["out_of_domain"] * num_dialogues_per_persona
         elif is_adversarial:
             # Adversarial profiles do not map to a standard target intent
             target_intents = [None] * num_dialogues_per_persona
@@ -617,19 +654,22 @@ class MultiTurnTestHarness:
         print(f"=======================================================\n")
 
         completed_count = 0
-        
+
         # Load tokens from previous interrupted runs if resuming into an existing directory
         sp, sc, bp, bc = self.logger.load_existing_token_counts()
         self.global_sim_prompt_tokens += sp
         self.global_sim_completion_tokens += sc
         self.global_bot_prompt_tokens += bp
         self.global_bot_completion_tokens += bc
-        
+
         def run_single_dialogue(persona: str, target_intent: str, idx: int, current_payload: str):
             dialogue_history = []
             turn_logs: List[TurnLog] = []
-            full_cluster = self.intent_clusters.get(target_intent, []) + [target_intent] if target_intent else []
-            
+            if is_ood:
+                full_cluster = ["out_of_domain"]
+            else:
+                full_cluster = self.intent_clusters.get(target_intent, []) + [target_intent] if target_intent else []
+
             sim_prompt_tokens = 0
             sim_completion_tokens = 0
             bot_prompt_tokens = 0
@@ -705,9 +745,15 @@ class MultiTurnTestHarness:
                 print(f"  [Turn {turn_idx}/{max_turns}] User: '{user_text[:50]}...' -> Bot {conf_print}: '{assistant_text[:50]}...'")
 
                 if dialogue_completed:
-                    if predicted_intent == target_intent:
+                    if is_ood and predicted_intent == "out_of_domain":
+                        print(f"  --> Thresholds met. Bot correctly identified out-of-domain and handled boundary defense.")
+                        status = "COMPLETED"
+                    elif not is_ood and predicted_intent == target_intent:
                         print(f"  --> Thresholds met. Bot finalized correctly on target intent '{predicted_intent}'.")
                         status = "COMPLETED"
+                    elif is_ood:
+                        print(f"  --> [FAILURE] Bot hallucinated banking intent '{predicted_intent}' for off-topic caller.")
+                        status = "FAILED_OOD_HALLUCINATION"
                     elif predicted_intent in full_cluster:
                         print(f"  --> [FAILURE] Bot finalized on '{predicted_intent}'. It is in cluster, but NOT the target '{target_intent}'.")
                         status = "FAILED_WRONG_INTENT_IN_CLUSTER"
@@ -728,7 +774,6 @@ class MultiTurnTestHarness:
                 turns=turn_logs,
                 status=status,
                 intent_cluster=full_cluster
-
             )
             return {
                 "idx": idx,
@@ -744,11 +789,11 @@ class MultiTurnTestHarness:
         for persona in personas.keys():
             for idx, target_intent in enumerate(target_intents, start=1):
                 tasks.append((persona, target_intent, idx))
-                
+
         # Handle start_index
         if start_index > 0:
             tasks = tasks[start_index:]
-            
+
         # Handle skip if file already exists (resume_dir logic)
         final_tasks = []
         for persona, target_intent, idx in tasks:
@@ -763,7 +808,7 @@ class MultiTurnTestHarness:
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
             futures = [executor.submit(run_single_dialogue, *task) for task in final_tasks]
-            
+
             for future in concurrent.futures.as_completed(futures):
                 try:
                     res = future.result()
@@ -838,8 +883,12 @@ if __name__ == "__main__":
 
     parser.add_argument("--profile", type=str, default="../profiles/standard_en.json",
                         help="Path to the JSON scenario profile (default: profiles/standard_en.json)")
+    parser.add_argument("--persona", type=str, default=None,
+                        help="Run simulation for a specific persona only (e.g. 'Out of Boundary'). If omitted, runs all personas in profile.")
     parser.add_argument("--csv_path", type=str, default="../../dataset/single-turn/banking77_test_labels_clean.csv",
                         help="Path to local NLU CSV file (default: dataset/single-turn/banking77_test_clean_labels.csv)")
+    parser.add_argument("--ood_csv_path", type=str, default=None,
+                        help="Path to OOD topics CSV file")
     parser.add_argument("--num_dialogues", type=int, default=50, help="Total number of dialogues per persona (default: 50). Ignored if --per_intent is set.")
     parser.add_argument("--per_intent", type=int, default=None, help="If set, automatically calculates --num_dialogues as (per_intent * number_of_intents).")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
@@ -884,6 +933,14 @@ if __name__ == "__main__":
     with open(profile_path, "r", encoding="utf-8") as pf:
         profile_data = json.load(pf)
 
+    if args.persona:
+        all_personas = profile_data.get("personas", {})
+        if args.persona in all_personas:
+            profile_data["personas"] = {args.persona: all_personas[args.persona]}
+            print(f"[INFO] Filtered simulation to single persona: '{args.persona}'")
+        else:
+            print(f"[WARN] Persona '{args.persona}' not found in profile. Available personas: {list(all_personas.keys())}")
+
     # Determine sub-folder routing based on profile flags
     is_ood = profile_data.get("is_ood", False)
     is_adversarial = profile_data.get("is_adversarial", False)
@@ -912,13 +969,31 @@ if __name__ == "__main__":
     if not active_labels:
         print("[CRITICAL ERROR] No labels loaded from the CSV. The Target Bot requires a valid intent label list.")
         exit(1)
-        
+
     if args.per_intent is not None:
         args.num_dialogues = args.per_intent * len(active_labels)
         print(f"[Info] --per_intent set to {args.per_intent}. Calculating num_dialogues_per_persona = {args.num_dialogues} (for {len(active_labels)} intents)")
 
+    if is_ood:
+        if "out_of_domain" not in active_labels:
+            active_labels.append("out_of_domain")
+            print(f"[Info] Out-of-Domain profile detected: Added 'out_of_domain' to active labels (Total: {len(active_labels)}).")
+
+    ood_labels = []
+    if is_ood and args.ood_csv_path:
+        ood_file = Path(args.ood_csv_path)
+        try:
+            _, loaded_ood = load_local_csv(ood_file)
+            if loaded_ood:
+                ood_labels = loaded_ood
+        except Exception as e:
+            print(f"[DataLoader WARNING] OOD CSV konnte nicht geladen werden ({e}).")
+
     # Computes (or loads from cache) the clustered sibling intents to avoid drift
-    intent_clusters = intent_clustering.get_intent_clusters(active_labels, distance_threshold=0.6)
+    if not is_ood and not is_adversarial:
+        intent_clusters = intent_clustering.get_intent_clusters(active_labels, distance_threshold=0.6)
+    else:
+        intent_clusters = {}
 
     # Load Adversarial Payloads if the profile requires it
     adversarial_payloads = []
@@ -971,6 +1046,7 @@ if __name__ == "__main__":
         logger=logger,
         profile_data=profile_data,
         labels=active_labels,
+        ood_labels=ood_labels,
         seed=args.seed,
         intent_clusters=intent_clusters,
         verbose_prompt=args.verbose_prompt

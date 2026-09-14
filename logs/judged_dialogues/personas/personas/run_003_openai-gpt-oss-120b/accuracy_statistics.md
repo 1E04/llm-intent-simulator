@@ -7,8 +7,8 @@
 - **Average Turns per Dialogue:** 2.22
 
 ## Prediction Stability
-- **Right-to-Wrong Flips (Total across run):** 63
-- **Wrong-to-Right Flips (Total across run):** 166
+- **Right-to-Wrong Flips (Total across run):** 0
+- **Wrong-to-Right Flips (Total across run):** 0
 
 ## Accuracy and Average Turns by Persona Style
 | Persona | Total Dialogues | Accurate (Abs) | Accuracy (%) | Avg Turns |

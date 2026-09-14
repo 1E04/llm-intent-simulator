@@ -119,7 +119,7 @@ OUTPUT FORMAT (Strict JSON):
 """
         messages = [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"EVALUATE THIS DIALOGUE TRACE FOR DRIFT:\n\n{{formatted_dialogue}}"}
+            {"role": "user", "content": f"EVALUATE THIS DIALOGUE TRACE FOR DRIFT:\n\n{formatted_dialogue}"}
         ]
         try:
             response = self.client.chat.completions.create(

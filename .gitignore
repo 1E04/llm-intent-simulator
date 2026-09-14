@@ -22,18 +22,21 @@ dataset/single-turn/banking77_test_clean_reverted_card_payment.csv
 dataset/single-turn/banking77_personas_gpt-5.4-nano.csv
 dataset/single-turn/*stt_degraded.csv
 dataset/adversarial
+
 scripte/02_single_turn/base_banking77.py
 scripte/02_single_turn/evaluate_jsonl.py
 scripte/02_single_turn/comparision_eval.py
 scripte/02_single_turn/simple_dataset_metrics.py
+
+
+# Profiles
 scripte/profiles/standard_hdi_de.json
 scripte/profiles/best_case_hdi_de.json
-
+scripte/profiles/adversarial_en.json
 
 scripte/03_multi_turn/error_analysis_judge.py
 scripte/04_greybox_testing/*
 scripte/05_statistic_evaluations/add_predicted_intent.py
-scripte/profiles/adversarial_en.json
 !logs/judged_dialogues/personas
 logs/judged_dialogues/personas/run*
 logs/judged_dialogues/ood
@@ -47,6 +50,7 @@ scripte/01_data_prep/audio_recording.py
 logs/single-turn/synthetic-dataset/phi4/*14b.jsonl
 logs/greybox
 logs/genesys_om_dialogues
+logs/judged_dialogues/genesys
 
 # New files
 logs/old_runs
@@ -57,7 +61,7 @@ scripte/06_multi_turn/generate_intent_definitions.py
 scripte/06_multi_turn/intent_clusters_cache.json
 scripte/06_multi_turn/judge_analyzer.py
 scripte/06_multi_turn/plot_thesis_graphs.py
-scripte/07_genesys
+scripte/07_CCaaS
 
 
 # Dataset metrics: keep the summary tables/plots, skip the bulky derived files
@@ -72,6 +76,11 @@ scripte/01_data_prep/add_numerical_label.py
 scripte/01_data_prep/stt_error_injection.py
 
 scripte/02_single_turn/adversarial_eval.py
+scripte/02_single_turn/eval_ood_single_turn.py
+scripte/02_single_turn/plot_comparison.py
+scripte/02_single_turn/evaluate_persona_all_models.py
+scripte/02_single_turn/evaluate_persona_f1.py
+scripte/02_single_turn/evaluate_persona_global_matrix.py
 
 ## Exclude Thesis
 thesis.pdf
@@ -82,4 +91,6 @@ thesis_extracted.txt
 main.py
 
 **/**/*README.md
+
+
 
