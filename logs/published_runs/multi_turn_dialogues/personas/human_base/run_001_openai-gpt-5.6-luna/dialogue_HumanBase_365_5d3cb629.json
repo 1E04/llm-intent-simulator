@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "5d3cb629-fc56-43ac-a17f-389b99e32dd3",
+  "seed": 42,
+  "dialogue_index": 365,
+  "timestamp": "2026-08-19T15:39:15.388370",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2595,
+  "total_sim_completion_tokens": 540,
+  "total_bot_prompt_tokens": 4351,
+  "total_bot_completion_tokens": 697,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I could not get my transfer to happen correctly and was wondering why?",
+      "assistant_response": "Sorry about that—can you tell me what exactly happened with the transfer: does it show as failed/returned, declined, or is it still pending/just taking longer than expected?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.58
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.27
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:39:02.184297",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending and hasn’t gone through yet.",
+      "assistant_response": "Thanks—if it’s still marked as **pending**, it usually means the transfer hasn’t fully completed yet. Can you confirm: is this an **outgoing bank transfer** (you sent money) and do you have the **date/time it was submitted** (and which country/currency)? Then I can tell you the most likely timing and what to check next.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:39:04.530974",
+      "sim_prompt_tokens": 499,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s an outgoing transfer I sent on April 12 at 3:45 PM UTC, from my US account in USD.",
+      "assistant_response": "Got it—outgoing transfer submitted April 12 at 3:45 PM UTC and it’s still **pending**. Before I guide you: is the transfer inside our app showing **“pending” with a specific expected completion date**, or does it just keep showing pending with no update?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.76
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.19
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:39:06.946209",
+      "sim_prompt_tokens": 596,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 874,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says pending—there’s no expected completion date shown.",
+      "assistant_response": "Thanks—since it’s an outgoing transfer that’s been marked **pending with no expected completion date**, it’s likely still in processing. About how long have you waited so far since April 12 (e.g., under 1 business day, 1–3 business days, or more than 3 business days)? Also, is it an **international transfer** or **local/within the same country**?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:39:09.112631",
+      "sim_prompt_tokens": 697,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 956,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s been more than three business days, and it’s an international transfer.",
+      "assistant_response": "Thanks—if an **international outgoing transfer** has been **pending for more than 3 business days** with no expected completion date, it’s usually still processing or has not yet been completed by the intermediary banks. To pinpoint the next step, can you share the transfer type shown in the app (e.g., **bank transfer/ACH/SWIFT**) and the **amount**? If you prefer, also tell me whether the recipient has already received any funds or if you can view a **reference/transfer ID**.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.7
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.21
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:39:15.388239",
+      "sim_prompt_tokens": 803,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 1065,
+      "bot_completion_tokens": 159
+    }
+  ]
+}

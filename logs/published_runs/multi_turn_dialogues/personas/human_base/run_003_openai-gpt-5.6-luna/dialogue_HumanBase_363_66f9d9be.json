@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "66f9d9be-373a-4049-a05b-dd40c80d9063",
+  "seed": 42,
+  "dialogue_index": 363,
+  "timestamp": "2026-08-21T15:43:50.669073",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1204,
+  "total_sim_completion_tokens": 335,
+  "total_bot_prompt_tokens": 2342,
+  "total_bot_completion_tokens": 444,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer didn't go through.",
+      "assistant_response": "Sorry about that—was the transfer marked as failed/returned, or is it still pending/not completed yet? If you have the transfer reference or the date you sent it, tell me as well.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.76
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:44.986410",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending, not completed. I sent it on March 12 and the reference is 987654321.",
+      "assistant_response": "Thanks—if it’s still showing as pending, it usually comes down to processing time. Can you confirm whether the transfer is marked as “pending” in the app (not “failed/reverted”)? Also, which country/bank did you send it from, and have you already received any ETA/status update since March 12? With that reference (987654321), I can guide you on the next steps.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:48.358901",
+      "sim_prompt_tokens": 542,
+      "sim_completion_tokens": 195,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 173
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s still marked as pending. I sent it from my US Bank of America account and haven’t gotten any update.",
+      "assistant_response": "Got it—if the transfer is still marked as pending, it typically just needs more time to complete. For a US Bank of America transfer, can you check whether it’s showing “pending” with an estimated completion date in the app? Also, is the recipient already expecting the money, or is it an incoming transfer to your account? If you tell me which one, I’ll advise the right next step for reference 987654321.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:50.669005",
+      "sim_prompt_tokens": 662,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 886,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "502d31b0-9f05-4e88-98cf-e9a0218973af",
+  "seed": 42,
+  "dialogue_index": 369,
+  "timestamp": "2026-08-21T13:09:42.874438",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2694,
+  "total_sim_completion_tokens": 682,
+  "total_bot_prompt_tokens": 6384,
+  "total_bot_completion_tokens": 844,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Says my transfer can't be completed?",
+      "assistant_response": "I’m sorry—are you seeing a message that the transfer has *failed*, or a *declined* transfer (e.g., rejected by the recipient/bank)? If you tell me the exact wording (or error code) and whether it’s a bank transfer or card-to-card transfer, I can guide you to the right fix.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:31.405926",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “Transfer could not be completed,” no extra code or details.",
+      "assistant_response": "Thanks—without an error code, this usually falls under a failed transfer. Can you confirm what type of transfer it was: a bank transfer (to a bank account/IBAN) or a card-to-card transfer within the app? Also, was the transfer marked as “pending” before it failed?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.66
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:33.453696",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 1171,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a bank transfer and it never went pending – it just showed that error straight away.",
+      "assistant_response": "Got it—if it was a bank transfer and it failed immediately (without going pending), that points to a **failed transfer**. \n\nTo narrow it down, can you tell me whether the transfer was rejected due to **insufficient funds** or a **recipient/bank detail issue** (like the IBAN/account details), or does it just show the generic “Transfer could not be completed” message?\n",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:36.730038",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 189,
+      "bot_prompt_tokens": 1261,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "My balance was fine, so I think it might be the recipient’s details.",
+      "assistant_response": "Understood—if it was a bank transfer and it failed immediately with no pending status, and you’re confident your balance was fine, that typically points to **failed transfer due to recipient/beneficiary details** (e.g., IBAN/account info) rather than insufficient funds. \n\nCan you confirm: was the recipient’s **IBAN/account number** entered manually, and are you transferring to a **business or individual** account? If you can share the country (not the full IBAN), I can guide you on the most likely detail to double-check.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.7
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:39.596869",
+      "sim_prompt_tokens": 716,
+      "sim_completion_tokens": 187,
+      "bot_prompt_tokens": 1369,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I entered the IBAN manually – it’s an individual in Germany.",
+      "assistant_response": "Thanks—since it was a **bank transfer** to a **German individual** and it failed immediately with “Transfer could not be completed,” the most likely issue is a **failed transfer** related to the **recipient/IBAN details**. \n\nPlease double-check these on the recipient side: \n1) the IBAN is typed exactly (no missing/extra characters), \n2) country prefix and checksum are correct, and \n3) you selected the correct transfer type for that IBAN (SEPA where applicable).\n\nIf you confirm whether you’re using **SEPA (IBAN/Euro transfer)**, I can suggest the exact next steps.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:42.874348",
+      "sim_prompt_tokens": 855,
+      "sim_completion_tokens": 199,
+      "bot_prompt_tokens": 1506,
+      "bot_completion_tokens": 229
+    }
+  ]
+}

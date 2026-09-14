@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "54cd9c6f-1833-414e-814a-57364f9ee431",
+  "seed": 42,
+  "dialogue_index": 470,
+  "timestamp": "2026-08-19T15:46:16.095369",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2505,
+  "total_sim_completion_tokens": 490,
+  "total_bot_prompt_tokens": 4273,
+  "total_bot_completion_tokens": 704,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My payment still hasn't processed!",
+      "assistant_response": "Sorry about that—just to confirm, is the card payment showing as **pending** in the app, or is it **missing/unrecognised** (and you’ve not received an approval)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.23
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:04.150274",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's not showing at all—I haven't gotten any approval.",
+      "assistant_response": "Thanks—since it’s not showing at all and you haven’t had an approval, it could be either a card payment that was rejected or one that hasn’t been recorded yet. What payment date/time was it made, and do you see the transaction amount reflected anywhere (e.g., pending on your bank statement)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:06.567520",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 750,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was today around 2 pm for about $45, and I don’t see any amount showing up anywhere.",
+      "assistant_response": "Got it—if the $45 card payment from ~2pm today isn’t showing anywhere and you didn’t get an approval, it’s most likely it was declined or didn’t get submitted to us. Can you confirm: did you receive any message at the terminal (e.g., “declined” or “try again”), and what country/store was the payment made in?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.28
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:09.096592",
+      "sim_prompt_tokens": 570,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 847,
+      "bot_completion_tokens": 171
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just said “try again,” and it was at a coffee shop here in the US.",
+      "assistant_response": "Thanks—since the terminal said “try again” and you see no approval or amount, this sounds like a **declined card payment**. \n\nCan you tell me: did the coffee shop try the payment more than once (and do you have any receipts), or was it a single attempt?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:11.688392",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 952,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was just one try—I didn’t get a receipt.",
+      "assistant_response": "Thanks—since it was a single attempt at a US coffee shop and the terminal only said “try again,” it most likely got **declined** and won’t show as an authorisation. \n\nTo be sure, can you check whether your app shows *any* attempted payment at that time (~2pm today) under Transactions? If not, tell me the card type (physical/virtual) and whether you paid by tap or chip.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.82
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.13
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:16.095242",
+      "sim_prompt_tokens": 769,
+      "sim_completion_tokens": 87,
+      "bot_prompt_tokens": 1034,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

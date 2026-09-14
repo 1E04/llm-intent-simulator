@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1ba51905-60bd-4cc4-ac83-8e21053ea15f",
+  "seed": 42,
+  "dialogue_index": 540,
+  "timestamp": "2026-08-19T15:52:16.658270",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 509,
+  "total_sim_completion_tokens": 158,
+  "total_bot_prompt_tokens": 1470,
+  "total_bot_completion_tokens": 301,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card payment was reverted.  Why?",
+      "assistant_response": "I’m sorry about that—card payments can get reverted for a few reasons (for example, the merchant reversed it, the payment authorization expired, or there wasn’t enough available balance). When did you see it reverted, and do you know the merchant name or amount?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:13.786931",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up this morning – the merchant was GreenMart and the amount was $45.67.",
+      "assistant_response": "Thanks—since your GreenMart card payment of $45.67 showed up and then was reverted, the most likely cause is that the merchant reversed it or the authorization was cancelled/expired.\n\nA couple quick checks: did you get any notification that the payment was “reverted/ reversed,” and is the $45.67 back available on your card now? If you tell me the date/time it was reverted, I can narrow down what to look for.",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:16.658171",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

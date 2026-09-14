@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "56a6d8a2-c1a9-41a0-9d6e-67d7e61c8373",
+  "seed": 42,
+  "dialogue_index": 650,
+  "timestamp": "2026-08-21T13:28:03.583734",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 583,
+  "total_sim_completion_tokens": 221,
+  "total_bot_prompt_tokens": 2314,
+  "total_bot_completion_tokens": 293,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I recently got a new place while I'm staying abroad and have been using this account to manage payments, but suddenly I am seeing fees increase. Where are these additional fees coming from?",
+      "assistant_response": "I can help—these increased fees could be from extra charges on your card/statement, a transfer fee, or FX/exchange charges while you’re abroad. Which type of payment is showing the fee (card purchase, cash withdrawal, or a transfer), and is the charge listed as something like “exchange/Fx” or “transfer fee” on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.52
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.28
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:00.819232",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1105,
+      "bot_completion_tokens": 166
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a transfer for my rent – the statement just shows “transfer fee” next to the amount.",
+      "assistant_response": "Got it—if it’s specifically showing “transfer fee” next to your rent transfer, then the extra amount is the transfer fee charged for sending that bank transfer. If you tell me which country the transfer is going to/from (and whether it’s a bank transfer in your app), I can confirm the most likely fee type for your route.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:03.583643",
+      "sim_prompt_tokens": 583,
+      "sim_completion_tokens": 221,
+      "bot_prompt_tokens": 1209,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "abda1574-6ffa-42eb-bb6b-b87808da8846",
+  "seed": 42,
+  "dialogue_index": 271,
+  "timestamp": "2026-08-21T13:02:44.150778",
+  "persona": "HumanBase",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2414,
+  "total_sim_completion_tokens": 528,
+  "total_bot_prompt_tokens": 6109,
+  "total_bot_completion_tokens": 655,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The ATM didn't let me get any cash",
+      "assistant_response": "Sorry about that—was the cash withdrawal declined by the ATM, or did the ATM take your card but not dispense any cash?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.74
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.21
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:35.138826",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It wouldn't give me any money and the card stayed in the machine.",
+      "assistant_response": "Got it—the ATM kept your card and didn’t dispense cash. Are you seeing a cash withdrawal decline/error message, or did the ATM just end the transaction without giving any cash?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.35
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:37.193974",
+      "sim_prompt_tokens": 481,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 1127,
+      "bot_completion_tokens": 93
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just ended the transaction—no error message, just no cash and my card got stuck.",
+      "assistant_response": "Thanks—this sounds like the ATM kept your card and ended the cash withdrawal without dispensing any cash. I can help you with that: do you still have the receipt/ATM receipt details (date/time and ATM location), and have you been charged or is the withdrawal showing as pending?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.12
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:39.455628",
+      "sim_prompt_tokens": 541,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 1192,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I have the receipt – it was March 15 around 2 pm at the Main St. ATM. I don’t see any charge or pending transaction yet.",
+      "assistant_response": "Thanks—receipt details noted. Since the ATM kept (swallowed) your card and ended the withdrawal without dispensing cash, this is usually covered under **card swallowed at ATM**. \n\nTo check the status and next steps: can you confirm which country/ATM network it was (e.g., specific bank brand), and whether your card is debit/credit? If you can’t find that, just tell me the issuer name on the card and I’ll guide you.",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.77
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.19
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:42.005038",
+      "sim_prompt_tokens": 627,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 1293,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was a Bank of America Visa debit card in the US, at a Chase‑branded ATM.",
+      "assistant_response": "Understood—since the ATM kept your Bank of America Visa debit card and didn’t dispense cash, this is most consistent with **card swallowed at ATM**. \n\nPlease tell me: do you see *any* cash-withdrawal transaction yet (even “pending” or “reversed”), or is it completely missing from your app/statement? ",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.08
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:44.150667",
+      "sim_prompt_tokens": 765,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 1420,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

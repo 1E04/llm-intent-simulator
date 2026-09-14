@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "594e609c-3c6e-4f11-9041-2150af2f735d",
+  "seed": 42,
+  "dialogue_index": 250,
+  "timestamp": "2026-08-21T13:01:34.113174",
+  "persona": "HumanBase",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 491,
+  "total_sim_completion_tokens": 181,
+  "total_bot_prompt_tokens": 2215,
+  "total_bot_completion_tokens": 272,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I use contactless payments?",
+      "assistant_response": "Sure—what device are you using for contactless: a physical card, Apple Pay, or Google Pay? And are you having any trouble tapping, or just want the steps?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.31
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:01:31.348667",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm using my physical card and it just won’t tap at the checkout.",
+      "assistant_response": "Got it—contactless on your physical card isn’t working at checkout. Let’s troubleshoot: first, can you confirm your card’s contactless feature is enabled and that the card has power/activation complete (e.g., it’s not a newly issued/unactivated card)? Also, what happens when you tap—does it decline, show an error, or does the terminal not react at all?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:01:34.113060",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 181,
+      "bot_prompt_tokens": 1138,
+      "bot_completion_tokens": 141
+    }
+  ]
+}

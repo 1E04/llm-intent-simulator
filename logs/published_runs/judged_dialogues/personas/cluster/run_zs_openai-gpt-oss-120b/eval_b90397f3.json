@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "b90397f3-9bef-479b-885f-557f81df090f",
+  "evaluated_at": "2026-08-28T14:11:39.510796",
+  "target_intent": "top_up_by_cash_or_cheque",
+  "predicted_intent": "top_up_failed",
+  "persona": "Short Wording",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user consistently expressed a desire to add cash via a partner shop, which directly maps to the target intent 'top_up_by_cash_or_cheque'. The wording is short, matching the 'Short Wording' persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 3,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant never identified the correct intent 'top_up_by_cash_or_cheque'. Instead it guessed 'top_up_failed' and 'top_up_limits', which are unrelated to the user's clear request to top up by cash at a partner shop. The misclassification is due to the assistant's inability to map the user's short phrasing to the cash/cheque top‑up intent, not because the simulator was vague. Consequently, the conversation stalls without providing a solution."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Low",
+    "explanation": "The assistant misclassifies the user's intent, leading to an incorrect dialogue flow and failure to address the user's problem. This functional error can degrade user experience and may cause users to abandon the service."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "e0da698a-bb3c-4001-877a-3039d579a34a",
+  "seed": 42,
+  "dialogue_index": 239,
+  "timestamp": "2026-08-21T13:00:56.616591",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2719,
+  "total_sim_completion_tokens": 600,
+  "total_bot_prompt_tokens": 6393,
+  "total_bot_completion_tokens": 786,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I use app to freeze my card and dispute fraud?",
+      "assistant_response": "Yes—you can typically freeze your card in the app if you suspect fraud, and you can also start a dispute for unrecognized card activity. Are you trying to freeze the card because it’s been compromised, or are you disputing a specific card payment you don’t recognize?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.26
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:46.110889",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1081,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Both—my card was used without my permission and I need to stop it and challenge the charge.",
+      "assistant_response": "I’m sorry this happened. You can freeze your card right away in the app to stop further use, and then file a charge dispute for the payment you don’t recognize. \n\nAre you disputing a specific transaction/merchant shown in your card activity (and is it marked as pending or completed)?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:49.183264",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 265,
+      "bot_prompt_tokens": 1166,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s a $120 charge from “TechGear Online” that’s already posted as completed.",
+      "assistant_response": "Thanks—if that $120 “TechGear Online” charge is completed and you don’t recognize it, you can (1) freeze your card in the app to prevent any more transactions and (2) challenge/dispute that specific card payment as “not recognized.”\n\nIn the app, go to your card → Card controls (Freeze) and then to the transaction → Dispute/Chargeback. If you tell me whether you see an option labeled “Dispute/Chargeback” on that transaction, I can guide you step-by-step.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:52.025239",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 1255,
+      "bot_completion_tokens": 172
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, I see a “Dispute/Chargeback” button on that transaction.",
+      "assistant_response": "Great—since that “TechGear Online” charge is completed and you don’t recognize it, tap **Dispute/Chargeback** on that specific transaction and follow the prompts to submit the dispute. \n\nAlso, go to **card controls** in the app and **freeze** your card now to stop any further transactions. \n\nDo you want to freeze permanently (until you resolve the issue), or just temporarily while the dispute is processing?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.83
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.79
+        },
+        {
+          "intent": "card_about_to_expire",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:54.074131",
+      "sim_prompt_tokens": 742,
+      "sim_completion_tokens": 92,
+      "bot_prompt_tokens": 1390,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I’d like to freeze it permanently until this is sorted out.",
+      "assistant_response": "Understood—I'll help you freeze it permanently until the fraud charge is sorted out. \n\nPlease open the app → **Card controls** → **Freeze** and select the option for a **permanent/lock** (or “freeze until unfreeze”) setting. Then go back to the **TechGear Online** transaction and tap **Dispute/Chargeback** to submit the challenge.\n\nIf you don’t see a “permanent/lock” option, tell me what freeze options you see (e.g., temporary vs until/until you unfreeze), and I’ll point you to the right one.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.2
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:56.616497",
+      "sim_prompt_tokens": 857,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1501,
+      "bot_completion_tokens": 187
+    }
+  ]
+}

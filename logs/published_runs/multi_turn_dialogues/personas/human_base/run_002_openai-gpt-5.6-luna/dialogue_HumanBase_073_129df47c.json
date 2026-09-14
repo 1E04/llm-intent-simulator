@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "129df47c-f580-4d02-ab89-8946a7d307fc",
+  "seed": 42,
+  "dialogue_index": 73,
+  "timestamp": "2026-08-21T12:49:42.766084",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 524,
+  "total_sim_completion_tokens": 123,
+  "total_bot_prompt_tokens": 2236,
+  "total_bot_completion_tokens": 306,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have paid money into my account but it doesn't show.",
+      "assistant_response": "Sorry about that—when you say you paid money into your account, was it by bank transfer, or was it a cheque/cash deposit? If you tell me which one (and roughly when you paid it), I’ll guide you to the right next steps.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.52
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.28
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:40.371180",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1081,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a cash deposit, about two days ago.",
+      "assistant_response": "Got it—since it was a cash deposit about two days ago, this is most likely **balance not updated after cheque or cash deposit**. \n\nCan you tell me: (1) which country/branch you deposited at, and (2) whether the deposit was made via an ATM/agent or at a teller desk? Then I’ll check what the usual posting time is and what to do if it still hasn’t arrived.",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:42.766038",
+      "sim_prompt_tokens": 524,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1155,
+      "bot_completion_tokens": 153
+    }
+  ]
+}

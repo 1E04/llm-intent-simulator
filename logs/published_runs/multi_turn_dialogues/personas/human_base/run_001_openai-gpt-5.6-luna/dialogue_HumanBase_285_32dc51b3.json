@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "32dc51b3-40a5-46d3-b1d6-e48805cc7895",
+  "seed": 42,
+  "dialogue_index": 285,
+  "timestamp": "2026-08-19T15:32:26.210487",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1759,
+  "total_sim_completion_tokens": 457,
+  "total_bot_prompt_tokens": 3217,
+  "total_bot_completion_tokens": 471,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfers are being declined. IT has always worked for me but now it's declining my card. I've tried several times.",
+      "assistant_response": "Sorry about that—just to confirm, are you seeing the decline when you make a bank transfer, or when you try to pay by card (card payment)?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.52
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.32
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:15.664100",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's when I try to do a bank transfer.",
+      "assistant_response": "Thanks—so the bank transfer is being declined. Are you getting a specific error message (e.g., “declined/failed”), and does the transfer get marked as “pending” or does it stop immediately?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:18.329411",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 223,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 99
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “failed” and stops right away—nothing shows as pending.",
+      "assistant_response": "Got it—if the transfer is failing immediately with a “failed” status and nothing shows as pending, it most closely matches a failed/declined bank transfer. \nWhat exact transfer method are you using (bank transfer to your Revolut IBAN, or international transfer), and what country is the recipient/bank in?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:23.669632",
+      "sim_prompt_tokens": 577,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 829,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I'm using a standard transfer to a UK bank via my Revolut IBAN.",
+      "assistant_response": "Thanks—if the UK transfer is failing immediately (no pending status), it typically indicates a failed/declined transfer. Could you tell me the transfer type: is it a UK Faster Payment/standard UK bank transfer, and roughly when did you try to send it? Also, do you see any reason code/message in the app transaction details?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:26.210400",
+      "sim_prompt_tokens": 668,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 920,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

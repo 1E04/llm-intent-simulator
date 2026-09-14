@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2363e041-9bde-489c-90ba-90832499c08b",
+  "seed": 42,
+  "dialogue_index": 394,
+  "timestamp": "2026-08-19T15:41:21.574745",
+  "persona": "HumanBase",
+  "target_intent": "get_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 496,
+  "total_sim_completion_tokens": 148,
+  "total_bot_prompt_tokens": 1458,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why isn't my PIN available yet?",
+      "assistant_response": "Do you mean your PIN hasn’t been generated/available in the app yet, or does it show as blocked? If you tell me which one (and whether you’ve already requested a PIN), I can guide you to the right fix.",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.18
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:41:19.016585",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I haven't gotten a PIN in the app at all – it just isn’t showing up.",
+      "assistant_response": "Got it—if your PIN isn’t appearing in the app at all, it usually means the PIN hasn’t been issued to your card yet. Have you already requested “Get PIN” (or “Reveal PIN”) inside the app for your card? If yes, tell me whether you see any error message; if not, please try requesting it once and confirm what happens next.",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:41:21.574705",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 767,
+      "bot_completion_tokens": 130
+    }
+  ]
+}

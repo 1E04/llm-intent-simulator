@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a887222f-a1f1-48cb-90b1-48656fa4a57e",
+  "seed": 42,
+  "dialogue_index": 205,
+  "timestamp": "2026-08-21T15:40:53.976545",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 594,
+  "total_sim_completion_tokens": 127,
+  "total_bot_prompt_tokens": 1485,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Using an ATM caused me to incur an additional fee. Why?",
+      "assistant_response": "Sorry about that—fees from an ATM withdrawal can happen depending on the ATM operator and whether any foreign-currency or exchange charges apply. Was the withdrawal made in your card’s home currency, and do you see a fee described on the receipt or in your statement (e.g., “ATM fee” or “exchange”)?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:51.540697",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was in my home currency, and the receipt just says “ATM fee.”",
+      "assistant_response": "Got it—if the receipt only says “ATM fee” and the withdrawal was in your home currency, the extra cost is typically an ATM operator fee (and sometimes a charge from the ATM network). If you tell me the country/ATM name and the exact fee amount, I can help confirm what it likely was and where it will show on your statement.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:53.976425",
+      "sim_prompt_tokens": 594,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

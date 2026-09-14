@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6c71022c-59dd-49a5-bb9b-342927b796f4",
+  "seed": 42,
+  "dialogue_index": 574,
+  "timestamp": "2026-08-21T13:23:26.284512",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 513,
+  "total_sim_completion_tokens": 127,
+  "total_bot_prompt_tokens": 2235,
+  "total_bot_completion_tokens": 263,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When using a US card, what is the cost for a top up/off?",
+      "assistant_response": "Are you asking about the fee charged when you top up by **card** using a US card (card top-up fee), or about any **currency exchange fee** for converting USD to your account currency?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.52
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.32
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:23:23.926450",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about the fee for topping up with a US card.",
+      "assistant_response": "Got it—you're asking about the fee for topping up with a **US card** (top up by card). The exact charge depends on the top up amount and currency, and whether any promo/rate applies. What amount are you planning to top up (e.g., $50, $200), and is the top up in USD?",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:23:26.284356",
+      "sim_prompt_tokens": 513,
+      "sim_completion_tokens": 127,
+      "bot_prompt_tokens": 1150,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

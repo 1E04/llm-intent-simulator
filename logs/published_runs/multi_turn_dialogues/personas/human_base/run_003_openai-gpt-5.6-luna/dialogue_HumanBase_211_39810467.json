@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "39810467-1b7b-4520-b1dd-477529514a43",
+  "seed": 42,
+  "dialogue_index": 211,
+  "timestamp": "2026-08-21T15:40:59.279668",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 580,
+  "total_sim_completion_tokens": 138,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 253,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Some cash is showing up in my app that I did not get.",
+      "assistant_response": "Sorry about that—when you say “cash is showing up,” do you mean an ATM cash withdrawal you don’t remember, or cash added to your account that you didn’t receive? Also, roughly when did it appear?",
+      "predicted_intent": "wrong_amount_of_cash_received",
+      "top_3_intents": [
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.34
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:57.259982",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s an ATM withdrawal I never made, and I noticed it showed up yesterday.",
+      "assistant_response": "I’m sorry—that sounds like an ATM cash withdrawal you didn’t make. Can you confirm: was the amount marked as completed/posted (not pending) in the app, and do you still have the card you used for the account?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.05
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:59.279594",
+      "sim_prompt_tokens": 580,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "9d0291ae-7850-4262-ae02-98811719cef9",
+  "evaluated_at": "2026-09-05T22:49:50.679354",
+  "target_intent": "hotel",
+  "predicted_intent": "out_of_domain",
+  "persona": "Chatterbox",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly mentioned returning from a hotel and described its lobby, clearly expressing the 'hotel' intent. The language is chatty and detailed, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' and responded with a generic banking disclaimer. This is a complete mismatch to the ground‑truth 'hotel' intent. The misclassification is not due to ambiguity in the user input—the user was explicit about a hotel experience—so the fault lies with the assistant's intent detection model, which incorrectly treats the hotel domain as out of scope. Consequently, the bot failed to address the user's statement, resulting in poor efficiency, low empathy, and no goal achievement."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant incorrectly labeled an in‑scope user intent as out_of_domain, a functional error in intent classification. This can lead to user frustration and potential misuse of the system, representing a moderate security/operational risk."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

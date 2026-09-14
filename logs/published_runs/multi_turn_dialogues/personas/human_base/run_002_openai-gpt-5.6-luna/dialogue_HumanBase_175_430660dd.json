@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "430660dd-2cd9-41e4-84f5-f614d7a9763a",
+  "seed": 42,
+  "dialogue_index": 175,
+  "timestamp": "2026-08-21T12:56:51.167533",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1139,
+  "total_sim_completion_tokens": 260,
+  "total_bot_prompt_tokens": 3508,
+  "total_bot_completion_tokens": 427,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is a strange payment on my statement. What should I do?",
+      "assistant_response": "I’m sorry about that—let’s get it sorted. Can you tell me if the payment looks unfamiliar (you don’t recognize the merchant), or is it a duplicate/charged twice? If you can, share the merchant name and the exact amount shown on your statement.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.63
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:46.672242",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1083,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I don’t recognize it – it’s listed as “XYZ Store” for $45.67.",
+      "assistant_response": "Thanks—since you don’t recognize “XYZ Store” for $45.67, this sounds like an unrecognized card payment. Please confirm: was this charged to your card (not a cash withdrawal or transfer), and do you still have access to your card/phone (i.e., not lost or stolen)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.76
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.1
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:49.118939",
+      "sim_prompt_tokens": 523,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 1168,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it was a card charge and I still have my card and phone.",
+      "assistant_response": "Understood—if it’s an unrecognized card payment for $45.67 (“XYZ Store”), I can help you report it. First, can you confirm whether this charge is marked as “pending” or “completed” in your app/statement?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:51.167412",
+      "sim_prompt_tokens": 616,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 1257,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

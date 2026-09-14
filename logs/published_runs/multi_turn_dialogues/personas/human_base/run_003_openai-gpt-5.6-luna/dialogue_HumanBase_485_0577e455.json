@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0577e455-cc0a-4350-9289-50f21fbd8927",
+  "seed": 42,
+  "dialogue_index": 485,
+  "timestamp": "2026-08-21T15:45:48.379082",
+  "persona": "HumanBase",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 649,
+  "total_sim_completion_tokens": 240,
+  "total_bot_prompt_tokens": 1538,
+  "total_bot_completion_tokens": 314,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hi I'm a new customer and tried topping up for the first time today, seems it's not working, the thing shows up as pending since half an hour already! Please fix it!",
+      "assistant_response": "Thanks for that—when you say it’s “pending,” do you see it in your app with a specific status like Pending card top up, and does it also show the payment method (card) and the amount? Also, has it been more than 30 minutes since you completed the top up?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.13
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:44.897318",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 720,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it shows “Pending card top up” with my card and the amount, and it’s been about 35 minutes.",
+      "assistant_response": "Got it—if it’s showing “Pending card top up” for about 35 minutes, it usually completes automatically. Could you wait a bit longer (up to ~1 hour), and check whether the balance/statement updates? If it’s still pending after 1 hour, tell me and I’ll help you with the next steps to resolve it.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:48.379013",
+      "sim_prompt_tokens": 649,
+      "sim_completion_tokens": 240,
+      "bot_prompt_tokens": 818,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

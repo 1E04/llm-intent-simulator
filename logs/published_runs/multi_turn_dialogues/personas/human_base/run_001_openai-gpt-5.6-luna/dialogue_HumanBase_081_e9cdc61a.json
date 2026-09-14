@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e9cdc61a-1f79-4438-80f5-6a600e7e9e3c",
+  "seed": 42,
+  "dialogue_index": 81,
+  "timestamp": "2026-08-19T15:18:35.927718",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1101,
+  "total_sim_completion_tokens": 389,
+  "total_bot_prompt_tokens": 2325,
+  "total_bot_completion_tokens": 392,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I had a transfer blocked",
+      "assistant_response": "Sorry to hear that—was the transfer blocked/declined by the bank or by us (e.g., “declined” or “blocked” message), or did you cancel it yourself? If you tell me what message you see and whether it’s an incoming or outgoing transfer, I can guide you.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.76
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.13
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:30.191508",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 689,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows “transfer blocked” for an outgoing payment.",
+      "assistant_response": "Got it—an outgoing transfer showing “transfer blocked” usually means it was declined/blocked. To help, can you confirm: is there an error message code or reason shown in the transfer details (and roughly when it was attempted)? If you share that text, I’ll tell you the next step.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.66
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.24
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:32.547097",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows error code 101 – “beneficiary not allowed”, I tried it this morning.",
+      "assistant_response": "Thanks—error code 101 (“beneficiary not allowed”) means we can’t send the transfer to that recipient/beneficiary. Please check that the beneficiary details are correct and that the beneficiary is supported/allowed for transfers from your account. If you paste the recipient’s country/bank and the transfer currency, I can tell you what’s typically causing this.",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:35.927582",
+      "sim_prompt_tokens": 592,
+      "sim_completion_tokens": 274,
+      "bot_prompt_tokens": 863,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

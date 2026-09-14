@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "48145f89-f267-4702-914e-fe8b3e1d246c",
+  "seed": 42,
+  "dialogue_index": 91,
+  "timestamp": "2026-08-21T15:38:46.559597",
+  "persona": "HumanBase",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 560,
+  "total_sim_completion_tokens": 210,
+  "total_bot_prompt_tokens": 1460,
+  "total_bot_completion_tokens": 237,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "If I make a transaction can I cancel it?",
+      "assistant_response": "It depends what type of transaction you mean—are you trying to cancel a bank transfer, or a card payment? If you tell me which one (and whether it’s pending or already completed), I can guide you on whether it can be cancelled.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:43.623835",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a bank transfer I just made and it's still pending.",
+      "assistant_response": "Yes—if your bank transfer is still pending, it may be cancellable. Can you confirm whether you made the transfer from the app (and whether you can see its status as “pending” in the Transfers/Activity screen)?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:46.559449",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 210,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 99
+    }
+  ]
+}

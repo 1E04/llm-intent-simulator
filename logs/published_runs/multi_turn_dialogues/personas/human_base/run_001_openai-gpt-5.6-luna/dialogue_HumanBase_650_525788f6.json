@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "525788f6-7227-4f70-97ee-b490175e387e",
+  "seed": 42,
+  "dialogue_index": 650,
+  "timestamp": "2026-08-19T16:00:30.546866",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3177,
+  "total_sim_completion_tokens": 553,
+  "total_bot_prompt_tokens": 4869,
+  "total_bot_completion_tokens": 876,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I recently got a new place while I'm staying abroad and have been using this account to manage payments, but suddenly I am seeing fees increase. Where are these additional fees coming from?",
+      "assistant_response": "To help pinpoint where the extra fees are coming from, which type of charges are you seeing—(1) card payment fees on your statement, (2) currency/exchange-related fees (since you’re abroad), or (3) another kind of extra charge/fee? If you can share the wording of one charge from the statement, I can identify it more precisely.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.38
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.32
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:19.179421",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 720,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s listed as “International transaction fee – €2.50” on the statement.",
+      "assistant_response": "Thanks—“International transaction fee – €2.50” is typically charged on card payments made outside your home country (or outside the supported billing region), sometimes alongside any exchange/spread if a currency conversion happened.\n\nTo confirm exactly which one applies to your case: was this fee triggered by a **card payment**, or by a **cash withdrawal/transfer**? If you tell me the merchant and whether there was a currency conversion shown, I’ll point you to the precise reason.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.32
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.31
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:22.251532",
+      "sim_prompt_tokens": 585,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 823,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a card payment at the furniture store—no currency conversion was shown, I paid in euros.",
+      "assistant_response": "That sounds like a fee specifically applied to **international card payments**—even if you paid in **euros** and there was no currency conversion shown. The “International transaction fee – €2.50” is usually charged based on where the card transaction is processed (e.g., outside your home/billing region).\n\nCan you confirm whether your **home country/billing country** is the same as where you’re using the card right now? Also, was the charge from a **card payment** (not contactless/cash withdrawal), and do you see it appear **per transaction** or as a separate line item?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.42
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.31
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:24.971063",
+      "sim_prompt_tokens": 710,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 951,
+      "bot_completion_tokens": 221
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "My home country is the UK and I’m using the card in France. The €2.50 shows up as a separate line item for each purchase.",
+      "assistant_response": "That €2.50 “International transaction fee” is a **per-transaction card payment fee** applied because you’re using your UK card in **France** (the transaction is processed as an international payment). Since you paid in euros and there was no conversion shown, it’s not an exchange-rate fee—just an international card fee. \n\nIf you tell me the exact name of your plan (or the fee wording from your pricing page, if you have it), I can confirm whether this amount matches the standard international fee for your account.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:27.678612",
+      "sim_prompt_tokens": 866,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 1117,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I’m on the Standard (free) plan – I don’t have the exact wording from the pricing page.",
+      "assistant_response": "Thanks—since the fee is specifically listed as “International transaction fee – €2.50” for each **card payment** in France (UK home country, paid in euros, no currency conversion shown), this is an additional **international card payment fee** rather than an exchange-rate fee.\n\nTo confirm it matches your plan, can you share (1) whether the charge is marked as a **card purchase** (not cash withdrawal) and (2) the merchant country shown/embedded in the transaction details?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:30.546720",
+      "sim_prompt_tokens": 1016,
+      "sim_completion_tokens": 187,
+      "bot_prompt_tokens": 1258,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

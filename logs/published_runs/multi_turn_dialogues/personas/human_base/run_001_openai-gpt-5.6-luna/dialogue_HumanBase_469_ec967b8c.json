@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ec967b8c-7805-4dd6-94e2-1ebd0355e9a3",
+  "seed": 42,
+  "dialogue_index": 469,
+  "timestamp": "2026-08-19T15:46:02.650718",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 503,
+  "total_sim_completion_tokens": 132,
+  "total_bot_prompt_tokens": 1460,
+  "total_bot_completion_tokens": 290,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I am waiting for a payment to go through.",
+      "assistant_response": "I can help—could you tell me what type of payment you’re waiting for: a card payment, a bank transfer, or a cash withdrawal? Also, has it been marked as “pending” or “completed” in the app?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.42
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.35
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:59.867712",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment and the app still shows it as pending.",
+      "assistant_response": "Got it—if your card payment is still showing as **pending**, it typically means the merchant/card network hasn’t completed the authorization yet. I can help you check what to expect next: did the pending payment start **today or yesterday**, and roughly how long has it been pending?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:02.650566",
+      "sim_prompt_tokens": 503,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

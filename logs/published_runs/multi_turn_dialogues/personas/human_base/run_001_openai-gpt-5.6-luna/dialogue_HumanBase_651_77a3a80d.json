@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "77a3a80d-7769-4786-963c-94fda39b51a0",
+  "seed": 42,
+  "dialogue_index": 651,
+  "timestamp": "2026-08-19T16:00:36.588675",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1080,
+  "total_sim_completion_tokens": 315,
+  "total_bot_prompt_tokens": 2301,
+  "total_bot_completion_tokens": 350,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I would like to transfer some money from my other bank account into this one.",
+      "assistant_response": "Sure—do you mean you want to make a bank transfer into your account (and you’re asking how to do it), or are you already expecting one and it hasn’t arrived yet?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.2
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:31.980825",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to do it – I need to know how to move the money over.",
+      "assistant_response": "Got it—you want to move money from your other bank into this one. To help, are you doing this via a bank transfer (from your bank app/online banking), or by cheque/cash deposit?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:34.437871",
+      "sim_prompt_tokens": 505,
+      "sim_completion_tokens": 201,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 97
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’d like to do it through a bank transfer from my other bank’s app.",
+      "assistant_response": "Great—this is a bank transfer into your account. To do it from your other bank’s app, you’ll need your account details (like the recipient name, sort code/IBAN, and reference if applicable). Do you want the transfer details for your local bank account (IBAN) or for a specific country/region?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T16:00:36.588550",
+      "sim_prompt_tokens": 575,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 835,
+      "bot_completion_tokens": 121
+    }
+  ]
+}

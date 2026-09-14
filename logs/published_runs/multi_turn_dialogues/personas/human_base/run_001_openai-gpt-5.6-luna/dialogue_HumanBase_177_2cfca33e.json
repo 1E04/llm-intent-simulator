@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "2cfca33e-bf75-49bd-8ad1-e190ba35430c",
+  "seed": 42,
+  "dialogue_index": 177,
+  "timestamp": "2026-08-19T15:26:20.694430",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1932,
+  "total_sim_completion_tokens": 393,
+  "total_bot_prompt_tokens": 3409,
+  "total_bot_completion_tokens": 581,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Some of my card payments look different than where I purchased products from. Why is that?",
+      "assistant_response": "Thanks for checking. Could you tell me what looks different—are you seeing a different merchant name/country on your statement, or does the purchase show a different exchange rate/converted amount than the one shown by the merchant?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:12.644964",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The merchant name is different and the amount shown is higher than the price I saw at the shop.",
+      "assistant_response": "It sounds like a difference in the merchant descriptor and that the charged amount is higher. This is most commonly caused by card payments being converted after you pay (exchange-rate timing), or by extra card-use fees that may be charged by the merchant/acquirer and then appear on your statement.\n\nCan you confirm: (1) was the shop showing a different currency than what appears on your card statement, and (2) do you see a separate fee line or a single higher total amount?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.23
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:15.308914",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, the shop showed a different currency, and I only see one higher total amount—no separate fee line.",
+      "assistant_response": "Got it—shop currency differs, and your statement shows one higher total with no separate fee line. That usually happens when the card payment is converted using the card’s exchange rate (which can be different from what you see at the time of purchase). \n\nCan you tell me which currency the shop charged and which currency/amount you see on your statement (and your card currency too, if you know it)?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.19
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:17.763742",
+      "sim_prompt_tokens": 648,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 907,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "The shop charged in EUR, but my statement shows a total of £45.60. My card is in GBP.",
+      "assistant_response": "Thanks—since the shop charged in EUR but your statement shows a higher GBP total, this is most likely due to the exchange-rate used for card payments (the rate applied at the time the transaction is processed can differ from what you see at the shop).\n\nAre you asking why the exchange rate looks wrong, or would you like to check whether any additional charges were applied to the same transaction?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:20.694352",
+      "sim_prompt_tokens": 763,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 1023,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

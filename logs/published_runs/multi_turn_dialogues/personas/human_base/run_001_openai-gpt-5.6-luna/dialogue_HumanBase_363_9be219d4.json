@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "9be219d4-9e5f-4f60-b14a-34edd1e6b536",
+  "seed": 42,
+  "dialogue_index": 363,
+  "timestamp": "2026-08-19T15:38:54.652655",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2557,
+  "total_sim_completion_tokens": 553,
+  "total_bot_prompt_tokens": 4328,
+  "total_bot_completion_tokens": 776,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer didn't go through.",
+      "assistant_response": "Sorry about that—was the transfer marked as failed/returned, or is it still pending/not completed yet? Also, is this a bank transfer you made from the app or an incoming transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.76
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:42.545983",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says it was returned, and I sent it from the app.",
+      "assistant_response": "Thanks—if the transfer was marked as “returned,” it typically means it didn’t go through successfully after being sent from the app. Do you know the reason shown in the app (for example, rejected by bank/beneficiary details/insufficient details), or can you tell me the status message you see?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:45.617277",
+      "sim_prompt_tokens": 484,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 753,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “beneficiary details invalid.”",
+      "assistant_response": "Got it—“beneficiary details invalid” usually means the recipient details (like name, bank account/IBAN, or routing) don’t match what the transfer requires.\n\nTo point you to the right fix: is the transfer’s status showing as **failed** or **returned** only, and do you still have the ability to **edit/cancel** it in the app? If you can, please paste the exact error text you see.",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.28
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.27
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:48.224782",
+      "sim_prompt_tokens": 571,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 835,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s shown as returned only, and I can’t edit or cancel it. The error text says “Beneficiary details invalid.”",
+      "assistant_response": "Thanks—since it’s marked as **returned** and the reason is **“Beneficiary details invalid,”** the transfer failed because the recipient information doesn’t pass validation (e.g., name/IBAN/routing). \n\nBecause you can’t edit or cancel it, the next step is usually to **create a new transfer with corrected beneficiary details**. If you share the country and whether you’re using an **IBAN/bank account** or other identifier for the recipient, I can tell you exactly what to double-check.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.77
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.14
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:51.117780",
+      "sim_prompt_tokens": 680,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 961,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s a Euro transfer and I used the IBAN.",
+      "assistant_response": "Thanks—Euro transfer with IBAN and the status “returned” with “Beneficiary details invalid” means the recipient IBAN (or the related beneficiary details) failed the bank’s validation.\n\nCan you confirm: does the app show the transfer as **returned only** (not pending/failed), and are you able to **view the entered IBAN** in the transfer details screen? If yes, please check that the IBAN is typed exactly (no spaces/typos) and matches the beneficiary name/country format; then you’ll need to submit a **new transfer** using corrected details since you can’t edit/cancel this one.",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.48
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.31
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-19T15:38:54.652616",
+      "sim_prompt_tokens": 822,
+      "sim_completion_tokens": 105,
+      "bot_prompt_tokens": 1089,
+      "bot_completion_tokens": 185
+    }
+  ]
+}

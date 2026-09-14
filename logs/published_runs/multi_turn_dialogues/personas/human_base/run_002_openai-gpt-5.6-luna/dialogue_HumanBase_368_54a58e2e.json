@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "54a58e2e-d8fc-4dbd-820e-16a51a1150ce",
+  "seed": 42,
+  "dialogue_index": 368,
+  "timestamp": "2026-08-21T13:09:30.074527",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1216,
+  "total_sim_completion_tokens": 248,
+  "total_bot_prompt_tokens": 3578,
+  "total_bot_completion_tokens": 423,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Please help me make a transfer. I keep receiving an error and I'm trying to make the initial mortgage payment for a flat I'm buying. What is the deal here?",
+      "assistant_response": "I can help—when you say you “keep receiving an error” making the transfer, is the transfer being marked as **failed** or **declined** (rejected)? Also, what exact error message do you see (wording or a screenshot text is fine)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:25.324087",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1102,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows “Transfer failed: something went wrong” – the same message every time I try.",
+      "assistant_response": "Got it—“Transfer failed: something went wrong” usually points to a **failed transfer** on the payment flow.\n\nTo pinpoint it, can you tell me: (1) are you sending to a **bank account (IBAN)** or to another **Revolut user**, and (2) does the transfer show as **failed immediately** or **pending then fails**?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:27.646833",
+      "sim_prompt_tokens": 555,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 1186,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm sending it to a bank account (IBAN) and it fails right away.",
+      "assistant_response": "Thanks—if the transfer to an IBAN fails right away with “Transfer failed: something went wrong,” the closest match is a **failed transfer**.\n\nBefore I guide you, can you check one more thing: is the destination bank account **in your own name** (or at least in the same legal name as your profile), and are you entering a **valid IBAN** with no extra spaces or characters?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:30.074421",
+      "sim_prompt_tokens": 661,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 1290,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

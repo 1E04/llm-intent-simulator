@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "52f1f64c-1750-4253-82e5-6ff2f8b99007",
+  "seed": 42,
+  "dialogue_index": 180,
+  "timestamp": "2026-08-19T15:26:32.105075",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 561,
+  "total_sim_completion_tokens": 152,
+  "total_bot_prompt_tokens": 1521,
+  "total_bot_completion_tokens": 336,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm concerned about a payment that has recently been made on my card.  I do not recognize the name that the transaction went to, can you help me?",
+      "assistant_response": "I can help with that. Is this transaction showing as a card payment you don’t recognize (made successfully), or is it still pending? If you tell me whether it’s pending or completed, and the merchant name/reference or the amount, I’ll guide you on the next steps.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.13
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:29.533008",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a completed payment, about $45.67, and the merchant name shows as “ABC Store.”",
+      "assistant_response": "Thanks—since it’s a completed card payment and you don’t recognize it, I can help you check it and take the right next steps. \n\nFirst, can you confirm whether the payment was definitely yours (e.g., you made any similar purchase with “ABC Store” around that date), or is it completely unfamiliar? If you’re certain it’s not yours, I’ll advise what to do immediately to protect your account.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:32.104973",
+      "sim_prompt_tokens": 561,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 805,
+      "bot_completion_tokens": 183
+    }
+  ]
+}

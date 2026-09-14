@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "c929fbab-7dd0-46b7-8bf9-1f89c48569d6",
+  "seed": 42,
+  "dialogue_index": 659,
+  "timestamp": "2026-08-19T16:01:35.676329",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2388,
+  "total_sim_completion_tokens": 576,
+  "total_bot_prompt_tokens": 4105,
+  "total_bot_completion_tokens": 669,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How can I fund my top-up account using my bank account?",
+      "assistant_response": "Do you want to fund your account by making a bank transfer (to your account details), or by using a card top up from your bank account? If you tell me which one, I can guide you step by step.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_by_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:22.945349",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’d like to do a bank transfer.",
+      "assistant_response": "Sure—I'll help you top up via bank transfer. What country are you in, and are you making a local transfer or an international transfer (SWIFT)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:25.434315",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm in the UK and it's a local transfer.",
+      "assistant_response": "Thanks—since you’re doing a local UK bank transfer to top up, do you mean you’re trying to (1) send money to your account now, or (2) check why it’s not credited/pending yet?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:30.555697",
+      "sim_prompt_tokens": 558,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 813,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I’m trying to send the money now.",
+      "assistant_response": "Got it—you’re sending money now via a local UK bank transfer. Are you trying to top up to your Revolut account using your **personal bank transfer details** (sort code + account number/IBAN), or are you sending to a **business/other beneficiary**?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:32.908749",
+      "sim_prompt_tokens": 624,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 878,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I’m using my personal bank transfer details to top up.",
+      "assistant_response": "Great—if you’re using your personal bank transfer details (sort code + account number/IBAN) to top up, you’ll typically: (1) start a **bank transfer** from your UK bank, (2) enter the **beneficiary details shown in the app** for your account, (3) add the **transfer/reference** exactly as shown in the app (important), and (4) submit the transfer.\n\nTo guide you precisely, when you open the app, do you see a **“Bank transfer”** top up option with **UK sort code + account number** (GBP local details) or **an IBAN**?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.74
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:35.676168",
+      "sim_prompt_tokens": 699,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 956,
+      "bot_completion_tokens": 192
+    }
+  ]
+}

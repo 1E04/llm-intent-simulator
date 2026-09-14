@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "3b4dfefd-3fbe-4f07-a1b6-3d17d21f7d34",
+  "seed": 42,
+  "dialogue_index": 582,
+  "timestamp": "2026-08-21T13:23:58.540306",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_cash_or_cheque",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1102,
+  "total_sim_completion_tokens": 321,
+  "total_bot_prompt_tokens": 3462,
+  "total_bot_completion_tokens": 425,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What type of deposits do you accept into my account?",
+      "assistant_response": "Sure—what kind of deposit are you asking about: bank transfer, card top up, or cash/cheque deposits? (And which currency/country are you using, if you know.)",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.34
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:23:53.364757",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm looking at the cash/cheque option, and I'm based in the UK.",
+      "assistant_response": "Thanks—since you mean **cash/cheque** deposits in the **UK**, I can help with that. Just to confirm: are you asking **what cash/cheque deposit types are supported** (e.g., cheque vs cash), or you want to **understand limits/fees** for cash/cheque deposits?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.78
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.14
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:23:56.286356",
+      "sim_prompt_tokens": 504,
+      "sim_completion_tokens": 190,
+      "bot_prompt_tokens": 1146,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I want to know which cash or cheque deposit types are supported.",
+      "assistant_response": "Got it. For **cash/cheque deposits (UK)**, we can support **cheque deposits** and **cash deposits** where available. \nCan you tell me which one you want to deposit—**cash** or a **cheque**—so I can list the exact supported deposit types and any requirements?",
+      "predicted_intent": "top_up_by_cash_or_cheque",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_cash_or_cheque",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.09
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:23:58.540199",
+      "sim_prompt_tokens": 598,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 1236,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

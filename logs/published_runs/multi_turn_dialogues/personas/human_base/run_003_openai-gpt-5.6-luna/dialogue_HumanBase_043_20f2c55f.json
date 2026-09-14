@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "20f2c55f-0a18-4e5e-aa07-ce7425a88e58",
+  "seed": 42,
+  "dialogue_index": 43,
+  "timestamp": "2026-08-21T15:38:00.201688",
+  "persona": "HumanBase",
+  "target_intent": "atm_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1130,
+  "total_sim_completion_tokens": 336,
+  "total_bot_prompt_tokens": 2264,
+  "total_bot_completion_tokens": 374,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Is there any nearby ATM's?",
+      "assistant_response": "Sure—are you looking for ATMs that accept your card, and what city or postcode are you in (or your current location) so I can suggest the nearest options?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.19
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:54.338072",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in Manchester, M1 2AB.",
+      "assistant_response": "Thanks—before I help, do you want ATMs that are compatible with your card (so you can withdraw cash), or are you asking for support because an ATM transaction failed? If it’s for compatibility, also confirm whether you’ll be withdrawing with your physical card or Apple Pay/Google Pay.",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.78
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.12
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:57.146847",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Just need ATMs that work with my physical card.",
+      "assistant_response": "Great—ATMs that work with your physical card depend on the network your card supports (e.g., Visa or Mastercard). I can help more precisely, but I don’t have live nearby ATM locations. Which network is on your card (Visa or Mastercard), and do you want ATMs that accept contactless withdrawals or standard chip-and-PIN?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.86
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.11
+        },
+        {
+          "intent": "visa_or_mastercard",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:00.201564",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 212,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

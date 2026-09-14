@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "e324d01c-6b95-4c79-8a9b-c1a79fb98dce",
+  "seed": 42,
+  "dialogue_index": 495,
+  "timestamp": "2026-08-19T15:48:03.121867",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1134,
+  "total_sim_completion_tokens": 292,
+  "total_bot_prompt_tokens": 2356,
+  "total_bot_completion_tokens": 393,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a transfer 12 hours ago. Why is it still listed as pending?",
+      "assistant_response": "Sorry about that—transfers can sometimes stay pending for a short time depending on the type and bank processing. Could you tell me: is this an international transfer or a domestic one, and was it sent via bank transfer from your bank or through our app?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.19
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:57.677402",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a domestic transfer and I sent it through the app.",
+      "assistant_response": "Thanks—since it’s a domestic app transfer and it’s been about 12 hours, it’s likely still within the normal processing window. Can you confirm whether the transfer was sent as a bank transfer (to a bank account) or is it a transfer between accounts in the app? Also, does it show any error message, or only “pending”?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:00.648420",
+      "sim_prompt_tokens": 520,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a bank transfer to an external account, and it just shows “pending” – no error message.",
+      "assistant_response": "Thanks—if it’s a domestic bank transfer to an external account sent via the app and it’s only been ~12 hours with just “pending” and no error, that’s usually within the normal processing time. Please allow a bit more time and check again soon; if it’s still pending after 24 hours, tell me and we’ll look into it further.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:03.121808",
+      "sim_prompt_tokens": 614,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 879,
+      "bot_completion_tokens": 127
+    }
+  ]
+}

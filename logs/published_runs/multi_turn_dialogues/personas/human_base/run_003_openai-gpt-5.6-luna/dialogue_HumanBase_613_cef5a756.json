@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cef5a756-c9ad-4d80-b75a-f4c833af368a",
+  "seed": 42,
+  "dialogue_index": 613,
+  "timestamp": "2026-08-21T15:48:30.385798",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 609,
+  "total_sim_completion_tokens": 335,
+  "total_bot_prompt_tokens": 1483,
+  "total_bot_completion_tokens": 301,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I think my top-up was cancelled.",
+      "assistant_response": "I’m sorry about that—when you say it was cancelled, do you mean the top-up shows as “reverted/cancelled” and the funds were returned, or does it show as “failed” or still “pending”? If you tell me the status and the top-up method (card/bank transfer/cash), I’ll guide you to the right next step.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.23
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:26.145781",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as reverted and the money’s back on my card.",
+      "assistant_response": "Got it—if the top-up is showing as **reverted** and the money is back on your card, that means the top-up didn’t complete and the funds were returned.\n\nTo help prevent it happening again, can you confirm the top-up method (card top-up or bank transfer) and whether there’s an error message/code shown next to the reverted top-up?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.93
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.52
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:30.385730",
+      "sim_prompt_tokens": 609,
+      "sim_completion_tokens": 335,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

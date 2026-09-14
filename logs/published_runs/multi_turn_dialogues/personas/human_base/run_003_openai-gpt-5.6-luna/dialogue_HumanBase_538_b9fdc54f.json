@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b9fdc54f-55a2-4b2d-a8c9-21854563d74a",
+  "seed": 42,
+  "dialogue_index": 538,
+  "timestamp": "2026-08-21T15:47:09.321789",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 637,
+  "total_sim_completion_tokens": 270,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 326,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What is the reason that my card payment was cancelled?",
+      "assistant_response": "I can help—when you say “cancelled,” was the payment marked as **declined** at the time, or did it later **revert/void** after showing as completed? If you tell me which one it shows in your transaction history (declined vs reverted), I’ll narrow down the reason.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.19
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:05.231193",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as reverted – it went through first and then disappeared.",
+      "assistant_response": "Got it—if a card payment shows as **reverted** (it completed, then disappeared), it usually means the merchant’s authorization was later reversed or the transaction was cancelled by the merchant/acquirer. \n\nCan you tell me the merchant name and the date/time of the transaction (and whether the amount is back in your available balance)?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:09.321732",
+      "sim_prompt_tokens": 637,
+      "sim_completion_tokens": 270,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 166
+    }
+  ]
+}

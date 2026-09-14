@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "7c3abe72-16d2-4cf5-87ec-a000a18d0dd0",
+  "seed": 42,
+  "dialogue_index": 600,
+  "timestamp": "2026-08-21T15:48:24.540269",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1312,
+  "total_sim_completion_tokens": 263,
+  "total_bot_prompt_tokens": 2380,
+  "total_bot_completion_tokens": 484,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "can you check why I wasn't able to top up?",
+      "assistant_response": "Sure—was your top up declined at the time (e.g., “failed/declined”), or did it show as pending and then not complete? If you tell me which top up method you used (card, bank transfer, or cash/cheque) and the approximate error message, I can narrow it down.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.55
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.3
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:19.312292",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it was a card top‑up, it got declined and showed a message like “transaction could not be completed”.",
+      "assistant_response": "Thanks—since it was a card top-up and it was declined with “transaction could not be completed,” it sounds like your card top-up failed. Can you tell me whether the app shows it as “failed/declined” immediately, or did it change to “pending” first? Also, did you try with the same card twice or a different one?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:22.083940",
+      "sim_prompt_tokens": 603,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 793,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It showed as declined right away and I only tried it once with that card.",
+      "assistant_response": "Got it—card top-up declined immediately (“transaction could not be completed”). This is typically a card-decline on the top up. A few quick checks: was the card being used normally (not expired/locked), and does the app show any more detail or reason code? Also, are you topping up the same currency/amount and did you try again with another card or only this one? If you share the exact decline reason shown in the app, I’ll guide you to the next step.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.87
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:24.540220",
+      "sim_prompt_tokens": 709,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 892,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

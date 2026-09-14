@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cf27c888-d511-4090-b637-e447424d7664",
+  "seed": 42,
+  "dialogue_index": 178,
+  "timestamp": "2026-08-21T12:57:06.397528",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 506,
+  "total_sim_completion_tokens": 209,
+  "total_bot_prompt_tokens": 2234,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a strange payment in my statement",
+      "assistant_response": "Sorry about that—can you tell me if the strange item is (1) an extra/duplicate card charge, or (2) a transaction you don’t recognize at all? If you can, also share the merchant name and the exact amount.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.45
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.3
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:03.454961",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a transaction I don’t recognize – a £12.45 charge from Sunny Bistro.",
+      "assistant_response": "Thanks—since you don’t recognize a £12.45 charge from Sunny Bistro, this sounds like an unrecognized card payment. I can help you with the next steps—was this charge marked as “Completed” or “Pending” on your statement/app?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:06.397437",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 209,
+      "bot_prompt_tokens": 1157,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

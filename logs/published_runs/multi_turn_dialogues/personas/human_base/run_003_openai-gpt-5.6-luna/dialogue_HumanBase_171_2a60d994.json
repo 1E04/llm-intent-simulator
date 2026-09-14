@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2a60d994-856f-4683-8b06-3c3b306444d6",
+  "seed": 42,
+  "dialogue_index": 171,
+  "timestamp": "2026-08-21T15:40:26.901137",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 612,
+  "total_sim_completion_tokens": 123,
+  "total_bot_prompt_tokens": 1450,
+  "total_bot_completion_tokens": 239,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a payment I didn't do",
+      "assistant_response": "I’m sorry about that—was this payment made by your card (or contactless) and you don’t recognize the merchant, or did you see it on your statement as something you believe should be a bank transfer?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:24.509393",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card charge—I don’t recognize the merchant at all.",
+      "assistant_response": "Thanks for confirming. This is a card payment you don’t recognize—I'll help you report it. Can you tell me whether you can see the charge as “pending” or “completed”?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:26.901026",
+      "sim_prompt_tokens": 612,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 759,
+      "bot_completion_tokens": 99
+    }
+  ]
+}

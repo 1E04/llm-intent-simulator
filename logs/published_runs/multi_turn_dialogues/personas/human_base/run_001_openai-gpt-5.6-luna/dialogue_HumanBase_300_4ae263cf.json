@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "4ae263cf-6754-4bb6-82c9-0b937e3b81b0",
+  "seed": 42,
+  "dialogue_index": 300,
+  "timestamp": "2026-08-19T15:33:58.254308",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 527,
+  "total_sim_completion_tokens": 128,
+  "total_bot_prompt_tokens": 1480,
+  "total_bot_completion_tokens": 325,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was my account deducted from a seller when I didn't approve of it?",
+      "assistant_response": "I’m sorry this happened. To help me pinpoint why you were deducted, can you confirm what type of transaction it was: a card payment, a direct debit, or a bank transfer? Also, do you see it as completed or pending in your app/statement?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.34
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.3
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.26
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:55.327712",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a direct‑debit type transaction and it shows as completed in the app.",
+      "assistant_response": "Thanks—if it’s a completed direct debit you didn’t recognize, it’s usually one of two things: the merchant had authorization you weren’t aware of, or the payment is genuinely unrecognized. \n\nCan you tell me the merchant name/reference shown in the app for that direct debit? Also, do you want to request a refund for this specific payment?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:58.254214",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 171
+    }
+  ]
+}

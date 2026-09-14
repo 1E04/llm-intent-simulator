@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "df8dc764-65ef-4ba2-baa9-8bf7c335f8dc",
+  "seed": 42,
+  "dialogue_index": 348,
+  "timestamp": "2026-08-19T15:37:09.679854",
+  "persona": "HumanBase",
+  "target_intent": "exchange_via_app",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1772,
+  "total_sim_completion_tokens": 472,
+  "total_bot_prompt_tokens": 3254,
+  "total_bot_completion_tokens": 519,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I might need AUD instead of GBP, how to change?",
+      "assistant_response": "Sure—do you want to (1) change the currency you hold in your account (add/balance in AUD instead of GBP), or (2) exchange an existing GBP balance into AUD? Also, are you looking to do it in the app or for card/transactions?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.58
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.22
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:01.574565",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I want to exchange my GBP balance to AUD, using the app.",
+      "assistant_response": "Got it—you want to exchange your existing GBP balance to AUD in the app. Are you asking about the exchange rate, the fees/charges for exchanging, or whether AUD is supported in the app?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.34
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:04.004388",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 94
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m mainly interested in the fees and charges for the exchange.",
+      "assistant_response": "To exchange GBP to AUD in-app, fees usually come from the exchange markup/any exchange charge applied to the rate. Can you tell me whether you’re exchanging for card spending or just converting your balances in the app? Also, do you want the exact fees shown in-app for your specific amount (so I can guide you where to view it)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.76
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.16
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:06.696100",
+      "sim_prompt_tokens": 581,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 839,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Just converting the balance, and yes—could you show me the exact fees for, say, £1,000?",
+      "assistant_response": "To convert £1,000 GBP to AUD in the app, the exact fee will show as part of the exchange offer (exchange markup/any exchange charge) on the confirmation screen.\n\nCan you confirm you’re doing this under **Balances → Exchange (GBP→AUD)**? If you tell me what **exchange rate** and/or **total AUD you’re quoted for £1,000** on that screen, I can help you identify the precise fee/charge applied.",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.65
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:09.679742",
+      "sim_prompt_tokens": 674,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 943,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

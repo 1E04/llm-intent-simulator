@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "9c4a5591-3050-422d-821e-27c5a1085181",
+  "seed": 42,
+  "dialogue_index": 63,
+  "timestamp": "2026-08-21T12:49:02.495536",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1064,
+  "total_sim_completion_tokens": 189,
+  "total_bot_prompt_tokens": 3436,
+  "total_bot_completion_tokens": 397,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a transfer and am still waiting.",
+      "assistant_response": "Thanks—are you seeing the transfer status as **pending** in the app, or has it already gone **completed** but the recipient still hasn’t received it?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.55
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.35
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:48:58.001808",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 90
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed, but the money still hasn’t arrived.",
+      "assistant_response": "Got it—if the transfer shows **completed** but the recipient hasn’t received the funds, this is usually a **transfer not received by recipient** case. Can you tell me when you sent it (date/time) and the transfer method (bank transfer/SEPA/international)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.84
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:00.441656",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1134,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I sent it on April 12th around 3 PM, using a standard SEPA bank transfer.",
+      "assistant_response": "Thanks—since it’s marked **completed** but the recipient still hasn’t received it, I’ll help you with **Transfer not received by recipient**. For a standard SEPA bank transfer sent on **April 12 (~3 PM)**, it can sometimes take a bit depending on the recipient bank—can you confirm whether the transfer is to a **SEPA country within the EU/EEA** and whether you’re able to see a **tracking/confirmation reference** in the app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:02.495453",
+      "sim_prompt_tokens": 572,
+      "sim_completion_tokens": 68,
+      "bot_prompt_tokens": 1224,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

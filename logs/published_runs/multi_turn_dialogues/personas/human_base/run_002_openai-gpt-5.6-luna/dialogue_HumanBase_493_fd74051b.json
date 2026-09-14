@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "fd74051b-aefe-4907-8f8e-51ef049cf619",
+  "seed": 42,
+  "dialogue_index": 493,
+  "timestamp": "2026-08-21T13:17:17.741996",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 496,
+  "total_sim_completion_tokens": 91,
+  "total_bot_prompt_tokens": 2222,
+  "total_bot_completion_tokens": 254,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long can an EU transfer take?",
+      "assistant_response": "EU transfers typically take up to a few business days, depending on whether it’s a standard SEPA transfer or a bank holiday/weekend. Can you tell me whether it’s a SEPA transfer and when you made the transfer?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.7
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.15
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:17:15.806858",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a SEPA transfer—I sent it on Monday.",
+      "assistant_response": "For a SEPA transfer sent on Monday, it usually arrives within 1–2 business days (so typically by Wednesday at the latest). If you don’t see it by then, tell me whether you’re checking the money in your recipient’s bank account or in your Revolut balance.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.93
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.34
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:17:17.741837",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 1145,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

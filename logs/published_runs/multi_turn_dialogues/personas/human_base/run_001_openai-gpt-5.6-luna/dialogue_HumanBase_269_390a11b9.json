@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "390a11b9-28a7-41c5-95f9-402432b3fa0d",
+  "seed": 42,
+  "dialogue_index": 269,
+  "timestamp": "2026-08-19T15:31:16.132315",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 516,
+  "total_sim_completion_tokens": 125,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 283,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm really stuck. I don't know why but my card payment has not gone through.",
+      "assistant_response": "Sorry you’re stuck—when you say the card payment hasn’t gone through, do you see it as **declined** (rejected at checkout), **pending** in your app, or does it not appear at all?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:31:13.710498",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was rejected right at checkout.",
+      "assistant_response": "Got it — if the card payment was rejected right at checkout, it sounds like a **declined card payment**. I can help troubleshoot: was the reason code/message shown (e.g., “insufficient funds”, “try again later”, or “payment declined”)? Also, is the payment made in the same country as your card is issued and is the card currently working for other purchases?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:31:16.132198",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "dialogue_id": "b2a0e1d4-dec9-483a-8a12-2c50b5957dcd",
+  "seed": 42,
+  "dialogue_index": 39,
+  "timestamp": "2026-09-05T22:14:50.010868",
+  "persona": "Chatterbox",
+  "target_intent": "motorcycle",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "status": "COMPLETED",
+  "predicted_intent": "out_of_domain",
+  "intent_cluster": [
+    "out_of_domain"
+  ],
+  "total_sim_prompt_tokens": 405,
+  "total_sim_completion_tokens": 330,
+  "total_bot_prompt_tokens": 871,
+  "total_bot_completion_tokens": 119,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just got back from a breezy ride on my motorcycle along the seaside, and the wind was amazing!",
+      "assistant_response": "Thanks for sharing—but I can only help with banking inquiries (like card issues, transfers, or refunds). What banking question can I help you with?",
+      "predicted_intent": "out_of_domain",
+      "top_3_intents": [
+        {
+          "intent": "out_of_domain",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.05
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-09-05T22:14:50.010786",
+      "sim_prompt_tokens": 405,
+      "sim_completion_tokens": 330,
+      "bot_prompt_tokens": 871,
+      "bot_completion_tokens": 119,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human caller who has connected to a voice bot, but you have NO intention of talking about banking or finance.\n\nYOUR ASSIGNED TOPIC KEYWORD: motorcycle\nYOUR PERSONA: Chatterbox (You are extremely chatty but completely off-topic. You MUST NOT talk about banking, finance, cards, or accounts under any circumstances. Instead, talk about completely unrelated topics like your dog, baking a cake, the weather, hobbies, or a recent trip.)\n\nCRITICAL CONVERSATIONAL RULES:\n1. OUT OF BOUNDARY (CRITICAL NEGATIVE PROMPT):\n   - Under NO CIRCUMSTANCES should you talk about banking, money, cards, transactions, accounts, or finance.\n   - Deliberately ignore any banking-related questions the bot asks and steer the conversation back to your assigned topic: 'motorcycle'.\n   - Invent your own realistic, concrete scenario around this topic word and chat naturally.\n\n2. FORBIDDEN TOPICS:\n   - NEVER use banking keywords, financial terms, or technical intent labels.\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Chatterbox.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max)."
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nThe call has connected to the bot. Start talking about your scenario around 'motorcycle' now.\nKeep utterances short, realistic, and conversational (1-2 spoken sentences max).\nStart your response with a <thought> block explaining what off-topic topic you will talk about, then generate ONLY the customer's spoken reply outside the block."
+        }
+      ],
+      "sim_thought_process": "I'll talk about a recent motorcycle ride I took along the coast, mentioning the wind, the scenery, and maybe my dog riding with me."
+    }
+  ]
+}

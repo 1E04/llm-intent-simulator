@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "c3ba3893-50f8-4fa6-bfdf-a0a1908d5ad0",
+  "seed": 42,
+  "dialogue_index": 285,
+  "timestamp": "2026-08-21T15:42:13.411616",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2020,
+  "total_sim_completion_tokens": 447,
+  "total_bot_prompt_tokens": 3317,
+  "total_bot_completion_tokens": 544,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfers are being declined. IT has always worked for me but now it's declining my card. I've tried several times.",
+      "assistant_response": "Sorry about that—just to confirm, are you seeing the decline when you make a bank transfer, or when you try to pay using your card? If you can, tell me the exact message (or error code) you get.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:05.052227",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows “Transfer declined – please try again later” every time I try.",
+      "assistant_response": "Thanks—if you’re seeing “Transfer declined – please try again later,” that usually means the transfer is being rejected rather than just delayed. I can help narrow it down: is this a bank transfer you’re making to someone else (outgoing), or are you expecting a transfer to be received into your account?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.83
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:08.021190",
+      "sim_prompt_tokens": 587,
+      "sim_completion_tokens": 200,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s an outgoing transfer—I’m trying to send money to someone else.",
+      "assistant_response": "Got it—an outgoing transfer being rejected with “Transfer declined.” To help me pinpoint the cause: are you trying to make the transfer right now from the app, and is it a bank transfer to a beneficiary (IBAN/account details), not a card payment or top up?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:10.872886",
+      "sim_prompt_tokens": 676,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 869,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, I’m doing it right now in the app and it’s a bank transfer to a beneficiary’s IBAN.",
+      "assistant_response": "Understood—your outgoing bank transfer to a beneficiary IBAN is being declined. This is different from a pending delay, since the app shows it as declined. \n\nTo help resolve it, I need one quick check: are you getting this decline immediately when you submit the transfer, or does it sit briefly as pending before being declined? If you can, also share the transfer reference (or any exact wording you see after “please try again later”).",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:13.411495",
+      "sim_prompt_tokens": 757,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 959,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

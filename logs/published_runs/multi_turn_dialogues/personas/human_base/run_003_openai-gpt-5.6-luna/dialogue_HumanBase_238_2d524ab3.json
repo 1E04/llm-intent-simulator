@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "2d524ab3-2ac7-47f8-926c-058de16ae321",
+  "seed": 42,
+  "dialogue_index": 238,
+  "timestamp": "2026-08-21T15:41:30.517805",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2133,
+  "total_sim_completion_tokens": 308,
+  "total_bot_prompt_tokens": 3273,
+  "total_bot_completion_tokens": 565,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card was used without my permission.",
+      "assistant_response": "I’m sorry this happened. Can you confirm whether you’ve noticed any card payments in the app that you don’t recognize, or is the card itself missing/lost? Either way, we’ll help you secure your account and investigate the transactions.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.76
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:23.974925",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’ve seen a few payments I didn’t make, but the card is still in my wallet.",
+      "assistant_response": "Thanks for clarifying. If the card is in your wallet but there are payments you didn’t make, it likely means your card has been compromised. I recommend you immediately lock the card in the app, then we’ll help you report the unrecognized payments for investigation and possible chargeback/refund. Can you tell me whether these are showing as completed or pending payments?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:26.684713",
+      "sim_prompt_tokens": 616,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 171
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "They’re all showing as completed.",
+      "assistant_response": "I’m very sorry—if the card is still with you but there are completed payments you didn’t make, this strongly indicates your card has been compromised. Please lock your card in the app right now, and tell me: are these payments showing as “completed” within the last 7 days?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:28.588413",
+      "sim_prompt_tokens": 720,
+      "sim_completion_tokens": 89,
+      "bot_prompt_tokens": 862,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, they’re all from the past few days, within the last week.",
+      "assistant_response": "Thanks—completed payments within the last week usually means your card has been compromised. Please lock your card immediately in the app, then I can help you report the unrecognized transactions for investigation and a refund/chargeback where applicable. Do you want to dispute all the recent payments, or just specific ones (and can you tell me how many)?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.91
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:30.517697",
+      "sim_prompt_tokens": 797,
+      "sim_completion_tokens": 80,
+      "bot_prompt_tokens": 948,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

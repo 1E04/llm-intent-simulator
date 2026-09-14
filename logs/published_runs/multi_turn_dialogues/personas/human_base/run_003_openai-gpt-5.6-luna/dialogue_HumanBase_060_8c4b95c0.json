@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8c4b95c0-b628-4583-9d2f-aa4e6726232a",
+  "seed": 42,
+  "dialogue_index": 60,
+  "timestamp": "2026-08-21T15:38:10.945627",
+  "persona": "HumanBase",
+  "target_intent": "automatic_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 591,
+  "total_sim_completion_tokens": 279,
+  "total_bot_prompt_tokens": 1471,
+  "total_bot_completion_tokens": 258,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Is there a top-up feature, if there isn't a lot of money left?",
+      "assistant_response": "Do you mean a setting that automatically tops up your card when your balance gets low (automatic top up), or are you asking about the limits on how much you can top up when you don’t have much left?",
+      "predicted_intent": "top_up_limits",
+      "top_3_intents": [
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.62
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.24
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:07.091670",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, I’m looking for the feature that adds money automatically when my balance gets low.",
+      "assistant_response": "Yes—what you’re looking for is **Automatic top up**. It can add money to your card when your balance falls below a set amount. \n\nWould you like help **turning it on** (and choosing the low-balance threshold and top-up amount), or are you checking whether your account/card supports it?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.93
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:10.945506",
+      "sim_prompt_tokens": 591,
+      "sim_completion_tokens": 279,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

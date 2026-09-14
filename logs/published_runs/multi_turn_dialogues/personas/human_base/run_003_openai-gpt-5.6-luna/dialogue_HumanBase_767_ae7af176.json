@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ae7af176-a72b-4c53-82df-f3cd68181549",
+  "seed": 42,
+  "dialogue_index": 767,
+  "timestamp": "2026-08-21T15:51:40.552361",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 643,
+  "total_sim_completion_tokens": 183,
+  "total_bot_prompt_tokens": 1561,
+  "total_bot_completion_tokens": 381,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello. I'm on holiday and didn't bring any cash with me. I need to withdrawal my home currency from one of your machines. Do you have any that will do this and is there a charge?",
+      "assistant_response": "Sure—I can help. Do you mean: (1) whether ATMs in the country you’re in support withdrawals in your home currency, or (2) which currency the specific ATM will dispense? Also, which country/city are you in (or the ATM name) so I can tell you if it supports your home currency and what fees may apply?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.79
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:37.246292",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 724,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in Barcelona, Spain. I just need to know if I can get euros from the ATM in my home currency (USD) and what fees apply.",
+      "assistant_response": "Yes—when you withdraw at an ATM in Spain (euros), you’ll get EUR dispensed. If you choose the “withdrawal in your home currency (USD)” option, the ATM may offer Dynamic Currency Conversion, which typically uses an exchange rate set by the network and can be more expensive. Our likely fees are a cash withdrawal charge plus any exchange markup; exact amounts depend on the ATM and your plan. \n\nTo confirm precisely, what ATM/network are you using (or its name), and do you see a prompt like “DCC / charge in USD” on the screen?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.72
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.61
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:40.552314",
+      "sim_prompt_tokens": 643,
+      "sim_completion_tokens": 183,
+      "bot_prompt_tokens": 837,
+      "bot_completion_tokens": 212
+    }
+  ]
+}

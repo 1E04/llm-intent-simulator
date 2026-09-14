@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "e17ec5fb-c7f7-4e6e-a340-e67e77714d11",
+  "seed": 42,
+  "dialogue_index": 62,
+  "timestamp": "2026-08-19T15:17:05.506733",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2489,
+  "total_sim_completion_tokens": 449,
+  "total_bot_prompt_tokens": 4195,
+  "total_bot_completion_tokens": 668,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why is my balance the same?  I processed a transfer.",
+      "assistant_response": "Sorry about that—when you say your balance is the same after processing a transfer, do you mean you made a bank transfer to your account, or you sent a transfer out to someone else? Also, how long ago did you make it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:55.675124",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I sent it out to someone else, about an hour ago.",
+      "assistant_response": "Thanks—since you sent the transfer out about an hour ago, your balance may not update immediately. Can you confirm whether it’s showing as “pending” in the app, or is it already marked “completed”?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:58.232411",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still showing as pending, not completed.",
+      "assistant_response": "Got it—if the transfer you sent is still showing as pending about an hour later, it’s usually a timing delay. Can you tell me whether the recipient is another bank/account (external transfer) or another Revolut user—and which country/currency is it in?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.17
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:01.100626",
+      "sim_prompt_tokens": 582,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 832,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s an external transfer to a UK bank, in GBP.",
+      "assistant_response": "Thanks—an external GBP transfer to a UK bank that’s still “pending” about an hour later is typically a timing issue. Before we troubleshoot further: is the transfer showing any estimated completion time or a status like “in progress/pending (outgoing)” in the app?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.74
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:03.356384",
+      "sim_prompt_tokens": 656,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 909,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just says pending—no estimated time or extra status shown.",
+      "assistant_response": "Thanks—an external transfer to a UK bank in GBP that’s still showing only “pending” after about an hour is most likely just a timing delay. Could you please check whether the transfer is marked as outgoing/pending (i.e., debited from your available balance but not yet completed), or is it not showing any deduction yet? That will tell me which side of the transfer is waiting.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.76
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:05.506633",
+      "sim_prompt_tokens": 735,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 988,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

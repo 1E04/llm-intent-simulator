@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1e7ec24d-d433-4073-a7e3-66a65dadec7c",
+  "seed": 42,
+  "dialogue_index": 231,
+  "timestamp": "2026-08-21T15:41:17.948890",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 653,
+  "total_sim_completion_tokens": 125,
+  "total_bot_prompt_tokens": 1497,
+  "total_bot_completion_tokens": 307,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I don't recognize some of the transactions on my card, I think someone must have gotten my card info and used it.",
+      "assistant_response": "I’m sorry this happened. To help me guide you correctly—are those unrecognized transactions card payments you don’t recognize, and do you still have the card with you? If yes, we’ll focus on securing a potentially compromised card and disputing the specific payments.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.21
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:15.481717",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 708,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, they're card payments I didn't make and I still have the card with me.",
+      "assistant_response": "Thanks for confirming. Since you still have the card but there are card payments you didn’t make, it sounds like your card details may be compromised. I can help you secure it—shall we start by marking the card as compromised and stopping further card transactions, and then dispute those specific payments?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:17.948792",
+      "sim_prompt_tokens": 653,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 789,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

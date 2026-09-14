@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "a6caf085-cbe1-4f06-a29d-93d3105c9324",
+  "seed": 42,
+  "dialogue_index": 212,
+  "timestamp": "2026-08-21T15:41:09.028219",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2912,
+  "total_sim_completion_tokens": 507,
+  "total_bot_prompt_tokens": 4389,
+  "total_bot_completion_tokens": 777,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is a suspicious cash withdraw on the account.",
+      "assistant_response": "I’m sorry about that—was this cash withdrawal made with your card/ATM, and do you recognize the ATM location/date on the transaction? If you can, tell me the amount and the date so I can help you investigate.",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.17
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:58.405879",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was $200 on March 12th at the Main Street ATM.",
+      "assistant_response": "Thanks for the details. A $200 withdrawal on March 12th at the Main Street ATM that you don’t recognize sounds like it may be an unauthorized cash withdrawal. Can you confirm whether you were in possession of your card at that time (and whether you’ve noticed any suspicious card activity or changes to your passcode)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.18
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:01.085712",
+      "sim_prompt_tokens": 574,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 767,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I didn’t have my card with me then, and I haven’t noticed any other strange activity or changed my passcode.",
+      "assistant_response": "Thanks—since you didn’t have your card at the time and you don’t recognize the $200 cash withdrawal from the Main Street ATM on March 12th, this most likely needs an unauthorized cash withdrawal investigation. \n\nFirst, can you confirm whether the withdrawal shows as completed/posted (not pending) and what the last 4 digits of the card shown on the transaction are (if listed)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.33
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.31
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.28
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:03.899321",
+      "sim_prompt_tokens": 665,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 867,
+      "bot_completion_tokens": 183
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s shown as completed, and the last four digits listed are 1234.",
+      "assistant_response": "I can see why you’re concerned. Since the $200 withdrawal on March 12th is marked **completed** and you didn’t have your card with you, we should treat this as an unrecognized/unauthorized cash withdrawal.\n\nTo help investigate and secure your account: can you confirm whether you reported/blocked the card ending **1234** yet (or would you like me to guide you through locking it now)?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.4
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.36
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.24
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:06.393494",
+      "sim_prompt_tokens": 780,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 975,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I haven’t reported it yet—please tell me how to lock the card.",
+      "assistant_response": "Sure. If you believe the card ending **1234** was used without your presence, you should lock it immediately.\n\n1) Open the app → **Cards**\n2) Select the card ending **1234**\n3) Tap **Lock card** (or **Freeze card**)\n4) If prompted, confirm\n\nAfter it’s locked, tell me whether you want to **report it as lost/stolen** so we can guide the next steps for the unauthorized withdrawal.",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:09.028164",
+      "sim_prompt_tokens": 893,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 1086,
+      "bot_completion_tokens": 166
+    }
+  ]
+}

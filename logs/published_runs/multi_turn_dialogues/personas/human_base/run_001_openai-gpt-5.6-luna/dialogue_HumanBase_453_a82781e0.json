@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a82781e0-0953-4e63-bddd-82bf0561d605",
+  "seed": 42,
+  "dialogue_index": 453,
+  "timestamp": "2026-08-19T15:45:15.515201",
+  "persona": "HumanBase",
+  "target_intent": "passcode_forgotten",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1127,
+  "total_sim_completion_tokens": 314,
+  "total_bot_prompt_tokens": 2343,
+  "total_bot_completion_tokens": 398,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What should I do if the passcode doesn't work for me?",
+      "assistant_response": "Do you mean your app passcode, or your card PIN? And is it failing because you entered the wrong code a few times (possible PIN/passcode blocked), or you just can’t remember the correct one?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.19
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:09.939651",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the app passcode – I think it's blocked after a few wrong tries and I can't remember the right one.",
+      "assistant_response": "Thanks—if your app passcode is blocked after a few wrong tries and you can’t remember it, you’ll need to reset/unblock it. Are you able to sign in using any alternative method (like biometrics) or do you have access to your registered email/phone for verification? If you tell me which one you have access to, I’ll guide you to the correct reset steps.",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.16
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:12.910365",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 189,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I can get to my phone number for verification.",
+      "assistant_response": "Got it. If the app passcode is blocked and you can access your phone number, you can reset the passcode using the verification sent to your number. Try opening the app and select “Forgot passcode” (or “Reset passcode”), then follow the SMS/phone verification steps to set a new passcode.",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.9
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.07
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:15.515073",
+      "sim_prompt_tokens": 620,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 873,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

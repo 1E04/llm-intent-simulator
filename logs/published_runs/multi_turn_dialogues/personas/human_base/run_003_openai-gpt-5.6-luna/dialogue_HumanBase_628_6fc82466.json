@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6fc82466-e343-4116-8893-117e87270305",
+  "seed": 42,
+  "dialogue_index": 628,
+  "timestamp": "2026-08-21T15:48:57.977691",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 588,
+  "total_sim_completion_tokens": 241,
+  "total_bot_prompt_tokens": 1460,
+  "total_bot_completion_tokens": 340,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I transfer money using a credit card?",
+      "assistant_response": "Just to confirm—do you mean adding money to your account using your credit card (a top up), or sending a transfer to another bank/recipient from your account? If you tell me which one, I’ll give the exact steps.",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:53.962742",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to add money to my account using my credit card.",
+      "assistant_response": "Sure—here’s how to top up (add money) to your account using a credit card:\n\n1) Open the app and go to **Top up** (or **Add money**).\n2) Choose **Card** as the funding method.\n3) Enter the amount you want to add and confirm the currency.\n4) Enter your credit card details (or select a saved card) and follow any 3D Secure/verification prompts.\n5) Submit the top up and wait for the confirmation.\n\nIf you’re seeing an error or your top up is stuck/pending, tell me what the status message says and I’ll help with that.",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:57.977639",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 241,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 197
+    }
+  ]
+}

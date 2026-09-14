@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "0182f545-a609-4256-95ad-a20ecb0f58f8",
+  "seed": 42,
+  "dialogue_index": 665,
+  "timestamp": "2026-08-21T13:29:53.224148",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2915,
+  "total_sim_completion_tokens": 519,
+  "total_bot_prompt_tokens": 6589,
+  "total_bot_completion_tokens": 819,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I transferred some money but the recipient is having trouble withdrawing.",
+      "assistant_response": "Sorry to hear that—are you saying the transfer was successful on your side, but the recipient can’t withdraw because they haven’t received the money yet, or is it showing as pending/failed? If you can share the transfer status (pending/failed/completed) and the approximate date, I can guide you to the right check.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.52
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.28
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T13:29:41.677809",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1081,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed and I made the transfer yesterday.",
+      "assistant_response": "Thanks—if it’s marked **completed** but the recipient can’t withdraw, the most likely issue is that the recipient hasn’t actually received the funds (or there’s a recipient-side restriction). Can you confirm: is the transfer status **completed** in your app for you, and what date/time did you send it exactly? Also, is the recipient trying to withdraw from an account in the same currency/country as the transfer?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:29:44.057963",
+      "sim_prompt_tokens": 532,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 1170,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s marked completed. I sent it yesterday, around 3 PM. The recipient is in the same country and using the same currency.",
+      "assistant_response": "Got it—if your transfer is marked **completed** but the recipient can’t withdraw, the key issue is usually that the recipient **hasn’t received the funds** (even though it shows completed on your side).\n\nCan you check in your app whether there’s a **transfer reference/ID** and whether it shows **any “delivery to beneficiary”** status? If you tell me the transfer reference/ID (or the exact wording of the status), I’ll help you with the next step. Also, has the recipient confirmed they’re checking the correct account/currency in their app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:29:48.753414",
+      "sim_prompt_tokens": 640,
+      "sim_completion_tokens": 180,
+      "bot_prompt_tokens": 1298,
+      "bot_completion_tokens": 179
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "The reference is TRX‑839274, and it just says “completed” – the recipient says they’re checking the right account.",
+      "assistant_response": "Thanks. With a status of **completed** but the recipient unable to withdraw, the closest match is that the recipient **hasn’t received the transfer**. For **TRX‑839274**, the next step is for me to check the transfer delivery details—could you tell me whether the transfer was sent to a **bank account** or to another **user’s account/app profile**? (And if it’s bank account, is there a beneficiary name or bank code you can view, without sharing sensitive full details?)",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.83
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.11
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:29:50.797186",
+      "sim_prompt_tokens": 800,
+      "sim_completion_tokens": 97,
+      "bot_prompt_tokens": 1455,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It was sent to another user’s app profile, not a bank account.",
+      "assistant_response": "Thanks—since the transfer is marked **completed** but the recipient (same currency/country) can’t withdraw, this most likely means the recipient **hasn’t received the transfer** in their app.\n\nFor **TRX‑839274**, can you confirm whether the transfer appears under the recipient’s account as **pending** or **not present at all**? If you can’t check their side, tell me what status *you* see under the transfer details (any “delivered to beneficiary”/“completed” timestamp, or only “completed”)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:29:53.224055",
+      "sim_prompt_tokens": 943,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 1585,
+      "bot_completion_tokens": 172
+    }
+  ]
+}

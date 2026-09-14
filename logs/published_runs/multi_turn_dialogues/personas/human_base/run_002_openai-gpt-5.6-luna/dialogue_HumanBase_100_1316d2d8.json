@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1316d2d8-e6ea-49cd-926c-984464be0eac",
+  "seed": 42,
+  "dialogue_index": 100,
+  "timestamp": "2026-08-21T12:51:50.528152",
+  "persona": "HumanBase",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 485,
+  "total_sim_completion_tokens": 142,
+  "total_bot_prompt_tokens": 2205,
+  "total_bot_completion_tokens": 263,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Tell me how to cancel a transfer.",
+      "assistant_response": "Sure—do you want to cancel a transfer that’s currently pending, or one that has already been completed? If it’s pending, I’ll guide you through the cancellation steps.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.83
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:48.074397",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the pending one.",
+      "assistant_response": "Got it—if the transfer is pending, you can usually cancel it from the app. Open the app → go to **Transfers/Activity** → select the specific **pending transfer** → choose **Cancel transfer**. \n\nIf you don’t see a Cancel option, tell me what screen you’re on (or whether it’s an in-app transfer vs. bank transfer), and I’ll point you to the right path.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.93
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.52
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:50.527986",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 1128,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

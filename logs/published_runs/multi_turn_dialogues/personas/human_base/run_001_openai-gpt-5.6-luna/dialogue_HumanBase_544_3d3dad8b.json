@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "3d3dad8b-794d-4e5e-a880-1066dc465b8f",
+  "seed": 42,
+  "dialogue_index": 544,
+  "timestamp": "2026-08-19T15:52:35.396791",
+  "persona": "HumanBase",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1795,
+  "total_sim_completion_tokens": 397,
+  "total_bot_prompt_tokens": 3293,
+  "total_bot_completion_tokens": 517,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need support options, I want to top my card",
+      "assistant_response": "Sure—what would you like to do exactly: top up your card by card, by bank transfer, or by cash/cheque? Also, are you looking for general support or are you having a problem with a specific top up?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.45
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.3
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:28.211855",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I tried to top up but it keeps getting rejected—I’m not sure which cards I can use.",
+      "assistant_response": "Sorry that happened. To help you quickly: are you seeing an error message during the top up (and what does it say), or is it just getting declined with no message? Also, which top up method are you using—by card?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.66
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.26
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:30.274294",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just gets declined, no error message, and I’m trying to top up by card.",
+      "assistant_response": "Got it—if a card top up is being declined with no specific error, it’s usually due to card compatibility, limits, or the issuer rejecting the charge. Which type of card are you trying to use (Visa/Mastercard/Amex) and is it issued in the same country as your account? Also, are you trying a one-off top up or a specific amount near your limits?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.83
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:32.425075",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 112,
+      "bot_prompt_tokens": 851,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s a Visa issued in the US, same country as my account, and I’m just doing a one‑off top‑up of about $200.",
+      "assistant_response": "Thanks—since the card top up is being declined with no error, the most likely issue is a failed top up. Before we troubleshoot, can you confirm whether you’ve already tried another card or the same Visa multiple times? Also, what’s the exact error (if any) you see on the merchant/3D Secure screen after you enter details?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:35.396671",
+      "sim_prompt_tokens": 698,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 974,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

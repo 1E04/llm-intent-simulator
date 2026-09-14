@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8282636d-9836-4726-ab85-37eb4a838cdc",
+  "seed": 42,
+  "dialogue_index": 484,
+  "timestamp": "2026-08-19T15:46:58.367069",
+  "persona": "HumanBase",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 506,
+  "total_sim_completion_tokens": 108,
+  "total_bot_prompt_tokens": 1454,
+  "total_bot_completion_tokens": 261,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "It doesn't look like the top-up completed.",
+      "assistant_response": "Sorry about that—just to confirm, does your top up show as **pending** in the app, or does it show as **failed** or **reverted**? If you tell me which one you see, I’ll guide you to the next step.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.21
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:56.197637",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as failed.",
+      "assistant_response": "Thanks—if it shows as **failed**, it usually means the top up didn’t go through. Can you tell me how you tried to top up: **by card** or **by bank transfer**? Also, do you see any **reference/receipt** for the failed top up?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.08
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:46:58.366935",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 108,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

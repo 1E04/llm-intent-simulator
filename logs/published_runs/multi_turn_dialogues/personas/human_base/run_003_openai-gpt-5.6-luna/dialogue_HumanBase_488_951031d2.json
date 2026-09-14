@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "951031d2-ecc8-414b-b67d-109a2b006305",
+  "seed": 42,
+  "dialogue_index": 488,
+  "timestamp": "2026-08-21T15:45:50.709666",
+  "persona": "HumanBase",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 615,
+  "total_sim_completion_tokens": 170,
+  "total_bot_prompt_tokens": 1504,
+  "total_bot_completion_tokens": 292,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "new customer and filling gas today, it's not working, the thing shows pending half an hour!",
+      "assistant_response": "Sorry about that—when you pay at the gas station, does the card payment specifically show as “pending” on your app/statement (and it hasn’t completed yet)? Also, was the transaction approved by the terminal (you didn’t get declined), or did the pump stop and show an error?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:47.871885",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 703,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yeah, it’s showing as pending in the app and the pump never gave a decline—it just kept running and then showed an error.",
+      "assistant_response": "Got it—if the gas station payment is still showing as “pending” in the app and the pump ended with an error, it’s likely an authorization that hasn’t completed yet. Please wait a bit longer; these usually resolve within a few hours and then either complete or revert. If it’s still pending after 24 hours, tell me and I’ll help you with the next steps.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:50.709597",
+      "sim_prompt_tokens": 615,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 801,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

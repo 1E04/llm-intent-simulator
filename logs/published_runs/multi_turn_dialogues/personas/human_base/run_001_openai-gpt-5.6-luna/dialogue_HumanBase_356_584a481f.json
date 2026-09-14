@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "584a481f-8d0e-4e9b-97b6-abcd97418b6f",
+  "seed": 42,
+  "dialogue_index": 356,
+  "timestamp": "2026-08-19T15:37:58.164128",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2696,
+  "total_sim_completion_tokens": 662,
+  "total_bot_prompt_tokens": 4437,
+  "total_bot_completion_tokens": 790,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a 1 euro fee on my statement.",
+      "assistant_response": "Thanks—just to narrow it down: is the €1 fee showing as a card payment fee/verification charge (often small), or is it tied to an exchange/ATM activity? If you can, tell me the merchant name or transaction type shown next to the €1.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.19
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:46.326986",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows as a verification charge – the description is simply “verification”.",
+      "assistant_response": "Got it—when you see a small “verification” charge (like €1) on your statement, it’s usually a temporary pre-authorisation and should drop off automatically within a few days.\n\nHow long ago did it appear on your statement (e.g., today / 2–3 days ago / more than 5 days)? Also, is there a related card payment listed for the same merchant or date?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.27
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:49.398556",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 214,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It showed up two days ago, and there’s no other payment from that merchant.",
+      "assistant_response": "A €1 “verification” charge that appeared two days ago is typically a temporary pre-authorisation, and it usually falls off automatically within a few days. \n\nCan you confirm whether the charge is still marked as pending or has it moved to posted? If it’s still pending, it should clear soon; if it’s posted and hasn’t disappeared after about 7 days, tell me and I’ll help you investigate.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.66
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.15
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:51.905970",
+      "sim_prompt_tokens": 623,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 886,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s still showing as pending.",
+      "assistant_response": "That makes sense—small €1 “verification” amounts often show as pending while the merchant checks/authorises the transaction. Could you tell me the exact date it went pending, and whether it’s still pending for the same amount after you refresh/updated your app? If it’s still pending after about 7 days, I can help you with next steps.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:54.598878",
+      "sim_prompt_tokens": 734,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 987,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It went pending on 2026‑08‑17, and after refreshing it’s still pending for €1.",
+      "assistant_response": "Thanks—since it’s a small €1 “verification” charge that’s still showing as pending from 2026-08-17, it’s most likely a temporary pre-authorisation. Please wait until it clears (typically within ~3–7 days after it first appears). \n\nQuick check: are there any other details on the line (e.g., merchant name, location, or “pre-authorisation/verification”) or is it only the word “verification”? If it’s still pending after 2026-08-24, tell me and I’ll guide you on what to do next.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.52
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:58.163996",
+      "sim_prompt_tokens": 824,
+      "sim_completion_tokens": 197,
+      "bot_prompt_tokens": 1093,
+      "bot_completion_tokens": 182
+    }
+  ]
+}

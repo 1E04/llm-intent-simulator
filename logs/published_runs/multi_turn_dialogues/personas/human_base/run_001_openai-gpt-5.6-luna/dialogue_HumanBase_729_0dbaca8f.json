@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "0dbaca8f-96a9-4c51-9075-87b8bfd5a1ac",
+  "seed": 42,
+  "dialogue_index": 729,
+  "timestamp": "2026-08-19T16:07:44.431565",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2733,
+  "total_sim_completion_tokens": 574,
+  "total_bot_prompt_tokens": 4459,
+  "total_bot_completion_tokens": 713,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are there restrictions for my disposable card since it does not seem to be working?",
+      "assistant_response": "Do you mean your disposable card is failing because you’ve hit its limits (like spending or number of transactions), or is it not working at all even for small/first transactions?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.78
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.13
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T16:07:33.069400",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's not working at all, even for the first transaction.",
+      "assistant_response": "Thanks—if your disposable card won’t work even on the first transaction, it’s usually either a card setup issue or a limit/verification restriction.\n\nWhich error do you see when you try the transaction (e.g., “declined”, “do not honor”, or something in-app)? And are you using the disposable card directly in the app (where it’s generated) or a saved/merchant payment that’s expecting the card details?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.38
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.29
+        }
+      ],
+      "timestamp": "2026-08-19T16:07:36.137852",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just shows “declined,” and I’m trying to use the disposable card directly in the app.",
+      "assistant_response": "Got it—if the disposable card is showing a generic “declined” even on the first transaction, it could be either a restriction/limit on the disposable card or the card not being able to process payments.\n\nQuick check: when you open the disposable card in the app, does it show it’s active and are there any limit indicators (like remaining spend/number of transactions)? And is the merchant type something unusual (e.g., subscription/hotel/transport), or are you trying to pay normally in-app at checkout?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.62
+        }
+      ],
+      "timestamp": "2026-08-19T16:07:39.210434",
+      "sim_prompt_tokens": 617,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 877,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It looks active with no limits shown, and I’m just trying a normal in‑app checkout.",
+      "assistant_response": "Thanks—since it’s showing as active with no limits, the “declined” usually points to either a disposable/virtual card issue or something that’s causing the card payment to be rejected.\n\nCan you tell me: is the decline coming from the app checkout immediately (before any 3D Secure/OTP), or does it prompt any verification first?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.42
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.36
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-19T16:07:41.859084",
+      "sim_prompt_tokens": 754,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 1013,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It declines right away—no OTP or 3‑D Secure prompt shows up.",
+      "assistant_response": "Thanks—since it declines immediately with no OTP/3‑D Secure, this looks most likely like a disposable/virtual card functionality issue rather than a normal authentication step.\n\nFirst, can you confirm: does the disposable card payment fail at the same time every time with the same “declined” message, and is the checkout currency supported for your card/account?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.42
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.33
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-19T16:07:44.431434",
+      "sim_prompt_tokens": 855,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 1111,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "32033784-576b-42b3-a7ae-44b835c70d36",
+  "seed": 42,
+  "dialogue_index": 80,
+  "timestamp": "2026-08-21T12:50:05.971278",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 509,
+  "total_sim_completion_tokens": 130,
+  "total_bot_prompt_tokens": 2233,
+  "total_bot_completion_tokens": 328,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "cash from this morning has not deposited",
+      "assistant_response": "I’m sorry about that—just to confirm, was this cash deposited via a branch/ATM (cash deposit or cheque), or was it a bank transfer? Also, do you know the exact time this morning and roughly how much?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.63
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:59.556189",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a cash deposit at the ATM, about 9:30 am this morning, roughly $200.",
+      "assistant_response": "Thanks—since it was a cash deposit at an ATM around 9:30am and the balance still hasn’t updated, this sounds like a delay in updating after a cash (or cheque) deposit. \n\nCould you share whether the ATM deposit receipt shows the same amount (~$200) and whether the deposit was made into your account/card (not someone else’s)?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.9
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:05.971147",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 1157,
+      "bot_completion_tokens": 180
+    }
+  ]
+}

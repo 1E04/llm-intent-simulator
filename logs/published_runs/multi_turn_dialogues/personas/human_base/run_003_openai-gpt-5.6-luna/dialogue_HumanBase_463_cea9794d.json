@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cea9794d-9c4a-4c64-a387-3847f6990ce6",
+  "seed": 42,
+  "dialogue_index": 463,
+  "timestamp": "2026-08-21T15:45:28.176837",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 598,
+  "total_sim_completion_tokens": 143,
+  "total_bot_prompt_tokens": 1437,
+  "total_bot_completion_tokens": 236,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why is there a pending transaction on my card?",
+      "assistant_response": "To help me pinpoint it: is the pending transaction a card payment (shop/online), a cash withdrawal from an ATM, or a transfer?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:25.770880",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 121
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment from a shop purchase.",
+      "assistant_response": "Got it—if it’s a card payment that’s still pending, it usually means the merchant hasn’t completed processing yet (often it clears within 1–7 days). Is the transaction amount still showing as “pending” and has it been more than 7 days since the purchase?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:28.176652",
+      "sim_prompt_tokens": 598,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 743,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

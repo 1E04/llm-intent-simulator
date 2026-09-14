@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "01611583-29fa-47dd-b82c-14fadf8e936d",
+  "seed": 42,
+  "dialogue_index": 497,
+  "timestamp": "2026-08-19T15:48:16.112267",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 500,
+  "total_sim_completion_tokens": 188,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 273,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I transferred money yesterday, but it still isn't available?",
+      "assistant_response": "Sorry about that—can you confirm whether you made a bank transfer (to your Revolut account), and whether the transfer is marked as pending/completed in the app? Also, roughly what time yesterday was it sent?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:12.732167",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was a bank transfer into my Revolut account and it still shows as pending. I sent it yesterday around 3 pm.",
+      "assistant_response": "Thanks—since your bank transfer into Revolut is still marked as pending about since yesterday 3pm, the most likely issue is that the balance hasn’t been updated after the bank transfer yet. \n\nCan you tell me which country the sending bank is in (same country/SEPA or international), and whether the transfer details show a reference/traceable payment ID in the app?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:16.112074",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

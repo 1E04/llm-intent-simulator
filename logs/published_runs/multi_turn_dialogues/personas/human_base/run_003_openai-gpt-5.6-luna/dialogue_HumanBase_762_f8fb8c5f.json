@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f8fb8c5f-6ecd-4fd9-b3cc-5f47307170d8",
+  "seed": 42,
+  "dialogue_index": 762,
+  "timestamp": "2026-08-21T15:51:37.050219",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 595,
+  "total_sim_completion_tokens": 107,
+  "total_bot_prompt_tokens": 1515,
+  "total_bot_completion_tokens": 371,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "how do you determine your exchange rates because one of yours was off when i got cash",
+      "assistant_response": "Thanks for checking—are you asking how we calculate the exchange rate for cash withdrawals (including any markup/fees), or are you saying the rate you were given at the ATM was actually incorrect? If you can tell me the ATM/currency and roughly what rate you expected vs what you were charged, I can point you to the right place.",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.72
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:33.924709",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a GBP withdrawal in Dublin, the ATM showed about 1.38 USD/GBP but I was charged around 1.45 USD/GBP.",
+      "assistant_response": "Got it—since this was a cash withdrawal in Dublin (GBP cash), this sounds like the “wrong exchange rate for cash withdrawal” scenario. \n\nHere’s how it’s determined: the ATM’s displayed rate is typically indicative, and your card uses our own exchange rate plus the cash withdrawal markup/fees set for card cash advances. The final rate you see is the one applied when the cash withdrawal is processed by the network.\n\nIf you share the withdrawal date/time and the amount charged (in USD) or the receipt details (ATM location and whether it asked you to choose “DCC”/dynamic currency conversion), I can help you confirm what rate was applied and whether any adjustment is possible.",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.12
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:37.050129",
+      "sim_prompt_tokens": 595,
+      "sim_completion_tokens": 107,
+      "bot_prompt_tokens": 814,
+      "bot_completion_tokens": 208
+    }
+  ]
+}

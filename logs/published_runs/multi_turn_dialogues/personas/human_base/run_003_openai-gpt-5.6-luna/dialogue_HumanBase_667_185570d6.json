@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "185570d6-c087-4db0-a2f6-325f0e453029",
+  "seed": 42,
+  "dialogue_index": 667,
+  "timestamp": "2026-08-21T15:49:54.053173",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1197,
+  "total_sim_completion_tokens": 421,
+  "total_bot_prompt_tokens": 2311,
+  "total_bot_completion_tokens": 419,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where is the transaction I made to a friend?",
+      "assistant_response": "To help me find it, was the transfer marked as pending, completed, or failed—and do you have a transfer/reference number (or the date and amount)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.58
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:46.656711",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed. The reference is 987654321, dated March 15, for $250.",
+      "assistant_response": "If it’s marked as completed but your friend hasn’t received it, that sounds like a “completed transfer not received by recipient” issue. Can you confirm the recipient’s details (name and the last 4 digits of their account/card, if applicable) and whether they can see the transfer/reference 987654321 on their side?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.76
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:50.557993",
+      "sim_prompt_tokens": 549,
+      "sim_completion_tokens": 242,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The recipient is Alex, account ending 4321, and they say they don’t see the transfer on their side.",
+      "assistant_response": "Got it—if the transfer 987654321 is marked completed but Alex (acct ending 4321) can’t see it, this is usually a transfer-not-received issue. Please confirm the exact transfer currency, and whether it was sent to an account number or via card/email/phone. Then I can guide you on the next steps to trace it with that reference.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:54.053106",
+      "sim_prompt_tokens": 648,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 859,
+      "bot_completion_tokens": 168
+    }
+  ]
+}

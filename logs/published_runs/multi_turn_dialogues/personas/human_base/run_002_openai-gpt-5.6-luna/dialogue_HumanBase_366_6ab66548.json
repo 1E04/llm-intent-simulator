@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6ab66548-69d8-4405-b42f-f0e18a6637c2",
+  "seed": 42,
+  "dialogue_index": 366,
+  "timestamp": "2026-08-21T13:09:19.731763",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 485,
+  "total_sim_completion_tokens": 147,
+  "total_bot_prompt_tokens": 2209,
+  "total_bot_completion_tokens": 193,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "how come my transfer didn't work",
+      "assistant_response": "Sorry about that—was your bank transfer marked as **failed** (rejected) or **declined**, or is it instead showing as **pending** / not received by the recipient yet?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:17.274055",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1075,
+      "bot_completion_tokens": 96
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "it's showing as pending, the money hasn't arrived yet",
+      "assistant_response": "Thanks—if it’s showing **pending**, it usually means the transfer hasn’t completed yet. Can you tell me roughly when you made the transfer (today / yesterday / how many days ago)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.92
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.34
+        }
+      ],
+      "timestamp": "2026-08-21T13:09:19.731644",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 1134,
+      "bot_completion_tokens": 97
+    }
+  ]
+}

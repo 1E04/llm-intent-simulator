@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9703a401-9f76-42af-bd9f-8805a991d8a9",
+  "seed": 42,
+  "dialogue_index": 237,
+  "timestamp": "2026-08-21T13:00:43.424133",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 486,
+  "total_sim_completion_tokens": 160,
+  "total_bot_prompt_tokens": 2203,
+  "total_bot_completion_tokens": 232,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I freeze my account?",
+      "assistant_response": "I can help—are you trying to freeze because your card/phone is lost or stolen, or are you looking to close/terminate your account? Please tell me which one.",
+      "predicted_intent": "terminate_account",
+      "top_3_intents": [
+        {
+          "intent": "terminate_account",
+          "confidence": 0.35
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "lost_or_stolen_phone",
+          "confidence": 0.32
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:41.028155",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "My card was stolen.",
+      "assistant_response": "Sorry that happened. I’ll help you freeze/protect everything. Since your card was stolen, please confirm: was the phone also stolen or just the card? (If only the card, we’ll freeze the card first.)",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.93
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:43.423992",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 1127,
+      "bot_completion_tokens": 102
+    }
+  ]
+}

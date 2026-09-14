@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "cf6375fc-da92-4347-b6b1-a8a10aa0a040",
+  "seed": 42,
+  "dialogue_index": 461,
+  "timestamp": "2026-08-21T13:15:02.673926",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1114,
+  "total_sim_completion_tokens": 258,
+  "total_bot_prompt_tokens": 3482,
+  "total_bot_completion_tokens": 389,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made this payment days ago so why hasn't it gone through yet?",
+      "assistant_response": "I can help—are you saying your **card payment** is still showing as *pending* (not completed) in the app, or that you made a **transfer** and the recipient hasn’t received it yet?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.63
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.21
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:14:58.349269",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1083,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the card payment – it still hasn't gone through.",
+      "assistant_response": "Thanks—if it’s a card payment that’s been taking days, it usually means it’s still marked as *pending*. Can you check in the app whether it shows as **pending** or **reverted/declined** (and whether you can see the merchant name and amount)? If it’s pending, I can guide you on the usual timing and what to do next.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:00.525470",
+      "sim_prompt_tokens": 508,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1148,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still listed as pending, with the merchant name and the amount shown.",
+      "assistant_response": "Got it—since it’s a **card payment** that’s still showing **Pending**, it hasn’t fully completed/settled yet. To guide you accurately: is there any estimated completion date/time shown next to the pending transaction, and how many days ago did you make the payment?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.92
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.04
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:02.673813",
+      "sim_prompt_tokens": 606,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 1251,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

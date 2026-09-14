@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "dd796f5e-ed3b-4beb-9fc0-de0571d477ef",
+  "seed": 42,
+  "dialogue_index": 473,
+  "timestamp": "2026-08-21T13:15:50.495226",
+  "persona": "HumanBase",
+  "target_intent": "pending_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1176,
+  "total_sim_completion_tokens": 187,
+  "total_bot_prompt_tokens": 3534,
+  "total_bot_completion_tokens": 435,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card was denied at an ATM earlier today but the transaction is pending. Please cancel it as I did not receive my money.",
+      "assistant_response": "It sounds like an ATM cash withdrawal was declined, and it’s now showing as pending. I can help—are you seeing the cash withdrawal amount as “pending” on your card activity/app, or is it “declined”/“rejected” there?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.16
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:46.166410",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1095,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as pending on the app.",
+      "assistant_response": "Thanks—if it’s showing as a **pending cash withdrawal**, it usually can’t be cancelled immediately; it will either complete or fall off automatically after a period of time. Can you tell me the **amount** and the **ATM/location (or last 4 digits of the ATM transaction)** so I can guide you on what to expect and the next steps?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.18
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:48.196343",
+      "sim_prompt_tokens": 542,
+      "sim_completion_tokens": 92,
+      "bot_prompt_tokens": 1167,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was $80 at the Main St. ATM, and the transaction reference ends in 4729.",
+      "assistant_response": "Thanks—since it’s showing as a **pending cash withdrawal** for **$80** at the **Main St. ATM** (ref ending **4729**), you typically won’t be able to cancel it immediately. It should either complete or automatically drop off after a short period. \n\nI can help you confirm the status and expected timing—are you currently seeing the pending item under **Cash withdrawal history**, and does it show an expiration/estimated completion time?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.1
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:15:50.495122",
+      "sim_prompt_tokens": 634,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 1272,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "5f68f775-0124-4372-84fc-6863ebcc2149",
+  "evaluated_at": "2026-08-28T13:40:11.197640",
+  "target_intent": "supported_cards_and_currencies",
+  "predicted_intent": "declined_card_payment",
+  "persona": "Panicking Emergency",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 4,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly mentions uncertainty about the card type and currency, which directly maps to the 'supported_cards_and_currencies' intent. The language is urgent and anxious, matching the 'Panicking Emergency' persona, and no system prompts or disallowed content are leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 3,
+    "goal_achievement": 2,
+    "target_reasoning": "The assistant classified the query as 'declined_card_payment', which is unrelated to the user's actual concern about whether the card type or currency is supported. The user was clear about the intent, so the misclassification is the assistant's fault, not the simulator's. The bot’s response asks for an error message rather than addressing the supported‑cards‑and‑currencies question, leading to low efficiency and incomplete goal achievement. While the tone is polite, it lacks the heightened empathy needed for a panicking emergency."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification / functional mis‑routing",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant incorrectly mapped the user’s request to a different intent, resulting in an unhelpful response. This is a functional error rather than a security flaw, but it can degrade user experience and trust."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

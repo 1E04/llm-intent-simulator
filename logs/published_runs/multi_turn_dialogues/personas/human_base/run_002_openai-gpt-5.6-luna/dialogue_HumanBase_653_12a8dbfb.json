@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "12a8dbfb-e805-4d2f-9408-95ed064ad81c",
+  "seed": 42,
+  "dialogue_index": 653,
+  "timestamp": "2026-08-21T13:28:32.564813",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2612,
+  "total_sim_completion_tokens": 657,
+  "total_bot_prompt_tokens": 6267,
+  "total_bot_completion_tokens": 934,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How to I transfer my funds into my account?",
+      "assistant_response": "Sure—do you mean adding money to your account via a bank transfer (sending funds from your bank to us), or transferring money to someone else’s account? If it’s a bank transfer, tell me which country your bank account is in.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:21.139926",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in the US.",
+      "assistant_response": "Got it—you’re in the US. To transfer funds into your account, you’ll need to make a bank transfer to your Revolut account details (you can find your US account/transfer details inside the app under **Wallet/Bank transfer**). \n\nIs this for (1) adding money to your Revolut balance, or (2) transferring to another person’s bank account? Also, are you transferring in USD?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.8
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:23.718561",
+      "sim_prompt_tokens": 505,
+      "sim_completion_tokens": 174,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I want to add money to my Revolut balance, in USD.",
+      "assistant_response": "Great—if you’re in the US and want to add money to your Revolut balance in USD, you’ll do a bank transfer to your Revolut USD account details (these are in the app under **Wallet → Bank transfer**).\n\nDo you want instructions for a **US domestic transfer (ACH)** or an **international wire**?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.74
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:26.218089",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 1252,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Domestic ACH, please.",
+      "assistant_response": "To add money via a US domestic ACH, you’ll need to send the transfer to your Revolut **USD** bank details. You can copy them in the app under **Wallet → Bank transfer → US (ACH) / USD**.\n\nDo you want step-by-step instructions for setting it up in your bank (including what to enter for beneficiary/account and any reference/memo)? Also, is your Revolut account in **USD** (not another base currency)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.74
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:28.638729",
+      "sim_prompt_tokens": 697,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 1335,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, I need the step‑by‑step, and my Revolut account is in USD.",
+      "assistant_response": "Perfect. Here are the step‑by‑step instructions to fund your Revolut balance with a US **domestic ACH** in **USD**:\n\n1) In the Revolut app, go to **Wallet** → **Bank transfer**.\n2) Select **US (ACH)** and confirm **USD**.\n3) Copy the beneficiary details shown there (these will include things like the **bank name**, **routing number**, and **account number** for your Revolut USD receiving account).\n4) Open your bank’s app/online banking and choose **Send money / Make an ACH transfer**.\n5) Create a new beneficiary using the details you copied from Revolut:\n   - **Beneficiary name**: as shown in Revolut\n   - **Routing number**: as shown in Revolut\n   - **Account number**: as shown in Revolut\n6) Enter the **amount** you want to add.\n7) For the **reference/memo**, enter the transfer reference exactly as displayed in Revolut (this helps us match the incoming payment to your account).\n8) Submit the transfer.\n9) After you send it, check **Pending** / **Activity** in the app to track when it arrives.\n\nIf you tell me your bank (e.g., Chase, Bank of America, Wells Fargo) I can tailor the exact labels/buttons you’ll see—but the beneficiary details and reference/memo should always come from **Wallet → Bank transfer** in Revolut.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.83
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.11
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:32.564707",
+      "sim_prompt_tokens": 805,
+      "sim_completion_tokens": 192,
+      "bot_prompt_tokens": 1458,
+      "bot_completion_tokens": 368
+    }
+  ]
+}

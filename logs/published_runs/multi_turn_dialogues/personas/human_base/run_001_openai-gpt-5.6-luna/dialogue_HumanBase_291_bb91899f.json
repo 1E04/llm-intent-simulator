@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bb91899f-eccf-446f-9ee5-c61443df9f81",
+  "seed": 42,
+  "dialogue_index": 291,
+  "timestamp": "2026-08-19T15:32:43.724006",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 514,
+  "total_sim_completion_tokens": 124,
+  "total_bot_prompt_tokens": 1474,
+  "total_bot_completion_tokens": 311,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There's a direct debit on my account that I didn't authorize",
+      "assistant_response": "I’m sorry that happened. To help me identify the right next step, can you confirm: is this direct debit showing as a specific merchant name and amount on your statement, and do you still have access to the account it was taken from?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.19
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:40.749281",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it shows a charge from “FitLife Gym” for £45, and I still have access to the account.",
+      "assistant_response": "Thanks for confirming. Since the direct debit for “FitLife Gym” (£45) isn’t one you authorized, this is a direct debit payment not recognised. I can help you with the next steps to dispute it—do you want to request a refund for this specific payment, or would you prefer to first cancel the direct debit with the merchant?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.93
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:43.723896",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 165
+    }
+  ]
+}

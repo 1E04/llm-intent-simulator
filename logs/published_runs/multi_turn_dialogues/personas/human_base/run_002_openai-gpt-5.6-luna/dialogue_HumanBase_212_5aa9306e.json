@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "5aa9306e-8564-496f-b41b-dd235849bf1c",
+  "seed": 42,
+  "dialogue_index": 212,
+  "timestamp": "2026-08-21T12:58:59.076563",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2751,
+  "total_sim_completion_tokens": 592,
+  "total_bot_prompt_tokens": 6434,
+  "total_bot_completion_tokens": 767,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is a suspicious cash withdraw on the account.",
+      "assistant_response": "I’m sorry about that. Was the cash withdrawal made with your card, and do you recognize the location/date/amount shown on the transaction? If it’s not yours, tell me whether your card was with you at the time and I’ll help you report it.",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.17
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:49.035973",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "No, I didn’t make that withdrawal. It shows $200 at a downtown ATM on March 5, and I didn’t have my card with me then.",
+      "assistant_response": "Thanks for clarifying. If you didn’t have your card with you and you don’t recognize a $200 cash withdrawal at a downtown ATM on March 5, the most likely issue is unauthorized access. Please confirm: was your card ever lost/stolen around that date, or do you still have it now? If you still have the card, I’ll guide you to secure it and report the cash withdrawal as not yours.",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.17
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:51.601972",
+      "sim_prompt_tokens": 515,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 1176,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I still have the card; it wasn’t lost or stolen.",
+      "assistant_response": "Understood—you still have your card, so this looks like a compromised card/unauthorised cash withdrawal. I can help you report the $200 downtown ATM withdrawal on March 5. \n\nFirst, can you confirm whether you know the ATM location/country and whether you recognize any other nearby transactions around that time?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.88
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:53.547819",
+      "sim_prompt_tokens": 644,
+      "sim_completion_tokens": 86,
+      "bot_prompt_tokens": 1285,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I know it was in the city centre, but I don’t recognize any other transactions from that day.",
+      "assistant_response": "Got it. Since you still have your card and don’t recognize the $200 cash withdrawal at an ATM on March 5, this strongly suggests your card details may have been compromised. \n\nTo help you, please tell me: was the ATM withdrawal made using your card (physical chip/tap) or did you also notice any sudden PIN/ATM attempts? If you’re not sure, tell me the withdrawal’s country/currency and I’ll guide you through reporting and securing your card immediately.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.81
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:55.697800",
+      "sim_prompt_tokens": 731,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 1380,
+      "bot_completion_tokens": 164
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I’m not sure if it was a chip or tap, but it was in the UK and the amount was in pounds.",
+      "assistant_response": "Thanks—that’s very helpful. Because you still have the card and you don’t recognize a £200 cash withdrawal at a UK ATM on March 5, this matches **cash withdrawal not recognized / potentially unauthorized activity**.\n\nTo help you get this reported and stop any further use: 1) Are you able to see the transaction as **completed**, or does it still show **pending**? 2) Do you want me to guide you through securing the card right now (e.g., reporting it and taking protective steps)?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T12:58:59.076468",
+      "sim_prompt_tokens": 861,
+      "sim_completion_tokens": 230,
+      "bot_prompt_tokens": 1514,
+      "bot_completion_tokens": 172
+    }
+  ]
+}

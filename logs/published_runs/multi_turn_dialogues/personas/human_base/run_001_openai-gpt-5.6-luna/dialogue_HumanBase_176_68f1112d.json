@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "68f1112d-0cfd-495e-ad30-d691bfb0f6bc",
+  "seed": 42,
+  "dialogue_index": 176,
+  "timestamp": "2026-08-19T15:26:11.210009",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 521,
+  "total_sim_completion_tokens": 129,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 258,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "In my statement there is a payment that is I do not recognize",
+      "assistant_response": "I’m sorry about that—can you tell me whether you recognize the merchant name but not the transaction, or whether the merchant/amount is completely unfamiliar? Also, is this shown as a card payment (e.g., Visa/Mastercard) rather than a bank transfer?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:09.058952",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I don’t recognize the merchant at all, and it’s shown as a card payment.",
+      "assistant_response": "Thanks—if you don’t recognize the merchant on a card payment, it’s usually the “card payment not recognized” scenario. Can you confirm: was the payment completed/posted (not pending), and roughly when did it happen?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:11.209920",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 107
+    }
+  ]
+}

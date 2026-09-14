@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "afbc52cc-65c5-455e-a3f3-8402d3a187d1",
+  "seed": 42,
+  "dialogue_index": 616,
+  "timestamp": "2026-08-21T15:48:33.491316",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 641,
+  "total_sim_completion_tokens": 129,
+  "total_bot_prompt_tokens": 1523,
+  "total_bot_completion_tokens": 340,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I topped up my account and even though it was confirmed at first, the money isn't there anymore! why did this happen, and where did my money go?",
+      "assistant_response": "Sorry that happened. When a top up shows as confirmed and then the balance returns to zero, it’s usually a top up that got reverted. Can you tell me: did you receive a “top up reversed/reverted” notification or was the balance reduced back to the original amount after some hours?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:30.578501",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I didn’t get any notification – the balance just went back to what it was a few hours later.",
+      "assistant_response": "It sounds like the top up was later reverted even if you didn’t get a notification—this can happen when the card/payment authorization is reversed or the issuer declines it after the initial confirmation. \n\nCan you share the top-up date and the amount (and whether it was by card)? If you have the transaction reference/receipt, that’s best—I can then help you figure out what to check with the card issuer and how long the reversal typically takes.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.11
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:33.491256",
+      "sim_prompt_tokens": 641,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 188
+    }
+  ]
+}

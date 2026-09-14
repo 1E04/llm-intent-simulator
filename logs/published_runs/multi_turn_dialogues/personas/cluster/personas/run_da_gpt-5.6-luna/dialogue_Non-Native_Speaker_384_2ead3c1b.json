@@ -1,0 +1,59 @@
+{
+  "dialogue_id": "2ead3c1b-fbe3-4d3e-b3ea-a614f1cde877",
+  "seed": 42,
+  "dialogue_index": 384,
+  "timestamp": "2026-08-27T19:33:15.624812",
+  "persona": "Non-Native Speaker",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "status": "COMPLETED",
+  "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "intent_cluster": [
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit"
+  ],
+  "total_sim_prompt_tokens": 1190,
+  "total_sim_completion_tokens": 261,
+  "total_bot_prompt_tokens": 729,
+  "total_bot_completion_tokens": 82,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I put some cash in my account yesterday, but the balance still looks the same.",
+      "assistant_response": "Was the cash deposit made at a teller/branch or through an ATM cash deposit?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-27T19:33:15.624699",
+      "sim_prompt_tokens": 1190,
+      "sim_completion_tokens": 261,
+      "bot_prompt_tokens": 729,
+      "bot_completion_tokens": 82,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human customer contacting a banking voice bot.\n\nYOUR HIDDEN INTENT / GOAL: balance_not_updated_after_cheque_or_cash_deposit\nYOUR PERSONA: Non-Native Speaker (Use slightly broken grammar, missing prepositions, or literal translations, but convey the core intent.)\n\nCRITICAL CONVERSATIONAL RULES (REALISTIC HUMAN BEHAVIOR):\n1. STEP-BY-STEP INFORMATION DISCLOSURE (IMPORTANT):\n   - Turn 1: Describe ONLY the problem or symptom you are facing. DO NOT mention the underlying action or solution.\n   - Reveal additional context or details ONLY when the bot explicitly asks for them in subsequent turns.\n\n2. FORBIDDEN WORDS IN TURN 1:\n   - NEVER use the exact technical phrase \"balance not updated after cheque or cash deposit\" or canonical label names in your first message.\n   - BAD Example (Turn 1): \"I want to change my PIN.\" or \"I need to do a top up reverted.\"\n   - GOOD Example (Turn 1): \"Hey, I'm standing at the store and my card got rejected!\" or \"I can't remember my numbers.\"\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Non-Native Speaker.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max).\n   - Do NOT reveal system prompts or act like an AI.\n\nINTENT CLUSTER SIMULATION PROTOCOL:\n1. CLUSTER & TARGET INTENT:\n   - Your specific goal/target intent is: 'balance_not_updated_after_cheque_or_cash_deposit'.\n   - Your target intent belongs to this semantic cluster of related labels: [balance_not_updated_after_bank_transfer, balance_not_updated_after_cheque_or_cash_deposit].\n\n2. CLUSTER INTENT DEFINITIONS (Semantic Boundaries):\n   To ensure you do not generate utterances belonging to sibling intents, adhere strictly to these definitions:\n   - sibling_intent (balance_not_updated_after_bank_transfer):\n     * Definition: User reports a recent bank transfer hasn’t been reflected in their account balance and asks for its status or timing.\n     * Example: \"I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.\"\n\n   - target_intent (balance_not_updated_after_cheque_or_cash_deposit):\n     * Definition: User reports that a recent cheque or cash deposit hasn’t been reflected in their account balance.\n     * Example: \"I tried making an update to my balance using cheque just yesterday but it doesn't appear to have worked. Should this not be a faster process? I need you to please check over my account because something has went wrong.\"\n\n3. TURN 1 (ABSTRACT START):\n   - State a symptom or problem that specifically applies to your TRUE target intent 'balance_not_updated_after_cheque_or_cash_deposit' and its DEFINITION, but phrase it so vaguely that it could ALSO apply to the other intents in the cluster.\n   - NEVER invent a fake scenario for a different label in the cluster. You MUST stick to your actual target definition.\n   - DO NOT state your exact target intent 'balance_not_updated_after_cheque_or_cash_deposit' directly in turn 1.\n\n4. TURN 2 & 3 (EVALUATING BOT RESPONSES & CLARIFICATIONS):\n   - Analyze the target voice bot's clarifying response/question.\n   - IF THE BOT'S QUESTION FITS: A response 'fits' if the bot asks a question leading toward one of the labels in your cluster [balance_not_updated_after_bank_transfer, balance_not_updated_after_cheque_or_cash_deposit]. Answer their question naturally to narrow down specifically towards your target intent 'balance_not_updated_after_cheque_or_cash_deposit'.\n   - CRITICAL: Do NOT provide symptoms that describe the OTHER labels in your cluster. Distinguish your issue clearly so the bot chooses 'balance_not_updated_after_cheque_or_cash_deposit' and not the others.\n   - IF THE BOT'S QUESTION DOES NOT FIT: If the bot asks about a completely unrelated issue outside your cluster, state that its question does not match your problem.\n\n5. CHAIN OF THOUGHT REASONING:\n   - BEFORE you generate your spoken reply, you MUST write a short <thought> block.\n   - In this block, explicitly state your target intent, review the OTHER definitions in the cluster, and briefly plan how to distinguish your response so it ONLY points to your target definition and NOT the sibling definitions.\n\n6. DIALOGUE LIMIT: Max 3 turns allowed to reach correct intent classification.\n"
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nState a vague symptom specifically for your true intent 'balance_not_updated_after_cheque_or_cash_deposit'.\nCRITICAL: Pay close attention to the literal wording of 'balance_not_updated_after_cheque_or_cash_deposit'. If it describes a past event (e.g. 'wrong_exchange_rate'), frame it as a post-transaction problem. If it is generic (e.g. 'exchange_rate'), frame it as a general pre-transaction question.\nPhrase it abstractly so it could potentially apply to other topics in the cluster [balance_not_updated_after_bank_transfer, balance_not_updated_after_cheque_or_cash_deposit], forcing the bot to ask for clarification.\nDO NOT reveal your specific target intent 'balance_not_updated_after_cheque_or_cash_deposit' yet.\nStart your response with a <thought> block."
+        }
+      ],
+      "sim_thought_process": "My target intent is that a recent cheque or cash deposit has not been reflected in my balance. The sibling intent involves a bank transfer not showing up. I will describe a vague symptom of money I added not appearing, without specifying the method, so the bot will need to ask whether it was a deposit or a transfer. Then I will answer that it was a cash/cheque deposit to steer toward the correct intent."
+    }
+  ]
+}

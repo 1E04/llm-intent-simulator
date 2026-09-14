@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "8d166450-2a9e-4d60-a47f-d40fb532c05c",
+  "seed": 42,
+  "dialogue_index": 492,
+  "timestamp": "2026-08-19T15:47:49.998289",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1954,
+  "total_sim_completion_tokens": 773,
+  "total_bot_prompt_tokens": 3448,
+  "total_bot_completion_tokens": 576,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer is still pending and I know the account numbers are correct.  Please help.",
+      "assistant_response": "Sure—I can help. To narrow it down, is your transfer pending with no funds left in your account, or is it marked as pending for the recipient on their side? If you can share the transfer method (bank transfer type) and the date you sent it, I’ll guide you on the next steps.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.14
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:40.042499",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The money is still in my account, it hasn’t left yet. It was a standard bank transfer I sent on 12 May.",
+      "assistant_response": "Thanks—if the money is still in your account, that usually means the transfer is not completed yet (still pending) rather than failed.\n\nCan you confirm: when you go to the transfer in the app, does it show a status like “Pending”/“Processing” or does it show a specific ETA? Also, which country/currency was it sent in?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.21
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:43.854552",
+      "sim_prompt_tokens": 532,
+      "sim_completion_tokens": 318,
+      "bot_prompt_tokens": 803,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just shows “Processing” with no ETA. It was a GBP transfer to the UK.",
+      "assistant_response": "Got it—if it’s showing “Processing” and your money is still in your account, it likely means the transfer is still in progress rather than failed.\n\nTo help you, can you tell me whether the transfer was sent as a UK GBP transfer (domestic) or an international transfer to the UK—and when you view the transfer, does it show any reference/processing stage (e.g., “pending beneficiary” or “in progress”)? If you share the status text exactly, I’ll advise the next steps.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:46.411570",
+      "sim_prompt_tokens": 644,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 906,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s a domestic UK GBP transfer and the app only shows “Processing”.",
+      "assistant_response": "Thanks—because it’s a domestic UK GBP transfer marked as “Processing” with no ETA and your funds are still in your account, it’s most likely still in the transfer window rather than failed.\n\nTo check the next steps: can you tell me whether “Processing” has a timestamp or reference date in the app, and whether the recipient details/status show “pending beneficiary” or anything similar?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.11
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:49.998180",
+      "sim_prompt_tokens": 778,
+      "sim_completion_tokens": 302,
+      "bot_prompt_tokens": 1037,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

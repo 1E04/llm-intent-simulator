@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2ba7c50f-52f9-4dd9-a7ab-8cbfe20c88b6",
+  "seed": 42,
+  "dialogue_index": 646,
+  "timestamp": "2026-08-21T13:27:45.868961",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 494,
+  "total_sim_completion_tokens": 149,
+  "total_bot_prompt_tokens": 2210,
+  "total_bot_completion_tokens": 204,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was charge a fee for my transfer, why?",
+      "assistant_response": "I can help with that. Was the fee charged for an international or card-to-bank transfer, or was it related to an exchange (currency conversion) during the transfer?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.83
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:43.712765",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 91
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an international transfer.",
+      "assistant_response": "Thanks—if it was an international transfer, the charge is typically a transfer fee (and sometimes correspondent/processing fees depending on the route). Can you tell me the fee amount and whether it was shown as “transfer fee” or “extra charge” on your transfer details/statement?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:45.868875",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 1130,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

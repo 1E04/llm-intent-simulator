@@ -16,20 +16,75 @@ pics
 pics_comparison
 results
 dataset/single-turn/audio
-scripte/base_banking77.py
-scripte/evaluate_jsonl.py
-scripte/comparision_eval.py
-scripte/error_analysis_judge.py
-scripte/logs/*
-!scripte/logs/single-turn
-scripte/audio_recording.py
-scripte/logs/single-turn/synthetic-dataset/phi4/*14b.jsonl
+dataset/single-turn/banking77_personas_openai-gpt-oss-120b.csv
+dataset/single-turn/banking77_personas_phi4:14b.csv
+dataset/single-turn/banking77_test_clean_reverted_card_payment.csv
+dataset/single-turn/banking77_personas_gpt-5.4-nano.csv
+dataset/single-turn/*stt_degraded.csv
+dataset/adversarial
+
+scripte/02_single_turn/base_banking77.py
+scripte/02_single_turn/evaluate_jsonl.py
+scripte/02_single_turn/comparision_eval.py
+scripte/02_single_turn/simple_dataset_metrics.py
+
+
+# Profiles
+scripte/profiles/standard_hdi_de.json
+scripte/profiles/best_case_hdi_de.json
+scripte/profiles/adversarial_en.json
+
+scripte/03_multi_turn/error_analysis_judge.py
+scripte/04_greybox_testing/*
+scripte/05_statistic_evaluations/add_predicted_intent.py
+
+logs/*
+!logs/published_runs/
+
+src/data_prep/add_numerical_label.py
+src/data_prep/audio_recording.py
+src/data_prep/stt_error_injection.py
+
+# New files
+logs/old_runs
+logs/multi_turn_dialogues/thesis_multi_turn_report.md
+intent_clusters_cache.json
+scripte/03_multi_turn/target_classifier_issue_board.py
+scripte/06_multi_turn/generate_intent_definitions.py
+scripte/06_multi_turn/intent_clusters_cache.json
+scripte/06_multi_turn/judge_analyzer.py
+scripte/06_multi_turn/plot_thesis_graphs.py
+scripte/07_CCaaS/
+
+
+# Dataset metrics: keep the summary tables/plots, skip the bulky derived files
+logs/dataset_metrics/cache
+logs/dataset_metrics/per_row
+
 
 # Scripte Dataset Generation
-scripte/.gen_banking77.py
-scripte/generate_banking77_dataset.py
-scripte/add_numerical_label.py
+scripte/01_data_prep/.gen_banking77.py
+scripte/01_data_prep/generate_banking77_dataset.py
+scripte/01_data_prep/add_numerical_label.py
+scripte/01_data_prep/stt_error_injection.py
+
+scripte/02_single_turn/adversarial_eval.py
+scripte/02_single_turn/eval_ood_single_turn.py
+scripte/02_single_turn/plot_comparison.py
+scripte/02_single_turn/evaluate_persona_all_models.py
+scripte/02_single_turn/evaluate_persona_f1.py
+scripte/02_single_turn/evaluate_persona_global_matrix.py
+scripte/02_single_turn/umap_pro_label
+
+## Exclude Thesis
+thesis.pdf
+thesis_text.txt
+thesis_extracted.txt
+
 # Erstmal keinen nutzen
 main.py
+
+**/**/*README.md
+
 
 

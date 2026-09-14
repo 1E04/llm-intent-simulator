@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "09932b93-ebf2-4c5b-afae-33f70f7ac83c",
+  "seed": 42,
+  "dialogue_index": 599,
+  "timestamp": "2026-08-19T15:56:14.439872",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1076,
+  "total_sim_completion_tokens": 231,
+  "total_bot_prompt_tokens": 2285,
+  "total_bot_completion_tokens": 385,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a top up that didn't go through.  Why?",
+      "assistant_response": "Sorry about that—was your top up made by card, bank transfer, or cash/cheque? And do you see it as “failed” or “pending” in the app?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_by_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:09.216287",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up and the app shows it as pending.",
+      "assistant_response": "Thanks—if it’s a card top-up showing as **pending**, it usually hasn’t fully completed yet. About how long ago did you make the top up (e.g., under 30 minutes, a few hours, or over 24 hours)?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.16
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:12.287546",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was about two hours ago.",
+      "assistant_response": "Got it—since it was a **card top-up** and is showing **pending** about **2 hours** after, that typically means it hasn’t completed yet. \n\nCan you check the top-up details in the app and tell me whether it says **“pending”** or **“completed”** / **“failed”**? Also, is there a status like **“processing”** or an estimated completion time?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:14.439750",
+      "sim_prompt_tokens": 576,
+      "sim_completion_tokens": 79,
+      "bot_prompt_tokens": 828,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

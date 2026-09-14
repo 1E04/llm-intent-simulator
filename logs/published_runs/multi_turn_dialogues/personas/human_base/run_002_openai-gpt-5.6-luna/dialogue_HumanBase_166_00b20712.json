@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "00b20712-253f-4158-aaed-e2b51fbf68fe",
+  "seed": 42,
+  "dialogue_index": 166,
+  "timestamp": "2026-08-21T12:56:03.663945",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 501,
+  "total_sim_completion_tokens": 134,
+  "total_bot_prompt_tokens": 2229,
+  "total_bot_completion_tokens": 231,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I paid with card and I think there was a fee applied.",
+      "assistant_response": "To help with this, was the fee shown in the card payment itself (like an extra card-payment charge), or are you seeing an additional amount on your statement after the transaction?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:00.689350",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1082,
+      "bot_completion_tokens": 97
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up as an extra amount on my statement, not at the time of the payment.",
+      "assistant_response": "Got it—an extra amount appearing on your statement after the card payment. Was the additional charge labeled as a fee/commission, or does it look like an updated exchange rate amount?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:03.663853",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 1147,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

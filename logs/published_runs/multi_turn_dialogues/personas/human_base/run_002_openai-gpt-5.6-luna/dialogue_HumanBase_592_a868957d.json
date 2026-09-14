@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a868957d-5b47-43bb-9479-51496ffbfb75",
+  "seed": 42,
+  "dialogue_index": 592,
+  "timestamp": "2026-08-21T13:24:19.632727",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 486,
+  "total_sim_completion_tokens": 118,
+  "total_bot_prompt_tokens": 2212,
+  "total_bot_completion_tokens": 192,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The app won't let me top up my account",
+      "assistant_response": "Sorry about that—when you try to top up, do you see an error message or does the app just reject the top up without any charge going through?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.55
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.25
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:17.585630",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 87
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows a “transaction failed” message and nothing gets charged.",
+      "assistant_response": "Got it—if the app shows “transaction failed” and nothing is charged, that sounds like a failed top up. Can you tell me which top up method you’re using (card, bank transfer, or cash/cheque)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:24:19.632681",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 1134,
+      "bot_completion_tokens": 105
+    }
+  ]
+}

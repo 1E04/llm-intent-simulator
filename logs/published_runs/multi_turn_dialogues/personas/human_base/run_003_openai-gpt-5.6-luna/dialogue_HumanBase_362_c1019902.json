@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "c1019902-8597-4ee9-97bb-97fe12c5b05c",
+  "seed": 42,
+  "dialogue_index": 362,
+  "timestamp": "2026-08-21T15:43:55.225901",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3128,
+  "total_sim_completion_tokens": 697,
+  "total_bot_prompt_tokens": 4604,
+  "total_bot_completion_tokens": 765,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hi, I'm buying a flat and I'm trying to get my mortgage to go though. Every time I check I simply get an error message. Is there any way you can help me get this money transferred over. Thanks!",
+      "assistant_response": "Sorry you’re running into that—when you say you get an error message, is it during the bank transfer setup (the transfer is declined/failed), or after you’ve already sent it and it doesn’t arrive?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:43.550630",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 728,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It happens right when I try to set it up – I get the error before the transfer actually goes through.",
+      "assistant_response": "Got it—the error appears when you set up the bank transfer before it’s sent. Can you tell me the exact wording of the error message (or a screenshot), and whether you’re making a bank transfer from your bank to your Revolut account or sending from Revolut to someone else?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:46.846637",
+      "sim_prompt_tokens": 622,
+      "sim_completion_tokens": 208,
+      "bot_prompt_tokens": 804,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The error says “Transfer could not be completed – please try again later.” I’m trying to send the money from my Revolut account to the mortgage lender.",
+      "assistant_response": "Thanks—since it fails right when you try to set it up from Revolut, that sounds like a failed or declined transfer. What’s the exact status shown on the transfer screen (e.g., “failed”, “rejected”, or “pending”)? Also, are you transferring via bank transfer to a UK sort code/account number, or using an international/IBAN transfer?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:49.696207",
+      "sim_prompt_tokens": 712,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 904,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "The screen just shows “failed”. I’m sending it to a UK sort‑code and account number.",
+      "assistant_response": "Thanks—if it shows **“failed”** when you try to set up the UK bank transfer, it’s most likely a **failed transfer**. \n\nTo help narrow down why it failed: can you confirm whether you’re trying to send money to the lender’s bank details that you previously used successfully before, and whether you’re seeing any extra reference/error code details in the transfer history (even a short code or message)? If you tell me those, I can guide you on the next step.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:52.256946",
+      "sim_prompt_tokens": 831,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 1012,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, I’ve used these same lender details before and they worked, and the only extra info I see is the code “ERR123” with the failed message.",
+      "assistant_response": "Thanks—if the transfer is marked **failed** and you see **ERR123**, that points to a **failed bank transfer** setup rather than a timing issue. \n\nTo help fix it, could you tell me: (1) is the transfer amount large or has anything changed (your limits, the lender details, or currency), and (2) are you transferring in **GBP** to the UK sort code/account number (not international/IBAN)?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.15
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:55.225515",
+      "sim_prompt_tokens": 963,
+      "sim_completion_tokens": 195,
+      "bot_prompt_tokens": 1156,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

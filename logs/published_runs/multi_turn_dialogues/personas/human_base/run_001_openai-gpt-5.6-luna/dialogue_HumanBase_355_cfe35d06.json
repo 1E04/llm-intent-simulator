@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cfe35d06-53a1-497b-9bff-ee6358a19d91",
+  "seed": 42,
+  "dialogue_index": 355,
+  "timestamp": "2026-08-19T15:37:44.003297",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 573,
+  "total_sim_completion_tokens": 158,
+  "total_bot_prompt_tokens": 1540,
+  "total_bot_completion_tokens": 327,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm quite confused as to what is going on. There is some odd extra pound charge on my statement in the app that's just listed as pending and doesn't go away since a couple days.",
+      "assistant_response": "Sorry about the confusion—an extra charge showing as “pending” for a couple of days is usually related to a card transaction still processing. Can you confirm whether the pending item is a card payment (merchant name) or a bank transfer/other type, and roughly how much the “extra pound” is?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.27
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:41.200953",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 721,
+      "bot_completion_tokens": 153
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment – the merchant just shows as “unknown” – and it’s for about £1.00.",
+      "assistant_response": "Thanks—if it’s a card payment for about £1 and it’s showing as “pending” with the merchant as “unknown,” it’s commonly a temporary verification charge (often used to confirm the card works) that should drop off automatically after a short time. \n\nHow long has it been pending in the app—roughly 2–3 days or closer to a week?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:44.003194",
+      "sim_prompt_tokens": 573,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 819,
+      "bot_completion_tokens": 174
+    }
+  ]
+}

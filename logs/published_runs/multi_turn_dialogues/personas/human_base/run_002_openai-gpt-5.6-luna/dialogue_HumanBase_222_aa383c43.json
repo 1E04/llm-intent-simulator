@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "aa383c43-04f1-4381-86ad-659fb57a1e88",
+  "seed": 42,
+  "dialogue_index": 222,
+  "timestamp": "2026-08-21T12:59:47.202827",
+  "persona": "HumanBase",
+  "target_intent": "change_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1056,
+  "total_sim_completion_tokens": 380,
+  "total_bot_prompt_tokens": 3421,
+  "total_bot_completion_tokens": 337,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Which cash machines will allow me to change my PIN?",
+      "assistant_response": "Do you mean changing your PIN using an ATM (not setting it the first time)? If yes, which country are you in, so I can tell you which ATM machines support PIN changes?",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.34
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.33
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:41.983088",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in the UK.",
+      "assistant_response": "Thanks—are you looking to **change** your card PIN at an ATM, or **get/reset** your PIN? (If it’s a change: I can confirm which UK ATMs support PIN changes, but I need to know which of those you mean.)",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.32
+        },
+        {
+          "intent": "change_pin",
+          "confidence": 0.31
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:44.545953",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 194,
+      "bot_prompt_tokens": 1133,
+      "bot_completion_tokens": 105
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m looking to change my PIN, not reset it.",
+      "assistant_response": "In the UK, you can usually change your card PIN at supported ATMs (the ATM must support PIN change for your card type). Which card do you have—Visa or Mastercard? Also, are you trying to change it using the same card that’s currently active?",
+      "predicted_intent": "change_pin",
+      "top_3_intents": [
+        {
+          "intent": "change_pin",
+          "confidence": 0.93
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.74
+        },
+        {
+          "intent": "get_pin",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T12:59:47.202730",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 1208,
+      "bot_completion_tokens": 106
+    }
+  ]
+}

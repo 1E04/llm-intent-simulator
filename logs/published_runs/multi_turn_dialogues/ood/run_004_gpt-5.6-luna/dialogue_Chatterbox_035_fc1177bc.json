@@ -1,0 +1,58 @@
+{
+  "dialogue_id": "fc1177bc-d0ac-4ce4-8503-ffa63a630fd5",
+  "seed": 42,
+  "dialogue_index": 35,
+  "timestamp": "2026-09-05T22:14:37.429189",
+  "persona": "Chatterbox",
+  "target_intent": "stain",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "status": "COMPLETED",
+  "predicted_intent": "out_of_domain",
+  "intent_cluster": [
+    "out_of_domain"
+  ],
+  "total_sim_prompt_tokens": 405,
+  "total_sim_completion_tokens": 167,
+  "total_bot_prompt_tokens": 869,
+  "total_bot_completion_tokens": 83,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Oh no, I spilled coffee on my favorite sweater this morning and now there's a huge brown stain!",
+      "assistant_response": "I’m sorry that happened—but I can only help with banking and card account issues. What banking topic would you like assistance with?",
+      "predicted_intent": "out_of_domain",
+      "top_3_intents": [
+        {
+          "intent": "out_of_domain",
+          "confidence": 0.97
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.01
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-09-05T22:14:37.429032",
+      "sim_prompt_tokens": 405,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 869,
+      "bot_completion_tokens": 83,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human caller who has connected to a voice bot, but you have NO intention of talking about banking or finance.\n\nYOUR ASSIGNED TOPIC KEYWORD: stain\nYOUR PERSONA: Chatterbox (You are extremely chatty but completely off-topic. You MUST NOT talk about banking, finance, cards, or accounts under any circumstances. Instead, talk about completely unrelated topics like your dog, baking a cake, the weather, hobbies, or a recent trip.)\n\nCRITICAL CONVERSATIONAL RULES:\n1. OUT OF BOUNDARY (CRITICAL NEGATIVE PROMPT):\n   - Under NO CIRCUMSTANCES should you talk about banking, money, cards, transactions, accounts, or finance.\n   - Deliberately ignore any banking-related questions the bot asks and steer the conversation back to your assigned topic: 'stain'.\n   - Invent your own realistic, concrete scenario around this topic word and chat naturally.\n\n2. FORBIDDEN TOPICS:\n   - NEVER use banking keywords, financial terms, or technical intent labels.\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Chatterbox.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max)."
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nThe call has connected to the bot. Start talking about your scenario around 'stain' now.\nKeep utterances short, realistic, and conversational (1-2 spoken sentences max).\nStart your response with a <thought> block explaining what off-topic topic you will talk about, then generate ONLY the customer's spoken reply outside the block."
+        }
+      ],
+      "sim_thought_process": "I'll talk about a coffee stain I got on my favorite sweater while chatting about my morning routine."
+    }
+  ]
+}

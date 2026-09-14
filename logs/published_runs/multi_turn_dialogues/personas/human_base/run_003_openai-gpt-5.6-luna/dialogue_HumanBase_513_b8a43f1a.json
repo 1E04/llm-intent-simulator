@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b8a43f1a-17a7-449c-ba05-bfd8664d9adf",
+  "seed": 42,
+  "dialogue_index": 513,
+  "timestamp": "2026-08-21T15:46:21.691654",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1232,
+  "total_sim_completion_tokens": 260,
+  "total_bot_prompt_tokens": 2314,
+  "total_bot_completion_tokens": 433,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What are the ways for others to transfer me money?",
+      "assistant_response": "Sure—how would you like to receive money from others (bank transfer, card transfer, or another method)? If you tell me what country you’re in and whether it’s a bank transfer or card, I’ll give the exact options and details they need.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.84
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.12
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:15.947405",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in the US and I'd prefer a bank transfer.",
+      "assistant_response": "Got it—you’re in the US and want to receive money via a bank transfer. To give you the correct details, are you asking about (1) the bank transfer information you should share with the sender (account/routing details), or (2) whether incoming US transfers are supported in specific currencies?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.64
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.33
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:18.590595",
+      "sim_prompt_tokens": 575,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I need the bank transfer details I should give the sender.",
+      "assistant_response": "To receive money by bank transfer, you’ll share your personal bank transfer details with the sender (for US transfers this is typically your account/routing information, plus any reference/beneficiary details shown in the app). Can you confirm are you using a personal bank transfer into your Revolut account, or are you asking for details to receive an international transfer (SWIFT/IBAN)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.08
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:21.691608",
+      "sim_prompt_tokens": 657,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 851,
+      "bot_completion_tokens": 171
+    }
+  ]
+}

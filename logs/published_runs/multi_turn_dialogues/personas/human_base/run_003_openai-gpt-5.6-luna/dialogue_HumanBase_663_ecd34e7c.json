@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "ecd34e7c-6218-4019-b120-f72f9dd609b9",
+  "seed": 42,
+  "dialogue_index": 663,
+  "timestamp": "2026-08-21T15:49:43.841965",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1170,
+  "total_sim_completion_tokens": 258,
+  "total_bot_prompt_tokens": 2265,
+  "total_bot_completion_tokens": 397,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need to find out why my transfer didn't get there.",
+      "assistant_response": "I’m sorry about that—just to clarify, is the transfer showing as completed in your account, or does it show as pending/failed?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.6
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.23
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:38.700597",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed on my end.",
+      "assistant_response": "Thanks—if it’s marked completed on your side, the most likely issue is that the recipient hasn’t received it yet. Can you confirm whether the transfer is marked completed for a specific recipient (their name/account), and roughly how long ago you sent it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:41.356964",
+      "sim_prompt_tokens": 550,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 743,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s for John Doe (account ending 1234) and I sent it yesterday.",
+      "assistant_response": "Got it—if the transfer is marked completed on your side but John Doe hasn’t received it yet (sent yesterday), the issue is usually that it hasn’t been credited to the recipient’s account. Could you tell me the transfer type (bank transfer/ACH or international) and whether the recipient details were entered correctly (name + account ending 1234)?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:43.841915",
+      "sim_prompt_tokens": 620,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 826,
+      "bot_completion_tokens": 130
+    }
+  ]
+}

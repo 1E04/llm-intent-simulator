@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "3427b6c9-0f2e-4474-b099-421edb76c99d",
+  "seed": 42,
+  "dialogue_index": 567,
+  "timestamp": "2026-08-19T15:54:04.792829",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 511,
+  "total_sim_completion_tokens": 112,
+  "total_bot_prompt_tokens": 1459,
+  "total_bot_completion_tokens": 251,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are there any sort of fees involved for top of transfers?",
+      "assistant_response": "Sure—are you asking about fees for (1) making a bank transfer to someone else, or (2) topping up your account by bank transfer? If you tell me which one, I can confirm the exact charges.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:54:02.539854",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about topping up my account by bank transfer.",
+      "assistant_response": "Yes—there can be a fee for topping up by bank transfer, depending on the transfer type/currency and your bank’s charges. To confirm the exact fee, what country are you making the transfer from, and which currency are you topping up in?",
+      "predicted_intent": "top_up_by_bank_transfer_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.09
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:54:04.792782",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 112,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

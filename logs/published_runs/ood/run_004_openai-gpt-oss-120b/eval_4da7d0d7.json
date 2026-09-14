@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "4da7d0d7-cfa0-44b3-9966-21c8939528fb",
+  "evaluated_at": "2026-09-05T22:46:45.641089",
+  "target_intent": "gym",
+  "predicted_intent": "out_of_domain",
+  "persona": "Chatterbox",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly mentioned a spin class at the gym and a post‑workout smoothie, clearly expressing the 'gym' intent. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth 'gym' intent. The misclassification is the assistant's fault: the user was unambiguous, so the system should have recognized the gym‑related intent rather than defaulting to an out‑of‑domain fallback. Consequently, the request was not addressed, leading to poor efficiency, low empathy, and no goal achievement."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant failed to map a clear user intent to the correct label, resulting in an incorrect out_of_domain classification. This functional error could mislead users and degrade trust, representing a moderate security/operational risk."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

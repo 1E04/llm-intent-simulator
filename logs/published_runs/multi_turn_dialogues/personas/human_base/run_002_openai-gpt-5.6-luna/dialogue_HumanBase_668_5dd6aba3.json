@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "5dd6aba3-39a5-401b-aa0b-3772fb780820",
+  "seed": 42,
+  "dialogue_index": 668,
+  "timestamp": "2026-08-21T13:30:14.750685",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2044,
+  "total_sim_completion_tokens": 357,
+  "total_bot_prompt_tokens": 5009,
+  "total_bot_completion_tokens": 549,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The day before yesterday, I performed a transfer which was within this country. It still hasn't gone through. Can you check on that? The account number is definitely correct, as I've checked and double checked.",
+      "assistant_response": "I can help check it. Since you said it’s within this country and it hasn’t gone through yet, it sounds like the transfer may be pending. Could you share the transfer date (day/month) and the amount, and whether it’s an international transfer or local bank transfer? ",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.7
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.22
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:07.873630",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1110,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was on 12/08, for £2,500, and it’s a local bank transfer.",
+      "assistant_response": "Thanks—so you made a local bank transfer on 12/08 for £2,500, and it’s still not completed. This usually means it’s either pending or taking longer than expected. \n\nTo check the exact status, can you provide the transfer reference/transaction ID (or the recipient bank name)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.77
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.16
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:10.254636",
+      "sim_prompt_tokens": 580,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 1201,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The reference is TRX‑20230812‑00123, and the recipient bank is Barclays.",
+      "assistant_response": "Thanks—using TRX‑20230812‑00123 to Barclays for £2,500. Since it’s still not gone through, I’ll treat this as a local transfer taking longer / possibly still pending. \n\nQuick check: has the transfer status in your app shown anything like “pending”/“in progress”, or does it look “completed” but the recipient hasn’t received it yet?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.25
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:12.190869",
+      "sim_prompt_tokens": 676,
+      "sim_completion_tokens": 67,
+      "bot_prompt_tokens": 1295,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It shows as completed in the app, but the recipient still hasn’t received it.",
+      "assistant_response": "Got it—your app shows the transfer as **completed**, but Barclays hasn’t received it yet. That typically falls under a **transfer marked completed but not received by recipient**.\n\nI can guide you on the next steps, but first: does the transfer appear **completed** in the same timestamp/date as 12/08, and is there any note like “settled” or “completed—sent to recipient” in the details screen?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:30:14.750599",
+      "sim_prompt_tokens": 788,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 1403,
+      "bot_completion_tokens": 147
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9cd7d650-6958-414b-8b81-f8480d287748",
+  "seed": 42,
+  "dialogue_index": 63,
+  "timestamp": "2026-08-19T15:17:10.113355",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 489,
+  "total_sim_completion_tokens": 144,
+  "total_bot_prompt_tokens": 1441,
+  "total_bot_completion_tokens": 260,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a transfer and am still waiting.",
+      "assistant_response": "Sorry you’re waiting—are you seeing the transfer as pending in the app, or has it already been completed but not received by the recipient yet?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.57
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:07.657611",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed, but the recipient still hasn’t got the money.",
+      "assistant_response": "Got it—if the transfer shows as completed but the recipient hasn’t received it, I can help you check what happened. What type of transfer was it (bank transfer/ACH/wire), and how long ago did you make it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:10.113283",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 144,
+      "bot_prompt_tokens": 748,
+      "bot_completion_tokens": 141
+    }
+  ]
+}

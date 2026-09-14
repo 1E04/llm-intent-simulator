@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6580ba7f-37b2-4496-b2ee-459ed791c1d6",
+  "seed": 42,
+  "dialogue_index": 672,
+  "timestamp": "2026-08-21T15:49:59.037696",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1154,
+  "total_sim_completion_tokens": 292,
+  "total_bot_prompt_tokens": 2271,
+  "total_bot_completion_tokens": 373,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When will a transfer reach my account?",
+      "assistant_response": "Could you tell me what type of transfer you mean—bank transfer (from another bank) or an internal transfer to your account—and whether it’s already marked as pending?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.77
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.15
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:54.094657",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 88
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a bank transfer from another bank and it isn’t showing as pending.",
+      "assistant_response": "Thanks—so it’s an external bank transfer and it isn’t showing as pending. What country is the sending bank in, and roughly when did you send it (date/time)? That will help me estimate when it should arrive.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.12
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:56.850436",
+      "sim_prompt_tokens": 541,
+      "sim_completion_tokens": 209,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The sending bank is in the United States and I sent it yesterday around 3 PM.",
+      "assistant_response": "For a US-to-your-account bank transfer sent yesterday around 3 PM, it typically takes about 1–3 business days to arrive (sometimes up to 5 depending on the sending bank and weekends/holidays). If you don’t see it after the next business day or two, tell me the transfer amount and the reference/confirmation details you have, and we’ll check what’s going on.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.08
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:59.037633",
+      "sim_prompt_tokens": 613,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

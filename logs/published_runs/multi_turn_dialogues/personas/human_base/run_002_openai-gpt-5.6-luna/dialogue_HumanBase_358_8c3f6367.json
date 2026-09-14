@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "8c3f6367-60a6-4d75-ac0c-9d6bada17232",
+  "seed": 42,
+  "dialogue_index": 358,
+  "timestamp": "2026-08-21T13:08:29.037077",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1690,
+  "total_sim_completion_tokens": 368,
+  "total_bot_prompt_tokens": 4706,
+  "total_bot_completion_tokens": 532,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an extra $1 charge",
+      "assistant_response": "I can help with that—was the extra $1 charge showing on your card statement after a card payment, or is it related to an exchange/ATM transaction?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.26
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:21.259351",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed up on my statement after a card purchase.",
+      "assistant_response": "Got it—an extra $1 showing on your statement after a card purchase is usually a small preauthorisation/verification hold. Can you confirm whether the $1 shows as “pending” or “completed,” and whether the final purchase amount also posted normally?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:23.618163",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 196,
+      "bot_prompt_tokens": 1130,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still pending, and the rest of the purchase amount posted normally.",
+      "assistant_response": "Thanks—if the $1 is still pending while the rest of the purchase posted normally, it’s most likely a preauthorisation/verification hold. It should fall off automatically; if you don’t see it removed after a few days, tell me your card type (debit/credit) and the merchant name.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:27.208582",
+      "sim_prompt_tokens": 558,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 1207,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It's a credit card, and the merchant was XYZ Store.",
+      "assistant_response": "Thanks—since you’re seeing an extra $1 from a card purchase (XYZ Store) that’s still pending on your credit card, this is typically a preauthorisation/verification hold. The $1 should disappear automatically once the final transaction settles. If it’s still there after 7 business days, tell me and I’ll help you escalate/check what happened.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.92
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:29.036972",
+      "sim_prompt_tokens": 647,
+      "sim_completion_tokens": 82,
+      "bot_prompt_tokens": 1293,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

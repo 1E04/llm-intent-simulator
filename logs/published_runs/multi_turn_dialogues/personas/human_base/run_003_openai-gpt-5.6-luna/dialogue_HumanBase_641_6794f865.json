@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6794f865-c3aa-4bf0-9de9-4e035042f3ac",
+  "seed": 42,
+  "dialogue_index": 641,
+  "timestamp": "2026-08-21T15:49:07.959829",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 560,
+  "total_sim_completion_tokens": 224,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 249,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My receipt shows an extra charge on my transfer, why is this?",
+      "assistant_response": "Could you confirm whether the extra charge is a transfer fee showing on the receipt, or is it related to currency conversion (exchange rate) on the transfer? If you can, tell me the exact wording or amount shown.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.62
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:04.338323",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says “Transfer fee: $5.00” on the receipt.",
+      "assistant_response": "Thanks—if your receipt specifically says “Transfer fee: $5.00,” that means we charged a transfer fee for that transaction. If you share the transfer type (bank transfer/recipient) and whether it was domestic or international, I can help confirm what fee applies.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:07.959674",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 224,
+      "bot_prompt_tokens": 767,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

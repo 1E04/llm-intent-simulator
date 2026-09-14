@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c7b2805e-f0ea-4582-949c-c02c27ab974b",
+  "seed": 42,
+  "dialogue_index": 394,
+  "timestamp": "2026-08-21T15:44:21.708839",
+  "persona": "HumanBase",
+  "target_intent": "get_pin",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 529,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 1450,
+  "total_bot_completion_tokens": 282,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why isn't my PIN available yet?",
+      "assistant_response": "Do you mean your PIN hasn’t been generated/available in the app yet, or does the system say your PIN is blocked? If you tell me which one, I can guide you to the right fix.",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.18
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:44:19.082979",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the first one – the PIN just isn’t showing up in the app.",
+      "assistant_response": "Got it — if your PIN isn’t showing up in the app yet (and it isn’t blocked), it usually means the PIN hasn’t been issued/finished setting up. Please check that your card is fully set up in the app, then try to generate/request the PIN again under your card menu. If you still don’t see it, confirm whether you’re using the same phone/account as when the card was ordered; I can then help with the next troubleshooting step.",
+      "predicted_intent": "get_pin",
+      "top_3_intents": [
+        {
+          "intent": "get_pin",
+          "confidence": 0.92
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.06
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:44:21.708740",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 759,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

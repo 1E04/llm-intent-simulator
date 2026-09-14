@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "efaabe31-5485-4462-a237-83bf87571a6f",
+  "seed": 42,
+  "dialogue_index": 266,
+  "timestamp": "2026-08-21T13:02:20.221427",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 545,
+  "total_sim_completion_tokens": 115,
+  "total_bot_prompt_tokens": 2271,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My new card keeps getting declined. I was very excited to use it for the first time today. Why is this doing this?",
+      "assistant_response": "Sorry about that—if your new card is being declined when you try to pay, it usually points to a card/transaction decline rather than card delivery. Can I ask: is the decline happening for an in-store card payment, an online payment, or an ATM cash withdrawal?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.19
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:17.823731",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1095,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an in‑store purchase—I tried to pay at a shop.",
+      "assistant_response": "Thanks—since it was an in-store card payment, this is most likely a **declined card payment** issue. A few quick checks: was the payment attempted using the chip/contactless correctly, and does the shop try multiple times or change the amount? If you tell me the exact decline message (e.g., “card declined” or any error text) and whether you used chip or contactless, I can guide you on the next steps.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:20.221383",
+      "sim_prompt_tokens": 545,
+      "sim_completion_tokens": 115,
+      "bot_prompt_tokens": 1176,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "61e85c35-91de-487c-b5bb-49b77ff1c90f",
+  "seed": 42,
+  "dialogue_index": 89,
+  "timestamp": "2026-08-21T12:50:54.929302",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2707,
+  "total_sim_completion_tokens": 562,
+  "total_bot_prompt_tokens": 6341,
+  "total_bot_completion_tokens": 783,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to transfer money but it said it wasn't possible? I've done this before and it worked why isn't it working now?",
+      "assistant_response": "Sorry about that—when a transfer says it isn’t possible, it’s usually a declined or failed transfer. Can you tell me what exact error message you saw (or what the app screen said), and whether this was a bank transfer or card-to-card transfer?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.7
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:44.991641",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1094,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just showed “Transfer not possible,” and I was trying to do a bank transfer.",
+      "assistant_response": "Thanks—“Transfer not possible” for a bank transfer is most often a declined transfer. To narrow it down, can you check the app for any additional text or reason code under that message (or the status: declined/failed/pending)?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.17
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:47.071536",
+      "sim_prompt_tokens": 540,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 1175,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “Transfer not possible” – no extra code or status, just that line.",
+      "assistant_response": "Got it—if the only message is “Transfer not possible” with no extra code, it most commonly points to a declined transfer (e.g., recipient/bank details or transfer criteria). To help pinpoint it: is this an international transfer or domestic, and is it a first-time transfer to that recipient (new beneficiary) or someone you’ve sent to before?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:49.157320",
+      "sim_prompt_tokens": 617,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 1253,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was a domestic transfer to a new beneficiary I haven’t sent to before.",
+      "assistant_response": "Thanks—domestic transfer to a new beneficiary with only “Transfer not possible” most likely means the transfer was declined (often due to beneficiary details or eligibility checks). If you open the transfer in the app, do you see it marked as declined/failed/pending anywhere, or any hint like “beneficiary not verified”? If not, I can guide you on what to check (beneficiary name/account details and verification steps).",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:51.852815",
+      "sim_prompt_tokens": 719,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 1352,
+      "bot_completion_tokens": 178
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No, it just shows that same line—nothing else. What do I need to check?",
+      "assistant_response": "If you’re seeing only “Transfer not possible” for a domestic transfer to a new beneficiary, here’s what to check in the app:\n1) Beneficiary details: make sure the beneficiary name matches the bank record exactly, and that the account number/sort code are correct (even one digit off can trigger this).\n2) Beneficiary added/verification: since it’s a new beneficiary, confirm the beneficiary is fully set up/approved in the app (sometimes there’s a verification/approval step).\n3) Transfer eligibility: double-check you’re using the correct bank transfer type (your local domestic format), and that the transfer amount/currency meet the app’s requirements.\n\nIf you tell me the transfer amount and the beneficiary’s bank country (still domestic, but which country), I can suggest the most likely cause and next steps.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.22
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:54.929217",
+      "sim_prompt_tokens": 831,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 1467,
+      "bot_completion_tokens": 227
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "25ffa60a-6a64-4074-934b-4fef6871c509",
+  "seed": 42,
+  "dialogue_index": 91,
+  "timestamp": "2026-08-19T15:19:29.637669",
+  "persona": "HumanBase",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1047,
+  "total_sim_completion_tokens": 256,
+  "total_bot_prompt_tokens": 2272,
+  "total_bot_completion_tokens": 384,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "If I make a transaction can I cancel it?",
+      "assistant_response": "Do you mean canceling a bank transfer, or canceling a card payment (a purchase)? Also, is the transaction showing as pending or already completed?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:25.194941",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 119
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card purchase – it’s still showing as pending.",
+      "assistant_response": "Thanks—if it’s a card purchase that’s still pending, you generally can’t manually cancel it like a transfer. It will either complete or drop off/expire on its own. Are you able to share the merchant name and roughly how long it’s been pending?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:27.452857",
+      "sim_prompt_tokens": 485,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 748,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s from the electronics shop downtown, and it’s been pending for about two days.",
+      "assistant_response": "Got it—since it’s a card purchase that’s still pending after about two days, it typically can’t be cancelled by you. Pending card payments usually complete or then fall off automatically within a few days (often up to ~7 days, depending on the merchant/bank). If you tell me whether you’re using a physical or virtual card and the exact status text in the app (e.g., “pending”, “authorised”, or a date), I can help you check the next steps.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.92
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:29.637531",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 84,
+      "bot_prompt_tokens": 830,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

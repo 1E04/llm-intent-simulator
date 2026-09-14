@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "c526f548-c462-4dce-900a-52a904384ad9",
+  "seed": 42,
+  "dialogue_index": 63,
+  "timestamp": "2026-08-21T15:38:19.453925",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1921,
+  "total_sim_completion_tokens": 478,
+  "total_bot_prompt_tokens": 3254,
+  "total_bot_completion_tokens": 582,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made a transfer and am still waiting.",
+      "assistant_response": "Sorry you’re waiting—are you seeing the transfer as pending/in progress, or has it failed (e.g., no money received and a failed status/message)? Also, when did you make the transfer?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.57
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.26
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:10.960197",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending, and I made the transfer yesterday.",
+      "assistant_response": "Thanks—if it’s still showing as pending since yesterday, it’s most likely a normal processing delay. Could you tell me whether the transfer was a bank transfer (to/from a bank account) or a card-to-card/other internal transfer? And do you have a transfer reference/ID or the exact pending status message you’re seeing?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.2
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:13.275323",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a bank transfer – reference 123456789 – and the status just says “pending.”",
+      "assistant_response": "Got it—bank transfer, reference 123456789, status shows “pending.” Can you confirm: is it pending on the sender side or has the recipient side not received the funds yet? Also, are you expecting the transfer to be credited today or is it outside the usual transfer timeframe for your transfer type?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.21
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:16.539580",
+      "sim_prompt_tokens": 640,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 856,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I think it’s still pending on my side—I was hoping it would be credited today.",
+      "assistant_response": "Thanks—since it’s a bank transfer showing “pending” on your side and you made it yesterday, it’s likely still processing. Transfers can take longer depending on cut-off times and the recipient bank. For the quickest check: is the recipient expecting it today, and do you know if this was sent as a standard transfer or an international/SEPA one? If you share that, I can tell you the typical timing.",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:38:19.453763",
+      "sim_prompt_tokens": 733,
+      "sim_completion_tokens": 181,
+      "bot_prompt_tokens": 947,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

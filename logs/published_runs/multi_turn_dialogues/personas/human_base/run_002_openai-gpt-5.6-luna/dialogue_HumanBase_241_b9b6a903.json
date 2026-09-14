@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b9b6a903-1c7d-4341-a264-0f51db402b97",
+  "seed": 42,
+  "dialogue_index": 241,
+  "timestamp": "2026-08-21T13:01:09.932626",
+  "persona": "HumanBase",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1095,
+  "total_sim_completion_tokens": 270,
+  "total_bot_prompt_tokens": 3477,
+  "total_bot_completion_tokens": 379,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are contactless payments enabled on my new card?",
+      "assistant_response": "I can help with that. Are you trying to pay contactlessly and it’s not working, or you just want to confirm whether contactless is enabled on your new card?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.74
+        },
+        {
+          "intent": "activate_my_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_linking",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:01:05.133129",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I tried to pay at a shop and the terminal kept rejecting my card. I just want to know if contactless is actually active on it.",
+      "assistant_response": "Got it. Since the shop terminal rejected your card and you want to confirm contactless is active, I’ll check the contactless status for your new card—but first, can you tell me: did you try tapping (contactless) specifically, or was it inserted/swiped? (And which error did the terminal show, if any?)",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.16
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:01:07.638535",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 167,
+      "bot_prompt_tokens": 1153,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I was tapping it, and the terminal just said “declined”.",
+      "assistant_response": "Thanks—since you were tapping contactless and the terminal said “declined,” the most likely issue is that contactless isn’t working on your card. I can guide you to fix that. Are you getting the same “declined” when you try the chip/insert payment, or is it only when you tap?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.9
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:01:09.932563",
+      "sim_prompt_tokens": 601,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 1245,
+      "bot_completion_tokens": 124
+    }
+  ]
+}

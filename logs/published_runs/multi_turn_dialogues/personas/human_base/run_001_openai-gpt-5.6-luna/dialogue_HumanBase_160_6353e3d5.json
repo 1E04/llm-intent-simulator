@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6353e3d5-c468-4e1f-bbbb-4226de599674",
+  "seed": 42,
+  "dialogue_index": 160,
+  "timestamp": "2026-08-19T15:24:51.243486",
+  "persona": "HumanBase",
+  "target_intent": "card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1052,
+  "total_sim_completion_tokens": 242,
+  "total_bot_prompt_tokens": 2274,
+  "total_bot_completion_tokens": 418,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Nothing goes through on my card.",
+      "assistant_response": "I’m sorry—when you say nothing goes through, do you mean card payments are getting declined, or the card isn’t working at all (including cash withdrawals)? Also, are you seeing any error message from the merchant or ATM?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.7
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:24:46.319494",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Payments just keep getting declined, no specific error message shows up.",
+      "assistant_response": "Thanks—if payments are being declined with no clear error message, are you trying to pay online or in a store/contactless, and has the card been used successfully before?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:24:48.738042",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’m trying it in stores, contactless, and it worked fine before.",
+      "assistant_response": "Got it—store contactless payments are now being declined. I can help troubleshoot: first, has your card been used successfully recently (in the last few days), and are you trying a specific merchant or multiple stores? Also, do you see the decline message at the terminal (e.g., “try another card”/“payment declined”)? It helps confirm whether it’s a general decline vs. contactless-only.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.08
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:24:51.243364",
+      "sim_prompt_tokens": 555,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 822,
+      "bot_completion_tokens": 144
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "07938bf8-d7a1-48ac-8ff8-56c848962210",
+  "seed": 42,
+  "dialogue_index": 627,
+  "timestamp": "2026-08-19T15:58:20.187147",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 501,
+  "total_sim_completion_tokens": 150,
+  "total_bot_prompt_tokens": 1452,
+  "total_bot_completion_tokens": 301,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I top up my card using your app? I'm new to this.",
+      "assistant_response": "Sure—I can help. Do you want to top up using a bank card (debit/credit card) inside the app, or by bank transfer?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:17.698566",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’d like to use my card inside the app.",
+      "assistant_response": "Great— to top up using your card in the app: open the app → tap Wallet/Top up → select “Card” → choose the amount → enter your card details (or select a saved card) → confirm with any 3D Secure/verification prompt. \n\nBefore you do it: have you already added your card in the app, or is it the first time?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:20.187000",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 150,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 174
+    }
+  ]
+}

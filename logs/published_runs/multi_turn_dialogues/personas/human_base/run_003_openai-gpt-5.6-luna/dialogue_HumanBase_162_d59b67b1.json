@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "d59b67b1-c4dc-45dc-9973-1a9bdb29d002",
+  "seed": 42,
+  "dialogue_index": 162,
+  "timestamp": "2026-08-21T15:40:18.441315",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2157,
+  "total_sim_completion_tokens": 442,
+  "total_bot_prompt_tokens": 3280,
+  "total_bot_completion_tokens": 578,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was I charged a fee when I paid with card?",
+      "assistant_response": "Sorry about that—was the fee charged because of a currency exchange (paid in a different currency), or did you see an extra card/payment fee on the same charge amount? If you can, tell me the currency of the merchant and the amount you were charged.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:09.230653",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The merchant was in USD and I was charged $50.",
+      "assistant_response": "Thanks—since the merchant was in USD, the most likely cause is an exchange charge for converting the payment currency. Can you confirm what currency your card account is in (e.g., GBP/EUR), and how much extra you paid in fees (the difference between the merchant amount and the amount you were charged)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:12.070761",
+      "sim_prompt_tokens": 630,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "My card is in GBP and I was charged about £2 extra.",
+      "assistant_response": "Got it: merchant in USD, your card is in GBP, and you were charged about £2 extra. That typically points to an exchange charge for the USD→GBP conversion. Do you want to check the exact exchange/fee details for that specific card payment (date and merchant name), or would you like general info on how these card exchange fees are calculated?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.11
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:15.809582",
+      "sim_prompt_tokens": 715,
+      "sim_completion_tokens": 223,
+      "bot_prompt_tokens": 858,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, please check the exact exchange and fee details for that payment.",
+      "assistant_response": "Sure—I can help you check the exact exchange and fee details for that card payment. Please share the merchant name and the date of the transaction (and the card payment amount and any reference/last 4 digits if you have them).",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:18.441270",
+      "sim_prompt_tokens": 812,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 955,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

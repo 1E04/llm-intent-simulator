@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d92f90f5-391e-4712-bb1b-231587a346a9",
+  "seed": 42,
+  "dialogue_index": 265,
+  "timestamp": "2026-08-21T13:02:16.405174",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 487,
+  "total_sim_completion_tokens": 135,
+  "total_bot_prompt_tokens": 2210,
+  "total_bot_completion_tokens": 271,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card was declined in a shop",
+      "assistant_response": "Sorry about that—was the card payment declined with a message like “card not authorized/declined” at the terminal, or did the shop say the transaction wasn’t recognized?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.15
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:12.308200",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed a “not authorized” message on the terminal.",
+      "assistant_response": "Got it—if the terminal showed “not authorized,” that usually means the card payment was declined. Can you tell me: was it an offline/EMV chip transaction or a contactless (tap) payment?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:02:16.405053",
+      "sim_prompt_tokens": 487,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 1134,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

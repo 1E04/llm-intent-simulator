@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "75586f2c-bd58-4d13-84c5-62c2b6a51eb6",
+  "seed": 42,
+  "dialogue_index": 96,
+  "timestamp": "2026-08-21T12:51:32.300414",
+  "persona": "HumanBase",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1125,
+  "total_sim_completion_tokens": 361,
+  "total_bot_prompt_tokens": 3495,
+  "total_bot_completion_tokens": 448,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I want to go back on what I did this morning",
+      "assistant_response": "I can help, but I need a quick detail: what did you do this morning—was it a transfer, a card payment, or a top up? If you tell me which one (and the amount or transaction reference if you have it), I’ll guide you on how to reverse it.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.34
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.31
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:26.873947",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a transfer of $250 to John, reference 123456.",
+      "assistant_response": "Got it—you sent a $250 transfer to John, reference 123456. Do you want to cancel the transfer (stop it if it’s still pending), or are you saying it went through but John hasn’t received it? If you check the status in the app (e.g., Pending/Completed), tell me what it shows.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:29.736292",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 208,
+      "bot_prompt_tokens": 1165,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s still showing as pending.",
+      "assistant_response": "Thanks—if the transfer is still showing as *pending*, you may be able to cancel it. Would you like me to guide you through cancelling the transfer for reference 123456, or are you specifically trying to make sure it completes and reaches John?",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.09
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:32.300338",
+      "sim_prompt_tokens": 609,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 1250,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

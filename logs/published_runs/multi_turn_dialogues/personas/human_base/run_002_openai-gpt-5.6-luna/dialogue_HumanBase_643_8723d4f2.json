@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "8723d4f2-73ae-467d-8530-a8352e3fb4ef",
+  "seed": 42,
+  "dialogue_index": 643,
+  "timestamp": "2026-08-21T13:27:34.717181",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3007,
+  "total_sim_completion_tokens": 504,
+  "total_bot_prompt_tokens": 6558,
+  "total_bot_completion_tokens": 757,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need someone to alert me as to what's going on. I had transferred an amount but the receiver is saying that the amount is somewhat less than what I sent over. I now have to make another transfer to make up the difference.",
+      "assistant_response": "I’m sorry about that—this sounds like either the recipient received less than expected (often due to transfer fees or deductions), or the transfer didn’t fully complete. Can you tell me: did the recipient receive a partial amount (and you have the transfer reference/transaction ID), or did they say they received nothing at all?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.56
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.29
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:25.860551",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1116,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They received a smaller amount, not zero. I have the reference number: 123456789.",
+      "assistant_response": "Thanks—since they received less than you sent (not zero), it’s most likely due to transfer fees/deductions or an exchange/processing issue on the receiving side.\n\nI can help investigate with the reference number 123456789. Could you confirm whether you sent it as a bank transfer (and which transfer method/country, if you know it)—or was it a card-to-card transfer inside the app?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.56
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.31
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:28.288284",
+      "sim_prompt_tokens": 597,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 1212,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a bank transfer, domestic within the US.",
+      "assistant_response": "Got it—domestic US bank transfer, and the recipient received a smaller amount (not zero). The most common reason is that a transfer fee or deduction reduced what they received.\n\nTo check what happened with reference 123456789, can you tell me the exact amount you sent and the amount the recipient received?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.7
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:30.508668",
+      "sim_prompt_tokens": 711,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 1317,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I sent $500, and they say they only got $485.",
+      "assistant_response": "Thanks—if you sent $500 and the recipient received $485, that $15 difference strongly suggests a fee or deduction on the transfer. I can look into what was charged for reference 123456789. \n\nCan you confirm whether the $500 was the amount debited from your balance (i.e., you sent $500 total), or did you mean $500 was the amount you intended to send to the recipient?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:32.352948",
+      "sim_prompt_tokens": 795,
+      "sim_completion_tokens": 74,
+      "bot_prompt_tokens": 1404,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I was debited $500 from my account.",
+      "assistant_response": "Understood—if you were debited $500 and the recipient received $485, the $15 shortfall is most consistent with a transfer fee/deduction (not a failure), for reference 123456789.\n\nTo confirm the exact cause, can you check whether the recipient’s bank credited them as a US domestic transfer and whether you chose any add-ons/beneficiary fee options (e.g., SHA/OUR/BEN) when sending?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.17
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:34.717101",
+      "sim_prompt_tokens": 904,
+      "sim_completion_tokens": 160,
+      "bot_prompt_tokens": 1509,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

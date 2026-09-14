@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "10532e88-67dc-4a4d-af2f-395ea54a8849",
+  "seed": 42,
+  "dialogue_index": 69,
+  "timestamp": "2026-08-21T12:49:26.962919",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1074,
+  "total_sim_completion_tokens": 314,
+  "total_bot_prompt_tokens": 3432,
+  "total_bot_completion_tokens": 355,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why doesn't it show that I did a balance transfer?",
+      "assistant_response": "It sounds like your balance transfer isn’t showing up yet. Is the transfer currently marked as pending, or does it show as completed/failed in your transfer history?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.63
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.24
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:22.370608",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed, but the balance still hasn’t changed.",
+      "assistant_response": "Got it—if the transfer is marked as completed but your balance hasn’t changed, that usually points to a balance update delay or a bank-transfer synchronization issue. Can you confirm whether this is a bank transfer into your account (incoming) or a transfer you sent out (outgoing)?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:24.549251",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 1136,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s an incoming transfer – I moved money into my account.",
+      "assistant_response": "Thanks—since it’s an incoming bank transfer marked as completed but your balance didn’t change, this is typically a balance update delay. Could you tell me when the transfer was marked completed (today/within 24 hours, or longer) and roughly how much was transferred?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.07
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:26.962784",
+      "sim_prompt_tokens": 577,
+      "sim_completion_tokens": 180,
+      "bot_prompt_tokens": 1216,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c1fa56c0-ec47-4123-b454-97843d687e2a",
+  "seed": 42,
+  "dialogue_index": 518,
+  "timestamp": "2026-08-21T15:46:32.724310",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1210,
+  "total_sim_completion_tokens": 337,
+  "total_bot_prompt_tokens": 2307,
+  "total_bot_completion_tokens": 411,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Is my salary eligible for this?",
+      "assistant_response": "Sure—could you tell me which country and currency your salary is paid in, and whether you mean eligibility for getting salary payments into your account (or for a specific feature like salary payments)?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.36
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.26
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:26.677457",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m paid in the UK, in GBP, and I’m asking if I can receive my salary into my account.",
+      "assistant_response": "Thanks—just to confirm, you want to know whether you can receive salary payments from the UK into your GBP account (i.e., bank transfer/ACH to your account), right? If yes, what type of payment are you expecting—UK Faster Payments (bank transfer) or an employer file (BACS)? That will help me confirm eligibility.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.72
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.18
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:29.675796",
+      "sim_prompt_tokens": 553,
+      "sim_completion_tokens": 181,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s a regular Faster Payments transfer.",
+      "assistant_response": "Yes—if your salary is sent to your account as a UK Faster Payments transfer in GBP, you should be able to receive it. If you tell me whether you’re receiving it to your personal IBAN/account details (and the exact transfer currency is GBP), I can confirm what you need to provide to your employer.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.88
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:32.724085",
+      "sim_prompt_tokens": 657,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 853,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

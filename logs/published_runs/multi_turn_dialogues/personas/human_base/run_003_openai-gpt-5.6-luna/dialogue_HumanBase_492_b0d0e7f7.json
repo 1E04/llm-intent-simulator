@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b0d0e7f7-b029-42d0-8884-a74a2060e7bf",
+  "seed": 42,
+  "dialogue_index": 492,
+  "timestamp": "2026-08-21T15:46:02.565439",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1215,
+  "total_sim_completion_tokens": 314,
+  "total_bot_prompt_tokens": 2327,
+  "total_bot_completion_tokens": 371,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My transfer is still pending and I know the account numbers are correct.  Please help.",
+      "assistant_response": "I can help with that. Is the transfer showing as “pending” in your app (with a pending status), or has it already been sent but the recipient hasn’t received it yet?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.14
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:57.185322",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending in the app. It’s been like this for a few days.",
+      "assistant_response": "Thanks—if it’s still marked “pending” in the app after a few days, it’s most likely a processing delay. Could you tell me: (1) the transfer type (bank transfer vs. card transfer), and (2) when you submitted it (date/time)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.84
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:59.726011",
+      "sim_prompt_tokens": 564,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s a bank transfer—I submitted it on March 12 around 2 PM.",
+      "assistant_response": "Got it—bank transfer submitted on March 12 around 2 PM and it’s still marked “pending” in the app after a few days. I can help investigate that. First, can you confirm whether the transfer amount is showing as pending only (not cancelled/failed), and whether you can see any reference/transaction ID or “scheduled processing” note in the transfer details?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:02.565343",
+      "sim_prompt_tokens": 651,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 855,
+      "bot_completion_tokens": 130
+    }
+  ]
+}

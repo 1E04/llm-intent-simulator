@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "938e8b5a-98bf-41ae-9c60-2e5a1619597a",
+  "seed": 42,
+  "dialogue_index": 70,
+  "timestamp": "2026-08-21T12:49:35.800427",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2131,
+  "total_sim_completion_tokens": 349,
+  "total_bot_prompt_tokens": 5114,
+  "total_bot_completion_tokens": 675,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Hello I made a bank transfer couple hours ago from my UK account but it doesn't show up yet. Can you please check if everything is alright with it?",
+      "assistant_response": "Thanks—based on what you said, it sounds like you’re checking whether your UK bank transfer is just taking longer to arrive (transfer timing). Could you confirm: is the transfer showing as completed/sent on your UK bank side, and do you have a reference/transaction ID for it?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:28.317083",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1100,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it shows as completed on my end and the reference number is TRX‑8427‑UK.",
+      "assistant_response": "Thanks—if it’s marked completed on your UK side but still hasn’t arrived, this is typically a transfer timing / balance update delay. I can’t directly check TRX‑8427‑UK here, but you can verify it in the app under **Transactions** → select the transfer (or use the **reference number** to find it). If you don’t see it within 1 business day (sometimes longer for weekends/holidays), tell me the date/time you sent it and whether it was sent domestically (UK) or as an international transfer, and I’ll guide you on next steps.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.84
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:31.060126",
+      "sim_prompt_tokens": 563,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1192,
+      "bot_completion_tokens": 216
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I sent it on 19 April at about 14:30, and it was a domestic UK transfer.",
+      "assistant_response": "Got it—domestic UK transfer sent on **19 April ~14:30**, completed on your side, but it hasn’t arrived yet. This is most likely a **transfer timing / balance update delay**.\n\nTo help pinpoint it, can you tell me: is the transfer **missing entirely** in the app, or does it show up as **pending**? Also, what’s today’s date for you (so I can confirm whether we’re past the expected arrival window)?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:33.202655",
+      "sim_prompt_tokens": 719,
+      "sim_completion_tokens": 101,
+      "bot_prompt_tokens": 1348,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It's 21 April today, and the transfer isn’t showing at all in the app.",
+      "assistant_response": "Thanks—if the transfer is completed on your UK side, domestic, sent 19 April ~14:30, and it still isn’t showing in the app on 21 April, the most likely issue is that your **balance hasn’t updated after a bank transfer**.\n\nPlease check in the app under **Transactions** for the transfer activity; if it’s not there at all, I’ll need to escalate/you’ll need to contact support with the reference **TRX‑8427‑UK** and the **send date/time (19 April 14:30)** so they can trace it with the receiving bank details.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T12:49:35.800291",
+      "sim_prompt_tokens": 849,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 1474,
+      "bot_completion_tokens": 189
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c12b0a6c-1147-4fac-9643-7bbb3e5911a2",
+  "seed": 42,
+  "dialogue_index": 31,
+  "timestamp": "2026-08-19T15:14:57.586509",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1088,
+  "total_sim_completion_tokens": 239,
+  "total_bot_prompt_tokens": 2310,
+  "total_bot_completion_tokens": 418,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I don't know how to top up my Google pay.",
+      "assistant_response": "Sure—are you trying to add money to your account *using Google Pay*, or are you trying to *make a card top up via Google Pay*? Also, which country are you in?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.58
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.22
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:14:51.884372",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m trying to add money to my account with Google Pay, and I’m in the United Kingdom.",
+      "assistant_response": "Thanks—so you want to top up your Revolut account using Google Pay in the UK. Just to confirm: are you seeing an option like “Top up with Google Pay” inside the app, or are you not able to find Google Pay at all?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.25
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-19T15:14:55.247388",
+      "sim_prompt_tokens": 501,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I don’t see any Google Pay option in the app at all.",
+      "assistant_response": "Got it—you’re in the UK and can’t see any Google Pay option in the app. Are you trying to top up to a *personal* account, and is your app fully up to date (current version)? If yes, the next check is whether your top up screen is showing “Card” top up—can you tell me what top up methods you do see there?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.9
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:14:57.586366",
+      "sim_prompt_tokens": 587,
+      "sim_completion_tokens": 101,
+      "bot_prompt_tokens": 846,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

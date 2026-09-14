@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f437bdf2-ce66-4eb4-821f-b8b34fa96fe7",
+  "seed": 42,
+  "dialogue_index": 770,
+  "timestamp": "2026-08-19T16:10:02.737490",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 541,
+  "total_sim_completion_tokens": 140,
+  "total_bot_prompt_tokens": 1499,
+  "total_bot_completion_tokens": 334,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I checked the exchange rate when I withdrew cash. But the actual rate that you applied was different.",
+      "assistant_response": "Sorry about that—was the exchange-rate mismatch on a **cash withdrawal at an ATM** (not a card purchase)? If yes, tell me the ATM country and the amount you withdrew (and the date/time if you can), and I’ll help you check the rate that was applied.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.15
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T16:09:59.773035",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was in Spain, I withdrew €200 on 12 Aug 2026 around 14:30.",
+      "assistant_response": "Thanks—since this was a **cash withdrawal in Spain** of **€200 on 12 Aug 2026 around 14:30**, it sounds like an **incorrect/changed exchange rate for a cash withdrawal**.\n\nTo look it up, could you confirm:\n1) was the ATM currency **EUR** or another currency (e.g., you were charged in a different currency and converted to EUR)?\n2) do you have the **exact amount the ATM charged/printed** on the receipt (and any reference/last 4 digits of the card)?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.92
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.06
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T16:10:02.737395",
+      "sim_prompt_tokens": 541,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 179
+    }
+  ]
+}

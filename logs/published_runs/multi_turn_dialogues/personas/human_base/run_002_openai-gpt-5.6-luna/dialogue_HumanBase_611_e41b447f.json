@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "e41b447f-212d-475e-9110-ce133ff0d74f",
+  "seed": 42,
+  "dialogue_index": 611,
+  "timestamp": "2026-08-21T13:25:14.002534",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2707,
+  "total_sim_completion_tokens": 497,
+  "total_bot_prompt_tokens": 6368,
+  "total_bot_completion_tokens": 798,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why would my top up be cancelled?",
+      "assistant_response": "Top-ups usually get cancelled if the card payment is reversed/declined by the card network, the 3D Secure/authentication wasn’t completed, or the top-up was flagged for verification/limits. Is your top-up showing as **Failed** or **Reverted/Cancelled** in the app?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.55
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.35
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:04.478002",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as Cancelled in the app.",
+      "assistant_response": "Got it—if it’s showing as **Cancelled** in the app, it’s usually because the top-up couldn’t be completed (for example, the bank/card declined it, the authentication/3D Secure wasn’t finished, or the top-up was stopped due to verification/limits). \n\nCan you tell me how you top up—**by card** or **by bank transfer/cash/cheque**?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.7
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.22
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:06.737472",
+      "sim_prompt_tokens": 514,
+      "sim_completion_tokens": 83,
+      "bot_prompt_tokens": 1157,
+      "bot_completion_tokens": 178
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I topped up using my card.",
+      "assistant_response": "Thanks—card top-ups that show as **Cancelled** are most commonly **failed** (e.g., bank/card decline, 3D Secure not completed, or the payment was reversed by the card network).\n\nDo you see it as **Failed** or **Reverted/Cancelled** specifically on the transaction details (and did you complete any 3D Secure prompt during the top-up)? If you share what the status says in the details, I can guide you to the exact next step.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.2
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:08.990483",
+      "sim_prompt_tokens": 617,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 1258,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says Cancelled, and I didn’t get any 3D Secure prompt.",
+      "assistant_response": "If a card top-up shows **Cancelled** and you didn’t get any **3D Secure** prompt, it’s typically because the top-up authorization was rejected by the card network/bank (or the top-up was stopped before it could trigger authentication).\n\nTo help pinpoint it: was the top-up amount charged/pending on your bank statement at the same time, or is it not showing there at all?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:11.673712",
+      "sim_prompt_tokens": 733,
+      "sim_completion_tokens": 205,
+      "bot_prompt_tokens": 1385,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I don’t see any charge or pending amount on my bank statement.",
+      "assistant_response": "Since the top-up shows **Cancelled** but there’s **no charge/pending amount** on your bank statement, the most likely cause is that the card authorization was rejected before any funds were taken.\n\nCan you check the top-up details and tell me what the “Cancelled” transaction’s **timestamp** is (and your **top-up amount**)—and whether the card you used is **verified and currently active**? I’ll use that to confirm the next step (e.g., retry vs. contact your bank).",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.63
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:14.002447",
+      "sim_prompt_tokens": 843,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 1491,
+      "bot_completion_tokens": 164
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0c157572-2600-4e3f-8629-88b65a3ec4c6",
+  "seed": 42,
+  "dialogue_index": 669,
+  "timestamp": "2026-08-21T15:49:53.043451",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 554,
+  "total_sim_completion_tokens": 141,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 257,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My money transfer has not arrived.",
+      "assistant_response": "Sorry about that—can you tell me if the transfer shows as completed/successful in your app, or is it still pending? Also, do you know the transfer date and the recipient’s name or reference?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:50.575306",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still pending in the app. I sent it on April 12 to Maria Gonzalez, reference “RentApril”.",
+      "assistant_response": "Thanks—if it’s still marked as pending in the app, it’s likely not finished processing yet. Can you confirm the transfer type (bank transfer or card-to-card), and whether you’re seeing any status details like “processing” or a specific ETA for the April 12 transfer to Maria Gonzalez (RentApril)?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:53.043397",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

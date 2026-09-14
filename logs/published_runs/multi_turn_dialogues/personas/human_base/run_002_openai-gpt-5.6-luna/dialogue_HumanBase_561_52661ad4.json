@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "52661ad4-c80d-4fa4-b7ff-b8f0f74ceb88",
+  "seed": 42,
+  "dialogue_index": 561,
+  "timestamp": "2026-08-21T13:22:01.802222",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1123,
+  "total_sim_completion_tokens": 260,
+  "total_bot_prompt_tokens": 3484,
+  "total_bot_completion_tokens": 369,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I would like to make a transfer. How much does it cost?",
+      "assistant_response": "Sure—fees can vary depending on the type of transfer (bank transfer/recipient details) and the destination. Are you asking about the cost for a transfer to another bank account (international or local), or a transfer between Revolut users?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.13
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:57.133197",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1083,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about a bank transfer to another account, likely an international one.",
+      "assistant_response": "Got it—you mean an international bank transfer to another bank account. Transfer fees depend on the country and whether it’s SWIFT/standard or local, and sometimes on the amount.\n\nCan you tell me the recipient’s country (and if you’re doing SWIFT/standard vs local, if you know)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:59.958100",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 1157,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The recipient is in Germany, and I’ll be using a SWIFT transfer.",
+      "assistant_response": "Thanks—so you want the fee for an international SWIFT bank transfer to Germany. I can help, but the exact cost depends on the transfer amount and the currency you’re sending in. What currency and roughly how much are you transferring?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:01.802113",
+      "sim_prompt_tokens": 605,
+      "sim_completion_tokens": 95,
+      "bot_prompt_tokens": 1244,
+      "bot_completion_tokens": 104
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "3e1637c9-dbb6-4626-b0dd-77ab819e7d52",
+  "seed": 42,
+  "dialogue_index": 294,
+  "timestamp": "2026-08-19T15:33:20.899781",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1727,
+  "total_sim_completion_tokens": 441,
+  "total_bot_prompt_tokens": 3198,
+  "total_bot_completion_tokens": 604,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "what is this charge on my account",
+      "assistant_response": "I can help—could you tell me what the charge is labeled as (merchant name) and the exact amount? Also, was it for a card payment, cash withdrawal, or an exchange/fee?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.42
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.3
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:12.407274",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's listed as “XYZ Services”, £45.99, and looks like a direct debit.",
+      "assistant_response": "Thanks—if it shows as “XYZ Services” and you believe it’s a direct debit, I can help you figure out why it’s there. Is this charge one you expected to pay, or is it unexpected/not yours?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:14.754680",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 761,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "i didn't set that up, it's not mine.",
+      "assistant_response": "I’m sorry about that. Since “XYZ Services” looks like a direct debit you didn’t set up, the most likely issue is an unrecognised direct debit payment. Can you confirm: is the payment marked as “Direct Debit” in the transaction details, and what date did it appear on your account?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.83
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:17.211086",
+      "sim_prompt_tokens": 573,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 827,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "yes, it says Direct Debit and it showed up on 12/07/2024.",
+      "assistant_response": "Thanks for confirming. If you didn’t set up “XYZ Services” and it’s marked as Direct Debit, you’re looking at an unrecognised direct debit. Do you want to report it as not yours and request a refund/dispute for the £45.99 shown on 12/07/2024?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:33:20.899658",
+      "sim_prompt_tokens": 656,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 919,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

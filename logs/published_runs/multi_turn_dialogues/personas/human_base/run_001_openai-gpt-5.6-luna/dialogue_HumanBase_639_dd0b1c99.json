@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "dd0b1c99-9c57-4b29-850c-6aa4e742a601",
+  "seed": 42,
+  "dialogue_index": 639,
+  "timestamp": "2026-08-19T15:59:17.507973",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 484,
+  "total_sim_completion_tokens": 185,
+  "total_bot_prompt_tokens": 1435,
+  "total_bot_completion_tokens": 202,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I didn't buy this twice",
+      "assistant_response": "Sorry about that—are you saying the same card payment was charged twice (a duplicate charge on your statement), or is it an extra fee/charge you didn’t expect?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.77
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:14.914408",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 689,
+      "bot_completion_tokens": 99
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s the same purchase showing up twice on my statement.",
+      "assistant_response": "Got it—you’re seeing the same card purchase charged twice on your statement. Can you tell me: is the transaction status showing as “completed/paid” for both entries, or is one still “pending”?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:17.507867",
+      "sim_prompt_tokens": 484,
+      "sim_completion_tokens": 185,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 103
+    }
+  ]
+}

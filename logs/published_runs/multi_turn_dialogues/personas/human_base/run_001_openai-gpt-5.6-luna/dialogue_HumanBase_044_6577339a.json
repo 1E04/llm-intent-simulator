@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "6577339a-437e-4cc2-b336-52fded408177",
+  "seed": 42,
+  "dialogue_index": 44,
+  "timestamp": "2026-08-19T15:16:05.086767",
+  "persona": "HumanBase",
+  "target_intent": "atm_support",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1659,
+  "total_sim_completion_tokens": 400,
+  "total_bot_prompt_tokens": 3149,
+  "total_bot_completion_tokens": 496,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where is the nearest bank machine?",
+      "assistant_response": "Sure—what country or city are you in right now (or your postcode)? Then I can help you find the nearest ATM that supports withdrawals.",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.19
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:15:58.019677",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in London, SW1A 1AA.",
+      "assistant_response": "Got it—London (SW1A 1AA). Before I point you to the right option, do you need an ATM that *lets you withdraw cash*, or are you trying to resolve an *ATM-related issue* (like a cash machine error or card being retained)?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.34
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.33
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:00.170899",
+      "sim_prompt_tokens": 477,
+      "sim_completion_tokens": 102,
+      "bot_prompt_tokens": 741,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I need help with an ATM problem – the machine kept my card.",
+      "assistant_response": "Sorry that happened. Since the ATM kept your card, I can help with next steps to recover it—first, did the ATM show any message on-screen (e.g., “retain card”) and was it a cash withdrawal or a balance check?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.88
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:02.939553",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 194,
+      "bot_prompt_tokens": 821,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just displayed “retain card” and I was trying to withdraw cash.",
+      "assistant_response": "Thanks—if the ATM displayed “retain card,” that usually means the machine refused the transaction and kept your card for safety. Please contact the bank that owns the ATM (often shown on the machine) and ask them to retrieve it; they can also advise whether you’ll need a replacement card. \n\nFor me to guide you on what to do next, which card type is it (Visa or Mastercard), and do you have your Revolut card’s last 4 digits?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:05.086627",
+      "sim_prompt_tokens": 628,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 896,
+      "bot_completion_tokens": 154
+    }
+  ]
+}

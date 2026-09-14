@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a7d8315e-2ce2-4dc1-b169-09f068cf5423",
+  "seed": 42,
+  "dialogue_index": 466,
+  "timestamp": "2026-08-21T15:45:33.121460",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 656,
+  "total_sim_completion_tokens": 143,
+  "total_bot_prompt_tokens": 1502,
+  "total_bot_completion_tokens": 331,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a pending payment in my account that I paid a while back ago and it still hasnt gone through. Why would it show pending for so long?",
+      "assistant_response": "That sounds like a card payment that’s stuck as pending. Can I confirm: is it a card purchase (merchant payment), and roughly how long has it been pending (e.g., more than 7 days)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.14
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:29.756169",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it’s a card purchase and it’s been pending for about ten days.",
+      "assistant_response": "Thanks for confirming. A card payment can stay pending for a long time—often up to around 7–10 business days—while the merchant completes verification and submits the final amount. After that, it should either complete (move to completed) or revert back to your balance. \n\nCould you tell me if the pending transaction is already past 10 business days, or approximately the date you made the purchase? Also, does the amount match what you expected or does it look different?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:33.121400",
+      "sim_prompt_tokens": 656,
+      "sim_completion_tokens": 143,
+      "bot_prompt_tokens": 786,
+      "bot_completion_tokens": 194
+    }
+  ]
+}

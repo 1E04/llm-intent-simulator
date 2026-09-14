@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "8db580e7-057d-4c2e-82d5-79e738116e51",
+  "seed": 42,
+  "dialogue_index": 65,
+  "timestamp": "2026-08-19T15:17:19.945010",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 502,
+  "total_sim_completion_tokens": 157,
+  "total_bot_prompt_tokens": 1451,
+  "total_bot_completion_tokens": 256,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When will my balance update after a transfer?",
+      "assistant_response": "To help me guide you correctly: is your transfer already completed, or is it showing as pending? And was it a bank transfer into your account (incoming) or a transfer you sent out (outgoing)?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.74
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.2
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:17.089163",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still pending, and it’s an incoming bank transfer.",
+      "assistant_response": "Thanks—since it’s an incoming bank transfer and it’s still pending, your balance will update once the transfer is fully completed/cleared by the bank. Pending status usually means it hasn’t finalized yet. About how long ago did you initiate/receive it, and which bank/country is it coming from?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.92
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.66
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.24
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:19.944886",
+      "sim_prompt_tokens": 502,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 120
+    }
+  ]
+}

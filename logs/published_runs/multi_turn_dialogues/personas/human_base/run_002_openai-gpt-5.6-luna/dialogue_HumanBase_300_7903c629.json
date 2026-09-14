@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "7903c629-02b2-4440-8626-198ca1628bf8",
+  "seed": 42,
+  "dialogue_index": 300,
+  "timestamp": "2026-08-21T13:04:49.597603",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 537,
+  "total_sim_completion_tokens": 125,
+  "total_bot_prompt_tokens": 2254,
+  "total_bot_completion_tokens": 308,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was my account deducted from a seller when I didn't approve of it?",
+      "assistant_response": "I’m sorry about that—when a seller charges your account without your approval, it’s usually either an unrecognized card payment or a possible card compromise. Can you confirm: was this a card payment in the merchant’s name (card statement), or a different type of charge (e.g., direct debit or transfer)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.55
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.25
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T13:04:47.258717",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1084,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a direct debit charge, not a card payment.",
+      "assistant_response": "Thanks for clarifying. If it was a direct debit you don’t recognize, I can help you with that—typically you’ll need to report it as unrecognized and we can guide you through the next steps (like disputing/recalling where possible). Do you know the merchant/biller name shown on the debit (or the reference/amount)? If you share that, I’ll point you to the right process.",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.06
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:04:49.597488",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 1170,
+      "bot_completion_tokens": 147
+    }
+  ]
+}
