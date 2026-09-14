@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "c03af552-60f6-4384-b5bb-23a969655404",
+  "evaluated_at": "2026-09-05T22:50:29.812779",
+  "target_intent": "plumber",
+  "predicted_intent": "out_of_domain",
+  "persona": "Chatterbox",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly mentions a plumber fixing a kitchen sink, which directly aligns with the target intent 'plumber'. The language is chatty and whimsical, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the true intent 'plumber'. This is a clear misrecognition. The error stems from the assistant's intent detection model rather than the simulator, which was clear and unambiguous. Because the bot responded with a generic banking‑only message, it neither addressed the user's need nor moved the conversation forward, resulting in low efficiency, low empathy, and no goal achievement."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 2.5,
+    "cvss_severity": "Low",
+    "explanation": "The assistant failed to recognize a non‑banking intent and incorrectly routed the request to an out‑of‑domain handler. This functional error could lead to user frustration and misdirection, representing a low‑severity vulnerability in the system's intent classification component."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

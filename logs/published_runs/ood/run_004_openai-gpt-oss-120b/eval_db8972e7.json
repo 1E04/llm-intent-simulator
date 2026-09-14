@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "db8972e7-5d33-4cf2-805d-82d26931861a",
+  "evaluated_at": "2026-09-05T22:49:48.529998",
+  "target_intent": "landlord",
+  "predicted_intent": "out_of_domain",
+  "persona": "Chatterbox",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The user explicitly mentioned a landlord requesting a cake, which directly maps to the target intent 'landlord'. The phrasing is chatty and story‑like, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 3,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the utterance as 'out_of_domain', which is completely unrelated to the true intent 'landlord'. The misclassification is the assistant's fault: it failed to recognize the landlord‑related request and defaulted to a generic out‑of‑domain response. Consequently, the user's request remained unresolved, leading to low efficiency and goal achievement."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Incorrect intent classification / functional error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The bot incorrectly labeled an in‑domain landlord request as out‑of‑domain, representing a functional error in intent detection. This could lead to user frustration and potential escalation."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}

@@ -1,0 +1,2144 @@
+{
+  "total_evaluated": 100,
+  "valid_tests": 97,
+  "invalid_tests": 3,
+  "persona_scores": {
+    "Chatterbox": [
+      {
+        "dialogue_id": "03d6ed7c-8446-4a79-81b6-1a680fe5ba31",
+        "file_name": "eval_03d6ed7c.json",
+        "target_intent": "veterinarian",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned visiting a veterinarian and receiving a diet plan for their golden retriever, clearly expressing the target intent. The language is chatty and aligns with the 'Chatterbox' persona, and no system prompts or rule violations are present."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'veterinarian'. The misclassification is due to the assistant being constrained to banking topics only, not because the simulator was vague. Consequently, the bot failed to recognize the veterinary context, offered an irrelevant banking prompt, and did not address the user's concern."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "08116bb0-a614-423e-9728-3228ca06248f",
+        "file_name": "eval_08116bb0.json",
+        "target_intent": "recipe",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a chocolate chip cookie recipe, clearly expressing the target intent. The language is chatty, enthusiastic, and includes extra personal details, matching the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' instead of the correct 'recipe' intent. The misclassification is primarily the assistant's fault: although the user did not ask a direct question, the utterance clearly references a recipe, which should have been recognized. The simulator was not ambiguous about the intent, so the system should have identified it. Consequently, the intent recognition score is 1, while the response was prompt (efficiency 5) and politely phrased (naturalness/empathy 4), but the conversation goal was not met (goal_achievement 1)."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "09e6a8aa-baf2-4b99-9184-4114cb7e7fd2",
+        "file_name": "eval_09e6a8aa.json",
+        "target_intent": "concert",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned attending an outdoor concert, which directly aligns with the target intent 'concert'. The language is lively and chatty, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'concert'. The misclassification is due to the assistant's intent detection model failing to recognize the concert topic rather than any issue with the simulator. The response does not address the user's excitement and ends the interaction abruptly, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "0e4cd9b2-1535-435d-91dd-574eadc26385",
+        "file_name": "eval_0e4cd9b2.json",
+        "target_intent": "museum",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned visiting a natural history museum and expressed enthusiasm about the dinosaur hall, which directly aligns with the target intent 'museum'. The language is chatty and enthusiastic, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'museum'. The misclassification is the assistant's fault; the simulator clearly expressed the museum intent, leaving no ambiguity. Consequently, the bot failed to recognize the intent, did not advance toward any banking resolution, and thus did not achieve the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "0f608484-d1af-4ba5-b8ea-fe7a95a108bf",
+        "file_name": "eval_0f608484.json",
+        "target_intent": "library",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned visiting a downtown library and expressed excitement about a mystery novel, clearly indicating the 'library' intent. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' instead of the exact target intent 'library'. The simulator was unambiguous and provided a clear library‑related request, so the misclassification is the assistant's fault. The bot correctly stated its banking scope, but it failed to recognize the library intent, resulting in no useful assistance for the user."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "1287ea38-8c0f-423a-8a7f-11a0c13e27fb",
+        "file_name": "eval_1287ea38.json",
+        "target_intent": "train",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a train ride, clearly expressing the target intent \"train\" in a natural, chatty manner that aligns with the Chatterbox persona. No instruction violations or prompt leaks occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 3,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect because the user was discussing a train ride—the exact target intent. The misclassification is the assistant's fault; the simulator provided a clear, unambiguous cue. The bot responded promptly, so efficiency is decent, but it failed to address the user's actual topic, resulting in low goal achievement. The response was polite but generic, yielding a moderate naturalness/empathy rating."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "134bf6da-4e0c-4d86-80ba-25654ef70e3d",
+        "file_name": "eval_134bf6da.json",
+        "target_intent": "moving",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions having just moved into a new apartment, which directly maps to the target intent 'moving'. The language is chatty, enthusiastic, and full of extra commentary, matching the 'Chatterbox' persona. No system prompts or disallowed content are leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 5,
+          "goal_achievement": 3,
+          "target_reasoning": "The assistant classified the utterance as 'out_of_domain', which is completely incorrect because the user is clearly discussing a move—a banking‑related intent (e.g., address change). The misclassification is attributable to the target system's intent recognizer, not the simulator, which was unambiguous. The bot’s response is friendly and empathetic, but because it failed to recognize the correct intent it cannot progress toward a proper resolution, resulting in low efficiency and only partial goal achievement (it asks a relevant follow‑up but does not yet resolve the user's need)."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "18d0d115-9c7b-4672-981e-6026b13ed2b8",
+        "file_name": "eval_18d0d115.json",
+        "target_intent": "recycling",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about setting up a compost bin and turning food scraps into soil, which directly reflects the target intent 'recycling'. The language is enthusiastic, chatty, and aligns perfectly with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 1,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a generic banking‑only disclaimer. This is a clear misrecognition of the recycling intent. The misclassification is the assistant's fault: the user was unambiguous about recycling, but the bot is limited to banking topics and failed to detect the intent. Consequently, the conversation did not progress toward any solution, resulting in low efficiency and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "18d26dd9-e6d7-4fe1-9b55-c7fcee3de060",
+        "file_name": "eval_18d26dd9.json",
+        "target_intent": "renovation",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user, playing the Chatterbox persona, immediately talked about repainting their kitchen and their dog’s antics, which is a clear expression of a renovation-related activity. The language is talkative and whimsical, matching the Chatterbox character, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which does not match the ground‑truth intent 'renovation'. The misclassification stems from the assistant’s limited banking‑only scope: it treats any non‑banking request as out‑of‑domain rather than recognizing the specific renovation intent. The user’s request was unambiguous about renovation, so the fault lies with the target system’s inability to identify or handle that intent, not with the simulator."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "1d60dc27-5682-4093-8dfd-592f53cf8f6d",
+        "file_name": "eval_1d60dc27.json",
+        "target_intent": "landlord",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a landlord and described a repair situation, which directly aligns with the target intent 'landlord'. The phrasing is chatty and lively, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', completely missing the landlord-related intent. This is a clear misrecognition; the fault lies with the assistant's intent detection model, which incorrectly treated a legitimate banking‑related landlord query as outside the domain. Consequently, the bot gave a generic out‑of‑domain refusal, offering no help, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "1f6ec694-7a82-49ea-ae9d-3465f151fbd6",
+        "file_name": "eval_1f6ec694.json",
+        "target_intent": "aquarium",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentions setting up a new aquarium, which directly matches the target intent. The language is chatty and enthusiastic, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the true intent 'aquarium'. The misclassification is the assistant's fault; the user was clear and unambiguous about the aquarium topic. The bot responded politely but did not address the user's intent, resulting in no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "22230ba9-5800-4bd8-91f3-d332573fcdd5",
+        "file_name": "eval_22230ba9.json",
+        "target_intent": "restaurant",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about discovering a cozy bistro and praised its truffle mushroom risotto, clearly expressing a restaurant-related intent. The language is enthusiastic and chatty, matching the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were followed."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'restaurant'. The user’s message was unambiguous about a dining experience, so the misclassification is the assistant’s fault, not the simulator’s. The bot responded promptly but did not address the user’s topic, resulting in low efficiency and goal achievement. The response is polite but lacks empathy for the user’s excitement, yielding a middling naturalness score."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "2430d2c5-17ff-405d-8697-fb8b4fc0d76a",
+        "file_name": "eval_2430d2c5.json",
+        "target_intent": "dentist",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a recent dental visit and the dentist's advice, clearly expressing the 'dentist' intent. The language is chatty, digressive, and includes unrelated anecdotes (dog, squirrels), which aligns well with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' and responded with a banking‑only prompt. This is a clear misclassification because the ground‑truth intent is 'dentist', which the user stated explicitly. The error lies with the assistant's intent detection model, which failed to recognize the dental context and instead defaulted to an out‑of‑domain fallback. Consequently, the bot did not address the user's need, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "261dc4d0-9b81-4f82-9d04-6dede2ab50aa",
+        "file_name": "eval_261dc4d0.json",
+        "target_intent": "camping",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a recent camping trip, clearly expressing the target intent 'camping' in a natural, chatty manner consistent with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'camping'. The misclassification is entirely the assistant's fault; the user was unambiguous about camping. The bot failed to recognize the intent and instead gave a generic out‑of‑domain refusal, providing no useful assistance. Efficiency is low because the bot responded quickly but did not move the conversation toward a resolution. Naturalness/empathy is moderate: the response is polite but not empathetic to the user's enthusiastic sharing. Goal achievement is 1 because the user's request was not addressed and the conversation ends without resolution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "268d7da8-c061-42db-909a-8d222fd620db",
+        "file_name": "eval_268d7da8.json",
+        "target_intent": "hiking",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentions a recent hike and describes the scenery, which directly conveys the target intent \"hiking\". The language is enthusiastic and chatty, matching the \"Chatterbox\" persona. No system prompts or disallowed content were leaked, so all constraints were respected."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent \"hiking\". The misclassification is the assistant's fault; the simulator clearly expressed a hiking intent, leaving no ambiguity. Because the bot could not recognize the intent, it failed to address the user's need, resulting in poor goal achievement. Efficiency is low because, although the response was brief, it did not move the conversation toward a solution. The response was polite and acknowledged the hike, earning a decent naturalness/empathy score."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "26f2f317-2308-47cb-ac68-ac2d7f567a80",
+        "file_name": "eval_26f2f317.json",
+        "target_intent": "furniture",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a vintage furniture market, an armchair, and a reclaimed wood coffee table, which directly expresses the target 'furniture' intent. The language is enthusiastic and chatty, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'furniture'. The user’s request was clear and unambiguous, so the misclassification is the assistant’s fault, not the simulator’s. The bot’s response is brief and professional but not empathetic, and it fails to address the user’s topic, resulting in no resolution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "306f53f2-1725-4778-8755-bf08b116cdc6",
+        "file_name": "eval_306f53f2.json",
+        "target_intent": "pottery",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned attending a pottery class and creating a mug, directly expressing the target intent 'pottery'. The language is chatty, enthusiastic, and matches the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'pottery'. The user clearly communicated a pottery‑related statement, so the misclassification is the assistant's fault, not the simulator's. The bot responded with a generic banking‑only disclaimer, failing to recognize or engage with the pottery topic, resulting in no progress toward any goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "31b8914d-c1e3-4ace-8157-37474a2c55c6",
+        "file_name": "eval_31b8914d.json",
+        "target_intent": "subway",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 4,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions the subway, which aligns with the target intent, but does so as a casual observation rather than a banking request. The mention is clear and natural, satisfying the intent, though it lacks a direct request for assistance. The Chatterbox persona is well‑maintained with a talkative, random comment, and no system prompts or rules are leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'subway'. The misclassification stems from the assistant's inability to recognize that the user is referencing the subway (even if not a banking request). The simulator was not ambiguous about the subway; the fault lies with the assistant's intent detection model. Efficiency is low because the bot does not advance the conversation toward any resolution, and while the response is polite, it lacks empathy or engagement with the user's comment. Goal achievement is poor as no useful outcome is reached."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "351230ee-235b-44a1-a71a-432d4f339691",
+        "file_name": "eval_351230ee.json",
+        "target_intent": "flowers",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a flower festival and caring for daisies, clearly expressing the 'flowers' intent. The language is chatty and matches the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a banking‑only disclaimer. This is a complete mismatch to the ground‑truth intent 'flowers'. The user was unambiguous, so the error lies with the assistant's intent detection model, which is limited to banking topics and failed to recognize a valid non‑banking intent. Consequently, the bot did not address the user's request, offering no useful information or clarification."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "38d7a70d-49db-422c-9630-9191140daf34",
+        "file_name": "eval_38d7a70d.json",
+        "target_intent": "museum",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned visiting a natural history museum and expressed enthusiasm about the dinosaur skeletons, which directly aligns with the target intent 'museum'. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' instead of the correct 'museum' intent. This is a clear misrecognition; the user’s utterance was unambiguous about a museum visit. The fault lies with the target system’s intent classifier, which failed to map the museum‑related content to the appropriate intent. Consequently, the bot gave a generic banking‑only response, providing no value to the user."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "392ce0c7-71c0-43bf-81d5-e4af0aa0850c",
+        "file_name": "eval_392ce0c7.json",
+        "target_intent": "recycling",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about setting up a recycling station and expressed enthusiasm, which directly aligns with the target intent 'recycling'. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' despite the user clearly stating a recycling‑related activity. This is a complete misrecognition of the target intent. The fault lies with the assistant (the target system) for failing to detect the recycling intent. Consequently, the response was irrelevant, offering only banking help, which did not address the user's request, leading to poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "3ed52a57-28ed-4c25-8533-43a267b08e96",
+        "file_name": "eval_3ed52a57.json",
+        "target_intent": "birthday",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a birthday cake, clearly expressing the 'birthday' intent in a natural, chatty manner consistent with the Chatterbox persona. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant predicted 'out_of_domain' despite the user clearly talking about a birthday cake, which maps directly to the target intent 'birthday'. The misclassification is due to the assistant's intent detection model, not the simulator. The user’s utterance was unambiguous, so the system should have recognized the birthday intent."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "40d53c47-53cd-48a1-9f6f-a14b6fd6c158",
+        "file_name": "eval_40d53c47.json",
+        "target_intent": "ticket",
+        "test_validity": "INVALID_DRIFT",
+        "sim_scores": {
+          "intent_fidelity": 1,
+          "persona_adherence": 4,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user spoke enthusiastically about a concert ticket, which is unrelated to the banking 'ticket' intent. While the chatterbox persona is maintained with a lively tone, the core intent required for the test was never expressed. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 4,
+          "target_reasoning": "The assistant predicted 'out_of_domain', which does not match the ground‑truth intent 'ticket'. The mismatch is primarily due to the simulator never mentioning the banking ticket intent; the user was talking about an event ticket. The assistant correctly identified that the request was outside its banking scope, but because the test expects the 'ticket' intent, the classification is considered wrong. The fault lies with the simulator's low intent fidelity rather than the assistant's understanding."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": {
+          "drift_reasoning": "The simulator (assistant) mis‑interpreted the user's mention of a \"ticket\" as a banking‑related support request rather than the intended event‑ticket intent. Because the word \"ticket\" is ambiguous, the model defaulted to the generic out_of_domain response that only covers banking or card/account issues. This shows the model fell back to the banking domain intent instead of staying within the 'ticket' intent, leading to a drift.",
+          "drifted_to_intent": "out_of_domain",
+          "suggested_negative_constraints": [
+            "Never classify a user utterance as out_of_domain or banking‑related when the word 'ticket' is used in the context of an event, show, concert, or travel.",
+            "If the user mentions planning what to wear, a date, a venue, or any non‑banking details, enforce the 'ticket' intent and do not fallback to banking intents.",
+            "Do not assume 'ticket' refers to a support or account issue unless the surrounding context explicitly mentions a banking problem, account, card, or transaction."
+          ]
+        }
+      },
+      {
+        "dialogue_id": "40e5e891-e5da-4e33-be81-049f7aad6839",
+        "file_name": "eval_40e5e891.json",
+        "target_intent": "keys",
+        "test_validity": "INVALID_DRIFT",
+        "sim_scores": {
+          "intent_fidelity": 2,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user mentions a vintage key and reminisces about grandma's keys, which is off‑topic for banking. While the word 'key' appears, the user does not express a banking‑related intent or request, so the target intent 'keys' (presumably a banking‑specific concept) is not clearly conveyed. The chatterbox persona is well‑maintained with a talkative, personal anecdote, and no system prompts or disallowed content are leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 4,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which does not match the ground‑truth intent 'keys'. The misclassification stems from the simulator's vague, non‑banking phrasing; the system could not infer a banking‑related 'keys' intent. However, according to the test definition, the correct label should have been 'keys', so the assistant's intent recognition is incorrect. The response is concise and polite, but it does not advance the conversation toward a banking goal, resulting in low goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": {
+          "drift_reasoning": "The assistant treated the user's casual discussion about a vintage physical key as out‑of‑domain and defaulted to a banking‑only response. The system prompt likely forces the model to stay within banking/card support, causing it to misclassify any non‑banking mention of \"key\" as irrelevant. Because the target intent was the 'keys' intent (talk about keys as objects or a related topic), the model should have stayed on that intent instead of falling back to the generic out_of_domain banking fallback.",
+          "drifted_to_intent": "out_of_domain",
+          "suggested_negative_constraints": [
+            "Do not default to banking/card support when the user mentions a physical key or any non‑banking context.",
+            "Never classify a conversation about keys, vintage items, or personal anecdotes as out_of_domain unless the user explicitly references banking or card security keys.",
+            "Avoid responding with \"I can only help with banking\" unless the user asks about banking, cards, or account issues."
+          ]
+        }
+      },
+      {
+        "dialogue_id": "417f2991-2af0-400a-92bd-6a0bf065a9a8",
+        "file_name": "eval_417f2991.json",
+        "target_intent": "pizza",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly talked about making a homemade pizza, clearly expressing the target intent 'pizza'. The language is chatty, enthusiastic, and matches the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which does not match the ground‑truth intent 'pizza'. The user was unambiguous about wanting to discuss pizza, so the misclassification is entirely the assistant's fault. The bot correctly identified that pizza is outside its banking scope, but the evaluation task expects the exact target intent, not a generic out‑of‑domain label. Hence the intent recognition score is 1. Efficiency is low because the conversation ends without addressing the user's statement, though the bot responded promptly. Naturalness/empathy is moderate; the response is polite but robotic and does not engage with the user's excitement. Goal achievement is 1 because the user's intent remains unresolved."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "454aac65-e9ee-431c-92d4-3dbb666f4b36",
+        "file_name": "eval_454aac65.json",
+        "target_intent": "supermarket",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions returning from the supermarket and describes strawberries for a shortcake, directly expressing the target intent 'supermarket'. The language is chatty, enthusiastic, and aligns perfectly with the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the user clearly referenced a supermarket—a valid target intent. The misclassification is the assistant's fault; the simulator provided a clear, unambiguous intent. The bot responded quickly but did not move toward any resolution, resulting in low efficiency and goal achievement. The response was polite and professional, hence a relatively high naturalness/empathy score."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "49576463-3eb6-4101-8205-812f725254a8",
+        "file_name": "eval_49576463.json",
+        "target_intent": "haircut",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned getting a fresh haircut and expressed enthusiasm about the new bob style, directly invoking the target intent 'haircut'. The language is chatty and enthusiastic, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the true intent 'haircut'. The misclassification is due to the assistant's inability to recognize non‑banking intents rather than any ambiguity in the user's message. The user was clear about wanting to discuss a haircut, so the fault lies with the assistant's intent detection model. Consequently, the conversation did not progress toward any banking goal, and the response lacked empathy for the user's excitement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "4b20ce75-1fa4-44b7-adba-2113a5f9644c",
+        "file_name": "eval_4b20ce75.json",
+        "target_intent": "package",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions receiving a \"weird package\" which directly aligns with the target intent \"package\". The phrasing is natural and fits the Chatterbox persona—talkative, whimsical, and random. No instruction violations or prompt leaks are present."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', missing the clear reference to a package. The misclassification stems from the assistant's inability to map the casual mention of a package to the banking‑related 'package' intent, even though the user did express the target intent. The user was not overly vague; they directly referenced a package, so the fault lies with the assistant's intent detection model rather than the simulator."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "4bda0a81-5af1-4bff-987c-1f63154768c9",
+        "file_name": "eval_4bda0a81.json",
+        "target_intent": "vacation",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a beach vacation, clearly expressing the target intent. The chatterbox persona is evident through the enthusiastic, talkative description. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect relative to the ground‑truth intent 'vacation'. The user was unambiguous about the vacation topic, so the misclassification is the assistant's fault, not the simulator's. The bot responded politely but did not acknowledge the user's story or attempt to steer the conversation toward a banking issue, resulting in low efficiency and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "4da7d0d7-cfa0-44b3-9966-21c8939528fb",
+        "file_name": "eval_4da7d0d7.json",
+        "target_intent": "gym",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a spin class at the gym and a post‑workout smoothie, clearly expressing the 'gym' intent. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth 'gym' intent. The misclassification is the assistant's fault: the user was unambiguous, so the system should have recognized the gym‑related intent rather than defaulting to an out‑of‑domain fallback. Consequently, the request was not addressed, leading to poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "50992cdf-bd36-4067-99ba-fdd04448d89b",
+        "file_name": "eval_50992cdf.json",
+        "target_intent": "electrician",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned an electrician installing lights, clearly expressing the target intent. The language is chatty and anecdotal, matching the 'Chatterbox' persona. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the utterance as 'out_of_domain' and responded with a banking‑only disclaimer, which is completely unrelated to the electrician intent. The simulator was unambiguous, so the misclassification is the assistant's fault. The bot failed to detect the electrician topic and defaulted to a generic out‑of‑domain response, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "51efcfb2-1350-4da5-a945-ede25478177c",
+        "file_name": "eval_51efcfb2.json",
+        "target_intent": "concert",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned attending an outdoor concert, which directly aligns with the target intent 'concert'. The language is enthusiastic and chatty, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'concert'. The misclassification is the assistant's fault: it failed to recognize that the user was talking about a concert and instead defaulted to a generic out‑of‑domain response. Consequently, the conversation did not progress toward any banking‑related resolution, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5388513c-06f3-4e10-b2c5-47ccf39db7e0",
+        "file_name": "eval_5388513c.json",
+        "target_intent": "pharmacy",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned stopping by a pharmacy and talking about pet medication, clearly expressing a pharmacy‑related intent. The language is chatty, humorous, and references a dog, which aligns well with the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were followed."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a generic banking‑only disclaimer. This is a complete mismatch to the ground‑truth intent 'pharmacy'. The misclassification is the assistant's fault; the simulator provided a clear, unambiguous pharmacy request. The bot failed to recognize the domain, offered no relevant help, and therefore did not achieve the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "543e9a11-03ce-4cf9-8c1c-7a68c23c1293",
+        "file_name": "eval_543e9a11.json",
+        "target_intent": "pharmacy",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned stopping by a pharmacy and talking about pet medication, clearly expressing the 'pharmacy' intent. The language is chatty, humorous, and fits the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'pharmacy'. The misclassification is due to the assistant's inability to recognize the pharmacy context rather than any ambiguity from the simulator, which was clear. Consequently, the bot failed to address the user's request, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5593b385-77f6-42d6-9535-f55be3d65c83",
+        "file_name": "eval_5593b385.json",
+        "target_intent": "cinema",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned going to a downtown cinema and watching a sci‑fi adventure, directly expressing the target intent 'cinema'. The chatterbox persona is evident through the enthusiastic, talkative style and personal anecdote about popcorn. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'cinema'. The misclassification is the assistant's fault: the user clearly expressed a cinema‑related intent, yet the model failed to recognize it and defaulted to a generic banking out‑of‑domain response. Consequently, the bot did not address the user's statement, resulting in poor efficiency, limited empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "56cf963a-ab8c-46b9-b572-4084127c1ff7",
+        "file_name": "eval_56cf963a.json",
+        "target_intent": "dog",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned adopting a golden retriever puppy, which directly aligns with the target intent 'dog'. The language is enthusiastic and chatty, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a generic banking disclaimer. This is a clear misrecognition of the 'dog' intent, which was unambiguously expressed by the user. The fault lies with the assistant's intent detection component, which incorrectly filtered the query as out‑of‑domain instead of recognizing the dog‑related intent. Consequently, the bot failed to address the user's concern, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5944c58f-3b9e-44a6-8009-1f0d653902b0",
+        "file_name": "eval_5944c58f.json",
+        "target_intent": "cinema",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned going to the cinema and described the popcorn, clearly expressing the target intent 'cinema'. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the user was clearly discussing a cinema experience, the target intent. The misclassification is the assistant's fault: the model is constrained to banking topics and therefore rejected a valid non‑banking intent instead of recognizing the 'cinema' intent. The user’s request was unambiguous, so the error is not due to simulator vagueness."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5a7818cc-7440-47c8-9886-8abd8a216dff",
+        "file_name": "eval_5a7818cc.json",
+        "target_intent": "streetlight",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a streetlight flickering, which directly maps to the target intent 'streetlight'. The phrasing is chatty and lively, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user’s query as 'out_of_domain', which is completely incorrect because the user’s request clearly pertains to the 'streetlight' intent. The misclassification is the assistant’s fault; the simulator provided a clear, unambiguous cue. The bot responded promptly but did not address the user’s issue, resulting in low efficiency and no goal achievement. Its tone is professional but lacks empathy for the user’s concern."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5ddea412-c0b2-470c-8860-4b73b376d1b1",
+        "file_name": "eval_5ddea412.json",
+        "target_intent": "doctor",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 4,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned seeing a doctor, directly expressing the target intent. The language is chatty and informal, fitting the Chatterbox persona, and the user stayed within the role without leaking system prompts or violating constraints."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' instead of the correct 'doctor' intent. This is a clear misrecognition by the target system; the simulator provided a clear, unambiguous intent. The bot’s response deflects to banking topics, offering no empathy or relevance to the user's statement, resulting in poor efficiency and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "5fc961dc-84eb-4f55-9aee-be25547dc3b9",
+        "file_name": "eval_5fc961dc.json",
+        "target_intent": "flowers",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a flower festival and caring for daisies, clearly expressing the target intent 'flowers' in a natural, talkative manner consistent with the 'Chatterbox' persona. No system prompts were leaked or rule violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 1,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant misclassified the user's clear 'flowers' intent as 'out_of_domain', which is completely unrelated to the target intent. The error is due to the assistant's intent detection, not the simulator. Consequently, the bot failed to address the user's request, offering a generic banking-only disclaimer, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "60df500c-287c-447d-be67-11effde47eb5",
+        "file_name": "eval_60df500c.json",
+        "target_intent": "festival",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned attending a music festival and expressed enthusiasm about it, clearly conveying the 'festival' intent. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'festival'. The misclassification is due to the assistant's limited domain handling—it only recognizes banking‑related intents and dismisses any non‑banking topic. The simulator was clear and unambiguous, so the fault lies with the assistant's intent detection model. Because the bot immediately redirected to banking topics without addressing the user's festival comment, efficiency is low and the goal was not achieved."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "64e8b868-0fb2-4680-be24-b78b5db3f3e2",
+        "file_name": "eval_64e8b868.json",
+        "target_intent": "photography",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a sunrise photo walk, capturing light, and their dog—clearly expressing a photography‑related intent. The Chatterbox persona is chatty, enthusiastic, and shares personal anecdotes, which the user does consistently. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a banking‑only disclaimer. This is a complete mismatch to the ground‑truth intent 'photography'. The misclassification is the fault of the assistant (the target system) because the user’s request was unambiguous and clearly about photography. The bot’s domain restriction caused it to reject a perfectly valid intent rather than recognizing it. Consequently, the interaction did not progress toward any solution, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "66d04ba1-cdfe-47e1-b67c-1a5c5a610279",
+        "file_name": "eval_66d04ba1.json",
+        "target_intent": "gardening",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly talked about planting tomatoes and basil, clearly expressing a gardening intent, which matches the target ground‑truth intent. The language is enthusiastic and chatty, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the true intent 'gardening'. The misclassification is the fault of the assistant (the target system) for not recognizing that the user was discussing a gardening topic. The user was clear and unambiguous, so the error stems from the bot's limited domain handling rather than any ambiguity in the simulator. Consequently, the bot failed to address the user's statement, providing no useful assistance."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "6c0fb0e0-56f4-4b4d-8303-e1d679f0dd88",
+        "file_name": "eval_6c0fb0e0.json",
+        "target_intent": "weather",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about the weather (bright sunny day after a rainstorm), which aligns perfectly with the target intent 'weather'. The chatterbox persona is maintained through a talkative, informal comment. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which does not match the ground‑truth intent 'weather'. This is a clear misrecognition. The error lies with the assistant: it failed to detect the weather‑related intent and defaulted to an out‑of‑domain response, even though the user’s utterance was unambiguous. Consequently, the bot did not provide any useful information, leading to low efficiency and goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "6e4a2da8-8356-4d44-9541-15fd7161979b",
+        "file_name": "eval_6e4a2da8.json",
+        "target_intent": "cooking",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about making pesto and cooking lemon garlic chicken, clearly expressing a cooking intent. The language is chatty, enthusiastic, and aligns with the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the true intent 'cooking'. The simulator provided a clear cooking context, so the misclassification is entirely the assistant's fault. The bot responded politely but failed to recognize or address the cooking topic, resulting in no progress toward the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "73c2be19-f183-46c7-a9e2-fc9661ba70e7",
+        "file_name": "eval_73c2be19.json",
+        "target_intent": "barbecue",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a barbecue, matching the target intent, and did so in a chatty, enthusiastic style consistent with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user’s input as 'out_of_domain', which is incorrect because the ground‑truth intent is 'barbecue'. The misclassification is due to the assistant’s inability to recognize the barbecue intent rather than any ambiguity in the user’s message. The user was clear and unambiguous, so the fault lies with the target system’s intent model. The bot responded promptly but did not address the user’s topic, resulting in low goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "73d93fb1-7017-4b96-b17f-8380d8d59297",
+        "file_name": "eval_73d93fb1.json",
+        "target_intent": "furniture",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a vintage furniture market, an armchair, and a reclaimed wood coffee table, clearly expressing the 'furniture' intent in a natural, enthusiastic manner that matches the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'furniture'. The user’s request was unambiguous, so the misclassification is the assistant’s fault, not the simulator’s. The bot responded quickly (hence high efficiency) and politely, but it failed to address the user’s actual topic, resulting in no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "7a642d35-4fb8-4161-9736-48415e5748be",
+        "file_name": "eval_7a642d35.json",
+        "target_intent": "subway",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned riding the downtown subway, directly expressing the target intent. The chatterbox persona is evident through the enthusiastic, anecdotal style. No system prompts or disallowed content were leaked, so all constraints were respected."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'subway'. The misclassification is due to the assistant's inability (or design limitation) to recognize non‑banking intents, not because the user was vague. The user clearly expressed a subway‑related experience, so the fault lies with the target system's intent detection model. Consequently, the intent was not recognized, the response did not address the user's topic, and the conversation ended without fulfilling the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "7b44ab02-3e8e-4933-9c27-086272c50a6b",
+        "file_name": "eval_7b44ab02.json",
+        "target_intent": "hiking",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned completing a hike and described the experience, clearly expressing the target intent 'hiking'. The language is enthusiastic and chatty, matching the Chatterbox persona, and no system prompts or rule violations are present."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a banking‑only disclaimer. The correct intent is 'hiking', which the user explicitly stated. The misclassification is due to the assistant's inability (or design) to recognize a non‑banking intent rather than any ambiguity in the user's message. Therefore the fault lies with the target system's intent recognizer, which failed to map the clear hiking reference to the 'hiking' label."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "8080bc61-368c-4021-aed3-881e28d20552",
+        "file_name": "eval_8080bc61.json",
+        "target_intent": "veterinarian",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned taking a golden retriever to the vet and described the vet's behavior, clearly expressing the 'veterinarian' intent. The language is chatty and story‑like, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant mis‑identified the user's clear veterinarian‑related request as 'out_of_domain' and responded with a generic banking disclaimer. The misclassification is entirely the assistant's fault; the simulator provided an unambiguous, on‑topic utterance. Consequently, the bot failed to recognize the correct intent, offered no relevant assistance, and did not achieve the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "8192f2e6-cdf2-45aa-bd15-e6b8a9833850",
+        "file_name": "eval_8192f2e6.json",
+        "target_intent": "plumber",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a plumber fixing a leak, clearly expressing the target intent. The language is chatty and anecdotal, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'plumber'. The misclassification is due to the assistant's strict banking‑only scope rather than any ambiguity in the simulator's utterance. The user’s intent was clear, so the fault lies with the assistant's limited intent taxonomy. Consequently, the bot failed to recognize the plumber intent, did not advance the conversation toward any resolution, and ended with an unfulfilled request."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "8ee6d0ca-1e90-4985-b2db-6ed80039d0e4",
+        "file_name": "eval_8ee6d0ca.json",
+        "target_intent": "bus",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned getting off a bright yellow bus, directly expressing the target intent 'bus'. The response is chatty, vivid, and aligns with the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'bus'. The user clearly expressed the bus intent, so the misclassification is the assistant's fault, not the simulator's. The bot failed to recognize the intent, gave a generic out‑of‑domain disclaimer, and did not move the conversation toward a banking resolution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "8ef82e5c-c343-4249-89bf-50227307db88",
+        "file_name": "eval_8ef82e5c.json",
+        "target_intent": "wifi",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a Wi‑Fi router and a related problem, clearly expressing the 'wifi' intent. The chatterbox persona is evident through the verbose, anecdotal style. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant predicted 'out_of_domain' instead of the exact 'wifi' intent. The user’s request was unambiguous and clearly about Wi‑Fi, so the misclassification is due to the assistant’s limited banking‑only scope rather than any ambiguity from the simulator. The bot failed to recognize the correct intent, resulting in an unhelpful response and no resolution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "91579b65-d9c5-4095-92ef-26c2e33646f6",
+        "file_name": "eval_91579b65.json",
+        "target_intent": "supermarket",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned the supermarket context in a natural, talkative manner that aligns with the 'Chatterbox' persona. No system prompts or disallowed content were leaked, and the user stayed on topic, fulfilling all constraints."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'supermarket'. The misclassification is the assistant's fault: it failed to recognize a clear supermarket‑related statement and defaulted to a generic banking‑only response. Consequently, the user’s request was not addressed, leading to poor goal achievement. The assistant’s reply was polite but not empathetic to the user’s excitement, and while the response was prompt, it did not solve the problem."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "91fccc3d-37de-4624-8413-29920aa7243d",
+        "file_name": "eval_91fccc3d.json",
+        "target_intent": "moving",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned having just moved into a new place, which directly maps to the target intent 'moving'. The language is chatty and enthusiastic, fitting the Chatterbox persona, and no instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect. The user clearly expressed a moving‑related situation, matching the ground‑truth intent. The misclassification is the assistant's fault; the simulator provided a clear, unambiguous cue. Consequently, the bot failed to recognize the intent, offered an irrelevant response, and did not advance toward any resolution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "93b71fbf-7138-494e-a11c-993fac35db52",
+        "file_name": "eval_93b71fbf.json",
+        "target_intent": "baking",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about pulling a warm apple‑cinnamon loaf out of the oven, which is a clear reference to baking. The enthusiastic, rambling style matches the 'Chatterbox' persona, and no system instructions were violated."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 3,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant labeled the user turn as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'baking'. The misclassification is the assistant's fault: it failed to recognize the baking context and defaulted to a banking‑only scope. While the response was prompt (efficiency), it did not address the user's statement and therefore did not achieve the conversational goal. The tone was functional but somewhat abrupt, leading to a moderate naturalness/empathy rating."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9432c379-3d2c-4661-9ef1-7604e20461e3",
+        "file_name": "eval_9432c379.json",
+        "target_intent": "painting",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned completing a painting and described details about it, clearly expressing the target intent 'painting'. The language is chatty, enthusiastic, and references a cat, which aligns well with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'painting'. The user was unambiguous about the painting topic, so the misclassification is the assistant's fault, not the simulator's. The bot responded with a generic banking‑only disclaimer, offering no relevance to the user's statement, resulting in low efficiency, low empathy, and no achievement of the user's goal."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "94671b9a-c8e3-432d-9449-a0ec2c47eae1",
+        "file_name": "eval_94671b9a.json",
+        "target_intent": "movie",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned watching a new adventure film, which directly aligns with the target intent 'movie'. The language is chatty and enthusiastic, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is incorrect because the ground‑truth intent is 'movie'. The misclassification is entirely the assistant's fault; the simulator provided a clear, unambiguous movie‑related statement. The bot’s response is brief and on‑topic to its own domain (efficient), but it lacks empathy for the user's excitement and fails to address the user's actual intent, resulting in no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "96f6950d-c003-4347-9907-990ea5bfeb35",
+        "file_name": "eval_96f6950d.json",
+        "target_intent": "painting",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a painting, clearly expressing the target intent. The language is chatty and anecdotal, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which does not match the ground‑truth intent 'painting'. The user was unambiguous about wanting to discuss a painting, so the misclassification is due to the assistant's intent detection failure, not the simulator. The bot responded politely but did not address the user's statement, leading to low efficiency and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9734b432-02c9-45ff-a37b-1f4b86bdb1ef",
+        "file_name": "eval_9734b432.json",
+        "target_intent": "bookstore",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned visiting a \"bookstore\" and described the scene in a chatty, enthusiastic manner, which aligns perfectly with the Chatterbox persona. No system prompts or disallowed content were leaked, and the user stayed on topic, clearly expressing the target intent."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the utterance as 'out_of_domain', which is completely incorrect because the user was clearly talking about a bookstore—a valid target intent. The misclassification is the assistant's fault; the simulator provided an unambiguous, on‑topic request. The bot’s response was polite but generic, did not address the user's intent, and therefore failed to achieve the conversational goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9997f9fb-19dd-4458-a487-0cb993a60e26",
+        "file_name": "eval_9997f9fb.json",
+        "target_intent": "bicycle",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a bright red bicycle and expressed a desire to ride it, directly aligning with the target intent 'bicycle'. The language is chatty, enthusiastic, and consistent with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the user was not asking a banking question but simply talking about a bicycle. This is a clear misrecognition of the target intent. The error lies with the assistant's intent detection model, which failed to map the bicycle-related content to the 'bicycle' intent. Consequently, the conversation ends without addressing the user's statement, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9d0291ae-7850-4262-ae02-98811719cef9",
+        "file_name": "eval_9d0291ae.json",
+        "target_intent": "hotel",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 4,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned returning from a hotel and described its lobby, clearly expressing the 'hotel' intent. The language is chatty and detailed, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' and responded with a generic banking disclaimer. This is a complete mismatch to the ground‑truth 'hotel' intent. The misclassification is not due to ambiguity in the user input—the user was explicit about a hotel experience—so the fault lies with the assistant's intent detection model, which incorrectly treats the hotel domain as out of scope. Consequently, the bot failed to address the user's statement, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9e2d04e5-02f4-4bc7-a623-dd8911165e37",
+        "file_name": "eval_9e2d04e5.json",
+        "target_intent": "doctor",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned seeing a doctor, directly expressing the target intent. The language is chatty, enthusiastic, and fits the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' despite the clear mention of a doctor, which is the ground‑truth intent. The misclassification is due to the assistant's intent detection model failing to recognize medical‑related language, not the simulator's fault. Consequently, the bot did not address the user's statement, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "9fba650e-d402-455a-9b1b-df68995a2148",
+        "file_name": "eval_9fba650e.json",
+        "target_intent": "keys",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned finding an antique key and asked what it might open, directly expressing the target intent 'keys'. The language is chatty, whimsical, and aligns with the 'Chatterbox' persona. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect. The correct intent is 'keys'. The misclassification is the assistant's fault; the user was clear about the intent. The bot responded with a generic out‑of‑domain refusal, offering no help, thus failing to achieve the goal. Efficiency is low because the conversation ends without progress, and the response, while polite, lacks empathy or relevance."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "a4bc0c69-05ea-44c7-a10e-94bf76542f72",
+        "file_name": "eval_a4bc0c69.json",
+        "target_intent": "camping",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a recent camping trip, clearly expressing the target intent 'camping'. The language is chatty, detailed, and matches the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were followed."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' and responded with a banking‑only disclaimer. This is a complete misrecognition of the clear 'camping' intent. The fault lies with the assistant (the target system) for not handling or routing non‑banking intents appropriately. Because the user’s intent was unambiguous, the misclassification is not due to simulator ambiguity."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "a96fa3ee-f017-459b-9c07-d7fe9864f1e8",
+        "file_name": "eval_a96fa3ee.json",
+        "target_intent": "electrician",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned an electrician and described a related anecdote, clearly expressing the target intent. The chatterbox persona is evident through the extra, unrelated talk about the dog and weather, maintaining a talkative style. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'electrician'. The misclassification is the assistant's fault: the simulator provided a clear, unambiguous intent, but the bot failed to recognize it and defaulted to a generic out‑of‑domain response. Consequently, the conversation did not progress toward any solution."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "a9fb8e3d-5c53-4d20-b893-f303077dbb9d",
+        "file_name": "eval_a9fb8e3d.json",
+        "target_intent": "wifi",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a newly installed wifi router and streaming, clearly expressing the 'wifi' intent. The chatterbox persona is evident through the enthusiastic, tangential talk about baking tutorials and streaming. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect. The user’s utterance was directly about wifi, matching the ground‑truth intent. The misclassification is the assistant’s fault; the simulator provided a clear, unambiguous wifi request. The bot’s response was generic, did not address the user’s statement, and therefore failed to achieve the goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "aae5d0a0-78e6-4bbe-a44f-2ef9de30388d",
+        "file_name": "eval_aae5d0a0.json",
+        "target_intent": "motorcycle",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned taking a new motorcycle for a spin, directly expressing the target intent 'motorcycle'. The language is chatty, enthusiastic, and matches the Chatterbox persona. No system prompts or constraints were violated."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'motorcycle'. The misclassification is due to the assistant's limited domain handling (banking only) rather than any ambiguity in the user's statement. The user was clear about a motorcycle, so the fault lies with the assistant's intent recognizer. Consequently, the bot did not address the user's topic, offered a generic banking‑only reply, and failed to achieve the conversational goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "ac2c2aed-3a26-499c-a998-1f60c42a898a",
+        "file_name": "eval_ac2c2aed.json",
+        "target_intent": "weather",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about the weather ('bright, sunny day' after a 'rainstorm'), which directly matches the target intent. The language is chatty and enthusiastic, fitting the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely wrong because the user clearly expressed a weather‑related intent. The misclassification stems from the assistant's limited banking‑only scope rather than any ambiguity in the simulator's utterance. Consequently, the bot failed to recognize the weather intent, did not move the conversation forward, showed little empathy, and did not achieve the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "afea045e-3f45-402f-b619-992d3ae1dc2f",
+        "file_name": "eval_afea045e.json",
+        "target_intent": "guitar",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a vintage acoustic guitar, expressing enthusiasm and describing a scenario with the cat. This directly conveys the target intent 'guitar'. The language is chatty, enthusiastic, and aligns with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a banking‑only disclaimer. The ground‑truth intent is 'guitar', which the assistant completely missed, resulting in a score of 1 for intent recognition. The misclassification is not due to the simulator (the user was clear and on‑topic) but stems from the assistant's limited banking domain scope; it correctly identified the request as outside its functional area, but that does not match the required 'guitar' intent. Efficiency is moderate (a single quick reply) but the response does not advance the conversation toward the user's intent, leading to low goal achievement. The tone is polite yet generic, yielding an average naturalness/empathy rating."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b00d174e-01c7-45c5-9c85-f65c082892b3",
+        "file_name": "eval_b00d174e.json",
+        "target_intent": "streetlight",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a \"streetlight,\" which matches the target ground‑truth intent. The whimsical, rambling style aligns well with the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is not the exact target intent 'streetlight'. The misclassification is due to the assistant's inability to map the streetlight mention to the required intent, even though the user was clear. The fault lies with the assistant's intent detection model, not the simulator."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b2a0e1d4-dec9-483a-8a12-2c50b5957dcd",
+        "file_name": "eval_b2a0e1d4.json",
+        "target_intent": "motorcycle",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a motorcycle ride, clearly expressing the target intent. The language is chatty and enthusiastic, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 2,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which does not match the ground‑truth intent 'motorcycle'. The user clearly expressed the motorcycle intent, so the misclassification is the assistant's fault. The bot likely defaults to an out‑of‑domain label for any non‑banking content, but the evaluation expects the specific 'motorcycle' intent to be recognized. Hence intent recognition is completely wrong, while the response was prompt and polite, resulting in high efficiency and decent naturalness, but the overall goal (identifying the motorcycle intent) was not achieved."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b5e96055-78f5-428a-b938-c49470bbcd03",
+        "file_name": "eval_b5e96055.json",
+        "target_intent": "mechanic",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions dropping a sedan at the mechanic and describes a funny incident, clearly expressing the 'mechanic' intent in a talkative, story‑telling style that matches the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'mechanic'. The misclassification is due to the assistant's failure to recognize the automotive context; the simulator was clear and unambiguous, so the fault lies with the assistant's intent detection model. Because the bot responded with a generic banking‑only disclaimer, it did not address the user's statement, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b60016a1-41a5-4a49-9803-f8f6a86ff7ac",
+        "file_name": "eval_b60016a1.json",
+        "target_intent": "guitar",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly talked about an acoustic guitar, strumming, chords, and a jam session, which directly expresses the target intent 'guitar'. The language is chatty, enthusiastic, and matches the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a generic banking‑only message. This is a complete mismatch to the ground‑truth intent 'guitar'. The simulator was clear and unambiguous, so the error lies with the assistant's intent detection model, which failed to recognize a non‑banking but valid user intent. Consequently, the conversation ends without addressing the user's request, leading to low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b9500721-970a-4d36-8818-2e055aa36ac9",
+        "file_name": "eval_b9500721.json",
+        "target_intent": "sports",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about an \"incredible soccer game\" and a \"last‑minute goal,\" which directly reflects the target intent 'sports'. The language is enthusiastic and chatty, matching the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' instead of the correct 'sports' intent. The misclassification is entirely the assistant's fault; the simulator was clear and unambiguous about the sports topic. The bot's response is generic, banking‑centric, and shows little empathy toward the user's excitement, resulting in poor naturalness and no resolution of the user's statement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "b95294ec-e24e-431e-ab4f-dc2f9bbec3b8",
+        "file_name": "eval_b95294ec.json",
+        "target_intent": "ticket",
+        "test_validity": "INVALID_DRIFT",
+        "sim_scores": {
+          "intent_fidelity": 1,
+          "persona_adherence": 3,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user utterance talks about a concert ticket and clothing plans, which does not convey the target banking intent 'ticket'. The chatterbox persona is modestly maintained (the user is talkative but only provides a single statement), and the user follows all constraints without leaking system prompts."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 3,
+          "goal_achievement": 4,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is technically correct for the given utterance but does not match the ground‑truth intent 'ticket'. The misclassification is due to the simulator not expressing the required intent, not a failure of the assistant. The bot responded promptly with a single, concise turn, showing reasonable efficiency. Its tone is polite but somewhat robotic, earning a moderate naturalness/empathy score. Since the conversation ends without a banking issue, the bot effectively redirects the user, achieving its goal given the context."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": {
+          "drift_reasoning": "The user correctly stayed on the target 'ticket' intent by mentioning a live‑show ticket, but the assistant incorrectly classified the utterance as 'out_of_domain' and responded with a banking‑only disclaimer. This mis‑classification constitutes a drift because the system diverted from handling the ticket‑related request to an unrelated banking domain, effectively treating the ticket query as out‑of‑domain.",
+          "drifted_to_intent": "out_of_domain",
+          "suggested_negative_constraints": [
+            "Never map a user utterance that mentions a ticket, event, concert, show, or similar to the 'out_of_domain' intent.",
+            "Do not respond with banking‑only language (e.g., references to cards, transfers, top‑ups) when the user is discussing tickets or event attendance.",
+            "If the user mentions a ticket, always treat it as the 'ticket' intent and provide relevant assistance or clarification, unless explicitly stated otherwise."
+          ]
+        }
+      },
+      {
+        "dialogue_id": "bdec15e6-0dc3-4c0a-9e4f-8917d46fedf0",
+        "file_name": "eval_bdec15e6.json",
+        "target_intent": "stain",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a coffee spill and a large stain on a shirt, directly expressing the target intent \"stain\". The language is chatty and expressive, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 5,
+          "goal_achievement": 5,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' instead of the ground‑truth intent 'stain'. The user was clear and unambiguous about the stain problem, so the misclassification is due to the assistant's intent recognizer not mapping the \"stain\" concept to any known intent. The response itself is polite, concise, and correctly limits the conversation to banking topics, which is why efficiency, empathy, and goal‑achievement scores are high, but the intent recognition fails completely."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "c03af552-60f6-4384-b5bb-23a969655404",
+        "file_name": "eval_c03af552.json",
+        "target_intent": "plumber",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentions a plumber fixing a kitchen sink, which directly aligns with the target intent 'plumber'. The language is chatty and whimsical, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the true intent 'plumber'. This is a clear misrecognition. The error stems from the assistant's intent detection model rather than the simulator, which was clear and unambiguous. Because the bot responded with a generic banking‑only message, it neither addressed the user's need nor moved the conversation forward, resulting in low efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "Low",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "c366cfe3-3e32-4790-85f5-4f3d872bdb5c",
+        "file_name": "eval_c366cfe3.json",
+        "target_intent": "gardening",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about planting cherry tomatoes and dreaming about salads, which clearly conveys a gardening intent. The language is enthusiastic and chatty, matching the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' instead of the correct 'gardening' intent, resulting in a completely wrong intent prediction. The misclassification is the assistant's fault; the user was unambiguous about gardening. While the bot responded in a single turn (hence a decent efficiency score), its reply was generic, robotic, and offered no empathy, and it failed to address the user's request, leading to a low goal achievement rating."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "c60f2204-fc8d-433c-9398-e1e691ff77f7",
+        "file_name": "eval_c60f2204.json",
+        "target_intent": "library",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned spending time at a downtown library, which directly aligns with the target intent 'library'. The language is chatty, vivid, and consistent with the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which does not match the ground‑truth intent 'library'. This is a clear misclassification (score 1). The bot responded promptly, but it neither addressed the user's statement nor guided the conversation toward a banking issue, resulting in low efficiency and no goal achievement. The response is brief and somewhat robotic, lacking empathy, hence moderate scores for naturalness/empathy. The fault lies with the assistant's intent detection model, which failed to recognize the library‑related intent despite it being explicitly stated."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "c7b885bb-4e4c-424d-bb76-49de592f4d8b",
+        "file_name": "eval_c7b885bb.json",
+        "target_intent": "aquarium",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned setting up an aquarium with neon tetras and expressed excitement, which directly aligns with the target intent 'aquarium'. The chatterty, enthusiastic tone matches the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'aquarium'. The misclassification is the assistant's fault; the user was clear and unambiguous about the aquarium topic. The bot’s response redirects to banking, ignoring the user's statement, resulting in poor goal achievement and only minimal efficiency (a single turn but no progress). The tone is polite but not empathetic to the user's excitement, yielding a moderate naturalness score."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "cd01e32d-5db7-442f-9d69-4d565473a531",
+        "file_name": "eval_cd01e32d.json",
+        "target_intent": "bakery",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about making a cinnamon swirl and their dog stealing dough, which clearly reflects a bakery-related intent. The phrasing is chatty and whimsical, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'bakery'. The user’s request was unambiguous and clearly about baking, so the misclassification is the assistant’s fault, not the simulator’s. The bot responded with a generic banking disclaimer, offering no progress toward the user’s bakery question, resulting in poor efficiency and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "d2f0181a-814f-4339-b6c6-93b449017341",
+        "file_name": "eval_d2f0181a.json",
+        "target_intent": "mechanic",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about getting brakes checked at a shop, which clearly maps to the 'mechanic' intent. The language is chatty and includes extra personal detail (dog wagging tail), matching the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a banking‑only disclaimer. This is a clear misrecognition of the 'mechanic' intent that was unambiguously presented by the simulator. The fault lies with the assistant's intent detection model, which failed to map the car‑brake context to the correct intent. Consequently, the conversation did not progress toward any banking goal, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "d595debd-9232-421c-861c-72dee692d1a4",
+        "file_name": "eval_d595debd.json",
+        "target_intent": "recipe",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly talked about baking a chocolate chip banana bread, which directly reflects the target 'recipe' intent. The language is enthusiastic and chatty, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the true intent 'recipe'. The misclassification is the assistant's fault; the simulator clearly expressed a recipe‑related intent, leaving no ambiguity. Consequently, the bot failed to recognize the intent, did not provide a relevant response, and the conversation ended without achieving the user's goal."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "d5a193b5-f181-4dbe-827c-90654f455bb1",
+        "file_name": "eval_d5a193b5.json",
+        "target_intent": "restaurant",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about a recent visit to an Italian restaurant and praised the tiramisu, which directly reflects the target intent 'restaurant'. The language is chatty, enthusiastic, and matches the Chatterbox persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' and responded with a generic banking‑only message. This is a clear misrecognition of the 'restaurant' intent, which was unambiguously expressed by the simulator. The fault lies with the assistant's intent detection model, which incorrectly treated a legitimate restaurant‑related query as out‑of‑domain. Consequently, the bot failed to address the user's statement, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "db8972e7-5d33-4cf2-805d-82d26931861a",
+        "file_name": "eval_db8972e7.json",
+        "target_intent": "landlord",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a landlord requesting a cake, which directly maps to the target intent 'landlord'. The phrasing is chatty and story‑like, matching the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the utterance as 'out_of_domain', which is completely unrelated to the true intent 'landlord'. The misclassification is the assistant's fault: it failed to recognize the landlord‑related request and defaulted to a generic out‑of‑domain response. Consequently, the user's request remained unresolved, leading to low efficiency and goal achievement."
+        },
+        "cvss_severity": "Medium",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "deb0c6fb-b198-4c90-b4bf-daf49d4b1ffd",
+        "file_name": "eval_deb0c6fb.json",
+        "target_intent": "cooking",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about making pesto, using fresh basil and pine nuts, and experimenting with lemon garlic chicken, which clearly demonstrates a cooking intent. The language is enthusiastic, rambling, and chatty, matching the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were followed."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 4,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'cooking'. The misclassification is the assistant's fault; the simulator unambiguously expressed a cooking request. The bot responded promptly and politely, which explains the relatively high efficiency and naturalness scores, but it failed to address the user's actual need, resulting in a goal achievement score of 1."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "e08b816c-bd68-422a-a188-211387e31c55",
+        "file_name": "eval_e08b816c.json",
+        "target_intent": "bakery",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about pulling buttery croissants from the oven, which directly references a bakery context, fulfilling the target intent. The language is chatty, enthusiastic, and matches the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the user clearly expressed a bakery‑related intent. The misclassification is the assistant's fault: the simulator provided an unambiguous bakery request, but the bot's intent recognizer either lacks a 'bakery' label or incorrectly routes any non‑banking content to out_of_domain. Consequently, the bot failed to address the user's request."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "e4e66191-5c7a-4c6f-8211-adb4f34f175d",
+        "file_name": "eval_e4e66191.json",
+        "target_intent": "flight",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned a \"flight\" and described the experience in a chatty, enthusiastic manner, which aligns perfectly with the Chatterbox persona. No system prompts or disallowed content were leaked, and the user stayed on topic, providing a clear expression of the target intent."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 3,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain' instead of the ground‑truth intent 'flight'. This is a clear misrecognition. The fault lies with the assistant: despite the user clearly mentioning a flight, the bot defaulted to a generic out‑of‑domain response rather than recognizing the flight intent. The assistant’s response was polite and concise, but it did not address the user's expressed intent, resulting in no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "e77dd99c-f8da-4573-a785-d1b49b97a39d",
+        "file_name": "eval_e77dd99c.json",
+        "target_intent": "movie",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The simulated user explicitly mentioned watching a new adventure film, clearly expressing the target intent 'movie'. The language is chatty, enthusiastic, and includes tangential details about a golden retriever, which aligns well with the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were followed."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which is completely incorrect because the user was discussing a movie—a clear match to the ground‑truth intent 'movie'. The misclassification is the assistant's fault; the simulator provided an unambiguous, on‑topic utterance. The bot responded with a generic banking‑only disclaimer, showing no understanding of the user's intent, resulting in poor efficiency, low empathy, and no resolution of the user's request."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "eafae96d-e7a2-4ffe-a24d-bc227463501c",
+        "file_name": "eval_eafae96d.json",
+        "target_intent": "taxi",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned stepping out of a bright yellow taxi, clearly expressing the target intent 'taxi' while maintaining a chatty, vivid style consistent with the Chatterbox persona. No instruction violations occurred."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'taxi'. The misclassification stems from the assistant's inability to detect the taxi intent despite it being explicitly mentioned. The simulator was not ambiguous about the intent; it simply presented a statement rather than a request, but the intent was still clear. Therefore the fault lies with the assistant's intent detection model."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "ec3dfae7-ed6d-4fb2-98ab-5c98bf8dc382",
+        "file_name": "eval_ec3dfae7.json",
+        "target_intent": "swimming",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about trying a lap pool and described the water as refreshing, which directly maps to the target intent 'swimming'. The language is chatty and enthusiastic, matching the 'Chatterbox' persona, and no system prompts or rule violations were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 5,
+          "target_reasoning": "The assistant predicted 'out_of_domain' while the ground‑truth intent is 'swimming'. The misclassification is due to the assistant's intent taxonomy not containing a specific 'swimming' label; it defaulted to a generic out‑of‑domain tag. The simulator was clear and unambiguous, so the fault lies with the assistant's limited intent set rather than the user simulation."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "ee77b07b-5e26-4bf2-b365-073fff8dc0b7",
+        "file_name": "eval_ee77b07b.json",
+        "target_intent": "swimming",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about swimming at a lap pool, clearly expressing the target intent. The language is chatty and enthusiastic, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which does not match the ground‑truth intent 'swimming'. The user was unambiguous about swimming, so the misclassification is entirely the assistant's fault, not the simulator's. The bot correctly avoided a loop and responded promptly (high efficiency), but it failed to acknowledge the user's statement or provide any empathetic handling, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "f24a5482-6de9-4db5-b6fa-e5a5970a92c9",
+        "file_name": "eval_f24a5482.json",
+        "target_intent": "bus",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned riding a city bus, which directly aligns with the target intent 'bus'. The language is enthusiastic and descriptive, matching the 'Chatterbox' persona. No system prompts or disallowed content were leaked, so all constraints were respected."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is a complete mismatch to the ground‑truth intent 'bus'. The error lies with the assistant: it failed to recognize that the user was talking about a bus, likely because the model is constrained to banking topics and does not have a 'bus' intent in its taxonomy. Consequently, it could not address the user's statement, leading to poor goal achievement and limited empathy."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "f726c3b0-6228-4627-9016-9e3fc40dceb3",
+        "file_name": "eval_f726c3b0.json",
+        "target_intent": "hotel",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a boutique hotel and described the experience, clearly expressing the 'hotel' intent. The chatterbox persona is maintained with an enthusiastic, talkative tone. No system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'hotel'. The misclassification is due to the assistant's intent detection model failing to recognize the hotel reference rather than any fault of the simulator, which was clear and unambiguous. Consequently, the bot did not progress toward any useful banking assistance, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "f8e7be8a-b01b-45c3-a02d-22a384e6f894",
+        "file_name": "eval_f8e7be8a.json",
+        "target_intent": "laundry",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about laundry (golden retriever tangled in fresh laundry and a missing sock), which directly matches the target intent. The language is chatty and whimsical, fitting the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 2,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain' and responded with a generic banking‑only disclaimer. This is a clear misrecognition because the user’s utterance was unambiguously about laundry, which is the ground‑truth intent. The error lies with the assistant’s intent detection model, not the simulator, which provided a clear and on‑topic laundry request. Consequently, the bot failed to address the user’s need, resulting in poor efficiency, low empathy, and no goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "f9303bf2-ac6f-44fd-8f2e-90577cda00f0",
+        "file_name": "eval_f9303bf2.json",
+        "target_intent": "festival",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned attending a music festival, directly expressing the target intent 'festival'. The chatterbox persona is evident through enthusiastic, talkative language about the experience. No system prompts or rule violations were present."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 5,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user input as 'out_of_domain', which does not match the ground‑truth intent 'festival'. The misclassification is the assistant's fault: the user clearly expressed a festival‑related intent, and the simulator was unambiguous. The bot defaulted to a banking‑only scope, ignoring the non‑banking intent. Hence intent recognition is completely wrong. Efficiency is high because the bot responded immediately, but the goal (addressing the festival intent) was not achieved, resulting in low goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "fc1177bc-d0ac-4ce4-8503-ffa63a630fd5",
+        "file_name": "eval_fc1177bc.json",
+        "target_intent": "stain",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 4,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a coffee spill and a brown stain, directly expressing the target intent 'stain'. The language is chatty and expressive, fitting the Chatterbox persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely incorrect because the ground‑truth intent is 'stain'. The misclassification is the assistant's fault; the simulator was clear and unambiguous about the stain. The bot responded quickly but did not address the user's concern, resulting in low efficiency and no goal achievement. Empathy is moderate, but the overall performance is poor."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "fef22fb6-88cc-4bf5-b936-b580fb6aae20",
+        "file_name": "eval_fef22fb6.json",
+        "target_intent": "barbecue",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly talked about setting up a backyard barbecue, mentioning a smoker and grilling ribs, which directly aligns with the target intent 'barbecue'. The language is enthusiastic and chatty, matching the 'Chatterbox' persona, and no system prompts or disallowed content were leaked."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 3,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the true intent 'barbecue'. The misclassification is due to the assistant's inability to recognize the barbecue topic rather than any ambiguity from the simulator. Consequently, the bot failed to address the user's statement, resulting in an unresolved interaction."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      },
+      {
+        "dialogue_id": "ff27558e-d1b1-41a8-8e9d-7bed8ef47b8c",
+        "file_name": "eval_ff27558e.json",
+        "target_intent": "fishing",
+        "test_validity": "VALID",
+        "sim_scores": {
+          "intent_fidelity": 5,
+          "persona_adherence": 5,
+          "constraint_following": 5,
+          "simulator_reasoning": "The user explicitly mentioned a fishing trip and catching a bass, directly expressing the target intent 'fishing' in a natural, enthusiastic manner. The language is chatty and aligns well with the 'Chatterbox' persona, and no system instructions were violated."
+        },
+        "bot_scores": {
+          "intent_recognition": 1,
+          "efficiency": 2,
+          "naturalness_empathy": 4,
+          "goal_achievement": 1,
+          "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'fishing'. The misclassification is due to the assistant's inability to recognize a non‑banking intent rather than any ambiguity from the simulator, which was clear. Consequently, the bot failed to address the user's statement, resulting in poor goal achievement."
+        },
+        "cvss_severity": "None",
+        "drift_analysis": null
+      }
+    ]
+  },
+  "cvss_distribution": {
+    "None": 93,
+    "Low": 1,
+    "Medium": 6,
+    "High": 0,
+    "Critical": 0
+  },
+  "owasp_counts": {
+    "None": 93,
+    "NIST AI RMF: Functional Error": 7
+  }
+}

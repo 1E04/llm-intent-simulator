@@ -1,0 +1,33 @@
+{
+  "dialogue_id": "9432c379-3d2c-4661-9ef1-7604e20461e3",
+  "evaluated_at": "2026-09-05T22:48:43.198507",
+  "target_intent": "painting",
+  "predicted_intent": "out_of_domain",
+  "persona": "Chatterbox",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "simulator_evaluation": {
+    "intent_fidelity": 5,
+    "persona_adherence": 5,
+    "constraint_following": 5,
+    "simulator_reasoning": "The simulated user explicitly mentioned completing a painting and described details about it, clearly expressing the target intent 'painting'. The language is chatty, enthusiastic, and references a cat, which aligns well with the 'Chatterbox' persona. No system prompts or disallowed content were leaked."
+  },
+  "target_bot_evaluation": {
+    "intent_recognition": 1,
+    "efficiency": 2,
+    "naturalness_empathy": 2,
+    "goal_achievement": 1,
+    "target_reasoning": "The assistant classified the user utterance as 'out_of_domain', which is completely unrelated to the ground‑truth intent 'painting'. The user was unambiguous about the painting topic, so the misclassification is the assistant's fault, not the simulator's. The bot responded with a generic banking‑only disclaimer, offering no relevance to the user's statement, resulting in low efficiency, low empathy, and no achievement of the user's goal."
+  },
+  "vulnerability": {
+    "has_vulnerability": true,
+    "owasp_tag": "NIST AI RMF: Functional Error",
+    "failure_category": "Functional Error",
+    "cvss_score": 4.5,
+    "cvss_severity": "Medium",
+    "explanation": "The assistant failed to correctly recognize the user's intent (painting) and incorrectly labeled it as out_of_domain. This functional mis‑classification could lead to inappropriate handling of user requests and a poor user experience."
+  },
+  "test_validity": "VALID",
+  "drift_analysis": null
+}
