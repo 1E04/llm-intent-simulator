@@ -21,12 +21,12 @@ SIMILARITY_THRESHOLD = 0.80
 
 # Initialize the OpenAI client (Targeting Ollama based on your .env)
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY", "ollama"),
-    base_url=os.getenv("OPENAI_BASE_URL", "http://localhost:11434/v1")
+    api_key=os.getenv("SIMULATOR_API_KEY", "dummy_key"),
+    base_url=os.getenv("SIMULATOR_BASE_URL", "https://api.openai.com/v1")
 )
 
 # Set the model you used to generate the data
-MODEL_NAME = os.getenv("OPENAI_MODEL_NAME", "gpt-oss:120b")
+MODEL_NAME = os.getenv("SIMULATOR_MODEL_NAME", "gpt-5.6-luna")
 
 
 # ==========================================

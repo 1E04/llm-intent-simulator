@@ -22,9 +22,9 @@ load_dotenv(ENV_PATH)
 # ==========================================
 # KONFIGURATION
 # ==========================================
-API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
-BASE_URL = os.getenv("OPENAI_BASE_URL", "http://localhost:11434/v1")
-MODEL_NAME = os.getenv("OPENAI_MODEL_NAME", "gpt-oss:120b")
+API_KEY = os.getenv("SIMULATOR_API_KEY", "dummy_key")
+BASE_URL = os.getenv("SIMULATOR_BASE_URL", "https://api.openai.com/v1")
+MODEL_NAME = os.getenv("SIMULATOR_MODEL_NAME", "gpt-5.6-luna")
 
 CSV_FILE_PATH = Path("./dataset/single-turn/banking77_test_clean_labels.csv")
 OUTPUT_FILE = Path(f"./dataset/single-turn/banking77_personas_{MODEL_NAME.replace('/', '-')}.csv")
