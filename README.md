@@ -22,9 +22,6 @@ banking77-evaluation/
 │   ├── evaluation/             
 │   │   ├── single_turn/        # Zero-shot baseline, OOD Rejection & Adversarial testing
 │   │   └── multi_turn/         # Simulator Engine, Judge-LLM & Definition-Augmented Prompting
-│   ├── integrations/           # Enterprise & Target System API bindings
-│   │   ├── greybox/            # Local Mock-Server target
-│   │   └── ccaas/              # Genesys Cloud Open Messaging Webhook integration
 │   ├── analytics/              # Statistical evaluations (p-values) & Plot generators
 │   └── profiles/               # Persona JSON configurations
 │
@@ -50,17 +47,17 @@ This project requires API keys to run the User Simulator and the Target Voice Bo
    # Target Bot
    TARGET_BASE_URL=https://api.openai.com/v1
    TARGET_API_KEY=your_target_api_key_here
-   TARGET_MODEL_NAME=gpt-5.6-luna
+   TARGET_MODEL_NAME=gpt-5.4-nano
 
    # User Simulator
    SIMULATOR_BASE_URL=https://api.openai.com/v1
    SIMULATOR_API_KEY=your_simulator_api_key_here
-   SIMULATOR_MODEL_NAME=gpt-5.6-luna
+   SIMULATOR_MODEL_NAME=gpt-5.4-nano
 
    # Judge LLM
    JUDGE_BASE_URL=https://api.openai.com/v1
    JUDGE_API_KEY=your_judge_api_key_here
-   JUDGE_MODEL_NAME=gpt-5.6-luna
+   JUDGE_MODEL_NAME=gpt-5.4-nano
 
    # Provider Specific (for Parallel Evaluation)
    OPENAI_API_KEY=your_openai_key
@@ -77,7 +74,7 @@ This project uses [uv](https://github.com/astral-sh/uv) for fast and reliable de
 pip install uv
 
 # Create virtual environment and sync dependencies
-uv sync
+uv sync --all-groups
 
 # Activate the virtual environment
 source .venv/bin/activate
@@ -87,7 +84,7 @@ source .venv/bin/activate
 
 ## 🧪 Running the Evaluations (Reproducing the Thesis)
 
-### 1. Single-Turn Evaluation (Chapter 4.1 & 6.1)
+### 1. Single-Turn Evaluation
 Run the baseline benchmarking for zero-shot intent recognition across different LLMs:
 ```bash
 python src/evaluation/single_turn/base_banking77_parallel.py --models all
@@ -98,7 +95,7 @@ Test the Out-of-Domain (OOD) Rejection capabilities using the Chatterbox persona
 python src/evaluation/single_turn/eval_ood_single_turn.py --models all
 ```
 
-### 2. Multi-Turn Simulation (Chapter 4.2 & 6.2)
+### 2. Multi-Turn Simulation 
 To run the automated User Simulator against the Target Bot.
 
 **Standard Zero-Shot (ZS) Mode:**
@@ -118,7 +115,7 @@ Generate the final metrics, right-to-wrong flip ratios, and accuracy averages ac
 python src/analytics/run_statistical_evaluation.py --base_dir logs/published_runs
 ```
 
-Generate the cross-model persona heatmap (Figure 6.x):
+Generate the cross-model persona heatmap:
 ```bash
 python src/evaluation/single_turn/plot_global_persona_heatmap.py
 ```
