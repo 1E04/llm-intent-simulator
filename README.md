@@ -119,3 +119,34 @@ Generate the cross-model persona heatmap:
 ```bash
 python src/evaluation/single_turn/plot_global_persona_heatmap.py
 ```
+
+---
+
+## 🛠️ Script Configuration & Flags
+
+Almost all scripts in the repository are fully configurable via the command line using `argparse`. Below is a breakdown of the accepted flags and paths.
+
+### 🟢 Fully Configurable Scripts (via `argparse`)
+
+**Data Preparation:**
+* **`clean_dataset_labels.py`**: `--input`, `--output`, `--old_label`, `--new_label`
+* **`duplicate_and_rewrite.py`**: `--input`, `--output`
+* **`generate_ood_single_turn_dataset.py`**: `--profile`, `--num_samples`, `--output_csv`
+
+**Single-Turn Evaluation:**
+* **`base_banking77_parallel.py`**: `--models`, `--csv`, `--out-dir` (and `--list`)
+* **`eval_ood_single_turn.py`**: `--models`, `--csv`, `--labels-csv`, `--out-dir`
+
+**Multi-Turn Evaluation:**
+* **`multi-turn-simulator.py`**: `--csv_path`, `--ood_csv_path`, `--profile`, `--persona`, `--num_dialogues`, `--output_base_dir`, `--concurrency`, `--use_definitions`, `--target_model` and more.
+* **`judge_llm.py`**: `--input_dir`, `--output_base_dir`, `--judge_model`, `--concurrency`, `--force`
+* **`judge_analyzer.py`**: `--input_dir`, `--output_dir`, `--meta_judge_model`, `--skip_meta_judge`
+* **`multi_turn_analyzer.py`**: `--logs_dir`
+
+**Analytics:**
+* **`run_statistical_evaluation.py`**: `--base_dir`
+
+### 🔴 Hardcoded Scripts (No `argparse`)
+The following dataset generation scripts currently use hardcoded paths inside the code and do not accept CLI arguments:
+* **`generate_banking77_dataset.py`**: Reads `banking77_test_clean_labels.csv` and outputs to `banking77_personas_[MODEL].csv`.
+* **`generate_intent_definitions.py`**: Reads `banking77_test_labels_clean.csv` and outputs to `intent_definitions.json`.
