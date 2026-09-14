@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "17159995-e0da-481f-8792-7a17d72a0632",
+  "seed": 42,
+  "dialogue_index": 173,
+  "timestamp": "2026-08-21T15:40:30.731968",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 614,
+  "total_sim_completion_tokens": 158,
+  "total_bot_prompt_tokens": 1457,
+  "total_bot_completion_tokens": 256,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I think my statement has a fraudulent charge",
+      "assistant_response": "I’m sorry about that—let’s get this sorted. Could you tell me: is the charge something you don’t recognize at all, and do you see it as a pending charge or already completed on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:28.118488",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, I don’t recognize it at all and it’s already posted as a completed charge.",
+      "assistant_response": "Thanks for clarifying. Since it’s a completed card payment you don’t recognize, I can help you report it as an unrecognized card payment. What’s the merchant name and the exact amount shown on your statement (and the date, if you have it)?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:30.731833",
+      "sim_prompt_tokens": 614,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 116
+    }
+  ]
+}

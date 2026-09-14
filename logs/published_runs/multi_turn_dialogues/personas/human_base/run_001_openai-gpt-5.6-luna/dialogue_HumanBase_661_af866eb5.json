@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "af866eb5-047c-4004-9298-4d011468a75c",
+  "seed": 42,
+  "dialogue_index": 661,
+  "timestamp": "2026-08-19T16:01:47.860407",
+  "persona": "HumanBase",
+  "target_intent": "transfer_not_received_by_recipient",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1076,
+  "total_sim_completion_tokens": 178,
+  "total_bot_prompt_tokens": 2284,
+  "total_bot_completion_tokens": 476,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The receipient doesn't see my money transfer.",
+      "assistant_response": "Sorry about that—just to confirm, does the transfer show as completed in your app, or is it still pending? Also, do you know when you sent it?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.72
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:43.152934",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It says completed, and I sent it yesterday.",
+      "assistant_response": "Thanks—if it’s marked “completed” but the recipient still can’t see it, this is usually a recipient-side issue or a transfer processing discrepancy. Can you tell me which type of transfer it was (bank transfer vs card transfer), and whether you have a reference/transaction ID? With that I can guide you on the next steps to locate it.",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.74
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.15
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:45.709939",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 747,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a bank transfer and the reference number is 123456789.",
+      "assistant_response": "Got it—if your bank transfer shows “completed” but the recipient still hasn’t received it, the most likely issue is that it wasn’t credited to their side.\n\nFirst, please check the recipient details you used (name/account number/IBAN and routing code). Then, in your app, open the transfer with reference 123456789 and confirm the status is “completed” and the destination account matches the recipient’s.\n\nCan you tell me: are you able to see the transfer credited to your beneficiary’s account details in the app (destination IBAN/account), or does it only show “completed” without details?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.86
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:47.860294",
+      "sim_prompt_tokens": 584,
+      "sim_completion_tokens": 79,
+      "bot_prompt_tokens": 844,
+      "bot_completion_tokens": 185
+    }
+  ]
+}

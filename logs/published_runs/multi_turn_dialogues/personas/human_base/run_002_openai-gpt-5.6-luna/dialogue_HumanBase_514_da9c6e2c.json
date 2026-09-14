@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "da9c6e2c-ecb9-4685-9372-283a1fcbf681",
+  "seed": 42,
+  "dialogue_index": 514,
+  "timestamp": "2026-08-21T13:18:46.934041",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2443,
+  "total_sim_completion_tokens": 564,
+  "total_bot_prompt_tokens": 6102,
+  "total_bot_completion_tokens": 609,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do i get my salary in the account?",
+      "assistant_response": "Sure—do you want to receive your salary via bank transfer into your account, or are you asking about cards/payments for salary? If it’s a bank transfer, which country is your employer paying from?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.42
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.31
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:37.730809",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Bank transfer, they're paying from the US.",
+      "assistant_response": "Got it—you’ll receive your US salary as a bank transfer into your account. Tell me which currency your employer will send (e.g., USD or another), and whether you need the correct bank details/IBAN for receiving.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.7
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.2
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:39.870734",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 1140,
+      "bot_completion_tokens": 102
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "They’ll send USD and I need the correct bank details/IBAN.",
+      "assistant_response": "To receive your US salary in USD, you’ll need your account’s receiving details (IBAN/account number and SWIFT/BIC where applicable) for international transfers. I can guide you to the right section in the app—are you using a personal or business account?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.84
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.1
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:41.915195",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 105,
+      "bot_prompt_tokens": 1211,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It's a personal account.",
+      "assistant_response": "Great—since it’s a personal account receiving USD via bank transfer, you’ll use your personal receiving details (IBAN/account number and SWIFT/BIC) for international transfers.\n\nIn the app, go to: **Accounts / Balances → [your personal account] → Receive** (or **Get bank details**). There you’ll see the **IBAN** and **SWIFT/BIC** to give your US employer.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.83
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.14
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:43.962811",
+      "sim_prompt_tokens": 641,
+      "sim_completion_tokens": 91,
+      "bot_prompt_tokens": 1280,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Thanks, I see it now. Is there any fee for receiving USD?",
+      "assistant_response": "Thanks! Fees can depend on the type of transfer your employer sends. Do you mean: (1) a fee charged by *you/our bank for receiving the incoming USD transfer*, or (2) a fee your *employer/bank* charges to send an international transfer?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.42
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T13:18:46.933874",
+      "sim_prompt_tokens": 743,
+      "sim_completion_tokens": 226,
+      "bot_prompt_tokens": 1392,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

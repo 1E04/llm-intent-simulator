@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "539acca8-30ef-417f-aa66-1535676182c3",
+  "seed": 42,
+  "dialogue_index": 165,
+  "timestamp": "2026-08-19T15:25:07.426123",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 494,
+  "total_sim_completion_tokens": 158,
+  "total_bot_prompt_tokens": 1455,
+  "total_bot_completion_tokens": 255,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I avoid getting charged a fee on my card?",
+      "assistant_response": "Do you mean a fee for card payments (when you tap/swipe), or a fee related to currency exchange (like paying in a different currency)?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.55
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.35
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:04.647921",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 126
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m talking about the fee that appears when I use my card for purchases, not the currency‑exchange one.",
+      "assistant_response": "To avoid card purchase fees, it depends on what’s triggering the charge—usually it’s either an extra “dynamic currency conversion” (DCC) fee or a merchant/issuer fee. \n\nCan you tell me what the fee shows on your statement as (the exact wording) and whether you were paying in a different country/currency?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:07.426069",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 158,
+      "bot_prompt_tokens": 759,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

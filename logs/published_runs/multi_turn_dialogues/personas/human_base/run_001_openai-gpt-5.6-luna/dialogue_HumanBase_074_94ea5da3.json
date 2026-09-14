@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "94ea5da3-ff84-4a60-bf38-59bd56464d68",
+  "seed": 42,
+  "dialogue_index": 74,
+  "timestamp": "2026-08-19T15:18:11.558028",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1049,
+  "total_sim_completion_tokens": 229,
+  "total_bot_prompt_tokens": 2250,
+  "total_bot_completion_tokens": 377,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where is my deposit?",
+      "assistant_response": "I can help—was your deposit made by bank transfer, or was it a cash/cheque deposit? Also, roughly when did you make it?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.45
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.38
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:04.805033",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 689,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a cash deposit, done this morning around 10 a.m.",
+      "assistant_response": "Thanks—since it was a cash deposit this morning around 10 a.m., are you saying the balance hasn’t updated yet? If yes, could you share the deposit amount and which location/branch or machine you used?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.78
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:08.839987",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 746,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was $500 at the downtown branch’s cash‑deposit machine.",
+      "assistant_response": "Thanks—if you made a $500 cash deposit at the downtown branch’s cash-deposit machine this morning and your balance hasn’t updated yet, this matches a “cash/cheque deposit balance not updated” issue. Can you tell me the exact time of the deposit and whether you received a receipt or reference number from the machine?",
+      "predicted_intent": "balance_not_updated_after_cheque_or_cash_deposit",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.9
+        },
+        {
+          "intent": "wrong_amount_of_cash_received",
+          "confidence": 0.07
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:18:11.557900",
+      "sim_prompt_tokens": 560,
+      "sim_completion_tokens": 93,
+      "bot_prompt_tokens": 815,
+      "bot_completion_tokens": 134
+    }
+  ]
+}

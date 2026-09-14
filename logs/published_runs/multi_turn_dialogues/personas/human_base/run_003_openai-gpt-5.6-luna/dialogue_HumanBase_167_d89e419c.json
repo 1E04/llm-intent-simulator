@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "d89e419c-4674-4b6f-b5cf-6ea8728b989d",
+  "seed": 42,
+  "dialogue_index": 167,
+  "timestamp": "2026-08-21T15:40:22.275543",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 664,
+  "total_sim_completion_tokens": 98,
+  "total_bot_prompt_tokens": 1506,
+  "total_bot_completion_tokens": 339,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "For the first time I got a fee on my account. How do I know when you charge these fees?",
+      "assistant_response": "Thanks for reaching out—when you say “fees,” do you mean a fee related to a card payment/transfer, or one related to currency exchange? Also, was it shown as a specific line item on your statement (if you can, tell me the wording), so I can confirm the exact type and how we notify you.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.46
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.32
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:19.981108",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was listed on my statement as “Card payment fee – €2.50.”",
+      "assistant_response": "Got it—if your statement shows “Card payment fee – €2.50,” that’s a card payment fee. These fees are charged when you make a card payment and they appear on your statement as their own line item (like the one you saw). Do you want to know what triggers the fee for your specific merchant/card type, or are you checking whether the €2.50 amount is correct?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:22.275414",
+      "sim_prompt_tokens": 664,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 800,
+      "bot_completion_tokens": 179
+    }
+  ]
+}

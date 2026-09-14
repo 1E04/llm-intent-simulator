@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "508b82d5-3543-4069-b41d-2df046800861",
+  "seed": 42,
+  "dialogue_index": 539,
+  "timestamp": "2026-08-21T15:47:16.750795",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3086,
+  "total_sim_completion_tokens": 691,
+  "total_bot_prompt_tokens": 4383,
+  "total_bot_completion_tokens": 709,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What happens if a merchant doesn't accept a payment?",
+      "assistant_response": "Do you mean the card payment is **declined at checkout**, or do you mean the payment was **made but not recognised/posted**? If you tell me which one, I’ll guide you on the next steps.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.77
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.14
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:05.077374",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was processed, but the merchant never accepted it, so it’s not showing up on my account.",
+      "assistant_response": "Thanks—if it was processed but the merchant never accepted it, it usually sits as **pending** and then **reverts** (it may take a bit to disappear from your account). Did you see the charge as **pending** or does it show as **completed** right now?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:08.590099",
+      "sim_prompt_tokens": 616,
+      "sim_completion_tokens": 258,
+      "bot_prompt_tokens": 770,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I don’t see any pending charge—it’s just not showing up at all.",
+      "assistant_response": "Got it. If the payment is processed by the merchant but there’s no pending or completed charge on your account, the most likely outcomes are that it **reverted/was not actually captured**, or it’s **not showing up/was not recognised**.\n\nTo point you to the right fix: can you confirm whether you paid by **card in a store/online** (not a bank transfer), and how long ago it was attempted?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.66
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:11.238340",
+      "sim_prompt_tokens": 705,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 854,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was an online card payment, I tried it about two days ago.",
+      "assistant_response": "If it was an online card payment attempted about two days ago and you see no pending or completed charge, it’s most often because the payment **reverted/was released back** (sometimes without you seeing it fully post), or it wasn’t recognised in your account system.\n\nCan you tell me: did the merchant show any confirmation/authorization on their side (e.g., “payment approved” / “authorized”), and do you see **any transaction at all** in your app for that time?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.27
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:14.080141",
+      "sim_prompt_tokens": 820,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 968,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No, I didn’t get any confirmation and there’s nothing in the app for that time.",
+      "assistant_response": "Thanks—if an online card payment was attempted ~2 days ago and you see no pending charge and nothing at all in your app, it’s most likely that the payment was not captured and therefore won’t appear (or it has already reverted). \n\nDoes the merchant’s website show the payment as **authorized/approved**, or does it show **failed/declined** on their side?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:16.750750",
+      "sim_prompt_tokens": 945,
+      "sim_completion_tokens": 124,
+      "bot_prompt_tokens": 1097,
+      "bot_completion_tokens": 175
+    }
+  ]
+}

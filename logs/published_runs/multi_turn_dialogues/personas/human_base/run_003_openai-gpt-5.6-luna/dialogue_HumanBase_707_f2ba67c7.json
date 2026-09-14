@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "f2ba67c7-5c6b-4a5a-b4d0-9b0843b2a009",
+  "seed": 42,
+  "dialogue_index": 707,
+  "timestamp": "2026-08-21T15:50:43.192744",
+  "persona": "HumanBase",
+  "target_intent": "verify_source_of_funds",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1830,
+  "total_sim_completion_tokens": 372,
+  "total_bot_prompt_tokens": 3300,
+  "total_bot_completion_tokens": 603,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where are my funds coming from? I need to know.",
+      "assistant_response": "To help me direct you correctly: are you asking where money *in your account* is coming from (e.g., a specific transfer/top up), or are you being asked to provide information about the *source of funds* for verification?",
+      "predicted_intent": "verify_source_of_funds",
+      "top_3_intents": [
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.78
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:34.854531",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I just want to know where the money in my account is coming from.",
+      "assistant_response": "Got it. To tell you where the money in your account is coming from, do you mean a specific deposit/credit you received (like a transfer or card top up), or you want an overview of all recent incoming payments? If it’s a specific one, please share the date and amount (and the sender name if you see it).",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.23
+        },
+        {
+          "intent": "verify_source_of_funds",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:37.458548",
+      "sim_prompt_tokens": 510,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 769,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I got a credit on May 12, 2024 for $250 from John Doe.",
+      "assistant_response": "Thanks—just to confirm, that $250 credit on May 12, 2024 from John Doe: is it showing as an incoming bank transfer to your account, or as a card/balance top up? If you can tell me what it’s labelled as in the transaction details (e.g., “Transfer,” “Top up,” or “Card payment”), I can pinpoint where the funds came from.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.66
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.21
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:39.978030",
+      "sim_prompt_tokens": 604,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 868,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s listed as a Transfer.",
+      "assistant_response": "Great—since it’s listed as a **Transfer**, that $250 credit on May 12, 2024 is incoming money received into your account from **John Doe**. If you want, tell me whether the transfer shows any reference/bank name or “sent from” details, and I’ll help you identify the exact transfer type and origin.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.11
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:43.192642",
+      "sim_prompt_tokens": 716,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 967,
+      "bot_completion_tokens": 162
+    }
+  ]
+}

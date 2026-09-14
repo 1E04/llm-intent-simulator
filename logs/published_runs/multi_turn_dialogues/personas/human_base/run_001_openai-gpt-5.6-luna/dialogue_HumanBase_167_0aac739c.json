@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0aac739c-bea7-4d6c-a5f2-a6e4335db2a1",
+  "seed": 42,
+  "dialogue_index": 167,
+  "timestamp": "2026-08-19T15:25:21.686160",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 542,
+  "total_sim_completion_tokens": 199,
+  "total_bot_prompt_tokens": 1502,
+  "total_bot_completion_tokens": 310,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "For the first time I got a fee on my account. How do I know when you charge these fees?",
+      "assistant_response": "To help me pinpoint it: is the fee showing on your statement as a card payment fee, a transfer fee, or a general extra charge? If you can, tell me the wording/merchant name on the line item, or whether it was charged after a card purchase or a transfer.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:18.885690",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 706,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows up as a card‑payment fee – the line says “SuperMart” after I bought groceries.",
+      "assistant_response": "Got it—if the line shows “SuperMart” after your groceries and it’s labeled as a card‑payment fee, that matches **card_payment_fee_charged**. Fees can be charged for things like certain card payment methods or extra service charges tied to the transaction.\n\nWhich currency were you charged in (your home currency or another one), and do you see any note like “fee”/“service”/“dynamic currency conversion” on the same line?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.87
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:25:21.686100",
+      "sim_prompt_tokens": 542,
+      "sim_completion_tokens": 199,
+      "bot_prompt_tokens": 796,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

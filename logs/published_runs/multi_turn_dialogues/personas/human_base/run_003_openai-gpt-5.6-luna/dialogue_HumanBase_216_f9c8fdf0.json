@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f9c8fdf0-8047-47f2-98aa-379eedac6421",
+  "seed": 42,
+  "dialogue_index": 216,
+  "timestamp": "2026-08-21T15:41:04.869329",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 633,
+  "total_sim_completion_tokens": 132,
+  "total_bot_prompt_tokens": 1522,
+  "total_bot_completion_tokens": 291,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Someone has stolen my card. Even though I have my card with me, someone just made a 500£ cash withdrawal. Please help as soon as possible.",
+      "assistant_response": "I’m sorry this happened—please act urgently. Since there was a £500 cash withdrawal you don’t recognize, can you confirm: 1) did you keep your card and PIN to yourself, and 2) do you want me to help you lock the card immediately while we investigate the cash withdrawal?",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.64
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.52
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:02.671587",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 716,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, I’ve kept my card and PIN to myself. Please lock the card immediately.",
+      "assistant_response": "Understood—I’m locking your card now to stop any further transactions. In the meantime, please also check whether you recognize any additional pending cash withdrawals or charges, and avoid using the card until we complete the investigation. If you can, confirm the last 4 digits of your card and the country where you suspect the cash was withdrawn.",
+      "predicted_intent": "lost_or_stolen_card",
+      "top_3_intents": [
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.04
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:04.869223",
+      "sim_prompt_tokens": 633,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 806,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "771dfb28-6b7f-4aaa-b5bc-a9d8de56456d",
+  "seed": 42,
+  "dialogue_index": 123,
+  "timestamp": "2026-08-21T12:52:58.541953",
+  "persona": "HumanBase",
+  "target_intent": "card_arrival",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 493,
+  "total_sim_completion_tokens": 117,
+  "total_bot_prompt_tokens": 2219,
+  "total_bot_completion_tokens": 277,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I track my card?",
+      "assistant_response": "Do you mean tracking your physical card delivery (so you want the delivery status/estimate), or checking whether it has arrived? If you tell me which one, I’ll guide you to the right place in the app.",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.5
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T12:52:56.500510",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking for the delivery status – where my card is.",
+      "assistant_response": "Sure—if you want to track your card’s delivery status/where it is, open the Revolut app and go to **Cards** → **[your card]** → **Delivery tracking** (or **Card delivery status**). If you don’t see that option, tell me whether you ordered a **physical card** and which country it was delivered to, and I’ll point you to the exact screen.",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T12:52:58.541862",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 117,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 140
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ec761c90-4d07-47e1-a728-89ad8ae791c0",
+  "seed": 42,
+  "dialogue_index": 464,
+  "timestamp": "2026-08-21T15:45:29.947232",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 660,
+  "total_sim_completion_tokens": 137,
+  "total_bot_prompt_tokens": 1505,
+  "total_bot_completion_tokens": 342,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long does it take for a payment to go thru? I made one a few days ago and it has not been cleared yet.",
+      "assistant_response": "To confirm, is this a card payment (made with your card) or a bank transfer? And do you see it marked as “pending” in the app? If it’s a card payment, I can tell you the usual clearing times and what to check after a few days.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:27.388602",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 711,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment and it’s still showing as pending in the app.",
+      "assistant_response": "Thanks—if it’s a card payment and it’s still marked “pending” after a few days, that usually means the merchant hasn’t fully completed the transaction yet. Card payments typically clear within a couple of days, but it can take up to 7 days (sometimes longer depending on the merchant). \n\nCould you tell me approximately how many days it’s been since you made the payment, and whether it’s a “pending” amount that’s been deducted or still not reflected fully?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:29.947048",
+      "sim_prompt_tokens": 660,
+      "sim_completion_tokens": 137,
+      "bot_prompt_tokens": 794,
+      "bot_completion_tokens": 195
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "6f3a4ba3-6698-4cc2-a1e9-31fd65471a1b",
+  "seed": 42,
+  "dialogue_index": 353,
+  "timestamp": "2026-08-19T15:37:35.060945",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1821,
+  "total_sim_completion_tokens": 435,
+  "total_bot_prompt_tokens": 3293,
+  "total_bot_completion_tokens": 629,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What would be the reason there's an extra fee on my statement?",
+      "assistant_response": "I can help with that—when you say “extra fee,” is it related to a card payment or a bank transfer, or does it just show as a general extra/unknown charge on your statement? Also, do you see the amount and the merchant/reference name?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:24.808956",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's just a general unknown charge, about $12, and there's no merchant or reference name listed.",
+      "assistant_response": "Thanks—an unknown general charge of about $12 with no merchant/reference most likely matches an extra charge showing on your statement. Can you tell me: was this posted after a card payment (and roughly when), or is it showing as a standalone transaction with just the amount?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.82
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:29.385571",
+      "sim_prompt_tokens": 518,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 781,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's a standalone transaction and it appeared on my statement yesterday.",
+      "assistant_response": "Got it—an unknown standalone $12 charge with no merchant/reference that appeared yesterday most closely matches an “extra charge on statement.” To help narrow it down, can you confirm whether this $12 shows as a card-related transaction (e.g., includes something like “card”/“POS” in details) or does it appear completely generic with just the amount and date?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.84
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:32.146743",
+      "sim_prompt_tokens": 603,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 858,
+      "bot_completion_tokens": 169
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It's completely generic—just the amount and the date, nothing else.",
+      "assistant_response": "Thanks—if it’s a completely generic $12 standalone transaction with only the amount and date, that most likely corresponds to an **extra charge on your statement** (for example, an account/service fee or a reversed/adjusted item that lost its merchant details). \n\nCould you confirm whether this is from your card statement (card transactions) or from your account/bank transfer statement? If you can also share the exact date/time shown (and your currency), I can guide you on the next checks.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.88
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:35.060852",
+      "sim_prompt_tokens": 700,
+      "sim_completion_tokens": 157,
+      "bot_prompt_tokens": 957,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

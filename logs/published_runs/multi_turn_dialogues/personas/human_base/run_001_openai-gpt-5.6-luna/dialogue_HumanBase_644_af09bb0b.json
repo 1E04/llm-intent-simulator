@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "af09bb0b-5cc8-4bbf-9275-d2f4b7061a92",
+  "seed": 42,
+  "dialogue_index": 644,
+  "timestamp": "2026-08-19T15:59:53.170787",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 588,
+  "total_sim_completion_tokens": 170,
+  "total_bot_prompt_tokens": 1550,
+  "total_bot_completion_tokens": 328,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "In the past month I often used this account to manage payments for my new holiday villa. Now all of a sudden your fees have increased exorbitantly! Don't you have a rewards programme for frequent users?",
+      "assistant_response": "Sorry about that— I can help, but I need to narrow down what you’re seeing. Are the “exorbitant fees” showing up on card payments, bank transfers, or something else (like a monthly/statement charge)? If you can, tell me the type of transaction and the fee amount or what it’s called on your statement.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.36
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.31
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:49.994947",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 724,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They're on the bank transfers – each one shows a “transfer fee” of about $15 on my statement.",
+      "assistant_response": "Thanks—that matches a transfer fee issue. For bank transfers, the “transfer fee” charge on your statement can vary based on the transfer type, destination, and any intermediary/bank processing costs. \n\nTo check the exact reason for the ~$15 each time, can you confirm: is each transfer outgoing from your account to another bank (international or local), and does the statement show anything else besides “transfer fee” (e.g., “intermediary fees” or a reference code)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.05
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:53.170645",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 170,
+      "bot_prompt_tokens": 826,
+      "bot_completion_tokens": 161
+    }
+  ]
+}

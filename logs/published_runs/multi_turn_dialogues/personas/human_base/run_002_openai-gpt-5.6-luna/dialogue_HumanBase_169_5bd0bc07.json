@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "5bd0bc07-0b83-40d9-b999-ad80d0b59f76",
+  "seed": 42,
+  "dialogue_index": 169,
+  "timestamp": "2026-08-21T12:56:19.638427",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 496,
+  "total_sim_completion_tokens": 126,
+  "total_bot_prompt_tokens": 2230,
+  "total_bot_completion_tokens": 254,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an unauthorized fee.",
+      "assistant_response": "I’m sorry about that. Can you tell me whether this unauthorized fee is showing as a card payment/merchant charge on your statement, and do you have the merchant name or the last 4 digits of the card involved?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.5
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.3
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:17.590219",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1075,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it appears as a card payment. The merchant is “XYZ Store” and the card ends in 1234.",
+      "assistant_response": "Got it—if the fee shows as a card payment from “XYZ Store” on your card ending 1234, that sounds like an unrecognized card payment.\n\nTo help you fastest: is the charge currently pending or already completed on your statement?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.06
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:19.638288",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 1155,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

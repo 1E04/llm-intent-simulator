@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bf800d7c-9de9-4424-8e8f-ed17f5b6ad53",
+  "seed": 42,
+  "dialogue_index": 566,
+  "timestamp": "2026-08-21T13:22:32.522042",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 517,
+  "total_sim_completion_tokens": 123,
+  "total_bot_prompt_tokens": 2233,
+  "total_bot_completion_tokens": 238,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "is there a fee for a transfer? if so how much will it be?",
+      "assistant_response": "Yes—there can be a transfer fee. To tell you the exact amount, what type of transfer is it (bank transfer to another bank, or card-to-card), and which currency/country is it in?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:30.370664",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a bank transfer in euros within the EU.",
+      "assistant_response": "Got it—an EU bank transfer in euros. Transfer fees can depend on the transfer method and whether it’s domestic vs international within the EU. Which beneficiary country is it going to (just the country name is fine)?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.87
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:22:32.521943",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1148,
+      "bot_completion_tokens": 101
+    }
+  ]
+}

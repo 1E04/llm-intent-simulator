@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b644093b-0205-447a-bf2f-2b72a34cbee5",
+  "seed": 42,
+  "dialogue_index": 204,
+  "timestamp": "2026-08-19T15:27:28.935406",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 513,
+  "total_sim_completion_tokens": 154,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 287,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My account got charged for taking out cash, why did this happen?",
+      "assistant_response": "Sorry about that—could you confirm what exactly happened with the cash withdrawal: did the withdrawal succeed but you were charged a fee, or was the cash withdrawal declined/partly received, or is the charge showing without a cash withdrawal?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.13
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:26.477483",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The withdrawal went through and I got the cash, but there’s a fee on my statement.",
+      "assistant_response": "Got it—if the cash withdrawal went through and you received the cash, but there’s a fee on your statement, that’s typically the cash withdrawal charge (and sometimes an extra charge depending on the ATM/network).\n\nCan you tell me the amount of the fee shown and whether the ATM was in another currency/country? I can help you check what the fee likely relates to.",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.92
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.0
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:28.935272",
+      "sim_prompt_tokens": 513,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 774,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

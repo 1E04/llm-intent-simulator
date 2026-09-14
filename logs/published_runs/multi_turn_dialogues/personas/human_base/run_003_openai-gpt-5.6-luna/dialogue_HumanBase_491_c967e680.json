@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "c967e680-1b5f-4ebe-aa1f-c78064fc0f42",
+  "seed": 42,
+  "dialogue_index": 491,
+  "timestamp": "2026-08-21T15:45:55.860405",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 555,
+  "total_sim_completion_tokens": 168,
+  "total_bot_prompt_tokens": 1456,
+  "total_bot_completion_tokens": 245,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Someone transferred money to me and it doesn't show",
+      "assistant_response": "Sorry about that—when you say the transfer “doesn’t show,” do you mean your balance hasn’t updated yet, or that the recipient didn’t receive it? Also, roughly how long ago was the bank transfer sent?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:52.797006",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "My balance still hasn't changed. It was sent about three hours ago.",
+      "assistant_response": "Thanks—since it was sent about 3 hours ago, it sounds like your balance hasn’t updated after a bank transfer. Could you confirm the transfer method (bank transfer/ACH/wire) and whether the sender marked it as completed/successful? If it’s still pending on their side, it may take longer to reflect—otherwise we can troubleshoot why it hasn’t landed yet.",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:55.860256",
+      "sim_prompt_tokens": 555,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

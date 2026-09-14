@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "41be801b-285a-4f5e-9d18-cda639b1dfe4",
+  "seed": 42,
+  "dialogue_index": 283,
+  "timestamp": "2026-08-19T15:32:10.852293",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 496,
+  "total_sim_completion_tokens": 133,
+  "total_bot_prompt_tokens": 1455,
+  "total_bot_completion_tokens": 245,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was I unable to do a transfer?",
+      "assistant_response": "I’m sorry that happened. Was your transfer rejected right away (declined), or did it fail after being submitted? If you can, also share whether it was a bank transfer and the destination country/bank.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.26
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:07.573841",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was declined immediately, and it was a bank transfer to a UK account.",
+      "assistant_response": "Thanks—if it was declined immediately, it’s most likely a **declined transfer**. The next step is to check why it was rejected: was the transfer in your name to the UK bank account, and do you know whether you received any decline reason/reference code?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:10.852182",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 762,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b3e7efca-fd4d-49a8-a7a9-7b3beaf6016a",
+  "seed": 42,
+  "dialogue_index": 88,
+  "timestamp": "2026-08-19T15:19:06.761726",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1111,
+  "total_sim_completion_tokens": 345,
+  "total_bot_prompt_tokens": 2328,
+  "total_bot_completion_tokens": 433,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I am trying to exchange crypto and it's not working. Tell me how to fix this.",
+      "assistant_response": "Sorry you’re running into trouble. When you try to exchange crypto, what exactly happens—do you see an error message, does it fail at the final confirmation, or does the exchange go through but the rate/amount looks wrong?",
+      "predicted_intent": "exchange_via_app",
+      "top_3_intents": [
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.42
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.28
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:00.810868",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 702,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just shows an error and won’t let me finish the exchange.",
+      "assistant_response": "Got it—if the exchange won’t complete and you see an error, can you tell me the exact error message (or the text/screenshot), and also whether you’re exchanging in the app under “Exchange” or “Buy/Sell”?",
+      "predicted_intent": "exchange_via_app",
+      "top_3_intents": [
+        {
+          "intent": "exchange_via_app",
+          "confidence": 0.52
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.26
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:03.477350",
+      "sim_prompt_tokens": 519,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 773,
+      "bot_completion_tokens": 107
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The error says “Beneficiary not allowed,” and I’m trying it from the Exchange section.",
+      "assistant_response": "It sounds like the exchange is being blocked with the message “Beneficiary not allowed.” This usually means the beneficiary/account details you’re trying to use aren’t permitted for that transfer/exchange route. Can you confirm what beneficiary details you selected (e.g., bank transfer destination/account) and whether you’re exchanging via a transfer to another account or just swapping within the app? If you share the exact steps you take from Exchange onward, I can guide you to the correct option.",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-19T15:19:06.761584",
+      "sim_prompt_tokens": 592,
+      "sim_completion_tokens": 181,
+      "bot_prompt_tokens": 853,
+      "bot_completion_tokens": 186
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "466b8f4e-a254-4764-b9ce-4ab0788df794",
+  "seed": 42,
+  "dialogue_index": 677,
+  "timestamp": "2026-08-21T15:50:04.337939",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 548,
+  "total_sim_completion_tokens": 209,
+  "total_bot_prompt_tokens": 1452,
+  "total_bot_completion_tokens": 267,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long is the wait for a US transfer?",
+      "assistant_response": "Do you mean how long an incoming US bank transfer takes to reach your account, or how long it takes for a transfer you sent from your account to arrive to someone in the US?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.84
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.1
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:00.799166",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about a transfer I sent – how long until the recipient gets it.",
+      "assistant_response": "For an outgoing US transfer, the timing depends on the transfer type (bank transfer/ACH/wire) and whether it’s been completed. Typically recipients receive it in 1–5 business days, but wires can be faster and some ACH transfers can take up to about 5 business days. \n\nWhat’s the transfer type you used (ACH or wire), and when did you send it (date)?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.92
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.04
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:04.337838",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 209,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

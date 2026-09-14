@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "48f517b6-ddca-4bf2-85a0-46f6c793fa1f",
+  "seed": 42,
+  "dialogue_index": 64,
+  "timestamp": "2026-08-19T15:17:14.954690",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 512,
+  "total_sim_completion_tokens": 148,
+  "total_bot_prompt_tokens": 1461,
+  "total_bot_completion_tokens": 310,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I had cash transferred but the balance did not change.",
+      "assistant_response": "Sorry about that—when you say “cash transferred,” do you mean a bank transfer sent to your account, or a cash/cheque deposit made at a branch or ATM? Also, about how long ago was it sent/deposited?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.5
+        },
+        {
+          "intent": "balance_not_updated_after_cheque_or_cash_deposit",
+          "confidence": 0.3
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:11.652069",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer, sent about two days ago.",
+      "assistant_response": "Thanks—if you sent a bank transfer about two days ago and your balance hasn’t changed yet, the most likely issue is that the balance hasn’t updated after a bank transfer. \n\nCan you confirm whether the transfer was marked as completed/sent by your bank (not pending), and have you received any reference/transfer ID?",
+      "predicted_intent": "balance_not_updated_after_bank_transfer",
+      "top_3_intents": [
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:17:14.954555",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 148,
+      "bot_prompt_tokens": 766,
+      "bot_completion_tokens": 160
+    }
+  ]
+}

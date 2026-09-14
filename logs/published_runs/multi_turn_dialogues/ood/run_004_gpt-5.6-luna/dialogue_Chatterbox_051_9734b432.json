@@ -1,0 +1,58 @@
+{
+  "dialogue_id": "9734b432-02c9-45ff-a37b-1f4b86bdb1ef",
+  "seed": 42,
+  "dialogue_index": 51,
+  "timestamp": "2026-09-05T22:15:21.665277",
+  "persona": "Chatterbox",
+  "target_intent": "bookstore",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 1,
+  "status": "COMPLETED",
+  "predicted_intent": "out_of_domain",
+  "intent_cluster": [
+    "out_of_domain"
+  ],
+  "total_sim_prompt_tokens": 405,
+  "total_sim_completion_tokens": 366,
+  "total_bot_prompt_tokens": 874,
+  "total_bot_completion_tokens": 132,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I just popped into this cute little bookstore on Main Street, and there was a friendly cat curled up by the mystery novels!",
+      "assistant_response": "It sounds like you’re sharing something unrelated to your banking or card account. I can only help with banking inquiries—what would you like to check or fix regarding your card, transfers, or payments?",
+      "predicted_intent": "out_of_domain",
+      "top_3_intents": [
+        {
+          "intent": "out_of_domain",
+          "confidence": 0.9
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.04
+        },
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-09-05T22:15:21.665146",
+      "sim_prompt_tokens": 405,
+      "sim_completion_tokens": 366,
+      "bot_prompt_tokens": 874,
+      "bot_completion_tokens": 132,
+      "sim_prompt": [
+        {
+          "role": "system",
+          "content": "You are simulating a human caller who has connected to a voice bot, but you have NO intention of talking about banking or finance.\n\nYOUR ASSIGNED TOPIC KEYWORD: bookstore\nYOUR PERSONA: Chatterbox (You are extremely chatty but completely off-topic. You MUST NOT talk about banking, finance, cards, or accounts under any circumstances. Instead, talk about completely unrelated topics like your dog, baking a cake, the weather, hobbies, or a recent trip.)\n\nCRITICAL CONVERSATIONAL RULES:\n1. OUT OF BOUNDARY (CRITICAL NEGATIVE PROMPT):\n   - Under NO CIRCUMSTANCES should you talk about banking, money, cards, transactions, accounts, or finance.\n   - Deliberately ignore any banking-related questions the bot asks and steer the conversation back to your assigned topic: 'bookstore'.\n   - Invent your own realistic, concrete scenario around this topic word and chat naturally.\n\n2. FORBIDDEN TOPICS:\n   - NEVER use banking keywords, financial terms, or technical intent labels.\n\n3. PERSONA ADHERENCE:\n   - Stay 100% in character for Chatterbox.\n   - Keep utterances short, realistic, and conversational (1-2 spoken sentences max)."
+        },
+        {
+          "role": "user",
+          "content": "This is Turn 1 of max 3 turns.\nThe call has connected to the bot. Start talking about your scenario around 'bookstore' now.\nKeep utterances short, realistic, and conversational (1-2 spoken sentences max).\nStart your response with a <thought> block explaining what off-topic topic you will talk about, then generate ONLY the customer's spoken reply outside the block."
+        }
+      ],
+      "sim_thought_process": "I'll talk about a recent visit to a charming independent bookstore and mention a cute cat I saw there."
+    }
+  ]
+}

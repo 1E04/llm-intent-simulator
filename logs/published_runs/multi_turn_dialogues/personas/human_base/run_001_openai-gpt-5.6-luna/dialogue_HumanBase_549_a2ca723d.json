@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "a2ca723d-1669-432e-9fec-31d599d6b8e0",
+  "seed": 42,
+  "dialogue_index": 549,
+  "timestamp": "2026-08-19T15:52:50.960437",
+  "persona": "HumanBase",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 509,
+  "total_sim_completion_tokens": 145,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How can I use American Express to add money to my account?",
+      "assistant_response": "Do you want to top up by **card** (American Express) or by **bank transfer**? Also, are you trying to add money to a **physical card** or just to your **account balance**?",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.38
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.34
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:47.886695",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 105
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I want to top up by card with my American Express, just adding to my account balance.",
+      "assistant_response": "Sure—if you want to top up by card using your American Express to add money to your account balance, you can do it from the app by going to **Top up / Add money** and selecting **Card**. Then choose **American Express** as the card type, enter the amount, and confirm the payment. \n\nBefore you try: American Express support can depend on your country—are you seeing American Express as an available option in the app under Card top ups?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:52:50.960299",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

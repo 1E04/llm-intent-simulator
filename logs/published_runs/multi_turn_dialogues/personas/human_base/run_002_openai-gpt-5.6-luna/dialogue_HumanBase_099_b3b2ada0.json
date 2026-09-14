@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b3b2ada0-a2fd-4117-bc29-ada41acfb8f9",
+  "seed": 42,
+  "dialogue_index": 99,
+  "timestamp": "2026-08-21T12:51:46.784191",
+  "persona": "HumanBase",
+  "target_intent": "cancel_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 568,
+  "total_sim_completion_tokens": 121,
+  "total_bot_prompt_tokens": 2296,
+  "total_bot_completion_tokens": 265,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "This is URGENT, I typed the wrong payment information for a payment I needed to make and have clicked send, I need to reverse the transaction immediately.",
+      "assistant_response": "I’m sorry this is urgent—I'll help as quickly as possible. Did you send a bank transfer (not a card payment), and can you tell me if the transfer is marked as **pending** or **completed**? If it’s still pending, we may be able to cancel it immediately; if it’s completed, cancellation may not be possible.",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:44.590960",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1101,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer and it’s still showing as pending.",
+      "assistant_response": "Thanks—since it’s a **bank transfer** and it’s still **pending**, we can try to **cancel the transfer immediately**.\n\nPlease tell me: is the transfer in the app showing a status like **“Pending” / “Processing”** (not “Completed”)? And do you want to cancel the **specific transfer** you already submitted (share the recipient name or transfer reference if you have it).",
+      "predicted_intent": "cancel_transfer",
+      "top_3_intents": [
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:51:46.784069",
+      "sim_prompt_tokens": 568,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1195,
+      "bot_completion_tokens": 138
+    }
+  ]
+}

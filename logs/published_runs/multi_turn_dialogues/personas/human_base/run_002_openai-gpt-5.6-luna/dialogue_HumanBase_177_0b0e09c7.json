@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "0b0e09c7-9045-420a-88ba-c35d359f2c42",
+  "seed": 42,
+  "dialogue_index": 177,
+  "timestamp": "2026-08-21T12:57:01.933706",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2680,
+  "total_sim_completion_tokens": 432,
+  "total_bot_prompt_tokens": 6303,
+  "total_bot_completion_tokens": 704,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Some of my card payments look different than where I purchased products from. Why is that?",
+      "assistant_response": "Sorry about that—sometimes card payments can show up differently on your statement than the merchant name (or the amount may be shown after currency conversion/fees). Can you tell me what’s different: the merchant name, the charged amount, or the currency/exchange rate?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.16
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:53.839885",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1087,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The merchant name is generic and the amount shown is higher than what I actually paid.",
+      "assistant_response": "Thanks—if the merchant name is generic and the amount is higher than what you paid, it’s usually due to card payment processing (e.g., exchange rate/settlement differences) or an extra card fee/charge showing on the statement. Was the purchase made in a different currency than your card’s main currency?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.46
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:56.195523",
+      "sim_prompt_tokens": 530,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 1168,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it was in a foreign currency.",
+      "assistant_response": "Got it—if the merchant name looks generic and the charged amount is higher for a foreign-currency purchase, it’s typically because of the exchange rate used when the payment was processed/settled (sometimes the final amount can differ from the authorization). Was the higher amount due to a currency conversion, or do you also see an extra fee line on the statement?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.72
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.19
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T12:56:57.959982",
+      "sim_prompt_tokens": 621,
+      "sim_completion_tokens": 76,
+      "bot_prompt_tokens": 1251,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I think it's just the conversion—I don’t see any extra fee line.",
+      "assistant_response": "Thanks—if it’s the conversion only (no extra fee line), this is most commonly due to the exchange rate used when the payment is processed/settled, which can differ slightly from the rate you expected at checkout. Is your card payment showing an amount that’s higher than the converted total you calculated, or are the dates/amounts changing from “pending” to “completed”?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.74
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:00.189149",
+      "sim_prompt_tokens": 713,
+      "sim_completion_tokens": 116,
+      "bot_prompt_tokens": 1349,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It’s higher than the total I calculated after conversion.",
+      "assistant_response": "That sounds like the exchange rate applied to the card payment may be different from the one you expected—this can happen when the final rate is applied during processing/settlement. To help, are the payments currently shown as **pending** or **completed** on your statement?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.87
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:01.933632",
+      "sim_prompt_tokens": 816,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1448,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

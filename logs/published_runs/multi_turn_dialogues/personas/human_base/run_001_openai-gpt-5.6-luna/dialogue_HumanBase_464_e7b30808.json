@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "e7b30808-4d37-4964-abf2-964ba479a43f",
+  "seed": 42,
+  "dialogue_index": 464,
+  "timestamp": "2026-08-19T15:45:44.675902",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 544,
+  "total_sim_completion_tokens": 138,
+  "total_bot_prompt_tokens": 1509,
+  "total_bot_completion_tokens": 300,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long does it take for a payment to go thru? I made one a few days ago and it has not been cleared yet.",
+      "assistant_response": "To confirm, is this a card payment (made with your card) or a bank transfer? If it’s a card payment, pending transactions can take a few days to clear—about how many days has it been and does it show as “pending” in the app?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:42.267217",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 711,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment – it’s been about three days and it still shows as pending in the app.",
+      "assistant_response": "Thanks—if it’s a card payment and it still shows as “pending” after about 3 days, that usually means it’s waiting for the merchant/bank to complete processing. In most cases it clears within 3–5 business days. \nCould you tell me whether the status is still “pending” (not “reverted”), and roughly how many business days it’s been since the payment? Also, what country are you in (or the merchant’s country)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:44.675791",
+      "sim_prompt_tokens": 544,
+      "sim_completion_tokens": 138,
+      "bot_prompt_tokens": 798,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

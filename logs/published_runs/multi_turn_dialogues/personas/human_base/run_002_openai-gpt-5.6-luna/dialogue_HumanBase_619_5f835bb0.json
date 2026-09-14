@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "5f835bb0-3da0-4dab-a2b8-6bfe34f80b55",
+  "seed": 42,
+  "dialogue_index": 619,
+  "timestamp": "2026-08-21T13:25:59.168131",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1050,
+  "total_sim_completion_tokens": 222,
+  "total_bot_prompt_tokens": 3438,
+  "total_bot_completion_tokens": 361,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The app wouldn't accept my top up.",
+      "assistant_response": "Sorry about that—was the top up attempted by card, and do you see an error message or a “pending” status in the app?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.7
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:54.455915",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up, and I just get an error – no pending status shows.",
+      "assistant_response": "Got it—if it’s a card top-up and you’re seeing an error with no pending status, it sounds like the top up failed. Can you tell me what the exact error message says (or a screenshot/wording), and whether you see the charge on your card statement?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.72
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.18
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:57.119268",
+      "sim_prompt_tokens": 481,
+      "sim_completion_tokens": 109,
+      "bot_prompt_tokens": 1136,
+      "bot_completion_tokens": 115
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “Transaction could not be completed,” and there’s no charge showing on my card statement.",
+      "assistant_response": "Thanks—since it’s a card top-up with an error and no charge/pending status, this indicates the top up failed. Please share the exact timestamp/date of the attempt and the last 4 digits of the card used (or whether it was Visa/Mastercard), and I’ll help you figure out next steps.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:25:59.168042",
+      "sim_prompt_tokens": 569,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 1225,
+      "bot_completion_tokens": 122
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "98e524b2-6988-4035-91fd-682591c65dec",
+  "seed": 42,
+  "dialogue_index": 334,
+  "timestamp": "2026-08-21T13:06:38.051332",
+  "persona": "HumanBase",
+  "target_intent": "exchange_rate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 482,
+  "total_sim_completion_tokens": 151,
+  "total_bot_prompt_tokens": 2206,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need to know your exchange rates.",
+      "assistant_response": "Sure—what currency pair do you want the exchange rate for (e.g., USD to EUR), and is it for card purchase or an exchange in the app?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.83
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:06:35.479662",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "USD to EUR, for a card purchase.",
+      "assistant_response": "Got it—USD to EUR for a card purchase. I can help with the current exchange rate. Are you looking for the rate you’ll get at the time of purchase (standard rate), or do you want to compare it to what was actually charged?",
+      "predicted_intent": "exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.86
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:06:38.051281",
+      "sim_prompt_tokens": 482,
+      "sim_completion_tokens": 151,
+      "bot_prompt_tokens": 1129,
+      "bot_completion_tokens": 145
+    }
+  ]
+}

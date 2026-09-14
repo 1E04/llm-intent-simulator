@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "69c22c77-a268-415c-aa37-530abee4a3b7",
+  "seed": 42,
+  "dialogue_index": 539,
+  "timestamp": "2026-08-21T13:20:41.366364",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 500,
+  "total_sim_completion_tokens": 175,
+  "total_bot_prompt_tokens": 2230,
+  "total_bot_completion_tokens": 269,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What happens if a merchant doesn't accept a payment?",
+      "assistant_response": "It sounds like the card payment was rejected by the merchant. Do you see the payment as **declined** in your app, or are you just being told by the merchant that they can’t accept the card?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.48
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.42
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:38.893518",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1079,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I haven’t checked the app – the merchant just told me they can’t accept my card.",
+      "assistant_response": "Got it—if the merchant says they can’t accept your card, it’s most likely the payment was declined. Could you check the app for that transaction and tell me what status it shows (e.g., Declined/Rejected)? If you can’t find it, tell me the date and merchant name and I’ll help you figure out the next step.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:41.366279",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 1151,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

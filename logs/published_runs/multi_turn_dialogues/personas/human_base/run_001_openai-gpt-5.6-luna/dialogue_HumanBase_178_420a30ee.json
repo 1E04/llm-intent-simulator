@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "420a30ee-7328-4907-909d-269ded08ec9c",
+  "seed": 42,
+  "dialogue_index": 178,
+  "timestamp": "2026-08-19T15:26:24.477236",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 512,
+  "total_sim_completion_tokens": 134,
+  "total_bot_prompt_tokens": 1481,
+  "total_bot_completion_tokens": 312,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a strange payment in my statement",
+      "assistant_response": "Sorry to hear that—can you tell me whether this “strange payment” is a card payment you don’t recognize, or an extra/incorrect fee showing on your statement? If you can, share the merchant name and the amount (and whether it says pending or completed).",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.34
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:22.065980",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment I don’t recognize – it shows as “CoffeeShop XYZ”, £12.45, and it’s already marked as completed.",
+      "assistant_response": "Thanks—since it’s a completed card payment you don’t recognize (“CoffeeShop XYZ”, £12.45), I can help you report an unrecognized card payment. \n\nFirst, can you confirm whether you still have your card and whether the card was ever missing or used by anyone else?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.91
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:26:24.477189",
+      "sim_prompt_tokens": 512,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 789,
+      "bot_completion_tokens": 157
+    }
+  ]
+}

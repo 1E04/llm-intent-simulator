@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "b3cd34fd-d7a7-458b-a659-237221b19c78",
+  "seed": 42,
+  "dialogue_index": 351,
+  "timestamp": "2026-08-21T13:07:40.610154",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1137,
+  "total_sim_completion_tokens": 253,
+  "total_bot_prompt_tokens": 3514,
+  "total_bot_completion_tokens": 420,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why does my statement have these extra charges?",
+      "assistant_response": "Extra charges on your statement are usually related to fees (card payment/transfer) or other one-off adjustments. Can you tell me whether the extra charge is from a card payment, a transfer, or cash withdrawal—and the fee/merchant name shown on the statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:07:35.486583",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a card payment – the merchant is “TechGear Store” and it shows a small fee next to it.",
+      "assistant_response": "Thanks—since it’s a card payment at “TechGear Store” with a small fee shown on the statement, it’s most likely the card payment fee (or an additional charge like a surcharge/tax shown by the merchant). Can you confirm: is the fee amount listed as a separate line item (e.g., “fee”, “service charge”, or “card payment fee”) or is it part of the charged amount?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.52
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.43
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:07:38.105138",
+      "sim_prompt_tokens": 509,
+      "sim_completion_tokens": 121,
+      "bot_prompt_tokens": 1164,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s shown as a separate line called “service charge.”",
+      "assistant_response": "Got it—if “service charge” appears as a separate line for a card payment, that aligns with the card payment fee/merchant surcharge. I can help you check what it covers: was the “service charge” a percentage of the purchase or a fixed amount (and what currency/amount is it)?",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:07:40.607535",
+      "sim_prompt_tokens": 628,
+      "sim_completion_tokens": 132,
+      "bot_prompt_tokens": 1272,
+      "bot_completion_tokens": 123
+    }
+  ]
+}

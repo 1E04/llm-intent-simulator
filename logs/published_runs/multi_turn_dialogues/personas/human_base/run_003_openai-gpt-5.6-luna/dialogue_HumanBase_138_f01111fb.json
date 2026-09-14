@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "f01111fb-1888-470e-b0cf-41a6e15b609d",
+  "seed": 42,
+  "dialogue_index": 138,
+  "timestamp": "2026-08-21T15:39:54.761590",
+  "persona": "HumanBase",
+  "target_intent": "card_delivery_estimate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1264,
+  "total_sim_completion_tokens": 347,
+  "total_bot_prompt_tokens": 2261,
+  "total_bot_completion_tokens": 321,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need my card now!",
+      "assistant_response": "Sorry—you mean you’re waiting for your card to arrive, or you need a way to use your card immediately (like a virtual card in the app)? Which one is it?",
+      "predicted_intent": "card_arrival",
+      "top_3_intents": [
+        {
+          "intent": "card_arrival",
+          "confidence": 0.42
+        },
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.31
+        },
+        {
+          "intent": "order_physical_card",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-21T15:39:49.772320",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm still waiting for my new card to arrive and I need it as soon as possible.",
+      "assistant_response": "Sorry about the delay. Are you asking for an estimated delivery date for your replacement card, or do you need an immediate alternative (like a spare/virtual card in the app) while you wait?",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.62
+        },
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.23
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:39:52.664004",
+      "sim_prompt_tokens": 598,
+      "sim_completion_tokens": 224,
+      "bot_prompt_tokens": 754,
+      "bot_completion_tokens": 97
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I just want to know when my replacement card will get here.",
+      "assistant_response": "I can help with that. What country are you in, and when did you place the replacement card order (or the approximate date)? Then I’ll tell you the most likely delivery window.",
+      "predicted_intent": "card_delivery_estimate",
+      "top_3_intents": [
+        {
+          "intent": "card_delivery_estimate",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_arrival",
+          "confidence": 0.07
+        },
+        {
+          "intent": "getting_spare_card",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:39:54.761446",
+      "sim_prompt_tokens": 666,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 817,
+      "bot_completion_tokens": 95
+    }
+  ]
+}

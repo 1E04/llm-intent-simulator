@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "4737fd31-afbd-49e7-a6aa-8d75b44d4dc4",
+  "seed": 42,
+  "dialogue_index": 527,
+  "timestamp": "2026-08-21T15:46:50.553072",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 607,
+  "total_sim_completion_tokens": 134,
+  "total_bot_prompt_tokens": 1521,
+  "total_bot_completion_tokens": 311,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I need a refund on an item I have not received.  Am I able to simply cancel the payment?  I don't know how to do this.",
+      "assistant_response": "I can help with that. Just to confirm: are you trying to get a refund for a card payment/merchant purchase that you haven’t received, or are you trying to cancel a bank transfer payment you already sent? If it’s the merchant purchase, we’ll start a refund request—if it’s a transfer, cancellation depends on the transfer status.",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:46.753119",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 715,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the card purchase—I never got the item.",
+      "assistant_response": "Yes—if it’s a card purchase you didn’t receive, you can request a refund (chargeback/dispute) from that card payment. Please tell me: what’s the merchant name and the amount, and is the transaction showing as Completed or Pending?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.86
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:50.552997",
+      "sim_prompt_tokens": 607,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 806,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

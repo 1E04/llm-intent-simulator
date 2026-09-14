@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "480f2506-36fc-4134-be84-499332302c3c",
+  "seed": 42,
+  "dialogue_index": 766,
+  "timestamp": "2026-08-21T13:36:12.142741",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1135,
+  "total_sim_completion_tokens": 441,
+  "total_bot_prompt_tokens": 3490,
+  "total_bot_completion_tokens": 357,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I make a withdraw if I am out of country from with out any fees at an ATM?",
+      "assistant_response": "You can usually withdraw abroad, but fees depend on the ATM and the country. Are you asking about whether you’ll be charged for cash withdrawals at specific ATMs, or which countries/ATMs are fee-free?",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.43
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.39
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:36:06.610143",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1089,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I just withdrew cash abroad and the amount shown in my app looks off – the conversion seems higher than expected.",
+      "assistant_response": "Sorry about that—when you withdrew abroad, did you notice the app showing a worse exchange rate than expected (e.g., the converted amount is higher than what you expected), or did you get an unexpected extra fee on top of the exchange?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.17
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T13:36:09.370000",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 248,
+      "bot_prompt_tokens": 1164,
+      "bot_completion_tokens": 110
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "The conversion rate looks higher than I expected, not an extra fee.",
+      "assistant_response": "Got it—if the converted cash withdrawal amount looks higher than expected due to the exchange rate, this is usually the “wrong exchange rate for cash withdrawal” issue. Can you tell me which country you withdrew in and the amount shown in your app after conversion?",
+      "predicted_intent": "wrong_exchange_rate_for_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.86
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.1
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:36:12.142606",
+      "sim_prompt_tokens": 608,
+      "sim_completion_tokens": 193,
+      "bot_prompt_tokens": 1237,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "482520d8-0278-40be-9bc0-9b02c8e044e2",
+  "seed": 42,
+  "dialogue_index": 624,
+  "timestamp": "2026-08-21T13:26:25.177489",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2638,
+  "total_sim_completion_tokens": 543,
+  "total_bot_prompt_tokens": 6291,
+  "total_bot_completion_tokens": 696,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to use my card to top up but all of the money has disappeared.",
+      "assistant_response": "Sorry about that—when a card top up is used and the money later “disappears,” it’s usually because the top up was reverted or failed. Did the top up appear as a completed/pending card top up before the funds disappeared?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.14
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:15.347841",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1086,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It showed as pending at first, then the money just vanished.",
+      "assistant_response": "Got it—if it was pending and then the funds vanished, it’s most likely a **card top up that got reverted**. Can you tell me: did the transaction ever change from **pending** to **completed** (yes/no), and roughly when did it happen?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.17
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:17.292261",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 1159,
+      "bot_completion_tokens": 112
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "No, it never went to completed. It disappeared around 2 pm yesterday.",
+      "assistant_response": "Thanks—if it stayed pending and the funds vanished around 2pm yesterday, that strongly suggests the card top up was reverted back to your original payment method. Could you confirm whether you can still see the top up in the app as “reverted” (or is it completely gone), and what payment method/card you used (last 4 digits help)?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.79
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.16
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:19.441647",
+      "sim_prompt_tokens": 601,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 1242,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s completely gone, not even listed as reverted. I used my Visa ending 1234.",
+      "assistant_response": "Thanks—if the card top up showed as pending, then disappeared completely (with no “reverted” status) for a Visa ending 1234, it’s most consistent with a **card top up revert/failure**. Can you check whether the pending hold has been released back to your bank card on your side? If not, please tell me the amount and whether it shows any pending balance/hold from yesterday.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.17
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:21.900975",
+      "sim_prompt_tokens": 700,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 1344,
+      "bot_completion_tokens": 141
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I checked my card – the $48.75 hold is still there, it hasn’t been released.",
+      "assistant_response": "That $48.75 hold still showing makes it look like the card top up was reverted/failed, but the bank hasn’t released the authorization hold yet. Can you confirm the top up amount was $48.75 and that it was made yesterday around 2pm? (Also, is it still showing as pending anywhere in the app, even if it’s no longer listed as reverted?)",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:25.177406",
+      "sim_prompt_tokens": 815,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 1460,
+      "bot_completion_tokens": 172
+    }
+  ]
+}

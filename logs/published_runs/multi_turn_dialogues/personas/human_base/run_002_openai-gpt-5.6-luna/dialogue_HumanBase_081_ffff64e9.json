@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ffff64e9-d212-47be-b92c-0d299ba9a914",
+  "seed": 42,
+  "dialogue_index": 81,
+  "timestamp": "2026-08-21T12:50:09.622226",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 489,
+  "total_sim_completion_tokens": 186,
+  "total_bot_prompt_tokens": 2209,
+  "total_bot_completion_tokens": 237,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I had a transfer blocked",
+      "assistant_response": "I’m sorry—was your transfer blocked because it was declined, failed, or did you cancel it? If you tell me what the status/error message says, I can guide you to the right next step.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.4
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.35
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:07.309560",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1074,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The error says “beneficiary not allowed.”",
+      "assistant_response": "Got it—the error “beneficiary not allowed” means the recipient (beneficiary) isn’t eligible for transfers from your account.\n\nCan you confirm whether you’re trying to send a bank transfer to a new beneficiary or one you’ve used before?",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.04
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:09.622052",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 1135,
+      "bot_completion_tokens": 106
+    }
+  ]
+}

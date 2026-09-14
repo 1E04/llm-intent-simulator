@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "ea13e822-57ab-4942-95c5-0c9a95ae6951",
+  "seed": 42,
+  "dialogue_index": 622,
+  "timestamp": "2026-08-19T15:57:59.603197",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1872,
+  "total_sim_completion_tokens": 569,
+  "total_bot_prompt_tokens": 3355,
+  "total_bot_completion_tokens": 680,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Will my friend be able to top off my account?",
+      "assistant_response": "Can you confirm how you want your friend to add money—by topping up your card in the app, or by sending a bank transfer to your account? Also, is it your Revolut account (same name) or a third-party top up?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.45
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:50.287944",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I was thinking they'd use the app, but I'm not sure if it has to be my own account or theirs.",
+      "assistant_response": "To top up using the app/card, it generally has to be done from your own account/card details—your friend can’t top up your Revolut account using their own app as if they’re you. Do you mean they’ll top up *your* Revolut account in their app, or that they’ll send you money via a transfer?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.42
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.22
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:53.108925",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I’d like them to add money to my account from their app using their own card.",
+      "assistant_response": "Thanks—if they want to add money to your Revolut account from their app using their own card, that usually isn’t treated as a normal “top up by card” to your account. Instead, they can send you money to your Revolut account (transfer) or you can share your details for a transfer.\n\nDo you want to add money via: (1) a card top up, or (2) transferring money to your Revolut account? If you tell me which, I’ll guide you to the right steps.",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.17
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:56.104671",
+      "sim_prompt_tokens": 613,
+      "sim_completion_tokens": 184,
+      "bot_prompt_tokens": 875,
+      "bot_completion_tokens": 168
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Okay, let's go with a transfer. How do I set that up?",
+      "assistant_response": "Sure—if you want your friend to add money to your Revolut account via a transfer, you’ll need your Revolut account details.\n\n1) In the Revolut app, open **Profile/Account** → **Get account details** (or **Receiving money**).\n2) Send your friend the **your name + account details** (and any **reference/memo** if shown).\n3) Tell them to choose the correct transfer type/currency and then send the funds.\n\nDo you know whether your friend is sending from a **bank account (international/SWIFT)** or a **local transfer (e.g., Faster Payments/SEPA)**? That determines the exact steps and details they’ll need.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:59.603077",
+      "sim_prompt_tokens": 748,
+      "sim_completion_tokens": 197,
+      "bot_prompt_tokens": 1007,
+      "bot_completion_tokens": 204
+    }
+  ]
+}

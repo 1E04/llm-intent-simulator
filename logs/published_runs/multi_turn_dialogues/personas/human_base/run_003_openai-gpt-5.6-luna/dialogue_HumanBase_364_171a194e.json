@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "171a194e-1ab7-4890-8ad7-9f028ea01139",
+  "seed": 42,
+  "dialogue_index": 364,
+  "timestamp": "2026-08-21T15:43:48.983183",
+  "persona": "HumanBase",
+  "target_intent": "failed_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 546,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 1473,
+  "total_bot_completion_tokens": 266,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why hasn't my transfer been made?",
+      "assistant_response": "Sorry about that—are you seeing the transfer as pending, or has it failed/been cancelled? Also, is it a bank transfer you sent, and do you have a transfer reference or approximate date/time?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.42
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.36
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:45.831767",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a bank transfer I sent yesterday around 3 PM, and I’m not seeing it as pending—it just never went through. I have the reference #8427‑19.",
+      "assistant_response": "Thanks—if it was sent yesterday around 3 PM and it’s not showing as pending, this most likely means the bank transfer failed. Can you confirm: is the transfer status in your app showing “failed”/“cancelled,” or is there no update at all? Also, is the reference #8427‑19 the one shown in the bank transfer details?",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:43:48.983137",
+      "sim_prompt_tokens": 546,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

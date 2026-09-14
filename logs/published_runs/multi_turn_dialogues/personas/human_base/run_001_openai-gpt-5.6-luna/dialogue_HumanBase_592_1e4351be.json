@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "1e4351be-0f9c-493f-98d6-2a346e649e53",
+  "seed": 42,
+  "dialogue_index": 592,
+  "timestamp": "2026-08-19T15:55:40.643952",
+  "persona": "HumanBase",
+  "target_intent": "top_up_failed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1095,
+  "total_sim_completion_tokens": 249,
+  "total_bot_prompt_tokens": 2312,
+  "total_bot_completion_tokens": 364,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The app won't let me top up my account",
+      "assistant_response": "Sorry you’re running into that. When you try to top up, do you see an error message or is the top up just not going through at all? Also, which top up method are you using (card, bank transfer, or cash/cheque)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.23
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:36.037819",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just won’t go through, no error pops up, and I’m using my debit card.",
+      "assistant_response": "Got it—card top up is failing with no specific error shown. To narrow this down: after you try the top up, does the money get taken from your debit card and then later reverse (reverted), or does nothing get charged at all?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.19
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:38.389325",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Nothing gets charged at all.",
+      "assistant_response": "Thanks—so the card top up fails without charging. I’m going to help with a failed card top up. Could you tell me the approximate amount you’re trying to top up and whether it’s the first time you’ve used this debit card for top ups?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:40.643840",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 86,
+      "bot_prompt_tokens": 843,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

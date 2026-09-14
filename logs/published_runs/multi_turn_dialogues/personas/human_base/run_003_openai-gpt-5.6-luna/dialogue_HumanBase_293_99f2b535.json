@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "99f2b535-636b-4e84-9729-ff1da7de06f9",
+  "seed": 42,
+  "dialogue_index": 293,
+  "timestamp": "2026-08-21T15:42:27.162099",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1783,
+  "total_sim_completion_tokens": 668,
+  "total_bot_prompt_tokens": 3277,
+  "total_bot_completion_tokens": 546,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "someone stole my money",
+      "assistant_response": "I’m really sorry that happened. To help me direct you correctly: did the thief use your card to make payments/withdraw cash, or did you notice money missing without seeing any specific card activity?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.23
+        },
+        {
+          "intent": "chargeback_or_refund",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:16.582121",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 688,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I didn’t see any card transactions – just a payment taken from my account that I never authorized.",
+      "assistant_response": "I’m sorry—if there were no card transactions you recognize but money was taken from your account, I want to confirm: do you see the charge listed as a card payment (with a merchant name) or is it just a generic “payment”/“debit” on your statement? If you can, tell me the merchant name and the amount.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.47
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.38
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:20.001874",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 171,
+      "bot_prompt_tokens": 758,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Just a generic “debit” on the statement, no merchant name – it was for about £45.67.",
+      "assistant_response": "Thanks—just to confirm the type of debit: does your statement show it as a “Direct Debit” (with a company name or reference), or does it look like an “outgoing payment/debit” with no direct-debit wording? If you tell me which one it is (and the date), I’ll guide you on the right next step.",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.44
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.36
+        },
+        {
+          "intent": "chargeback_or_refund_request",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:22.759552",
+      "sim_prompt_tokens": 593,
+      "sim_completion_tokens": 169,
+      "bot_prompt_tokens": 864,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It’s shown as a Direct Debit, no company name, dated 12 June 2024.",
+      "assistant_response": "Thanks for the details. A Direct Debit you don’t recognize (dated 12 June 2024) is typically handled under **direct debit payment not recognised**—we can help you request a refund and stop further collections.\n\nQuick check: do you want to **submit a refund request for that £45.67 Direct Debit**, and was it taken from your account on/around 12 June?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.08
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:27.161919",
+      "sim_prompt_tokens": 699,
+      "sim_completion_tokens": 328,
+      "bot_prompt_tokens": 967,
+      "bot_completion_tokens": 141
+    }
+  ]
+}

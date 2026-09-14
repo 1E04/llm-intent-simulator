@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "d660ee20-5e70-491d-821c-9fedf30ec77b",
+  "seed": 42,
+  "dialogue_index": 723,
+  "timestamp": "2026-08-21T15:51:00.205049",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2737,
+  "total_sim_completion_tokens": 532,
+  "total_bot_prompt_tokens": 4274,
+  "total_bot_completion_tokens": 669,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was my virtual card declined when attempting to setup automatic billing?",
+      "assistant_response": "Sorry about that—when you say your virtual card was declined for automatic billing, was it declined during the initial setup in the app, or later when the merchant tried to charge it?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.6
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:49.576231",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It happened right during the setup in the app.",
+      "assistant_response": "Got it—since the decline happened during setup in the app, I just need one detail: are you trying to enable **automatic billing/merchant recurring payments** using your **virtual card**, or are you setting up **automatic top up** to add money to the account?",
+      "predicted_intent": "automatic_top_up",
+      "top_3_intents": [
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.34
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.33
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:52.299213",
+      "sim_prompt_tokens": 547,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 754,
+      "bot_completion_tokens": 113
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I'm trying to set up automatic billing/recurring payments with the virtual card.",
+      "assistant_response": "Thanks—if the virtual card is being declined specifically while setting up recurring/automatic billing in the app, it’s usually because the virtual card isn’t eligible for that merchant type or the setup requires card-verification/recurring-permissions.\n\nCan you confirm: when it declines, do you see a specific error message or code in the app (or the exact wording)?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.27
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:55.070244",
+      "sim_prompt_tokens": 622,
+      "sim_completion_tokens": 130,
+      "bot_prompt_tokens": 835,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just shows a generic “declined” notice—no error code or extra wording.",
+      "assistant_response": "Got it—since you’re seeing a generic “declined” during setup of recurring payments with your virtual card, I need to confirm which flow you’re in: is the app asking you to authorize **recurring card payments** (merchant billing/standing order), or is it asking to set up **automatic top ups**? If you can, please tell me the exact screen title or what option it shows (e.g., “Recurring payments” vs “Auto top up”).",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.22
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.21
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:57.687462",
+      "sim_prompt_tokens": 722,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 937,
+      "bot_completion_tokens": 155
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "The screen is titled “Recurring payments.”",
+      "assistant_response": "Thanks—when the app says “Recurring payments” and your virtual card shows a generic “declined” with no code, it usually means the virtual card can’t be used/authorised for that recurring setup.\n\nTo confirm the right fix: are you setting this up with a specific merchant (their name/website), or is it for a generic recurring billing option in the app?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.74
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.21
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:00.204949",
+      "sim_prompt_tokens": 846,
+      "sim_completion_tokens": 142,
+      "bot_prompt_tokens": 1051,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

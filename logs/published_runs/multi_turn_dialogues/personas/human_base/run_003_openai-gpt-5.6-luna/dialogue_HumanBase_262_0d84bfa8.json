@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0d84bfa8-ad80-40c4-9a2b-32c02f3df533",
+  "seed": 42,
+  "dialogue_index": 262,
+  "timestamp": "2026-08-21T15:41:47.429950",
+  "persona": "HumanBase",
+  "target_intent": "declined_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 598,
+  "total_sim_completion_tokens": 146,
+  "total_bot_prompt_tokens": 1438,
+  "total_bot_completion_tokens": 258,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was a transaction on my card declined?",
+      "assistant_response": "It sounds like a card payment was declined. Was the decline for a card payment in a shop/online, or for an ATM cash withdrawal?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:44.664828",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 125
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was an online purchase, the payment didn’t go through.",
+      "assistant_response": "Thanks—since it was an online purchase and the payment didn’t go through, this is most likely a declined card payment. \nCan you tell me whether you received any error message (e.g., “do not honour”, “insufficient funds”, or “try again later”)? And was the merchant charging in a different currency than your card?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:47.429842",
+      "sim_prompt_tokens": 598,
+      "sim_completion_tokens": 146,
+      "bot_prompt_tokens": 745,
+      "bot_completion_tokens": 133
+    }
+  ]
+}

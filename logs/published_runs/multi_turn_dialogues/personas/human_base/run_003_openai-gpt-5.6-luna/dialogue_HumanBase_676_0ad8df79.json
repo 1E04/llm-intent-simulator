@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0ad8df79-8075-4838-a734-699cf291aeae",
+  "seed": 42,
+  "dialogue_index": 676,
+  "timestamp": "2026-08-21T15:49:59.555102",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 565,
+  "total_sim_completion_tokens": 163,
+  "total_bot_prompt_tokens": 1462,
+  "total_bot_completion_tokens": 268,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long do i have to wait for a transfer to reach my account?",
+      "assistant_response": "Sure—how long you’ll wait depends on the type of transfer. Are you expecting a bank transfer into your account (and if so, is it a domestic or international transfer)? Also, when did you send it?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.12
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:56.837297",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 137
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a domestic transfer—I sent it yesterday.",
+      "assistant_response": "For a domestic transfer sent yesterday, it typically arrives within 1 business day, but it can take up to 2 business days depending on the sending bank. If you tell me the transfer amount and the name of the bank you sent from (or whether you’re using a specific transfer reference), I can help narrow down the expected timing and what to check if it’s still pending.",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.93
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.54
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.36
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:59.555014",
+      "sim_prompt_tokens": 565,
+      "sim_completion_tokens": 163,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 131
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ecc4834f-a974-4bcf-97a5-e35bc17f4f50",
+  "seed": 42,
+  "dialogue_index": 291,
+  "timestamp": "2026-08-21T15:42:19.219466",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 507,
+  "total_sim_completion_tokens": 126,
+  "total_bot_prompt_tokens": 1471,
+  "total_bot_completion_tokens": 277,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There's a direct debit on my account that I didn't authorize",
+      "assistant_response": "I’m sorry about that. To help you quickly, did you notice the direct debit for a specific merchant and payment date, and are you sure it wasn’t set up by you (including any previous agreement)?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.74
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.12
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:16.578916",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a charge from “FitLife Gym” on the 12th of last month, and I’m sure I never set that up.",
+      "assistant_response": "Thanks—since it’s a direct debit from “FitLife Gym” on the 12th that you didn’t authorize, this is likely **Direct debit payment not recognised**. \n\nCan you confirm: is the charge still pending or has it already completed/left your balance? If you tell me that, I’ll guide you on the next steps to dispute it.",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.86
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:19.219298",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 138
+    }
+  ]
+}

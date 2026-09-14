@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "60d0e24e-9a05-41b5-a45f-7f2271c28275",
+  "seed": 42,
+  "dialogue_index": 39,
+  "timestamp": "2026-08-21T12:47:20.395330",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1078,
+  "total_sim_completion_tokens": 328,
+  "total_bot_prompt_tokens": 3445,
+  "total_bot_completion_tokens": 389,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My top-up for Google Pay isn't working",
+      "assistant_response": "Sorry about that—when you say your Google Pay top-up isn’t working, do you see an error or is the top-up showing as pending/failed in the app?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.34
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.33
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T12:47:15.422392",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1077,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just says “failed” and doesn’t go through at all.",
+      "assistant_response": "Got it—if the Google Pay top-up is marked as “failed” and doesn’t go through, I can help with failed top-ups. Are you seeing the transaction as a failed top-up under Wallet/Transactions (and do you have any error code/message shown)? If you tell me what it says exactly, I’ll guide you to the next step.",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.44
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.41
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T12:47:17.496869",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 104,
+      "bot_prompt_tokens": 1136,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says “Failed” with no extra error code or details.",
+      "assistant_response": "Thanks—if the top-up is showing as “Failed” with no extra error code, that’s a failed top-up. Quick check: is the top-up amount already taken from your Google Pay balance, or is it still available? Also, does the failed top-up appear in the app under Transactions (showing the attempted top-up)?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.9
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.75
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T12:47:20.395119",
+      "sim_prompt_tokens": 587,
+      "sim_completion_tokens": 224,
+      "bot_prompt_tokens": 1232,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

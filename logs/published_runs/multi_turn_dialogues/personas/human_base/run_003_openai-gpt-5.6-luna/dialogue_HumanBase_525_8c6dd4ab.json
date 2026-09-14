@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "8c6dd4ab-dfe8-4e73-afc7-38f26f80117b",
+  "seed": 42,
+  "dialogue_index": 525,
+  "timestamp": "2026-08-21T15:46:48.151562",
+  "persona": "HumanBase",
+  "target_intent": "request_refund",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1776,
+  "total_sim_completion_tokens": 414,
+  "total_bot_prompt_tokens": 3151,
+  "total_bot_completion_tokens": 496,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can you cancel my purchase?",
+      "assistant_response": "Sure—I can help. Are you trying to cancel a card purchase you already made (and get a refund), or cancel a bank transfer you set up?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.62
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:40.542803",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to cancel the card purchase I made.",
+      "assistant_response": "I can help with that. To cancel the card purchase, do you already see the charge as **pending** in your app, or is it **completed**? (If you tell me which one, I’ll guide you on the next step.)",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.74
+        },
+        {
+          "intent": "cancel_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:42.895882",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 147,
+      "bot_prompt_tokens": 742,
+      "bot_completion_tokens": 106
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s already completed.",
+      "assistant_response": "Thanks—since the card purchase is completed, we can’t “cancel” it directly, but we can help you request a refund from the merchant.\n\nWas this card purchase made with your Revolut card (Visa/Mastercard) and do you have a transaction reference/receipt to share (e.g., merchant name and date/amount)?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.11
+        },
+        {
+          "intent": "chargeback_not_available",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:45.308532",
+      "sim_prompt_tokens": 588,
+      "sim_completion_tokens": 90,
+      "bot_prompt_tokens": 807,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Yes, it was my Revolut Visa. It was at CoffeeCorner on July 15 for $45.67.",
+      "assistant_response": "Got it—CoffeeCorner on July 15 for $45.67 was charged to your Revolut Visa. I can help you request a refund, since completed card payments can’t be canceled directly. \n\nPlease confirm: is the charge exactly $45.67 (no extra/partial amounts), and do you still see it in your app as the transaction under that date?",
+      "predicted_intent": "request_refund",
+      "top_3_intents": [
+        {
+          "intent": "request_refund",
+          "confidence": 0.88
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:48.151510",
+      "sim_prompt_tokens": 671,
+      "sim_completion_tokens": 177,
+      "bot_prompt_tokens": 912,
+      "bot_completion_tokens": 136
+    }
+  ]
+}

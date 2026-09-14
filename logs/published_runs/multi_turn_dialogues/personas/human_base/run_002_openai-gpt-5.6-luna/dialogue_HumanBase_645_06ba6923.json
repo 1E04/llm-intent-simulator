@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "06ba6923-ab68-47fb-87b0-a0ec41aecdd3",
+  "seed": 42,
+  "dialogue_index": 645,
+  "timestamp": "2026-08-21T13:27:42.386514",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 498,
+  "total_sim_completion_tokens": 175,
+  "total_bot_prompt_tokens": 2221,
+  "total_bot_completion_tokens": 209,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was I charged extra for transferring money?",
+      "assistant_response": "Could you confirm whether the “extra charge” was a transfer fee for sending the money (separate from any card/ATM/exchange costs), or was it related to exchanging currency as part of the transfer?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.14
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:39.929879",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1078,
+      "bot_completion_tokens": 99
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a regular transfer – I didn’t exchange any currency.",
+      "assistant_response": "Got it—if it was a regular transfer with no currency exchange, the extra amount is usually due to a transfer fee. Tell me the transfer date and the amount/fee shown on your statement, and I’ll help you identify the exact charge.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:42.386459",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

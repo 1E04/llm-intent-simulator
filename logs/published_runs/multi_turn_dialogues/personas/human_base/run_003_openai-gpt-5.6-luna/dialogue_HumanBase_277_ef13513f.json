@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ef13513f-83e5-4b47-ae39-ad2a65e7693b",
+  "seed": 42,
+  "dialogue_index": 277,
+  "timestamp": "2026-08-21T15:42:02.069469",
+  "persona": "HumanBase",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 554,
+  "total_sim_completion_tokens": 153,
+  "total_bot_prompt_tokens": 1440,
+  "total_bot_completion_tokens": 271,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I couldn't get cash at the atm",
+      "assistant_response": "Sorry about that—was the cash withdrawal declined by the ATM (e.g., “transaction failed”), or did the ATM take the money but you didn’t receive it?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.84
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.11
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:59.512363",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was declined – the ATM showed a “transaction failed” message.",
+      "assistant_response": "Got it—the ATM declined the cash withdrawal (“transaction failed”). This is usually due to one of these: insufficient available balance, the card can’t be used for cash withdrawals, the ATM/bank won’t accept the card, or the withdrawal limit was reached. Which one best matches what you’re seeing—was there an SMS/app charge or did it show no cash withdrawal at all?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.93
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.04
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:42:02.069347",
+      "sim_prompt_tokens": 554,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 749,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

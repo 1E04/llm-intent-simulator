@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "6aca482a-8642-4408-a7dc-8ef636ca0ff3",
+  "seed": 42,
+  "dialogue_index": 548,
+  "timestamp": "2026-08-21T13:21:38.212993",
+  "persona": "HumanBase",
+  "target_intent": "supported_cards_and_currencies",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1053,
+  "total_sim_completion_tokens": 210,
+  "total_bot_prompt_tokens": 3413,
+  "total_bot_completion_tokens": 343,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are US credit cards accepted?",
+      "assistant_response": "Do you mean you’re asking whether we accept **US-issued credit cards** for top ups (card type acceptance), or whether you can **use your card to pay in the US** (merchant/card usage acceptance)?",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.4
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.36
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.24
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:34.564484",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1075,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m asking about using a US‑issued credit card to top up.",
+      "assistant_response": "Yes—US-issued credit cards can typically be used to top up, as long as the card type and currency are supported. Which currency are you trying to top up with (e.g., USD)?",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.84
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:36.611562",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 1143,
+      "bot_completion_tokens": 99
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "USD.",
+      "assistant_response": "Great—USD is supported for card top ups, and we can accept US-issued credit cards as long as your card type is eligible. Are you topping up in **USD** from your US credit card (not a different currency conversion)?",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.09
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:21:38.212887",
+      "sim_prompt_tokens": 559,
+      "sim_completion_tokens": 65,
+      "bot_prompt_tokens": 1195,
+      "bot_completion_tokens": 108
+    }
+  ]
+}

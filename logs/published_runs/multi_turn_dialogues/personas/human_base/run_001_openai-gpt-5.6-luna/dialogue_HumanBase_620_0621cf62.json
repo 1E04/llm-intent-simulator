@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0621cf62-9fc2-41b1-b7ca-6ae14afa38e5",
+  "seed": 42,
+  "dialogue_index": 620,
+  "timestamp": "2026-08-19T15:57:36.869857",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 502,
+  "total_sim_completion_tokens": 175,
+  "total_bot_prompt_tokens": 1455,
+  "total_bot_completion_tokens": 252,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I topped up but the app reverted it",
+      "assistant_response": "Sorry about that—when you say the app reverted it, do you see the top up showing as “reverted”/“cancelled” or did it fail and go back as an error? Also, was it a card top up?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.76
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:34.207817",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as cancelled and yes, I used my card.",
+      "assistant_response": "Got it—if you topped up by card and it shows as **cancelled/reverted**, that points to a **card top up that was reverted**. \n\nHave the funds returned to your card yet, or is the balance still not updated?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.86
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:57:36.869747",
+      "sim_prompt_tokens": 502,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 763,
+      "bot_completion_tokens": 110
+    }
+  ]
+}

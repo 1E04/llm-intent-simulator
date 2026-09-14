@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "3a107c8b-d73a-4bb5-afd4-4b03ae2b24da",
+  "seed": 42,
+  "dialogue_index": 612,
+  "timestamp": "2026-08-19T15:56:55.130588",
+  "persona": "HumanBase",
+  "target_intent": "top_up_reverted",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1141,
+  "total_sim_completion_tokens": 334,
+  "total_bot_prompt_tokens": 2372,
+  "total_bot_completion_tokens": 438,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I see my top-up was canceled, but why?",
+      "assistant_response": "Sorry about that—was your top up canceled because it was *reverted* (reversed back to your card/bank), or did it *fail* and never complete? Also, do you know if you topped up by card or by bank transfer?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.2
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:49.866007",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card top‑up, and I’m not sure if it was reversed or just failed.",
+      "assistant_response": "Thanks—since it was a card top-up, it could be either **reverted** (the funds were returned) or **failed** (it didn’t complete). Can you check the status details for the transaction and tell me whether it says **“Reverted/Refunded back”** or **“Failed/Cancelled”**? If you share the wording and the date/time, I’ll point you to the exact next step.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.34
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:52.733845",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 162,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows “Failed” and the transaction was on 12 Mar 2024 at 14:35.",
+      "assistant_response": "Got it—if the card top-up shows **“Failed”** (12 Mar 2024, 14:35), the right help topic is **Top up failed**. \n\nTo narrow it down: do you still see the funds on your card/bank account (i.e., did they come back), or has the balance already been reduced? If you tell me that, I can advise the exact next step.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.08
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:56:55.130448",
+      "sim_prompt_tokens": 630,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 899,
+      "bot_completion_tokens": 146
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6df49dd2-5d30-41cd-8de5-3ddf91c9c626",
+  "seed": 42,
+  "dialogue_index": 490,
+  "timestamp": "2026-08-21T13:17:03.256575",
+  "persona": "HumanBase",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 493,
+  "total_sim_completion_tokens": 154,
+  "total_bot_prompt_tokens": 2214,
+  "total_bot_completion_tokens": 273,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "When will my top-up process?",
+      "assistant_response": "Could you clarify—are you seeing your top up as **pending** in the app, or has it **failed/been reversed**? If you tell me which one, I can give you the expected timing.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.5
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.28
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T13:17:00.839385",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as pending in the app.",
+      "assistant_response": "Got it—if your top up is showing as **pending** in the app, it usually means the payment is still being processed by the card/bank side. Please check whether it has an estimated time in the transaction details; if you share the **top up method** (card/bank transfer/cash/cheque) and the **amount**, I can tell you the most likely next step and timing.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T13:17:03.256453",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 1138,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

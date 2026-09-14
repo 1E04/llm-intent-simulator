@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1604bac7-9e09-48b5-a1de-33876de314d4",
+  "seed": 42,
+  "dialogue_index": 645,
+  "timestamp": "2026-08-19T15:59:57.432086",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 511,
+  "total_sim_completion_tokens": 188,
+  "total_bot_prompt_tokens": 1469,
+  "total_bot_completion_tokens": 267,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was I charged extra for transferring money?",
+      "assistant_response": "I can help—were you charged an extra **transfer fee** for the bank transfer itself, or was the extra charge due to an **exchange rate/currency conversion**? If you tell me which currency you sent and which currency you received, I’ll narrow it down.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.84
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:54.706510",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a domestic transfer in the same currency, so I think it’s a fee.",
+      "assistant_response": "Got it—if it was a domestic transfer in the same currency, the most likely reason is an added **transfer fee**. Can you confirm whether the fee shows on your transfer’s details or on your statement (and the approximate amount)? Then I can guide you on what it relates to.",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:59:57.431942",
+      "sim_prompt_tokens": 511,
+      "sim_completion_tokens": 188,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

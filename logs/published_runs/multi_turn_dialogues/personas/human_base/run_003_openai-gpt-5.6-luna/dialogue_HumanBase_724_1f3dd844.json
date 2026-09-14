@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "1f3dd844-223b-4787-9e7c-0339af2345e3",
+  "seed": 42,
+  "dialogue_index": 724,
+  "timestamp": "2026-08-21T15:51:01.053458",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2655,
+  "total_sim_completion_tokens": 585,
+  "total_bot_prompt_tokens": 4216,
+  "total_bot_completion_tokens": 642,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why doesn't my disposable virtual card work?",
+      "assistant_response": "Sorry you’re running into that. Is your disposable virtual card being declined at checkout, or is it failing because a limit (amount or number of uses) was reached?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.1
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:50.667980",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 129
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's being declined at checkout, not a limit issue.",
+      "assistant_response": "Thanks—since the disposable virtual card is being declined at checkout (and not due to limits), are you seeing a specific error message from the merchant or in the app (for example “declined”, “do not honour”, or “invalid card”)? Also, is this for an online card payment or in-app/web checkout?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.32
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.31
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.27
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:52.765899",
+      "sim_prompt_tokens": 534,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 747,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just shows “declined” in the app, and it happened during an online checkout.",
+      "assistant_response": "Got it—your disposable virtual card is being declined during an online checkout. To narrow it down, are you getting any extra details in the app or at the merchant (e.g., “do not honour”, “invalid”, or “insufficient funds”), and was this payment attempted in the last 24 hours?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.54
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.26
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:56.223847",
+      "sim_prompt_tokens": 621,
+      "sim_completion_tokens": 213,
+      "bot_prompt_tokens": 842,
+      "bot_completion_tokens": 160
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "No other message—just “declined”, and it happened today.",
+      "assistant_response": "Thanks—so the disposable virtual card payment is being declined at online checkout and there’s no extra error message. Are you trying to pay in the same currency as your card is set up for, or has the merchant requested a different currency at checkout?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.12
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:58.552800",
+      "sim_prompt_tokens": 713,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 929,
+      "bot_completion_tokens": 109
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I was paying in the same currency as my card, no different currency was requested.",
+      "assistant_response": "Thanks—since it’s a disposable virtual card being declined at online checkout (no other error, same currency), I need one quick detail: is the card being declined for a single transaction repeatedly, or did you also try creating a new disposable virtual card and that one also got declined?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.44
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:01.053376",
+      "sim_prompt_tokens": 787,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 1006,
+      "bot_completion_tokens": 117
+    }
+  ]
+}

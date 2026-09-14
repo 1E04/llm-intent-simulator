@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "b244a0c0-61b4-4edb-8f22-1526e5c53f5c",
+  "seed": 42,
+  "dialogue_index": 487,
+  "timestamp": "2026-08-21T15:45:58.617837",
+  "persona": "HumanBase",
+  "target_intent": "pending_top_up",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2928,
+  "total_sim_completion_tokens": 600,
+  "total_bot_prompt_tokens": 4351,
+  "total_bot_completion_tokens": 681,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I  do not see a top-up processed.",
+      "assistant_response": "Sorry about that—are you saying the top up is pending, failed, or showing as reverted (back to your bank/card) but you can’t see it in your balance? If you tell me which payment method you used (bank transfer, debit/credit card, or cash/cheque) and the approximate date, I can guide you.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.42
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.36
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:47.525824",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 162
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I used my debit card for the top‑up, about yesterday.",
+      "assistant_response": "Thanks—since you used a debit card and it was about yesterday, is the top up currently showing as **pending** in the app/transaction list, or is it showing as **failed/reverted** (money returned), or is it **not showing at all**?",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.18
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:50.120142",
+      "sim_prompt_tokens": 606,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 788,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s not showing at all.",
+      "assistant_response": "Got it. If the debit-card top up isn’t showing at all, it’s most likely the top up either failed or hasn’t posted yet.\n\nCan you confirm whether the charge is visible on your bank statement (pending or completed) for roughly yesterday, and do you remember the top-up amount?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.22
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:52.157625",
+      "sim_prompt_tokens": 685,
+      "sim_completion_tokens": 126,
+      "bot_prompt_tokens": 860,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I don’t see any charge on my statement; the top‑up was for about £50.",
+      "assistant_response": "Thanks—if there’s no charge on your statement and the £50 top up isn’t showing in the app, it likely didn’t go through.\n\nCan you tell me: did you see any error message during the top up, and do you still have the same debit card available in your profile (i.e., it wasn’t replaced/expired)? This will help confirm whether it was a failed card top up.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:55.955137",
+      "sim_prompt_tokens": 762,
+      "sim_completion_tokens": 224,
+      "bot_prompt_tokens": 950,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "No error popped up, and the card is still the same in my profile.",
+      "assistant_response": "Thanks—if there’s no charge on your bank statement and the top up isn’t showing in the app, it most likely failed and didn’t complete.\n\nCan you please confirm whether the top up attempt shows any status like “failed” or “reverted” anywhere in your top up history? If not, tell me the top-up reference/last 4 digits (or the exact time you tried), and I’ll help you check what happened.",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.7
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.18
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:58.617779",
+      "sim_prompt_tokens": 875,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 1059,
+      "bot_completion_tokens": 148
+    }
+  ]
+}

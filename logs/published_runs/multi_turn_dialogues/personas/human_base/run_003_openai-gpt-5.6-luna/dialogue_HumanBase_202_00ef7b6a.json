@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "00ef7b6a-fff7-4fa1-be57-89908792afc6",
+  "seed": 42,
+  "dialogue_index": 202,
+  "timestamp": "2026-08-21T15:40:56.939661",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 553,
+  "total_sim_completion_tokens": 113,
+  "total_bot_prompt_tokens": 1440,
+  "total_bot_completion_tokens": 236,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was charged extra for a withdrawal",
+      "assistant_response": "Sorry about that—which kind of “extra” charge are you seeing: an extra fee specifically for the cash withdrawal, or an unexpected exchange-rate/FX charge on the withdrawal?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.74
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.17
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:49.267628",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a fee that was added to the amount I withdrew.",
+      "assistant_response": "Thanks for clarifying. It sounds like a cash withdrawal fee was added to your withdrawn amount. Are you able to tell me the country/currency of the ATM and the exact fee shown on your statement/receipt?",
+      "predicted_intent": "cash_withdrawal_charge",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "wrong_exchange_rate_for_cash_withdrawal",
+          "confidence": 0.09
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:56.939553",
+      "sim_prompt_tokens": 553,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 749,
+      "bot_completion_tokens": 104
+    }
+  ]
+}

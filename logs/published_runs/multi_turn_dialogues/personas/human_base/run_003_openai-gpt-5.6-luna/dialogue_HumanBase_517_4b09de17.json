@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "4b09de17-6629-4c3e-8ce8-d8bb45dcdc5f",
+  "seed": 42,
+  "dialogue_index": 517,
+  "timestamp": "2026-08-21T15:46:33.633880",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2072,
+  "total_sim_completion_tokens": 388,
+  "total_bot_prompt_tokens": 3351,
+  "total_bot_completion_tokens": 583,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I receive my salary in GBP. Do I need to configure this somehwere?",
+      "assistant_response": "To make sure I guide you correctly: are you asking whether you can receive salary paid in GBP (and whether any setup is needed), or are you trying to set up a bank transfer/beneficiary for your employer to pay you?",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.62
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.21
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:25.575735",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I just want to know if I need to set anything up for my salary to come in GBP.",
+      "assistant_response": "Thanks—so you’re asking whether your salary needs any special setup to be received in GBP. \n\nWhich account are you paying into—your personal bank account details from the app (local GBP account details), or are you asking about card payments? If it’s bank transfer into your Revolut account, I can confirm whether GBP is supported and what, if anything, your employer must select on their side.",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.34
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.33
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:28.721541",
+      "sim_prompt_tokens": 582,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 778,
+      "bot_completion_tokens": 177
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I have the personal GBP account in the app—just want to know if anything else needs to be set up.",
+      "assistant_response": "You generally don’t need to do anything extra—if you already have a personal GBP account shown in the app, your salary can be paid into that GBP account. \n\nJust make sure your employer uses the GBP account details for that specific GBP account (account/ sort code / IBAN where applicable) and selects GBP as the currency on their payment instruction.",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.74
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:31.325777",
+      "sim_prompt_tokens": 693,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 892,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Thanks, that clears it up.",
+      "assistant_response": "Great—if you already have the personal GBP account in the app, you typically don’t need any extra setup. Just ask your employer to send the salary to the GBP account details in your app (and select GBP on their side).",
+      "predicted_intent": "fiat_currency_support",
+      "top_3_intents": [
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.09
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:46:33.633823",
+      "sim_prompt_tokens": 797,
+      "sim_completion_tokens": 72,
+      "bot_prompt_tokens": 980,
+      "bot_completion_tokens": 103
+    }
+  ]
+}

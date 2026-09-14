@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "0c26ae7e-410c-4acd-b418-7780c1e619a4",
+  "seed": 42,
+  "dialogue_index": 624,
+  "timestamp": "2026-08-21T15:48:52.477603",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 3200,
+  "total_sim_completion_tokens": 804,
+  "total_bot_prompt_tokens": 4618,
+  "total_bot_completion_tokens": 774,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to use my card to top up but all of the money has disappeared.",
+      "assistant_response": "Sorry about that—when you say the money disappeared, was the top up showing as completed and then reversed, or is it still showing as pending/failed in the app? Also, do you see a reversed/credited transaction (or a refund) on your bank/card statement?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.23
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:39.454580",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed and then the money’s gone, and I don’t see any refund on my bank statement.",
+      "assistant_response": "Got it—when a top up shows as completed and the funds then disappear with no refund visible yet, that usually points to a **reverted top up**.\n\nCan you confirm: does the transaction in the app now show a status like **“reverted”/“reversed”/“refunded”**, or is it still marked **completed**? If you tell me the top-up date and amount, I can guide you on the next steps to investigate it.",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.83
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.11
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:43.305818",
+      "sim_prompt_tokens": 610,
+      "sim_completion_tokens": 276,
+      "bot_prompt_tokens": 790,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It still shows as completed. I did it on July 15 for $200.",
+      "assistant_response": "Thanks—since the top up still shows as **completed** in the app but the $200 is no longer available and there’s no refund yet, it most likely needs investigation as a **reverted top up**.\n\nQuick check: on July 15, did the app ever show **pending** first, and what exact top-up method was it (card top up to your account, or bank transfer)? Also, are you seeing any extra/temporary balance change around that time?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.18
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:46.707142",
+      "sim_prompt_tokens": 739,
+      "sim_completion_tokens": 221,
+      "bot_prompt_tokens": 913,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It went straight to completed—no pending screen. I used my card to top up, and I didn’t see any extra or temporary balance change.",
+      "assistant_response": "Thanks for confirming. Because it went straight to **completed** and the funds disappeared with **no refund yet**, it most closely matches a **reverted top up** scenario.\n\nTo narrow it down: do you see the July 15 top up transaction marked anywhere as **“reverted/reversed”** (even if balance looks wrong), or is it the same plain **“completed”** status with no other label?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.74
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.18
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:49.692907",
+      "sim_prompt_tokens": 863,
+      "sim_completion_tokens": 172,
+      "bot_prompt_tokens": 1050,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just says “completed” – there’s no “reverted” or any other label.",
+      "assistant_response": "Thanks—if it still shows as **Completed** but the $200 is gone and there’s **no refund on your statement**, I can’t be 100% sure yet whether it’s a reverted top up or a delayed/hidden refund.\n\nTo narrow it down: in the app, does the transaction show any **reference/descriptor** you can search on (or the last 4 digits of the card)? And have you checked your statement for a **reversal/chargeback-style line** within the last few days after July 15?",
+      "predicted_intent": "top_up_reverted",
+      "top_3_intents": [
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.52
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.26
+        },
+        {
+          "intent": "Refund_not_showing_up",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:52.477560",
+      "sim_prompt_tokens": 988,
+      "sim_completion_tokens": 135,
+      "bot_prompt_tokens": 1164,
+      "bot_completion_tokens": 170
+    }
+  ]
+}

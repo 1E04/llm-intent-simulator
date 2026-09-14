@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "57b1b2ee-55e7-4475-b4eb-5b021514f830",
+  "seed": 42,
+  "dialogue_index": 195,
+  "timestamp": "2026-08-19T15:27:06.545688",
+  "persona": "HumanBase",
+  "target_intent": "card_swallowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 494,
+  "total_sim_completion_tokens": 156,
+  "total_bot_prompt_tokens": 1449,
+  "total_bot_completion_tokens": 243,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I was getting cash and can't get my card back.",
+      "assistant_response": "Sorry about that. Was your card kept by the ATM during a cash withdrawal (it “swallowed” it), or are you saying you’ve lost your card and it was possibly stolen?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.1
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:04.292483",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was the ATM that kept it during the withdrawal.",
+      "assistant_response": "Got it—your card was retained by the ATM during a cash withdrawal. I can help you with the next steps to recover it. Was the withdrawal declined or did it go through and then the ATM kept the card?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.92
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:27:06.545636",
+      "sim_prompt_tokens": 494,
+      "sim_completion_tokens": 156,
+      "bot_prompt_tokens": 754,
+      "bot_completion_tokens": 107
+    }
+  ]
+}

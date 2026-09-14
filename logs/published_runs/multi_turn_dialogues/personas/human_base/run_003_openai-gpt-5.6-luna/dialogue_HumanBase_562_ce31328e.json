@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ce31328e-6706-40a2-8df0-3cf7fd39afe5",
+  "seed": 42,
+  "dialogue_index": 562,
+  "timestamp": "2026-08-21T15:47:35.911595",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_bank_transfer_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 583,
+  "total_sim_completion_tokens": 154,
+  "total_bot_prompt_tokens": 1447,
+  "total_bot_completion_tokens": 285,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What'll it charge me for a SEPA transfer?",
+      "assistant_response": "Do you mean the fee for sending a SEPA bank transfer, or are you asking about a SEPA transfer you’d receive (inbound)? Also, which country is your bank account from?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:31.906748",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 695,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Sending one, I'm based in Germany.",
+      "assistant_response": "For sending a SEPA transfer from Germany, the cost depends on whether it’s a domestic or international SEPA transfer and your account plan. Can you confirm whether you’re transferring to an IBAN in the SEPA area (another EU/EEA country) or within Germany only?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:35.911553",
+      "sim_prompt_tokens": 583,
+      "sim_completion_tokens": 154,
+      "bot_prompt_tokens": 752,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

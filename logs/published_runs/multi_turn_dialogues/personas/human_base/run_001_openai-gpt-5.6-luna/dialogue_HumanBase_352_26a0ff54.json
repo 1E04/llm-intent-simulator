@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "26a0ff54-c37f-4666-a29c-d9b060e6589a",
+  "seed": 42,
+  "dialogue_index": 352,
+  "timestamp": "2026-08-19T15:37:23.283958",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 492,
+  "total_sim_completion_tokens": 128,
+  "total_bot_prompt_tokens": 1454,
+  "total_bot_completion_tokens": 251,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm not okay with this fee on my statement.",
+      "assistant_response": "I can help—could you tell me what the fee is for (card payment, cash withdrawal, or a transfer), and the exact wording/amount shown on your statement?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.55
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.22
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:20.585914",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card payment fee – the statement shows “International transaction fee” for $5.00.",
+      "assistant_response": "Thanks—an “International transaction fee” usually means an extra card payment charge applied for using your card abroad. Are you able to share the currency/country where the merchant charged you (or confirm it was outside your home country) so I can guide you on what it covers and how it’s calculated?",
+      "predicted_intent": "exchange_charge",
+      "top_3_intents": [
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.09
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:37:23.283834",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 128,
+      "bot_prompt_tokens": 760,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

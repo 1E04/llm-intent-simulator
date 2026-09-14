@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bd4b7694-eace-45cb-940c-1d3bb9528173",
+  "seed": 42,
+  "dialogue_index": 627,
+  "timestamp": "2026-08-21T13:26:36.178743",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 541,
+  "total_sim_completion_tokens": 133,
+  "total_bot_prompt_tokens": 2261,
+  "total_bot_completion_tokens": 302,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I top up my card using your app? I'm new to this.",
+      "assistant_response": "Sure—welcome! To top up your card using the app, open the app and go to **Top up** (or **Add money**), choose **Card**, enter the amount, and confirm the payment. \n\nAre you trying to top up with a **debit/credit card** (as opposed to bank transfer or cash/cheque)?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.12
+        },
+        {
+          "intent": "verify_top_up",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:34.079444",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 167
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, I want to use my debit card.",
+      "assistant_response": "Great—if you’re topping up with your debit card in the app: open the app → **Top up / Add money** → select **Card** → enter the amount → choose the debit card (and currency, if prompted) → confirm.\n\nWould you like to know if there’s any fee for topping up by card, or are you already seeing an error?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.93
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.6
+        },
+        {
+          "intent": "top_up_limits",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:36.178668",
+      "sim_prompt_tokens": 541,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 1176,
+      "bot_completion_tokens": 135
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "c7690f1a-99f2-4aa2-806c-5365827f9c6c",
+  "seed": 42,
+  "dialogue_index": 675,
+  "timestamp": "2026-08-21T15:50:05.509399",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2715,
+  "total_sim_completion_tokens": 412,
+  "total_bot_prompt_tokens": 4222,
+  "total_bot_completion_tokens": 681,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How many days until the money will be in my account?",
+      "assistant_response": "Sure—are you waiting for a bank transfer, a card top up, or another type of transfer? And do you know whether it’s marked as pending in the app or already completed?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.72
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:56.500501",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 131
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a bank transfer and the app shows it as pending.",
+      "assistant_response": "Thanks—if your bank transfer is showing as pending in the app, the exact time can vary by the sending bank and transfer type. Typically it can take anywhere from 1 to 3 business days to complete after it’s marked pending. Which country did the transfer come from, and when did you initiate/send it?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.62
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.36
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:59.494646",
+      "sim_prompt_tokens": 553,
+      "sim_completion_tokens": 134,
+      "bot_prompt_tokens": 756,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s from the US and I sent it on Monday.",
+      "assistant_response": "If it’s showing as pending and you sent it from the US on Monday, it usually completes within 1–3 business days after it goes pending—so you should typically see the funds by about Wednesday to Thursday. Do you see any reference to an estimated arrival time in the app?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.92
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.83
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.36
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:01.169285",
+      "sim_prompt_tokens": 639,
+      "sim_completion_tokens": 74,
+      "bot_prompt_tokens": 842,
+      "bot_completion_tokens": 115
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "No, there's no estimated arrival time shown.",
+      "assistant_response": "Got it. If the US bank transfer was sent on Monday and it’s still marked pending, it typically lands within 1–3 business days—so you should usually see it by Wednesday or Thursday. Is the transfer amount showing as pending in the app only, or does it show any bank reference/transaction ID as well?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.86
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.78
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.41
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:03.221159",
+      "sim_prompt_tokens": 719,
+      "sim_completion_tokens": 82,
+      "bot_prompt_tokens": 919,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "It just shows as pending—no reference number or transaction ID appears.",
+      "assistant_response": "Thanks—since it’s a US bank transfer sent on Monday and it’s still showing as pending with no reference number, it commonly completes in 1–3 business days after it turns pending. Can you confirm today’s day/date in your time zone (and whether Monday was a business day for you)?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.74
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:05.509304",
+      "sim_prompt_tokens": 804,
+      "sim_completion_tokens": 122,
+      "bot_prompt_tokens": 1009,
+      "bot_completion_tokens": 155
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "59ddbdc9-11bd-4a95-8e01-90ff1932fae4",
+  "seed": 42,
+  "dialogue_index": 289,
+  "timestamp": "2026-08-19T15:32:37.582270",
+  "persona": "HumanBase",
+  "target_intent": "declined_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 507,
+  "total_sim_completion_tokens": 176,
+  "total_bot_prompt_tokens": 1472,
+  "total_bot_completion_tokens": 317,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What would make a decline message show up during a transfer?",
+      "assistant_response": "Do you mean the transfer was declined right away with an error message, or did it fail after being pending? Also, which type of transfer is it (bank transfer/recipient transfer), and what’s the exact wording of the decline message?",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.19
+        },
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:34.507180",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 696,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a bank transfer that got rejected straight away, the message just said “Transfer could not be completed.”",
+      "assistant_response": "That sounds like a **declined transfer**—when a bank transfer is rejected immediately with “Transfer could not be completed,” it usually means the receiving bank or the transfer instructions weren’t accepted.\n\nTo pinpoint the cause, can you tell me: (1) which bank/country you’re sending to, and (2) whether you received any extra reason code or details after the message (e.g., “beneficiary details,” “account closed,” or “insufficient funds”)? If you share a screenshot of the exact wording (hide personal data), I can guide you on the next step.",
+      "predicted_intent": "declined_transfer",
+      "top_3_intents": [
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:32:37.582070",
+      "sim_prompt_tokens": 507,
+      "sim_completion_tokens": 176,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 178
+    }
+  ]
+}

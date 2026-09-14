@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "872dab5c-95dc-4dc2-b462-abb41a07e816",
+  "seed": 42,
+  "dialogue_index": 728,
+  "timestamp": "2026-08-21T13:34:23.895172",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2968,
+  "total_sim_completion_tokens": 719,
+  "total_bot_prompt_tokens": 6639,
+  "total_bot_completion_tokens": 944,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My disposable virtual card has been rejected by the merchant earlier today. What should I do?",
+      "assistant_response": "Sorry about that—when a disposable virtual card is rejected, it’s usually a merchant/approval decline or a card setup issue. Did the payment fail as “declined,” or did it show any message like “not recognised”? Also, is the disposable card you used still marked as active in the app?",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.34
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.33
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.2
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:12.228637",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1087,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It just came back as “declined,” no other message, and the card still shows as active in the app.",
+      "assistant_response": "Thanks—if the disposable card was declined with no other message and it still shows as active, it’s commonly due to merchant/approval rules or a limit/security check. First, try a different merchant/amount (if available) and make sure the merchant supports card-not-present transactions. If you’ve got the exact time and any reference/order ID from the merchant side, share that and I can help pinpoint whether it’s a limit or a general decline.",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.4
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.35
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:14.879449",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 1183,
+      "bot_completion_tokens": 186
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It happened around 3:12 PM local time, and the merchant gave me order #A12345.",
+      "assistant_response": "Got it—if the disposable virtual card payment came back as “declined” (no other message) around 3:12 PM, that typically points to a merchant/approval or limits check rather than the card being inactive. Can you confirm whether the attempt was an online card payment (card-not-present) and whether you had funds available for that exact amount? If you still see it as active, try making the same purchase at a different merchant or for a smaller amount, and if it fails again share the merchant name plus whether you’re using the one-time card link from the app.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.23
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:17.756271",
+      "sim_prompt_tokens": 662,
+      "sim_completion_tokens": 168,
+      "bot_prompt_tokens": 1307,
+      "bot_completion_tokens": 215
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was an online purchase, and I had enough funds for the amount. I haven’t tried another merchant or a smaller amount yet.",
+      "assistant_response": "Thanks—since it’s an online (card-not-present) purchase and it came back as “declined” while the disposable card still shows as active (and you had enough funds), this most likely needs a card-payment-declined troubleshooting.\n\nCould you tell me the merchant name and whether the payment was for the first time you used that specific disposable card/link? In the meantime, try a smaller amount at the same merchant or at a different merchant to confirm whether it’s merchant-specific vs a disposable-card approval issue.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.7
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.15
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:21.086227",
+      "sim_prompt_tokens": 814,
+      "sim_completion_tokens": 243,
+      "bot_prompt_tokens": 1463,
+      "bot_completion_tokens": 202
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "The merchant was ShopOnlineCo, and yes, it was the first time I used that disposable card link.",
+      "assistant_response": "Thanks—since it’s an online purchase and the disposable card was declined on its first use, this is most commonly due to disposable card limits/merchant approval rules. \n\nPlease try one of these now: (1) attempt the same order at ShopOnlineCo for a smaller amount, or (2) try a different merchant to see if it’s ShopOnlineCo-specific. \n\nIf the smaller amount still gets declined, share whether you’re using the disposable card link generated for that exact merchant (if the app shows any merchant-specific settings), and I’ll guide you on the next steps.",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.78
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:34:23.895091",
+      "sim_prompt_tokens": 955,
+      "sim_completion_tokens": 175,
+      "bot_prompt_tokens": 1599,
+      "bot_completion_tokens": 182
+    }
+  ]
+}

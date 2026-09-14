@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "58115981-56c5-413a-b5d4-85965b1a650f",
+  "seed": 42,
+  "dialogue_index": 61,
+  "timestamp": "2026-08-19T15:16:54.178890",
+  "persona": "HumanBase",
+  "target_intent": "balance_not_updated_after_bank_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1070,
+  "total_sim_completion_tokens": 225,
+  "total_bot_prompt_tokens": 2294,
+  "total_bot_completion_tokens": 405,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why don't I have my transfer?",
+      "assistant_response": "Sorry about that—are you saying the transfer is taking longer than expected (still pending), or did you see it as completed but you haven’t received it on your side?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.42
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.35
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:48.887174",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed on my end, but the money isn’t in my account.",
+      "assistant_response": "Got it—if it shows as completed but the funds aren’t in your account, it’s usually either not yet credited to you or the transfer didn’t land as expected. Can you confirm: is this transfer to your Revolut account (incoming), and do you have the transfer reference/transaction ID?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.62
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:51.912285",
+      "sim_prompt_tokens": 491,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 753,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, it’s an incoming transfer to my Revolut. The reference/transaction ID is TRX 987654321.",
+      "assistant_response": "Thanks—since it’s marked completed on your side but you haven’t received the incoming transfer, I’ll treat this as “transfer not received by recipient.” Can you tell me which bank/rail the transfer came from (e.g., bank transfer/SWIFT/SEPA), and roughly when it was marked completed?",
+      "predicted_intent": "transfer_not_received_by_recipient",
+      "top_3_intents": [
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.9
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:16:54.178785",
+      "sim_prompt_tokens": 579,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 850,
+      "bot_completion_tokens": 121
+    }
+  ]
+}

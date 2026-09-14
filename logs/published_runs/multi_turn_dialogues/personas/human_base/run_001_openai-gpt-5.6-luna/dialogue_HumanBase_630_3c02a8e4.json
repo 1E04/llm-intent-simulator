@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "3c02a8e4-404c-4d25-9257-1b4273a0dd08",
+  "seed": 42,
+  "dialogue_index": 630,
+  "timestamp": "2026-08-19T15:58:36.041229",
+  "persona": "HumanBase",
+  "target_intent": "topping_up_by_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1159,
+  "total_sim_completion_tokens": 242,
+  "total_bot_prompt_tokens": 2374,
+  "total_bot_completion_tokens": 425,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I tried to top up using my card, but now the money just disappeared!",
+      "assistant_response": "Sorry that happened. When you say the money “disappeared,” did you receive any notification that the card top up was rejected/failed, or is it showing as reversed/removed from your balance? Also, about how long ago did you try the top up?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.62
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.21
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:30.359614",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 148
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I didn’t get any notice – it just vanished. I tried it about an hour ago.",
+      "assistant_response": "Thanks—if you tried a card top up about an hour ago and there was no notice, it’s most likely either a failed top up or a top up that’s still pending/reversing.\n\nCan you check your app’s **Top up** history and tell me what status it shows (e.g., **Pending**, **Failed**, or **Reverted**) and whether the amount is currently visible anywhere?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.58
+        },
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.26
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:32.883578",
+      "sim_prompt_tokens": 524,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s showing as pending, and the money still isn’t in my balance.",
+      "assistant_response": "Got it—if the card top up is showing as **Pending** about an hour ago, the funds often aren’t credited to your balance until the top up completes or finishes reversing.\n\nPlease wait a bit and re-check the status in the app. It usually updates shortly; however, if it’s still pending after **24 hours**, tell me and we’ll help you with the next steps.",
+      "predicted_intent": "pending_top_up",
+      "top_3_intents": [
+        {
+          "intent": "pending_top_up",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "top_up_reverted",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:58:36.041045",
+      "sim_prompt_tokens": 635,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 891,
+      "bot_completion_tokens": 137
+    }
+  ]
+}

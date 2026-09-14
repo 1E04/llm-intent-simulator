@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "b130c55c-fb87-4e68-b483-62fd22092703",
+  "seed": 42,
+  "dialogue_index": 219,
+  "timestamp": "2026-08-19T15:28:26.282458",
+  "persona": "HumanBase",
+  "target_intent": "cash_withdrawal_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 522,
+  "total_sim_completion_tokens": 123,
+  "total_bot_prompt_tokens": 1483,
+  "total_bot_completion_tokens": 298,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is an error, the app says I made an ATM withdrawal and I didn't.",
+      "assistant_response": "I’m sorry about that—was the ATM withdrawal shown in your app as completed (money taken), or did it show as pending/declined? Also, do you still have your card and haven’t used it at that time?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.11
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:28:23.321469",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 701,
+      "bot_completion_tokens": 147
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It shows as completed – the money was taken. I still have the card and didn’t use it at that time.",
+      "assistant_response": "Thanks for clarifying. If the cash withdrawal is marked as completed but you didn’t make it (and you still have your card), this matches an unrecognised cash withdrawal. \n\nPlease contact us so we can investigate and help with a claim/refund. In the meantime, to keep it safe, check whether there were any other suspicious transactions and consider temporarily blocking your card in the app if you suspect it may be compromised.",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.92
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.06
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:28:26.282387",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 151
+    }
+  ]
+}

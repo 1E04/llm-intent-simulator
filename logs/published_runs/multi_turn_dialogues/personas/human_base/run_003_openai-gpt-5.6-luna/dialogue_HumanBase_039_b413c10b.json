@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "b413c10b-4d72-4e4f-8234-da9f78f26e21",
+  "seed": 42,
+  "dialogue_index": 39,
+  "timestamp": "2026-08-21T15:37:58.461094",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 2353,
+  "total_sim_completion_tokens": 401,
+  "total_bot_prompt_tokens": 4083,
+  "total_bot_completion_tokens": 574,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My top-up for Google Pay isn't working",
+      "assistant_response": "Sorry you’re having trouble. Is your Google Pay top-up failing (declined/error) or is it stuck as pending?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.42
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.35
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:49.267589",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's being declined, I get an error each time.",
+      "assistant_response": "Got it—your Google Pay top-up is being declined. Is the error happening specifically during the top-up attempt from Google Pay (card verification/decline), or do you see a status like “pending” before it declines?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.13
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:51.714144",
+      "sim_prompt_tokens": 481,
+      "sim_completion_tokens": 111,
+      "bot_prompt_tokens": 738,
+      "bot_completion_tokens": 105
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It happens right away when I try to top up—no pending status, just an immediate error.",
+      "assistant_response": "Thanks—since it’s an immediate decline, it sounds like your Google Pay top-up is failing at the card-transaction stage. Can you tell me the exact error message/code you see in the app?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.2
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:53.955142",
+      "sim_prompt_tokens": 548,
+      "sim_completion_tokens": 113,
+      "bot_prompt_tokens": 814,
+      "bot_completion_tokens": 100
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just says “Transaction declined – please try again later.”",
+      "assistant_response": "Thanks—“Transaction declined” on an immediate Google Pay top-up usually means the top-up request was rejected by the payment network/bank. To route this correctly: are you topping up via a linked card in Google Pay (so it’s a card top-up), or are you using a bank transfer inside Google Pay?",
+      "predicted_intent": "top_up_failed",
+      "top_3_intents": [
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.2
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:56.413867",
+      "sim_prompt_tokens": 619,
+      "sim_completion_tokens": 79,
+      "bot_prompt_tokens": 877,
+      "bot_completion_tokens": 123
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "I'm using the card I have saved in Google Pay.",
+      "assistant_response": "Thanks—if you’re topping up via the card saved in Google Pay and it declines immediately, it’s typically a card top-up being rejected. To help fix it, please tell me: are you getting this error when you initiate the top up from the app in your Revolut account, or when you confirm the payment inside Google Pay?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.86
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:58.460936",
+      "sim_prompt_tokens": 705,
+      "sim_completion_tokens": 98,
+      "bot_prompt_tokens": 962,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

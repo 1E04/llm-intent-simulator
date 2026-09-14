@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "0d20f06b-de84-493b-8f42-b55a9acdbac8",
+  "seed": 42,
+  "dialogue_index": 766,
+  "timestamp": "2026-08-21T15:51:39.013717",
+  "persona": "HumanBase",
+  "target_intent": "wrong_exchange_rate_for_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 590,
+  "total_sim_completion_tokens": 165,
+  "total_bot_prompt_tokens": 1487,
+  "total_bot_completion_tokens": 262,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I make a withdraw if I am out of country from with out any fees at an ATM?",
+      "assistant_response": "Yes—I can help. Are you asking whether you can withdraw internationally (country availability) and specifically whether there are no ATM fees in that country? If you tell me the country you’re in and which card you have (Visa/Mastercard), I can check the likely fee/ATM options.",
+      "predicted_intent": "country_support",
+      "top_3_intents": [
+        {
+          "intent": "country_support",
+          "confidence": 0.78
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.21
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.01
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:36.546572",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 704,
+      "bot_completion_tokens": 150
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I'm in Spain and I'm using my Visa card.",
+      "assistant_response": "Thanks—yes, you can generally withdraw in Spain with a Visa card. To confirm whether you’ll pay any ATM fees or charges, which ATM/network are you using (or the name on the machine), and are you withdrawing in EUR? Fees can vary by ATM operator and amount.",
+      "predicted_intent": "atm_support",
+      "top_3_intents": [
+        {
+          "intent": "atm_support",
+          "confidence": 0.86
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.09
+        },
+        {
+          "intent": "country_support",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T15:51:39.013623",
+      "sim_prompt_tokens": 590,
+      "sim_completion_tokens": 165,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 112
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "792ae206-e53b-40cb-a855-3bf3e64f8f24",
+  "seed": 42,
+  "dialogue_index": 453,
+  "timestamp": "2026-08-21T15:45:27.389932",
+  "persona": "HumanBase",
+  "target_intent": "passcode_forgotten",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1904,
+  "total_sim_completion_tokens": 467,
+  "total_bot_prompt_tokens": 3398,
+  "total_bot_completion_tokens": 632,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What should I do if the passcode doesn't work for me?",
+      "assistant_response": "Do you mean your app passcode, or your card PIN? If it’s the app passcode, do you need to reset it because you forgot it, or is it just failing even though you remember it? Also, have you tried several times (which could block the code)?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.78
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.19
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:19.113295",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 697,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's the app passcode – I think I know it but it keeps being rejected, and I may have tried a few times already.",
+      "assistant_response": "Got it—since it’s the app passcode and it’s being rejected (and you may have tried a few times), it may be locked/blocked. Could you confirm: are you seeing a message that the passcode has been blocked, or does it just say it’s incorrect? If it’s blocked, use the “Forgot passcode” option in the app to reset; if it’s only “incorrect,” I’ll help you troubleshoot the correct reset steps.",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.38
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.33
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.29
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:22.266589",
+      "sim_prompt_tokens": 521,
+      "sim_completion_tokens": 228,
+      "bot_prompt_tokens": 791,
+      "bot_completion_tokens": 188
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just says it’s incorrect, not that it’s blocked.",
+      "assistant_response": "Thanks—if your app passcode is being rejected as “incorrect” (and not “blocked”), I’ll help you reset it. Are you able to use the “Forgot passcode” option in the app right now, or does that option also fail/require something else?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.46
+        },
+        {
+          "intent": "pin_blocked",
+          "confidence": 0.32
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:24.567179",
+      "sim_prompt_tokens": 652,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 908,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I tried the “Forgot passcode” link, but it just asks me to verify my phone number and I’m not getting the code.",
+      "assistant_response": "Understood—since you used “Forgot passcode” and it asks to verify your phone number, but you’re not receiving the code, this is typically a phone/SMS verification issue. Can you confirm: are you not receiving any SMS at all, or do you receive it but it’s delayed/blank? Also, is the phone number in your profile current (same number you’re trying to use now)?",
+      "predicted_intent": "passcode_forgotten",
+      "top_3_intents": [
+        {
+          "intent": "passcode_forgotten",
+          "confidence": 0.88
+        },
+        {
+          "intent": "verify_my_identity",
+          "confidence": 0.62
+        },
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.31
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:27.388063",
+      "sim_prompt_tokens": 731,
+      "sim_completion_tokens": 136,
+      "bot_prompt_tokens": 1002,
+      "bot_completion_tokens": 178
+    }
+  ]
+}

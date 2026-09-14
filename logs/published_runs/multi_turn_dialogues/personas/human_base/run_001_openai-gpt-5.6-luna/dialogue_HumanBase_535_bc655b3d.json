@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "bc655b3d-9463-49e2-b989-e6c52ab1fdce",
+  "seed": 42,
+  "dialogue_index": 535,
+  "timestamp": "2026-08-19T15:51:53.002219",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 516,
+  "total_sim_completion_tokens": 120,
+  "total_bot_prompt_tokens": 1480,
+  "total_bot_completion_tokens": 273,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I bought something and the money appeared back into my account? Why?",
+      "assistant_response": "This usually happens when a card payment gets reversed (for example, due to a cancellation, merchant reversal, or authorization being released). Was the transaction showing as completed and then the money returned, or is it currently marked as pending/reverted in your app?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:50.678652",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was marked as completed at first, then the amount came back later. It’s not showing as pending now.",
+      "assistant_response": "Got it—if it showed as completed and then the amount returned later (and it’s no longer pending), that typically means the card payment was reversed/reverted by the merchant or the payment network.\n\nCan you tell me whether the merchant name shows a “reverted”/“reversal” note in the transaction details?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.87
+        },
+        {
+          "intent": "refund_not_showing_up",
+          "confidence": 0.07
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:51:53.002175",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 782,
+      "bot_completion_tokens": 128
+    }
+  ]
+}

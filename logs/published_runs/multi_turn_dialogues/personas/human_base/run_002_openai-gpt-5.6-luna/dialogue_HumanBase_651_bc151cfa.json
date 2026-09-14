@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "bc151cfa-fa60-43b2-bc5b-dcf38f7bfdd9",
+  "seed": 42,
+  "dialogue_index": 651,
+  "timestamp": "2026-08-21T13:28:12.459073",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1904,
+  "total_sim_completion_tokens": 323,
+  "total_bot_prompt_tokens": 4896,
+  "total_bot_completion_tokens": 717,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I would like to transfer some money from my other bank account into this one.",
+      "assistant_response": "Sure—do you want help setting up a bank transfer into your account (getting the details/steps), or are you asking about the timing/when it arrives?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.46
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.31
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.23
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:04.923443",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1085,
+      "bot_completion_tokens": 124
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking for the steps to set it up.",
+      "assistant_response": "Got it—here are the usual steps to set up a bank transfer into your account: 1) In your app, go to Transfers/Bank transfer and choose “Add bank transfer” (or “Receiving money”). 2) Copy the account details shown (beneficiary name, sort code/IBAN, and reference/transfer description). 3) From your other bank, start a transfer to those details, enter the reference exactly as shown, and set the amount. 4) Submit the transfer and keep the receipt. \n\nWhich country is your other bank in (UK or EU/other), so I can guide you with the exact details you’ll need to copy?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.12
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:07.688935",
+      "sim_prompt_tokens": 500,
+      "sim_completion_tokens": 140,
+      "bot_prompt_tokens": 1139,
+      "bot_completion_tokens": 232
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It's a UK bank.",
+      "assistant_response": "Great—UK bank transfer into your account is usually done by sending a payment to our UK beneficiary details (sort code and account number/IBAN where shown) and using the exact reference we provide. \n\nTo guide you precisely: are you making a **UK Faster Payments** transfer, or a **bank transfer by sort code/account number** from your UK bank?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.74
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:09.625738",
+      "sim_prompt_tokens": 658,
+      "sim_completion_tokens": 84,
+      "bot_prompt_tokens": 1291,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "I’ll be using Faster Payments.",
+      "assistant_response": "Perfect—here are the steps to set up a **UK Faster Payments** transfer into your account:\n\n1) In the app, go to **Transfers / Receiving money** (or **Add bank transfer**).\n2) Select **UK** as the transfer type and copy the **Faster Payments details** shown (account number/sort code/beneficiary name) and the **reference** (payment reference).\n3) From your UK bank app/online banking, choose **Make a Faster Payment**.\n4) Enter the copied **beneficiary details** exactly, and paste the **reference** precisely.\n5) Enter the amount and send the transfer.\n\nIf you tell me which app/bank you’re using (e.g., Barclays, Monzo, HSBC), I can map these steps to the exact fields you’ll see.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.09
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T13:28:12.458910",
+      "sim_prompt_tokens": 746,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1381,
+      "bot_completion_tokens": 231
+    }
+  ]
+}

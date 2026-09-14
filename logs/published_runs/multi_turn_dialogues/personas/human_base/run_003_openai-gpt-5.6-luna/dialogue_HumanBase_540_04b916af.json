@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "04b916af-f89f-48dd-bf2e-8f0a94c7eea0",
+  "seed": 42,
+  "dialogue_index": 540,
+  "timestamp": "2026-08-21T15:47:10.843960",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 634,
+  "total_sim_completion_tokens": 131,
+  "total_bot_prompt_tokens": 1476,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My card payment was reverted.  Why?",
+      "assistant_response": "I’m sorry about that—card payments can get reverted for a few reasons (e.g., merchant reversal, insufficient funds/temporary authorization hold, or the merchant didn’t complete the charge). Can you tell me: is the payment showing as “reverted” already, and about how long ago did you make the purchase?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.84
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:08.178466",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 693,
+      "bot_completion_tokens": 158
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it already shows as reverted, and I made the purchase yesterday.",
+      "assistant_response": "Thanks—if it’s already marked “reverted” and the purchase was yesterday, that usually means the merchant or the payment network reversed the transaction (for example, the merchant didn’t complete the charge or there was an authorization reversal). Would you like me to help check the specific payment—can you share the merchant name and the amount (and whether it’s in your app under card payments/transactions)?",
+      "predicted_intent": "reverted_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.92
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.05
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:47:10.843885",
+      "sim_prompt_tokens": 634,
+      "sim_completion_tokens": 131,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 139
+    }
+  ]
+}

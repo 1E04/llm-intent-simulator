@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ec7519b7-d4c3-4b37-b7fb-f4283f9eb234",
+  "seed": 42,
+  "dialogue_index": 246,
+  "timestamp": "2026-08-19T15:30:02.437981",
+  "persona": "HumanBase",
+  "target_intent": "contactless_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 486,
+  "total_sim_completion_tokens": 106,
+  "total_bot_prompt_tokens": 1440,
+  "total_bot_completion_tokens": 316,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The contactless I have won't work.",
+      "assistant_response": "Sorry to hear that—does your card fail specifically when you tap for contactless, or is it also failing when you insert/swipe or use the chip?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.84
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:29:59.632576",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 127
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It only fails when I tap; the chip and swipe work fine.",
+      "assistant_response": "Got it—if contactless fails but chip and swipe work, that points to a contactless issue. Try this: (1) make sure the card is contactless-enabled and the payment limit hasn’t been reached, (2) remove the card from any metal sleeve/wallet and tap again, and (3) try tapping just once for a steady hold near the terminal. If it still fails, can you tell me whether the terminal shows an error message (e.g., “try again”/“declined”/“contactless not available”)? Also, are you tapping above or below the terminal’s contactless limit?",
+      "predicted_intent": "contactless_not_working",
+      "top_3_intents": [
+        {
+          "intent": "contactless_not_working",
+          "confidence": 0.92
+        },
+        {
+          "intent": "card_not_working",
+          "confidence": 0.06
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-19T15:30:02.437885",
+      "sim_prompt_tokens": 486,
+      "sim_completion_tokens": 106,
+      "bot_prompt_tokens": 748,
+      "bot_completion_tokens": 189
+    }
+  ]
+}

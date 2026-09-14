@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "ae4e7667-d969-4a4d-b30c-f89d42aeffea",
+  "seed": 42,
+  "dialogue_index": 494,
+  "timestamp": "2026-08-19T15:47:55.913722",
+  "persona": "HumanBase",
+  "target_intent": "pending_transfer",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 562,
+  "total_sim_completion_tokens": 187,
+  "total_bot_prompt_tokens": 1542,
+  "total_bot_completion_tokens": 306,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Transferring money in 2018 to another country shouldn't take this long. My transfer has been pending for too long. I verified my account details are correct.",
+      "assistant_response": "I’m sorry—if the transfer has been pending for a very long time, it could be stuck. Can you tell me whether it’s an international bank transfer (to another country) and share the transfer reference or date you sent it? Also, does the app show it as “pending” or “failed”?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:53.070772",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 717,
+      "bot_completion_tokens": 154
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it’s an international transfer. I sent it on 12 Oct 2018, reference REF12345, and the app still shows it as pending.",
+      "assistant_response": "Thanks—since it’s an international transfer sent on 12 Oct 2018 and it’s still showing as “pending” with reference REF12345, I can help you with a pending-transfer review. \n\nFirst, can you confirm whether the app has any “tracking/status” section for this transfer (e.g., “pending—processing”, “waiting to be accepted”, or anything similar), and whether you’ve received any confirmation email/SWIFT/payment receipt for REF12345?",
+      "predicted_intent": "pending_transfer",
+      "top_3_intents": [
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.9
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.07
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-19T15:47:55.913622",
+      "sim_prompt_tokens": 562,
+      "sim_completion_tokens": 187,
+      "bot_prompt_tokens": 825,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

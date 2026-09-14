@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "df3fb8ad-f4c0-4772-860b-be531733695d",
+  "seed": 42,
+  "dialogue_index": 657,
+  "timestamp": "2026-08-21T15:49:29.354499",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 556,
+  "total_sim_completion_tokens": 239,
+  "total_bot_prompt_tokens": 1458,
+  "total_bot_completion_tokens": 330,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I send my account money through transfer?",
+      "assistant_response": "Sure—do you mean sending money to your Revolut account (top up via bank transfer), or sending money to someone else from your account? If you tell me which one, I’ll guide you step by step.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.84
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:25.598862",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 135
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m trying to add money to my Revolut account via a bank transfer.",
+      "assistant_response": "Great— to add money to your Revolut account via a bank transfer, open the Revolut app, go to **Bank transfer / Add money**, then select **Your account details** (or **Local details**) and copy the IBAN/account number provided. From your bank, make a **bank transfer to that Revolut account**, using the reference/message they show in the app. Want to do a **local** transfer (same country) or **international** (cross-border)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.07
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:29.354398",
+      "sim_prompt_tokens": 556,
+      "sim_completion_tokens": 239,
+      "bot_prompt_tokens": 764,
+      "bot_completion_tokens": 195
+    }
+  ]
+}

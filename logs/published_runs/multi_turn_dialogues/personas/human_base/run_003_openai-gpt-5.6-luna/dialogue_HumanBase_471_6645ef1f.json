@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "6645ef1f-9033-4bad-ac56-bee19089d8a7",
+  "seed": 42,
+  "dialogue_index": 471,
+  "timestamp": "2026-08-21T15:45:36.708463",
+  "persona": "HumanBase",
+  "target_intent": "pending_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 581,
+  "total_sim_completion_tokens": 92,
+  "total_bot_prompt_tokens": 1468,
+  "total_bot_completion_tokens": 317,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "My cash in the ATM is still pending",
+      "assistant_response": "Just to confirm: are you referring to a cash withdrawal you made at an ATM that’s showing as “pending,” or are you asking about a cash deposit that’s pending? If it’s a withdrawal, tell me the transaction date/time and the amount so I can help check what’s causing the delay.",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.84
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "cash_withdrawal_charge",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:34.178770",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was today around 2 pm, for $120.",
+      "assistant_response": "Thanks—since you withdrew $120 at around 2pm today and it’s showing as pending, this most likely falls under a pending cash withdrawal. Typically it completes within a short time; the “pending” amount should update to final once processed. \n\nCan you confirm whether the ATM receipt shows an approval (not declined) and whether you still see the withdrawal listed as pending in the app? Also, which country/ATM network was it?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:36.707133",
+      "sim_prompt_tokens": 581,
+      "sim_completion_tokens": 92,
+      "bot_prompt_tokens": 776,
+      "bot_completion_tokens": 156
+    }
+  ]
+}

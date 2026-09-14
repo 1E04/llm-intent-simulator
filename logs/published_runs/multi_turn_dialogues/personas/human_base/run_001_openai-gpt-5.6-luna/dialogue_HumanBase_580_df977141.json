@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "df977141-fc94-4907-8dac-567e04336079",
+  "seed": 42,
+  "dialogue_index": 580,
+  "timestamp": "2026-08-19T15:55:05.012535",
+  "persona": "HumanBase",
+  "target_intent": "top_up_by_card_charge",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 525,
+  "total_sim_completion_tokens": 153,
+  "total_bot_prompt_tokens": 1480,
+  "total_bot_completion_tokens": 270,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are there any fees if I use a European bank card for a top up?",
+      "assistant_response": "To confirm: are you topping up by card (a European bank debit/credit card) or by bank transfer from your European bank? If it’s by card, I can tell you the exact card top-up fees—are you using a debit or credit card?",
+      "predicted_intent": "supported_cards_and_currencies",
+      "top_3_intents": [
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.62
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.27
+        },
+        {
+          "intent": "top_up_by_bank_transfer_charge",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:01.524757",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it’s a card top‑up and I’m using a debit card.",
+      "assistant_response": "Thanks—if you’re doing a card top-up with a European debit card, there may be a card top-up fee. Could you tell me the top-up currency and the amount you’re planning (e.g., EUR 50)? Then I can confirm whether any fees apply and how they’re calculated.",
+      "predicted_intent": "top_up_by_card_charge",
+      "top_3_intents": [
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.86
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.09
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-19T15:55:05.012422",
+      "sim_prompt_tokens": 525,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 780,
+      "bot_completion_tokens": 119
+    }
+  ]
+}

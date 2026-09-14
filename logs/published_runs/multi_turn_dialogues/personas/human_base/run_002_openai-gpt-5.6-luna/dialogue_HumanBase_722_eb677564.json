@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "eb677564-0dfe-4779-ae28-75097e3521d0",
+  "seed": 42,
+  "dialogue_index": 722,
+  "timestamp": "2026-08-21T13:33:37.923610",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2553,
+  "total_sim_completion_tokens": 627,
+  "total_bot_prompt_tokens": 6222,
+  "total_bot_completion_tokens": 659,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Can I make multiple online transactions with my virtual card?",
+      "assistant_response": "Do you mean a *disposable* virtual card (which has limits like number of transactions/uses), or your regular virtual card that can be used multiple times for online payments?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.34
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.33
+        },
+        {
+          "intent": "get_disposable_virtual_card",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:27.900094",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m talking about my regular virtual card – the one I can use repeatedly.",
+      "assistant_response": "Yes—if it’s your regular (non-disposable) virtual card, you can use it repeatedly for multiple online transactions. \nAre you asking about any specific limits (e.g., per-day/per-transaction), or is the card being declined when you try to pay?",
+      "predicted_intent": "disposable_card_limits",
+      "top_3_intents": [
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.62
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.23
+        },
+        {
+          "intent": "card_acceptance",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:30.345766",
+      "sim_prompt_tokens": 497,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 1142,
+      "bot_completion_tokens": 114
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Whenever I try to pay online with it, the transaction gets declined even though I have enough funds.",
+      "assistant_response": "Sorry about that—if the online payment is being declined even with enough funds, it’s most likely a virtual card/payment being declined.\n\nQuick check: when you say “declined,” do you see a specific error message in-app (e.g., “payment declined,” “merchant not supported,” or “try again”)? If you tell me the exact wording, I can point you to the right fix.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.3
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.45
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.25
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:32.597944",
+      "sim_prompt_tokens": 578,
+      "sim_completion_tokens": 145,
+      "bot_prompt_tokens": 1227,
+      "bot_completion_tokens": 145
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It just shows “payment declined” with no extra details.",
+      "assistant_response": "Got it—if your regular virtual card shows “payment declined” online with no extra details, it usually points to a card payment being declined. \n\nTo narrow it down: was the payment attempted in the app/website as a *card payment* (not Apple Pay/Google Pay), and has this worked for you before or is it the first time it’s been declined?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:35.261298",
+      "sim_prompt_tokens": 690,
+      "sim_completion_tokens": 183,
+      "bot_prompt_tokens": 1331,
+      "bot_completion_tokens": 139
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Yes, I entered the card details directly on the merchant’s site, and it’s the first time it’s been declined.",
+      "assistant_response": "Thanks—if entering your regular virtual card details results in a plain “payment declined” on the merchant site (first time), that points most likely to a declined card payment.\n\nTo help fix it, what merchant/country are you trying to pay from, and is the payment in the same currency as your card’s supported currencies?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.18
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:37.923518",
+      "sim_prompt_tokens": 788,
+      "sim_completion_tokens": 120,
+      "bot_prompt_tokens": 1442,
+      "bot_completion_tokens": 129
+    }
+  ]
+}

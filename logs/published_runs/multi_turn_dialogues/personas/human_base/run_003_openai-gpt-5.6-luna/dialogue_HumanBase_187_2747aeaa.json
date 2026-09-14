@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "2747aeaa-d31a-4ee8-acb2-23081bd9f973",
+  "seed": 42,
+  "dialogue_index": 187,
+  "timestamp": "2026-08-21T15:40:45.219607",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_wrong_exchange_rate",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 574,
+  "total_sim_completion_tokens": 186,
+  "total_bot_prompt_tokens": 1482,
+  "total_bot_completion_tokens": 270,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I paid for something in foreign currency but noticed the exchange rate is incorrect.",
+      "assistant_response": "Sorry to hear that—was this exchange-rate issue on a card **payment** (you paid in a foreign currency), or are you withdrawing cash at an ATM? And do you want to dispute the **rate used by the merchant** or the **rate charged by the bank**?",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.78
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.14
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:42.426129",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card payment, and I want to dispute the rate the bank applied.",
+      "assistant_response": "Thanks—so you’re disputing the exchange rate the bank applied to a **card payment**. Can you tell me whether the incorrect rate appears in the app/statement for that transaction (and the transaction date and amount)? Then I can guide you on the next steps to raise the dispute.",
+      "predicted_intent": "card_payment_wrong_exchange_rate",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.9
+        },
+        {
+          "intent": "exchange_rate",
+          "confidence": 0.07
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:45.219567",
+      "sim_prompt_tokens": 574,
+      "sim_completion_tokens": 186,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 118
+    }
+  ]
+}

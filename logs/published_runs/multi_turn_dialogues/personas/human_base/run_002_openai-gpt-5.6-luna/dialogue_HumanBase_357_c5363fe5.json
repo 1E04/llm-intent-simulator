@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "c5363fe5-fd5b-4806-8052-469d03134f0c",
+  "seed": 42,
+  "dialogue_index": 357,
+  "timestamp": "2026-08-21T13:08:19.885602",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1086,
+  "total_sim_completion_tokens": 258,
+  "total_bot_prompt_tokens": 3462,
+  "total_bot_completion_tokens": 398,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Where did this fee come from?",
+      "assistant_response": "I can help with that—could you tell me what kind of fee it was for (card payment, transfer, or an exchange/currency conversion), and the transaction date/amount shown on your statement?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.36
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.33
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.31
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:15.628132",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a card‑payment fee – $5.99 on 12 Mar.",
+      "assistant_response": "Got it—so you’re seeing a $5.99 fee for a card payment dated 12 Mar. Was this fee charged by the card merchant, or does it appear as a separate line on your Revolut statement (e.g., “card payment fee”)? If you can, tell me the exact description shown next to the $5.99.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.84
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:17.789304",
+      "sim_prompt_tokens": 493,
+      "sim_completion_tokens": 139,
+      "bot_prompt_tokens": 1145,
+      "bot_completion_tokens": 130
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows up as a separate line that says “card payment fee”.",
+      "assistant_response": "Thanks—if it’s a separate line on your statement labeled “card payment fee,” that matches the **card payment fee** case. \n\nTo confirm the exact cause, can you share the merchant name (or the first few words of the fee description) and whether you also see a separate card payment line for that same date/amount?.",
+      "predicted_intent": "card_payment_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:19.885476",
+      "sim_prompt_tokens": 593,
+      "sim_completion_tokens": 119,
+      "bot_prompt_tokens": 1241,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

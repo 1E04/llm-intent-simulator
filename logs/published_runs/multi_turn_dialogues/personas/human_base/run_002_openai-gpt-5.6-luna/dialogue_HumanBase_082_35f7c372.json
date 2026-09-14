@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "35f7c372-737e-4666-aeb3-5a40a40bf478",
+  "seed": 42,
+  "dialogue_index": 82,
+  "timestamp": "2026-08-21T12:50:14.477386",
+  "persona": "HumanBase",
+  "target_intent": "beneficiary_not_allowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 529,
+  "total_sim_completion_tokens": 179,
+  "total_bot_prompt_tokens": 2261,
+  "total_bot_completion_tokens": 295,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why isn't my transfer not going through? I keep getting an error message.",
+      "assistant_response": "Sorry about that—are you seeing the transfer marked as *failed* with an error, or is it showing as *pending*? If you tell me the exact error message (or code) and whether it’s a bank transfer to another bank or an internal transfer, I can guide you to the right fix.",
+      "predicted_intent": "failed_transfer",
+      "top_3_intents": [
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.63
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.21
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.16
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:11.090743",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1084,
+      "bot_completion_tokens": 152
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The error says “Beneficiary not allowed,” and it’s a bank transfer to an external account.",
+      "assistant_response": "Thanks—if you’re seeing “Beneficiary not allowed” on an external bank transfer, it usually means the recipient/bank details you entered aren’t permitted by the transfer’s rules (e.g., the beneficiary isn’t approved or the details don’t match what’s allowed).\n\nCan you confirm: is this your first transfer to that external beneficiary, and are you using their IBAN/account number exactly as shown on their bank details?",
+      "predicted_intent": "beneficiary_not_allowed",
+      "top_3_intents": [
+        {
+          "intent": "beneficiary_not_allowed",
+          "confidence": 0.93
+        },
+        {
+          "intent": "declined_transfer",
+          "confidence": 0.44
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.31
+        }
+      ],
+      "timestamp": "2026-08-21T12:50:14.477257",
+      "sim_prompt_tokens": 529,
+      "sim_completion_tokens": 179,
+      "bot_prompt_tokens": 1177,
+      "bot_completion_tokens": 143
+    }
+  ]
+}

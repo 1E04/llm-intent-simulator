@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a993efb1-a1c2-4a39-bca4-77754c07e9b8",
+  "seed": 42,
+  "dialogue_index": 237,
+  "timestamp": "2026-08-21T15:41:27.768579",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1273,
+  "total_sim_completion_tokens": 357,
+  "total_bot_prompt_tokens": 2256,
+  "total_bot_completion_tokens": 353,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I freeze my account?",
+      "assistant_response": "I can help—are you trying to freeze because your card/account may be lost or stolen, or because you suspect your card details were compromised?",
+      "predicted_intent": "terminate_account",
+      "top_3_intents": [
+        {
+          "intent": "terminate_account",
+          "confidence": 0.34
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.33
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.21
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:22.472760",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 691,
+      "bot_completion_tokens": 122
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I think my card details have been used without my permission.",
+      "assistant_response": "I’m sorry this happened. To protect you, do you want to **freeze your card immediately** because you think your **card details were compromised/used without permission**? If yes, tell me whether you still have the physical card with you (yes/no), so I can guide you to the right steps.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.78
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.16
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:25.619962",
+      "sim_prompt_tokens": 594,
+      "sim_completion_tokens": 239,
+      "bot_prompt_tokens": 742,
+      "bot_completion_tokens": 120
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, I still have the card.",
+      "assistant_response": "Got it—you still have the physical card, but you believe your card details were used without permission. I recommend freezing your card right away and then securing your account. I can guide you through the in-app steps—are you using the mobile app or the web browser?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.07
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:41:27.768465",
+      "sim_prompt_tokens": 679,
+      "sim_completion_tokens": 118,
+      "bot_prompt_tokens": 823,
+      "bot_completion_tokens": 111
+    }
+  ]
+}

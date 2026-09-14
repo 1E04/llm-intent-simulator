@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "2520aac2-763d-4dea-b7e7-0bb497b9da55",
+  "seed": 42,
+  "dialogue_index": 271,
+  "timestamp": "2026-08-19T15:31:25.893893",
+  "persona": "HumanBase",
+  "target_intent": "declined_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1070,
+  "total_sim_completion_tokens": 266,
+  "total_bot_prompt_tokens": 2296,
+  "total_bot_completion_tokens": 405,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "The ATM didn't let me get any cash",
+      "assistant_response": "Sorry about that—was the cash withdrawal declined (e.g., “transaction failed/declined”), or did the ATM take the money but you didn’t receive it?",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.77
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:31:19.749297",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 96
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It didn’t give me any money at all—nothing was taken either.",
+      "assistant_response": "Got it—if the ATM didn’t dispense cash and also didn’t take any money, this is often treated as a failed/declined cash withdrawal. Can you confirm whether the ATM screen said “declined/try again” or did it show a receipt/confirmation? Also, which country and approximately what time did it happen?",
+      "predicted_intent": "cash_withdrawal_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.62
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.27
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.11
+        }
+      ],
+      "timestamp": "2026-08-19T15:31:23.027910",
+      "sim_prompt_tokens": 489,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 751,
+      "bot_completion_tokens": 165
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It just showed a “try again” message, no receipt. It was in the US, around 3 pm.",
+      "assistant_response": "Thanks—since the ATM showed “try again”, didn’t dispense cash, and no receipt, this matches a declined cash withdrawal.\n\nPlease check your app/bank statement for any cash-withdrawal charge from around 3pm US time. If nothing is showing, we can help you confirm it won’t post and what to do next (e.g., retry steps and how to avoid future declines).",
+      "predicted_intent": "declined_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.72
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.28
+        }
+      ],
+      "timestamp": "2026-08-19T15:31:25.893822",
+      "sim_prompt_tokens": 581,
+      "sim_completion_tokens": 125,
+      "bot_prompt_tokens": 853,
+      "bot_completion_tokens": 144
+    }
+  ]
+}

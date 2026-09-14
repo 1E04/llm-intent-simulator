@@ -1,0 +1,118 @@
+{
+  "dialogue_id": "db36f88c-2b13-4649-8131-5d0730dfba43",
+  "seed": 42,
+  "dialogue_index": 193,
+  "timestamp": "2026-08-21T12:57:50.980672",
+  "persona": "HumanBase",
+  "target_intent": "card_swallowed",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 4,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1775,
+  "total_sim_completion_tokens": 356,
+  "total_bot_prompt_tokens": 4799,
+  "total_bot_completion_tokens": 596,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "What should I do with my atm that got stuck?",
+      "assistant_response": "Sorry that happened—if your card was retained by the ATM, I can help. First, did the ATM keep your card (card stuck), or did it also fail to dispense cash?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.74
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.21
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.05
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:43.608064",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 133
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It kept my card and didn’t give me any cash.",
+      "assistant_response": "Got it—an ATM kept your card and no cash was dispensed. This is typically handled as a “card swallowed” ATM incident. \n\nPlease tell me:\n1) Did the cash withdrawal show as declined, or did it look like it went through but with no cash? \n2) Which country and ATM brand was it? (e.g., HSBC, Bank of X)",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.84
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.1
+        },
+        {
+          "intent": "atm_support",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:45.860608",
+      "sim_prompt_tokens": 495,
+      "sim_completion_tokens": 123,
+      "bot_prompt_tokens": 1140,
+      "bot_completion_tokens": 138
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It shows as completed but I got nothing, and it was a Chase machine in the US.",
+      "assistant_response": "Thanks—so the ATM (Chase, US) kept your card and the withdrawal shows as completed, but you received no cash. \n\nI can guide you through next steps for a card-swallowed ATM issue. First, can you confirm the cash withdrawal amount and the date/time (approx.) of the transaction?",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.75
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.15
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:48.318469",
+      "sim_prompt_tokens": 594,
+      "sim_completion_tokens": 161,
+      "bot_prompt_tokens": 1246,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "It was $200 on March 15 around 3 PM.",
+      "assistant_response": "Understood—Chase ATM in the US on March 15 around 3 PM, $200, marked completed but you received no cash and your card was kept.\n\nThis matches a **card swallowed** ATM incident. Please do these next steps:\n1) Check your app for the withdrawal details (amount, timestamp) and see if it shows as **pending** or **completed**.\n2) Keep the ATM receipt if you have one.\n3) I can help you open a case for the missing cash/ATM retention—tell me whether the transaction is currently showing as **completed and already charged**, or **pending** in the app.",
+      "predicted_intent": "card_swallowed",
+      "top_3_intents": [
+        {
+          "intent": "card_swallowed",
+          "confidence": 0.92
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T12:57:50.980596",
+      "sim_prompt_tokens": 686,
+      "sim_completion_tokens": 72,
+      "bot_prompt_tokens": 1333,
+      "bot_completion_tokens": 197
+    }
+  ]
+}

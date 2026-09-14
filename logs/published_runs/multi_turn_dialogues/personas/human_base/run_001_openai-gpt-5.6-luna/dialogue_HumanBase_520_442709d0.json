@@ -1,0 +1,143 @@
+{
+  "dialogue_id": "442709d0-7b4e-47c0-8e5d-bc6c181f3870",
+  "seed": 42,
+  "dialogue_index": 520,
+  "timestamp": "2026-08-19T15:50:29.440125",
+  "persona": "HumanBase",
+  "target_intent": "receiving_money",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 5,
+  "status": "MAX_TURNS_REACHED",
+  "total_sim_prompt_tokens": 2796,
+  "total_sim_completion_tokens": 525,
+  "total_bot_prompt_tokens": 4545,
+  "total_bot_completion_tokens": 706,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Salary in GBP has been received, does it need to be configured elsewhere?",
+      "assistant_response": "Do you mean your salary payment has arrived in your account in GBP and you’re checking whether you need to set up anything for it to show correctly—or are you saying it hasn’t appeared/been credited yet? Also, is it a bank transfer to your account (not a card payment)?",
+      "predicted_intent": "receiving_money",
+      "top_3_intents": [
+        {
+          "intent": "receiving_money",
+          "confidence": 0.6
+        },
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.22
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T15:50:19.774638",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 699,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s already in my account – I just want to know if I need to set anything up. It came in as a bank transfer.",
+      "assistant_response": "Thanks—if the salary was received as a GBP bank transfer and it’s already credited to your account, you typically don’t need to “configure” anything else for it to work.\n\nCan you confirm: is the money just showing as available balance in GBP, or are you trying to use it (e.g., card/withdrawals) and it’s not behaving as expected?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.26
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-19T15:50:22.462662",
+      "sim_prompt_tokens": 523,
+      "sim_completion_tokens": 159,
+      "bot_prompt_tokens": 795,
+      "bot_completion_tokens": 134
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s showing as an available GBP balance, I just want to be sure there’s nothing else I need to do.",
+      "assistant_response": "If it’s already showing as an available GBP balance from a bank transfer, you usually don’t need to set up anything else.\n\nQuick checks:\n1) Make sure it’s credited in GBP (not pending).\n2) If you plan to spend/withdraw, you may need to ensure your card/withdrawal is using GBP (or that you’re aware of any exchange fees if you’re using another currency).\n\nIs your goal just to confirm it will remain usable, or are you trying to spend/withdraw it and something isn’t working?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.62
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.24
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-19T15:50:25.265449",
+      "sim_prompt_tokens": 637,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 905,
+      "bot_completion_tokens": 170
+    },
+    {
+      "turn_number": 4,
+      "user_utterance": "Just confirming it’ll stay usable—I don’t have any spending or withdrawal problems.",
+      "assistant_response": "Yes—if your salary GBP bank transfer is already showing as an available GBP balance, you don’t need to set up anything else, and it should remain usable.\n\nIf you ever see it as pending or not available, tell me and we’ll check why.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.66
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.21
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.13
+        }
+      ],
+      "timestamp": "2026-08-19T15:50:27.407833",
+      "sim_prompt_tokens": 779,
+      "sim_completion_tokens": 103,
+      "bot_prompt_tokens": 1039,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 5,
+      "user_utterance": "Thanks, that’s all.",
+      "assistant_response": "Great—if your salary is already credited as an available GBP balance from a bank transfer, you don’t need to set anything up, and it should remain usable. If it ever turns pending or changes status, let me know.",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.78
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.12
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-19T15:50:29.440015",
+      "sim_prompt_tokens": 857,
+      "sim_completion_tokens": 114,
+      "bot_prompt_tokens": 1107,
+      "bot_completion_tokens": 105
+    }
+  ]
+}

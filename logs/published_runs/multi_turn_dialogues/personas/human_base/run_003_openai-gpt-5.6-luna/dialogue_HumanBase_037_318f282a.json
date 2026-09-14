@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "318f282a-1cfc-49c2-9816-56f7f5e1e747",
+  "seed": 42,
+  "dialogue_index": 37,
+  "timestamp": "2026-08-21T15:37:52.221647",
+  "persona": "HumanBase",
+  "target_intent": "apple_pay_or_google_pay",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1136,
+  "total_sim_completion_tokens": 370,
+  "total_bot_prompt_tokens": 2365,
+  "total_bot_completion_tokens": 437,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How do I get the Top Up feature on my apple watch working?",
+      "assistant_response": "Just to confirm—when you say “Top Up on your Apple Watch,” do you mean topping up using Apple Pay, or are you trying to use an app feature on the Watch to add money? Also, are you seeing any error message?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.62
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.21
+        },
+        {
+          "intent": "automatic_top_up",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:46.275932",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 144
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m trying to top‑up via Apple Pay on the Watch, and it just says it can’t complete the transaction.",
+      "assistant_response": "Got it—you’re topping up via Apple Pay on your Apple Watch and it shows “can’t complete the transaction.” A couple quick checks: are you able to complete an Apple Pay payment (not a top up) on the Watch with the same card? And does the card appear in the Apple Watch Wallet and show as active?",
+      "predicted_intent": "topping_up_by_card",
+      "top_3_intents": [
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.62
+        },
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.26
+        },
+        {
+          "intent": "top_up_failed",
+          "confidence": 0.12
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:49.244623",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 206,
+      "bot_prompt_tokens": 783,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "Yes, I can make regular Apple Pay purchases on the watch and the card is in the Wallet and shows as active.",
+      "assistant_response": "Thanks—since Apple Pay purchases work and the card is active on your Watch, this is most likely an Apple Pay top-up issue. \n\nCan you confirm whether you’re getting this exact message when you try the top up (and whether you can top up successfully using Apple Pay on your iPhone), or is it failing only on the Watch?",
+      "predicted_intent": "apple_pay_or_google_pay",
+      "top_3_intents": [
+        {
+          "intent": "apple_pay_or_google_pay",
+          "confidence": 0.88
+        },
+        {
+          "intent": "top_up_by_card_charge",
+          "confidence": 0.45
+        },
+        {
+          "intent": "topping_up_by_card",
+          "confidence": 0.33
+        }
+      ],
+      "timestamp": "2026-08-21T15:37:52.221603",
+      "sim_prompt_tokens": 619,
+      "sim_completion_tokens": 164,
+      "bot_prompt_tokens": 884,
+      "bot_completion_tokens": 132
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "00309d3f-183d-47d5-ac4a-9f0d3b8da964",
+  "seed": 42,
+  "dialogue_index": 678,
+  "timestamp": "2026-08-21T15:50:04.790968",
+  "persona": "HumanBase",
+  "target_intent": "transfer_timing",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 563,
+  "total_sim_completion_tokens": 254,
+  "total_bot_prompt_tokens": 1479,
+  "total_bot_completion_tokens": 251,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "How long does it take for funds to come through the US to my account?",
+      "assistant_response": "To help, is this for an international bank transfer from the US, or a transfer between our accounts? Also, when did you send it (date/time) and did you receive a transfer reference?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.72
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.14
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.14
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:00.798006",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 101
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s an international transfer from the US – I sent it on April 15 around 2 pm and the reference is ABC123.",
+      "assistant_response": "Thanks—since it’s a US international transfer sent on April 15 around 2 pm, the next step is to check the transfer status and expected arrival window for that reference (ABC123). Typically these transfers can take a few business days, but timing varies by bank. Could you confirm whether you’ve received any notification in the app about the transfer’s status (pending/processing/completed), or whether it’s still showing as not received?",
+      "predicted_intent": "transfer_timing",
+      "top_3_intents": [
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.88
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_not_received_by_recipient",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T15:50:04.790923",
+      "sim_prompt_tokens": 563,
+      "sim_completion_tokens": 254,
+      "bot_prompt_tokens": 779,
+      "bot_completion_tokens": 150
+    }
+  ]
+}

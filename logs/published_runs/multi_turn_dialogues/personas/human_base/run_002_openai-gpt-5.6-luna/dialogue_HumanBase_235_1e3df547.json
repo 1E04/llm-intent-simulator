@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "1e3df547-ac12-4b65-b7db-af87d937d03a",
+  "seed": 42,
+  "dialogue_index": 235,
+  "timestamp": "2026-08-21T13:00:30.931187",
+  "persona": "HumanBase",
+  "target_intent": "compromised_card",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1109,
+  "total_sim_completion_tokens": 241,
+  "total_bot_prompt_tokens": 3482,
+  "total_bot_completion_tokens": 474,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I believe someone is using my card without my agreement!",
+      "assistant_response": "I’m sorry this is happening. To confirm, are you seeing specific card transactions you don’t recognize, or do you suspect your card itself has been lost/stolen or compromised? If you can, please tell me which situation it is so I can guide you on the next steps right away.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.74
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.16
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:26.322723",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 156
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m seeing several purchases on the app that I never made.",
+      "assistant_response": "Thanks for clarifying—if you’re seeing several purchases in the app that you never made, this is most likely card misuse/compromise. Please tell me: are those transactions marked as pending or completed? Also, do you still have the physical card with you?",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.72
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.19
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:28.747487",
+      "sim_prompt_tokens": 516,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 1162,
+      "bot_completion_tokens": 151
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "They’re all completed, and I still have the card with me.",
+      "assistant_response": "I’m sorry—if the purchases are completed, not yours, and you still have the card, that strongly suggests your card details have been compromised.\n\nPlease stop using the card and I can help you secure your account: do you want to report it as compromised now (so we can guide you through blocking the card and the next steps for these unrecognized payments)? If you can, also confirm whether any of those merchants are marked “reverted” or “charged back,” or all are showing as normal completed charges.",
+      "predicted_intent": "compromised_card",
+      "top_3_intents": [
+        {
+          "intent": "compromised_card",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        },
+        {
+          "intent": "lost_or_stolen_card",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:00:30.931098",
+      "sim_prompt_tokens": 593,
+      "sim_completion_tokens": 88,
+      "bot_prompt_tokens": 1240,
+      "bot_completion_tokens": 167
+    }
+  ]
+}

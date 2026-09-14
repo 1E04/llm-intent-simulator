@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "1cb22dae-4562-4552-af78-9779f2194ccb",
+  "seed": 42,
+  "dialogue_index": 537,
+  "timestamp": "2026-08-21T13:20:33.414693",
+  "persona": "HumanBase",
+  "target_intent": "reverted_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1148,
+  "total_sim_completion_tokens": 210,
+  "total_bot_prompt_tokens": 3508,
+  "total_bot_completion_tokens": 509,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "what happens to the funds if a merchant refuses the payment",
+      "assistant_response": "If a merchant refuses a card payment, it’s typically treated as a declined transaction and the funds won’t be captured—however, if there was an authorization hold, it may later be released back to your available balance. Do you see the payment as **pending** or **completed/charged** in your app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.74
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:28.207565",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1080,
+      "bot_completion_tokens": 159
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s still showing as pending in the app.",
+      "assistant_response": "Got it—if the merchant refused the payment and it’s still showing as **pending**, the card payment usually stays in this state while the authorization is being processed, then it should either **fall off automatically** or **revert**, and the funds are released back to your available balance. \n\nAbout how long has it been pending (e.g., under 24 hours, 2–3 days, or longer)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:31.074525",
+      "sim_prompt_tokens": 522,
+      "sim_completion_tokens": 110,
+      "bot_prompt_tokens": 1163,
+      "bot_completion_tokens": 180
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It’s been about two days now.",
+      "assistant_response": "Thanks—if it’s been about two days and the payment is still **pending**, it usually means the merchant/issuer hasn’t completed the final outcome yet. Most pending card payments resolve or **revert** automatically, but the timing can vary.\n\nCould you tell me whether the pending amount shows any status like **“pending”/“authorisation”** (and whether you see it as affecting your available balance, or it’s only pending)? If you share the merchant name and the approximate amount, I can help you figure out the next step.",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.1
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:20:33.414598",
+      "sim_prompt_tokens": 626,
+      "sim_completion_tokens": 100,
+      "bot_prompt_tokens": 1265,
+      "bot_completion_tokens": 170
+    }
+  ]
+}

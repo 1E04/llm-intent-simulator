@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4cd5abe8-e539-408a-9d70-a793ec204056",
+  "seed": 42,
+  "dialogue_index": 510,
+  "timestamp": "2026-08-19T15:49:01.334186",
+  "persona": "HumanBase",
+  "target_intent": "pin_blocked",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1082,
+  "total_sim_completion_tokens": 294,
+  "total_bot_prompt_tokens": 2316,
+  "total_bot_completion_tokens": 401,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why did I get blocked?",
+      "assistant_response": "Sorry to hear that—when you say you got blocked, do you mean your card/account access was blocked due to identity verification, or a specific card/transfer was blocked? If you can, tell me what message you saw or where you were blocked.",
+      "predicted_intent": "unable_to_verify_identity",
+      "top_3_intents": [
+        {
+          "intent": "unable_to_verify_identity",
+          "confidence": 0.55
+        },
+        {
+          "intent": "why_verify_identity",
+          "confidence": 0.28
+        },
+        {
+          "intent": "terminate_account",
+          "confidence": 0.17
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:56.008855",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 690,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I was trying to pay at a shop and the terminal said my card is blocked.",
+      "assistant_response": "Got it—the terminal said your card is blocked at checkout. This is usually related to card being blocked for security or a card/payment restriction. Can you confirm: did you recently change or try multiple payments, or did you notice a security alert/“compromised” message in the app?",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.72
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.2
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:48:58.673754",
+      "sim_prompt_tokens": 498,
+      "sim_completion_tokens": 141,
+      "bot_prompt_tokens": 768,
+      "bot_completion_tokens": 117
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I haven’t changed anything—just tried a few purchases, and I didn’t see any security alert.",
+      "assistant_response": "Thanks—if the terminal specifically says your card is blocked, it’s most often because the card has been restricted for payments (even if you haven’t changed anything). Can you check the app for a status message like “card blocked/restricted,” “security hold,” or “action required,” and tell me exactly what it says? If you can’t see it, tell me whether the app shows the card as active.",
+      "predicted_intent": "card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "card_not_working",
+          "confidence": 0.86
+        },
+        {
+          "intent": "compromised_card",
+          "confidence": 0.08
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T15:49:01.334016",
+      "sim_prompt_tokens": 584,
+      "sim_completion_tokens": 153,
+      "bot_prompt_tokens": 858,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

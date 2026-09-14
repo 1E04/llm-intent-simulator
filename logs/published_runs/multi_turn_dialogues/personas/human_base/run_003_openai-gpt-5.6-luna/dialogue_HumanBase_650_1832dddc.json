@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "1832dddc-2589-4b8a-acf3-1822cd07d9b4",
+  "seed": 42,
+  "dialogue_index": 650,
+  "timestamp": "2026-08-21T15:49:19.222810",
+  "persona": "HumanBase",
+  "target_intent": "transfer_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 613,
+  "total_sim_completion_tokens": 152,
+  "total_bot_prompt_tokens": 1522,
+  "total_bot_completion_tokens": 259,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I recently got a new place while I'm staying abroad and have been using this account to manage payments, but suddenly I am seeing fees increase. Where are these additional fees coming from?",
+      "assistant_response": "I can help—are the extra fees showing up on card payments, bank transfers, or exchange (when you pay in a different currency)? If you tell me which type of transaction and the fee wording/amount from your statement, I’ll pinpoint the likely source.",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.38
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.33
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:14.820708",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 720,
+      "bot_completion_tokens": 146
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "They're showing up on my bank transfers—I’m seeing a $5 fee listed for each transfer.",
+      "assistant_response": "Got it—if you’re seeing a $5 fee on each bank transfer, that’s most likely the transfer fee being charged for sending transfers. Are these fees showing as a separate line item on your transfer confirmation/statement for outgoing transfers, or are they deducted from the recipient amount?",
+      "predicted_intent": "transfer_fee_charged",
+      "top_3_intents": [
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.88
+        },
+        {
+          "intent": "failed_transfer",
+          "confidence": 0.06
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-21T15:49:19.222756",
+      "sim_prompt_tokens": 613,
+      "sim_completion_tokens": 152,
+      "bot_prompt_tokens": 802,
+      "bot_completion_tokens": 113
+    }
+  ]
+}

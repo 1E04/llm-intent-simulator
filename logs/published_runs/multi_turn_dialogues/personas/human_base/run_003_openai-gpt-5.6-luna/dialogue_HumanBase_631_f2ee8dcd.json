@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "f2ee8dcd-8ea5-4173-80b7-6a1b6e3b74e7",
+  "seed": 42,
+  "dialogue_index": 631,
+  "timestamp": "2026-08-21T15:48:58.891861",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 569,
+  "total_sim_completion_tokens": 149,
+  "total_bot_prompt_tokens": 1477,
+  "total_bot_completion_tokens": 295,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I had a duplicate card and got charged twice. How do I resolve this?",
+      "assistant_response": "Sorry about that—when you say you were charged twice, was it a card payment (where the charge shows on your statement as two separate transactions), or was it during a cash withdrawal? Also, roughly when did the duplicate charge happen?",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.78
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.14
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:56.284681",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 700,
+      "bot_completion_tokens": 143
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card purchase, and I saw the two identical charges appear on my statement yesterday.",
+      "assistant_response": "Thanks—if you’re seeing two identical card purchase charges on your statement, that’s typically the “charged twice” scenario. \n\nPlease share (1) the merchant name, (2) the amount of each duplicate charge, and (3) the transaction dates/times from the statement. Then I can guide you on the next steps to have the duplicate charge reversed/removed (often one will drop off automatically, but we can check).",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.93
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.04
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T15:48:58.891795",
+      "sim_prompt_tokens": 569,
+      "sim_completion_tokens": 149,
+      "bot_prompt_tokens": 777,
+      "bot_completion_tokens": 152
+    }
+  ]
+}

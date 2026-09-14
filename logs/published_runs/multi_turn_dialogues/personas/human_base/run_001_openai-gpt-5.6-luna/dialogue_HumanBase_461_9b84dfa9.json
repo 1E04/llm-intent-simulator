@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "9b84dfa9-b124-4cbe-ba0f-69e74adb855b",
+  "seed": 42,
+  "dialogue_index": 461,
+  "timestamp": "2026-08-19T15:45:31.530322",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 506,
+  "total_sim_completion_tokens": 171,
+  "total_bot_prompt_tokens": 1465,
+  "total_bot_completion_tokens": 251,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I made this payment days ago so why hasn't it gone through yet?",
+      "assistant_response": "Sure—was this payment made by card (debit/credit) or a bank transfer? And do you currently see it marked as “pending” in your app, or is it not showing at all?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:29.053964",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 698,
+      "bot_completion_tokens": 136
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It was a card payment and I can see it listed as pending in the app.",
+      "assistant_response": "Thanks—if the card payment is showing as **pending**, that usually means it’s still being processed and can take a few days to complete.\n\nWhat’s the payment date (how many days ago), and is the amount still pending or has it changed to completed yet?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "reverted_card_payment",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-19T15:45:31.530203",
+      "sim_prompt_tokens": 506,
+      "sim_completion_tokens": 171,
+      "bot_prompt_tokens": 767,
+      "bot_completion_tokens": 115
+    }
+  ]
+}

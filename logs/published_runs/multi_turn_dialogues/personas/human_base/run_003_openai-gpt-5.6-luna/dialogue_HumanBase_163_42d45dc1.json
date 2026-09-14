@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "42d45dc1-ad83-41fa-a7ed-ed5e1041752e",
+  "seed": 42,
+  "dialogue_index": 163,
+  "timestamp": "2026-08-21T15:40:16.656890",
+  "persona": "HumanBase",
+  "target_intent": "card_payment_fee_charged",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1328,
+  "total_sim_completion_tokens": 406,
+  "total_bot_prompt_tokens": 2327,
+  "total_bot_completion_tokens": 414,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "im not sure what this charge is for",
+      "assistant_response": "Sure—I can help you identify it. Is this charge on your card statement (a card payment), a bank transfer/top up, or an exchange/cash withdrawal? And can you tell me the merchant name and the amount (and currency) shown?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.45
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.36
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.19
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:10.563588",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 108
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It's a card payment – the merchant is Green Café and the charge is £8.50.",
+      "assistant_response": "Thanks—since it’s a card payment for £8.50 at Green Café, are you expecting this purchase to be legitimate, or are you unsure/it wasn’t you? Also, does the statement show just the £8.50, or a different amount/extra fee as well?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.33
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.32
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.31
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:13.630775",
+      "sim_prompt_tokens": 620,
+      "sim_completion_tokens": 210,
+      "bot_prompt_tokens": 771,
+      "bot_completion_tokens": 157
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I didn’t buy anything there, and the statement shows £8.50 plus an extra £0.99 fee.",
+      "assistant_response": "I’m sorry about that—if you didn’t buy anything at Green Café and you see a card payment plus an extra £0.99 fee, it sounds like an unrecognized card payment.\n\nCan you confirm whether you still have the card in your possession (not lost/stolen), and whether there are any similar charges around the same time? If you’d like, I can guide you on next steps to dispute it.",
+      "predicted_intent": "card_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.88
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T15:40:16.656752",
+      "sim_prompt_tokens": 708,
+      "sim_completion_tokens": 196,
+      "bot_prompt_tokens": 864,
+      "bot_completion_tokens": 149
+    }
+  ]
+}

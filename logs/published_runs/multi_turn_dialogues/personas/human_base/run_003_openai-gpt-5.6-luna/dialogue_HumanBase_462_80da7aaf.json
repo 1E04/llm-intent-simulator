@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "80da7aaf-65cb-413a-908b-0019d812975d",
+  "seed": 42,
+  "dialogue_index": 462,
+  "timestamp": "2026-08-21T15:45:28.166250",
+  "persona": "HumanBase",
+  "target_intent": "pending_card_payment",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 608,
+  "total_sim_completion_tokens": 133,
+  "total_bot_prompt_tokens": 1457,
+  "total_bot_completion_tokens": 266,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why has my payment not gone through?",
+      "assistant_response": "I’m sorry that happened. Was your card payment declined at the merchant, or is it showing something like “pending” or “not recognised”? Also, do you see any decline message or code in the app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.62
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.2
+        },
+        {
+          "intent": "card_payment_wrong_exchange_rate",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:25.581607",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 692,
+      "bot_completion_tokens": 140
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s showing as pending in the app, and I don’t see any decline code or message.",
+      "assistant_response": "Thanks—if it’s showing as **pending** with no decline message, it usually means the merchant has not fully completed the payment yet. \n\nCould you tell me: (1) about how long ago you made the payment, and (2) is it a **card purchase** (not cash withdrawal or transfer)?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.07
+        },
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.07
+        }
+      ],
+      "timestamp": "2026-08-21T15:45:28.166193",
+      "sim_prompt_tokens": 608,
+      "sim_completion_tokens": 133,
+      "bot_prompt_tokens": 765,
+      "bot_completion_tokens": 126
+    }
+  ]
+}

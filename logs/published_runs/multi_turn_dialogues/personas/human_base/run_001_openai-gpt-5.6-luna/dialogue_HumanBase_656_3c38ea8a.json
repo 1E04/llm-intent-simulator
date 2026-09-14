@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "3c38ea8a-5ec0-4e3f-bffa-09834e22eeae",
+  "seed": 42,
+  "dialogue_index": 656,
+  "timestamp": "2026-08-19T16:01:12.019779",
+  "persona": "HumanBase",
+  "target_intent": "transfer_into_account",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1059,
+  "total_sim_completion_tokens": 382,
+  "total_bot_prompt_tokens": 2269,
+  "total_bot_completion_tokens": 425,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Are there ways to transfer money into my account?",
+      "assistant_response": "Yes—there are a few ways to transfer money into your account. Do you mean adding money by **bank transfer**, or **receiving from someone else** (like an international transfer/payout)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.84
+        },
+        {
+          "intent": "receiving_money",
+          "confidence": 0.1
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:06.183052",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 694,
+      "bot_completion_tokens": 132
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "I’m looking to add money via a bank transfer.",
+      "assistant_response": "Sure—adding money via **bank transfer** is supported. Are you asking how to make the transfer (i.e., the details/steps), or are you already expecting a transfer and wondering why the balance hasn’t updated yet?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.64
+        },
+        {
+          "intent": "balance_not_updated_after_bank_transfer",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transfer_timing",
+          "confidence": 0.18
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:08.747657",
+      "sim_prompt_tokens": 496,
+      "sim_completion_tokens": 190,
+      "bot_prompt_tokens": 755,
+      "bot_completion_tokens": 104
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I need the steps for making the transfer.",
+      "assistant_response": "To add money via **bank transfer**, you’ll typically do this: (1) Log in to your account and open **Top up / Bank transfer** to get your local account details (account number/IBAN, bank name, and reference). (2) From your bank, choose **bank transfer** and enter those details exactly, including the **reference**/payment note so it matches your profile. (3) Send the transfer in your preferred currency, and keep the payment confirmation. \n\nWhich country/currency are you transferring from, so I can tell you the exact fields you’ll see (IBAN vs local account details)?",
+      "predicted_intent": "transfer_into_account",
+      "top_3_intents": [
+        {
+          "intent": "transfer_into_account",
+          "confidence": 0.86
+        },
+        {
+          "intent": "fiat_currency_support",
+          "confidence": 0.08
+        },
+        {
+          "intent": "supported_cards_and_currencies",
+          "confidence": 0.06
+        }
+      ],
+      "timestamp": "2026-08-19T16:01:12.019646",
+      "sim_prompt_tokens": 563,
+      "sim_completion_tokens": 192,
+      "bot_prompt_tokens": 820,
+      "bot_completion_tokens": 189
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "a198343d-a4a2-4f3a-8d14-e728c3496235",
+  "seed": 42,
+  "dialogue_index": 723,
+  "timestamp": "2026-08-21T13:33:44.579504",
+  "persona": "HumanBase",
+  "target_intent": "virtual_card_not_working",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1165,
+  "total_sim_completion_tokens": 307,
+  "total_bot_prompt_tokens": 3546,
+  "total_bot_completion_tokens": 507,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "Why was my virtual card declined when attempting to setup automatic billing?",
+      "assistant_response": "It sounds like your virtual card was declined while setting up automatic billing. Can you confirm whether you’re trying to enable auto-pay with a merchant (a specific website/app), and whether the payment shows up as a decline or as “pending” in your app?",
+      "predicted_intent": "virtual_card_not_working",
+      "top_3_intents": [
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.52
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.26
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:39.358036",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1082,
+      "bot_completion_tokens": 149
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it’s for the streaming service website and it shows up as declined, not pending.",
+      "assistant_response": "Got it—if your virtual card payment is showing as **declined** (not pending) while setting up auto-billing with the streaming website, this is most commonly due to the merchant/card being blocked by the card’s payment rules or an insufficient/incorrect payment eligibility.\n\nTo narrow it down quickly: is the auto-billing trying to charge the card **immediately** (a “test” charge), and do you see any specific decline reason or merchant name under the declined transaction details in the app?",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.78
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.14
+        },
+        {
+          "intent": "disposable_card_limits",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:42.120648",
+      "sim_prompt_tokens": 517,
+      "sim_completion_tokens": 178,
+      "bot_prompt_tokens": 1163,
+      "bot_completion_tokens": 163
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "It was a test charge right away, and the app just says “declined” – no extra reason or merchant name listed.",
+      "assistant_response": "Thanks—since it was an immediate test charge and it shows only as “declined” with no extra reason, this points to a **declined card payment** for the streaming service’s auto-billing setup. \n\nQuick check: is the virtual card being charged in the **same currency** as your account/card balance, and is there enough available balance for the test amount? If yes, I can guide you on the most common fixes for merchant/auto-billing declines.",
+      "predicted_intent": "declined_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "declined_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "virtual_card_not_working",
+          "confidence": 0.12
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.02
+        }
+      ],
+      "timestamp": "2026-08-21T13:33:44.579422",
+      "sim_prompt_tokens": 648,
+      "sim_completion_tokens": 129,
+      "bot_prompt_tokens": 1301,
+      "bot_completion_tokens": 195
+    }
+  ]
+}

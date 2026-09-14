@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "cb413622-2e74-4fd2-8457-4c33ecb9a9ba",
+  "seed": 42,
+  "dialogue_index": 478,
+  "timestamp": "2026-08-21T13:16:02.988168",
+  "persona": "HumanBase",
+  "target_intent": "pending_cash_withdrawal",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 537,
+  "total_sim_completion_tokens": 99,
+  "total_bot_prompt_tokens": 2265,
+  "total_bot_completion_tokens": 297,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I have a pending transaction in my app. How is it still pending if I pulled the cash out from the ATM earlier?",
+      "assistant_response": "It sounds like the cash withdrawal is still showing as pending in the app. Can you confirm this was an ATM cash withdrawal (not a card payment or bank transfer), and do you see the transaction under “Cash withdrawal” or “Card payment”?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.78
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.12
+        },
+        {
+          "intent": "pending_transfer",
+          "confidence": 0.1
+        }
+      ],
+      "timestamp": "2026-08-21T13:16:00.626271",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1094,
+      "bot_completion_tokens": 111
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it was an ATM cash withdrawal and I see it listed under “Cash withdrawal.”",
+      "assistant_response": "Thanks—since it’s showing under “Cash withdrawal,” a pending status usually means the ATM/cash network hasn’t fully completed the transaction yet. Typically it updates to completed within a short time, but it can take longer depending on the ATM operator and your bank.\n\nCan you tell me: roughly how long ago you withdrew the cash, and is the amount still showing as pending (not completed) in the app?",
+      "predicted_intent": "pending_cash_withdrawal",
+      "top_3_intents": [
+        {
+          "intent": "pending_cash_withdrawal",
+          "confidence": 0.9
+        },
+        {
+          "intent": "cash_withdrawal_not_recognised",
+          "confidence": 0.06
+        },
+        {
+          "intent": "declined_cash_withdrawal",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:16:02.988060",
+      "sim_prompt_tokens": 537,
+      "sim_completion_tokens": 99,
+      "bot_prompt_tokens": 1171,
+      "bot_completion_tokens": 186
+    }
+  ]
+}

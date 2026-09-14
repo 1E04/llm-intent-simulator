@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "fb4dd1b4-a109-4e5d-b8ad-23e8ca665c39",
+  "seed": 42,
+  "dialogue_index": 634,
+  "timestamp": "2026-08-21T13:27:00.294604",
+  "persona": "HumanBase",
+  "target_intent": "transaction_charged_twice",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 527,
+  "total_sim_completion_tokens": 96,
+  "total_bot_prompt_tokens": 2252,
+  "total_bot_completion_tokens": 303,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "There is more than one of the same transaction on my account.",
+      "assistant_response": "I’m sorry about that—when you say the same transaction appears more than once, is it a card payment that shows as charged twice (same merchant/amount), or are there separate extra line items/fees on your statement? If you can, tell me the merchant name and the amounts shown for each entry.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.46
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.32
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.22
+        }
+      ],
+      "timestamp": "2026-08-21T13:26:58.246636",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1082,
+      "bot_completion_tokens": 161
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "The duplicate entries are both for Starbucks, each for $5.00.",
+      "assistant_response": "Thanks—if you see two Starbucks entries for $5.00 each, that sounds like the card payment may have been charged twice.\n\nCan you confirm whether both transactions show the same date/time and status (e.g., both “completed/charged” or one is “pending”)? If one is pending, it usually drops off—I'll tell you what to do next based on that.",
+      "predicted_intent": "transaction_charged_twice",
+      "top_3_intents": [
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.9
+        },
+        {
+          "intent": "card_payment_fee_charged",
+          "confidence": 0.07
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.03
+        }
+      ],
+      "timestamp": "2026-08-21T13:27:00.294505",
+      "sim_prompt_tokens": 527,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 1170,
+      "bot_completion_tokens": 142
+    }
+  ]
+}

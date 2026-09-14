@@ -1,0 +1,68 @@
+{
+  "dialogue_id": "edb82441-86de-47f0-8855-276c4a0df9b6",
+  "seed": 42,
+  "dialogue_index": 355,
+  "timestamp": "2026-08-21T13:08:03.341109",
+  "persona": "HumanBase",
+  "target_intent": "extra_charge_on_statement",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 2,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 558,
+  "total_sim_completion_tokens": 87,
+  "total_bot_prompt_tokens": 2283,
+  "total_bot_completion_tokens": 267,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "I'm quite confused as to what is going on. There is some odd extra pound charge on my statement in the app that's just listed as pending and doesn't go away since a couple days.",
+      "assistant_response": "Sorry about the confusion. It sounds like you’re seeing an extra £ charge that’s stuck as “pending” for a few days. Can you confirm whether this is a card payment (merchant purchase) showing as pending in the app?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.73
+        },
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.18
+        },
+        {
+          "intent": "transaction_charged_twice",
+          "confidence": 0.09
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:01.292124",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1106,
+      "bot_completion_tokens": 142
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "Yes, it's a card payment that’s just sitting there as pending.",
+      "assistant_response": "Thanks for confirming—it’s a card payment showing as “pending” in the app. In most cases, pending card payments take a few days to update or disappear once the merchant completes the transaction.\n\nCould you tell me roughly how many days it’s been pending, and whether the amount is still the same or has changed?",
+      "predicted_intent": "pending_card_payment",
+      "top_3_intents": [
+        {
+          "intent": "pending_card_payment",
+          "confidence": 0.86
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.1
+        },
+        {
+          "intent": "card_payment_not_recognised",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:08:03.341002",
+      "sim_prompt_tokens": 558,
+      "sim_completion_tokens": 87,
+      "bot_prompt_tokens": 1177,
+      "bot_completion_tokens": 125
+    }
+  ]
+}

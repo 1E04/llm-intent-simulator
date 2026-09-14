@@ -1,0 +1,93 @@
+{
+  "dialogue_id": "4bcb52d2-6666-4f1a-892c-91136e124988",
+  "seed": 42,
+  "dialogue_index": 294,
+  "timestamp": "2026-08-21T13:04:19.675661",
+  "persona": "HumanBase",
+  "target_intent": "direct_debit_payment_not_recognised",
+  "sim_model": "gpt-oss-120b",
+  "target_model": "gpt-5.4-nano",
+  "total_turns": 3,
+  "status": "COMPLETED",
+  "total_sim_prompt_tokens": 1084,
+  "total_sim_completion_tokens": 287,
+  "total_bot_prompt_tokens": 3468,
+  "total_bot_completion_tokens": 362,
+  "turns": [
+    {
+      "turn_number": 1,
+      "user_utterance": "what is this charge on my account",
+      "assistant_response": "Sure—can you tell me what the charge description says (or the exact amount and date), and whether it’s related to a card payment, transfer, or an exchange?",
+      "predicted_intent": "extra_charge_on_statement",
+      "top_3_intents": [
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.4
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.3
+        },
+        {
+          "intent": "exchange_charge",
+          "confidence": 0.15
+        }
+      ],
+      "timestamp": "2026-08-21T13:04:15.087456",
+      "sim_prompt_tokens": 0,
+      "sim_completion_tokens": 0,
+      "bot_prompt_tokens": 1076,
+      "bot_completion_tokens": 128
+    },
+    {
+      "turn_number": 2,
+      "user_utterance": "It’s a £45.99 charge from 12 Mar 2024, shown as “Direct Debit – XYZ Services”. It isn’t a card payment or transfer.",
+      "assistant_response": "Thanks—since it’s marked as “Direct Debit – XYZ Services” for £45.99, it sounds like a direct debit you don’t recognise. Can you confirm whether you expected this payment from XYZ Services, or if you’d like to report it as not recognised?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.84
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.08
+        },
+        {
+          "intent": "transfer_fee_charged",
+          "confidence": 0.08
+        }
+      ],
+      "timestamp": "2026-08-21T13:04:17.575277",
+      "sim_prompt_tokens": 492,
+      "sim_completion_tokens": 191,
+      "bot_prompt_tokens": 1156,
+      "bot_completion_tokens": 118
+    },
+    {
+      "turn_number": 3,
+      "user_utterance": "I don’t recognise it—I’d like to report it as not recognised.",
+      "assistant_response": "Got it—you don’t recognise the £45.99 Direct Debit from “XYZ Services” dated 12 Mar 2024. I can help you report it as not recognised. Please confirm: is this direct debit currently showing as completed/paid, or is it pending?",
+      "predicted_intent": "direct_debit_payment_not_recognised",
+      "top_3_intents": [
+        {
+          "intent": "direct_debit_payment_not_recognised",
+          "confidence": 0.9
+        },
+        {
+          "intent": "extra_charge_on_statement",
+          "confidence": 0.06
+        },
+        {
+          "intent": "request_refund",
+          "confidence": 0.04
+        }
+      ],
+      "timestamp": "2026-08-21T13:04:19.675566",
+      "sim_prompt_tokens": 592,
+      "sim_completion_tokens": 96,
+      "bot_prompt_tokens": 1236,
+      "bot_completion_tokens": 116
+    }
+  ]
+}
