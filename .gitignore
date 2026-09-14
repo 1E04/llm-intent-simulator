@@ -37,7 +37,9 @@ scripte/profiles/adversarial_en.json
 scripte/03_multi_turn/error_analysis_judge.py
 scripte/04_greybox_testing/*
 scripte/05_statistic_evaluations/add_predicted_intent.py
-!logs/judged_dialogues/personas
+
+!logs/judged_dialogues/personas/cluster/personas/run_010_openai-gpt-oss-120b
+!logs/judged_dialogues/personas/cluster/personas/run_007_openai-gpt-oss-120b
 logs/judged_dialogues/personas/run*
 logs/judged_dialogues/ood
 logs/judged_dialogues/adversarial
@@ -51,6 +53,8 @@ logs/single-turn/synthetic-dataset/phi4/*14b.jsonl
 logs/greybox
 logs/genesys_om_dialogues
 logs/judged_dialogues/genesys
+logs/*
+!logs/published_runs/
 
 # New files
 logs/old_runs
@@ -61,7 +65,7 @@ scripte/06_multi_turn/generate_intent_definitions.py
 scripte/06_multi_turn/intent_clusters_cache.json
 scripte/06_multi_turn/judge_analyzer.py
 scripte/06_multi_turn/plot_thesis_graphs.py
-scripte/07_CCaaS
+scripte/07_CCaaS/
 
 
 # Dataset metrics: keep the summary tables/plots, skip the bulky derived files
@@ -81,6 +85,7 @@ scripte/02_single_turn/plot_comparison.py
 scripte/02_single_turn/evaluate_persona_all_models.py
 scripte/02_single_turn/evaluate_persona_f1.py
 scripte/02_single_turn/evaluate_persona_global_matrix.py
+scripte/02_single_turn/umap_pro_label
 
 ## Exclude Thesis
 thesis.pdf
