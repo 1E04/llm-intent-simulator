@@ -5,7 +5,10 @@
 
 This repository contains the implementation scripts, evaluation framework, and dataset generation pipelines from the Master's Thesis: **"Conceptual Design of an LLM-Based Testing System for the Automated Evaluation of Intent Recognition in Virtual Assistants for Intelligent Voice Bots"**.
 
-The framework introduces a fully automated, LLM-based simulation engine to test target conversational AI systems (Voice Bots) across single-turn boundaries and complex multi-turn dialogs.
+The framework introduces a fully automated, LLM-based simulation engine across single-turn boundaries and complex multi-turn dialogs. It consists of three core components:
+1. **User Simulator:** An LLM that simulates a customer with a specific persona.
+2. **Target System:** The conversational AI (or LLM intent classifier) being tested.
+3. **Judge-LLM:** An independent evaluator that scores the multi-turn dialogues between the simulator and the target system.
 
 ## 📂 Repository Architecture
 
