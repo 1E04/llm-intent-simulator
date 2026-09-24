@@ -35,6 +35,13 @@ banking77-evaluation/
 
 ---
 
+## Conceptual Design
+
+![Concept Overview of the Framework](figures/concept_overview.png)
+
+![Concept Simulator Prompt Update](figures/concept_simulator_update.png)
+
+
 ## 🚀 Getting Started & Configuration
 
 This project requires API keys to run the User Simulator and the Target Voice Bot (JudgeLLM). **For security reasons, this repository is configured to use environment variables rather than hardcoded credentials.**
