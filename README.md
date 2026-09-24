@@ -101,12 +101,12 @@ source .venv/bin/activate
 ### 1. Single-Turn Evaluation
 Run the baseline benchmarking for zero-shot intent recognition across different LLMs:
 ```bash
-python src/evaluation/single_turn/base_banking77_parallel.py --models all
+uv run src/evaluation/single_turn/base_banking77_parallel.py --models all
 ```
 
 Test the Out-of-Domain (OOD) Rejection capabilities using the Chatterbox persona:
 ```bash
-python src/evaluation/single_turn/eval_ood_single_turn.py --models all
+uv run src/evaluation/single_turn/eval_ood_single_turn.py --models all
 ```
 
 ### 2. Multi-Turn Simulation 
@@ -114,24 +114,24 @@ To run the automated User Simulator against the Target Bot.
 
 **Standard Zero-Shot (ZS) Mode:**
 ```bash
-python src/evaluation/multi_turn/multi-turn-simulator.py --num_dialogues 50
+uv run src/evaluation/multi_turn/multi-turn-simulator.py --num_dialogues 50
 ```
 
 **Definition-Augmented (DA) Prompting Mode:**
 To prevent *Intent Drift*, you can enable the Definition-Augmented mode via a flag:
 ```bash
-python src/evaluation/multi_turn/multi-turn-simulator.py --use_definitions --num_dialogues 50
+uv run src/evaluation/multi_turn/multi-turn-simulator.py --use_definitions --num_dialogues 50
 ```
 
 ### 3. Analytics & Statistics
 Generate the final metrics, right-to-wrong flip ratios, and accuracy averages across the multi-turn logs:
 ```bash
-python src/analytics/run_statistical_evaluation.py --base_dir logs/published_runs
+uv run src/analytics/run_statistical_evaluation.py --base_dir logs/published_runs
 ```
 
 Generate the cross-model persona heatmap:
 ```bash
-python src/evaluation/single_turn/plot_global_persona_heatmap.py
+uv run src/evaluation/single_turn/plot_global_persona_heatmap.py
 ```
 
 ---
