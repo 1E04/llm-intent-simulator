@@ -37,9 +37,13 @@ banking77-evaluation/
 
 ## Conceptual Design
 
-![Concept Overview of the Framework](figures/concept_overview.png)
+<p align="center">
+<img src="figures/concept_overview.png" alt="Concept Overview of the Framework" width="700">
+</p>
 
-![Concept Simulator Prompt Update](figures/concept_simulator_update.png)
+<p align="center">
+<img src="figures/concept_simulator_update.png" alt="Concept Simulator Prompt Update" width="450">
+</p>
 
 
 ## 🚀 Getting Started & Configuration
